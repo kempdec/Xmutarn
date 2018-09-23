@@ -1,0 +1,32 @@
+{
+  "name": "xmutarn",
+  "version": "0.0.0",
+  "description": "Xmutarn é um framework front-end criado com a finalidade de facilitar e aumentar a produtividade na construção de páginas modernas e estilosas.",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinivsl/Xmutarn.git"
+  },
+  "author": {
+    "name": "Vinícius Lima",
+    "email": "viniciusvsl@outlook.com",
+    "url": "https://github.com/vinivsl"
+  },
+  "bugs": {
+    "url": "https://github.com/vinivsl/Xmutarn/issues"
+  },
+  "license": "MIT",
+  "private": true,
+  "files": [
+    "dist",
+    "src/scss"
+  ]
+}
