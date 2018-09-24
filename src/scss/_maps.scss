@@ -1,0 +1,17 @@
+// Temas
+
+// Define os prefixos e parâmetros das classes de cor dos temas.
+$themes-color-prefixes-and-params: (
+  fg: color,
+  bg: background,
+  bd: border-color
+) !default;
+
+// Define as pseudo-classes, pseudo-elementos e seus delimitadores usados nos temas.
+$themes-pseuds-and-delimiters: (
+  hover: ":",
+  active: ":",
+  focus: ":",
+  before: "::",
+  after: "::"
+) !default;

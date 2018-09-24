@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+@import "palette-map";
+// Núcleo.
+@import "functions";
+@import "lists";
+@import "maps";
+// Temas e cores.
+@import "colors";
 // Normalização.
 @import "normalize";
 

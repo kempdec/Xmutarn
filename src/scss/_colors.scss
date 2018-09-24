@@ -1,0 +1,28 @@
+@each $color-name, $color-hues in $palette {
+  @if (list-has-value($list: $colors-available, $value: $color-name) == true) {
+    @each $prefix, $param in $themes-color-prefixes-and-params {
+      @each $hue, $color in $color-hues {
+
+        // .color-*-**
+        //
+        // Exemplo: .color-fg-transparent
+        //          .color-fg-red50
+        .color-#{$prefix}-#{$color-name}#{$hue} {
+          #{$param}: #{$hue} !important;
+        }
+
+        @each $pseudo, $delimiter in $themes-pseuds-and-delimiters {
+
+          // .color-*-**__***
+          //
+          // Exemplo: .color-fg-transparent__hover:hover
+          //          .color-fg-red50__hover:hover
+          .color-#{$prefix}-#{$color-name}#{$hue}__#{$pseudo}#{$delimiter}#{$pseudo} {
+            @extend .color-#{$prefix}-#{$color-name}#{$hue};
+          }
+
+        }
+      }
+    }
+  }
+}
