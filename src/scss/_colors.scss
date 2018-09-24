@@ -1,6 +1,6 @@
 @each $color-name, $color-hues in $palette {
   @if (list-has-value($list: $colors-available, $value: $color-name) == true) {
-    @each $prefix, $param in $themes-color-prefixes-and-params {
+    @each $prefix, $param in $themes-colors-prefixes-and-params {
       @each $hue, $color in $color-hues {
 
         // .color-*-**
@@ -11,7 +11,7 @@
           #{$param}: #{$color} !important;
         }
 
-        @each $pseudo, $delimiter in $themes-pseuds-and-delimiters {
+        @each $pseudo, $delimiter in $themes-colors-pseuds-and-delimiters {
 
           // .color-*-**__***
           //

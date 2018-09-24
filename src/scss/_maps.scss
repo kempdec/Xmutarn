@@ -1,14 +1,14 @@
-// Temas
+// Temas e cores
 
-// Define os prefixos e parâmetros das classes de cor dos temas.
-$themes-color-prefixes-and-params: (
+// Define os prefixos e parâmetros das classes dos temas e cores.
+$themes-colors-prefixes-and-params: (
   fg: color,
   bg: background,
   bd: border-color
 ) !default;
 
-// Define as pseudo-classes, pseudo-elementos e seus delimitadores usados nos temas.
-$themes-pseuds-and-delimiters: (
+// Define as pseudo-classes, pseudo-elementos e seus delimitadores usados nos temas e cores.
+$themes-colors-pseuds-and-delimiters: (
   hover: ":",
   active: ":",
   focus: ":",
