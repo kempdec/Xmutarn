@@ -8,7 +8,7 @@
         // Exemplo: .color-fg-transparent
         //          .color-fg-red50
         .color-#{$prefix}-#{$color-name}#{$hue} {
-          #{$param}: #{$hue} !important;
+          #{$param}: #{$color} !important;
         }
 
         @each $pseudo, $delimiter in $themes-pseuds-and-delimiters {
