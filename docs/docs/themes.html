@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Xmutarn é um framework front-end criado com a finalidade de facilitar e aumentar a produtividade na construção de páginas modernas e estilosas.">
+
+  <meta name="theme-color" content="#4A148C">
+
+  <title>Temas - Temas e cores • Xmutarn</title>
+
+  <link rel="shortcut icon" href="../assets/img/icon.png">
+
+  <!-- Arquivos de estilo. -->
+  <link rel="stylesheet" href="../assets/style/xmutarn.min.css">
+  <link rel="stylesheet" href="../assets/lib/prism/prism.css">
+</head>
+
+<body class="theme-main-bg-card">
+  <section class="theme-main-fg-primary">
+    <nav>
+      <a href="../">Início</a>
+      <a href="introduction.html">Introdução</a>
+      <p>Temas e cores</p>
+      <a href="colors.html">Cores</a>
+      <a href="themes.html">Temas</a>
+    </nav>
+  </section>
+
+  <main class="theme-main-fg-primary">
+    <h1>Temas</h1>
+    <p>
+      Os temas são o que dão vida a sua página, use temas pré-definidos, ou crie o seu! Todas as classes adotam o
+      prefixo <mark>theme-</code>.
+    </p>
+    <p>
+      Existem três tipos diferentes de temas: O principal, de destaque e de realçe. Assim como o nome sugere, o tema
+      principal é proposto para definir as cores principais dos elementos e textos da página, de destaque para
+      destacar, e de realçe para realçar.
+    </p>
+
+    <!-- Tema principal. -->
+    <h2>Tema principal</h2>
+    <p>
+      Para definir qual tema será utilizado na página, adicione o atributo <mark>x-main-theme</mark> no elemento <mark>html</mark>,
+      com o nome do tema principal.
+    </p>
+
+    <pre><code class="language-html">&lt;html x-main-theme="light">&lt;/html></code></pre>
+
+    <p>
+      Por padrão o Xmutarn tem apenas 2 temas principais disponíveis: light e dark, sendo o <strong>"light"</strong> o
+      padrão.
+    </p>
+    <p>
+      Clique nos botões abaixo para alternar entres o temas.
+    </p>
+    <button x-action="toggle-theme" x-action-arg="light">Light</button>
+    <button x-action="toogle-theme" x-action-arg="dark">Dark</button>
+    <p>
+      Classes adotam o prefixo <mark>theme-main-</mark>. Assim como as cores, os prefixos para textos, fundos e bordas
+      são utilizados. Use o prefixo
+      <mark>theme-main-fg-</mark> (<strong>foreground</strong>) para textos, <mark>theme-main-bg-</mark> (<strong>background</strong>)
+      para fundos e <mark>theme-main-bd-</mark> (<strong>border</strong>) para bordas.
+    </p>
+
+    <h3>Exemplo</h3>
+    <div class="theme-main-bg-background">
+      <p class="theme-main-fg-primary">Texto de cor <strong>"primary"</strong> do tema principal.</p>
+      <p class="theme-main-fg-secondary">Texto de cor <strong>"secundary"</strong> do tema principal.</p>
+      <p class="theme-main-bg-disabled">Elemento com fundo de cor <strong>"disabled"</strong> do tema principal.</p>
+      <div class="theme-main-bg-card theme-main-bd-dividers" style="border: 1px solid;">
+        Elemento com fundo de cor <strong>"card"</strong> e borda de cor <strong>"dividers"</strong> do tema principal.
+      </div>
+    </div>
+
+    <pre><code class="language-html">&lt;p class="theme-main-fg-primary">Texto de cor &lt;strong>"primary"&lt;/strong> do tema principal.&lt;/p>
+&lt;p class="theme-main-fg-secondary">Texto de cor &lt;strong>"secundary"&lt;/strong> do tema principal.&lt;/p>
+&lt;p class="theme-main-bg-disabled">Elemento com fundo de cor &lt;strong>"disabled"&lt;/strong> do tema principal.&lt;/p>
+&lt;div class="theme-main-bg-card theme-main-bd-dividers" style="border: 1px solid;">
+  Elemento com fundo de cor &lt;strong>"card"&lt;/strong> e borda de cor &lt;strong>"dividers"&lt;/strong> do tema principal.
+&lt;/div></code></pre>
+
+    <p>
+      As classes de temas também tem a possibilidade de seu uso com pseudo-classes e pseudo-elementos.
+    </p>
+    <p>
+      Caso queira criar seu próprio tema, é possível criando um estilo CSS semelhante com o abaixo. Sendo <strong>"example"</strong>
+      o nome do tema e as variáveis CSS com suas respectivas cores.
+    </p>
+    <pre><code class="language-css">html[x-main-theme="example"] {
+  --theme-main-primary: rgba(0, 0, 0, .87);
+  --theme-main-secondary: rgba(0, 0, 0, .54);
+  --theme-main-hint: rgba(0, 0, 0, .38);
+  --theme-main-disabled: rgba(0, 0, 0, .38);
+  --theme-main-dividers: rgba(0, 0, 0, .12);
+  --theme-main-background: #FAFAFA;
+  --theme-main-card: white;
+}</code></pre>
+
+    <p>
+      Também é possível mesclando o nosso mapa SASS:
+    </p>
+    <pre><code class="language-scss">// Seu mapa (exemplo).
+$your-theme-map: (
+  example: (
+    primary: rgba(0, 0, 0, .87),
+    secondary: rgba(0, 0, 0, .54),
+    hint: rgba(0, 0, 0, .38),
+    disabled: rgba(0, 0, 0, .38),
+    dividers: rgba(0, 0, 0, .12),
+    background: get-palette-color($color-name: grey, $color-hue: 50),
+    card: white
+  )
+);
+
+// Mescla o nosso mapa `$themes-main-properties` com seu mapa `$your-theme-map` (exemplo).
+map-merge($map1: $themes-main-properties, $map2: $your-theme-map);</code></pre>
+
+    <p>
+      Ou até mesmo sobrescrever nosso mapa SASS:
+    </p>
+    <pre><code class="language-scss">// Define as propriedades dos temas principais.
+$themes-main-properties: (
+  example: (
+    primary: rgba(0, 0, 0, .87),
+    secondary: rgba(0, 0, 0, .54),
+    hint: rgba(0, 0, 0, .38),
+    disabled: rgba(0, 0, 0, .38),
+    dividers: rgba(0, 0, 0, .12),
+    background: get-palette-color($color-name: grey, $color-hue: 50),
+    card: white
+  )
+);</code></pre>
+
+    <a href="colors.html">Anterior: Cores - Temas e cores</a>
+  </main>
+
+  <!-- Arquivos de script. -->
+  <script defer src="../assets/lib/prism/prism.js"></script>
+
+  <script defer>
+    const toggleThemeButtons = document.querySelectorAll("[x-action]");
+
+    toggleThemeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // troca o nome do tema principal pelo que está no atributo "x-action-arg" do botão.
+        document.querySelector("html").setAttribute("x-main-theme", button.getAttribute("x-action-arg"));
+      });
+    });
+  </script>
+</body>
+
+</html>
