@@ -1,0 +1,47 @@
+// Temas principais.
+
+@each $theme-name, $theme-properties in $themes-main-properties {
+
+  // html[x-main-theme="*"]
+  //
+  // Exemplo: html[x-main-theme="light"]
+  html[x-main-theme="#{$theme-name}"] {
+    @each $property, $value in $theme-properties {
+
+      // Variável CSS: --theme-main-*
+      //
+      // Exemplo: --theme-main-primary
+      --theme-main-#{$property}: #{$value};
+
+    }
+  }
+
+  @if ($theme-name == $theme-main-default) {
+    @each $property, $value in $theme-properties {
+      @each $prefix, $param in $themes-colors-prefixes-and-params {
+
+        // .theme-main-*-*
+        //
+        // Exemplo: .theme-main-fg-primary
+        .theme-main-#{$prefix}-#{$property} {
+          #{$param}: var(--theme-main-#{$property}, #{$value}) !important;
+        }
+
+        @each $pseudo, $delimiter in $themes-colors-pseuds-and-delimiters {
+
+          // .theme-main-*-*__***
+          //
+          // Exemplo: .theme-main-fg-primary__hover:hover
+          .theme-main-#{$prefix}-#{$property}__#{$pseudo}#{$delimiter}#{$pseudo} {
+            @extend .theme-main-#{$prefix}-#{$property};
+          }
+
+        }
+      }
+    }
+  }
+}
+
+html:not([x-main-theme]) {
+  @extend html[x-main-theme="#{$theme-main-default}"];
+}
