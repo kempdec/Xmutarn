@@ -27,3 +27,10 @@
 
   @return false;
 }
+
+// is-accent-color-hue
+//
+// Obtém um sinalizador indicando se a tonalidade pertence a cores de realçe.
+@function is-accent-color-hue($hue) {
+  @return list-has-value($list: $themes-accent-color-hue-list, $value: $hue);
+}
