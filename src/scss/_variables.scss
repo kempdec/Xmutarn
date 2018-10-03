@@ -1,3 +1,15 @@
+// Tipografia
+
+// Define o tamanho da fonte da tipografia.
+//
+// Esta variável vem primeiro para o uso das funções 'px-to-rem' e 'px-to-em'.
+$typography-font-size: 16px !default;
+
+// Contêiner
+
+// Define o preenchimento dos contêineres.
+$container-padding: px-to-rem($list: 0 15px) !default;
+
 // Tema
 
 // Define o tema principal padrão, com base no mapa `$themes-main-properties`.

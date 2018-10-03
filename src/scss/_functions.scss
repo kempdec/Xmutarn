@@ -34,3 +34,57 @@
 @function is-accent-color-hue($hue) {
   @return list-has-value($list: $themes-accent-color-hue-list, $value: $hue);
 }
+
+// px-to
+//
+// Converte as unidades de medida em pixels da lista para rem ou em.
+@function px-to($list, $unit, $font-size: $typography-font-size) {
+  @if (type-of($value: $list) != list and type-of($value: $list) != number) {
+    @error "O primeiro argumento deve ser fornecido e do tipo 'list' ou 'number'.";
+  }
+
+  @if (type-of($value: $unit) != string) {
+    @error "O segundo argumento deve ser fornecido e do tipo 'string'.";
+  }
+
+  @if ($unit != rem and $unit != em) {
+    @error "O segundo argumento aceita apenas os valores 'rem' e 'em'.";
+  }
+
+  @if (type-of($value: $font-size) != number) {
+    @error "O terceiro argumento deve ser fornecido e do tipo 'number'.";
+  }
+
+  @if (unit($number: $font-size) != px) {
+    @error "O terceiro argumento aceita apenas a unidade de medida em pixels.";
+  }
+
+  $output-list: null;
+
+  @each $val in $list {
+    // Verifica se o valor da lista é um número, se a sua unidade de medida é em pixels e se a unidade para
+    // conversão é rem ou em.
+    @if (type-of($value: $val) == number and unit($number: $val) == px and ($unit == rem or $unit == em)) {
+      $val: $val / $font-size * if($condition: $unit == rem, $if_true: 1rem, $if_false: 1em);
+    }
+
+    // Adiciona o valor para a lista de saída.
+    $output-list: append($list: $output-list, $val: $val);
+  }
+
+  @return $output-list;
+}
+
+// px-to-em
+//
+// Converte as unidades de medida em pixels da lista para em.
+@function px-to-em($list, $font-size: $typography-font-size) {
+  @return px-to($list, em, $font-size);
+}
+
+// px-to-rem
+//
+// Converte as unidades de medida em pixels da lista para rem.
+@function px-to-rem($list, $font-size: $typography-font-size) {
+  @return px-to($list, rem, $font-size);
+}
