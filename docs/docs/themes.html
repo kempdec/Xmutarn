@@ -148,6 +148,53 @@ $themes-main-properties: (
   )
 );</code></pre>
 
+    <!-- Tema destaque e de realçe. -->
+    <h2>Tema destaque e de realçe</h2>
+    <p>
+      Para definir a cor do tema que será utilizado na página, adicione no elemento <mark>html</mark>, o atributo <mark>x-featured-theme</mark>
+      para destaque e <mark>x-accent-theme</mark> para realçe, com o nome da cor.
+    </p>
+    <pre><code class="language-html">&lt;html x-featured-theme="purple" x-accent-theme="light-blue">&lt;html></code></pre>
+    <p>
+      Por padrão o Xmutarn disponibiliza para os temas, todas as cores, com exceção da "black" e "white", ou seja, 19
+      das 21 cores disponíveis na paleta. Sendo a cor <strong>"purple"</strong> como padrão para o tema destaque e
+      <strong>"light-blue"</strong> para o de realçe.
+    </p>
+    <p>
+      As classes adotam o prefixo <mark>theme-color-</mark>. Também utilizam os prefixos <mark>fg</mark>, <mark>bg</mark>
+      e <mark>bd</mark> para textos, fundos e bordas. Use o prefixo <mark>theme-color-fg</mark> (<strong>foreground</strong>)
+      para textos, <mark>theme-color-bg</mark> (<strong>background</strong>) para fundos e <mark>theme-color-bd</mark>
+      (<strong>border</strong>) para bordas.
+    </p>
+
+    <h3>Exemplo</h3>
+    <div class="theme-main-bg-background">
+      <p class="theme-color-fg500">
+        Texto com a cor do tema destaque no tom 500.
+      </p>
+      <p class="theme-color-fgA400">
+        Texto com a cor do tema de realçe no tom 400.
+      </p>
+      <p class="theme-color-bg900 color-fg-white">
+        Texto com a cor de fundo do tema destaque no tom 900.
+      </p>
+      <div class="theme-color-bgA700 theme-color-bd500 color-fg-white" style="border: 1px solid;">
+        Elemento com a cor de fundo do tema de realçe no tom 700 e borda com a cor do tema destaque no tom 500.
+      </div>
+    </div>
+    <pre><code class="language-html">&lt;p class="theme-color-fg500">
+  Texto com a cor do tema destaque no tom 500.
+&lt;/p>
+&lt;p class="theme-color-fgA400">
+  Texto com a cor do tema de realçe no tom 400.
+&lt;/p>
+&lt;p class="theme-color-bg900 color-fg-white">
+  Texto com a cor de fundo do tema destaque no tom 900.
+&lt;/p>
+&lt;div class="theme-color-bgA700 theme-color-bd500 color-fg-white" style="border: 1px solid;">
+  Elemento com a cor de fundo do tema de realçe no tom 700 e borda com a cor do tema destaque no tom 500.
+&lt;/div></code></pre>
+
     <a href="colors.html">Anterior: Cores - Temas e cores</a>
   </main>
 
