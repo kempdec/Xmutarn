@@ -2,3 +2,7 @@
 
 // Define o tema principal padrão, com base no mapa `$themes-main-properties`.
 $theme-main-default: light !default;
+// Define a cor padrão do tema destaque, com base no mapa da paleta `$palette`.
+$theme-featured-default-color: purple !default;
+// Define a cor padrão do tema de realçe, com base no mapa da paleta `$palette`.
+$theme-accent-default-color: light-blue !default;
