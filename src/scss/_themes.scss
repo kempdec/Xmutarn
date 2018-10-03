@@ -60,22 +60,22 @@ html:not([x-main-theme]) {
         @each $hue, $hex in map-get($map: $palette, $key: $color-name) {
           @if (($theme == featured and is-accent-color-hue($hue: $hue) == false) or ($theme == accent and is-accent-color-hue($hue: $hue))) {
 
-            // Variável CSS: --theme-color*
+            // Variável CSS: --theme-color-*
             //
-            // Exemplo: --theme-color50
-            //          --theme-colorA100
-            --theme-color#{$hue}: #{$hex};
+            // Exemplo: --theme-color-50
+            //          --theme-color-A100
+            --theme-color-#{$hue}: #{$hex};
 
             @if (($theme == featured and $color-name == $theme-featured-default-color) or ($theme == accent and $color-name == $theme-accent-default-color)) {
               @at-root {
                 @each $prefix, $param in $themes-colors-prefixes-and-params {
 
-                  // .theme-color-**
+                  // .theme-color-*-*
                   //
-                  // Exemplo: .theme-color-fg50
-                  //          .theme-color-fgA100
-                  .theme-color-#{$prefix}#{$hue} {
-                    #{$param}: var(--theme-color#{$hue}, #{$hex}) !important;
+                  // Exemplo: .theme-color-fg-50
+                  //          .theme-color-fg-A100
+                  .theme-color-#{$prefix}-#{$hue} {
+                    #{$param}: var(--theme-color-#{$hue}, #{$hex}) !important;
                   }
 
                   @if ($hue == 500) {
@@ -84,18 +84,18 @@ html:not([x-main-theme]) {
                     //
                     // Exemplo: .theme-color-fg
                     .theme-color-#{$prefix} {
-                      @extend .theme-color-#{$prefix}#{$hue};
+                      @extend .theme-color-#{$prefix}-#{$hue};
                     }
                   }
 
                   @each $pseudo, $delimiter in $themes-colors-pseuds-and-delimiters {
 
-                    // .theme-color-**__***
+                    // .theme-color-*-*__***
                     //
-                    // Exemplo: .theme-color-fg50__hover:hover
-                    //          .theme-color-fgA100__hover:hover
-                    .theme-color-#{$prefix}#{$hue}__#{$pseudo}#{$delimiter}#{$pseudo} {
-                      @extend .theme-color-#{$prefix}#{$hue};
+                    // Exemplo: .theme-color-fg-50__hover:hover
+                    //          .theme-color-fg-A100__hover:hover
+                    .theme-color-#{$prefix}-#{$hue}__#{$pseudo}#{$delimiter}#{$pseudo} {
+                      @extend .theme-color-#{$prefix}-#{$hue};
                     }
 
                     @if ($hue == 500) {
@@ -104,7 +104,7 @@ html:not([x-main-theme]) {
                       //
                       // Exemplo: .theme-color-fg__hover:hover
                       .theme-color-#{$prefix}__#{$pseudo}#{$delimiter}#{$pseudo} {
-                        @extend .theme-color-#{$prefix}#{$hue}__#{$pseudo}#{$delimiter}#{$pseudo};
+                        @extend .theme-color-#{$prefix}-#{$hue}__#{$pseudo}#{$delimiter}#{$pseudo};
                       }
 
                     }
