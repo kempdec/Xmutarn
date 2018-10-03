@@ -1,3 +1,11 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
 @mixin media-breakpoint-up($breakpoint, $breakpoints-map: $media-breakpoints) {
   @if (map-has-key($map: $breakpoints-map, $key: $breakpoint) == false) {
     @error "Não foi possível encontrar o breakpoint '#{$breakpoint}'.";
