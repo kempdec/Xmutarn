@@ -6,6 +6,7 @@
 @import "variables";
 @import "lists";
 @import "maps";
+@import "mixins";
 // Cores e temas.
 @import "colors";
 @import "themes";
@@ -13,3 +14,5 @@
 @import "normalize";
 
 @import "global";
+// Componentes.
+@import "components/container";

@@ -1,3 +1,24 @@
+// Contêiner
+
+// Define a largura máxima de `.container` para diferentes tamanhos de tela.
+$container-max-widths: (
+  small: 540px,
+  medium: 720px,
+  large: 960px,
+  xlarge: 1140px
+) !default;
+
+// Media
+
+// Define os pontos de interrupção da "media".
+$media-breakpoints: (
+  xsmall: 0,
+  small: 576px,
+  medium: 768px,
+  large: 992px,
+  xlarge: 1200px
+) !default;
+
 // Temas
 
 // Define as propriedades dos temas principais.
