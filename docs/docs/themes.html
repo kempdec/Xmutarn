@@ -50,7 +50,7 @@
     <pre><code class="language-html">&lt;html x-main-theme="light">&lt;/html></code></pre>
 
     <p>
-      Por padrão o Xmutarn tem apenas 2 temas principais disponíveis: light e dark, sendo o <strong>"light"</strong> o
+      Por padrão o Xmutarn tem apenas 2 temas principais disponíveis: light e dark, sendo <strong>"light"</strong> o
       padrão.
     </p>
     <p>
@@ -59,27 +59,40 @@
     <button x-action="toggle-theme" x-action-arg="light">Light</button>
     <button x-action="toogle-theme" x-action-arg="dark">Dark</button>
     <p>
-      Classes adotam o prefixo <mark>theme-main-</mark>. Assim como as <a href="colors.html" target="_blank">cores</a>, os prefixos
-      para textos, fundos e bordas são utilizados. Use o prefixo <mark>theme-main-fg-</mark> (<strong>foreground</strong>)
-      para textos, <mark>theme-main-bg-</mark> (<strong>background</strong>) para fundos e <mark>theme-main-bd-</mark>
-      (<strong>border</strong>) para bordas.
+      As classes adotam o prefixo <mark>theme-main-</mark>. Assim como as <a href="colors.html" target="_blank">cores</a>,
+      os prefixos <mark>fg-</mark>, <mark>bg-</mark> e <mark>bd-</mark> para textos, fundos e bordas são utilizados.
+      Use o prefixo <mark>theme-main-fg-</mark> (<strong>foreground</strong>) para textos, <mark>theme-main-bg-</mark>
+      (<strong>background</strong>) para fundos e <mark>theme-main-bd-</mark> (<strong>border</strong>) para bordas.
     </p>
 
     <h3>Exemplo</h3>
     <div class="theme-main-bg-background">
-      <p class="theme-main-fg-primary">Texto de cor <strong>"primary"</strong> do tema principal.</p>
-      <p class="theme-main-fg-secondary">Texto de cor <strong>"secundary"</strong> do tema principal.</p>
-      <p class="theme-main-bg-disabled">Elemento com fundo de cor <strong>"disabled"</strong> do tema principal.</p>
+      <p class="theme-main-fg-primary">
+        Texto com a cor <strong>"primary"</strong> do tema principal.
+      </p>
+      <p class="theme-main-fg-secondary">
+        Texto com a cor <strong>"secundary"</strong> do tema principal.
+      </p>
+      <p class="theme-main-bg-disabled">
+        Texto com a cor de fundo <strong>"disabled"</strong> do tema principal.
+      </p>
       <div class="theme-main-bg-card theme-main-bd-dividers" style="border: 1px solid;">
-        Elemento com fundo de cor <strong>"card"</strong> e borda de cor <strong>"dividers"</strong> do tema principal.
+        Elemento com a cor de fundo <strong>"card"</strong> e borda da cor <strong>"dividers"</strong> do tema
+        principal.
       </div>
     </div>
 
-    <pre><code class="language-html">&lt;p class="theme-main-fg-primary">Texto de cor &lt;strong>"primary"&lt;/strong> do tema principal.&lt;/p>
-&lt;p class="theme-main-fg-secondary">Texto de cor &lt;strong>"secundary"&lt;/strong> do tema principal.&lt;/p>
-&lt;p class="theme-main-bg-disabled">Elemento com fundo de cor &lt;strong>"disabled"&lt;/strong> do tema principal.&lt;/p>
+    <pre><code class="language-html">&lt;p class="theme-main-fg-primary">
+  Texto com a cor &lt;strong>"primary"&lt;/strong> do tema principal.
+&lt;/p>
+&lt;p class="theme-main-fg-secondary">
+  Texto com a cor &lt;strong>"secundary"&lt;/strong> do tema principal.
+&lt;/p>
+&lt;p class="theme-main-bg-disabled">
+  Texto com a cor de fundo &lt;strong>"disabled"&lt;/strong> do tema principal.
+&lt;/p>
 &lt;div class="theme-main-bg-card theme-main-bd-dividers" style="border: 1px solid;">
-  Elemento com fundo de cor &lt;strong>"card"&lt;/strong> e borda de cor &lt;strong>"dividers"&lt;/strong> do tema principal.
+  Elemento com a cor de fundo &lt;strong>"card"&lt;/strong> e borda da cor &lt;strong>"dividers"&lt;/strong> do tema principal.
 &lt;/div></code></pre>
 
     <p>
@@ -119,7 +132,8 @@ $your-theme-map: (
 map-merge($map1: $themes-main-properties, $map2: $your-theme-map);</code></pre>
 
     <p>
-      Ou até mesmo sobrescrever nosso mapa SASS:
+      Ou até mesmo sobrescrever nosso mapa SASS, porém este método impedira que utilize nossos temas pré-definidos. Use
+      este método apenas se realmente deseja ter este resultado.
     </p>
     <pre><code class="language-scss">// Define as propriedades dos temas principais.
 $themes-main-properties: (
