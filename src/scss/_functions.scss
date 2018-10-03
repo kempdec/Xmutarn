@@ -52,6 +52,13 @@
   @return list-has-value($list: $themes-accent-color-hue-list, $value: $hue);
 }
 
+// media-breakpoint-infix
+//
+// Obtém o infixo do breakpoint informado.
+@function media-breakpoint-infix($breakpoint) {
+  @return if($breakpoint == xsmall, "", "___#{$breakpoint}");
+}
+
 // px-to
 //
 // Converte as unidades de medida em pixels da lista para rem ou em.
