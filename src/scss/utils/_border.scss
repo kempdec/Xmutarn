@@ -17,3 +17,27 @@
     margin: $border-divider-padded-margin;
   }
 }
+
+.border-radius-0 {
+  border-radius: 0 !important;
+}
+
+@each $y in (top bottom) {
+  @each $x in (right left) {
+
+    // .border-radius-*-0, .border-radius-*-*-0
+    //
+    // Exemplo: .border-radius-top-0, .border-radius-top-right-0
+    .border-radius-#{$y}-0,
+    .border-radius-#{$y}-#{$x}-0 {
+      border-#{$y}-#{$x}-radius: 0 !important;
+    }
+
+  }
+}
+
+@each $name, $value in $borders-radius {
+  .border-radius-#{$name} {
+    border-radius: #{$value} !important;
+  }
+}
