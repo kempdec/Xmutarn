@@ -16,8 +16,14 @@
 @import "global";
 // Componentes.
 @import "components/container";
+@import "components/border";
 // Utilitários.
 @import "utils/border";
 @import "utils/clearfix";
 @import "utils/cursor";
 @import "utils/display";
+@import "utils/fixed";
+@import "utils/float";
+@import "utils/position";
+@import "utils/sizing";
+@import "utils/spacing";

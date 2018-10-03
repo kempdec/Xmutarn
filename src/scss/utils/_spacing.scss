@@ -1,0 +1,30 @@
+@each $breakpoint in map-keys($map: $media-breakpoints) {
+  @include media-breakpoint-up($breakpoint: $breakpoint) {
+    $infix: media-breakpoint-infix($breakpoint: $breakpoint);
+
+    @each $size, $length in $spacings {
+      @each $property in (margin, padding) {
+
+        // .*-**
+        //
+        // Exemplo: .margin-xsmall___small
+        .#{$property}-#{$size}#{$infix} {
+          #{$property}: #{$length} !important;
+        }
+
+        @each $position, $side in (top: y, right: x, bottom: y, left: x) {
+
+          // .*-*-**, .*-*-**
+          //
+          // Exemplo: .margin-top-xsmall, .margin-y-xsmall
+          //          .margin-top-xsmall___small, .margin-y-xsmall___small
+          .#{$property}-#{$position}-#{$size}#{$infix},
+          .#{$property}-#{$side}-#{$size}#{$infix} {
+            #{$property}-#{$position}: #{$length} !important;
+          }
+
+        }
+      }
+    }
+  }
+}
