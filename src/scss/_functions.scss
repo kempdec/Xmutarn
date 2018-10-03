@@ -1,3 +1,20 @@
+// get-main-theme-color
+//
+// Obtém o código hexadecimal da cor do tema principal com base no nome da propriedade.
+@function get-main-theme-color($prop-name) {
+  @if (map-has-key($map: $themes-main-properties, $key: $theme-main-default) == false) {
+    @error "Não foi possível encontrar o tema principal '#{$theme-main-default}'.";
+  }
+
+  $theme: map-get($map: $themes-main-properties, $key: $theme-main-default);
+
+  @if (map-has-key($map: $theme, $key: $prop-name) == false) {
+    @error "Não foi possível encontrar a propriedade com o nome '#{$prop-name}' no tema principal '#{$theme-main-default}'.";
+  }
+
+  @return map-get($map: $theme, $key: $prop-name);
+}
+
 // get-palette-color
 //
 // Obtém o código hexadecimal da cor informada com base na sua tonalidade na paleta.

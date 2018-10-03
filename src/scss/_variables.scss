@@ -5,6 +5,15 @@
 // Esta variável vem primeiro para o uso das funções 'px-to-rem' e 'px-to-em'.
 $typography-font-size: 16px !default;
 
+// Borda
+
+// Define a margem da borda divisora acolchada.
+$border-divider-padded-margin: px-to-rem($list: 0 16px) !default;
+// Define a largura da borda divisora.
+$border-divider-width: 1px !default;
+// Define o estilo da borda divisora.
+$border-divider-style: solid !default;
+
 // Contêiner
 
 // Define o preenchimento dos contêineres.

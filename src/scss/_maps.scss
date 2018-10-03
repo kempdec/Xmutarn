@@ -1,3 +1,13 @@
+// Borda
+
+// Define os raios de borda de `.border-radius-*`.
+$borders-radius: (
+  circle: 50%,
+  small: px-to-rem($list: 2px),
+  medium: px-to-rem($list: 5px),
+  large: px-to-rem($list: 8px)
+) !default;
+
 // Contêiner
 
 // Define a largura máxima de `.container` para diferentes tamanhos de tela.
