@@ -1,6 +1,6 @@
 {
   "name": "xmutarn",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Xmutarn é um framework front-end criado com a finalidade de facilitar e aumentar a produtividade na construção de páginas modernas e estilosas.",
   "keywords": [
     "css",
@@ -24,7 +24,7 @@
     "url": "https://github.com/vinivsl/Xmutarn/issues"
   },
   "license": "MIT",
-  "private": true,
+  "private": false,
   "files": [
     "dist",
     "src/scss"
