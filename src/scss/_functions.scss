@@ -1,3 +1,26 @@
+// get-accent-theme-color
+//
+// Obtém o código hexadecimal da cor do tema de realçe com base na sua tonalidade na paleta.
+@function get-accent-theme-color($hue: A400) {
+  // Adiciona o prefixo das cores de realçe, caso ela não tenha.
+  @if (is-accent-color-hue($hue: $hue) == false) {
+    $hue: A#{$hue};
+  }
+
+  @return get-palette-color($color-name: $theme-accent-default-color, $color-hue: $hue);
+}
+
+// get-featured-theme-color
+//
+// Obtém o código hexadecimal da cor do tema destaque com base na sua tonalidade na paleta.
+@function get-featured-theme-color($hue: 500) {
+  @if (is-accent-color-hue($hue: $hue)) {
+    @error "A tonalidade '#{$hue} pertence a cores de realçe da paleta'.";
+  }
+
+  @return get-palette-color($color-name: $theme-featured-default-color, $color-hue: $hue);
+}
+
 // get-main-theme-color
 //
 // Obtém o código hexadecimal da cor do tema principal com base no nome da propriedade.
