@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" prefix="og: http://ogp.me/ns#">
+<html lang="pt-br" prefix="og: http://ogp.me/ns#" x-main-theme="dark">
 
 <head>
   <meta charset="utf-8">
@@ -22,16 +22,27 @@
   <title>Xmutarn - Framework front-end moderno, estiloso, fácil e produtivo</title>
 
   <link rel="shortcut icon" href="assets/img/icon.png">
+  <link rel="manifest" href="manifest.json">
 
   <!-- Arquivos de estilo. -->
   <link rel="stylesheet" href="assets/style/xmutarn.min.css">
 </head>
 
 <body class="typography-use-default theme-main-bg-card">
-  <main class="container theme-main-fg-primary" style="text-align: center;">
-    <h1 class="theme-color-fg">Xmutarn</h1>
-    <p>Moderno, estiloso, fácil e produtivo.</p>
-    <a href="docs/introduction.html">Começar</a>
+  <main class="container theme-main-fg-primary">
+    <section class="flex-row flex-align-items-center">
+
+        <figure class="flex-col-10 flex-col-8___small flex-col-6___large flex-order-1___large margin-x-auto margin-top-xlarge">
+          <img class="max-width-100" src="assets/img/xmutarn-logo-abstract.png" alt="Logotipo do Xmutarn com fundo abstrato">
+        </figure>
+
+        <article class="flex-col-6___large typography-align-center">
+            <h1 class="typography-headline2 theme-color-fg">Xmutarn</h1>
+            <p class="typography-headline5">Moderno, estiloso, fácil e produtivo.</p>
+            <a href="docs/introduction.html" class="typography-to-uppercase">Começar</a>
+        </article>
+
+    </section>
   </main>
 </body>
 

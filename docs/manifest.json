@@ -1,0 +1,15 @@
+{
+  "name": "Xmutarn",
+  "short_name": "Xmutarn",
+  "icons": [
+    {
+      "src": "/assets/img/environment/manifest.png",
+      "sizes": "316x316",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#4A148C",
+  "background_color": "#4A148C",
+  "display": "standalone"
+}
