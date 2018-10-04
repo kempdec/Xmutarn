@@ -1,0 +1,44 @@
+.typography-style-italic {
+  font-style: italic !important;
+}
+
+
+@each $overflow in (clip ellipsis) {
+  .typography-overflow-#{$overflow} {
+    white-space: nowrap;
+    text-overflow: #{$overflow};
+    overflow: hidden;
+  }
+}
+
+@each $transform in (uppercase lowercase capitalize) {
+  .typography-to-#{$transform} {
+    text-transform: #{$transform} !important;
+  }
+}
+
+@each $style, $weight in $typography-font-weights {
+  .typography-weight-#{$style} {
+    font-weight: #{$weight} !important;
+  }
+}
+
+@each $breakpoint in map-keys($map: $media-breakpoints) {
+  $infix: media-breakpoint-infix($breakpoint: $breakpoint);
+
+  @include media-breakpoint-up($breakpoint: $breakpoint) {
+    @each $align in (left right center justify) {
+      @if ($align != justify or $align == justify and $infix == "") {
+
+        // .typography-align-**
+        //
+        // Exemplo: .typography-align-left
+        //          .typography-align-left___small
+        .typography-align-#{$align}#{$infix} {
+          text-align: #{$align} !important;
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.typography-use-roboto, .typography-use-default {
+  font-family: "Roboto", sans-serif;
+}
+
+@each $typography, $properties in $typographies {
+
+  // .typography-*
+  //
+  // Exemplo: .typography-headline1
+  .typography-#{$typography} {
+    @each $property, $value in $properties {
+      #{$property}: #{$value};
+    }
+  }
+
+}
+
+.typography-headline1,
+.typography-headline2 {
+  font-weight: map-get($map: $typography-font-weights, $key: light);
+}
+
+.typography-headline3,
+.typography-headline4,
+.typography-headline5,
+.typography-subtitle1,
+.typography-body1,
+.typography-body2,
+.typography-caption1 {
+  font-weight: map-get($map: $typography-font-weights, $key: regular);
+}
+
+.typography-headline6,
+.typography-subtitle2,
+.typography-caption2 {
+  font-weight: map-get($map: $typography-font-weights, $key: medium);
+}
