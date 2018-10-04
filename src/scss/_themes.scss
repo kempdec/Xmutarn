@@ -42,10 +42,6 @@
   }
 }
 
-html:not([x-main-theme]) {
-  @extend html[x-main-theme="#{$theme-main-default}"];
-}
-
 // Temas destaques e de realçe.
 
 @each $color-name, $color-hues in $palette {
