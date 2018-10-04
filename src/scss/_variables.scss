@@ -31,6 +31,11 @@ $flex-row-margin: px-to-rem($list: 0 -15px) !default;
 // Define a largura base da coluna do flexbox.
 $flex-base-column-width: 0% + 100 / $flex-columns !default;
 
+// Fonte
+
+// Define o caminho ou endereço URL da fonte "Roboto".
+$font-roboto-path-or-address: "../fonts" !default;
+
 // Tema
 
 // Define o tema principal padrão, com base no mapa `$themes-main-properties`.
