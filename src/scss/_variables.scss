@@ -19,6 +19,18 @@ $border-divider-style: solid !default;
 // Define o preenchimento dos contêineres.
 $container-padding: px-to-rem($list: 0 15px) !default;
 
+// Flexbox
+
+// Define o preenchimento de uma coluna do flexbox.
+$flex-column-padding: px-to-rem($list: 0 15px) !default;
+// Define o número máximo de colunas do flexbox.
+$flex-columns: 12 !default;
+// Define a margem das linhas do flexbox.
+$flex-row-margin: px-to-rem($list: 0 -15px) !default;
+
+// Define a largura base da coluna do flexbox.
+$flex-base-column-width: 0% + 100 / $flex-columns !default;
+
 // Tema
 
 // Define o tema principal padrão, com base no mapa `$themes-main-properties`.

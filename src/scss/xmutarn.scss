@@ -7,6 +7,7 @@
 @import "lists";
 @import "maps";
 @import "mixins";
+@import "placeholders";
 // Cores e temas.
 @import "colors";
 @import "themes";
@@ -16,6 +17,7 @@
 @import "global";
 // Componentes.
 @import "components/container";
+@import "components/flex";
 @import "components/border";
 // Utilitários.
 @import "utils/border";
@@ -23,6 +25,7 @@
 @import "utils/cursor";
 @import "utils/display";
 @import "utils/fixed";
+@import "utils/flex";
 @import "utils/float";
 @import "utils/position";
 @import "utils/sizing";
