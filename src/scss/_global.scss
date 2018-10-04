@@ -8,6 +8,26 @@ html {
   box-sizing: inherit;
 }
 
+::selection {
+  color: $global-selection-color;
+  background-color: $global-selection-background-color;
+}
+
+a {
+  color: $global-anchor-color;
+  text-decoration: $global-anchor-text-decoration;
+
+  &:hover,
+  &:active {
+    color: $global-anchor-hover-color;
+  }
+}
+
 figure {
   margin: 0;
+}
+
+input::-ms-clear,
+input[type="password"]::-ms-reveal {
+  display: none;
 }
