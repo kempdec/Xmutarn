@@ -1,3 +1,25 @@
+// Barra de ferramentas
+
+// Define o tamanho da fonte da barra de ferramentas.
+$toolbar-font-size: px-to-rem($list: 16px) !default;
+// Define a espessura da fonte da barra de ferramentas.
+$toolbar-font-weight: map-get($map: $typography-font-weights, $key: medium);
+// Define o preenchimento da barra de ferramentas.
+$toolbar-padding: px-to-rem($list: 0 8px) !default;
+
+// Define o espaçamento do elemento de navegação da barra de navegação.
+$toolbar-nav-padding: px-to-em($list: 9.14px 0) !default;
+
+// Define o tamanho do raio de borda de um item de navegação da barra de ferramentas.
+$toolbar-nav-item-border-radius: px-to-rem($list: 4px) !default;
+// Define o preenchimento de um item de navegação da barra de ferramentas.
+$toolbar-nav-item-padding: px-to-em($list: 18.288px) !default;
+
+// Define a margem direita dos ícones de um item de navegação da barra de ferramentas.
+$toolbar-nav-item-icon-margin-right: px-to-em($list: 4.15px) !default;
+// Define a margem esquerda dos ícones de um item de navegação da barra de ferramentas.
+$toolbar-nav-item-icon-margin-left: px-to-em($list: -2.58px) !default;
+
 // Borda
 
 // Define a margem da borda divisora acolchada.
@@ -61,6 +83,10 @@ $theme-main-default: light !default;
 $theme-featured-default-color: purple !default;
 // Define a cor padrão do tema de realçe, com base no mapa da paleta `$palette`.
 $theme-accent-default-color: light-blue !default;
+
+// Z-index
+
+$z-index-toolbar: 40 !default;
 
 // Global file
 //
