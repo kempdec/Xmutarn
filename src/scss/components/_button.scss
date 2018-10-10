@@ -1,0 +1,101 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  padding: $button-padding;
+  height: $button-height;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  text-transform: $button-text-transform;
+  letter-spacing: $button-letter-spacing;
+  border: $button-border;
+  border-radius: $button-border-radius;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+
+  &:not([disabled]):not(.button_disabled) {
+    cursor: pointer;
+
+    &:not(.button_flat):not(.button_outlined) {
+      color: white;
+      background-color: var(--theme-color500, get-featured-theme-color());
+
+      &::before {
+        background-color: white;
+      }
+    }
+
+    &:hover::before {
+      opacity: .12;
+    }
+
+    &:active::before {
+      opacity: .36;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+
+    &::before {
+      opacity: .18;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    will-change: opacity;
+    transition: opacity .2s;
+  }
+
+  &[disabled],
+  &.button_disabled {
+    cursor: default;
+    color: var(--theme-main-disabled, get-main-theme-color($prop-name: disabled)) !important;
+    background-color: var(--theme-main-dividers, get-main-theme-color($prop-name: dividers)) !important;
+
+    &::before {
+      background-color: var(--theme-main-disabled, get-main-theme-color($prop-name: disabled));
+    }
+  }
+
+  &_flat,
+  &_outlined {
+    &:not([disabled]):not(.button_disabled) {
+      color: var(--theme-color500, get-featured-theme-color());
+      background-color: transparent;
+
+      &::before {
+        background-color: var(--theme-color500, get-featured-theme-color());
+      }
+    }
+  }
+
+  &_outlined {
+    border: 1px solid #{get-main-theme-color($prop-name: dividers)};
+  }
+
+  @each $size, $length in $button-font-sizes {
+
+    // &_size-*
+    //
+    // Exemplo: &_size-xsmall
+    &_size-#{$size} {
+      font-size: px-to-rem($list: $length);
+    }
+
+  }
+
+  &--icon {
+    margin-right: $button-icon-margin-right;
+    margin-left: $button-icon-margin-left;
+  }
+}

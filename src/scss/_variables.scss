@@ -1,10 +1,3 @@
-// Tipografia
-
-// Define o tamanho da fonte da tipografia.
-//
-// Esta variável vem primeiro para o uso das funções 'px-to-rem' e 'px-to-em'.
-$typography-font-size: 16px !default;
-
 // Borda
 
 // Define a margem da borda divisora acolchada.
@@ -13,6 +6,30 @@ $border-divider-padded-margin: px-to-rem($list: 0 16px) !default;
 $border-divider-width: 1px !default;
 // Define o estilo da borda divisora.
 $border-divider-style: solid !default;
+
+// Botão
+
+// Define a borda dos botões.
+$button-border: none !default;
+// Define o tamanho do raio de borda dos botões.
+$button-border-radius: px-to-rem($list: 4px) !default;
+// Define o tamanho da fonte dos botões.
+$button-font-size: map-get($map: $button-font-sizes, $key: medium) !default;
+// Define a espessura da fonte dos botões.
+$button-font-weight: map-get($map: $typography-font-weights, $key: medium) !default;
+// Define a altura dos botões.
+$button-height: px-to-em($list: 41.15px) !default;
+// Define o espaçamento entre letras dos botões.
+$button-letter-spacing: px-to-em($list: .32px) !default;
+// Define o espaçamento dos botões.
+$button-padding: 0 px-to-em($list: 18.288px) !default;
+// Define o efeito de capitalização de texto dos botões.
+$button-text-transform: uppercase !default;
+
+// Define a margem direita de ícones dos botões.
+$button-icon-margin-right: px-to-em($list: 9.15px) !default;
+// Define a margem esquerda de ícones dos botões.
+$button-icon-margin-left: px-to-em($list: -4.58px) !default;
 
 // Contêiner
 

@@ -8,6 +8,17 @@ $borders-radius: (
   large: px-to-rem($list: 8px)
 ) !default;
 
+// Botão
+
+// Define o tamanho das fontes dos botões.
+$button-font-sizes: (
+  xsmall: px-to-rem($list: 10px),
+  small: px-to-rem($list: 12px),
+  medium: px-to-rem($list: 14px),
+  large: px-to-rem($list: 16px),
+  xlarge: px-to-rem($list: 19.2px)
+) !default;
+
 // Contêiner
 
 // Define a largura máxima de `.container` para diferentes tamanhos de tela.
