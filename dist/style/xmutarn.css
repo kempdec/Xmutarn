@@ -1,4 +1,4 @@
-/*! Xmutarn v0.1.0 (https://github.com/vinivsl/Xmutarn.git) | Copyright 2018 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/Xmutarn/blob/master/LICENSE) */
+/*! Xmutarn v0.2.0 (https://github.com/vinivsl/Xmutarn.git) | Copyright 2018 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/Xmutarn/blob/master/LICENSE) */
 .flex-col-1, .flex-col-2, .flex-col-3, .flex-col-4, .flex-col-5, .flex-col-6, .flex-col-7, .flex-col-8, .flex-col-9, .flex-col-10, .flex-col-11, .flex-col-12, .flex-col-1___small, .flex-col-2___small, .flex-col-3___small, .flex-col-4___small, .flex-col-5___small, .flex-col-6___small, .flex-col-7___small, .flex-col-8___small, .flex-col-9___small, .flex-col-10___small, .flex-col-11___small, .flex-col-12___small, .flex-col-1___medium, .flex-col-2___medium, .flex-col-3___medium, .flex-col-4___medium, .flex-col-5___medium, .flex-col-6___medium, .flex-col-7___medium, .flex-col-8___medium, .flex-col-9___medium, .flex-col-10___medium, .flex-col-11___medium, .flex-col-12___medium, .flex-col-1___large, .flex-col-2___large, .flex-col-3___large, .flex-col-4___large, .flex-col-5___large, .flex-col-6___large, .flex-col-7___large, .flex-col-8___large, .flex-col-9___large, .flex-col-10___large, .flex-col-11___large, .flex-col-12___large, .flex-col-1___xlarge, .flex-col-2___xlarge, .flex-col-3___xlarge, .flex-col-4___xlarge, .flex-col-5___xlarge, .flex-col-6___xlarge, .flex-col-7___xlarge, .flex-col-8___xlarge, .flex-col-9___xlarge, .flex-col-10___xlarge, .flex-col-11___xlarge, .flex-col-12___xlarge {
   position: relative;
   width: 100%;
@@ -1280,6 +1280,179 @@ input[type="password"]::-ms-reveal {
 
 .border-divider_padded {
   margin: 0 1rem;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  padding: 0 1.143em;
+  height: 2.57187em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border: none;
+  border-radius: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.button:not([disabled]):not(.button_disabled) {
+  cursor: pointer;
+}
+
+.button:not([disabled]):not(.button_disabled):not(.button_flat):not(.button_outlined) {
+  color: white;
+  background-color: var(--theme-color500, #9C27B0);
+}
+
+.button:not([disabled]):not(.button_disabled):not(.button_flat):not(.button_outlined)::before {
+  background-color: white;
+}
+
+.button:not([disabled]):not(.button_disabled):hover::before {
+  opacity: .12;
+}
+
+.button:not([disabled]):not(.button_disabled):active::before {
+  opacity: .36;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:focus::before {
+  opacity: .18;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  will-change: opacity;
+  transition: opacity .2s;
+}
+
+.button[disabled], .button.button_disabled {
+  cursor: default;
+  color: var(--theme-main-disabled, rgba(0, 0, 0, 0.38)) !important;
+  background-color: var(--theme-main-dividers, rgba(0, 0, 0, 0.12)) !important;
+}
+
+.button[disabled]::before, .button.button_disabled::before {
+  background-color: var(--theme-main-disabled, rgba(0, 0, 0, 0.38));
+}
+
+.button_flat:not([disabled]):not(.button_disabled), .button_outlined:not([disabled]):not(.button_disabled) {
+  color: var(--theme-color500, #9C27B0);
+  background-color: transparent;
+}
+
+.button_flat:not([disabled]):not(.button_disabled)::before, .button_outlined:not([disabled]):not(.button_disabled)::before {
+  background-color: var(--theme-color500, #9C27B0);
+}
+
+.button_outlined {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.button_size-xsmall {
+  font-size: 0.625rem;
+}
+
+.button_size-small {
+  font-size: 0.75rem;
+}
+
+.button_size-medium {
+  font-size: 0.875rem;
+}
+
+.button_size-large {
+  font-size: 1rem;
+}
+
+.button_size-xlarge {
+  font-size: 1.2rem;
+}
+
+.button--icon {
+  margin-right: 0.57188em;
+  margin-left: -0.28625em;
+}
+
+.toolbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  z-index: 40;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: var(--theme-color700, #7B1FA2);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.toolbar > .container,
+.toolbar > .container-fluid {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.toolbar .toolbar--nav {
+  display: flex;
+  overflow-x: auto;
+  padding: 0.57125em 0;
+  list-style: none;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.toolbar .toolbar--nav .toolbar--nav--item {
+  padding: 1.143em;
+  color: inherit;
+  border-radius: 0.25rem;
+  transition: background-color .4s;
+  flex: 0 0 auto;
+}
+
+.toolbar .toolbar--nav .toolbar--nav--item:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.toolbar .toolbar--nav .toolbar--nav--item:active {
+  background-color: rgba(255, 255, 255, 0.36);
+}
+
+.toolbar .toolbar--nav .toolbar--nav--item:focus {
+  background-color: rgba(255, 255, 255, 0.18);
+  outline: 0;
+}
+
+.toolbar .toolbar--nav .toolbar--nav--item .toolbar--nav--item--icon {
+  margin-right: 0.25938em;
+  margin-left: -0.16125em;
 }
 
 .border-0 {

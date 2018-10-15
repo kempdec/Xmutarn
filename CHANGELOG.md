@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Xmutarn v0.2.0 (2018-10-15) - Release 02
+
+- Adicionado botões.
+- Adicionado barra de ferramentas.
+
 ## Xmutarn v0.1.0 (2018-10-03) - Release 01
 
 - Adicionado temas.
