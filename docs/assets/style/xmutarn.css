@@ -1344,13 +1344,13 @@ input[type="password"]::-ms-reveal {
   transition: opacity .2s;
 }
 
-.button[disabled], .button.button_disabled {
+.button[disabled], .button_disabled {
   cursor: default;
   color: var(--theme-main-disabled, rgba(0, 0, 0, 0.38)) !important;
   background-color: var(--theme-main-dividers, rgba(0, 0, 0, 0.12)) !important;
 }
 
-.button[disabled]::before, .button.button_disabled::before {
+.button[disabled]::before, .button_disabled::before {
   background-color: var(--theme-main-disabled, rgba(0, 0, 0, 0.38));
 }
 
@@ -1392,6 +1392,36 @@ input[type="password"]::-ms-reveal {
   margin-left: -0.28625em;
 }
 
+.list {
+  margin: 0;
+  padding: 0.5rem 0;
+  list-style-type: none;
+}
+
+.list--item {
+  display: flex;
+  cursor: pointer;
+  padding: 0 1em;
+  height: 3em;
+  color: var(--theme-main-primary, rgba(0, 0, 0, 0.87));
+  transition: background-color .4s;
+  align-items: center;
+}
+
+.list--item:hover {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.list--item:active {
+  background-color: rgba(0, 0, 0, 0.16);
+}
+
+.list--icon {
+  margin-right: 0.57188em;
+  margin-left: -0.28625em;
+}
+
 .toolbar {
   position: -webkit-sticky;
   position: sticky;
@@ -1417,7 +1447,7 @@ input[type="password"]::-ms-reveal {
   flex-wrap: wrap;
 }
 
-.toolbar .toolbar--nav {
+.toolbar--nav {
   display: flex;
   overflow-x: auto;
   padding: 0.57125em 0;
@@ -1429,7 +1459,7 @@ input[type="password"]::-ms-reveal {
           user-select: none;
 }
 
-.toolbar .toolbar--nav .toolbar--nav--item {
+.toolbar--nav--item {
   padding: 1.143em;
   color: inherit;
   border-radius: 0.25rem;
@@ -1437,20 +1467,24 @@ input[type="password"]::-ms-reveal {
   flex: 0 0 auto;
 }
 
-.toolbar .toolbar--nav .toolbar--nav--item:hover {
+.toolbar--nav--item:hover, .toolbar--nav--item:active, .toolbar--nav--item:focus {
+  color: inherit;
+}
+
+.toolbar--nav--item:hover {
   background-color: rgba(255, 255, 255, 0.12);
 }
 
-.toolbar .toolbar--nav .toolbar--nav--item:active {
+.toolbar--nav--item:active {
   background-color: rgba(255, 255, 255, 0.36);
 }
 
-.toolbar .toolbar--nav .toolbar--nav--item:focus {
+.toolbar--nav--item:focus {
   background-color: rgba(255, 255, 255, 0.18);
   outline: 0;
 }
 
-.toolbar .toolbar--nav .toolbar--nav--item .toolbar--nav--item--icon {
+.toolbar--nav--item--icon {
   margin-right: 0.25938em;
   margin-left: -0.16125em;
 }
