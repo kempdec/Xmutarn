@@ -1417,7 +1417,11 @@ input[type="password"]::-ms-reveal {
   background-color: rgba(0, 0, 0, 0.16);
 }
 
-.list--icon {
+.list--item_active {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.list--item--icon {
   margin-right: 0.57188em;
   margin-left: -0.28625em;
 }
