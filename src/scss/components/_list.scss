@@ -1,0 +1,29 @@
+.list {
+  margin: $list-margin;
+  padding: $list-padding;
+  list-style-type: none;
+
+  &--item {
+    display: flex;
+    cursor: pointer;
+    padding: $list-item-padding;
+    height: $list-item-height;
+    color: var(--theme-main-primary, get-main-theme-color($prop-name: primary));
+    transition: background-color .4s;
+    align-items: center;
+
+    &:hover {
+      color: inherit;
+      background-color: rgba(0, 0, 0, .04);
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, .16);
+    }
+  }
+
+  &--icon {
+    margin-right: $button-icon-margin-right;
+    margin-left: $button-icon-margin-left;
+  }
+}

@@ -75,6 +75,18 @@ $flex-base-column-width: 0% + 100 / $flex-columns !default;
 // Define o caminho ou endereço URL da fonte "Roboto".
 $font-roboto-path-or-address: "../fonts" !default;
 
+// Lista
+
+// Define a margem da lista.
+$list-margin: 0 !default;
+// Define o preenchimento da lista.
+$list-padding: px-to-rem($list: 8px 0) !default;
+
+// Define a altura do item da lista.
+$list-item-height: px-to-em($list: 48px) !default;
+// Define o preenchimento do item da lista.
+$list-item-padding: px-to-em($list: 0 16px) !default;
+
 // Tema
 
 // Define o tema principal padrão, com base no mapa `$themes-main-properties`.
