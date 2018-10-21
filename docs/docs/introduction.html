@@ -21,67 +21,99 @@
   <header class="toolbar">
     <div class="container-fluid">
       <nav class="toolbar--nav">
-        <a href="/" class="toolbar--nav--item margin-right-small padding-xsmall">
+        <a class="toolbar--nav--item margin-right-small padding-xsmall" href="/">
           <img src="/assets/img/environment/manifest.png" alt="Logotipo do Xmutarn com fundo linear" style="max-height: 2.5rem;">
         </a>
-        <a href="/" class="toolbar--nav--item">Início</a>
-        <a href="/docs/introduction.html" class="toolbar--nav--item">Documentação</a>
+        <a class="toolbar--nav--item" href="/">Início</a>
+        <a class="toolbar--nav--item toolbar--nav--item_active" href="/docs/introduction.html">Documentação</a>
+      </nav>
+
+      <nav class="toolbar--nav">
+        <a class="toolbar--nav--item" href="https://github.com/vinivsl/Xmutarn" target="_blank">
+          <span class="fab fa-github fa-lg"></span>
+        </a>
       </nav>
     </div>
   </header>
 
-  <section class="theme-main-fg-primary">
-    <nav>
-      <a href="../">Início</a>
-      <a href="introduction.html">Introdução</a>
-      <p>Temas e cores</p>
-      <a href="colors.html">Cores</a>
-      <a href="themes.html">Temas</a>
-    </nav>
-  </section>
+  <div class="flex-row margin-0">
+    <section class="flex-col-3___medium flex-col-2___xlarge theme-main-fg-primary theme-main-bg-background">
+      <nav class="list">
+        <a class="list--item" href="introduction.html">Introdução</a>
+        <p class="padding-x-small typography-body2 typography-weight-bold">Temas e cores</p>
+        <a class="list--item" href="colors.html">Cores</a>
+        <a class="list--item" href="themes.html">Temas</a>
+      </nav>
+    </section>
 
-  <main class="container theme-main-fg-primary">
-    <h1>Introdução</h1>
+    <div class="flex-col-9___medium flex-col-7___xlarge padding-bottom-large">
+      <main class="padding-left-medium___medium padding-left-xlarge___xlarge typography-body1 theme-main-fg-primary">
+        <h1 class="typography-headline2">Introdução</h1>
 
-    <h2>Iniciando sem dificuldades</h2>
-    <p>
-      Aprendendo a partir de um padrão simples e decorando alguns prefixos, você já pode começar a criar suas páginas
-      com o Xmutarn.
-    </p>
+        <h2 class="typography-headline3">Iniciando sem dificuldades</h2>
+        <p>
+          Aprendendo a partir de um padrão simples e decorando alguns prefixos, você já pode começar a criar suas
+          páginas
+          com o Xmutarn.
+        </p>
 
-    <h3>Prefixos</h3>
-    <p>
-      Nós acreditamos que a maioria, senão todos, os desenvolvedores que buscam pela produtividade, utilizam um IDE ou
-      um editor de código inteligente que é dotado de um IntelliSense. Com essa ideia em mente, usamos prefixos e
-      padrões para facilitar e agilizar a codificação, discartando a necessidade de ficar de olho na documentação do
-      framework.
-    </p>
-    <p>
-      Com a ajuda do IntelliSense e o prefixo certo, é possível obter todas as opções de estilo. Isso é útil para quem
-      esqueceu o nome daquela classe, mas sabe seu prefixo; evita que iniciantes precisem consultar constantemente a
-      documentação do framework; também é útil para ver as possíveis opções que podem não estar na documentação.
-    </p>
-    <p>
-      Exemplo com o uso de tipografias e seu prefixo
-      <mark>typography-</mark>:
-    </p>
-    <figure style="margin: 0;">
-      <img src="../assets/img/examples/typography-options.png" alt="Lista de opções de tipografia com ajuda do IntelliSense"
-        style="max-width: 100%;" />
-    </figure>
-    <p>
-      Listando todas as opções de espessura (<strong>weight</strong>) de tipografia (prefixo
-      <mark>typography-weight-</mark>), com ajuda do IntelliSense:
-    </p>
-    <figure style="margin: 0;">
-      <img src="../assets/img/examples/typography-weight-options.png" alt="Lista de opções da espessura de tipografia com ajuda do IntelliSense"
-        style="max-width: 100%;" />
-    </figure>
+        <h3 class="typography-headline4">Prefixos</h3>
+        <p>
+          Nós acreditamos que a maioria, senão todos, os desenvolvedores que buscam pela produtividade, utilizam um IDE
+          ou
+          um editor de código inteligente que é dotado de um IntelliSense. Com essa ideia em mente, usamos prefixos e
+          padrões para facilitar e agilizar a codificação, discartando a necessidade de ficar de olho na documentação
+          do
+          framework.
+        </p>
+        <p>
+          Com a ajuda do IntelliSense e o prefixo certo, é possível obter todas as opções de estilo. Isso é útil para
+          quem
+          esqueceu o nome daquela classe, mas sabe seu prefixo; evita que iniciantes precisem consultar constantemente
+          a
+          documentação do framework; também é útil para ver as possíveis opções que podem não estar na documentação.
+        </p>
+        <p>
+          Exemplo com o uso de tipografias e seu prefixo
+          <mark>typography-</mark>:
+        </p>
+        <figure style="margin: 0;">
+          <img src="../assets/img/examples/typography-options.png" alt="Lista de opções de tipografia com ajuda do IntelliSense"
+            style="max-width: 100%;" />
+        </figure>
+        <p>
+          Listando todas as opções de espessura (<strong>weight</strong>) de tipografia (prefixo
+          <mark>typography-weight-</mark>), com ajuda do IntelliSense:
+        </p>
+        <figure style="margin: 0;">
+          <img src="../assets/img/examples/typography-weight-options.png" alt="Lista de opções da espessura de tipografia com ajuda do IntelliSense"
+            style="max-width: 100%;" />
+        </figure>
 
-    <a href="colors.html" class="button button_flat button_size-large float-right">
-      Próximo: Cores - Temas e cores
-    </a>
-  </main>
+        <a href="colors.html" class="button button_flat button_size-large float-right">
+          Próximo: Cores - Temas e cores
+        </a>
+      </main>
+    </div>
+  </div>
+
+  <footer class="theme-main-fg-primary theme-main-bg-background">
+    <div class="container">
+      <div class="flex-row flex-align-items-center padding-medium typography-caption1">
+        <a href="https://github.com/vinivsl/Xmutarn" class="margin-right-medium" target="_blank">
+          GitHub
+        </a>
+        <a href="https://github.com/vinivsl/Xmutarn/blob/master/LICENSE" target="_blank">
+          MIT License
+        </a>
+        <span class="margin-left-auto">2018 © Vinícius Lima. Todos os direitos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Arquivos de script. -->
+  <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
