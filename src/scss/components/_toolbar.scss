@@ -21,7 +21,7 @@
     flex-wrap: wrap;
   }
 
-  .toolbar--nav {
+  &--nav {
     display: flex;
     overflow-x: auto;
     padding: $toolbar-nav-padding;
@@ -29,7 +29,7 @@
     align-items: center;
     user-select: none;
 
-    .toolbar--nav--item {
+    &--item {
       padding: $toolbar-nav-item-padding;
       color: inherit;
       border-radius: $toolbar-nav-item-border-radius;
@@ -49,7 +49,7 @@
         outline: 0;
       }
 
-      .toolbar--nav--item--icon {
+      &--icon {
         margin-right: $toolbar-nav-item-icon-margin-right;
         margin-left: $toolbar-nav-item-icon-margin-left;
       }

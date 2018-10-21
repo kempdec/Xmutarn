@@ -57,7 +57,7 @@
   }
 
   &[disabled],
-  &.button_disabled {
+  &_disabled {
     cursor: default;
     color: var(--theme-main-disabled, get-main-theme-color($prop-name: disabled)) !important;
     background-color: var(--theme-main-dividers, get-main-theme-color($prop-name: dividers)) !important;
