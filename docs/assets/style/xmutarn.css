@@ -1484,6 +1484,10 @@ input[type="password"]::-ms-reveal {
   outline: 0;
 }
 
+.toolbar--nav--item_active {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
 .toolbar--nav--item--icon {
   margin-right: 0.25938em;
   margin-left: -0.16125em;
