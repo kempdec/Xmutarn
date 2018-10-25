@@ -7,7 +7,7 @@
   font-size: $toolbar-font-size;
   font-weight: $toolbar-font-weight;
   color: white;
-  background-color: var(--theme-color700, get-featured-theme-color($hue: 700));
+  background-color: var(--theme-color-700, get-featured-theme-color($hue: 700));
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;

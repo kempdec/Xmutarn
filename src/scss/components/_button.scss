@@ -19,7 +19,7 @@
 
     &:not(.button_flat):not(.button_outlined) {
       color: white;
-      background-color: var(--theme-color500, get-featured-theme-color());
+      background-color: var(--theme-color-500, get-featured-theme-color());
 
       &::before {
         background-color: white;
@@ -70,11 +70,11 @@
   &_flat,
   &_outlined {
     &:not([disabled]):not(.button_disabled) {
-      color: var(--theme-color500, get-featured-theme-color());
+      color: var(--theme-color-500, get-featured-theme-color());
       background-color: transparent;
 
       &::before {
-        background-color: var(--theme-color500, get-featured-theme-color());
+        background-color: var(--theme-color-500, get-featured-theme-color());
       }
     }
   }
