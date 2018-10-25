@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Xmutarn v0.3.0 (2018-10-25) - Release 03
+
+- Adicionado listas.
+
+---
+
+- Nome das variáveis CSS foram corrigidos.
+
 ## Xmutarn v0.2.0 (2018-10-15) - Release 02
 
 - Adicionado botões.
