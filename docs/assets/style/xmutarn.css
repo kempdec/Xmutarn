@@ -1464,6 +1464,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .toolbar--nav--item {
+  margin: 0 0.125em;
   padding: 1.143em;
   color: inherit;
   border-radius: 0.25rem;
@@ -1490,6 +1491,14 @@ input[type="password"]::-ms-reveal {
 
 .toolbar--nav--item_active {
   background-color: rgba(255, 255, 255, 0.07);
+}
+
+.toolbar--nav--item_bordered {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.toolbar--nav--item_dark {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .toolbar--nav--item--icon {

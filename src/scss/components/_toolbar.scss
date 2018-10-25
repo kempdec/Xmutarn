@@ -7,7 +7,7 @@
   font-size: $toolbar-font-size;
   font-weight: $toolbar-font-weight;
   color: white;
-  background-color: var(--theme-color-700, get-featured-theme-color($hue: 700));
+  background-color: $toolbar-background-color;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -30,6 +30,7 @@
     user-select: none;
 
     &--item {
+      margin: $toolbar-nav-item-margin;
       padding: $toolbar-nav-item-padding;
       color: inherit;
       border-radius: $toolbar-nav-item-border-radius;
@@ -43,20 +44,28 @@
       }
 
       &:hover {
-        background-color: rgba(255, 255, 255, .12);
+        background-color: $toolbar-nav-item-bg-color-pseudo-hover;
       }
 
       &:active {
-        background-color: rgba(255, 255, 255, .36);
+        background-color: $toolbar-nav-item-bg-color-pseudo-active;
       }
 
       &:focus {
-        background-color: rgba(255, 255, 255, .18);
+        background-color: $toolbar-nav-item-bg-color-pseudo-focus;
         outline: 0;
       }
 
       &_active {
-        background-color: rgba(255, 255, 255, .07);
+        background-color: $toolbar-nav-item-active-bg-color;
+      }
+
+      &_bordered {
+        border: $toolbar-nav-item-bordered-border;
+      }
+
+      &_dark {
+        background-color: $toolbar-nav-item-dark-bg-color;
       }
 
       &--icon {

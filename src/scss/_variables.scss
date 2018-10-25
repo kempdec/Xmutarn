@@ -1,5 +1,18 @@
+// Tema
+//
+// As variáveis de tema vêm primeiro para uso das funções de tema.
+
+// Define o tema principal padrão, com base no mapa `$themes-main-properties`.
+$theme-main-default: light !default;
+// Define a cor padrão do tema destaque, com base no mapa da paleta `$palette`.
+$theme-featured-default-color: purple !default;
+// Define a cor padrão do tema de realçe, com base no mapa da paleta `$palette`.
+$theme-accent-default-color: light-blue !default;
+
 // Barra de ferramentas
 
+// Define a cor de fundo da barra de ferramentas.
+$toolbar-background-color: var(--theme-color-700, get-featured-theme-color($hue: 700));
 // Define o tamanho da fonte da barra de ferramentas.
 $toolbar-font-size: px-to-rem($list: 16px) !default;
 // Define a espessura da fonte da barra de ferramentas.
@@ -10,8 +23,22 @@ $toolbar-padding: px-to-rem($list: 0 8px) !default;
 // Define o espaçamento do elemento de navegação da barra de navegação.
 $toolbar-nav-padding: px-to-em($list: 9.14px 0) !default;
 
+// Define a cor de fundo de um item de navegação (com variante "active") da barra de ferramentas.
+$toolbar-nav-item-active-bg-color: rgba(255, 255, 255, .07) !default;
+// Define a cor de fundo da pseudo-classe "hover" de um item de navegação da barra de ferramentas.
+$toolbar-nav-item-bg-color-pseudo-hover: rgba(255, 255, 255, .12) !default;
+// Define a cor de fundo da pseudo-classe "active" de um item de navegação da barra de ferramentas.
+$toolbar-nav-item-bg-color-pseudo-active: rgba(255, 255, 255, .36) !default;
+// Define a cor de fundo da pseudo-focus "hover" de um item de navegação da barra de ferramentas.
+$toolbar-nav-item-bg-color-pseudo-focus: rgba(255, 255, 255, .18) !default;
 // Define o tamanho do raio de borda de um item de navegação da barra de ferramentas.
 $toolbar-nav-item-border-radius: px-to-rem($list: 4px) !default;
+// Define a borda de um item de navegação (com variante "bordered") da barra de ferramentas.
+$toolbar-nav-item-bordered-border: 1px solid rgba(255, 255, 255, .5) !default;
+// Define a cor de fundo de um item de navegação (com variante "dark") da barra de ferramentas.
+$toolbar-nav-item-dark-bg-color: rgba(0, 0, 0, .3) !default;
+// Define a margem de um item de navegação da barra de ferramentas.
+$toolbar-nav-item-margin: px-to-em($list: 0 2px) !default;
 // Define o preenchimento de um item de navegação da barra de ferramentas.
 $toolbar-nav-item-padding: px-to-em($list: 18.288px) !default;
 
@@ -86,15 +113,6 @@ $list-padding: px-to-rem($list: 8px 0) !default;
 $list-item-height: px-to-em($list: 48px) !default;
 // Define o preenchimento do item da lista.
 $list-item-padding: px-to-em($list: 0 16px) !default;
-
-// Tema
-
-// Define o tema principal padrão, com base no mapa `$themes-main-properties`.
-$theme-main-default: light !default;
-// Define a cor padrão do tema destaque, com base no mapa da paleta `$palette`.
-$theme-featured-default-color: purple !default;
-// Define a cor padrão do tema de realçe, com base no mapa da paleta `$palette`.
-$theme-accent-default-color: light-blue !default;
 
 // Z-index
 
