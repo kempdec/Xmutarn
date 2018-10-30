@@ -2,7 +2,7 @@
   "compilerOptions": {
     "sourceMap": true,
     "noImplicitAny": true,
-    "outDir": "./docs/assets/script/docs/js",
+    "outDir": "./assets/script/docs/js",
     "target": "es6"
   }
 }
