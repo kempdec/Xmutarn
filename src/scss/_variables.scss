@@ -102,6 +102,11 @@ $flex-base-column-width: 0% + 100 / $flex-columns !default;
 // Define o caminho ou endereço URL da fonte "Roboto".
 $font-roboto-path-or-address: "../fonts" !default;
 
+// Input
+
+// Define a espessura da fonte do input.
+$input-font-weight: map-get($map: $typography-font-weights, $key: medium) !default;
+
 // Lista
 
 // Define a margem da lista.

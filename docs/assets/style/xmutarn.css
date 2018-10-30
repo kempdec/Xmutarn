@@ -1392,6 +1392,13 @@ input[type="password"]::-ms-reveal {
   margin-left: -0.28625em;
 }
 
+.input {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  font-weight: 500;
+}
+
 .list {
   margin: 0;
   padding: 0.5rem 0;
