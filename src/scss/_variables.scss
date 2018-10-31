@@ -104,8 +104,18 @@ $font-roboto-path-or-address: "../fonts" !default;
 
 // Input
 
-// Define a espessura da fonte do input.
-$input-font-weight: map-get($map: $typography-font-weights, $key: medium) !default;
+// Define a cor de fundo do campo de input flat.
+$input--field_flat-bg-color: var(--theme-main-dividers, get-main-theme-color($prop-name: dividers)) !default;
+// Define a borda do campo de input flat.
+$input--field_flat-border: none !default;
+// Define o raio de borda do campo de input flat.
+$input--field_flat-border-radius: px-to-em($list: 16px) !default;
+// Define a cor do input flat.
+$input--field_flat-color: var(--theme-main-primary, get-main-theme-color($prop-name: primary)) !default;
+// Define o tamanho da fonte do campo de input flat.
+$input--field_flat-font-size: px-to-em($list: 14px) !default;
+// Define o preenchimento do campo de input flat.
+$input--field_flat-padding: px-to-em($list: 5px 15px) !default;
 
 // Lista
 

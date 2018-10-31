@@ -1,6 +1,12 @@
 .input {
-  position: relative;
-  display: inline-flex;
-  width: 100%;
-  font-weight: $input-font-weight;
+  &--field {
+    &_flat {
+      padding: $input--field_flat-padding;
+      font-size: $input--field_flat-font-size;
+      color: $input--field_flat-color;
+      background-color: $input--field_flat-bg-color;
+      border-radius: $input--field_flat-border-radius;
+      border: $input--field_flat-border;
+    }
+  }
 }
