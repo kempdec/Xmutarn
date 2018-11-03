@@ -12,40 +12,42 @@ $theme-accent-default-color: light-blue !default;
 // Barra de ferramentas
 
 // Define a cor de fundo da barra de ferramentas.
-$toolbar-background-color: var(--theme-color-700, get-featured-theme-color($hue: 700));
+$toolbar-background-color: var(--theme-color-700, get-featured-theme-color($hue: 700)) !default;
+// Define a cor da fonte da barra de ferramentas.
+$toolbar-color: white !default;
 // Define o tamanho da fonte da barra de ferramentas.
 $toolbar-font-size: px-to-rem($list: 16px) !default;
 // Define a espessura da fonte da barra de ferramentas.
-$toolbar-font-weight: map-get($map: $typography-font-weights, $key: medium);
+$toolbar-font-weight: map-get($map: $typography-font-weights, $key: medium) !default;
 // Define o preenchimento da barra de ferramentas.
 $toolbar-padding: px-to-rem($list: 0 8px) !default;
 
 // Define o espaçamento do elemento de navegação da barra de navegação.
-$toolbar-nav-padding: px-to-em($list: 9.14px 0) !default;
+$toolbar--nav-padding: px-to-em($list: 9.14px 0) !default;
 
 // Define a cor de fundo de um item de navegação (com variante "active") da barra de ferramentas.
-$toolbar-nav-item-active-bg-color: rgba(255, 255, 255, .07) !default;
+$toolbar--nav--item-active-bg-color: rgba(255, 255, 255, .07) !default;
 // Define a cor de fundo da pseudo-classe "hover" de um item de navegação da barra de ferramentas.
-$toolbar-nav-item-bg-color-pseudo-hover: rgba(255, 255, 255, .12) !default;
+$toolbar--nav--item-bg-color-pseudo-hover: rgba(255, 255, 255, .12) !default;
 // Define a cor de fundo da pseudo-classe "active" de um item de navegação da barra de ferramentas.
-$toolbar-nav-item-bg-color-pseudo-active: rgba(255, 255, 255, .36) !default;
+$toolbar--nav--item-bg-color-pseudo-active: rgba(255, 255, 255, .36) !default;
 // Define a cor de fundo da pseudo-focus "hover" de um item de navegação da barra de ferramentas.
-$toolbar-nav-item-bg-color-pseudo-focus: rgba(255, 255, 255, .18) !default;
+$toolbar--nav--item-bg-color-pseudo-focus: rgba(255, 255, 255, .18) !default;
 // Define o tamanho do raio de borda de um item de navegação da barra de ferramentas.
-$toolbar-nav-item-border-radius: px-to-rem($list: 4px) !default;
+$toolbar--nav--item-border-radius: px-to-rem($list: 4px) !default;
 // Define a borda de um item de navegação (com variante "bordered") da barra de ferramentas.
-$toolbar-nav-item-bordered-border: 1px solid rgba(255, 255, 255, .5) !default;
+$toolbar--nav--item-bordered-border: 1px solid rgba(255, 255, 255, .5) !default;
 // Define a cor de fundo de um item de navegação (com variante "dark") da barra de ferramentas.
-$toolbar-nav-item-dark-bg-color: rgba(0, 0, 0, .3) !default;
+$toolbar--nav--item-dark-bg-color: rgba(0, 0, 0, .3) !default;
 // Define a margem de um item de navegação da barra de ferramentas.
-$toolbar-nav-item-margin: px-to-em($list: 0 2px) !default;
+$toolbar--nav--item-margin: px-to-em($list: 0 2px) !default;
 // Define o preenchimento de um item de navegação da barra de ferramentas.
-$toolbar-nav-item-padding: px-to-em($list: 18.288px) !default;
+$toolbar--nav--item-padding: px-to-em($list: 18.288px) !default;
 
 // Define a margem direita dos ícones de um item de navegação da barra de ferramentas.
-$toolbar-nav-item-icon-margin-right: px-to-em($list: 4.15px) !default;
+$toolbar--nav--item--icon-margin-right: px-to-em($list: 4.15px) !default;
 // Define a margem esquerda dos ícones de um item de navegação da barra de ferramentas.
-$toolbar-nav-item-icon-margin-left: px-to-em($list: -2.58px) !default;
+$toolbar--nav--item--icon-margin-left: px-to-em($list: -2.58px) !default;
 
 // Borda
 
@@ -76,9 +78,9 @@ $button-padding: 0 px-to-em($list: 18.288px) !default;
 $button-text-transform: uppercase !default;
 
 // Define a margem direita de ícones dos botões.
-$button-icon-margin-right: px-to-em($list: 9.15px) !default;
+$button--icon-margin-right: px-to-em($list: 9.15px) !default;
 // Define a margem esquerda de ícones dos botões.
-$button-icon-margin-left: px-to-em($list: -4.58px) !default;
+$button--icon-margin-left: px-to-em($list: -4.58px) !default;
 
 // Contêiner
 
@@ -124,10 +126,17 @@ $list-margin: 0 !default;
 // Define o preenchimento da lista.
 $list-padding: px-to-rem($list: 8px 0) !default;
 
-// Define a altura do item da lista.
-$list-item-height: px-to-em($list: 48px) !default;
-// Define o preenchimento do item da lista.
-$list-item-padding: px-to-em($list: 0 16px) !default;
+// Define a cor dos itens da lista.
+$list--item-color: var(--theme-main-primary, get-main-theme-color($prop-name: primary)) !default;
+// Define a altura dos itens da lista.
+$list--item-height: px-to-em($list: 48px) !default;
+// Define o preenchimento dos itens da lista.
+$list--item-padding: px-to-em($list: 0 16px) !default;
+
+// Define a margem direita de ícones da lista.
+$list--icon-margin-right: px-to-em($list: 9.15px) !default;
+// Define a margem esquerda de ícones da lista.
+$list--icon-margin-left: px-to-em($list: -4.58px) !default;
 
 // Z-index
 

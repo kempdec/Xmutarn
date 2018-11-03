@@ -6,9 +6,9 @@
   &--item {
     display: flex;
     cursor: pointer;
-    padding: $list-item-padding;
-    height: $list-item-height;
-    color: var(--theme-main-primary, get-main-theme-color($prop-name: primary));
+    padding: $list--item-padding;
+    height: $list--item-height;
+    color: $list--item-color;
     transition: background-color .4s;
     align-items: center;
 
@@ -26,8 +26,8 @@
     }
 
     &--icon {
-      margin-right: $button-icon-margin-right;
-      margin-left: $button-icon-margin-left;
+      margin-right: $list--icon-margin-right;
+      margin-left: $list--icon-margin-left;
     }
   }
 }

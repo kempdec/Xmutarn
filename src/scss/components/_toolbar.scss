@@ -6,7 +6,7 @@
   padding: $toolbar-padding;
   font-size: $toolbar-font-size;
   font-weight: $toolbar-font-weight;
-  color: white;
+  color: $toolbar-color;
   background-color: $toolbar-background-color;
   justify-content: space-between;
   align-items: center;
@@ -24,16 +24,16 @@
   &--nav {
     display: flex;
     overflow-x: auto;
-    padding: $toolbar-nav-padding;
+    padding: $toolbar--nav-padding;
     list-style: none;
     align-items: center;
     user-select: none;
 
     &--item {
-      margin: $toolbar-nav-item-margin;
-      padding: $toolbar-nav-item-padding;
+      margin: $toolbar--nav--item-margin;
+      padding: $toolbar--nav--item-padding;
       color: inherit;
-      border-radius: $toolbar-nav-item-border-radius;
+      border-radius: $toolbar--nav--item-border-radius;
       transition: background-color .4s;
       flex: 0 0 auto;
 
@@ -44,33 +44,33 @@
       }
 
       &:hover {
-        background-color: $toolbar-nav-item-bg-color-pseudo-hover;
+        background-color: $toolbar--nav--item-bg-color-pseudo-hover;
       }
 
       &:active {
-        background-color: $toolbar-nav-item-bg-color-pseudo-active;
+        background-color: $toolbar--nav--item-bg-color-pseudo-active;
       }
 
       &:focus {
-        background-color: $toolbar-nav-item-bg-color-pseudo-focus;
+        background-color: $toolbar--nav--item-bg-color-pseudo-focus;
         outline: 0;
       }
 
       &_active {
-        background-color: $toolbar-nav-item-active-bg-color;
+        background-color: $toolbar--nav--item-active-bg-color;
       }
 
       &_bordered {
-        border: $toolbar-nav-item-bordered-border;
+        border: $toolbar--nav--item-bordered-border;
       }
 
       &_dark {
-        background-color: $toolbar-nav-item-dark-bg-color;
+        background-color: $toolbar--nav--item-dark-bg-color;
       }
 
       &--icon {
-        margin-right: $toolbar-nav-item-icon-margin-right;
-        margin-left: $toolbar-nav-item-icon-margin-left;
+        margin-right: $toolbar--nav--item--icon-margin-right;
+        margin-left: $toolbar--nav--item--icon-margin-left;
       }
     }
   }
