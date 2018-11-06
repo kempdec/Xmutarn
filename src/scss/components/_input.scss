@@ -1,12 +1,95 @@
 .input {
+  position: relative;
+
+  &_flat {
+    overflow: hidden;
+    border-radius: $input_flat-border-radius;
+
+    &:hover::before {
+      opacity: .04;
+    }
+
+    &:active::before {
+      opacity: .12;
+    }
+
+    &:focus::before {
+      opacity: .07;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      pointer-events: none;
+      will-change: opacity;
+      transition: opacity .2s;
+      background-color: black;
+    }
+
+    .input--field {
+      padding: $input_flat--field-padding;
+      font-size: $input_flat--field-font-size;
+      color: $input_flat--field-color;
+      background-color: $input_flat--field-bg-color;
+      border: $input_flat--field-border;
+    }
+  }
+
+  &_generic {
+    font-weight: $input_generic-font-weight;
+    color: $input_generic-color;
+    border-color: $input_generic-border-color;
+
+    .input--field {
+      padding: $input_generic--field-padding;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: 1;
+      color: inherit;
+      background-color: $input_generic--field-background-color;
+
+      &:not(.input--field_outlined) {
+        border: none;
+        border-bottom: $input_generic--field-border-bottom;
+        border-color: inherit;
+      }
+
+      &:focus {
+        color: $input_generic--field-pseudo-focus-color;
+        border-color: $input_generic--field-pseudo-focus-border-color;
+      }
+    }
+
+    .input--label {
+      position: absolute;
+      top: $input_generic--label-top;
+      left: $input_generic--label-left;
+      transition: all .3s linear;
+      pointer-events: none;
+    }
+  }
+
   &--field {
-    &_flat {
-      padding: $input--field_flat-padding;
-      font-size: $input--field_flat-font-size;
-      color: $input--field_flat-color;
-      background-color: $input--field_flat-bg-color;
-      border-radius: $input--field_flat-border-radius;
-      border: $input--field_flat-border;
+    width: 100%;
+
+    &:focus {
+      outline: 0;
+
+      & ~ .input--label {
+        color: var(--theme-color-500, get-featured-theme-color());
+        transform: translate(px-to-em($list: -5px), px-to-em($list: -16px)) scale(.7);
+      }
+    }
+
+    &_outlined {
+      border: 1px solid;
+      border-color: inherit;
+      border-radius: px-to-em($list: 5px);
     }
   }
 }
