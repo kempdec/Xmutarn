@@ -81,15 +81,25 @@
       outline: 0;
 
       & ~ .input--label {
-        color: var(--theme-color-500, get-featured-theme-color());
-        transform: translate(px-to-em($list: -5px), px-to-em($list: -16px)) scale(.7);
+        color: $input--field-label-pseudo-focus-color;
+        @extend .input--label_show;
       }
     }
 
     &_outlined {
       border: 1px solid;
       border-color: inherit;
-      border-radius: px-to-em($list: 5px);
+      border-radius: $input--field_outlined-border-radius;
+    }
+  }
+
+  &--label {
+    &_hide {
+      display: none;
+    }
+
+    &_show {
+      transform: $input--label_show-transform;
     }
   }
 }

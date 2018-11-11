@@ -1463,8 +1463,8 @@ input[type="password"]::-ms-reveal {
 
 .input_generic .input--label {
   position: absolute;
-  top: 1rem;
-  left: 0.3125rem;
+  top: 1em;
+  left: 0.3125em;
   transition: all .3s linear;
   pointer-events: none;
 }
@@ -1479,14 +1479,21 @@ input[type="password"]::-ms-reveal {
 
 .input--field:focus ~ .input--label {
   color: var(--theme-color-500, #9C27B0);
-  -webkit-transform: translate(-0.3125em, -1em) scale(0.7);
-          transform: translate(-0.3125em, -1em) scale(0.7);
 }
 
 .input--field_outlined {
   border: 1px solid;
   border-color: inherit;
   border-radius: 0.3125em;
+}
+
+.input--label_hide {
+  display: none;
+}
+
+.input--label_show, .input--field:focus ~ .input--label {
+  -webkit-transform: translate(-1.125em, -1em) scale(0.7);
+          transform: translate(-1.125em, -1em) scale(0.7);
 }
 
 .list {
