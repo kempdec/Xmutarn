@@ -1,4 +1,7 @@
 {
+  "files": [
+    "./assets/script/docs/ts/themes.ts"
+  ],
   "compilerOptions": {
     "sourceMap": true,
     "noImplicitAny": true,

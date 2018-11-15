@@ -4,7 +4,7 @@ const gulp = require("gulp"),
   sourcemaps = require("gulp-sourcemaps"),
   ts = require("gulp-typescript");
 
-const tsProject = ts.createProject("tsconfig.json");
+const tsProject = ts.createProject("./tsconfig.json");
 
 gulp.task("ts", () => tsProject.src()
   .pipe(sourcemaps.init())
