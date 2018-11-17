@@ -3,7 +3,7 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "outDir": "./dist/js",
-    "outFile": "./dist/js/xmutarn.js",
-    "target": "es6"
+    "outFile": "xmutarn.js",
+    "target": "es5"
   }
 }
