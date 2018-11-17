@@ -6,13 +6,20 @@ const gulp = require("gulp"),
   rename = require("gulp-rename"),
   sass = require("gulp-sass"),
   sourcemaps = require("gulp-sourcemaps"),
-  ts = require("gulp-typescript");
+  ts = require("gulp-typescript"),
+  uglify = require("gulp-uglify");
 
 const tsProject = ts.createProject("./tsconfig.json");
 
-gulp.task("ts", () => tsProject.src()
+gulp.task("ts:compiled", () => tsProject.src()
   .pipe(sourcemaps.init())
   .pipe(tsProject())
+  .pipe(sourcemaps.write("."))
+  .pipe(gulp.dest(tsProject.options.outFile)));
+
+gulp.task("ts", ["ts:compiled"], () => gulp.src(tsProject.options.outFile)
+  .pipe(sourcemaps.init())
+  .pipe(rename((path) => { path.basename += ".min"; }))
   .pipe(sourcemaps.write("."))
   .pipe(gulp.dest(tsProject.options.outDir)));
 
