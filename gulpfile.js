@@ -35,7 +35,7 @@ gulp.task("sass:expanded", () => gulp.src(mainSassFile)
   .pipe(sourcemaps.write("."))
   .pipe(gulp.dest(cssDistPath)));
 
-gulp.task("sass:min", () => gulp.src(mainSassFile)
+gulp.task("sass", ["sass:expanded"], () => gulp.src(mainSassFile)
   .pipe(sourcemaps.init())
   .pipe(rename((path) => { path.basename += ".min"; }))
   .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
@@ -44,9 +44,5 @@ gulp.task("sass:min", () => gulp.src(mainSassFile)
   .pipe(sourcemaps.write("."))
   .pipe(gulp.dest(cssDistPath)));
 
-gulp.task("sass", ["sass:expanded", "sass:min"]);
-
-gulp.task("copyFilesToDist", ["ts", "sass"], () => gulp.src("./dist/**/*")
+gulp.task("default", ["ts", "sass"], () => gulp.src("./dist/**/*")
   .pipe(gulp.dest("./docs/assets")));
-
-gulp.task("default", ["ts", "copyFilesToDist"]);
