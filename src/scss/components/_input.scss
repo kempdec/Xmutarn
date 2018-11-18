@@ -1,46 +1,8 @@
 .input {
   position: relative;
 
-  &_flat {
-    overflow: hidden;
-    border-radius: $input_flat-border-radius;
-
-    &:hover::before {
-      opacity: .04;
-    }
-
-    &:active::before {
-      opacity: .12;
-    }
-
-    &:focus::before {
-      opacity: .07;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      pointer-events: none;
-      will-change: opacity;
-      transition: opacity .2s;
-      background-color: black;
-    }
-
-    .input--field {
-      padding: $input_flat--field-padding;
-      font-size: $input_flat--field-font-size;
-      color: $input_flat--field-color;
-      background-color: $input_flat--field-bg-color;
-      border: $input_flat--field-border;
-    }
-  }
-
-  &_generic {
+  &_generic,
+  &:not(&_generic) {
     font-weight: $input_generic-font-weight;
     color: $input_generic-color;
     border-color: $input_generic-border-color;
