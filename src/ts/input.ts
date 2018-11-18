@@ -40,7 +40,7 @@ class Input {
       this._activeLabel();
     }
 
-    // ativa ou desativa o rótulo com base no valor do input, ao acionar do evento "blur".
+    // ativa ou desativa o rótulo, com base no valor do input, ao acionar o evento "blur".
     this.input.addEventListener("blur", (): void => {
       if (this.input.value) {
         this._activeLabel();
