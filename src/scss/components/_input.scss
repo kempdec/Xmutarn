@@ -44,7 +44,7 @@
 
       & ~ .input--label {
         color: $input--field-label-pseudo-focus-color;
-        @extend .input--label_show;
+        @extend .input--label_active;
       }
     }
 
@@ -56,12 +56,8 @@
   }
 
   &--label {
-    &_hide {
-      display: none;
-    }
-
-    &_show {
-      transform: $input--label_show-transform;
+    &_active {
+      transform: $input--label_active-transform;
     }
   }
 }

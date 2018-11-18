@@ -1,7 +1,11 @@
 {
+  "files": [
+    "./src/ts/input.ts"
+  ],
   "compilerOptions": {
     "sourceMap": true,
     "noImplicitAny": true,
+    "removeComments": true,
     "outDir": "./dist/js",
     "outFile": "xmutarn.js",
     "target": "es5"

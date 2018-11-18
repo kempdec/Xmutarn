@@ -1448,11 +1448,7 @@ input[type="password"]::-ms-reveal {
   border-radius: 0.3125em;
 }
 
-.input--label_hide {
-  display: none;
-}
-
-.input--label_show, .input--field:focus ~ .input--label {
+.input--label_active, .input--field:focus ~ .input--label {
   -webkit-transform: translate(-1.125em, -1em) scale(0.7);
           transform: translate(-1.125em, -1em) scale(0.7);
 }

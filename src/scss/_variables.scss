@@ -106,20 +106,6 @@ $font-roboto-path-or-address: "../fonts" !default;
 
 // Input
 
-// Define o raio de borda do input flat.
-$input_flat-border-radius: px-to-em($list: 16px) !default;
-
-// Define a cor de fundo do campo de input flat.
-$input_flat--field-bg-color: var(--theme-main-dividers, get-main-theme-color($prop-name: dividers)) !default;
-// Define a borda do campo de input flat.
-$input_flat--field-border: none !default;
-// Define a cor do input flat.
-$input_flat--field-color: var(--theme-main-primary, get-main-theme-color($prop-name: primary)) !default;
-// Define o tamanho da fonte do campo de input flat.
-$input_flat--field-font-size: px-to-em($list: 14px) !default;
-// Define o preenchimento do campo de input flat.
-$input_flat--field-padding: px-to-em($list: 5px 15px) !default;
-
 // Define a cor da borda do input "generic".
 $input_generic-border-color: var(--theme-main-secondary, get-main-theme-color($prop-name: secondary)) !default;
 // Define a cor da fonte do input "generic".
@@ -148,8 +134,8 @@ $input--field-label-pseudo-focus-color: var(--theme-color-500, get-featured-them
 // Define o raio de borda do campo de input com variante "outlined".
 $input--field_outlined-border-radius: px-to-em($list: 5px) !default;
 
-// Define a transformação da exibição do rótulo do input.
-$input--label_show-transform: translate(px-to-em($list: -18px), px-to-em($list: -16px)) scale(.7) !default;
+// Define a transformação da ativação do rótulo do input.
+$input--label_active-transform: translate(px-to-em($list: -18px), px-to-em($list: -16px)) scale(.7) !default;
 
 // Lista
 
