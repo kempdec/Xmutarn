@@ -1453,6 +1453,33 @@ input[type="password"]::-ms-reveal {
           transform: translate(-15%, -1em) scale(0.7);
 }
 
+.dropdown {
+  cursor: pointer;
+}
+
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin: -0.125em 0.3125em 0 0;
+  width: 0.3125em;
+  height: 0.3125em;
+  border-bottom: 0.0625rem solid;
+  border-left: 0.0625rem solid;
+  border-color: inherit;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.dropdown_active::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
 .list {
   margin: 0;
   padding: 0.5rem 0;
@@ -1525,6 +1552,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .toolbar--nav--item {
+  position: relative;
   margin: 0 0.125em;
   padding: 1.143em;
   color: inherit;

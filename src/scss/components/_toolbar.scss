@@ -30,6 +30,7 @@
     user-select: none;
 
     &--item {
+      position: relative;
       margin: $toolbar--nav--item-margin;
       padding: $toolbar--nav--item-padding;
       color: inherit;

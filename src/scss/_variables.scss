@@ -87,6 +87,22 @@ $button--icon-margin-left: px-to-em($list: -4.58px) !default;
 // Define o preenchimento dos contêineres.
 $container-padding: px-to-rem($list: 0 15px) !default;
 
+// Dropdown
+
+// Define a margem do dropdown com o pseudo-elemento "before".
+$dropdown-pseudo-before-margin: px-to-em($list: -2px 5px 0 0) !default;
+// Define o tamanho do dropdown com o pseudo-elemento "before".
+$dropdown-pseudo-before-size: px-to-em($list: 5px) !default;
+// Define a borda do dropdown com o pseudo-elemento "before".
+$dropdown-pseudo-before-border: px-to-rem($list: 1px) solid !default;
+// Define a borda do dropdown com o pseudo-elemento "before".
+$dropdown-pseudo-before-border-color: inherit !default;
+// Define a transformação do dropdown com o pseudo-elemento "before".
+$dropdown-pseudo-before-transform: rotate(-45deg) !default;
+
+// Define a transformação do dropdown com variante "active" e pseudo-elemento "before".
+$dropdown_active-pseudo-before-transform: rotate(135deg) !default;
+
 // Flexbox
 
 // Define o preenchimento de uma coluna do flexbox.
