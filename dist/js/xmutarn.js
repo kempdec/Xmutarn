@@ -11,11 +11,11 @@ var Input = (function () {
             throw new Error("O elemento 'input' não foi encontrado.");
         }
         this.label = element.querySelector(".input--label");
+        if (!this.label && !labelText) {
+            throw new Error("O 'label' do input não foi encontrado ou o segundo argumento não foi fornecido.");
+        }
         if (!this.label && labelText) {
             this.setLabel(labelText);
-        }
-        else {
-            throw new Error("O 'label' do input não foi encontrado ou o segundo argumento não foi fornecido.");
         }
         if (this.input.value) {
             this._activeLabel();
@@ -46,5 +46,8 @@ var Input = (function () {
     Input._labelActiveClass = "input--label_active";
     return Input;
 }());
+document.querySelectorAll("[x-role='input']").forEach(function (element) {
+    new Input(element, element.getAttribute("x-label-text"));
+});
 
 //# sourceMappingURL=xmutarn.js.map
