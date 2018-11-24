@@ -172,9 +172,27 @@ $list--icon-margin-right: px-to-em($list: 9.15px) !default;
 // Define a margem esquerda de ícones da lista.
 $list--icon-margin-left: px-to-em($list: -4.58px) !default;
 
+// Menu
+
+// Define a cor de fundo do menu.
+$menu-background-color: var(--theme-main-card, get-main-theme-color($prop-name: card)) !default;
+// Define o raio de borda do menu.
+$menu-border-radius: px-to-rem($list: 2px) !default;
+// Define o sombreamento do menu.
+$menu-box-shadow: px-to-rem($list: 0 3px 1px -2px) rgba(0, 0, 0, .2), px-to-rem($list: 0 2px 2px 0) rgba(0, 0, 0, .14), px-to-rem($list: 0 1px 5px 0) rgba(0, 0, 0, .12) !default;
+// Define a margem do menu.
+$menu-margin: 0 !default;
+// Define a largura máxima do menu.
+$menu-max-width: calc(100vw - #{px-to-rem($list: 32px)}) !default;
+// Define a altura máxima do menu.
+$menu-max-height: calc(100vh - #{px-to-rem($list: 32px)}) !default;
+// Define a largura mínima do menu.
+$menu-min-width: px-to-rem($list: 170px) !default;
+
 // Z-index
 
 $z-index-toolbar: 40 !default;
+$z-index-menu: 70 !default;
 
 // Global file
 //

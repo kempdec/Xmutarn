@@ -1481,6 +1481,49 @@ input[type="password"]::-ms-reveal {
           transform: rotate(135deg);
 }
 
+.menu {
+  position: relative;
+  z-index: 70;
+  margin: 0;
+  min-width: 10.625rem;
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100vh - 2rem);
+  background-color: var(--theme-main-card, white);
+  border-radius: 0.125rem;
+  box-shadow: 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, 0.2), 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.14), 0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, 0.12);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  transition: .3s;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.menu_open {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.menu_origin-top-right, .menu_origin-top-start {
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.menu_origin-top-left, .menu_origin-top-end {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.menu_origin-bottom-right, .menu_origin-bottom-start {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.menu_origin-bottom-left, .menu_origin-bottom-end {
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
 .list {
   margin: 0;
   padding: 0.5rem 0;
