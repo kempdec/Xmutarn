@@ -1273,6 +1273,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .border-divider {
+  display: block;
   margin: 0;
   height: 0;
   border-top: 1px solid var(--theme-main-dividers, rgba(0, 0, 0, 0.12));
