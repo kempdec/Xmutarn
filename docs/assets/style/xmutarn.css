@@ -1403,7 +1403,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .input_generic .input--field, .input:not(.input_generic) .input--field {
-  padding: 1em 0.3125em;
+  padding: 1em 0.3125em 0.75em 0.3125em;
   font-size: inherit;
   font-weight: inherit;
   line-height: 1;
@@ -1449,8 +1449,8 @@ input[type="password"]::-ms-reveal {
 }
 
 .input--label_active, .input--field:focus ~ .input--label {
-  -webkit-transform: translate(-1.125em, -1em) scale(0.7);
-          transform: translate(-1.125em, -1em) scale(0.7);
+  -webkit-transform: translate(-15%, -1em) scale(0.7);
+          transform: translate(-15%, -1em) scale(0.7);
 }
 
 .list {

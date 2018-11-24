@@ -118,7 +118,7 @@ $input_generic--field-background-color: transparent !default;
 // Define a borda inferior do campo de input "generic".
 $input_generic--field-border-bottom: px-to-rem($list: 2px) solid !default;
 // Define o preenchimento do campo de input "generic".
-$input_generic--field-padding: px-to-em($list: 16px 5px) !default;
+$input_generic--field-padding: px-to-em($list: 16px 5px 12px 5px) !default;
 // Define a cor do campo de input "generic" com a pseudo-classe "focus".
 $input_generic--field-pseudo-focus-color: var(--theme-main-primary, get-main-theme-color($prop-name: primary)) !default;
 // Define a cor da borda do campo de input "generic" com a pseudo-classe "focus".
@@ -135,7 +135,7 @@ $input--field-label-pseudo-focus-color: var(--theme-color-500, get-featured-them
 $input--field_outlined-border-radius: px-to-em($list: 5px) !default;
 
 // Define a transformação da ativação do rótulo do input.
-$input--label_active-transform: translate(px-to-em($list: -18px), px-to-em($list: -16px)) scale(.7) !default;
+$input--label_active-transform: translate(-15%, px-to-em($list: -16px)) scale(.7) !default;
 
 // Lista
 
