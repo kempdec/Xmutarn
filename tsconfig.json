@@ -1,5 +1,6 @@
 {
   "files": [
+    "./src/ts/dropdownMenu.ts",
     "./src/ts/input.ts"
   ],
   "compilerOptions": {

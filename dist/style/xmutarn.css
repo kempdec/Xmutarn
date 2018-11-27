@@ -1482,7 +1482,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .menu {
-  position: relative;
+  position: absolute;
   z-index: 70;
   margin: 0;
   min-width: 10.625rem;
