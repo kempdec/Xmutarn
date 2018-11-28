@@ -103,32 +103,35 @@ var DropdownMenu = (function () {
         return this.element;
     };
     DropdownMenu.prototype.open = function (origin) {
-        if (this.element.classList.contains("dropdown")) {
-            this.element.classList.add("dropdown_active");
+        if (this.element.classList.contains(DropdownMenu._dropdownClass)) {
+            this.element.classList.add(DropdownMenu._dropdownActiveClass);
         }
         if (origin != null) {
             this.setOrigin(origin);
         }
-        this.menu.classList.add("menu_open");
+        this.menu.classList.add(DropdownMenu._menuOpenClass);
         return this.element;
     };
     DropdownMenu.prototype.close = function () {
-        if (this.element.classList.contains("dropdown")) {
-            this.element.classList.remove("dropdown_active");
+        if (this.element.classList.contains(DropdownMenu._dropdownClass)) {
+            this.element.classList.remove(DropdownMenu._dropdownActiveClass);
         }
-        this.menu.classList.remove("menu_open");
+        this.menu.classList.remove(DropdownMenu._menuOpenClass);
         return this.element;
     };
     DropdownMenu.prototype.toggle = function (origin) {
-        if (this.element.classList.contains("dropdown")) {
-            this.element.classList.toggle("dropdown_active");
+        if (this.element.classList.contains(DropdownMenu._dropdownClass)) {
+            this.element.classList.toggle(DropdownMenu._dropdownActiveClass);
         }
         if (origin != null) {
             this.setOrigin(origin);
         }
-        this.menu.classList.toggle("menu_open");
+        this.menu.classList.toggle(DropdownMenu._menuOpenClass);
         return this.element;
     };
+    DropdownMenu._dropdownClass = "dropdown";
+    DropdownMenu._dropdownActiveClass = "dropdown_active";
+    DropdownMenu._menuOpenClass = "menu_open";
     return DropdownMenu;
 }());
 document.querySelectorAll("[x-role='dropdown-menu']").forEach(function (element) {

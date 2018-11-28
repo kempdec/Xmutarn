@@ -24,6 +24,15 @@ enum DropdownMenuOrigin {
  * Responsável por gerenciar um menu suspenso.
  */
 class DropdownMenu {
+  /** A classe CSS do dropdown. */
+  private static readonly _dropdownClass: string = "dropdown";
+
+  /** A classe CSS de ativação do dropdown. */
+  private static readonly _dropdownActiveClass: string = "dropdown_active";
+
+  /** A classe CSS de abertura do menu. */
+  private static readonly _menuOpenClass: string = "menu_open";
+
   /** Obtém ou define o menu suspenso. */
   public menu: HTMLElement;
 
@@ -164,15 +173,15 @@ class DropdownMenu {
    * @return {HTMLElement} O elemento responsável por abrir o menu dropdown.
    */
   public open(origin?: DropdownMenuOrigin): HTMLElement {
-    if (this.element.classList.contains("dropdown")) {
-      this.element.classList.add("dropdown_active");
+    if (this.element.classList.contains(DropdownMenu._dropdownClass)) {
+      this.element.classList.add(DropdownMenu._dropdownActiveClass);
     }
 
     if (origin != null) {
       this.setOrigin(origin);
     }
 
-    this.menu.classList.add("menu_open");
+    this.menu.classList.add(DropdownMenu._menuOpenClass);
 
     return this.element;
   }
@@ -183,11 +192,11 @@ class DropdownMenu {
    * @return {HTMLElement} O elemento responsável por abrir o menu suspenso.
    */
   public close(): HTMLElement {
-    if (this.element.classList.contains("dropdown")) {
-      this.element.classList.remove("dropdown_active");
+    if (this.element.classList.contains(DropdownMenu._dropdownClass)) {
+      this.element.classList.remove(DropdownMenu._dropdownActiveClass);
     }
 
-    this.menu.classList.remove("menu_open");
+    this.menu.classList.remove(DropdownMenu._menuOpenClass);
 
     return this.element;
   }
@@ -199,15 +208,15 @@ class DropdownMenu {
    * "DropdownMenuOrigin.TopRight".
    */
   public toggle(origin?: DropdownMenuOrigin): HTMLElement {
-    if (this.element.classList.contains("dropdown")) {
-      this.element.classList.toggle("dropdown_active");
+    if (this.element.classList.contains(DropdownMenu._dropdownClass)) {
+      this.element.classList.toggle(DropdownMenu._dropdownActiveClass);
     }
 
     if (origin != null) {
       this.setOrigin(origin);
     }
 
-    this.menu.classList.toggle("menu_open");
+    this.menu.classList.toggle(DropdownMenu._menuOpenClass);
 
     return this.element;
   }
