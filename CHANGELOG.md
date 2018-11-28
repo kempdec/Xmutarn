@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## Xmutarn v0.4.0 (2018-11-28) - Release 04
+
+- Adicionado input.
+- Adicionado menu.
+- Adicionado dropdown.
+- Adicionado classe TypeScript responsável por gerenciar um input.
+- Adicionado classe TypeScript responsável por gerenciar um menu suspenso (dropdown).
+- Adicionado as variantes `bordered` e `dark` para a classe `toolbar--nav--item`.
+- Adicionado a variante `alert-color` para a classe `input`.
+
+---
+
+- Fixa o uso da classe `border-divider` em elementos que não são de blocos por padrão.
+
+---
+
+- Padrão de nomenclatura das variáveis SASS foi alterado.
+
 ## Xmutarn v0.3.0 (2018-10-25) - Release 03
 
 - Adicionado listas.
