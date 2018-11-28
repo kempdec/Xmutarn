@@ -1,6 +1,11 @@
 .input {
   position: relative;
 
+  &_alert-color {
+    color: #{get-palette-color($color-name: red)};
+    border-color: #{get-palette-color($color-name: red)};
+  }
+
   &_generic,
   &:not(&_generic) {
     font-weight: $input_generic-font-weight;

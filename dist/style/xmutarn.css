@@ -1397,6 +1397,11 @@ input[type="password"]::-ms-reveal {
   position: relative;
 }
 
+.input_alert-color {
+  color: #F44336;
+  border-color: #F44336;
+}
+
 .input_generic, .input:not(.input_generic) {
   font-weight: 500;
   color: var(--theme-main-secondary, rgba(0, 0, 0, 0.54));
