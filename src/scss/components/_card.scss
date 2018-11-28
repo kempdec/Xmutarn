@@ -1,0 +1,8 @@
+.card {
+  position: relative;
+  background-color: $card-background-color;
+  border: $card-border;
+  border-color: $card-border-color;
+  border-radius: $card-border-radius;
+  @include clearfix();
+}

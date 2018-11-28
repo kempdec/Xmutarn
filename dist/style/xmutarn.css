@@ -1644,6 +1644,20 @@ input[type="password"]::-ms-reveal {
   margin-left: -0.16125em;
 }
 
+.card {
+  position: relative;
+  background-color: var(--theme-main-card, white);
+  border: 1px solid;
+  border-color: var(--theme-main-dividers, rgba(0, 0, 0, 0.12));
+  border-radius: 0.3125rem;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .border-0 {
   border: 0 !important;
 }
