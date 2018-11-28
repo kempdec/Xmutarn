@@ -16,10 +16,15 @@ class Input {
    *
    * @param {HTMLElement} element O elemento responsável pelo input.
    * @param {string?} labelText O texto do rótulo do input.
+   * @param {boolean?} removeColorOnFocus Sinalizador indicando se a cor deve ser removida ao acionar do evento "focus".
    */
-  constructor(public element: HTMLElement, labelText?: string) {
+  constructor(public element: HTMLElement, labelText?: string, removeColorOnFocus?: boolean) {
     if (!element) {
       throw new Error("O primeiro argumento não foi fornecido.");
+    }
+
+    if (removeColorOnFocus == null) {
+      removeColorOnFocus = true;
     }
 
     this.input = element.querySelector("input");
@@ -50,6 +55,10 @@ class Input {
         this._disableLabel();
       }
     });
+
+    if (removeColorOnFocus) {
+      this.input.addEventListener("focus", () => element.classList.remove("input_alert-color"));
+    }
   }
 
   /**

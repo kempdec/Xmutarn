@@ -1398,8 +1398,8 @@ input[type="password"]::-ms-reveal {
 }
 
 .input_alert-color {
-  color: #F44336;
-  border-color: #F44336;
+  color: #F44336 !important;
+  border-color: #F44336 !important;
 }
 
 .input_generic, .input:not(.input_generic) {

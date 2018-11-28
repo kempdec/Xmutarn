@@ -135,11 +135,14 @@ document.querySelectorAll("[x-role='dropdown-menu']").forEach(function (element)
     new DropdownMenu(element, element.getAttribute("x-origin"));
 });
 var Input = (function () {
-    function Input(element, labelText) {
+    function Input(element, labelText, removeColorOnFocus) {
         var _this = this;
         this.element = element;
         if (!element) {
             throw new Error("O primeiro argumento não foi fornecido.");
+        }
+        if (removeColorOnFocus == null) {
+            removeColorOnFocus = true;
         }
         this.input = element.querySelector("input");
         if (!this.input) {
@@ -163,6 +166,9 @@ var Input = (function () {
                 _this._disableLabel();
             }
         });
+        if (removeColorOnFocus) {
+            this.input.addEventListener("focus", function () { return element.classList.remove("input_alert-color"); });
+        }
     }
     Input.prototype._activeLabel = function () {
         this.label.classList.add(Input._labelActiveClass);
