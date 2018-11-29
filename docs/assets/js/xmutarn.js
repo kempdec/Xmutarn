@@ -1,4 +1,4 @@
-/*! Xmutarn v0.4.0 (https://github.com/vinivsl/Xmutarn.git) | Copyright 2018 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/Xmutarn/blob/master/LICENSE) */
+/*! Xmutarn v0.5.0 (https://github.com/vinivsl/Xmutarn.git) | Copyright 2018 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/Xmutarn/blob/master/LICENSE) */
 var DropdownMenuOrigin;
 (function (DropdownMenuOrigin) {
     DropdownMenuOrigin["TopRight"] = "top-right";

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Xmutarn v0.5.0 (2018-11-29) - Release 05
+
+- Adicionado cartão.
+- Adicionado a variante `dark-color` para a classe `toolbar`.
+- Adicionado a propriedade `removeColorOnFocus` no construtor da classe TypeScript `Input`.
+
 ## Xmutarn v0.4.0 (2018-11-28) - Release 04
 
 - Adicionado input.
