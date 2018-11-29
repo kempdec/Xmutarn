@@ -1573,10 +1573,17 @@ input[type="password"]::-ms-reveal {
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background-color: var(--theme-color-700, #7B1FA2);
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.toolbar:not(.toolbar_dark) {
+  background-color: var(--theme-color-700, #7B1FA2);
+}
+
+.toolbar_dark-color {
+  background-color: #212121;
 }
 
 .toolbar > .container,

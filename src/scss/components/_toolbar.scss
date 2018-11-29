@@ -7,10 +7,17 @@
   font-size: $toolbar-font-size;
   font-weight: $toolbar-font-weight;
   color: $toolbar-color;
-  background-color: $toolbar-background-color;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  &:not(&_dark) {
+    background-color: $toolbar-background-color;
+  }
+
+  &_dark-color {
+    background-color: $toolbar_dark-color-background-color;
+  }
 
   > .container,
   > .container-fluid {
