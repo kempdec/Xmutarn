@@ -1578,7 +1578,7 @@ input[type="password"]::-ms-reveal {
   flex-wrap: wrap;
 }
 
-.toolbar:not(.toolbar_dark) {
+.toolbar:not(.toolbar_dark-color) {
   background-color: var(--theme-color-700, #7B1FA2);
 }
 
