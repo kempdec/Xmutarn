@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Xmutarn v0.5.1 (2018-12-05) - Release 06
+
+- Uso da variante `dark-color` da classe `toolbar` foi fixado.
+
 ## Xmutarn v0.5.0 (2018-11-29) - Release 05
 
 - Adicionado cartão.
