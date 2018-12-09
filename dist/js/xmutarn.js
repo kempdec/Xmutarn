@@ -213,6 +213,11 @@ var Overlay = (function () {
         setTimeout(function () { return _this.element.classList.remove(Overlay._overlayActiveClass); }, delay);
         return this.element;
     };
+    Overlay.createOverlay = function () {
+        var element = document.createElement("div");
+        document.querySelector("body").appendChild(element);
+        return new Overlay(element);
+    };
     Overlay._overlayActiveClass = "overlay_active";
     return Overlay;
 }());

@@ -43,4 +43,17 @@ class Overlay {
 
     return this.element;
   }
+
+  /**
+   * Cria um overlay.
+   *
+   * @returns {Overlay} Uma instância de Overlay correspondente ao elemento criado.
+   */
+  public static createOverlay(): Overlay {
+    const element = document.createElement("div");
+
+    document.querySelector("body").appendChild(element);
+
+    return new Overlay(element);
+  }
 }
