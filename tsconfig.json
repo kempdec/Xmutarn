@@ -1,7 +1,8 @@
 {
   "files": [
     "./src/ts/dropdownMenu.ts",
-    "./src/ts/input.ts"
+    "./src/ts/input.ts",
+    "./src/ts/overlay.ts"
   ],
   "compilerOptions": {
     "sourceMap": true,

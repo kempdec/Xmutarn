@@ -193,5 +193,28 @@ var Input = (function () {
 document.querySelectorAll("[x-role='input']").forEach(function (element) {
     new Input(element, element.getAttribute("x-label-text"));
 });
+var Overlay = (function () {
+    function Overlay(element) {
+        this.element = element;
+        if (!element) {
+            throw new Error("O primeiro argumento deve ser fornecido.");
+        }
+        element.classList.add("overlay");
+    }
+    Overlay.prototype.show = function (delay) {
+        var _this = this;
+        if (delay === void 0) { delay = 300; }
+        setTimeout(function () { return _this.element.classList.add(Overlay._overlayActiveClass); }, delay);
+        return this.element;
+    };
+    Overlay.prototype.hide = function (delay) {
+        var _this = this;
+        if (delay === void 0) { delay = 300; }
+        setTimeout(function () { return _this.element.classList.remove(Overlay._overlayActiveClass); }, delay);
+        return this.element;
+    };
+    Overlay._overlayActiveClass = "overlay_active";
+    return Overlay;
+}());
 
 //# sourceMappingURL=xmutarn.js.map
