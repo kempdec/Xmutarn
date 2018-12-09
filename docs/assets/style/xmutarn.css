@@ -1665,6 +1665,26 @@ input[type="password"]::-ms-reveal {
   clear: both;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity .25s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay_active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .border-0 {
   border: 0 !important;
 }
