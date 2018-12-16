@@ -1,4 +1,8 @@
 /*! Xmutarn v0.6.0 (https://github.com/vinivsl/Xmutarn.git) | Copyright 2018 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/Xmutarn/blob/master/LICENSE) */
+.border-small, .border-top-small, .border-right-small, .border-bottom-small, .border-left-small, .border-medium, .border-top-medium, .border-right-medium, .border-bottom-medium, .border-left-medium, .border-large, .border-top-large, .border-right-large, .border-bottom-large, .border-left-large {
+  border-color: var(--theme-main-dividers, rgba(0, 0, 0, 0.12)) !important;
+}
+
 .flex-col-1, .flex-col-2, .flex-col-3, .flex-col-4, .flex-col-5, .flex-col-6, .flex-col-7, .flex-col-8, .flex-col-9, .flex-col-10, .flex-col-11, .flex-col-12, .flex-col-1___small, .flex-col-2___small, .flex-col-3___small, .flex-col-4___small, .flex-col-5___small, .flex-col-6___small, .flex-col-7___small, .flex-col-8___small, .flex-col-9___small, .flex-col-10___small, .flex-col-11___small, .flex-col-12___small, .flex-col-1___medium, .flex-col-2___medium, .flex-col-3___medium, .flex-col-4___medium, .flex-col-5___medium, .flex-col-6___medium, .flex-col-7___medium, .flex-col-8___medium, .flex-col-9___medium, .flex-col-10___medium, .flex-col-11___medium, .flex-col-12___medium, .flex-col-1___large, .flex-col-2___large, .flex-col-3___large, .flex-col-4___large, .flex-col-5___large, .flex-col-6___large, .flex-col-7___large, .flex-col-8___large, .flex-col-9___large, .flex-col-10___large, .flex-col-11___large, .flex-col-12___large, .flex-col-1___xlarge, .flex-col-2___xlarge, .flex-col-3___xlarge, .flex-col-4___xlarge, .flex-col-5___xlarge, .flex-col-6___xlarge, .flex-col-7___xlarge, .flex-col-8___xlarge, .flex-col-9___xlarge, .flex-col-10___xlarge, .flex-col-11___xlarge, .flex-col-12___xlarge {
   position: relative;
   width: 100%;
@@ -1682,7 +1686,7 @@ input[type="password"]::-ms-reveal {
 .card--action {
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: 0.5rem;
 }
 
 .dialog {
@@ -1822,23 +1826,103 @@ input[type="password"]::-ms-reveal {
 }
 
 .border-0 {
-  border: 0 !important;
+  border-width: 0 !important;
+  border-style: solid;
 }
 
 .border-top-0 {
-  border-top: 0 !important;
+  border-top-width: 0 !important;
+  border-top-style: solid;
 }
 
 .border-right-0 {
-  border-right: 0 !important;
+  border-right-width: 0 !important;
+  border-right-style: solid;
 }
 
 .border-bottom-0 {
-  border-bottom: 0 !important;
+  border-bottom-width: 0 !important;
+  border-bottom-style: solid;
 }
 
 .border-left-0 {
-  border-left: 0 !important;
+  border-left-width: 0 !important;
+  border-left-style: solid;
+}
+
+.border-small {
+  border-width: 1px !important;
+  border-style: solid;
+}
+
+.border-top-small {
+  border-top-width: 1px !important;
+  border-top-style: solid;
+}
+
+.border-right-small {
+  border-right-width: 1px !important;
+  border-right-style: solid;
+}
+
+.border-bottom-small {
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid;
+}
+
+.border-left-small {
+  border-left-width: 1px !important;
+  border-left-style: solid;
+}
+
+.border-medium {
+  border-width: 2px !important;
+  border-style: solid;
+}
+
+.border-top-medium {
+  border-top-width: 2px !important;
+  border-top-style: solid;
+}
+
+.border-right-medium {
+  border-right-width: 2px !important;
+  border-right-style: solid;
+}
+
+.border-bottom-medium {
+  border-bottom-width: 2px !important;
+  border-bottom-style: solid;
+}
+
+.border-left-medium {
+  border-left-width: 2px !important;
+  border-left-style: solid;
+}
+
+.border-large {
+  border-width: 3px !important;
+  border-style: solid;
+}
+
+.border-top-large {
+  border-top-width: 3px !important;
+  border-top-style: solid;
+}
+
+.border-right-large {
+  border-right-width: 3px !important;
+  border-right-style: solid;
+}
+
+.border-bottom-large {
+  border-bottom-width: 3px !important;
+  border-bottom-style: solid;
+}
+
+.border-left-large {
+  border-left-width: 3px !important;
+  border-left-style: solid;
 }
 
 .border-radius-0 {

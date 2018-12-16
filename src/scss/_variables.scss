@@ -104,7 +104,7 @@ $card--content-padding: px-to-rem($list: 16px) !default;
 // Define a margem da seção de ação do cartão.
 $card--action-margin: 0 !default;
 // Define o preenchimento da seção de ação do cartão.
-$card--action-padding: 0 !default;
+$card--action-padding: px-to-rem($list: 8px) !default;
 
 // Contêiner
 

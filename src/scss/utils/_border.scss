@@ -1,10 +1,21 @@
-.border-0 {
-  border: 0 !important;
-}
+@each $name, $value in $borders {
+  @each $position in ("" top right bottom left) {
+    $infix: if($position == "", "", "-#{$position}");
 
-@each $position in (top right bottom left) {
-  .border-#{$position}-0 {
-    border-#{$position}: 0 !important;
+    // .border-*-*
+    //
+    // Exemplo: .border-top-0
+    .border#{$infix}-#{$name} {
+      border#{$infix}-width: #{$value} !important;
+      border#{$infix}-style: solid;
+    }
+
+    @if ($name != 0) {
+      .border#{$infix}-#{$name} {
+        @extend %border-color;
+      }
+    }
+
   }
 }
 

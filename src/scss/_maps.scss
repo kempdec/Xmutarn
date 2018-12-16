@@ -1,5 +1,13 @@
 // Borda
 
+// Define o tamanho das bordas de `.border-*`.
+$borders: (
+  0: 0,
+  small: 1px,
+  medium: 2px,
+  large: 3px
+) !default;
+
 // Define os raios de borda de `.border-radius-*`.
 $borders-radius: (
   circle: 50%,
