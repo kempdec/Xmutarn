@@ -221,5 +221,73 @@ var Overlay = (function () {
     Overlay._overlayActiveClass = "overlay_active";
     return Overlay;
 }());
+var ToastColor;
+(function (ToastColor) {
+    ToastColor["FeaturedColor"] = "featured";
+    ToastColor["AccentColor"] = "accent";
+    ToastColor["SuccessColor"] = "success";
+    ToastColor["AlertColor"] = "alert";
+    ToastColor["WarningColor"] = "warning";
+})(ToastColor || (ToastColor = {}));
+var Toast = (function () {
+    function Toast(message, color, delay, timeout) {
+        var _this = this;
+        if (!message) {
+            throw new Error("O primeiro argumento deve ser fornecido.");
+        }
+        this.element = document.querySelector("#" + Toast._toasterId);
+        if (!this.element) {
+            this.element = document.createElement("section");
+            this.element.setAttribute("id", Toast._toasterId);
+            this.element.classList.add("toaster");
+            document.querySelector("body").appendChild(this.element);
+        }
+        this.toast = document.createElement("article");
+        this.toast.classList.add("toast");
+        if (color) {
+            this.toast.classList.add("toast_color-" + color);
+        }
+        var toastContent = document.createElement("div");
+        toastContent.classList.add("toast--content");
+        this.toast.appendChild(toastContent);
+        var toastContentMessage = document.createElement("p");
+        toastContentMessage.classList.add("toast--content--message");
+        toastContentMessage.innerText = message;
+        toastContent.appendChild(toastContentMessage);
+        this.open(delay);
+        setTimeout(function () { return _this.close(timeout); }, delay);
+    }
+    Toast.prototype.open = function (delay) {
+        var _this = this;
+        if (delay === void 0) { delay = 0; }
+        setTimeout(function () {
+            var activeToast = _this.element.querySelector(".toast");
+            if (activeToast) {
+                activeToast.classList.remove(Toast._toastActiveClass);
+            }
+            setTimeout(function () {
+                if (activeToast) {
+                    activeToast.remove();
+                }
+                _this.element.appendChild(_this.toast);
+                setTimeout(function () { return _this.toast.classList.add(Toast._toastActiveClass); }, 100);
+            }, Toast._timeoutToastDisable);
+        }, delay);
+    };
+    Toast.prototype.close = function (timeout) {
+        var _this = this;
+        if (timeout === void 0) { timeout = 5000; }
+        if (timeout != 0) {
+            setTimeout(function () {
+                _this.toast.classList.remove(Toast._toastActiveClass);
+                setTimeout(function () { return _this.toast.remove(); }, Toast._timeoutToastDisable);
+            }, timeout);
+        }
+    };
+    Toast._toasterId = "toaster";
+    Toast._toastActiveClass = "toast_active";
+    Toast._timeoutToastDisable = 400;
+    return Toast;
+}());
 
 //# sourceMappingURL=xmutarn.js.map
