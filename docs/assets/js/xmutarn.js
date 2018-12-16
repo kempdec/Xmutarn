@@ -1,4 +1,52 @@
 /*! Xmutarn v0.6.0 (https://github.com/vinivsl/Xmutarn.git) | Copyright 2018 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/Xmutarn/blob/master/LICENSE) */
+var Overlay = (function () {
+    function Overlay(element) {
+        this.element = element;
+        if (!element) {
+            throw new Error("O primeiro argumento deve ser fornecido.");
+        }
+        element.classList.add("overlay");
+    }
+    Overlay.prototype.show = function (delay) {
+        var _this = this;
+        if (delay === void 0) { delay = 300; }
+        setTimeout(function () { return _this.element.classList.add(Overlay._overlayActiveClass); }, delay);
+        return this.element;
+    };
+    Overlay.prototype.hide = function (delay) {
+        var _this = this;
+        if (delay === void 0) { delay = 300; }
+        setTimeout(function () { return _this.element.classList.remove(Overlay._overlayActiveClass); }, delay);
+        return this.element;
+    };
+    Overlay.createOverlay = function () {
+        var element = document.createElement("div");
+        document.querySelector("body").appendChild(element);
+        return new Overlay(element);
+    };
+    Overlay._overlayActiveClass = "overlay_active";
+    return Overlay;
+}());
+var Dialog = (function () {
+    function Dialog(element) {
+        this.element = element;
+        this._overlay = Overlay.createOverlay();
+        if (!element) {
+            throw new Error("O primeiro argumento deve ser fornecido.");
+        }
+        element.classList.add("dialog");
+    }
+    Dialog.prototype.open = function () {
+        this._overlay.show();
+        this.element.classList.add(Dialog._dialogOpenClass);
+    };
+    Dialog.prototype.close = function () {
+        this._overlay.hide();
+        this.element.classList.remove(Dialog._dialogOpenClass);
+    };
+    Dialog._dialogOpenClass = "dialog_open";
+    return Dialog;
+}());
 var DropdownMenuOrigin;
 (function (DropdownMenuOrigin) {
     DropdownMenuOrigin["TopRight"] = "top-right";
@@ -193,34 +241,6 @@ var Input = (function () {
 document.querySelectorAll("[x-role='input']").forEach(function (element) {
     new Input(element, element.getAttribute("x-label-text"));
 });
-var Overlay = (function () {
-    function Overlay(element) {
-        this.element = element;
-        if (!element) {
-            throw new Error("O primeiro argumento deve ser fornecido.");
-        }
-        element.classList.add("overlay");
-    }
-    Overlay.prototype.show = function (delay) {
-        var _this = this;
-        if (delay === void 0) { delay = 300; }
-        setTimeout(function () { return _this.element.classList.add(Overlay._overlayActiveClass); }, delay);
-        return this.element;
-    };
-    Overlay.prototype.hide = function (delay) {
-        var _this = this;
-        if (delay === void 0) { delay = 300; }
-        setTimeout(function () { return _this.element.classList.remove(Overlay._overlayActiveClass); }, delay);
-        return this.element;
-    };
-    Overlay.createOverlay = function () {
-        var element = document.createElement("div");
-        document.querySelector("body").appendChild(element);
-        return new Overlay(element);
-    };
-    Overlay._overlayActiveClass = "overlay_active";
-    return Overlay;
-}());
 var ToastColor;
 (function (ToastColor) {
     ToastColor["FeaturedColor"] = "featured";

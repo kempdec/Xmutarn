@@ -1,5 +1,6 @@
 {
   "files": [
+    "./src/ts/dialog.ts",
     "./src/ts/dropdownMenu.ts",
     "./src/ts/input.ts",
     "./src/ts/overlay.ts",
