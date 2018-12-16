@@ -1,8 +1,16 @@
 .card {
   position: relative;
-  background-color: $card-background-color;
-  border: $card-border;
-  border-color: $card-border-color;
   border-radius: $card-border-radius;
-  @include clearfix();
+  @extend .clearfix;
+
+  &:not(&_hide-structure) {
+    border: $card-border;
+    border-color: $card-border-color;
+    background-color: $card-background-color;
+  }
+
+  &_hide-structure {
+    background-color: transparent;
+    border: none;
+  }
 }

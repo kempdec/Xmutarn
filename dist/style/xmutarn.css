@@ -1652,16 +1652,18 @@ input[type="password"]::-ms-reveal {
 
 .card {
   position: relative;
-  background-color: var(--theme-main-card, white);
-  border: 1px solid;
-  border-color: var(--theme-main-dividers, rgba(0, 0, 0, 0.12));
   border-radius: 0.3125rem;
 }
 
-.card::after {
-  content: "";
-  display: block;
-  clear: both;
+.card:not(.card_hide-structure) {
+  border: 1px solid;
+  border-color: var(--theme-main-dividers, rgba(0, 0, 0, 0.12));
+  background-color: var(--theme-main-card, white);
+}
+
+.card_hide-structure {
+  background-color: transparent;
+  border: none;
 }
 
 .dialog {
@@ -1860,7 +1862,7 @@ input[type="password"]::-ms-reveal {
   border-radius: 0.5rem !important;
 }
 
-.clearfix::after {
+.clearfix::after, .card::after {
   content: "";
   display: block;
   clear: both;
