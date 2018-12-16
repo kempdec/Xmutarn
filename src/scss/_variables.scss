@@ -9,6 +9,26 @@ $theme-featured-default-color: purple !default;
 // Define a cor padrão do tema de realçe, com base no mapa da paleta `$palette`.
 $theme-accent-default-color: light-blue !default;
 
+// Avatar
+
+// Define a largura e altura da imagem do avatar.
+$avatar--image-width-and-height: px-to-rem($list: 45px) !default;
+
+// Deifne o raio de borda da imagem do avatar.
+$avatar--image_rounded-border-radius: px-to-rem($list: 8px) !default;
+
+// Define a margem esquerda das informações do avatar.
+$avatar--info-margin-left: px-to-rem($list: 12px) !default;
+
+// Define a espessura da fonte do título e subtítulo do avatar.
+$avatar--title-and-subtitle-font-weight: map-get($map: $typography-font-weights, $key: medium) !default;
+
+// Define a cor do título do avatar.
+$avatar--title-color: var(--theme-main-primary, get-main-theme-color($prop-name: primary)) !default;
+
+// Define a cor do subtítulo do avatar.
+$avatar--subtitle-color: var(--theme-main-secondary, get-main-theme-color($prop-name: secondary)) !default;
+
 // Barra de ferramentas
 
 // Define a cor de fundo da barra de ferramentas.

@@ -31,7 +31,7 @@
       color: var(--theme-main-secondary, get-main-theme-color($prop-name: secondary));
     }
 
-    small {
+    &--small {
       color: inherit;
       opacity: .7;
     }

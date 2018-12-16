@@ -1,0 +1,42 @@
+.avatar {
+  display: flex;
+  align-items: center;
+
+  &--image {
+    width: $avatar--image-width-and-height;
+    height: $avatar--image-width-and-height;
+
+    &:not(.avatar--image_rounded) {
+      border-radius: 50%;
+    }
+
+    &_rounded {
+      border-radius: $avatar--image_rounded-border-radius;
+    }
+  }
+
+  &--info {
+    display: inline-block;
+    margin-left: $avatar--info-margin-left;
+  }
+
+  &--title,
+  &--subtitle {
+    margin: 0;
+    font-weight: $avatar--title-and-subtitle-font-weight;
+    @extend .typography-body2;
+  }
+
+  &--title {
+    color: $avatar--title-color;
+  }
+
+  &--subtitle {
+    color: $avatar--subtitle-color;
+  }
+
+  &--small {
+    color: inherit;
+    opacity: .7;
+  }
+}
