@@ -96,6 +96,16 @@ $card-border-color: var(--theme-main-dividers, get-main-theme-color($prop-name: 
 // Define o raio de borda dos cartões.
 $card-border-radius: px-to-rem($list: 5px);
 
+// Define a margem da seção de conteúdo do cartão.
+$card--content-margin: 0 !default;
+// Define o preenchimento da seção de conteúdo do cartão.
+$card--content-padding: px-to-rem($list: 16px) !default;
+
+// Define a margem da seção de ação do cartão.
+$card--action-margin: 0 !default;
+// Define o preenchimento da seção de ação do cartão.
+$card--action-padding: 0 !default;
+
 // Contêiner
 
 // Define o preenchimento dos contêineres.

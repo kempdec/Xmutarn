@@ -13,4 +13,26 @@
     background-color: transparent;
     border: none;
   }
+
+  &--content {
+    margin: $card--content-margin;
+    padding: $card--content-padding;
+
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--action {
+    position: relative;
+    margin: $card--action-margin;
+    padding: $card--action-padding;
+    @extend .clearfix;
+  }
 }

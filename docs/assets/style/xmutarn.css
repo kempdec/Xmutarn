@@ -1666,6 +1666,25 @@ input[type="password"]::-ms-reveal {
   border: none;
 }
 
+.card--content {
+  margin: 0;
+  padding: 1rem;
+}
+
+.card--content p:first-child {
+  margin-top: 0;
+}
+
+.card--content p:last-child {
+  margin-bottom: 0;
+}
+
+.card--action {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
 .dialog {
   position: fixed;
   top: 50%;
@@ -1862,7 +1881,7 @@ input[type="password"]::-ms-reveal {
   border-radius: 0.5rem !important;
 }
 
-.clearfix::after, .card::after {
+.clearfix::after, .card::after, .card--action::after {
   content: "";
   display: block;
   clear: both;
