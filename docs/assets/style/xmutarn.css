@@ -1747,15 +1747,25 @@ input[type="password"]::-ms-reveal {
 
 .toast--content {
   position: relative;
-  display: inline-flex;
+  display: inline-block;
   margin: 0;
   padding: 1rem 1.625rem;
+}
+
+.toast--content--title {
+  margin: 0;
+  color: inherit;
+  font-weight: 500;
 }
 
 .toast--content--message {
   margin: 0;
   font-size: inherit;
   color: inherit;
+}
+
+.toast--content--message_secondary {
+  opacity: 0.9;
 }
 
 @media (min-width: 31.25rem) {

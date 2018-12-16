@@ -48,14 +48,24 @@
 
   &--content {
     position: relative;
-    display: inline-flex;
+    display: inline-block;
     margin: $toast--content-margin;
     padding: $toast--content-padding;
+
+    &--title {
+      margin: $toast--content--title-margin;
+      color: inherit;
+      font-weight: $toast--content--title-font-weight;
+    }
 
     &--message {
       margin: $toast--content--message-margin;
       font-size: inherit;
       color: inherit;
+
+      &_secondary {
+        opacity: $toast--content--message_secondary-opacity;
+      }
     }
   }
 }

@@ -251,6 +251,14 @@ $toast--content-padding: px-to-rem($list: 16px 26px) !default;
 // Define a margem da mensagem do conteúdo do toast.
 $toast--content--message-margin: 0 !default;
 
+// Define a opacidade da mensagem, com variante "secondary", do conteúdo do toast.
+$toast--content--message_secondary-opacity: .9 !default;
+
+// Define a espessura da fonte do título do conteúdo do toast.
+$toast--content--title-font-weight: map-get($map: $typography-font-weights, $key: medium) !default;
+// Define a margem do título do conteúdo do toast.
+$toast--content--title-margin: 0 !default;
+
 // Z-index
 
 $z-index-toolbar: 40 !default;
