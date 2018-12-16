@@ -1670,6 +1670,28 @@ input[type="password"]::-ms-reveal {
   border: none;
 }
 
+.card--header {
+  margin: 0;
+  padding: 1rem;
+}
+
+.card--header--title, .card--header--subtitle {
+  margin: 0;
+}
+
+.card--header--title {
+  color: var(--theme-main-primary, rgba(0, 0, 0, 0.87));
+}
+
+.card--header--subtitle {
+  color: var(--theme-main-secondary, rgba(0, 0, 0, 0.54));
+}
+
+.card--header small {
+  color: inherit;
+  opacity: .7;
+}
+
 .card--media {
   position: relative;
   background: black no-repeat top center;
