@@ -1665,6 +1665,27 @@ input[type="password"]::-ms-reveal {
   clear: both;
 }
 
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 60;
+  min-width: 18.75rem;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transition: .3s;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.dialog_open {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
 .overlay {
   position: fixed;
   top: 0;
