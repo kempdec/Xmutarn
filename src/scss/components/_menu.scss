@@ -7,11 +7,11 @@
   max-height: $menu-max-height;
   background-color: $menu-background-color;
   border-radius: $menu-border-radius;
-  box-shadow: $menu-box-shadow;
   transform: scale(0);
   transition: .3s;
   opacity: 0;
   will-change: transform, opacity;
+  @extend .shadow-floating;
 
   &_open {
     transform: scale(1);

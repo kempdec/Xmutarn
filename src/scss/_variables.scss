@@ -197,8 +197,6 @@ $list--icon-margin-left: px-to-em($list: -4.58px) !default;
 $menu-background-color: var(--theme-main-card, get-main-theme-color($prop-name: card)) !default;
 // Define o raio de borda do menu.
 $menu-border-radius: px-to-rem($list: 2px) !default;
-// Define o sombreamento do menu.
-$menu-box-shadow: px-to-rem($list: 0 3px 1px -2px) rgba(0, 0, 0, .2), px-to-rem($list: 0 2px 2px 0) rgba(0, 0, 0, .14), px-to-rem($list: 0 1px 5px 0) rgba(0, 0, 0, .12) !default;
 // Define a margem do menu.
 $menu-margin: 0 !default;
 // Define a largura máxima do menu.
@@ -217,8 +215,6 @@ $overlay-background-color: rgba(0, 0, 0, .5) !default;
 
 // Define a cor de fundo do toast.
 $toast-background-color: #323232 !default;
-// Define a sombra de caixa do toast.
-$toast-box-shadow: px-to-rem($list: 0 2px 4px -1px) rgba(0, 0, 0, .2), px-to-rem($list: 0 4px 5px 0) rgba(0, 0, 0, .14), px-to-rem($list: 0 1px 10px 0) rgba(0, 0, 0, .12) !default;
 // Define a cor do toast.
 $toast-color: white !default;
 // Define o tamanho da fonte do toast.

@@ -19,7 +19,7 @@
   transform: $toast-transform;
   transition: $toast-transition;
   align-items: center;
-  box-shadow: $toast-box-shadow;
+  @extend .shadow-floating;
 
   &_active {
     transform: $toast_active-transform;
