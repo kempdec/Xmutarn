@@ -27,6 +27,18 @@ $button-font-sizes: (
   xlarge: px-to-rem($list: 19.2px)
 ) !default;
 
+// Cartão
+
+// Define o tamanho dos formatos de mídia disponíveis para cartão.
+$card-media-formats: (
+  // 16:9
+  hd: 56.25%,
+  // 4:3
+  sd: 75%,
+  // 1:1
+  square: 100%
+) !default;
+
 // Contêiner
 
 // Define a largura máxima de `.container` para diferentes tamanhos de tela.

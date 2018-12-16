@@ -14,6 +14,54 @@
     border: none;
   }
 
+  &--media {
+    position: relative;
+    background: $card--media-background;
+    background-size: cover;
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      display: block;
+    }
+
+    &:first-child {
+      border-top-right-radius: inherit;
+      border-top-left-radius: inherit;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: inherit;
+      border-bottom-left-radius: inherit;
+    }
+
+    @each $format, $value in $card-media-formats {
+      &_format-#{$format} {
+        padding-bottom: #{$value};
+      }
+    }
+
+    &--area {
+      position: absolute;
+      left: 0;
+      z-index: $z-index-card-media-area;
+      width: 100%;
+
+      &:not(.card--media--area_in-top) {
+        bottom: 0;
+      }
+
+      &_in-top {
+        top: 0;
+      }
+    }
+
+    &--image {
+      max-width: 100%;
+      max-height: $card--media--image-max-height;
+    }
+  }
+
   &--content {
     margin: $card--content-margin;
     padding: $card--content-padding;
