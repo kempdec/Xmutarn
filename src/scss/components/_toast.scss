@@ -1,0 +1,75 @@
+.toaster {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-toaster;
+  width: 100%;
+  @include clearfix();
+}
+
+.toast {
+  position: relative;
+  display: flex;
+  margin: $toast-margin;
+  padding: $toast-padding;
+  width: 100%;
+  font-size: $toast-font-size;
+  color: $toast-color;
+  background-color: $toast-background-color;
+  transform: $toast-transform;
+  transition: $toast-transition;
+  align-items: center;
+  box-shadow: $toast-box-shadow;
+
+  &_active {
+    transform: $toast_active-transform;
+    transition: $toast_active-transition;
+  }
+
+  &_color-featured {
+    background-color: var(--theme-color700, get-featured-theme-color($hue: 700));
+  }
+
+  &_color-accent {
+    background-color: var(--theme-colorA400, get-accent-theme-color($hue: 400));
+  }
+
+  &_color-success {
+    background-color: get-palette-color($color-name: green);
+  }
+
+  &_color-alert {
+    background-color: get-palette-color($color-name: red);
+  }
+
+  &_color-warning {
+    background-color: get-palette-color($color-name: orange);
+  }
+
+  &--content {
+    position: relative;
+    display: inline-flex;
+    margin: $toast--content-margin;
+    padding: $toast--content-padding;
+
+    &--message {
+      margin: $toast--content--message-margin;
+      font-size: inherit;
+      color: inherit;
+    }
+  }
+}
+
+@media (min-width: $toast-media-max-width) {
+  .toaster {
+    width: auto;
+  }
+
+  .toast {
+    margin: $toast-media-margin;
+    margin-bottom: $toast-media-margin-bottom;
+    min-width: $toast-media-min-width;
+    max-width: $toast-media-max-width;
+    border-radius: $toast-media-border-radius;
+  }
+}

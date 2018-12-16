@@ -208,11 +208,55 @@ $menu-min-width: px-to-rem($list: 170px) !default;
 // Define a cor de fundo do overlay.
 $overlay-background-color: rgba(0, 0, 0, .5) !default;
 
+// Toast
+
+// Define a cor de fundo do toast.
+$toast-background-color: #323232 !default;
+// Define a sombra de caixa do toast.
+$toast-box-shadow: px-to-rem($list: 0 2px 4px -1px) rgba(0, 0, 0, .2), px-to-rem($list: 0 4px 5px 0) rgba(0, 0, 0, .14), px-to-rem($list: 0 1px 10px 0) rgba(0, 0, 0, .12) !default;
+// Define a cor do toast.
+$toast-color: white !default;
+// Define o tamanho da fonte do toast.
+$toast-font-size: px-to-rem($list: 14px) !default;
+// Define a margem do toast.
+$toast-margin: 0 !default;
+// Define o espaçamento do toast.
+$toast-padding: 0 !default;
+// Define a transformação do toast.
+$toast-transform: translate(0, 250%) !default;
+// Define a transição do toast.
+$toast-transition: transform .25s 0ms cubic-bezier(0.4, 0, 1, 1);
+
+// Define a transformação do toast com variante "active".
+$toast_active-transform: translate(0) !default;
+// Define a transição do toast com variante "active".
+$toast_active-transition: transform .25s 0ms cubic-bezier(0, 0, 0.2, 1) !default;
+
+// Define a margem do toast com media query.
+$toast-media-margin: px-to-rem($list: 0 0 0 20px);
+// Define a margem inferior do toast com media query.
+$toast-media-margin-bottom: px-to-rem($list: 20px) !default;
+// Define a largura mínima do toast com media query.
+$toast-media-min-width: px-to-rem($list: 300px) !default;
+// Define a largura máxima do toast com media query.
+$toast-media-max-width: px-to-rem($list: 500px) !default;
+// Define o raio de borda do toast com media query.
+$toast-media-border-radius: px-to-rem($list: 3px) !default;
+
+// Define a margem do conteúdo do toast.
+$toast--content-margin: 0 !default;
+// Define o espaçamento do conteúdo do toast.
+$toast--content-padding: px-to-rem($list: 16px 26px) !default;
+
+// Define a margem da mensagem do conteúdo do toast.
+$toast--content--message-margin: 0 !default;
+
 // Z-index
 
 $z-index-toolbar: 40 !default;
 $z-index-overlay: 50 !default;
 $z-index-menu: 70 !default;
+$z-index-toaster: 80 !default;
 
 // Global file
 //

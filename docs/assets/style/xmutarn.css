@@ -1685,6 +1685,92 @@ input[type="password"]::-ms-reveal {
   pointer-events: auto;
 }
 
+.toaster {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 80;
+  width: 100%;
+}
+
+.toaster::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.toast {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 0.875rem;
+  color: white;
+  background-color: #323232;
+  -webkit-transform: translate(0, 250%);
+          transform: translate(0, 250%);
+  transition: -webkit-transform 0.25s 0ms cubic-bezier(0.4, 0, 1, 1);
+  transition: transform 0.25s 0ms cubic-bezier(0.4, 0, 1, 1);
+  transition: transform 0.25s 0ms cubic-bezier(0.4, 0, 1, 1), -webkit-transform 0.25s 0ms cubic-bezier(0.4, 0, 1, 1);
+  align-items: center;
+  box-shadow: 0 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.2), 0 0.25rem 0.3125rem 0 rgba(0, 0, 0, 0.14), 0 0.0625rem 0.625rem 0 rgba(0, 0, 0, 0.12);
+}
+
+.toast_active {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  transition: -webkit-transform 0.25s 0ms cubic-bezier(0, 0, 0.2, 1);
+  transition: transform 0.25s 0ms cubic-bezier(0, 0, 0.2, 1);
+  transition: transform 0.25s 0ms cubic-bezier(0, 0, 0.2, 1), -webkit-transform 0.25s 0ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.toast_color-featured {
+  background-color: var(--theme-color700, #7B1FA2);
+}
+
+.toast_color-accent {
+  background-color: var(--theme-colorA400, #00B0FF);
+}
+
+.toast_color-success {
+  background-color: #4CAF50;
+}
+
+.toast_color-alert {
+  background-color: #F44336;
+}
+
+.toast_color-warning {
+  background-color: #FF9800;
+}
+
+.toast--content {
+  position: relative;
+  display: inline-flex;
+  margin: 0;
+  padding: 1rem 1.625rem;
+}
+
+.toast--content--message {
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+@media (min-width: 31.25rem) {
+  .toaster {
+    width: auto;
+  }
+  .toast {
+    margin: 0 0 0 1.25rem;
+    margin-bottom: 1.25rem;
+    min-width: 18.75rem;
+    max-width: 31.25rem;
+    border-radius: 0.1875rem;
+  }
+}
+
 .border-0 {
   border: 0 !important;
 }
