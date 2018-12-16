@@ -38,12 +38,13 @@ class Toast {
    * Inicializa uma nova instância de Toast.
    *
    * @param {string} message A mensagem do toast.
+   * @param {string} title O título do toast.
    * @param {ToastColor} color A cor do toast.
    * @param {number} delay O delay em milissegundos para abertura do toast.
    * @param {number} timeout O timeout para fechamento do toast. Caso o valor fornecido seja "0", o toast não será
    * fechado.
    */
-  constructor(message: string, color?: ToastColor, delay?: number, timeout?: number) {
+  constructor(message: string, title?: string, color?: ToastColor, delay?: number, timeout?: number) {
     if (!message) {
       throw new Error("O primeiro argumento deve ser fornecido.");
     }
@@ -76,11 +77,24 @@ class Toast {
 
     this.toast.appendChild(toastContent);
 
+    if (title) {
+      const toastContentTitle: HTMLHeadingElement = document.createElement("h1");
+
+      toastContentTitle.classList.add("toast--content--title", "typography-body2");
+      toastContentTitle.innerText = title;
+
+      toastContent.appendChild(toastContentTitle);
+    }
+
     // cria e define o elemento de mensagem do conteúdo do toast.
     const toastContentMessage: HTMLParagraphElement = document.createElement("p");
 
-    toastContentMessage.classList.add("toast--content--message");
+    toastContentMessage.classList.add("toast--content--message", "typography-body2");
     toastContentMessage.innerText = message;
+
+    if (title) {
+      toastContentMessage.classList.add("toast--content--message_secondary");
+    }
 
     toastContent.appendChild(toastContentMessage);
 

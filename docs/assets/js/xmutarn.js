@@ -230,7 +230,7 @@ var ToastColor;
     ToastColor["WarningColor"] = "warning";
 })(ToastColor || (ToastColor = {}));
 var Toast = (function () {
-    function Toast(message, color, delay, timeout) {
+    function Toast(message, title, color, delay, timeout) {
         var _this = this;
         if (!message) {
             throw new Error("O primeiro argumento deve ser fornecido.");
@@ -250,9 +250,18 @@ var Toast = (function () {
         var toastContent = document.createElement("div");
         toastContent.classList.add("toast--content");
         this.toast.appendChild(toastContent);
+        if (title) {
+            var toastContentTitle = document.createElement("h1");
+            toastContentTitle.classList.add("toast--content--title", "typography-body2");
+            toastContentTitle.innerText = title;
+            toastContent.appendChild(toastContentTitle);
+        }
         var toastContentMessage = document.createElement("p");
-        toastContentMessage.classList.add("toast--content--message");
+        toastContentMessage.classList.add("toast--content--message", "typography-body2");
         toastContentMessage.innerText = message;
+        if (title) {
+            toastContentMessage.classList.add("toast--content--message_secondary");
+        }
         toastContent.appendChild(toastContentMessage);
         this.open(delay);
         setTimeout(function () { return _this.close(timeout); }, delay);
