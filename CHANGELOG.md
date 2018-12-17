@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## Xmutarn v0.24.0 (2018-12-x) - Release 07
+
+- Adicionado toast.
+- Adicionado diálogo.
+- Adicionado avatar.
+- Adicionado overlay.
+- Adicionado classes TypeScript responsáveis por gerenciar toasts, diálogos e overlays.
+- Adicionado variante `hide-structure` para a classe `card`.
+- Adicionado os descendentes `header`, `media`, `content` e `action`  para a classe `card`.
+- Adicionado classes utilitárias de sombra.
+- Adicionado novas classes utilitárias de borda.
+
+---
+
+- Pulo da versão **0.5.1** (release 06), para a versão **0.24.0** (release 07) por motivos de conflito com a 2ª versão obsoleta do Xmutarn no NPM, a qual se manteve apenas até a versão 0.23.1 para reconstrução. Criado em **14/02/2018** às **16:48**, reconstruído em **23/09/2018** ás **18:10**.
+
 ## Xmutarn v0.5.1 (2018-12-05) - Release 06
 
 - Uso da variante `dark-color` da classe `toolbar` foi fixado.
