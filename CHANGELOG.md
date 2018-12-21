@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Xmutarn v0.24.0 (2018-12-x) - Release 07
+## Xmutarn v0.24.0 (2018-12-21) - Release 07
 
 - Adicionado toast.
 - Adicionado diálogo.
