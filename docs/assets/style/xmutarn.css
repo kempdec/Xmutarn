@@ -1614,6 +1614,7 @@ input[type="password"]::-ms-reveal {
   margin: 0 0.125em;
   padding: 1.143em;
   color: inherit;
+  background-color: transparent;
   border-radius: 0.25rem;
   transition: background-color .4s;
   flex: 0 0 auto;
@@ -1634,6 +1635,10 @@ input[type="password"]::-ms-reveal {
 .toolbar--nav--item:focus {
   background-color: rgba(255, 255, 255, 0.18);
   outline: 0;
+}
+
+.toolbar--nav--item:not(.toolbar--nav--item_bordered) {
+  border: none;
 }
 
 .toolbar--nav--item_active {
