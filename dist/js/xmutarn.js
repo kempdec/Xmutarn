@@ -263,6 +263,14 @@ var NavigationDrawer = (function () {
     NavigationDrawer._navigationDrawerOpenClass = "navigation-drawer_open";
     return NavigationDrawer;
 }());
+document.querySelectorAll("[x-open-nav-drawer-id]").forEach(function (element) {
+    var attributeValue = element.attributes.getNamedItem("x-open-nav-drawer-id").value;
+    var navDrawer = new NavigationDrawer(document.querySelector("#" + attributeValue.replace("#", "")));
+    element.addEventListener("click", function (e) {
+        navDrawer.open();
+        e.preventDefault();
+    });
+});
 var ToastColor;
 (function (ToastColor) {
     ToastColor["FeaturedColor"] = "featured";
