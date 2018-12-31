@@ -3,6 +3,7 @@
     "./src/ts/dialog.ts",
     "./src/ts/dropdownMenu.ts",
     "./src/ts/input.ts",
+    "./src/ts/navigationDrawer.ts",
     "./src/ts/overlay.ts",
     "./src/ts/toast.ts"
   ],
