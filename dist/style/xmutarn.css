@@ -1491,7 +1491,7 @@ input[type="password"]::-ms-reveal {
 
 .menu {
   position: absolute;
-  z-index: 70;
+  z-index: 80;
   margin: 0;
   min-width: 10.625rem;
   max-width: calc(100vw - 2rem);
@@ -1773,7 +1773,7 @@ input[type="password"]::-ms-reveal {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 60;
+  z-index: 70;
   min-width: 18.75rem;
   -webkit-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
@@ -1788,6 +1788,27 @@ input[type="password"]::-ms-reveal {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 1;
+}
+
+.navigation-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 60;
+  width: 18.75rem;
+  height: 100%;
+  max-width: 100%;
+  background-color: var(--theme-main-card, white);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  transition: .3s;
+  will-change: transform;
+}
+
+.navigation-drawer_open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .overlay {
@@ -1814,7 +1835,7 @@ input[type="password"]::-ms-reveal {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 80;
+  z-index: 90;
   width: 100%;
 }
 
@@ -3215,7 +3236,7 @@ input[type="password"]::-ms-reveal {
   box-shadow: 0 0.125rem 0.25rem -0.0625rem rgba(0, 0, 0, 0.2), 0 0.25rem 0.3125rem 0 rgba(0, 0, 0, 0.14), 0 0.0625rem 0.625rem 0 rgba(0, 0, 0, 0.12);
 }
 
-.shadow-highlight {
+.shadow-highlight, .navigation-drawer {
   box-shadow: 0 0.0625rem 0.3125rem rgba(0, 0, 0, 0.12);
 }
 
