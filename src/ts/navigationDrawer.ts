@@ -43,3 +43,17 @@ class NavigationDrawer {
     this.element.classList.remove(NavigationDrawer._navigationDrawerOpenClass);
   }
 }
+
+// inicializa uma nova instância de NavigationDrawer, a partir do atributo HTML "x-open-nav-drawer-id".
+document.querySelectorAll("[x-open-nav-drawer-id]").forEach(element => {
+  // obtém o valor do atributo do elemento selecionado.
+  const attributeValue: string = element.attributes.getNamedItem("x-open-nav-drawer-id").value;
+
+  const navDrawer: NavigationDrawer = new NavigationDrawer(document.querySelector("#" + attributeValue.replace("#", "")));
+
+  element.addEventListener("click", e => {
+    navDrawer.open();
+
+    e.preventDefault();
+  });
+});
