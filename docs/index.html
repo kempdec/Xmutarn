@@ -33,6 +33,9 @@
   <header class="toolbar">
     <div class="container-fluid">
       <nav class="toolbar--nav">
+        <button id="btn-open-doc-drawer" class="toolbar--nav--item cursor-pointer">
+          <span class="fas fa-bars fa-lg"></span>
+        </button>
         <a class="toolbar--nav--item margin-right-small padding-xsmall" href="">
           <img src="assets/img/environment/manifest.png" alt="Logotipo do Xmutarn com fundo linear" style="max-height: 2.5rem;">
         </a>
@@ -132,10 +135,30 @@
     </div>
   </footer>
 
+  <aside id="doc-drawer" class="navigation-drawer">
+    <nav class="list">
+      <a class="list--item" href="docs/getting-started.html">Começando</a>
+      <a class="list--item" href="docs/introduction.html">Introdução</a>
+      <p class="padding-x-small typography-body2 typography-weight-bold">Temas e cores</p>
+      <a class="list--item" href="docs/colors.html">Cores</a>
+      <a class="list--item" href="docs/themes.html">Temas</a>
+    </nav>
+  </aside>
+
   <!-- Arquivos de script. -->
-  <script src="assets/js/xmutarn.min.js"></script>
+  <script src="../assets/js/xmutarn.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7"
     crossorigin="anonymous"></script>
+  <script defer src="../assets/lib/prism/prism.js"></script>
+  <script defer>
+    const navDrawer = new NavigationDrawer(document.querySelector("#doc-drawer"));
+
+    document.querySelector("#btn-open-doc-drawer").addEventListener("click", e => {
+      navDrawer.open();
+
+      e.preventDefault();
+    });
+  </script>
 </body>
 
 </html>

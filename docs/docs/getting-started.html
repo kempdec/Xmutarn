@@ -34,6 +34,9 @@
   <header class="toolbar">
     <div class="container-fluid">
       <nav class="toolbar--nav">
+        <button id="btn-open-doc-drawer" class="toolbar--nav--item cursor-pointer">
+          <span class="fas fa-bars fa-lg"></span>
+        </button>
         <a class="toolbar--nav--item margin-right-small padding-xsmall" href="../">
           <img src="../assets/img/environment/manifest.png" alt="Logotipo do Xmutarn com fundo linear" style="max-height: 2.5rem;">
         </a>
@@ -41,26 +44,17 @@
         <a class="toolbar--nav--item toolbar--nav--item_active" href="../docs/getting-started.html">Documentação</a>
       </nav>
 
-      <nav class="toolbar--nav">
+      <nav class="toolbar--nav margin-left-auto">
         <a class="toolbar--nav--item" href="https://github.com/vinivsl/Xmutarn" target="_blank">
-          <span class="fab fa-github fa-lg"></span>
+          <span class="toolbar--nav--item--icon fab fa-github fa-lg"></span>
+          GitHub
         </a>
       </nav>
     </div>
   </header>
 
   <div class="flex-row margin-0">
-    <section class="flex-col-3___medium flex-col-2___xlarge padding-0 theme-main-fg-primary theme-main-bg-background">
-      <nav class="list">
-        <a class="list--item list--item_active" href="getting-started.html">Começando</a>
-        <a class="list--item" href="introduction.html">Introdução</a>
-        <p class="padding-x-small typography-body2 typography-weight-bold">Temas e cores</p>
-        <a class="list--item" href="colors.html">Cores</a>
-        <a class="list--item" href="themes.html">Temas</a>
-      </nav>
-    </section>
-
-    <div class="flex-col-9___medium flex-col-7___xlarge">
+    <div class="flex-col-9___medium flex-col-7___xlarge margin-x-auto">
       <main class="padding-left-medium___medium padding-left-xlarge___xlarge typography-body1 theme-main-fg-primary">
         <div class="typography-align-center typography-align-left___small">
           <h1 class="typography-headline2 theme-color-fg">Começando</h1>
@@ -110,11 +104,30 @@
     </div>
   </footer>
 
+  <aside id="doc-drawer" class="navigation-drawer">
+    <nav class="list">
+      <a class="list--item list--item_active" href="getting-started.html">Começando</a>
+      <a class="list--item" href="introduction.html">Introdução</a>
+      <p class="padding-x-small typography-body2 typography-weight-bold">Temas e cores</p>
+      <a class="list--item" href="colors.html">Cores</a>
+      <a class="list--item" href="themes.html">Temas</a>
+    </nav>
+  </aside>
+
   <!-- Arquivos de script. -->
   <script src="../assets/js/xmutarn.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7"
     crossorigin="anonymous"></script>
   <script defer src="../assets/lib/prism/prism.js"></script>
+  <script defer>
+    const navDrawer = new NavigationDrawer(document.querySelector("#doc-drawer"));
+
+    document.querySelector("#btn-open-doc-drawer").addEventListener("click", e => {
+      navDrawer.open();
+
+      e.preventDefault();
+    });
+  </script>
 </body>
 
 </html>
