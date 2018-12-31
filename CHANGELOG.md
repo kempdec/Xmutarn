@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Xmutarn v0.25.0 (2018-12-30) - Release 08
+
+- Adicionado gavetas de navegação.
+
+---
+
+- Aparência de alguns elementos, como botões, foi fixado.
+
 ## Xmutarn v0.24.0 (2018-12-21) - Release 07
 
 - Adicionado toast.
