@@ -1,0 +1,19 @@
+.navigation-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: $z-index-navigation-drawer;
+  width: $navigation-drawer-width;
+  height: 100%;
+  max-width: 100%;
+  background-color: $navigation-drawer-background-color;
+  transform: translateX(-100%);
+  transition: .3s;
+  will-change: transform;
+  @extend .shadow-highlight;
+
+  &_open {
+    transform: translateX(0);
+  }
+}

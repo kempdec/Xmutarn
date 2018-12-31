@@ -241,6 +241,28 @@ var Input = (function () {
 document.querySelectorAll("[x-role='input']").forEach(function (element) {
     new Input(element, element.getAttribute("x-label-text"));
 });
+var NavigationDrawer = (function () {
+    function NavigationDrawer(element) {
+        var _this = this;
+        this.element = element;
+        this._overlay = Overlay.createOverlay();
+        if (!element) {
+            throw new Error("O primeiro argumento deve ser fornecido.");
+        }
+        element.classList.add("navigation-drawer");
+        this._overlay.element.addEventListener("click", function () { return _this.close(); });
+    }
+    NavigationDrawer.prototype.open = function () {
+        this._overlay.show();
+        this.element.classList.add(NavigationDrawer._navigationDrawerOpenClass);
+    };
+    NavigationDrawer.prototype.close = function () {
+        this._overlay.hide();
+        this.element.classList.remove(NavigationDrawer._navigationDrawerOpenClass);
+    };
+    NavigationDrawer._navigationDrawerOpenClass = "navigation-drawer_open";
+    return NavigationDrawer;
+}());
 var ToastColor;
 (function (ToastColor) {
     ToastColor["FeaturedColor"] = "featured";

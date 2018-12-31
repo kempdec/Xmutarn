@@ -41,6 +41,7 @@
       margin: $toolbar--nav--item-margin;
       padding: $toolbar--nav--item-padding;
       color: inherit;
+      background-color: transparent;
       border-radius: $toolbar--nav--item-border-radius;
       transition: background-color .4s;
       flex: 0 0 auto;
@@ -62,6 +63,10 @@
       &:focus {
         background-color: $toolbar--nav--item-bg-color-pseudo-focus;
         outline: 0;
+      }
+
+      &:not(&_bordered) {
+        border: none;
       }
 
       &_active {
