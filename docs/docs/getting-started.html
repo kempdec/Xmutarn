@@ -34,7 +34,7 @@
   <header class="toolbar">
     <div class="container-fluid">
       <nav class="toolbar--nav">
-        <button id="btn-open-doc-drawer" class="toolbar--nav--item cursor-pointer">
+        <button class="toolbar--nav--item cursor-pointer" x-open-nav-drawer-id="doc-drawer">
           <span class="fas fa-bars fa-lg"></span>
         </button>
         <a class="toolbar--nav--item margin-right-small padding-xsmall" href="../">
@@ -119,15 +119,6 @@
   <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7"
     crossorigin="anonymous"></script>
   <script defer src="../assets/lib/prism/prism.js"></script>
-  <script defer>
-    const navDrawer = new NavigationDrawer(document.querySelector("#doc-drawer"));
-
-    document.querySelector("#btn-open-doc-drawer").addEventListener("click", e => {
-      navDrawer.open();
-
-      e.preventDefault();
-    });
-  </script>
 </body>
 
 </html>

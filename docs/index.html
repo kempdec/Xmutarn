@@ -33,7 +33,7 @@
   <header class="toolbar">
     <div class="container-fluid">
       <nav class="toolbar--nav">
-        <button id="btn-open-doc-drawer" class="toolbar--nav--item cursor-pointer">
+        <button class="toolbar--nav--item cursor-pointer" x-open-nav-drawer-id="doc-drawer">
           <span class="fas fa-bars fa-lg"></span>
         </button>
         <a class="toolbar--nav--item margin-right-small padding-xsmall" href="">
@@ -43,9 +43,10 @@
         <a class="toolbar--nav--item" href="docs/getting-started.html">Documentação</a>
       </nav>
 
-      <nav class="toolbar--nav">
+      <nav class="toolbar--nav margin-left-auto">
         <a class="toolbar--nav--item" href="https://github.com/vinivsl/Xmutarn" target="_blank">
-          <span class="fab fa-github fa-lg"></span>
+          <span class="toolbar--nav--item--icon fab fa-github fa-lg"></span>
+          GitHub
         </a>
       </nav>
     </div>
@@ -150,15 +151,6 @@
   <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7"
     crossorigin="anonymous"></script>
   <script defer src="../assets/lib/prism/prism.js"></script>
-  <script defer>
-    const navDrawer = new NavigationDrawer(document.querySelector("#doc-drawer"));
-
-    document.querySelector("#btn-open-doc-drawer").addEventListener("click", e => {
-      navDrawer.open();
-
-      e.preventDefault();
-    });
-  </script>
 </body>
 
 </html>
