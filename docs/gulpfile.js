@@ -1,15 +1,21 @@
 "use strict";
 
-const gulp = require("gulp"),
+const { dest } = require("gulp"),
   sourcemaps = require("gulp-sourcemaps"),
-  ts = require("gulp-typescript");
+  typescript = require("gulp-typescript");
 
-const tsProject = ts.createProject("./tsconfig.json");
+const tsProject = typescript.createProject("./tsconfig.json");
 
-gulp.task("ts", () => tsProject.src()
-  .pipe(sourcemaps.init())
-  .pipe(tsProject())
-  .pipe(sourcemaps.write("."))
-  .pipe(gulp.dest(tsProject.options.outDir)));
+/**
+ * Transpila os arquivos TypeScript para JavaScript.
+ */
+function ts() {
+  return tsProject.src()
+    .pipe(sourcemaps.init())
+    .pipe(tsProject())
+    .pipe(sourcemaps.write("."))
+    .pipe(dest(tsProject.options.outDir));
+}
 
-gulp.task("default", ["ts"]);
+exports.ts = ts;
+exports.default = ts;
