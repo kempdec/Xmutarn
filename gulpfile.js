@@ -37,7 +37,7 @@ function ts() {
 }
 
 /** Caminho do arquivo SASS principal. */
-const mainSassFile = `./src/scss/${pkg.name}.scss`;
+const mainSassFile = `./src/scss/${pkg.name}*.scss`;
 
 /** Caminho de distribuição dos arquivos CSS. */
 const cssDistPath = "./dist/style";

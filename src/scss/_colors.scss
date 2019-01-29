@@ -2,11 +2,12 @@
   @if (list-has-value($list: $colors-available, $value: $color-name) == true) {
     @each $prefix, $param in $themes-colors-prefixes-and-params {
       @each $hue, $color in $color-hues {
+        $hue: if($hue != "", "-" + $hue, $hue);
 
         // .color-*-**
         //
         // Exemplo: .color-fg-transparent
-        //          .color-fg-red50
+        //          .color-fg-red-50
         .color-#{$prefix}-#{$color-name}#{$hue} {
           #{$param}: #{$color} !important;
         }
@@ -16,7 +17,7 @@
           // .color-*-**__***
           //
           // Exemplo: .color-fg-transparent__hover:hover
-          //          .color-fg-red50__hover:hover
+          //          .color-fg-red-50__hover:hover
           .color-#{$prefix}-#{$color-name}#{$hue}__#{$pseudo}#{$delimiter}#{$pseudo} {
             @extend .color-#{$prefix}-#{$color-name}#{$hue};
           }

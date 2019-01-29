@@ -1,10 +1,6 @@
 @charset "UTF-8";
 
-// Define o tamanho da fonte da tipografia.
-//
-// Esta variável vem primeiro para o uso das funções 'px-to-rem' e 'px-to-em'.
-$typography-font-size: 16px !default;
-
+@import "global-variables";
 @import "palette-map";
 // Núcleo.
 @import "functions";
