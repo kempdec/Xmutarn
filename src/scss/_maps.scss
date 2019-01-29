@@ -130,62 +130,62 @@ $themes-colors-pseuds-and-delimiters: (
 
 // Define as tipografias e suas propriedades.
 $typographies: (
-  headline1: (
+  headline-1: (
     font-size: px-to-rem($list: 96px),
     letter-spacing: px-to-em($list: -.24992px),
     line-height: 1
   ),
-  headline2: (
+  headline-2: (
     font-size: px-to-rem($list: 60px),
     letter-spacing: px-to-em($list: -.13328px),
     line-height: 1
   ),
-  headline3: (
+  headline-3: (
     font-size: px-to-rem($list: 48px),
     letter-spacing: normal,
     line-height: px-to-rem($list: 50px)
   ),
-  headline4: (
+  headline-4: (
     font-size: px-to-rem($list: 34px),
     letter-spacing: px-to-em($list: .1176px),
     line-height: px-to-rem($list: 40px)
   ),
-  headline5: (
+  headline-5: (
     font-size: px-to-rem($list: 24px),
     letter-spacing: normal,
     line-height: px-to-rem($list: 32px)
   ),
-  headline6: (
+  headline-6: (
     font-size: px-to-rem($list: 20px),
     letter-spacing: px-to-em($list: .2px),
     line-height: 1.6
   ),
-  subtitle1: (
+  subtitle-1: (
     font-size: px-to-rem($list: 18px),
     letter-spacing: px-to-em($list: .14992px),
     line-height: px-to-rem($list: 30px)
   ),
-  subtitle2: (
+  subtitle-2: (
     font-size: px-to-rem($list: 15px),
     letter-spacing: px-to-em($list: .11424px),
     line-height: px-to-rem($list: 26px)
   ),
-  body1: (
+  body-1: (
     font-size: px-to-rem($list: 16px),
     letter-spacing: px-to-em($list: .5px),
     line-height: 1.5
   ),
-  body2: (
+  body-2: (
     font-size: px-to-rem($list: 14px),
     letter-spacing: px-to-em($list: .28576px),
     line-height: px-to-rem($list: 24px)
   ),
-  caption1: (
+  caption-1: (
     font-size: px-to-rem($list: 13px),
     letter-spacing: px-to-em($list: .53328px),
     line-height: px-to-rem($list: 22px)
   ),
-  caption2: (
+  caption-2: (
     font-size: px-to-rem($list: 12px),
     letter-spacing: px-to-em($list: .53328px),
     line-height: px-to-rem($list: 20px)
