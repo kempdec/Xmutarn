@@ -27,7 +27,7 @@
   "private": false,
   "files": [
     "dist",
-    "src/scss"
+    "src"
   ],
   "devDependencies": {
     "gulp": "^4.0.0",
