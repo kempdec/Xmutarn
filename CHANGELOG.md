@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## Xmutarn v0.26.0 (2019-02-13) - Release 09
+
+- Adicionado **Xmutarn Colors**.
+- Adicionado inicializador HTML de uma nova instância de `NavigationDrawer`.
+- Adicionado pasta **src** completa no pacote de distribuição do NPM.
+
+---
+
+- Nomenclatura das classes de tipografia corrigido.
+
 ## Xmutarn v0.25.0 (2018-12-30) - Release 08
 
 - Adicionado gavetas de navegação.

@@ -1,4 +1,4 @@
-/*! Xmutarn v0.25.0 (https://github.com/vinivsl/Xmutarn.git) | Copyright 2019 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/Xmutarn/blob/master/LICENSE) */
+/*! Xmutarn v0.26.0 (https://github.com/vinivsl/Xmutarn.git) | Copyright 2019 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/Xmutarn/blob/master/LICENSE) */
 var Overlay = (function () {
     function Overlay(element) {
         this.element = element;
