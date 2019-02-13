@@ -6,7 +6,7 @@
 
   // .typography-*
   //
-  // Exemplo: .typography-headline1
+  // Exemplo: .typography-headline-1
   .typography-#{$typography} {
     @each $property, $value in $properties {
       #{$property}: #{$value};
@@ -15,23 +15,23 @@
 
 }
 
-.typography-headline1,
-.typography-headline2 {
+.typography-headline-1,
+.typography-headline-2 {
   font-weight: map-get($map: $typography-font-weights, $key: light);
 }
 
-.typography-headline3,
-.typography-headline4,
-.typography-headline5,
-.typography-subtitle1,
-.typography-body1,
-.typography-body2,
-.typography-caption1 {
+.typography-headline-3,
+.typography-headline-4,
+.typography-headline-5,
+.typography-subtitle-1,
+.typography-body-1,
+.typography-body-2,
+.typography-caption-1 {
   font-weight: map-get($map: $typography-font-weights, $key: regular);
 }
 
-.typography-headline6,
-.typography-subtitle2,
-.typography-caption2 {
+.typography-headline-6,
+.typography-subtitle-2,
+.typography-caption-2 {
   font-weight: map-get($map: $typography-font-weights, $key: medium);
 }
