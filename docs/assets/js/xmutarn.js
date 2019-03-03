@@ -42,11 +42,6 @@ var Dialog = (function () {
                 e.preventDefault();
             });
         });
-        element.querySelector("[x-close-dialog]")
-            .addEventListener("click", function (e) {
-            _this.close();
-            e.preventDefault();
-        });
     }
     Dialog.prototype.open = function () {
         this._overlay.show();
