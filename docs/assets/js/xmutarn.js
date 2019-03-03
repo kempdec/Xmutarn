@@ -308,12 +308,12 @@ var Toast = (function () {
         this.toast.appendChild(toastContent);
         if (title) {
             var toastContentTitle = document.createElement("h1");
-            toastContentTitle.classList.add("toast--content--title", "typography-body2");
+            toastContentTitle.classList.add("toast--content--title", "typography-body-2");
             toastContentTitle.innerText = title;
             toastContent.appendChild(toastContentTitle);
         }
         var toastContentMessage = document.createElement("p");
-        toastContentMessage.classList.add("toast--content--message", "typography-body2");
+        toastContentMessage.classList.add("toast--content--message", "typography-body-2");
         toastContentMessage.innerText = message;
         if (title) {
             toastContentMessage.classList.add("toast--content--message_secondary");

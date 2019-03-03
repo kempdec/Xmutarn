@@ -62,7 +62,7 @@ class Toast {
     if (title) {
       const toastContentTitle: HTMLHeadingElement = document.createElement("h1");
 
-      toastContentTitle.classList.add("toast--content--title", "typography-body2");
+      toastContentTitle.classList.add("toast--content--title", "typography-body-2");
       toastContentTitle.innerText = title;
 
       toastContent.appendChild(toastContentTitle);
@@ -71,7 +71,7 @@ class Toast {
     // cria e define o elemento de mensagem do conteúdo do toast.
     const toastContentMessage: HTMLParagraphElement = document.createElement("p");
 
-    toastContentMessage.classList.add("toast--content--message", "typography-body2");
+    toastContentMessage.classList.add("toast--content--message", "typography-body-2");
     toastContentMessage.innerText = message;
 
     if (title) {
