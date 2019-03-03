@@ -2,8 +2,13 @@
 
 ## Xmutarn v0.27.0 (2019-xx-xx) - Release 10
 
-- Abertura incorreta do menu suspenso pela instanciação a partir do atributo `x-role="dropdown-menu"` foi fixada. Issue: [#2](https://github.com/vinivsl/Xmutarn/issues/2).
-- Tamanho dos títulos dos toast foram fixados.
+- Adicionado ícones para toasts. Issue: [#9](https://github.com/vinivsl/Xmutarn/issues/9).
+- Adicionado a exibição e omissão de overlay para toasts, quando o **timeout** for setado como **0**.
+
+---
+
+- Fixado a abertura incorreta do menu suspenso pela instanciação a partir do atributo `x-role="dropdown-menu"`. Issue: [#2](https://github.com/vinivsl/Xmutarn/issues/2).
+- Fixado o tamanho dos títulos dos toasts.
 
 ## Xmutarn v0.26.0 (2019-02-13) - Release 09
 

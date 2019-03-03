@@ -286,10 +286,17 @@ var ToastColor;
     ToastColor["WarningColor"] = "warning";
 })(ToastColor || (ToastColor = {}));
 var Toast = (function () {
-    function Toast(message, title, color, delay, timeout) {
+    function Toast(message, title, color, iconClasses, delay, timeout) {
+        var _a;
         var _this = this;
         if (!message) {
             throw new Error("O primeiro argumento deve ser fornecido.");
+        }
+        if (delay && typeof delay != "number") {
+            throw new Error("O quinto argumento deve ser do tipo 'number'.");
+        }
+        if (timeout && typeof timeout != "number") {
+            throw new Error("O sexto argumento deve ser do tipo 'number'.");
         }
         var toastColors = Object.keys(ToastColor).map(function (x) { return ToastColor[x]; });
         if (color && toastColors.indexOf(color) == -1) {
@@ -306,6 +313,11 @@ var Toast = (function () {
         this.toast.classList.add("toast");
         if (color) {
             this.toast.classList.add("toast_color-" + color);
+        }
+        if (iconClasses) {
+            var toastIcon = document.createElement("div");
+            (_a = toastIcon.classList).add.apply(_a, ["toast--icon"].concat(iconClasses.split(" ")));
+            this.toast.appendChild(toastIcon);
         }
         var toastContent = document.createElement("div");
         toastContent.classList.add("toast--content");
@@ -333,6 +345,7 @@ var Toast = (function () {
             var activeToast = _this.element.querySelector(".toast");
             if (activeToast) {
                 activeToast.classList.remove(Toast._toastActiveClass);
+                Toast._overlay.hide();
             }
             setTimeout(function () {
                 if (activeToast) {
@@ -352,10 +365,14 @@ var Toast = (function () {
                 setTimeout(function () { return _this.toast.remove(); }, Toast._timeoutToastDisable);
             }, timeout);
         }
+        else {
+            Toast._overlay.show();
+        }
     };
     Toast._toasterId = "toaster";
     Toast._toastActiveClass = "toast_active";
     Toast._timeoutToastDisable = 400;
+    Toast._overlay = Overlay.createOverlay();
     return Toast;
 }());
 

@@ -292,6 +292,9 @@ $toast-media-max-width: px-to-rem($list: 500px) !default;
 // Define o raio de borda do toast com media query.
 $toast-media-border-radius: px-to-rem($list: 3px) !default;
 
+// Define a margem do ícone do toast.
+$toast--icon-margin: px-to-rem($list: 0 0 0 16px);
+
 // Define a margem do conteúdo do toast.
 $toast--content-margin: 0 !default;
 // Define o espaçamento do conteúdo do toast.

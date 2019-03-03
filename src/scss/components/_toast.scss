@@ -46,6 +46,12 @@
     background-color: get-palette-color($color-name: orange);
   }
 
+  &--icon {
+    position: relative;
+    display: inline-block;
+    margin: $toast--icon-margin;
+  }
+
   &--content {
     position: relative;
     display: inline-block;

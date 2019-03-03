@@ -22,13 +22,22 @@ class Toast {
    * @param {string} message A mensagem do toast.
    * @param {string} title O título do toast.
    * @param {ToastColor} color A cor do toast.
+   * @param {string} iconClasses As classes de ícone do toast.
    * @param {number} delay O delay em milissegundos para abertura do toast.
    * @param {number} timeout O timeout para fechamento do toast. Caso o valor fornecido seja "0", o toast não será
    * fechado.
    */
-  constructor(message: string, title?: string, color?: ToastColor, delay?: number, timeout?: number) {
+  constructor(message: string, title?: string, color?: ToastColor, iconClasses?: string, delay?: number, timeout?: number) {
     if (!message) {
       throw new Error("O primeiro argumento deve ser fornecido.");
+    }
+
+    if (delay && typeof delay != "number") {
+      throw new Error("O quinto argumento deve ser do tipo 'number'.");
+    }
+
+    if (timeout && typeof timeout != "number") {
+      throw new Error("O sexto argumento deve ser do tipo 'number'.");
     }
 
     // obtém e define as cores do toast.
@@ -57,6 +66,15 @@ class Toast {
 
     if (color) {
       this.toast.classList.add("toast_color-" + color);
+    }
+
+    if (iconClasses) {
+      // cria e define o elemento de ícone do toast.
+      const toastIcon: HTMLElement = document.createElement("div");
+
+      toastIcon.classList.add("toast--icon", ...iconClasses.split(" "));
+
+      this.toast.appendChild(toastIcon);
     }
 
     // cria e define o elemento de conteúdo do toast.
@@ -107,9 +125,10 @@ class Toast {
     setTimeout((): void => {
       const activeToast: HTMLElement = this.element.querySelector(".toast");
 
-      // desativa o toast ativo, caso houver algum.
+      // desativa o toast ativo e omite o overlay, caso houver algum.
       if (activeToast) {
         activeToast.classList.remove(Toast._toastActiveClass);
+        Toast._overlay.hide();
       }
 
       // aguarda 400ms, para que o toast ativo seja completamente desativado.
@@ -126,6 +145,9 @@ class Toast {
     }, delay);
   }
 
+  /** Overlay. */
+  private static readonly _overlay: Overlay = Overlay.createOverlay();
+
   /**
    * Fecha o toast.
    *
@@ -141,6 +163,8 @@ class Toast {
         // aguarda 400ms, para que o toast seja completamente desativado, e remove-o em seguida.
         setTimeout((): void => this.toast.remove(), Toast._timeoutToastDisable);
       }, timeout);
+    } else {
+      Toast._overlay.show();
     }
   }
 }

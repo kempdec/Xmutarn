@@ -1890,6 +1890,12 @@ input[type="password"]::-ms-reveal {
   background-color: #FF9800;
 }
 
+.toast--icon {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 0 1rem;
+}
+
 .toast--content {
   position: relative;
   display: inline-block;
