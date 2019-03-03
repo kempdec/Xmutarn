@@ -345,7 +345,7 @@ var Toast = (function () {
     };
     Toast.prototype.close = function (timeout) {
         var _this = this;
-        if (timeout === void 0) { timeout = 5000; }
+        if (timeout === void 0) { timeout = 7000; }
         if (timeout != 0) {
             setTimeout(function () {
                 _this.toast.classList.remove(Toast._toastActiveClass);

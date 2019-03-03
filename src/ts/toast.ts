@@ -132,7 +132,7 @@ class Toast {
    * @param {number} timeout O timeout para fechamento do toast. Caso o valor fornecido seja "0", o toast não será
    * fechado.
    */
-  public close(timeout: number = 5000): void {
+  public close(timeout: number = 7000): void {
     if (timeout != 0) {
       // desativa o toast após o "timeout".
       setTimeout((): void => {
