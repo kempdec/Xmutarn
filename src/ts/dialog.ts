@@ -16,6 +16,13 @@ class Dialog {
 
     element.classList.add("dialog");
 
+    element.querySelectorAll("[x-close-dialog]").forEach(el => {
+      el.addEventListener("click", e => {
+        this.close();
+
+        e.preventDefault();
+      });
+    });
     // fecha o diálogo quando o evento de clique é acionado no elemento com o atributo "x-close-dialog".
     element.querySelector("[x-close-dialog]")
       .addEventListener("click", e => {

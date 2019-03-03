@@ -22,13 +22,14 @@ class NavigationDrawer {
     // fecha a gaveta de navegação quando o evento de clique é acionado no overlay.
     this._overlay.element.addEventListener("click", () => this.close());
 
-    // fecha a gaveta de navegação quando o evento de clique é acionado no elemento com o atributo "x-close-nav-drawer".
-    element.querySelector("[x-close-nav-drawer]")
-      .addEventListener("click", e => {
+    // fecha a gaveta de navegação quando o evento de clique é acionado nos elementos com o atributo "x-close-nav-drawer".
+    element.querySelectorAll("[x-close-nav-drawer]").forEach(el => {
+      el.addEventListener("click", e => {
         this.close();
 
         e.preventDefault();
       });
+    });
   }
 
   /** A classe CSS de abertura da gaveta de navegação. */

@@ -36,6 +36,12 @@ var Dialog = (function () {
             throw new Error("O primeiro argumento deve ser fornecido.");
         }
         element.classList.add("dialog");
+        element.querySelectorAll("[x-close-dialog]").forEach(function (el) {
+            el.addEventListener("click", function (e) {
+                _this.close();
+                e.preventDefault();
+            });
+        });
         element.querySelector("[x-close-dialog]")
             .addEventListener("click", function (e) {
             _this.close();
@@ -271,10 +277,11 @@ var NavigationDrawer = (function () {
         }
         element.classList.add("navigation-drawer");
         this._overlay.element.addEventListener("click", function () { return _this.close(); });
-        element.querySelector("[x-close-nav-drawer]")
-            .addEventListener("click", function (e) {
-            _this.close();
-            e.preventDefault();
+        element.querySelectorAll("[x-close-nav-drawer]").forEach(function (el) {
+            el.addEventListener("click", function (e) {
+                _this.close();
+                e.preventDefault();
+            });
         });
     }
     NavigationDrawer.prototype.open = function () {
