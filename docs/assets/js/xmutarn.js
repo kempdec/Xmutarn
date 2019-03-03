@@ -291,6 +291,10 @@ var Toast = (function () {
         if (!message) {
             throw new Error("O primeiro argumento deve ser fornecido.");
         }
+        var toastColors = Object.keys(ToastColor).map(function (x) { return ToastColor[x]; });
+        if (color && toastColors.indexOf(color) == -1) {
+            throw new Error("A cor '" + color + "' n\u00E3o est\u00E1 dispon\u00EDvel.");
+        }
         this.element = document.querySelector("#" + Toast._toasterId);
         if (!this.element) {
             this.element = document.createElement("section");

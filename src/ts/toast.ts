@@ -31,6 +31,13 @@ class Toast {
       throw new Error("O primeiro argumento deve ser fornecido.");
     }
 
+    // obtém e define as cores do toast.
+    const toastColors: string[] = Object.keys(ToastColor).map((x: any): string => ToastColor[x]);
+
+    if (color && toastColors.indexOf(color) == -1) {
+      throw new Error(`A cor '${color}' não está disponível.`);
+    }
+
     this.element = document.querySelector("#" + Toast._toasterId);
 
     if (!this.element) {
