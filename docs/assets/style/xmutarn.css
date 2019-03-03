@@ -1578,6 +1578,8 @@ input[type="password"]::-ms-reveal {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  transition: .3s;
+  will-change: transform;
 }
 
 .toolbar:not(.toolbar_dark-color) {
@@ -1586,6 +1588,11 @@ input[type="password"]::-ms-reveal {
 
 .toolbar_dark-color {
   background-color: #212121;
+}
+
+.toolbar_hide {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .toolbar > .container,

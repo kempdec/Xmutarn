@@ -10,6 +10,8 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  transition: .3s;
+  will-change: transform;
 
   &:not(&_dark-color) {
     background-color: $toolbar-background-color;
@@ -17,6 +19,10 @@
 
   &_dark-color {
     background-color: $toolbar_dark-color-background-color;
+  }
+
+  &_hide {
+    transform: translateY(-100%);
   }
 
   > .container,
