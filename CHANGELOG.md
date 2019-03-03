@@ -6,6 +6,8 @@
 - Adicionado ícones para toasts. Issue: [#9](https://github.com/vinivsl/Xmutarn/issues/9).
 - Adicionado a exibição e omissão de overlay para toasts, quando o **timeout** for setado como **0**.
 - Adicionado inicializador HTML de uma nova instância de `Dialog`.
+- Adicionado o atributo `x-close-dialog` para fechamento do _diálogo_ (`Dialog`) quando o evento de clique for acionado em um elemento filho do elemento do diálogo.
+- Adicionado o atributo `x-close-nav-drawer` para fechamento da _gaveta de navegação_ (`NavigationDrawer`) quando o evento de clique for acionado em um elemento filho do elemento da gaveta de navegação.
 
 ---
 

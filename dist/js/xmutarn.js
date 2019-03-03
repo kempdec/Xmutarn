@@ -29,12 +29,18 @@ var Overlay = (function () {
 }());
 var Dialog = (function () {
     function Dialog(element) {
+        var _this = this;
         this.element = element;
         this._overlay = Overlay.createOverlay();
         if (!element) {
             throw new Error("O primeiro argumento deve ser fornecido.");
         }
         element.classList.add("dialog");
+        element.querySelector("[x-close-dialog]")
+            .addEventListener("click", function (e) {
+            _this.close();
+            e.preventDefault();
+        });
     }
     Dialog.prototype.open = function () {
         this._overlay.show();
@@ -47,6 +53,14 @@ var Dialog = (function () {
     Dialog._dialogOpenClass = "dialog_open";
     return Dialog;
 }());
+document.querySelectorAll("[x-open-dialog-id]").forEach(function (element) {
+    var attributeValue = element.attributes.getNamedItem("x-open-dialog-id").value;
+    var dialog = new Dialog(document.getElementById(attributeValue.replace("#", "")));
+    element.addEventListener("click", function (e) {
+        dialog.open();
+        e.preventDefault();
+    });
+});
 var DropdownMenuOrigin;
 (function (DropdownMenuOrigin) {
     DropdownMenuOrigin["TopRight"] = "top-right";
@@ -257,6 +271,11 @@ var NavigationDrawer = (function () {
         }
         element.classList.add("navigation-drawer");
         this._overlay.element.addEventListener("click", function () { return _this.close(); });
+        element.querySelector("[x-close-nav-drawer]")
+            .addEventListener("click", function (e) {
+            _this.close();
+            e.preventDefault();
+        });
     }
     NavigationDrawer.prototype.open = function () {
         this._overlay.show();
@@ -271,7 +290,7 @@ var NavigationDrawer = (function () {
 }());
 document.querySelectorAll("[x-open-nav-drawer-id]").forEach(function (element) {
     var attributeValue = element.attributes.getNamedItem("x-open-nav-drawer-id").value;
-    var navDrawer = new NavigationDrawer(document.querySelector("#" + attributeValue.replace("#", "")));
+    var navDrawer = new NavigationDrawer(document.getElementById(attributeValue.replace("#", "")));
     element.addEventListener("click", function (e) {
         navDrawer.open();
         e.preventDefault();
