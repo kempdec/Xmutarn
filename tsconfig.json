@@ -5,7 +5,8 @@
     "./src/ts/input.ts",
     "./src/ts/navigationDrawer.ts",
     "./src/ts/overlay.ts",
-    "./src/ts/toast.ts"
+    "./src/ts/toast.ts",
+    "./src/ts/toolbar.ts"
   ],
   "compilerOptions": {
     "sourceMap": true,

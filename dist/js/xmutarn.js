@@ -375,5 +375,28 @@ var Toast = (function () {
     Toast._overlay = Overlay.createOverlay();
     return Toast;
 }());
+var Toolbar = (function () {
+    function Toolbar(element) {
+        if (!element) {
+            throw new Error("O primeiro argumento deve ser fornecido.");
+        }
+        var lastScrollTop = 0;
+        window.addEventListener("scroll", function () {
+            var scrollTop = document.documentElement.scrollTop;
+            if (scrollTop > element.clientHeight && scrollTop > lastScrollTop) {
+                element.classList.add(Toolbar._toolbarHideClass);
+            }
+            else {
+                element.classList.remove(Toolbar._toolbarHideClass);
+            }
+            lastScrollTop = scrollTop;
+        });
+    }
+    Toolbar._toolbarHideClass = "toolbar_hide";
+    return Toolbar;
+}());
+document.querySelectorAll("[x-role='toolbar']").forEach(function (element) {
+    new Toolbar(element);
+});
 
 //# sourceMappingURL=xmutarn.js.map
