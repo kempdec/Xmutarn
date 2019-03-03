@@ -204,5 +204,12 @@ class DropdownMenu {
 
 // inicializa uma nova instância de DropdownMenu, a partir do atributo HTML "x-dropdown-menu".
 document.querySelectorAll("[x-role='dropdown-menu']").forEach((element: HTMLElement): void => {
-  new DropdownMenu(element, <DropdownMenuOrigin>element.getAttribute("x-origin"));
+  // a origem da transformação do menu suspenso.
+  let origin: DropdownMenuOrigin = <DropdownMenuOrigin>element.getAttribute("x-origin");
+
+  if (origin) {
+    new DropdownMenu(element, origin);
+  } else {
+    new DropdownMenu(element);
+  }
 });

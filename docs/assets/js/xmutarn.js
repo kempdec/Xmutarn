@@ -1,4 +1,4 @@
-/*! Xmutarn v0.26.0 (https://github.com/vinivsl/Xmutarn.git) | Copyright 2019 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/Xmutarn/blob/master/LICENSE) */
+/*! Xmutarn v0.27.0 (https://github.com/vinivsl/Xmutarn.git) | Copyright 2019 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/Xmutarn/blob/master/LICENSE) */
 var Overlay = (function () {
     function Overlay(element) {
         this.element = element;
@@ -183,7 +183,13 @@ var DropdownMenu = (function () {
     return DropdownMenu;
 }());
 document.querySelectorAll("[x-role='dropdown-menu']").forEach(function (element) {
-    new DropdownMenu(element, element.getAttribute("x-origin"));
+    var origin = element.getAttribute("x-origin");
+    if (origin) {
+        new DropdownMenu(element, origin);
+    }
+    else {
+        new DropdownMenu(element);
+    }
 });
 var Input = (function () {
     function Input(element, labelText, removeColorOnFocus) {

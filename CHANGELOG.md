@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Xmutarn v0.27.0 (2019-xx-xx) - Release 10
+
+- Abertura incorreta do menu suspenso pela instanciação a partir do atributo `x-role="dropdown-menu"` foi fixada. Issue: [#2](https://github.com/vinivsl/Xmutarn/issues/2).
+
 ## Xmutarn v0.26.0 (2019-02-13) - Release 09
 
 - Adicionado **Xmutarn Colors**.
