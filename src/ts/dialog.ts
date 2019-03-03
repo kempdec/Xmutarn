@@ -41,3 +41,17 @@ class Dialog {
     this.element.classList.remove(Dialog._dialogOpenClass);
   }
 }
+
+// inicializa uma nova instância de Dialog, a partir do atributo HTML "x-open-dialog-id".
+document.querySelectorAll("[x-open-dialog-id]").forEach(element => {
+  // obtém o valor do atributo do elemento selecionado.
+  const attributeValue: string = element.attributes.getNamedItem("x-open-dialog-id").value;
+
+  const dialog: Dialog = new Dialog(document.getElementById(attributeValue.replace("#", "")));
+
+  element.addEventListener("click", e => {
+    dialog.open();
+
+    e.preventDefault();
+  });
+});

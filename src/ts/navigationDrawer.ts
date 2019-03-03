@@ -49,7 +49,7 @@ document.querySelectorAll("[x-open-nav-drawer-id]").forEach(element => {
   // obtém o valor do atributo do elemento selecionado.
   const attributeValue: string = element.attributes.getNamedItem("x-open-nav-drawer-id").value;
 
-  const navDrawer: NavigationDrawer = new NavigationDrawer(document.querySelector("#" + attributeValue.replace("#", "")));
+  const navDrawer: NavigationDrawer = new NavigationDrawer(document.getElementById(attributeValue.replace("#", "")));
 
   element.addEventListener("click", e => {
     navDrawer.open();
