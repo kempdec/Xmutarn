@@ -4,6 +4,7 @@
 
 - Adicionado classe Typescipt responsável por gerenciar uma barra de ferramentas.
 - Adicionado ícones para toasts. Issue: [#9](https://github.com/vinivsl/Xmutarn/issues/9).
+- Adicionado variantes `color-featured`, `color-accent` e `outlined-color` para a classe `button`.
 - Adicionado variante `padded` para a classe `list`.
 - Adicionado a exibição e omissão de overlay para toasts, quando o **timeout** for setado como **0**.
 - Adicionado inicializador HTML de uma nova instância de `Dialog`.
