@@ -26,8 +26,8 @@ $avatar--title-and-subtitle-font-weight: map-get($map: $typography-font-weights,
 // Define a cor do título do avatar.
 $avatar--title-color: var(--theme-main-primary, get-main-theme-color($prop-name: primary)) !default;
 
-// Define a cor do subtítulo do avatar.
-$avatar--subtitle-color: var(--theme-main-secondary, get-main-theme-color($prop-name: secondary)) !default;
+// Define a cor do sumário do avatar.
+$avatar--summary-color: var(--theme-main-secondary, get-main-theme-color($prop-name: secondary)) !default;
 
 // Barra de ferramentas
 

@@ -1979,7 +1979,7 @@ input[type="password"]::-ms-reveal {
   color: var(--theme-main-primary, rgba(0, 0, 0, 0.87));
 }
 
-.avatar--subtitle {
+.avatar--summary {
   color: var(--theme-main-secondary, rgba(0, 0, 0, 0.54));
 }
 

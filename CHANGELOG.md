@@ -12,6 +12,10 @@
 
 ---
 
+- Modificado a nomenclatura da classe `avatar--subtitle` para `avatar--summary`.
+
+---
+
 - Fixado a abertura incorreta do menu suspenso pela instanciação a partir do atributo `x-role="dropdown-menu"`. Issue: [#2](https://github.com/vinivsl/Xmutarn/issues/2).
 - Fixado a abertura e sobreposição dos diálogos. Issue: [#10](https://github.com/vinivsl/Xmutarn/issues/10).
 - Fixado o tamanho dos títulos dos toasts.
