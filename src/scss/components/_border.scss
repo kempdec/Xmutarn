@@ -5,6 +5,6 @@
   border-top: $border-divider-width $border-divider-style var(--theme-main-dividers, get-main-theme-color($prop-name: dividers));
 
   &_padded {
-    margin: $border-divider-padded-margin;
+    margin: $border-divider_padded-margin;
   }
 }

@@ -1,17 +1,18 @@
 .dialog {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: $z-index-dialog;
-  min-width: $dialog-min-width;
-  transform: translate(-50%, 50%);
-  transform-origin: center;
-  transition: .3s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: opacity .75s;
   opacity: 0;
-  will-change: transform, opacity;
+  pointer-events: none;
 
   &_open {
-    transform: translate(-50%, -50%);
     opacity: 1;
+    pointer-events: auto;
   }
 }

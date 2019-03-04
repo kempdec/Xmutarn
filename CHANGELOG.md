@@ -4,6 +4,7 @@
 
 - Adicionado classe Typescipt responsável por gerenciar uma barra de ferramentas.
 - Adicionado ícones para toasts. Issue: [#9](https://github.com/vinivsl/Xmutarn/issues/9).
+- Adicionado variante `padded` para a classe `list`.
 - Adicionado a exibição e omissão de overlay para toasts, quando o **timeout** for setado como **0**.
 - Adicionado inicializador HTML de uma nova instância de `Dialog`.
 - Adicionado o atributo `x-close-dialog` para fechamento do _diálogo_ (`Dialog`) quando o evento de clique for acionado em um elemento filho do elemento do diálogo.
@@ -12,6 +13,7 @@
 ---
 
 - Fixado a abertura incorreta do menu suspenso pela instanciação a partir do atributo `x-role="dropdown-menu"`. Issue: [#2](https://github.com/vinivsl/Xmutarn/issues/2).
+- Fixado a abertura e sobreposição dos diálogos. Issue: [#10](https://github.com/vinivsl/Xmutarn/issues/10).
 - Fixado o tamanho dos títulos dos toasts.
 
 ## Xmutarn v0.26.0 (2019-02-13) - Release 09

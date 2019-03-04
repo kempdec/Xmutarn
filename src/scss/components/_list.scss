@@ -1,13 +1,23 @@
 .list {
   margin: $list-margin;
-  padding: $list-padding;
   list-style-type: none;
+
+  &:not(.list_padded) {
+    padding: $list-padding;
+  }
+
+  &_padded {
+    padding: $list_padded-padding;
+
+    .list--item {
+      border-radius: $list_padded--item-border-radius;
+    }
+  }
 
   &--item {
     display: flex;
     cursor: pointer;
     padding: $list--item-padding;
-    height: $list--item-height;
     color: $list--item-color;
     transition: background-color .4s;
     align-items: center;

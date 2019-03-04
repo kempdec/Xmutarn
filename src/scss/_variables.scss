@@ -74,12 +74,13 @@ $toolbar--nav--item--icon-margin-left: px-to-em($list: -2.58px) !default;
 
 // Borda
 
-// Define a margem da borda divisora acolchada.
-$border-divider-padded-margin: px-to-rem($list: 0 16px) !default;
 // Define a largura da borda divisora.
 $border-divider-width: 1px !default;
 // Define o estilo da borda divisora.
 $border-divider-style: solid !default;
+
+// Define a margem da borda divisora acolchada.
+$border-divider_padded-margin: px-to-rem($list: 0 16px) !default;
 
 // Botão
 
@@ -141,11 +142,6 @@ $card--action-padding: px-to-rem($list: 8px) !default;
 
 // Define o preenchimento dos contêineres.
 $container-padding: px-to-rem($list: 0 15px) !default;
-
-// Diálogo
-
-// Define a largura mínima do diálogo.
-$dialog-min-width: px-to-rem($list: 300px);
 
 // Dropdown
 
@@ -227,12 +223,16 @@ $list-margin: 0 !default;
 // Define o preenchimento da lista.
 $list-padding: px-to-rem($list: 8px 0) !default;
 
+// Define o preenchimento da lista acolchada.
+$list_padded-padding: px-to-rem($list: 8px) !default;
+
+// Define o raio de borda do item da lista acolchada.
+$list_padded--item-border-radius: px-to-rem($list: 5px) !default;
+
 // Define a cor dos itens da lista.
 $list--item-color: var(--theme-main-primary, get-main-theme-color($prop-name: primary)) !default;
-// Define a altura dos itens da lista.
-$list--item-height: px-to-em($list: 48px) !default;
 // Define o preenchimento dos itens da lista.
-$list--item-padding: px-to-em($list: 0 16px) !default;
+$list--item-padding: px-to-em($list: 16px) !default;
 
 // Define a margem direita de ícones da lista.
 $list--icon-margin-right: px-to-em($list: 9.15px) !default;
@@ -274,7 +274,7 @@ $toast-padding: 0 !default;
 // Define a transformação do toast.
 $toast-transform: translate(0, 250%) !default;
 // Define a transição do toast.
-$toast-transition: transform .25s 0ms cubic-bezier(0.4, 0, 1, 1);
+$toast-transition: transform .25s 0ms cubic-bezier(0.4, 0, 1, 1) !default;
 
 // Define a transformação do toast com variante "active".
 $toast_active-transform: translate(0) !default;
@@ -282,7 +282,7 @@ $toast_active-transform: translate(0) !default;
 $toast_active-transition: transform .25s 0ms cubic-bezier(0, 0, 0.2, 1) !default;
 
 // Define a margem do toast com media query.
-$toast-media-margin: px-to-rem($list: 0 0 0 20px);
+$toast-media-margin: px-to-rem($list: 0 0 0 20px) !default;
 // Define a margem inferior do toast com media query.
 $toast-media-margin-bottom: px-to-rem($list: 20px) !default;
 // Define a largura mínima do toast com media query.
@@ -293,7 +293,7 @@ $toast-media-max-width: px-to-rem($list: 500px) !default;
 $toast-media-border-radius: px-to-rem($list: 3px) !default;
 
 // Define a margem do ícone do toast.
-$toast--icon-margin: px-to-rem($list: 0 0 0 16px);
+$toast--icon-margin: px-to-rem($list: 0 0 0 16px) !default;
 
 // Define a margem do conteúdo do toast.
 $toast--content-margin: 0 !default;

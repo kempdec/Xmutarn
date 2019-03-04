@@ -1533,15 +1533,25 @@ input[type="password"]::-ms-reveal {
 
 .list {
   margin: 0;
-  padding: 0.5rem 0;
   list-style-type: none;
+}
+
+.list:not(.list_padded) {
+  padding: 0.5rem 0;
+}
+
+.list_padded {
+  padding: 0.5rem;
+}
+
+.list_padded .list--item {
+  border-radius: 0.3125rem;
 }
 
 .list--item {
   display: flex;
   cursor: pointer;
-  padding: 0 1em;
-  height: 3em;
+  padding: 1em;
   color: var(--theme-main-primary, rgba(0, 0, 0, 0.87));
   transition: background-color .4s;
   align-items: center;
@@ -1778,23 +1788,21 @@ input[type="password"]::-ms-reveal {
 
 .dialog {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 70;
-  min-width: 18.75rem;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  transition: .3s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: opacity .75s;
   opacity: 0;
-  will-change: transform, opacity;
+  pointer-events: none;
 }
 
 .dialog_open {
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   opacity: 1;
+  pointer-events: auto;
 }
 
 .navigation-drawer {
