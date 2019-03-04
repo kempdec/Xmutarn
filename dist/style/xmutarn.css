@@ -1296,7 +1296,6 @@ input[type="password"]::-ms-reveal {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  border: none;
   border-radius: 0.25rem;
   justify-content: center;
   align-items: center;
@@ -1306,17 +1305,28 @@ input[type="password"]::-ms-reveal {
           user-select: none;
 }
 
+.button:not(.button_outlined):not(.button_outlined-color) {
+  border: none;
+}
+
 .button:not([disabled]):not(.button_disabled) {
   cursor: pointer;
 }
 
-.button:not([disabled]):not(.button_disabled):not(.button_flat):not(.button_outlined) {
+.button:not([disabled]):not(.button_disabled):not(.button_flat):not(.button_outlined):not(.button_outlined-color) {
   color: white;
+}
+
+.button:not([disabled]):not(.button_disabled):not(.button_flat):not(.button_outlined):not(.button_outlined-color)::before {
+  background-color: white;
+}
+
+.button:not([disabled]):not(.button_disabled):not(.button_flat):not(.button_outlined):not(.button_outlined-color):not(.button_color-accent), .button:not([disabled]):not(.button_disabled):not(.button_flat):not(.button_outlined):not(.button_outlined-color).button_color-featured {
   background-color: var(--theme-color-500, #9C27B0);
 }
 
-.button:not([disabled]):not(.button_disabled):not(.button_flat):not(.button_outlined)::before {
-  background-color: white;
+.button:not([disabled]):not(.button_disabled):not(.button_flat):not(.button_outlined):not(.button_outlined-color).button_color-accent {
+  background-color: var(--theme-color-A400, #00B0FF);
 }
 
 .button:not([disabled]):not(.button_disabled):hover::before {
@@ -1358,17 +1368,40 @@ input[type="password"]::-ms-reveal {
   background-color: var(--theme-main-disabled, rgba(0, 0, 0, 0.38));
 }
 
-.button_flat:not([disabled]):not(.button_disabled), .button_outlined:not([disabled]):not(.button_disabled) {
-  color: var(--theme-color-500, #9C27B0);
+.button_flat:not([disabled]):not(.button_disabled), .button_outlined:not([disabled]):not(.button_disabled), .button_outlined-color:not([disabled]):not(.button_disabled) {
   background-color: transparent;
 }
 
-.button_flat:not([disabled]):not(.button_disabled)::before, .button_outlined:not([disabled]):not(.button_disabled)::before {
+.button_flat:not([disabled]):not(.button_disabled):not(.button_color-accent), .button_flat:not([disabled]):not(.button_disabled).button_color-featured, .button_outlined:not([disabled]):not(.button_disabled):not(.button_color-accent), .button_outlined:not([disabled]):not(.button_disabled).button_color-featured, .button_outlined-color:not([disabled]):not(.button_disabled):not(.button_color-accent), .button_outlined-color:not([disabled]):not(.button_disabled).button_color-featured {
+  color: var(--theme-color-500, #9C27B0);
+}
+
+.button_flat:not([disabled]):not(.button_disabled):not(.button_color-accent)::before, .button_flat:not([disabled]):not(.button_disabled).button_color-featured::before, .button_outlined:not([disabled]):not(.button_disabled):not(.button_color-accent)::before, .button_outlined:not([disabled]):not(.button_disabled).button_color-featured::before, .button_outlined-color:not([disabled]):not(.button_disabled):not(.button_color-accent)::before, .button_outlined-color:not([disabled]):not(.button_disabled).button_color-featured::before {
   background-color: var(--theme-color-500, #9C27B0);
 }
 
-.button_outlined {
-  border: 1px solid rgba(0, 0, 0, 0.12);
+.button_flat:not([disabled]):not(.button_disabled).button_color-accent, .button_outlined:not([disabled]):not(.button_disabled).button_color-accent, .button_outlined-color:not([disabled]):not(.button_disabled).button_color-accent {
+  color: var(--theme-color-A400, #00B0FF);
+}
+
+.button_flat:not([disabled]):not(.button_disabled).button_color-accent::before, .button_outlined:not([disabled]):not(.button_disabled).button_color-accent::before, .button_outlined-color:not([disabled]):not(.button_disabled).button_color-accent::before {
+  background-color: var(--theme-color-A400, #00B0FF);
+}
+
+.button_outlined, .button_outlined-color {
+  border: 1px solid;
+}
+
+.button_outlined, .button_outlined-color:not(.button_color-featured):not(.button_color-accent) {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.button_outlined-color.button_color-featured {
+  border-color: var(--theme-color-500, #9C27B0);
+}
+
+.button_outlined-color.button_color-accent {
+  border-color: var(--theme-color-A400, #00B0FF);
 }
 
 .button_size-xsmall {

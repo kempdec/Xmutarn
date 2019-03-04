@@ -8,21 +8,32 @@
   font-weight: $button-font-weight;
   text-transform: $button-text-transform;
   letter-spacing: $button-letter-spacing;
-  border: $button-border;
   border-radius: $button-border-radius;
   justify-content: center;
   align-items: center;
   user-select: none;
 
+  &:not(.button_outlined):not(.button_outlined-color) {
+    border: $button-border;
+  }
+
   &:not([disabled]):not(.button_disabled) {
     cursor: pointer;
 
-    &:not(.button_flat):not(.button_outlined) {
+    &:not(.button_flat):not(.button_outlined):not(.button_outlined-color) {
       color: white;
-      background-color: var(--theme-color-500, get-featured-theme-color());
 
       &::before {
         background-color: white;
+      }
+
+      &:not(.button_color-accent),
+      &.button_color-featured {
+        background-color: var(--theme-color-500, get-featured-theme-color());
+      }
+
+      &.button_color-accent {
+        background-color: var(--theme-color-A400, get-accent-theme-color());
       }
     }
 
@@ -68,19 +79,48 @@
   }
 
   &_flat,
-  &_outlined {
+  &_outlined,
+  &_outlined-color {
     &:not([disabled]):not(.button_disabled) {
-      color: var(--theme-color-500, get-featured-theme-color());
       background-color: transparent;
 
-      &::before {
-        background-color: var(--theme-color-500, get-featured-theme-color());
+      &:not(.button_color-accent),
+      &.button_color-featured {
+        color: var(--theme-color-500, get-featured-theme-color());
+
+        &::before {
+          background-color: var(--theme-color-500, get-featured-theme-color());
+        }
+      }
+
+      &.button_color-accent {
+        color: var(--theme-color-A400, get-accent-theme-color());
+
+        &::before {
+          background-color: var(--theme-color-A400, get-accent-theme-color());
+        }
       }
     }
   }
 
-  &_outlined {
-    border: 1px solid #{get-main-theme-color($prop-name: dividers)};
+  &_outlined,
+  &_outlined-color {
+    border: 1px solid;
+  }
+
+  &_outlined,
+  &_outlined-color:not(.button_color-featured):not(.button_color-accent) {
+    border-color: #{get-main-theme-color($prop-name: dividers)};
+  }
+
+  &_outlined-color {
+    &.button_color-featured {
+      border-color: var(--theme-color-500, get-featured-theme-color());
+    }
+
+    &.button_color-accent {
+      border-color: var(--theme-color-A400, get-accent-theme-color());
+    }
   }
 
   @each $size, $length in $button-font-sizes {
