@@ -21,7 +21,7 @@
   }
 
   &--title,
-  &--subtitle {
+  &--summary {
     margin: 0;
     font-weight: $avatar--title-and-subtitle-font-weight;
     @extend .typography-body-2;

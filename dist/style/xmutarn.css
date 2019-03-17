@@ -1237,7 +1237,7 @@ input[type="password"]::-ms-reveal {
   line-height: 1.5;
 }
 
-.typography-body-2, .avatar--title, .avatar--subtitle {
+.typography-body-2, .avatar--title, .avatar--summary {
   font-size: 0.875rem;
   letter-spacing: 0.01786em;
   line-height: 1.5rem;
@@ -1264,7 +1264,7 @@ input[type="password"]::-ms-reveal {
 .typography-headline-4,
 .typography-headline-5,
 .typography-subtitle-1,
-.typography-body-1, .typography-body-2, .avatar--title, .avatar--subtitle,
+.typography-body-1, .typography-body-2, .avatar--title, .avatar--summary,
 .typography-caption-1 {
   font-weight: 400;
 }
@@ -2003,7 +2003,7 @@ input[type="password"]::-ms-reveal {
   margin-left: 0.75rem;
 }
 
-.avatar--title, .avatar--subtitle {
+.avatar--title, .avatar--summary {
   margin: 0;
   font-weight: 500;
 }
