@@ -6,4 +6,4 @@ Um framework front-end criado com a finalidade de facilitar e aumentar a produti
 
 ## Direitos autorais
 
-2018 © Vinícius Lima.
+2018-2019 © Vinícius Lima.

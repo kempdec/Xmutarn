@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Xmutarn v0.27.1 (2019-03-17) - Release 11
+
+- Fixado a nomenclatura da classe `avatar--subtitle` para `avatar--summary`.
+
 ## Xmutarn v0.27.0 (2019-03-04) - Release 10
 
 - Adicionado classe Typescipt responsável por gerenciar uma barra de ferramentas.
