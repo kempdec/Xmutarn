@@ -27,11 +27,11 @@
   }
 
   &_color-featured {
-    background-color: var(--theme-color700, get-featured-theme-color($hue: 700));
+    background-color: var(--theme-color-700, get-featured-theme-color($hue: 700));
   }
 
   &_color-accent {
-    background-color: var(--theme-colorA400, get-accent-theme-color($hue: 400));
+    background-color: var(--theme-color-A400, get-accent-theme-color($hue: 400));
   }
 
   &_color-success {
