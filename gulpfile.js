@@ -19,7 +19,7 @@ const banner = `/*! Xmutarn v${pkg.version} (${pkg.repository.url}) | Copyright 
 const paths = {
 
   /** Caminho de distribuição dos arquivos CSS. */
-  cssDistPath: "dist/style",
+  cssDistPath: "dist/css",
 
   /** Caminho de distribuição dos arquivos JS. */
   jsDist: "dist/js"
