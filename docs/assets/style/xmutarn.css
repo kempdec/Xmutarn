@@ -1919,11 +1919,11 @@ input[type="password"]::-ms-reveal {
 }
 
 .toast_color-featured {
-  background-color: var(--theme-color700, #7B1FA2);
+  background-color: var(--theme-color-700, #7B1FA2);
 }
 
 .toast_color-accent {
-  background-color: var(--theme-colorA400, #00B0FF);
+  background-color: var(--theme-color-A400, #00B0FF);
 }
 
 .toast_color-success {
