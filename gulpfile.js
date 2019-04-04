@@ -57,18 +57,19 @@ const copyToDocs = () =>
 
 exports.sass = series(sassTask, copyToDocs);
 
-const uglify = require("gulp-uglify");
-
 const ts = () => {
 
   const browserify = require("browserify");
   const buffer = require("vinyl-buffer");
   const source = require("vinyl-source-stream");
   const tsify = require("tsify");
+  const uglify = require("gulp-uglify");
 
-  return browserify("src/ts/index.ts", {
+  return browserify({
+    standalone: "X",
     basedir: ".",
-    debug: true
+    debug: true,
+    entries: ["src/ts/index.ts"]
   })
     .plugin(tsify)
     .bundle().on("error", e => console.error(e))
@@ -86,27 +87,4 @@ const ts = () => {
 
 exports.ts = series(ts, copyToDocs);
 
-const ignore = require("gulp-ignore");
-const typescript = require("gulp-typescript");
-
-const tsProject = typescript.createProject("tsconfig.json");
-
-/** Transpila e minifica os arquivos TypeScript para JavaScript. */
-const tss = () =>
-  tsProject.src()
-    .pipe(sourcemaps.init())
-    .pipe(tsProject())
-    .pipe(header(banner))
-    .pipe(sourcemaps.write("."))
-    .pipe(dest(tsProject.options.outDir))
-    .pipe(ignore.exclude("*.map"))
-    .pipe(sourcemaps.init())
-    .pipe(uglify().on("error", e => console.log(e)))
-    .pipe(rename((path) => { path.basename += ".min"; }))
-    .pipe(header(banner))
-    .pipe(sourcemaps.write("."))
-    .pipe(dest(tsProject.options.outDir));
-
-exports.tss = series(tss, copyToDocs);
-
-exports.default = series(parallel(ts, sassTask, tss), copyToDocs);
+exports.default = series(parallel(ts, sassTask), copyToDocs);
