@@ -1,5 +1,5 @@
 import Overlay from "./Overlay";
 
-export default {
+export {
     Overlay
 };

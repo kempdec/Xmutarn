@@ -14,6 +14,8 @@ export default class Overlay {
         if (!element) {
             throw new Error("O elemento do overlay deve ser fornecido.");
         }
+
+        this._element = element;
     }
 
     /** Obtém o elemento do overlay. */
