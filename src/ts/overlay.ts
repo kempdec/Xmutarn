@@ -1,63 +1,63 @@
 /** Responsável pelo gerenciamento de um overlay. */
 export default class Overlay {
 
-    /** Elemento do overlay. */
-    private _element: HTMLElement;
+  /** Elemento do overlay. */
+  private _element: HTMLElement;
 
-    /**
-     * Inicializa uma nova instância de Overlay.
-     * 
-     * @param element O elemento do overlay.
-     */
-    constructor(element: HTMLElement) {
+  /**
+   * Inicializa uma nova instância de Overlay.
+   *
+   * @param element O elemento do overlay.
+   */
+  constructor(element: HTMLElement) {
 
-        if (!element) {
-            throw new Error("O elemento do overlay deve ser fornecido.");
-        }
-
-        this._element = element;
+    if (!element) {
+      throw new Error("O elemento do overlay deve ser fornecido.");
     }
 
-    /** Obtém o elemento do overlay. */
-    public get element(): HTMLElement {
+    this._element = element;
+  }
 
-        return this._element;
-    }
+  /** Obtém o elemento do overlay. */
+  public get element(): HTMLElement {
 
-    /** Classe CSS de ativação do overlay. */
-    private static readonly _overlayActiveClass: string = "overlay_active";
+    return this._element;
+  }
 
-    /**
-     * Exibi o overlay.
-     * 
-     * @param delay O delay em milissegundos até a exibição do overlay.
-     */
-    public show(delay: number = 300): HTMLElement {
+  /** Classe CSS de ativação do overlay. */
+  private static readonly _overlayActiveClass: string = "overlay_active";
 
-        setTimeout(() => this.element.classList.add(Overlay._overlayActiveClass), delay);
+  /**
+   * Exibi o overlay.
+   *
+   * @param delay O delay em milissegundos até a exibição do overlay.
+   */
+  public show(delay: number = 300): HTMLElement {
 
-        return this.element;
-    }
+    setTimeout(() => this.element.classList.add(Overlay._overlayActiveClass), delay);
 
-    /**
-     * Omite o overlay.
-     *
-     * @param delay O delay em milissegundos até a omissão do overlay.
-     */
-    public hide(delay: number = 300): HTMLElement {
+    return this.element;
+  }
 
-        setTimeout(() => this.element.classList.remove(Overlay._overlayActiveClass), delay);
+  /**
+   * Omite o overlay.
+   *
+   * @param delay O delay em milissegundos até a omissão do overlay.
+   */
+  public hide(delay: number = 300): HTMLElement {
 
-        return this.element;
-    }
+    setTimeout(() => this.element.classList.remove(Overlay._overlayActiveClass), delay);
 
-    /** Cria um overlay. */
-    public static create(): Overlay {
+    return this.element;
+  }
 
-        const element = document.createElement("div");
+  /** Cria um overlay. */
+  public static create(): Overlay {
 
-        document.querySelector("body").appendChild(element);
+    const element = document.createElement("div");
 
-        return new Overlay(element);
-    }
+    document.querySelector("body").appendChild(element);
+
+    return new Overlay(element);
+  }
 }
