@@ -1,4 +1,5 @@
 import Component from "./Component";
+import ToolbarOptions from "./ToolbarOptions";
 
 /** Responsável pelo gerenciamento de uma barra de ferramentas. */
 export default class Toolbar extends Component {
@@ -7,10 +8,16 @@ export default class Toolbar extends Component {
    * Inicializa uma nova instância de Toolbar.
    *
    * @param element O elemento da barra de ferramentas.
+   * @param options As opções da barra de ferramentas.
    */
-  constructor(element: HTMLElement) {
+  constructor(element: HTMLElement, options: ToolbarOptions = { hideInScroll: true }) {
 
     super(element);
+
+    if (options.hideInScroll) {
+
+      this.hideInScroll();
+    }
   }
 
   /** Classe CSS de omissão da barra de ferramentas. */
