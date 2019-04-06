@@ -16,6 +16,8 @@ export default class Overlay {
     }
 
     this._element = element;
+
+    this._element.classList.add("overlay");
   }
 
   /** Obtém o elemento do overlay. */
@@ -32,11 +34,9 @@ export default class Overlay {
    *
    * @param delay O delay em milissegundos até a exibição do overlay.
    */
-  public show(delay: number = 300): HTMLElement {
+  public show(delay: number = 300) {
 
     setTimeout(() => this.element.classList.add(Overlay._overlayActiveClass), delay);
-
-    return this.element;
   }
 
   /**
@@ -44,11 +44,9 @@ export default class Overlay {
    *
    * @param delay O delay em milissegundos até a omissão do overlay.
    */
-  public hide(delay: number = 300): HTMLElement {
+  public hide(delay: number = 300) {
 
     setTimeout(() => this.element.classList.remove(Overlay._overlayActiveClass), delay);
-
-    return this.element;
   }
 
   /** Cria um overlay. */
