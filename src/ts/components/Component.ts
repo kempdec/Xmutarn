@@ -1,8 +1,8 @@
 /** Responsável pelo gerenciamento de um componente. */
 export default abstract class Component {
 
-  /** Elemento do componente. */
-  private _element: HTMLElement;
+  /** Obtém o elemento do componente. */
+  public readonly element: HTMLElement;
 
   /**
    * Inicializa uma nova instância de Component.
@@ -16,12 +16,6 @@ export default abstract class Component {
       throw new Error("O elemento do componente deve ser fornecido.");
     }
 
-    this._element = element;
-  }
-
-  /** Obtém o elemento do componente. */
-  public get element(): HTMLElement {
-
-    return this._element;
+    this.element = element;
   }
 }
