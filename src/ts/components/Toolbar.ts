@@ -1,5 +1,7 @@
-import Component from "./Component";
-import ToolbarOptions from "./ToolbarOptions";
+import {
+  Component,
+  ToolbarOptions
+} from ".";
 
 /** Responsável pelo gerenciamento de uma barra de ferramentas. */
 export default class Toolbar extends Component {

@@ -1,5 +1,7 @@
-import Overlay from "./Overlay";
-import Component from "./Component";
+import {
+  Component,
+  Overlay
+} from ".";
 
 /** Responsável pelo gerenciamento de um diálogo. */
 export default class Dialog extends Component {
