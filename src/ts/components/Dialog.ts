@@ -1,10 +1,8 @@
 import Overlay from "./Overlay";
+import Component from "./Component";
 
 /** Responsável pelo gerenciamento de um diálogo. */
-export default class Dialog {
-
-  /** Elemento do diálogo. */
-  private _element: HTMLElement;
+export default class Dialog extends Component {
 
   /**
    * Inicializa uma nova instância de Dialog.
@@ -13,20 +11,9 @@ export default class Dialog {
    */
   constructor(element: HTMLElement) {
 
-    if (!element) {
+    super(element);
 
-      throw new Error("O elemento do diálogo deve ser fornecido.");
-    }
-
-    this._element = element;
-
-    this._element.classList.add("dialog");
-  }
-
-  /** Obtém o elemento do diálogo. */
-  public get element(): HTMLElement {
-
-    return this._element;
+    this.element.classList.add("dialog");
   }
 
   /** Overlay. */

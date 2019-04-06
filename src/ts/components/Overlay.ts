@@ -1,8 +1,7 @@
-/** Responsável pelo gerenciamento de um overlay. */
-export default class Overlay {
+import Component from "./Component";
 
-  /** Elemento do overlay. */
-  private _element: HTMLElement;
+/** Responsável pelo gerenciamento de um overlay. */
+export default class Overlay extends Component {
 
   /**
    * Inicializa uma nova instância de Overlay.
@@ -11,19 +10,9 @@ export default class Overlay {
    */
   constructor(element: HTMLElement) {
 
-    if (!element) {
-      throw new Error("O elemento do overlay deve ser fornecido.");
-    }
+    super(element);
 
-    this._element = element;
-
-    this._element.classList.add("overlay");
-  }
-
-  /** Obtém o elemento do overlay. */
-  public get element(): HTMLElement {
-
-    return this._element;
+    this.element.classList.add("overlay");
   }
 
   /** Classe CSS de ativação do overlay. */

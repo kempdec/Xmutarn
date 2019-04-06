@@ -1,6 +1,8 @@
-import Dialog from "./Dialog";
-import Overlay from "./Overlay";
-import Toolbar from "./Toolbar";
+import {
+  Dialog,
+  Overlay,
+  Toolbar
+} from "./components";
 
 export {
   Dialog,
