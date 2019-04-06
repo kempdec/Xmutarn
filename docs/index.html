@@ -33,7 +33,7 @@
   <header class="toolbar" x-role="toolbar">
     <div class="container-fluid">
       <nav class="toolbar--nav">
-        <button class="toolbar--nav--item cursor-pointer" x-open-nav-drawer-id="doc-drawer">
+        <button class="toolbar--nav--item cursor-pointer" x-listener-open-nav-drawer="doc-drawer">
           <span class="fas fa-bars fa-lg"></span>
         </button>
         <a class="toolbar--nav--item margin-right-small padding-xsmall" href="">
@@ -136,7 +136,7 @@
     </div>
   </footer>
 
-  <aside id="doc-drawer" class="navigation-drawer">
+  <aside id="doc-drawer" class="navigation-drawer" x-nav-drawer>
     <nav class="list list_padded typography-body-2 typography-weight-medium">
       <a class="list--item" href="docs/getting-started.html">Começando</a>
       <a class="list--item" href="docs/introduction.html">Introdução</a>
