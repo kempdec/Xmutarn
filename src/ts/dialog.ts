@@ -1,66 +1,128 @@
-/// <reference path="overlay.ts" />
+import Overlay from "./Overlay";
 
-/**
- * Responsável por gerenciar um diálogo.
- */
-class Dialog {
+/** Responsável pelo gerenciamento de um diálogo. */
+export default class Dialog {
+
+  /** Elemento do diálogo. */
+  private _element: HTMLElement;
+
   /**
-   * Incializa uma nova instância de Dialog.
+   * Inicializa uma nova instância de Dialog.
    *
-   * @param {HTMLElement} element O elemento do diálogo.
+   * @param element O elemento do diálogo.
    */
-  constructor(public element: HTMLElement) {
+  constructor(element: HTMLElement) {
+
     if (!element) {
-      throw new Error("O primeiro argumento deve ser fornecido.");
+
+      throw new Error("O elemento do diálogo deve ser fornecido.");
     }
 
-    element.classList.add("dialog");
+    this._element = element;
 
-    // fecha o diálogo quando o evento de clique é acionado no elemento com o atributo "x-close-dialog".
-    element.querySelectorAll("[x-close-dialog]").forEach(el => {
-      el.addEventListener("click", e => {
-        this.close();
-
-        e.preventDefault();
-      });
-    });
+    this._element.classList.add("dialog");
   }
 
-  /** A classe CSS de abertura do diálogo. */
-  private static readonly _dialogOpenClass: string = "dialog_open";
+  /** Obtém o elemento do diálogo. */
+  public get element(): HTMLElement {
 
-  /** O overlay. */
-  private _overlay: Overlay = Overlay.createOverlay();
+    return this._element;
+  }
+
+  /** Overlay. */
+  private _overlay: Overlay = Overlay.create();
+
+  /** Classe CSS de abertura do diálogo. */
+  private static readonly _dialogOpenClass: string = "dialog_open";
 
   /**
    * Abre o diálogo.
+   *
+   * @param useOverlay Um sinalizador indicando se deve ser utilizado um overlay na abertura do diálogo. O padrão é
+   * "true".
    */
-  public open(): void {
-    this._overlay.show();
+  public open(useOverlay: boolean = true): void {
+
+    if (useOverlay) {
+
+      this._overlay.show();
+    }
 
     this.element.classList.add(Dialog._dialogOpenClass);
   }
 
   /**
-   * Fecha o diálogo.
+   * Adiciona um elemento ouvinte de abertura do diálogo para eventos do tipo especificado.
+   *
+   * @param element O elemento ouvinte de abertura do diálogo.
+   * @param type O tipo de evento. O padrão é "click".
    */
+  public addOpenListener(element: HTMLElement, type: string = "click"): void {
+
+    if (!element) {
+
+      throw new Error("O elemento ouviente de abertura do diálogo deve ser fornecido.");
+    }
+
+    element.addEventListener(type, e => {
+
+      this.open();
+
+      e.preventDefault();
+    });
+  }
+
+  /** Fecha o diálogo. */
   public close(): void {
+
     this._overlay.hide();
 
     this.element.classList.remove(Dialog._dialogOpenClass);
   }
+
+  /**
+   * Adiciona um elemento ouvinte de fechamento do diálogo para eventos do tipo especificado.
+   *
+   * @param element O elemento ouvinte de fechamento do diálogo.
+   * @param type O tipo de evento. O padrão é "click".
+   */
+  public addCloseListener(element: HTMLElement, type: string = "click"): void {
+
+    if (!element) {
+
+      throw new Error("O elemento ouviente de fechamento do diálogo deve ser fornecido.");
+    }
+
+    element.addEventListener(type, e => {
+
+      this.close();
+
+      e.preventDefault();
+    });
+  }
+
+  /**
+   * Inicializa uma nova instância de Dialog, a partir do nome do atributo HTML especificado. Os elementos de diálogo
+   * devem ter um identificador para terem suas instâncias inicializadas.
+   *
+   * @param attributeName O nome do atributo HTML.
+   */
+  public static initFromHtmlAttribute(attributeName: string): void {
+
+    document.querySelectorAll(`[${attributeName}]`)
+      .forEach((element: HTMLElement) => {
+
+        if (element.hasAttribute("id")) {
+
+          const dialog = new Dialog(element);
+          const dialogId = element.getAttribute("id");
+
+          document.querySelectorAll(`[x-listener-open-dialog="${dialogId}"]`)
+            .forEach((element: HTMLElement) => dialog.addOpenListener(element));
+
+          dialog.element.querySelectorAll(`[x-listener-close-dialog]`)
+            .forEach((element: HTMLElement) => dialog.addCloseListener(element));
+        }
+      });
+  }
 }
-
-// inicializa uma nova instância de Dialog, a partir do atributo HTML "x-open-dialog-id".
-document.querySelectorAll("[x-open-dialog-id]").forEach(element => {
-  // obtém o valor do atributo do elemento selecionado.
-  const attributeValue: string = element.attributes.getNamedItem("x-open-dialog-id").value;
-
-  const dialog: Dialog = new Dialog(document.getElementById(attributeValue.replace("#", "")));
-
-  element.addEventListener("click", e => {
-    dialog.open();
-
-    e.preventDefault();
-  });
-});
