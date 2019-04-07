@@ -26,6 +26,7 @@
   "license": "MIT",
   "private": false,
   "main": "dist/js/xmutarn.min.js",
+  "types": "src/ts/index.d.ts",
   "files": [
     "dist",
     "src"
