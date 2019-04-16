@@ -1,35 +1,52 @@
 {
   "name": "xmutarn",
   "version": "0.28.0-beta",
+  "homepage": "https://vinivsl.github.io/xmutarn",
   "description": "Xmutarn é um framework front-end criado com a finalidade de facilitar e aumentar a produtividade na construção de páginas modernas e estilosas.",
-  "keywords": [
-    "css",
-    "sass",
-    "scss",
-    "responsive",
-    "front-end",
-    "framework",
-    "web"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vinivsl/Xmutarn.git"
-  },
   "author": {
     "name": "Vinícius Lima",
     "email": "viniciusvsl@outlook.com",
     "url": "https://github.com/vinivsl"
   },
+  "main": "dist/js/xmutarn.js",
+  "style": "dist/css/xmutarn.css",
+  "sass": "src/scss/xmutarn.scss",
+  "types": "src/ts/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinivsl/Xmutarn.git"
+  },
   "bugs": {
     "url": "https://github.com/vinivsl/Xmutarn/issues"
   },
-  "license": "MIT",
-  "private": false,
-  "main": "dist/js/xmutarn.min.js",
-  "types": "src/ts/index.d.ts",
   "files": [
     "dist",
-    "src"
+    "src",
+    "gulpfile.js",
+    "tsconfig.json",
+    "yarn.lock"
+  ],
+  "scripts": {
+    "test": "bundlesize"
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/css/xmutarn.css",
+      "maxSize": "25 kB"
+    },
+    {
+      "path": "./dist/css/xmutarn.min.css",
+      "maxSize": "23 kB"
+    },
+    {
+      "path": "./dist/js/{xmutarn,xmutarn-md}.js",
+      "maxSize": "29 kB"
+    },
+    {
+      "path": "./dist/js/{xmutarn,xmutarn-md}.min.js",
+      "maxSize": "17.5 kB"
+    }
   ],
   "devDependencies": {
     "browserify": "^16.2.3",
