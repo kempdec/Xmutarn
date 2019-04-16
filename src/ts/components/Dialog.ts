@@ -50,7 +50,7 @@ export default class Dialog extends Component {
 
     if (!element) {
 
-      throw new Error("O elemento ouviente de abertura do diálogo deve ser fornecido.");
+      throw new Error("O elemento ouvinte de abertura do diálogo deve ser fornecido.");
     }
 
     element.addEventListener(type, e => {

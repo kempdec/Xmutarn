@@ -54,9 +54,6 @@ export default class Toolbar extends Component {
   public static initFromHtmlAttribute(attributeName: string): void {
 
     document.querySelectorAll(`[${attributeName}]`)
-      .forEach((element: HTMLElement) => {
-
-        new Toolbar(element);
-      });
+      .forEach((element: HTMLElement) => new Toolbar(element));
   }
 }
