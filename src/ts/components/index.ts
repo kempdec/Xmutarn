@@ -4,7 +4,6 @@ import Input from "./Input";
 import NavigationDrawer from "./NavigationDrawer";
 import Overlay from "./Overlay";
 import Toolbar from "./Toolbar";
-import ToolbarOptions from "./ToolbarOptions";
 
 export {
   Component,
@@ -12,6 +11,5 @@ export {
   Input,
   NavigationDrawer,
   Overlay,
-  Toolbar,
-  ToolbarOptions
+  Toolbar
 };

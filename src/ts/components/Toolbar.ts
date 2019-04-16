@@ -1,7 +1,5 @@
-import {
-  Component,
-  ToolbarOptions
-} from ".";
+import { Component } from ".";
+import { ToolbarOptions } from "./options";
 
 /** Responsável pelo gerenciamento de uma barra de ferramentas. */
 export default class Toolbar extends Component {
@@ -23,10 +21,10 @@ export default class Toolbar extends Component {
   }
 
   /** Classe CSS de omissão da barra de ferramentas. */
-  private static readonly _toolbarHideClass: string = "toolbar_hide";
+  private static readonly toolbarHideClass: string = "toolbar_hide";
 
   /** Omite a barra de ferramentas na rolagem da página. */
-  public hideInScroll(): void {
+  hideInScroll(): void {
 
     let lastScrollTop: number = 0;
 
@@ -36,10 +34,10 @@ export default class Toolbar extends Component {
 
       if (scrollTop > this.element.clientHeight && scrollTop > lastScrollTop) {
 
-        this.element.classList.add(Toolbar._toolbarHideClass);
+        this.element.classList.add(Toolbar.toolbarHideClass);
       } else {
 
-        this.element.classList.remove(Toolbar._toolbarHideClass);
+        this.element.classList.remove(Toolbar.toolbarHideClass);
       }
 
       lastScrollTop = scrollTop;
@@ -51,7 +49,7 @@ export default class Toolbar extends Component {
    *
    * @param attributeName O nome do atributo HTML.
    */
-  public static initFromHtmlAttribute(attributeName: string): void {
+  static initFromHtmlAttribute(attributeName: string): void {
 
     document.querySelectorAll(`[${attributeName}]`)
       .forEach((element: HTMLElement) => new Toolbar(element));

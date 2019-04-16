@@ -19,10 +19,10 @@ export default class NavigationDrawer extends Component {
   }
 
   /** Overlay. */
-  private _overlay: Overlay = Overlay.create();
+  private overlay: Overlay = Overlay.create();
 
   /** Classe CSS de abertura da gaveta de navegação. */
-  private static readonly _openClass: string = "navigation-drawer_open";
+  private static readonly openClass: string = "navigation-drawer_open";
 
   /**
    * Abre a gaveta de navegação.
@@ -30,14 +30,14 @@ export default class NavigationDrawer extends Component {
    * @param useOverlay Um sinalizador indicando se deve ser utilizado um overlay na abertura da gaveta de navegação. O
    * padrão é "true".
    */
-  public open(useOverlay: boolean = true): void {
+  open(useOverlay: boolean = true): void {
 
     if (useOverlay) {
 
-      this._overlay.show();
+      this.overlay.show();
     }
 
-    this.element.classList.add(NavigationDrawer._openClass);
+    this.element.classList.add(NavigationDrawer.openClass);
   }
 
   /**
@@ -46,7 +46,7 @@ export default class NavigationDrawer extends Component {
    * @param element O elemento ouvinte de abertura da gaveta de navegação.
    * @param type O tipo de evento. O padrão é "click".
    */
-  public addOpenListener(element: HTMLElement, type: string = "click"): void {
+  addOpenListener(element: HTMLElement, type: string = "click"): void {
 
     if (!element) {
 
@@ -55,18 +55,18 @@ export default class NavigationDrawer extends Component {
 
     element.addEventListener(type, e => {
 
-      this.open();
-
       e.preventDefault();
+
+      this.open();
     });
   }
 
   /** Fecha a gaveta de navegação. */
-  public close(): void {
+  close(): void {
 
-    this._overlay.hide();
+    this.overlay.hide();
 
-    this.element.classList.remove(NavigationDrawer._openClass);
+    this.element.classList.remove(NavigationDrawer.openClass);
   }
 
   /**
@@ -75,7 +75,7 @@ export default class NavigationDrawer extends Component {
    * @param element O elemento ouvinte de fechamento da gaveta de navegação.
    * @param type O tipo de evento. O padrão é "click".
    */
-  public addCloseListener(element: HTMLElement, type: string = "click"): void {
+  addCloseListener(element: HTMLElement, type: string = "click"): void {
 
     if (!element) {
 
@@ -84,9 +84,9 @@ export default class NavigationDrawer extends Component {
 
     element.addEventListener(type, e => {
 
-      this.close();
-
       e.preventDefault();
+
+      this.close();
     });
   }
 
@@ -96,7 +96,7 @@ export default class NavigationDrawer extends Component {
    *
    * @param attributeName O nome do atributo HTML.
    */
-  public static initFromHtmlAttribute(attributeName: string): void {
+  static initFromHtmlAttribute(attributeName: string): void {
 
     document.querySelectorAll(`[${attributeName}]`)
       .forEach((element: HTMLElement) => {
@@ -106,7 +106,7 @@ export default class NavigationDrawer extends Component {
           const navDrawer = new NavigationDrawer(element);
           const navDrawerId = element.getAttribute("id");
 
-          navDrawer.addCloseListener(navDrawer._overlay.element);
+          navDrawer.addCloseListener(navDrawer.overlay.element);
 
           document.querySelectorAll(`[x-listener-open-nav-drawer="${navDrawerId}"]`)
             .forEach((element: HTMLElement) => navDrawer.addOpenListener(element));

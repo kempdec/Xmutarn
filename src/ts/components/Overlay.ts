@@ -16,16 +16,16 @@ export default class Overlay extends Component {
   }
 
   /** Classe CSS de ativação do overlay. */
-  private static readonly _overlayActiveClass: string = "overlay_active";
+  private static readonly overlayActiveClass: string = "overlay_active";
 
   /**
    * Exibi o overlay.
    *
    * @param delay O delay em milissegundos até a exibição do overlay.
    */
-  public show(delay: number = 300) {
+  show(delay: number = 300) {
 
-    setTimeout(() => this.element.classList.add(Overlay._overlayActiveClass), delay);
+    setTimeout(() => this.element.classList.add(Overlay.overlayActiveClass), delay);
   }
 
   /**
@@ -33,13 +33,13 @@ export default class Overlay extends Component {
    *
    * @param delay O delay em milissegundos até a omissão do overlay.
    */
-  public hide(delay: number = 300) {
+  hide(delay: number = 300) {
 
-    setTimeout(() => this.element.classList.remove(Overlay._overlayActiveClass), delay);
+    setTimeout(() => this.element.classList.remove(Overlay.overlayActiveClass), delay);
   }
 
   /** Cria um overlay. */
-  public static create(): Overlay {
+  static create(): Overlay {
 
     const element = document.createElement("div");
 

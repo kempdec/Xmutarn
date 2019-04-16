@@ -2,8 +2,11 @@ export as namespace X;
 
 export {
   Dialog,
+  InputOptions,
+  Input,
   NavigationDrawer,
   Overlay,
+  ToolbarOptions,
   Toolbar
 };
 
@@ -32,10 +35,10 @@ declare class Dialog extends Component {
     constructor(element: HTMLElement);
 
     /** Overlay. */
-    private _overlay;
+    private overlay;
 
     /** Classe CSS de abertura do diálogo. */
-    private static readonly _dialogOpenClass;
+    private static readonly dialogOpenClass;
 
     /**
      * Abre o diálogo.
@@ -73,6 +76,71 @@ declare class Dialog extends Component {
     static initFromHtmlAttribute(attributeName: string): void;
 }
 
+/** Fornece abstração para as opções de um input. */
+declare interface InputOptions {
+  /** Rótulo do input. */
+  label?: string;
+  /** Sinalizador indicando se a cor adicionada ao elemento do input deve ser removida ao acionar o evento "focus". */
+  removeColorOnFocus?: boolean;
+}
+
+/** Responsável pelo gerenciamento de um input. */
+declare class Input extends Component {
+
+  /** O elemento do input. */
+  readonly input: HTMLInputElement;
+
+  /** O elemento do rótulo do input. */
+  readonly label: HTMLLabelElement;
+
+  /**
+   * Inicializa uma nova instância de Input.
+   *
+   * @param element O elemento responsável pelo o input.
+   * @param options As opções do input.
+   */
+  constructor(element: HTMLElement, options?: InputOptions);
+
+  /** A classe CSS de ativação do rótulo do input. */
+  private static readonly labelActiveClass;
+
+  /** Ativa o elemento do rótulo do input. */
+  private activeLabel;
+
+  /** Desativa o elemento do rótulo do input. */
+  private disableLabel;
+
+  /**
+   * Adiciona um elemento ouvinte de alternância do rótulo do input para eventos do tipo especificado.
+   *
+   * @param element O elemento de alternância do rótulo do input.
+   * @param type O tipo de evento. O padrão é "blur".
+   */
+  private addToggleLabelListener;
+
+  /**
+   * Adiciona um elemento ouvinte de remoção da cor do input para eventos do tipo especificado.
+   *
+   * @param element O elemento ouvinte de remoção da cor do input.
+   * @param type O tipo de evento. O padrão é "focus".
+   */
+  addRemoveColorListener(element: HTMLInputElement, type?: string): void;
+
+  /**
+   * Define o rótulo do input.
+   *
+   * @param text O texto do rótulo.
+   */
+  setLabel(text: string): void;
+
+  /**
+   * Inicializa uma nova instãncia de Input, a partir do nome do atributo HTML especificado.
+   *
+   * @param attributeName O nome do atributo HTML.
+   */
+  static initFromHtmlAttribute(attributeName: string, labelAttributeName: string): void;
+}
+
 /** Responsável pelo gerenciamento de uma gaveta de navegação. */
 declare class NavigationDrawer extends Component {
 
@@ -84,10 +152,10 @@ declare class NavigationDrawer extends Component {
     constructor(element: HTMLElement);
 
     /** Overlay. */
-    private _overlay;
+    private overlay;
 
     /** Classe CSS de abertura da gaveta de navegação. */
-    private static readonly _openClass;
+    private static readonly openClass;
 
     /**
      * Abre a gaveta de navegação.
@@ -136,7 +204,7 @@ declare class Overlay extends Component {
   constructor(element: HTMLElement);
 
   /** Classe CSS de ativação do overlay. */
-  private static readonly _overlayActiveClass;
+  private static readonly overlayActiveClass;
 
   /**
    * Exibi o overlay.
@@ -156,6 +224,13 @@ declare class Overlay extends Component {
   static create(): Overlay;
 }
 
+/** Fornece abstração para as opções da barra de ferramentas. */
+declare interface ToolbarOptions {
+
+  /** Sinalizador indicando se a barra de ferramentas deve ser omitida na rolagem da página. */
+  hideInScroll?: boolean;
+}
+
 /** Responsável pelo gerenciamento de uma barra de ferramentas. */
 declare class Toolbar extends Component {
 
@@ -168,7 +243,7 @@ declare class Toolbar extends Component {
   constructor(element: HTMLElement, options?: ToolbarOptions);
 
   /** Classe CSS de omissão da barra de ferramentas. */
-  private static readonly _toolbarHideClass;
+  private static readonly toolbarHideClass;
 
   /** Omite a barra de ferramentas na rolagem da página. */
   hideInScroll(): void;
@@ -179,11 +254,4 @@ declare class Toolbar extends Component {
    * @param attributeName O nome do atributo HTML.
    */
   static initFromHtmlAttribute(attributeName: string): void;
-}
-
-/** Fornece abstração para as opções da barra de ferramentas. */
-declare interface ToolbarOptions {
-
-  /** Sinalizador indicando se a barra de ferramentas deve ser omitida na rolagem da página. */
-  hideInScroll?: boolean;
 }

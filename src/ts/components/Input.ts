@@ -20,10 +20,7 @@ export default class Input extends Component {
 
     super(element);
 
-    if (!element.classList.contains("input")) {
-
-      throw new Error("O elemento responsável pelo input não contêm a classe 'input'.");
-    }
+    element.classList.add("input");
 
     this.input = element.querySelector(".input--field");
 
