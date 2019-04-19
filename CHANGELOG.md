@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Xmutarn v0.28.0-beta.2 (2019-04-19) - Release 13
+
+- Adicionado módulos `Input` e `Toast`.
+
 ## Xmutarn v0.28.0-beta (2019-04-07) - Release 12
 
 - Adicionado suporte a módulos TypeScript/ECMAScript.
