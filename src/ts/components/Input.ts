@@ -4,11 +4,16 @@ import { InputOptions } from "./options";
 /** Responsável pelo gerenciamento de um input. */
 export default class Input extends Component {
 
-  /** O elemento do input. */
-  readonly input: HTMLInputElement;
+  /** Opções padrão do input. */
+  private static readonly defaultOptions: InputOptions = {
+    removeColorOnFocus: true
+  };
 
-  /** O elemento do rótulo do input. */
-  readonly label: HTMLLabelElement;
+  /** Elemento do input. */
+  readonly inputElement: HTMLInputElement;
+
+  /** Elemento do rótulo do input. */
+  readonly labelElement: HTMLLabelElement;
 
   /**
    * Inicializa uma nova instância de Input.
@@ -16,22 +21,24 @@ export default class Input extends Component {
    * @param element O elemento responsável pelo o input.
    * @param options As opções do input.
    */
-  constructor(element: HTMLElement, options: InputOptions = { removeColorOnFocus: true }) {
+  constructor(element: HTMLElement, options: InputOptions = null) {
 
     super(element);
 
+    Object.assign(Input.defaultOptions, options);
+
     element.classList.add("input");
 
-    this.input = element.querySelector(".input--field");
+    this.inputElement = element.querySelector(".input--field");
 
-    if (!this.input) {
+    if (!this.inputElement) {
 
       throw new Error("O elemento responsável pelo o input não contém o elemento input com a classe 'input--field'.");
     }
 
-    this.label = element.querySelector(".input--label");
+    this.labelElement = element.querySelector(".input--label");
 
-    if (!this.label) {
+    if (!this.labelElement) {
 
       if (!options.label) {
 
@@ -42,16 +49,16 @@ export default class Input extends Component {
       this.setLabel(options.label);
     }
 
-    if (this.input.value) {
+    if (this.inputElement.value) {
 
       this.activeLabel();
     }
 
-    this.addToggleLabelListener(this.input);
+    this.addToggleLabelListener(this.inputElement);
 
     if (options.removeColorOnFocus) {
 
-      this.addRemoveColorListener(this.input);
+      this.addRemoveColorListener(this.inputElement);
     }
   }
 
@@ -61,13 +68,13 @@ export default class Input extends Component {
   /** Ativa o elemento do rótulo do input. */
   private activeLabel(): void {
 
-    this.label.classList.add(Input.labelActiveClass);
+    this.labelElement.classList.add(Input.labelActiveClass);
   }
 
   /** Desativa o elemento do rótulo do input. */
   private disableLabel(): void {
 
-    this.label.classList.remove(Input.labelActiveClass);
+    this.labelElement.classList.remove(Input.labelActiveClass);
   }
 
   /**
@@ -87,7 +94,7 @@ export default class Input extends Component {
 
       e.preventDefault();
 
-      if (this.input.value) {
+      if (this.inputElement.value) {
 
         this.activeLabel();
 
@@ -125,7 +132,7 @@ export default class Input extends Component {
    */
   setLabel(text: string): void {
 
-    this.label.innerText = text;
+    this.labelElement.innerText = text;
   }
 
   /**

@@ -4,15 +4,22 @@ import { ToolbarOptions } from "./options";
 /** Responsável pelo gerenciamento de uma barra de ferramentas. */
 export default class Toolbar extends Component {
 
+  /** Opções padrão da barra de ferramentas. */
+  private static readonly defaultOptions: ToolbarOptions = {
+    hideInScroll: true
+  };
+
   /**
    * Inicializa uma nova instância de Toolbar.
    *
    * @param element O elemento da barra de ferramentas.
    * @param options As opções da barra de ferramentas.
    */
-  constructor(element: HTMLElement, options: ToolbarOptions = { hideInScroll: true }) {
+  constructor(element: HTMLElement, options: ToolbarOptions = null) {
 
     super(element);
+
+    Object.assign(Toolbar.defaultOptions, options);
 
     if (options.hideInScroll) {
 

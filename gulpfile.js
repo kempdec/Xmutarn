@@ -60,6 +60,7 @@ exports.sass = series(sass, copyToDocs);
 
 function ts() {
 
+  const babel = require("gulp-babel");
   const browserify = require("browserify");
   const buffer = require("vinyl-buffer");
   const source = require("vinyl-source-stream");
@@ -75,9 +76,12 @@ function ts() {
     .plugin(tsify)
     .bundle().on("error", e => console.error(e))
     .pipe(source(`${pkg.name}-md.js`))
+    .pipe(buffer())
+    .pipe(babel({
+      presets: ["@babel/env"]
+    }))
     .pipe(header(banner))
     .pipe(dest(paths.jsDist))
-    .pipe(buffer())
     .pipe(uglify().on("error", e => console.error(e)))
     .pipe(rename((path) => { path.basename += ".min"; }))
     .pipe(header(banner))
