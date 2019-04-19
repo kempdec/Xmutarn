@@ -3,6 +3,7 @@ import {
   Input,
   NavigationDrawer,
   Overlay,
+  Toast,
   Toolbar
 } from "./components";
 
@@ -11,6 +12,7 @@ export {
   Input,
   NavigationDrawer,
   Overlay,
+  Toast,
   Toolbar
 };
 
