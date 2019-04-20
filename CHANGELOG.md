@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Xmutarn v0.28.0-beta.3 (2019-04-20) - Release 14
+
+- Fixa opções dos módulos `Input`, `Toast` e `Toolbar`.
+
 ## Xmutarn v0.28.0-beta.2 (2019-04-19) - Release 13
 
 - Adicionado módulos `Input` e `Toast`.

@@ -25,7 +25,7 @@ export default class Input extends Component {
 
     super(element);
 
-    Object.assign(Input.defaultOptions, options);
+    options = Object.assign(Input.defaultOptions, options);
 
     element.classList.add("input");
 

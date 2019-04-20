@@ -19,7 +19,7 @@ export default class Toolbar extends Component {
 
     super(element);
 
-    Object.assign(Toolbar.defaultOptions, options);
+    options = Object.assign(Toolbar.defaultOptions, options);
 
     if (options.hideInScroll) {
 

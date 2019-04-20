@@ -141,7 +141,7 @@ export default class Toast extends Component {
    */
   static create(message: string, options: ToastOptions = null): Toast {
 
-    Object.assign(options, Toast.optionsDefault);
+    options = Object.assign(options, Toast.optionsDefault);
 
     /** Elemento do toaster do toast. */
     const toasterElement = document.createElement("aside");

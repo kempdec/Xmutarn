@@ -1,4 +1,4 @@
-/*! Xmutarn v0.28.0-beta (https://github.com/vinivsl/Xmutarn.git) | Copyright 2019 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/Xmutarn/blob/master/LICENSE) */
+/*! Xmutarn v0.28.0-beta.3 (https://github.com/vinivsl/Xmutarn.git) | Copyright 2019 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/Xmutarn/blob/master/LICENSE) */
 "use strict";
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
@@ -227,7 +227,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           _classCallCheck(this, Input);
 
           _this4 = _possibleConstructorReturn(this, _getPrototypeOf(Input).call(this, element));
-          Object.assign(Input.defaultOptions, options);
+          options = Object.assign(Input.defaultOptions, options);
           element.classList.add("input");
           _this4.inputElement = element.querySelector(".input--field");
 
@@ -590,7 +590,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           key: "create",
           value: function create(message) {
             var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-            Object.assign(options, Toast.optionsDefault);
+            options = Object.assign(options, Toast.optionsDefault);
             var toasterElement = document.createElement("aside");
             toasterElement.classList.add(Toast.classes.toaster);
             document.body.append(toasterElement);
@@ -691,7 +691,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           _classCallCheck(this, Toolbar);
 
           _this16 = _possibleConstructorReturn(this, _getPrototypeOf(Toolbar).call(this, element));
-          Object.assign(Toolbar.defaultOptions, options);
+          options = Object.assign(Toolbar.defaultOptions, options);
 
           if (options.hideInScroll) {
             _this16.hideInScroll();
