@@ -1,5 +1,23 @@
 "use strict";
 
+const del = require("del");
+
+/** Caminhos do projeto. */
+const paths = {
+
+  /** Caminho dos arquivos de distribuição de folhas de estilo CSS do projeto. */
+  css: "dist/css",
+
+  /** Caminho dos arquivos de distribuição de scripts JavaScript do projeto. */
+  js: "dist/js"
+};
+
+/** Limpa o caminho dos arquivos de distribuição de folhas de estilo CSS do projeto. */
+function cleanCssPath() {
+
+  return del(paths.css);
+}
+
 const {
   src,
   dest,
@@ -17,79 +35,90 @@ const pkg = JSON.parse(require("fs").readFileSync("package.json"));
 /** Cabeçalho dos arquivos de distribuição. */
 const banner = `/*! Xmutarn v${pkg.version} (${pkg.repository.url}) | Copyright ${new Date().getFullYear()} ${pkg.author.name} | Licensed under MIT (${pkg.repository.url.replace(".git", "")}/blob/master/LICENSE) */\n`;
 
-/** Caminhos. */
-const paths = {
-  /** Caminho de distribuição dos arquivos CSS. */
-  cssDist: "dist/css",
-  /** Caminho de distribuição dos arquivos JS. */
-  jsDist: "dist/js"
-};
+/** Constrói os arquivos de distribuição de folhas de estilo CSS do projeto. */
+function buildCss() {
 
-function sass() {
   const autoprefixer = require("gulp-autoprefixer");
   const sass = require("gulp-sass");
 
-  const mainSassFile = `src/scss/${pkg.name}*.scss`;
+  /** Arquivo principal do SASS. */
+  const mainSassFile = `src/scss/xmutarn*.scss`;
+
   const autoprefixerOptions = "defaults";
 
   src(mainSassFile)
-    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
+    .pipe(sass({
+      outputStyle: "expanded"
+    })).on("error", sass.logError)
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(header(banner))
-    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(sourcemaps.init({
+      loadMaps: true
+    }))
     .pipe(sourcemaps.write("."))
-    .pipe(dest(paths.cssDist));
+    .pipe(dest(paths.css));
 
   return src(mainSassFile)
-    .pipe(rename((path) => { path.basename += ".min"; }))
-    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(rename(path => {
+      path.basename += ".min";
+    }))
+    .pipe(sass({
+      outputStyle: "compressed"
+    })).on("error", sass.logError)
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(header(banner))
-    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(sourcemaps.init({
+      loadMaps: true
+    }))
     .pipe(sourcemaps.write("."))
-    .pipe(dest(paths.cssDist));
+    .pipe(dest(paths.css));
 }
 
-/** Copia os arquivos de distribuição para os ativos da documentação do projeto. */
-function copyToDocs() {
-  return src("dist/**/*")
-    .pipe(dest("docs/assets"));
+exports.css = series(cleanCssPath, buildCss);
+
+/** Limpa o caminho dos arquivos de distribuição de scripts JavaScript do projeto. */
+function cleanJsPath() {
+
+  return del(paths.js);
 }
 
-exports.sass = series(sass, copyToDocs);
-
-function ts() {
+/** Constrói os arquivos de distribuição de scripts JavaScript do projeto. */
+function buildJs() {
 
   const babel = require("gulp-babel");
   const browserify = require("browserify");
   const buffer = require("vinyl-buffer");
   const source = require("vinyl-source-stream");
+  const ts = require("gulp-typescript");
   const tsify = require("tsify");
   const uglify = require("gulp-uglify");
 
-  return browserify({
-    standalone: "X",
-    basedir: ".",
-    debug: true,
-    entries: ["src/ts/index.ts"]
+  const tsProject = ts.createProject("tsconfig.json");
+
+  return browserify(tsProject.config.files, {
+    basedir: "."
   })
     .plugin(tsify)
     .bundle().on("error", e => console.error(e))
-    .pipe(source(`${pkg.name}-md.js`))
+    .pipe(source(`xmutarn.js`))
     .pipe(buffer())
     .pipe(babel({
       presets: ["@babel/env"]
     }))
     .pipe(header(banner))
-    .pipe(dest(paths.jsDist))
+    .pipe(dest(paths.js))
     .pipe(uglify().on("error", e => console.error(e)))
-    .pipe(rename((path) => { path.basename += ".min"; }))
+    .pipe(rename(path => {
+      path.basename += ".min";
+    }))
     .pipe(header(banner))
-    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(sourcemaps.init({
+      loadMaps: true
+    }))
     .pipe(sourcemaps.write("."))
-    .pipe(dest(paths.jsDist));
+    .pipe(dest(paths.js));
 }
 
-exports.ts = series(ts, copyToDocs);
+exports.js = series(cleanJsPath, buildJs);
 
-exports.default = series(parallel(ts, sass), copyToDocs);
+exports.default = parallel(series(cleanCssPath, buildCss), series(cleanJsPath, buildJs));

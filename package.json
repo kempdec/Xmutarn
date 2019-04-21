@@ -15,14 +15,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vinivsl/Xmutarn.git"
+    "url": "https://github.com/vinivsl/xmutarn.git"
   },
   "bugs": {
-    "url": "https://github.com/vinivsl/Xmutarn/issues"
+    "url": "https://github.com/vinivsl/xmutarn/issues"
   },
   "files": [
-    "dist",
-    "src",
+    "dist/{css,fonts,js}/**/*.{css,js,map,woff2}",
+    "src/{scss,ts}/*.{scss,ts}",
     "gulpfile.js",
     "tsconfig.json",
     "yarn.lock"
@@ -52,6 +52,7 @@
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "browserify": "^16.2.3",
+    "del": "^4.1.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",
@@ -59,9 +60,9 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-typescript": "^5.0.1",
     "gulp-uglify": "^3.0.2",
     "merge-stream": "^1.0.1",
-    "rimraf": "^2.6.3",
     "tsify": "^4.0.1",
     "typescript": "^3.4.4",
     "vinyl-buffer": "^1.0.1",
