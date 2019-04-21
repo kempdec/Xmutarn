@@ -9,7 +9,19 @@ const paths = {
   css: "dist/css",
 
   /** Caminho dos arquivos de distribuição de scripts JavaScript do projeto. */
-  js: "dist/js"
+  js: "dist/js",
+
+  /** Caminho dos arquivos de distribuição do projeto. */
+  dist: "dist",
+
+  /** Caminho dos arquivos de documentações do projeto. */
+  docs: "docs",
+
+  /** Caminho dos arquivos das bibliotecas da documentação do projeto. */
+  docsLib: "docs/assets/lib",
+
+  /** Caminho dos arquivos do Xmutarn da documentação do projeto. */
+  docsXmutarn: "docs/assets/lib/xmutarn"
 };
 
 /** Limpa o caminho dos arquivos de distribuição de folhas de estilo CSS do projeto. */
@@ -121,4 +133,45 @@ function buildJs() {
 
 exports.js = series(cleanJsPath, buildJs);
 
-exports.default = parallel(series(cleanCssPath, buildCss), series(cleanJsPath, buildJs));
+/** Limpa os arquivos do Xmutarn da documentação do projeto. */
+function cleanDocsXmutarnPath() {
+
+  return del(paths.docsXmutarn);
+}
+
+/** Copia os arquivos de distribuição para os ativos da documentação do projeto. */
+function copyDistToDocs() {
+
+  return src(`${paths.dist}/**/*`)
+    .pipe(dest(paths.docsXmutarn));
+}
+
+exports.copyToDocs = series(cleanDocsXmutarnPath, copyDistToDocs);
+
+/** Limpa o caminho dos arquivos de documentações do projeto. */
+function cleanDocsPath() {
+
+  return del(`${paths.docs}/**/*.html`);
+}
+
+/** Constrói os arquivos de documentações do projeto. */
+function buildDocs() {
+
+  const pug = require("gulp-pug");
+
+  return src("src/docs/**/*.pug")
+    .pipe(pug())
+    .pipe(dest(paths.docs));
+}
+
+exports.docs = series(cleanDocsPath, buildDocs);
+
+exports.default =
+  series(
+    parallel(
+      series(cleanCssPath, buildCss),
+      series(cleanJsPath, buildJs),
+      series(cleanDocsPath, buildDocs)
+    ),
+    series(cleanDocsXmutarnPath, copyDistToDocs)
+  );
