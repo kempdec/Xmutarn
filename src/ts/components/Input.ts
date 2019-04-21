@@ -145,7 +145,7 @@ export default class Input extends Component {
     document.querySelectorAll(`[${attributeName}]`)
       .forEach((element: HTMLElement) => {
 
-        let options: InputOptions;
+        let options: InputOptions = {};
 
         if (element.hasAttribute(labelAttributeName)) {
 

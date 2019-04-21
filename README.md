@@ -2,7 +2,8 @@
 
 **Moderno, estiloso, fácil e produtivo.**
 
-Um framework front-end criado com a finalidade de facilitar e aumentar a produtividade na construção de páginas modernas e estilosas.
+Um framework front-end criado com a finalidade de facilitar e aumentar a produtividade na construção de páginas 
+modernas e estilosas.
 
 [![npm version](https://img.shields.io/npm/v/xmutarn.svg)](https://www.npmjs.com/package/xmutarn)
 
@@ -15,6 +16,9 @@ Um framework front-end criado com a finalidade de facilitar e aumentar a produti
 
 ## Começo rápido
 
+- [Faça o download da versão mais recente](https://github.com/vinivsl/xmutarn/releases/latest) do Xmutarn diretamente 
+do GitHub.
+- Clonar o repositório: `git clone https://github.com/vinivsl/xmutarn.git`
 - Instalar com o [NPM](https://www.npmjs.com/): `npm install xmutarn`
 - Instalar com o [Yarn](https://yarnpkg.com/): `yarn add xmutarn`
 
