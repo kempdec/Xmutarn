@@ -1,0 +1,58 @@
+include _app-settings.pug
+
+doctype html
+html(lang="pt-br" prefix="og: http://ogp.me/ns#")
+
+head
+
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+  meta(name="description" content=appDescription)
+
+  meta(name="theme-color" content="#7B1FA2")
+
+  //- Integração com ambiente ~ OpenGraph.
+  meta(property="og:title" content="Xmutarn")
+  meta(property="og:type" content="website")
+  meta(property="og:url" content=appAddress)
+  meta(property="og:image" content=`${appAddress}${appBaseAddress}assets/img/environment/opengraph.png`)
+  meta(property="og:description" content=appDescription)
+  meta(property="og:site_name" content=appName)
+
+  //- Integração com ambiente ~ Twitter.
+  meta(name="twitter:image" content=`${appAddress}${appBaseAddress}assets/img/environment/twitter.png`)
+
+  block pageTitle
+    title #{appName}
+
+  base(href=appBaseAddress)
+
+  link(rel="shortcut icon" href="assets/img/icon.png")
+  link(rel="manifest" href="manifest.json")
+
+  block styles
+    //- Arquivos de estilo.
+    link(rel="stylesheet" href="assets/lib/xmutarn/css/xmutarn.min.css")
+
+body.typography-use-default.theme-main-bg-background
+
+  //- Barra de ferramentas.
+  header.toolbar(x-toolbar)
+    div.container-fluid
+
+      nav.toolbar--nav
+        a.toolbar--nav--item.margin-right-small.padding-xsmall(href="")
+          img(src="assets/img/environment/manifest.png" alt="Logotipo do Xmutarn com fundo linear" style="max-height: 2.5rem;")
+        a.toolbar--nav--item(href="") Início
+
+      nav.toolbar--nav.margin-left-auto
+        a.toolbar--nav--item(href=appRepository target="_blank")
+          span.toolbar--nav--item--icon.fab.fa-github.fa-lg
+          | GitHub
+
+  block content
+
+  block scripts
+    //- Arquivos de script.
+    script(src="assets/lib/xmutarn/js/xmutarn.min.js")
+    script(defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous")

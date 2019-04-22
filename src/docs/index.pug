@@ -1,0 +1,60 @@
+extends includes/_layout.pug
+
+block pageTitle
+  title #{appName} - Framework front-end moderno, estiloso, fácil e produtivo
+
+block content
+  main
+    section.theme-color-bg-700
+      div.container.padding-bottom-large.padding-bottom-xlarge___large.theme-main-fg-primary
+        div.flex-row.flex-align-items-center
+
+          figure.flex-col-7.flex-col-8___small.flex-col-6___large.flex-order-1___large.margin-x-auto.margin-top-xlarge
+            img.max-width-100(src="assets/img/xmutarn-logo-abstract.png" alt="Logotipo do Xmutarn com fundo abstrato")
+
+          article.flex-col-6___large.typography-align-center.color-fg-white
+            h1.typography-headline-2 #{appName}
+            p.typography-headline-5(style="opacity: .7;") Moderno, estiloso, fácil e produtivo.
+            a.button.button_size-xlarge.typography-to-uppercase(href="docs/getting-started.html")
+              | Começar
+            p.typography-body-1.color-fg-white
+              | Versão: #{appVersion}
+
+  section.padding-y-medium.padding-y-xlarge___large.theme-main-bg-background
+    div.container
+      div.flex-row
+
+        article.flex-col-4___large
+          figure.display-flex.flex-justify-content-center
+            span.fas.fa-code.fa-4x.theme-color-fg
+          h1.typography-headline-5.typography-align-center.theme-main-fg-primary
+            | Semântico
+          div.typography-body-1.typography-align-center.theme-main-fg-secondary
+            p Completamente semântico. Não sacrifique seu código para aplicar seu estilo.
+
+        article.flex-col-4___large
+          figure.display-flex.flex-justify-content-center
+            span.fas.fa-cubes.fa-4x.theme-color-fg
+          h1.typography-headline-5.typography-align-center.theme-main-fg-primary
+            | Fácil de usar, fácil de aprender
+          div.typography-body-1.typography-align-center.theme-main-fg-secondary
+            p
+              | Com padrões para diminuir a curva de aprendizado e a constante consulta na documentação. Bata o olho e
+              | saiba o que está fazendo.
+
+        article.flex-col-4___large
+          figure.display-flex.flex-justify-content-center
+            span.fas.fa-bolt.fa-4x.theme-color-fg
+          h1.typography-headline-5.typography-align-center.theme-main-fg-primary
+            | Produtivo
+          div.typography-body-1.typography-align-center.theme-main-fg-secondary
+            p Amamos a produtividade, assim como todos. "Snippets" hoje, "snippets" amanhã, "snippets" sempre.
+
+  footer.theme-main-fg-primary
+    div.container
+      div.flex-row.flex-align-items-center.padding-medium.typography-caption-1
+        a.margin-right-medium(href=appRepository target="_blank")
+          | GitHub
+        a(href=`${appRepository}/blob/master/LICENSE` target="_blank")
+          | MIT License
+        span.margin-left-auto 2018-#{new Date().getFullYear()} &copy; Vinícius Lima. Todos os direitos reservados.

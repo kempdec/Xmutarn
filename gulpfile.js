@@ -166,6 +166,10 @@ function buildDocs() {
 
 exports.docs = series(cleanDocsPath, buildDocs);
 
+const watch = require("gulp-watch");
+
+exports.docsWatch = () => watch("src/docs/**/*", series(cleanDocsPath, buildDocs));
+
 exports.default =
   series(
     parallel(
