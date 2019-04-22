@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## Xmutarn v0.28.0-beta.4 (2019-04-22) - Release 15
+
+- Adicionado páginas da documentação com o Pug.
+
+---
+
+- Atualizado página inicial da documentação.
+
+---
+
+- Fixado exportação das declarações de tipos do TypeScript.
+
 ## Xmutarn v0.28.0-beta.3 (2019-04-20) - Release 14
 
 - Fixa opções dos módulos `Input`, `Toast` e `Toolbar`.
