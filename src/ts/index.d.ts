@@ -1,11 +1,15 @@
 export as namespace X;
 
 export {
+  Component,
   Dialog,
   InputOptions,
   Input,
   NavigationDrawer,
   Overlay,
+  ToastColor,
+  ToastOptions,
+  Toast,
   ToolbarOptions,
   Toolbar
 };
@@ -194,7 +198,7 @@ declare class Overlay extends Component {
 }
 
 /** A cor de um toast. */
-export declare enum ToastColor {
+declare enum ToastColor {
   /** Cor destaque do tema. */
   Featured = "featured",
   /** Cor de realçe do tema. */
