@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Xmutarn v0.28.0 (2019-07-01) - Release 13
+## Xmutarn v0.28.0 (2019-07-01) - Release 16
 
 - Adicionado suporte a módulos TypeScript/ECMAScript.
 - Adicionado módulos `Component`, `Dialog`, `NavigationDrawer`, `Overlay`, `Toolbar` e `ToolbarOptions`.
