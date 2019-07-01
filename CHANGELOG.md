@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## Xmutarn v0.28.0 (2019-07-01) - Release 13
+
+- Adicionado suporte a módulos TypeScript/ECMAScript.
+- Adicionado módulos `Component`, `Dialog`, `NavigationDrawer`, `Overlay`, `Toolbar` e `ToolbarOptions`.
+- Adicionado arquivo de declaração.
+
+---
+
+- Modificado a pasta dos arquivos de distribuição das folhas de estilo, de `dist/styles` para `dist/css`.
+
+---
+
+- Fixado as cores de um toast ([#12](https://github.com/vinivsl/Xmutarn/issues/12)).
+
 ## Xmutarn v0.28.0-beta (2019-04-07) - Release 12
 
 - Adicionado suporte a módulos TypeScript/ECMAScript.

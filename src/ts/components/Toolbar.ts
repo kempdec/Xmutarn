@@ -25,6 +25,9 @@ export default class Toolbar extends Component {
   /** Classe CSS de omissão da barra de ferramentas. */
   private static readonly _toolbarHideClass: string = "toolbar_hide";
 
+  /** Classe CSS da cor do tema da barra de ferramentas. */
+  private static readonly _toolbarThemeColorClass: string = "theme-color-bg-700";
+
   /** Omite a barra de ferramentas na rolagem da página. */
   public hideInScroll(): void {
 
@@ -40,6 +43,14 @@ export default class Toolbar extends Component {
       } else {
 
         this.element.classList.remove(Toolbar._toolbarHideClass);
+        
+        if (this.element.classList.contains("color-bg-transparent") && scrollTop > this.element.clientHeight) {
+
+          this.element.classList.add(Toolbar._toolbarThemeColorClass);
+        } else {
+
+          this.element.classList.remove(Toolbar._toolbarThemeColorClass);
+        }
       }
 
       lastScrollTop = scrollTop;

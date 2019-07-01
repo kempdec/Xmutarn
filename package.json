@@ -40,7 +40,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
-    "merge-stream": "^1.0.1",
+    "merge-stream": "^2.0.0",
     "rimraf": "^2.6.3",
     "tsify": "^4.0.1",
     "typescript": "^3.2.2",
