@@ -1,12 +1,12 @@
 {
   "name": "xmutarn",
   "version": "0.28.0-beta.4",
-  "homepage": "https://vinivsl.github.io/xmutarn",
+  "homepage": "https://viniciusxdl.github.io/xmutarn",
   "description": "Xmutarn é um framework front-end criado com a finalidade de facilitar e aumentar a produtividade na construção de páginas modernas e estilosas.",
   "author": {
     "name": "Vinícius Lima",
-    "email": "viniciusvsl@outlook.com",
-    "url": "https://github.com/vinivsl"
+    "email": "viniciusxdl@outlook.com",
+    "url": "https://github.com/viniciusxdl"
   },
   "main": "dist/js/xmutarn.js",
   "style": "dist/css/xmutarn.css",
@@ -15,10 +15,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vinivsl/xmutarn.git"
+    "url": "https://github.com/viniciusxdl/xmutarn.git"
   },
   "bugs": {
-    "url": "https://github.com/vinivsl/xmutarn/issues"
+    "url": "https://github.com/viniciusxdl/xmutarn/issues"
   },
   "files": [
     "dist/{css,fonts,js}/**/*.{css,js,map,woff2}",
