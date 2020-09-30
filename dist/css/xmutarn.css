@@ -1,4 +1,4 @@
-/*! Xmutarn v0.28.0-beta.4 (https://github.com/vinivsl/xmutarn.git) | Copyright 2019 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/xmutarn/blob/master/LICENSE) */
+/*! Xmutarn v0.28.0-beta.4 (https://github.com/viniciusxdl/xmutarn.git) | Copyright 2020 Vinícius Lima | Licensed under MIT (https://github.com/viniciusxdl/xmutarn/blob/master/LICENSE) */
 .border-small, .border-top-small, .border-right-small, .border-bottom-small, .border-left-small, .border-medium, .border-top-medium, .border-right-medium, .border-bottom-medium, .border-left-medium, .border-large, .border-top-large, .border-right-large, .border-bottom-large, .border-left-large {
   border-color: var(--theme-main-dividers, rgba(0, 0, 0, 0.12)) !important;
 }
@@ -1491,8 +1491,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .input--label_active, .input--field:focus ~ .input--label {
-  -webkit-transform: translate(-15%, -1em) scale(0.7);
-          transform: translate(-15%, -1em) scale(0.7);
+  transform: translate(-15%, -1em) scale(0.7);
 }
 
 .dropdown {
@@ -1510,16 +1509,12 @@ input[type="password"]::-ms-reveal {
   border-bottom: 0.0625rem solid;
   border-left: 0.0625rem solid;
   border-color: inherit;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  transition: -webkit-transform .3s;
+  transform: rotate(-45deg);
   transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
 }
 
 .dropdown_active::before {
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .menu {
@@ -1531,37 +1526,31 @@ input[type="password"]::-ms-reveal {
   max-height: calc(100vh - 2rem);
   background-color: var(--theme-main-card, white);
   border-radius: 0.125rem;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
   transition: .3s;
   opacity: 0;
   will-change: transform, opacity;
 }
 
 .menu_open {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   opacity: 1;
 }
 
 .menu_origin-top-right, .menu_origin-top-start {
-  -webkit-transform-origin: top right;
-          transform-origin: top right;
+  transform-origin: top right;
 }
 
 .menu_origin-top-left, .menu_origin-top-end {
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
+  transform-origin: top left;
 }
 
 .menu_origin-bottom-right, .menu_origin-bottom-start {
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  transform-origin: bottom right;
 }
 
 .menu_origin-bottom-left, .menu_origin-bottom-end {
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
+  transform-origin: bottom left;
 }
 
 .list {
@@ -1634,8 +1623,7 @@ input[type="password"]::-ms-reveal {
 }
 
 .toolbar_hide {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .toolbar > .container,
@@ -1848,15 +1836,13 @@ input[type="password"]::-ms-reveal {
   height: 100%;
   max-width: 100%;
   background-color: var(--theme-main-card, white);
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
   transition: .3s;
   will-change: transform;
 }
 
 .navigation-drawer_open {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 
 .overlay {
@@ -1902,20 +1888,14 @@ input[type="password"]::-ms-reveal {
   font-size: 0.875rem;
   color: white;
   background-color: #323232;
-  -webkit-transform: translate(0, 250%);
-          transform: translate(0, 250%);
-  transition: -webkit-transform 0.25s 0ms cubic-bezier(0.4, 0, 1, 1);
+  transform: translate(0, 250%);
   transition: transform 0.25s 0ms cubic-bezier(0.4, 0, 1, 1);
-  transition: transform 0.25s 0ms cubic-bezier(0.4, 0, 1, 1), -webkit-transform 0.25s 0ms cubic-bezier(0.4, 0, 1, 1);
   align-items: center;
 }
 
 .toast_active {
-  -webkit-transform: translate(0);
-          transform: translate(0);
-  transition: -webkit-transform 0.25s 0ms cubic-bezier(0, 0, 0.2, 1);
+  transform: translate(0);
   transition: transform 0.25s 0ms cubic-bezier(0, 0, 0.2, 1);
-  transition: transform 0.25s 0ms cubic-bezier(0, 0, 0.2, 1), -webkit-transform 0.25s 0ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 .toast_color-featured {

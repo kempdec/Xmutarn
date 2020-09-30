@@ -1,29 +1,37 @@
-/*! Xmutarn v0.28.0-beta.4 (https://github.com/vinivsl/xmutarn.git) | Copyright 2019 Vinícius Lima | Licensed under MIT (https://github.com/vinivsl/xmutarn/blob/master/LICENSE) */
+/*! Xmutarn v0.28.0-beta.4 (https://github.com/viniciusxdl/xmutarn.git) | Copyright 2020 Vinícius Lima | Licensed under MIT (https://github.com/viniciusxdl/xmutarn/blob/master/LICENSE) */
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -88,17 +96,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _1 = require(".");
 
-    var Dialog =
-    /*#__PURE__*/
-    function (_$Component) {
+    var Dialog = /*#__PURE__*/function (_$Component) {
       _inherits(Dialog, _$Component);
+
+      var _super = _createSuper(Dialog);
 
       function Dialog(element) {
         var _this;
 
         _classCallCheck(this, Dialog);
 
-        _this = _possibleConstructorReturn(this, _getPrototypeOf(Dialog).call(this, element));
+        _this = _super.call(this, element);
         _this.overlay = _1.Overlay.create();
 
         _this.element.classList.add("dialog");
@@ -178,8 +186,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return Dialog;
     }(_1.Component);
 
-    Dialog.dialogOpenClass = "dialog_open";
     exports["default"] = Dialog;
+    Dialog.dialogOpenClass = "dialog_open";
   }, {
     ".": 8
   }],
@@ -192,10 +200,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _1 = require(".");
 
-    var Input =
-    /*#__PURE__*/
-    function (_$Component2) {
+    var Input = /*#__PURE__*/function (_$Component2) {
       _inherits(Input, _$Component2);
+
+      var _super2 = _createSuper(Input);
 
       function Input(element) {
         var _this4;
@@ -204,7 +212,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _classCallCheck(this, Input);
 
-        _this4 = _possibleConstructorReturn(this, _getPrototypeOf(Input).call(this, element));
+        _this4 = _super2.call(this, element);
         options = Object.assign(Input.defaultOptions, options);
         element.classList.add("input");
         _this4.inputElement = element.querySelector(".input--field");
@@ -306,11 +314,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return Input;
     }(_1.Component);
 
+    exports["default"] = Input;
     Input.defaultOptions = {
       removeColorOnFocus: true
     };
     Input.labelActiveClass = "input--label_active";
-    exports["default"] = Input;
   }, {
     ".": 8
   }],
@@ -323,17 +331,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _1 = require(".");
 
-    var NavigationDrawer =
-    /*#__PURE__*/
-    function (_$Component3) {
+    var NavigationDrawer = /*#__PURE__*/function (_$Component3) {
       _inherits(NavigationDrawer, _$Component3);
+
+      var _super3 = _createSuper(NavigationDrawer);
 
       function NavigationDrawer(element) {
         var _this6;
 
         _classCallCheck(this, NavigationDrawer);
 
-        _this6 = _possibleConstructorReturn(this, _getPrototypeOf(NavigationDrawer).call(this, element));
+        _this6 = _super3.call(this, element);
         _this6.overlay = _1.Overlay.create();
 
         _this6.element.classList.add("navigation-drawer");
@@ -414,8 +422,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return NavigationDrawer;
     }(_1.Component);
 
-    NavigationDrawer.openClass = "navigation-drawer_open";
     exports["default"] = NavigationDrawer;
+    NavigationDrawer.openClass = "navigation-drawer_open";
   }, {
     ".": 8
   }],
@@ -428,17 +436,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _1 = require(".");
 
-    var Overlay =
-    /*#__PURE__*/
-    function (_$Component4) {
+    var Overlay = /*#__PURE__*/function (_$Component4) {
       _inherits(Overlay, _$Component4);
+
+      var _super4 = _createSuper(Overlay);
 
       function Overlay(element) {
         var _this9;
 
         _classCallCheck(this, Overlay);
 
-        _this9 = _possibleConstructorReturn(this, _getPrototypeOf(Overlay).call(this, element));
+        _this9 = _super4.call(this, element);
 
         _this9.element.classList.add("overlay");
 
@@ -477,8 +485,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return Overlay;
     }(_1.Component);
 
-    Overlay.overlayActiveClass = "overlay_active";
     exports["default"] = Overlay;
+    Overlay.overlayActiveClass = "overlay_active";
   }, {
     ".": 8
   }],
@@ -491,17 +499,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _1 = require(".");
 
-    var Toast =
-    /*#__PURE__*/
-    function (_$Component5) {
+    var Toast = /*#__PURE__*/function (_$Component5) {
       _inherits(Toast, _$Component5);
+
+      var _super5 = _createSuper(Toast);
 
       function Toast(element) {
         var _this12;
 
         _classCallCheck(this, Toast);
 
-        _this12 = _possibleConstructorReturn(this, _getPrototypeOf(Toast).call(this, element));
+        _this12 = _super5.call(this, element);
         _this12.overlay = _1.Overlay.create();
         _this12.toasterElement = element.parentElement;
 
@@ -627,6 +635,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return Toast;
     }(_1.Component);
 
+    exports["default"] = Toast;
     Toast.classes = {
       toaster: "toaster",
       "this": "toast",
@@ -643,7 +652,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       autoOpen: true,
       removeWhenClose: true
     };
-    exports["default"] = Toast;
   }, {
     ".": 8
   }],
@@ -656,10 +664,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _1 = require(".");
 
-    var Toolbar =
-    /*#__PURE__*/
-    function (_$Component6) {
+    var Toolbar = /*#__PURE__*/function (_$Component6) {
       _inherits(Toolbar, _$Component6);
+
+      var _super6 = _createSuper(Toolbar);
 
       function Toolbar(element) {
         var _this16;
@@ -668,7 +676,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _classCallCheck(this, Toolbar);
 
-        _this16 = _possibleConstructorReturn(this, _getPrototypeOf(Toolbar).call(this, element));
+        _this16 = _super6.call(this, element);
         options = Object.assign(Toolbar.defaultOptions, options);
 
         if (options.hideInScroll) {
@@ -708,11 +716,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return Toolbar;
     }(_1.Component);
 
+    exports["default"] = Toolbar;
     Toolbar.defaultOptions = {
       hideInScroll: true
     };
     Toolbar.toolbarHideClass = "toolbar_hide";
-    exports["default"] = Toolbar;
   }, {
     ".": 8
   }],
@@ -722,6 +730,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
+    exports.Toolbar = exports.Toast = exports.Overlay = exports.NavigationDrawer = exports.Input = exports.Dialog = exports.Component = void 0;
 
     var Component_1 = require("./Component");
 
@@ -765,15 +774,46 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
+    exports.Toolbar = exports.Toast = exports.Overlay = exports.NavigationDrawer = exports.Input = exports.Dialog = void 0;
 
     var components_1 = require("./components");
 
-    exports.Dialog = components_1.Dialog;
-    exports.Input = components_1.Input;
-    exports.NavigationDrawer = components_1.NavigationDrawer;
-    exports.Overlay = components_1.Overlay;
-    exports.Toast = components_1.Toast;
-    exports.Toolbar = components_1.Toolbar;
+    Object.defineProperty(exports, "Dialog", {
+      enumerable: true,
+      get: function get() {
+        return components_1.Dialog;
+      }
+    });
+    Object.defineProperty(exports, "Input", {
+      enumerable: true,
+      get: function get() {
+        return components_1.Input;
+      }
+    });
+    Object.defineProperty(exports, "NavigationDrawer", {
+      enumerable: true,
+      get: function get() {
+        return components_1.NavigationDrawer;
+      }
+    });
+    Object.defineProperty(exports, "Overlay", {
+      enumerable: true,
+      get: function get() {
+        return components_1.Overlay;
+      }
+    });
+    Object.defineProperty(exports, "Toast", {
+      enumerable: true,
+      get: function get() {
+        return components_1.Toast;
+      }
+    });
+    Object.defineProperty(exports, "Toolbar", {
+      enumerable: true,
+      get: function get() {
+        return components_1.Toolbar;
+      }
+    });
     document.addEventListener("DOMContentLoaded", function () {
       components_1.Dialog.initFromHtmlAttribute("x-dialog");
       components_1.Input.initFromHtmlAttribute("x-input", "x-input-label");
