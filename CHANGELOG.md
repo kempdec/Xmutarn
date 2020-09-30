@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## Xmutarn v0.28.0 (2019-07-01) - Release 16
+
+- Adicionado suporte a módulos TypeScript/ECMAScript.
+- Adicionado módulos `Component`, `Dialog`, `NavigationDrawer`, `Overlay`, `Toolbar` e `ToolbarOptions`.
+- Adicionado arquivo de declaração.
+
+---
+
+- Modificado a pasta dos arquivos de distribuição das folhas de estilo, de `dist/styles` para `dist/css`.
+
+---
+
+- Fixado as cores de um toast ([#12](https://github.com/viniciusxdl/xmutarn/issues/12)).
+
 ## Xmutarn v0.28.0-beta.4 (2019-04-22) - Release 15
 
 - Adicionado páginas da documentação com o Pug.
@@ -32,7 +46,7 @@
 
 ---
 
-- Fixado as cores de um toast ([#12](https://github.com/vinivsl/Xmutarn/issues/12)).
+- Fixado as cores de um toast ([#12](https://github.com/viniciusxdl/Xmutarn/issues/12)).
 
 ## Xmutarn v0.27.1 (2019-03-17) - Release 11
 
@@ -41,7 +55,7 @@
 ## Xmutarn v0.27.0 (2019-03-04) - Release 10
 
 - Adicionado classe Typescipt responsável por gerenciar uma barra de ferramentas.
-- Adicionado ícones para toasts. Issue: [#9](https://github.com/vinivsl/Xmutarn/issues/9).
+- Adicionado ícones para toasts. Issue: [#9](https://github.com/viniciusxdl/Xmutarn/issues/9).
 - Adicionado variantes `color-featured`, `color-accent` e `outlined-color` para a classe `button`.
 - Adicionado variante `padded` para a classe `list`.
 - Adicionado a exibição e omissão de overlay para toasts, quando o **timeout** for setado como **0**.
@@ -55,8 +69,8 @@
 
 ---
 
-- Fixado a abertura incorreta do menu suspenso pela instanciação a partir do atributo `x-role="dropdown-menu"`. Issue: [#2](https://github.com/vinivsl/Xmutarn/issues/2).
-- Fixado a abertura e sobreposição dos diálogos. Issue: [#10](https://github.com/vinivsl/Xmutarn/issues/10).
+- Fixado a abertura incorreta do menu suspenso pela instanciação a partir do atributo `x-role="dropdown-menu"`. Issue: [#2](https://github.com/viniciusxdl/Xmutarn/issues/2).
+- Fixado a abertura e sobreposição dos diálogos. Issue: [#10](https://github.com/viniciusxdl/Xmutarn/issues/10).
 - Fixado o tamanho dos títulos dos toasts.
 
 ## Xmutarn v0.26.0 (2019-02-13) - Release 09
