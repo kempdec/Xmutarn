@@ -1,7 +1,7 @@
-import del from "del";
 import { dest, parallel, series, src, task } from "gulp";
 
 import pkg from "./package.json";
+import { delCss } from "./scripts/tasks/css";
 import { delJs } from "./scripts/tasks/js";
 import { buildDocs, copyDocsDependency, delDocs, delDocsLibs, watchDocs } from "./scripts/tasks/docs";
 
@@ -23,17 +23,8 @@ const paths = {
   css: "dist/css",
 
   /** Caminho dos arquivos de distribuição de scripts JavaScript do projeto. */
-  js: "dist/js",
-
-  /** Caminho dos arquivos de distribuição do projeto. */
-  dist: "dist"
+  js: "dist/js"
 };
-
-/** Limpa o caminho dos arquivos de distribuição de folhas de estilo CSS do projeto. */
-function cleanCssPath() {
-
-  return del(paths.css);
-}
 
 const header = require("gulp-header");
 const rename = require("gulp-rename");
@@ -78,7 +69,7 @@ function buildCss() {
     .pipe(dest(paths.css));
 }
 
-task("css", series(cleanCssPath, buildCss));
+task("css", series(delCss, buildCss));
 
 /** Constrói os arquivos de distribuição de scripts JavaScript do projeto. */
 function buildJs() {
@@ -118,8 +109,10 @@ function buildJs() {
 }
 
 task("js", series(delJs, buildJs));
+
 task("docs", series(delDocs, buildDocs));
 task("docsDependency", series(delDocsLibs, copyDocsDependency));
 task("jsDocs", series("js", "docsDependency"));
 task("watchDocs", watchDocs);
+
 task("default", series(parallel("css", "js", "docs"), "docsDependency"));
