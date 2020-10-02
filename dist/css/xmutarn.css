@@ -1,4 +1,4 @@
-/*! Xmutarn v0.28.0-beta.4 (https://github.com/viniciusxdl/xmutarn.git) | Copyright 2020 Vinícius Lima | Licensed under MIT (https://github.com/viniciusxdl/xmutarn/blob/master/LICENSE) */
+/*! Xmutarn v0.29.0 (https://github.com/viniciusxdl/xmutarn.git) | Copyright 2020 Vinícius Lima | Licensed under MIT (https://github.com/viniciusxdl/xmutarn/blob/master/LICENSE) */
 .border-small, .border-top-small, .border-right-small, .border-bottom-small, .border-left-small, .border-medium, .border-top-medium, .border-right-medium, .border-bottom-medium, .border-left-medium, .border-large, .border-top-large, .border-right-large, .border-bottom-large, .border-left-large {
   border-color: var(--theme-main-dividers, rgba(0, 0, 0, 0.12)) !important;
 }

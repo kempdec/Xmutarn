@@ -1,4 +1,4 @@
-/*! Xmutarn v0.28.0-beta.4 (https://github.com/viniciusxdl/xmutarn.git) | Copyright 2020 Vinícius Lima | Licensed under MIT (https://github.com/viniciusxdl/xmutarn/blob/master/LICENSE) */
+/*! Xmutarn v0.29.0 (https://github.com/viniciusxdl/xmutarn.git) | Copyright 2020 Vinícius Lima | Licensed under MIT (https://github.com/viniciusxdl/xmutarn/blob/master/LICENSE) */
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }

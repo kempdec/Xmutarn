@@ -1,8 +1,10 @@
-"use strict";
+import del from "del";
+import {
+  copyDocsDependency,
+  delDocsLibs
+} from "./scripts/tasks/docsDependency";
 
-const del = require("del");
-
-/** Caminhos do projeto. */
+/** Os caminhos do projeto. */
 const paths = {
 
   /** Caminho dos arquivos de distribuição de folhas de estilo CSS do projeto. */
@@ -15,13 +17,7 @@ const paths = {
   dist: "dist",
 
   /** Caminho dos arquivos de documentações do projeto. */
-  docs: "docs",
-
-  /** Caminho dos arquivos das bibliotecas da documentação do projeto. */
-  docsLib: "docs/assets/lib",
-
-  /** Caminho dos arquivos do Xmutarn da documentação do projeto. */
-  docsXmutarn: "docs/assets/lib/xmutarn"
+  docs: "docs"
 };
 
 /** Limpa o caminho dos arquivos de distribuição de folhas de estilo CSS do projeto. */
@@ -34,7 +30,8 @@ const {
   src,
   dest,
   series,
-  parallel
+  parallel,
+  task
 } = require("gulp");
 
 const header = require("gulp-header");
@@ -71,7 +68,7 @@ function buildCss() {
     .pipe(dest(paths.css));
 
   return src(mainSassFile)
-    .pipe(rename(path => {
+    .pipe(rename((path: any) => {
       path.basename += ".min";
     }))
     .pipe(sass({
@@ -111,7 +108,7 @@ function buildJs() {
     basedir: "."
   })
     .plugin(tsify)
-    .bundle().on("error", e => console.error(e))
+    .bundle().on("error", (e: Error) => console.error(e))
     .pipe(source(`xmutarn.js`))
     .pipe(buffer())
     .pipe(babel({
@@ -119,8 +116,8 @@ function buildJs() {
     }))
     .pipe(header(banner))
     .pipe(dest(paths.js))
-    .pipe(uglify().on("error", e => console.error(e)))
-    .pipe(rename(path => {
+    .pipe(uglify().on("error", (e: Error) => console.error(e)))
+    .pipe(rename((path: any) => {
       path.basename += ".min";
     }))
     .pipe(header(banner))
@@ -133,20 +130,7 @@ function buildJs() {
 
 exports.js = series(cleanJsPath, buildJs);
 
-/** Limpa os arquivos do Xmutarn da documentação do projeto. */
-function cleanDocsXmutarnPath() {
-
-  return del(paths.docsXmutarn);
-}
-
-/** Copia os arquivos de distribuição para os ativos da documentação do projeto. */
-function copyDistToDocs() {
-
-  return src(`${paths.dist}/**/*`)
-    .pipe(dest(paths.docsXmutarn));
-}
-
-exports.copyToDocs = series(cleanDocsXmutarnPath, copyDistToDocs);
+task("docsDependency", series(delDocsLibs, copyDocsDependency));
 
 /** Limpa o caminho dos arquivos de documentações do projeto. */
 function cleanDocsPath() {
@@ -177,5 +161,5 @@ exports.default =
       series(cleanJsPath, buildJs),
       series(cleanDocsPath, buildDocs)
     ),
-    series(cleanDocsXmutarnPath, copyDistToDocs)
+    "docsDependency"
   );
