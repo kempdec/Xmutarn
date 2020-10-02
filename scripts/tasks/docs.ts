@@ -1,7 +1,7 @@
 import del from "del";
-import { dest, src } from "gulp";
 import pug from "gulp-pug";
 import { Dependency } from "../Dependency";
+import { dest, series, src, watch } from "gulp";
 
 const paths = {
 
@@ -15,7 +15,10 @@ const paths = {
     docsFiles: "docs/**/*.html",
 
     /** O caminho dos arquivos fonte de documentação do projeto. */
-    docsSrcFiles: "src/docs/**/*.pug"
+    docsSrcFiles: "src/docs/**/*",
+
+    /** O caminho dos arquivos PUG de documentação do projeto. */
+    docsPugFiles: "src/docs/**/*.pug"
 };
 
 /** Deleta os arquivos de documentação do projeto. */
@@ -41,7 +44,13 @@ export function copyDocsDependency(): NodeJS.ReadWriteStream {
 /** Constrói os arquivos de documentação do projeto. */
 export function buildDocs(): NodeJS.ReadWriteStream {
 
-    return src(paths.docsSrcFiles)
+    return src(paths.docsPugFiles)
         .pipe(pug())
         .pipe(dest(paths.docs));
+}
+
+/** Assiste à alterações nos arquivos de documentação do projeto. */
+export function watchDocs(): void {
+
+    watch(paths.docsSrcFiles, series(delDocs, buildDocs));
 }

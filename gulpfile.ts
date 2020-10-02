@@ -1,11 +1,7 @@
 import del from "del";
+import { dest, parallel, series, src, task } from "gulp";
 import { delJs } from "./scripts/tasks/js";
-import {
-  buildDocs,
-  copyDocsDependency,
-  delDocs,
-  delDocsLibs
-} from "./scripts/tasks/docs";
+import { buildDocs, copyDocsDependency, delDocs, delDocsLibs, watchDocs } from "./scripts/tasks/docs";
 
 /** Os caminhos do projeto. */
 const paths = {
@@ -25,14 +21,6 @@ function cleanCssPath() {
 
   return del(paths.css);
 }
-
-const {
-  src,
-  dest,
-  series,
-  parallel,
-  task
-} = require("gulp");
 
 const header = require("gulp-header");
 const rename = require("gulp-rename");
@@ -125,9 +113,6 @@ function buildJs() {
 task("js", series(delJs, buildJs));
 task("docs", series(delDocs, buildDocs));
 task("docsDependency", series(delDocsLibs, copyDocsDependency));
-
-const watch = require("gulp-watch");
-
-exports.docsWatch = () => watch("src/docs/**/*", series(delDocs, buildDocs));
-
-exports.default = series(parallel("css", "js", "docs"), "docsDependency");
+task("jsDocs", series("js", "docsDependency"));
+task("watchDocs", watchDocs);
+task("default", series(parallel("css", "js", "docs"), "docsDependency"));
