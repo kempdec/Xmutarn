@@ -1,4 +1,5 @@
 import del from "del";
+import { delJs } from "./scripts/tasks/js";
 import {
   buildDocs,
   copyDocsDependency,
@@ -82,13 +83,7 @@ function buildCss() {
     .pipe(dest(paths.css));
 }
 
-exports.css = series(cleanCssPath, buildCss);
-
-/** Limpa o caminho dos arquivos de distribuição de scripts JavaScript do projeto. */
-function cleanJsPath() {
-
-  return del(paths.js);
-}
+task("css", series(cleanCssPath, buildCss));
 
 /** Constrói os arquivos de distribuição de scripts JavaScript do projeto. */
 function buildJs() {
@@ -127,8 +122,7 @@ function buildJs() {
     .pipe(dest(paths.js));
 }
 
-exports.js = series(cleanJsPath, buildJs);
-
+task("js", series(delJs, buildJs));
 task("docs", series(delDocs, buildDocs));
 task("docsDependency", series(delDocsLibs, copyDocsDependency));
 
@@ -136,12 +130,4 @@ const watch = require("gulp-watch");
 
 exports.docsWatch = () => watch("src/docs/**/*", series(delDocs, buildDocs));
 
-exports.default =
-  series(
-    parallel(
-      series(cleanCssPath, buildCss),
-      series(cleanJsPath, buildJs),
-      "docs"
-    ),
-    "docsDependency"
-  );
+exports.default = series(parallel("css", "js", "docs"), "docsDependency");

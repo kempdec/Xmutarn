@@ -14,7 +14,13 @@ export class Dependency {
      */
     constructor(readonly name: string, filePath: string) {
 
-        this.filePath = `node_modules/${name}/${filePath}`;
+        if (name == "xmutarn") {
+
+            this.filePath = filePath;
+        } else {
+
+            this.filePath = `node_modules/${name}/${filePath}`;
+        }
     }
 
     /** Os fluxos das cópias das dependências. */

@@ -1,0 +1,3050 @@
+/*! Xmutarn v0.29.0 (https://github.com/viniciusxdl/xmutarn.git) | Copyright 2020 Vinícius Lima | Licensed under MIT (https://github.com/viniciusxdl/xmutarn/blob/master/LICENSE) */
+.color-fg-red-50, .color-fg-red-50__hover:hover, .color-fg-red-50__active:active, .color-fg-red-50__focus:focus, .color-fg-red-50__before::before, .color-fg-red-50__after::after {
+  color: #FFEBEE !important;
+}
+
+.color-fg-red-100, .color-fg-red-100__hover:hover, .color-fg-red-100__active:active, .color-fg-red-100__focus:focus, .color-fg-red-100__before::before, .color-fg-red-100__after::after {
+  color: #FFCDD2 !important;
+}
+
+.color-fg-red-200, .color-fg-red-200__hover:hover, .color-fg-red-200__active:active, .color-fg-red-200__focus:focus, .color-fg-red-200__before::before, .color-fg-red-200__after::after {
+  color: #EF9A9A !important;
+}
+
+.color-fg-red-300, .color-fg-red-300__hover:hover, .color-fg-red-300__active:active, .color-fg-red-300__focus:focus, .color-fg-red-300__before::before, .color-fg-red-300__after::after {
+  color: #E57373 !important;
+}
+
+.color-fg-red-400, .color-fg-red-400__hover:hover, .color-fg-red-400__active:active, .color-fg-red-400__focus:focus, .color-fg-red-400__before::before, .color-fg-red-400__after::after {
+  color: #EF5350 !important;
+}
+
+.color-fg-red-500, .color-fg-red-500__hover:hover, .color-fg-red-500__active:active, .color-fg-red-500__focus:focus, .color-fg-red-500__before::before, .color-fg-red-500__after::after {
+  color: #F44336 !important;
+}
+
+.color-fg-red-600, .color-fg-red-600__hover:hover, .color-fg-red-600__active:active, .color-fg-red-600__focus:focus, .color-fg-red-600__before::before, .color-fg-red-600__after::after {
+  color: #E53935 !important;
+}
+
+.color-fg-red-700, .color-fg-red-700__hover:hover, .color-fg-red-700__active:active, .color-fg-red-700__focus:focus, .color-fg-red-700__before::before, .color-fg-red-700__after::after {
+  color: #D32F2F !important;
+}
+
+.color-fg-red-800, .color-fg-red-800__hover:hover, .color-fg-red-800__active:active, .color-fg-red-800__focus:focus, .color-fg-red-800__before::before, .color-fg-red-800__after::after {
+  color: #C62828 !important;
+}
+
+.color-fg-red-900, .color-fg-red-900__hover:hover, .color-fg-red-900__active:active, .color-fg-red-900__focus:focus, .color-fg-red-900__before::before, .color-fg-red-900__after::after {
+  color: #B71C1C !important;
+}
+
+.color-fg-red-A100, .color-fg-red-A100__hover:hover, .color-fg-red-A100__active:active, .color-fg-red-A100__focus:focus, .color-fg-red-A100__before::before, .color-fg-red-A100__after::after {
+  color: #FF8A80 !important;
+}
+
+.color-fg-red-A200, .color-fg-red-A200__hover:hover, .color-fg-red-A200__active:active, .color-fg-red-A200__focus:focus, .color-fg-red-A200__before::before, .color-fg-red-A200__after::after {
+  color: #FF5252 !important;
+}
+
+.color-fg-red-A400, .color-fg-red-A400__hover:hover, .color-fg-red-A400__active:active, .color-fg-red-A400__focus:focus, .color-fg-red-A400__before::before, .color-fg-red-A400__after::after {
+  color: #FF1744 !important;
+}
+
+.color-fg-red-A700, .color-fg-red-A700__hover:hover, .color-fg-red-A700__active:active, .color-fg-red-A700__focus:focus, .color-fg-red-A700__before::before, .color-fg-red-A700__after::after {
+  color: #D50000 !important;
+}
+
+.color-bg-red-50, .color-bg-red-50__hover:hover, .color-bg-red-50__active:active, .color-bg-red-50__focus:focus, .color-bg-red-50__before::before, .color-bg-red-50__after::after {
+  background: #FFEBEE !important;
+}
+
+.color-bg-red-100, .color-bg-red-100__hover:hover, .color-bg-red-100__active:active, .color-bg-red-100__focus:focus, .color-bg-red-100__before::before, .color-bg-red-100__after::after {
+  background: #FFCDD2 !important;
+}
+
+.color-bg-red-200, .color-bg-red-200__hover:hover, .color-bg-red-200__active:active, .color-bg-red-200__focus:focus, .color-bg-red-200__before::before, .color-bg-red-200__after::after {
+  background: #EF9A9A !important;
+}
+
+.color-bg-red-300, .color-bg-red-300__hover:hover, .color-bg-red-300__active:active, .color-bg-red-300__focus:focus, .color-bg-red-300__before::before, .color-bg-red-300__after::after {
+  background: #E57373 !important;
+}
+
+.color-bg-red-400, .color-bg-red-400__hover:hover, .color-bg-red-400__active:active, .color-bg-red-400__focus:focus, .color-bg-red-400__before::before, .color-bg-red-400__after::after {
+  background: #EF5350 !important;
+}
+
+.color-bg-red-500, .color-bg-red-500__hover:hover, .color-bg-red-500__active:active, .color-bg-red-500__focus:focus, .color-bg-red-500__before::before, .color-bg-red-500__after::after {
+  background: #F44336 !important;
+}
+
+.color-bg-red-600, .color-bg-red-600__hover:hover, .color-bg-red-600__active:active, .color-bg-red-600__focus:focus, .color-bg-red-600__before::before, .color-bg-red-600__after::after {
+  background: #E53935 !important;
+}
+
+.color-bg-red-700, .color-bg-red-700__hover:hover, .color-bg-red-700__active:active, .color-bg-red-700__focus:focus, .color-bg-red-700__before::before, .color-bg-red-700__after::after {
+  background: #D32F2F !important;
+}
+
+.color-bg-red-800, .color-bg-red-800__hover:hover, .color-bg-red-800__active:active, .color-bg-red-800__focus:focus, .color-bg-red-800__before::before, .color-bg-red-800__after::after {
+  background: #C62828 !important;
+}
+
+.color-bg-red-900, .color-bg-red-900__hover:hover, .color-bg-red-900__active:active, .color-bg-red-900__focus:focus, .color-bg-red-900__before::before, .color-bg-red-900__after::after {
+  background: #B71C1C !important;
+}
+
+.color-bg-red-A100, .color-bg-red-A100__hover:hover, .color-bg-red-A100__active:active, .color-bg-red-A100__focus:focus, .color-bg-red-A100__before::before, .color-bg-red-A100__after::after {
+  background: #FF8A80 !important;
+}
+
+.color-bg-red-A200, .color-bg-red-A200__hover:hover, .color-bg-red-A200__active:active, .color-bg-red-A200__focus:focus, .color-bg-red-A200__before::before, .color-bg-red-A200__after::after {
+  background: #FF5252 !important;
+}
+
+.color-bg-red-A400, .color-bg-red-A400__hover:hover, .color-bg-red-A400__active:active, .color-bg-red-A400__focus:focus, .color-bg-red-A400__before::before, .color-bg-red-A400__after::after {
+  background: #FF1744 !important;
+}
+
+.color-bg-red-A700, .color-bg-red-A700__hover:hover, .color-bg-red-A700__active:active, .color-bg-red-A700__focus:focus, .color-bg-red-A700__before::before, .color-bg-red-A700__after::after {
+  background: #D50000 !important;
+}
+
+.color-bd-red-50, .color-bd-red-50__hover:hover, .color-bd-red-50__active:active, .color-bd-red-50__focus:focus, .color-bd-red-50__before::before, .color-bd-red-50__after::after {
+  border-color: #FFEBEE !important;
+}
+
+.color-bd-red-100, .color-bd-red-100__hover:hover, .color-bd-red-100__active:active, .color-bd-red-100__focus:focus, .color-bd-red-100__before::before, .color-bd-red-100__after::after {
+  border-color: #FFCDD2 !important;
+}
+
+.color-bd-red-200, .color-bd-red-200__hover:hover, .color-bd-red-200__active:active, .color-bd-red-200__focus:focus, .color-bd-red-200__before::before, .color-bd-red-200__after::after {
+  border-color: #EF9A9A !important;
+}
+
+.color-bd-red-300, .color-bd-red-300__hover:hover, .color-bd-red-300__active:active, .color-bd-red-300__focus:focus, .color-bd-red-300__before::before, .color-bd-red-300__after::after {
+  border-color: #E57373 !important;
+}
+
+.color-bd-red-400, .color-bd-red-400__hover:hover, .color-bd-red-400__active:active, .color-bd-red-400__focus:focus, .color-bd-red-400__before::before, .color-bd-red-400__after::after {
+  border-color: #EF5350 !important;
+}
+
+.color-bd-red-500, .color-bd-red-500__hover:hover, .color-bd-red-500__active:active, .color-bd-red-500__focus:focus, .color-bd-red-500__before::before, .color-bd-red-500__after::after {
+  border-color: #F44336 !important;
+}
+
+.color-bd-red-600, .color-bd-red-600__hover:hover, .color-bd-red-600__active:active, .color-bd-red-600__focus:focus, .color-bd-red-600__before::before, .color-bd-red-600__after::after {
+  border-color: #E53935 !important;
+}
+
+.color-bd-red-700, .color-bd-red-700__hover:hover, .color-bd-red-700__active:active, .color-bd-red-700__focus:focus, .color-bd-red-700__before::before, .color-bd-red-700__after::after {
+  border-color: #D32F2F !important;
+}
+
+.color-bd-red-800, .color-bd-red-800__hover:hover, .color-bd-red-800__active:active, .color-bd-red-800__focus:focus, .color-bd-red-800__before::before, .color-bd-red-800__after::after {
+  border-color: #C62828 !important;
+}
+
+.color-bd-red-900, .color-bd-red-900__hover:hover, .color-bd-red-900__active:active, .color-bd-red-900__focus:focus, .color-bd-red-900__before::before, .color-bd-red-900__after::after {
+  border-color: #B71C1C !important;
+}
+
+.color-bd-red-A100, .color-bd-red-A100__hover:hover, .color-bd-red-A100__active:active, .color-bd-red-A100__focus:focus, .color-bd-red-A100__before::before, .color-bd-red-A100__after::after {
+  border-color: #FF8A80 !important;
+}
+
+.color-bd-red-A200, .color-bd-red-A200__hover:hover, .color-bd-red-A200__active:active, .color-bd-red-A200__focus:focus, .color-bd-red-A200__before::before, .color-bd-red-A200__after::after {
+  border-color: #FF5252 !important;
+}
+
+.color-bd-red-A400, .color-bd-red-A400__hover:hover, .color-bd-red-A400__active:active, .color-bd-red-A400__focus:focus, .color-bd-red-A400__before::before, .color-bd-red-A400__after::after {
+  border-color: #FF1744 !important;
+}
+
+.color-bd-red-A700, .color-bd-red-A700__hover:hover, .color-bd-red-A700__active:active, .color-bd-red-A700__focus:focus, .color-bd-red-A700__before::before, .color-bd-red-A700__after::after {
+  border-color: #D50000 !important;
+}
+
+.color-fg-pink-50, .color-fg-pink-50__hover:hover, .color-fg-pink-50__active:active, .color-fg-pink-50__focus:focus, .color-fg-pink-50__before::before, .color-fg-pink-50__after::after {
+  color: #FCE4EC !important;
+}
+
+.color-fg-pink-100, .color-fg-pink-100__hover:hover, .color-fg-pink-100__active:active, .color-fg-pink-100__focus:focus, .color-fg-pink-100__before::before, .color-fg-pink-100__after::after {
+  color: #F8BBD0 !important;
+}
+
+.color-fg-pink-200, .color-fg-pink-200__hover:hover, .color-fg-pink-200__active:active, .color-fg-pink-200__focus:focus, .color-fg-pink-200__before::before, .color-fg-pink-200__after::after {
+  color: #F48FB1 !important;
+}
+
+.color-fg-pink-300, .color-fg-pink-300__hover:hover, .color-fg-pink-300__active:active, .color-fg-pink-300__focus:focus, .color-fg-pink-300__before::before, .color-fg-pink-300__after::after {
+  color: #F06292 !important;
+}
+
+.color-fg-pink-400, .color-fg-pink-400__hover:hover, .color-fg-pink-400__active:active, .color-fg-pink-400__focus:focus, .color-fg-pink-400__before::before, .color-fg-pink-400__after::after {
+  color: #EC407A !important;
+}
+
+.color-fg-pink-500, .color-fg-pink-500__hover:hover, .color-fg-pink-500__active:active, .color-fg-pink-500__focus:focus, .color-fg-pink-500__before::before, .color-fg-pink-500__after::after {
+  color: #E91E63 !important;
+}
+
+.color-fg-pink-600, .color-fg-pink-600__hover:hover, .color-fg-pink-600__active:active, .color-fg-pink-600__focus:focus, .color-fg-pink-600__before::before, .color-fg-pink-600__after::after {
+  color: #D81B60 !important;
+}
+
+.color-fg-pink-700, .color-fg-pink-700__hover:hover, .color-fg-pink-700__active:active, .color-fg-pink-700__focus:focus, .color-fg-pink-700__before::before, .color-fg-pink-700__after::after {
+  color: #C2185B !important;
+}
+
+.color-fg-pink-800, .color-fg-pink-800__hover:hover, .color-fg-pink-800__active:active, .color-fg-pink-800__focus:focus, .color-fg-pink-800__before::before, .color-fg-pink-800__after::after {
+  color: #AD1457 !important;
+}
+
+.color-fg-pink-900, .color-fg-pink-900__hover:hover, .color-fg-pink-900__active:active, .color-fg-pink-900__focus:focus, .color-fg-pink-900__before::before, .color-fg-pink-900__after::after {
+  color: #880E4F !important;
+}
+
+.color-fg-pink-A100, .color-fg-pink-A100__hover:hover, .color-fg-pink-A100__active:active, .color-fg-pink-A100__focus:focus, .color-fg-pink-A100__before::before, .color-fg-pink-A100__after::after {
+  color: #FF80AB !important;
+}
+
+.color-fg-pink-A200, .color-fg-pink-A200__hover:hover, .color-fg-pink-A200__active:active, .color-fg-pink-A200__focus:focus, .color-fg-pink-A200__before::before, .color-fg-pink-A200__after::after {
+  color: #FF4081 !important;
+}
+
+.color-fg-pink-A400, .color-fg-pink-A400__hover:hover, .color-fg-pink-A400__active:active, .color-fg-pink-A400__focus:focus, .color-fg-pink-A400__before::before, .color-fg-pink-A400__after::after {
+  color: #F50057 !important;
+}
+
+.color-fg-pink-A700, .color-fg-pink-A700__hover:hover, .color-fg-pink-A700__active:active, .color-fg-pink-A700__focus:focus, .color-fg-pink-A700__before::before, .color-fg-pink-A700__after::after {
+  color: #C51162 !important;
+}
+
+.color-bg-pink-50, .color-bg-pink-50__hover:hover, .color-bg-pink-50__active:active, .color-bg-pink-50__focus:focus, .color-bg-pink-50__before::before, .color-bg-pink-50__after::after {
+  background: #FCE4EC !important;
+}
+
+.color-bg-pink-100, .color-bg-pink-100__hover:hover, .color-bg-pink-100__active:active, .color-bg-pink-100__focus:focus, .color-bg-pink-100__before::before, .color-bg-pink-100__after::after {
+  background: #F8BBD0 !important;
+}
+
+.color-bg-pink-200, .color-bg-pink-200__hover:hover, .color-bg-pink-200__active:active, .color-bg-pink-200__focus:focus, .color-bg-pink-200__before::before, .color-bg-pink-200__after::after {
+  background: #F48FB1 !important;
+}
+
+.color-bg-pink-300, .color-bg-pink-300__hover:hover, .color-bg-pink-300__active:active, .color-bg-pink-300__focus:focus, .color-bg-pink-300__before::before, .color-bg-pink-300__after::after {
+  background: #F06292 !important;
+}
+
+.color-bg-pink-400, .color-bg-pink-400__hover:hover, .color-bg-pink-400__active:active, .color-bg-pink-400__focus:focus, .color-bg-pink-400__before::before, .color-bg-pink-400__after::after {
+  background: #EC407A !important;
+}
+
+.color-bg-pink-500, .color-bg-pink-500__hover:hover, .color-bg-pink-500__active:active, .color-bg-pink-500__focus:focus, .color-bg-pink-500__before::before, .color-bg-pink-500__after::after {
+  background: #E91E63 !important;
+}
+
+.color-bg-pink-600, .color-bg-pink-600__hover:hover, .color-bg-pink-600__active:active, .color-bg-pink-600__focus:focus, .color-bg-pink-600__before::before, .color-bg-pink-600__after::after {
+  background: #D81B60 !important;
+}
+
+.color-bg-pink-700, .color-bg-pink-700__hover:hover, .color-bg-pink-700__active:active, .color-bg-pink-700__focus:focus, .color-bg-pink-700__before::before, .color-bg-pink-700__after::after {
+  background: #C2185B !important;
+}
+
+.color-bg-pink-800, .color-bg-pink-800__hover:hover, .color-bg-pink-800__active:active, .color-bg-pink-800__focus:focus, .color-bg-pink-800__before::before, .color-bg-pink-800__after::after {
+  background: #AD1457 !important;
+}
+
+.color-bg-pink-900, .color-bg-pink-900__hover:hover, .color-bg-pink-900__active:active, .color-bg-pink-900__focus:focus, .color-bg-pink-900__before::before, .color-bg-pink-900__after::after {
+  background: #880E4F !important;
+}
+
+.color-bg-pink-A100, .color-bg-pink-A100__hover:hover, .color-bg-pink-A100__active:active, .color-bg-pink-A100__focus:focus, .color-bg-pink-A100__before::before, .color-bg-pink-A100__after::after {
+  background: #FF80AB !important;
+}
+
+.color-bg-pink-A200, .color-bg-pink-A200__hover:hover, .color-bg-pink-A200__active:active, .color-bg-pink-A200__focus:focus, .color-bg-pink-A200__before::before, .color-bg-pink-A200__after::after {
+  background: #FF4081 !important;
+}
+
+.color-bg-pink-A400, .color-bg-pink-A400__hover:hover, .color-bg-pink-A400__active:active, .color-bg-pink-A400__focus:focus, .color-bg-pink-A400__before::before, .color-bg-pink-A400__after::after {
+  background: #F50057 !important;
+}
+
+.color-bg-pink-A700, .color-bg-pink-A700__hover:hover, .color-bg-pink-A700__active:active, .color-bg-pink-A700__focus:focus, .color-bg-pink-A700__before::before, .color-bg-pink-A700__after::after {
+  background: #C51162 !important;
+}
+
+.color-bd-pink-50, .color-bd-pink-50__hover:hover, .color-bd-pink-50__active:active, .color-bd-pink-50__focus:focus, .color-bd-pink-50__before::before, .color-bd-pink-50__after::after {
+  border-color: #FCE4EC !important;
+}
+
+.color-bd-pink-100, .color-bd-pink-100__hover:hover, .color-bd-pink-100__active:active, .color-bd-pink-100__focus:focus, .color-bd-pink-100__before::before, .color-bd-pink-100__after::after {
+  border-color: #F8BBD0 !important;
+}
+
+.color-bd-pink-200, .color-bd-pink-200__hover:hover, .color-bd-pink-200__active:active, .color-bd-pink-200__focus:focus, .color-bd-pink-200__before::before, .color-bd-pink-200__after::after {
+  border-color: #F48FB1 !important;
+}
+
+.color-bd-pink-300, .color-bd-pink-300__hover:hover, .color-bd-pink-300__active:active, .color-bd-pink-300__focus:focus, .color-bd-pink-300__before::before, .color-bd-pink-300__after::after {
+  border-color: #F06292 !important;
+}
+
+.color-bd-pink-400, .color-bd-pink-400__hover:hover, .color-bd-pink-400__active:active, .color-bd-pink-400__focus:focus, .color-bd-pink-400__before::before, .color-bd-pink-400__after::after {
+  border-color: #EC407A !important;
+}
+
+.color-bd-pink-500, .color-bd-pink-500__hover:hover, .color-bd-pink-500__active:active, .color-bd-pink-500__focus:focus, .color-bd-pink-500__before::before, .color-bd-pink-500__after::after {
+  border-color: #E91E63 !important;
+}
+
+.color-bd-pink-600, .color-bd-pink-600__hover:hover, .color-bd-pink-600__active:active, .color-bd-pink-600__focus:focus, .color-bd-pink-600__before::before, .color-bd-pink-600__after::after {
+  border-color: #D81B60 !important;
+}
+
+.color-bd-pink-700, .color-bd-pink-700__hover:hover, .color-bd-pink-700__active:active, .color-bd-pink-700__focus:focus, .color-bd-pink-700__before::before, .color-bd-pink-700__after::after {
+  border-color: #C2185B !important;
+}
+
+.color-bd-pink-800, .color-bd-pink-800__hover:hover, .color-bd-pink-800__active:active, .color-bd-pink-800__focus:focus, .color-bd-pink-800__before::before, .color-bd-pink-800__after::after {
+  border-color: #AD1457 !important;
+}
+
+.color-bd-pink-900, .color-bd-pink-900__hover:hover, .color-bd-pink-900__active:active, .color-bd-pink-900__focus:focus, .color-bd-pink-900__before::before, .color-bd-pink-900__after::after {
+  border-color: #880E4F !important;
+}
+
+.color-bd-pink-A100, .color-bd-pink-A100__hover:hover, .color-bd-pink-A100__active:active, .color-bd-pink-A100__focus:focus, .color-bd-pink-A100__before::before, .color-bd-pink-A100__after::after {
+  border-color: #FF80AB !important;
+}
+
+.color-bd-pink-A200, .color-bd-pink-A200__hover:hover, .color-bd-pink-A200__active:active, .color-bd-pink-A200__focus:focus, .color-bd-pink-A200__before::before, .color-bd-pink-A200__after::after {
+  border-color: #FF4081 !important;
+}
+
+.color-bd-pink-A400, .color-bd-pink-A400__hover:hover, .color-bd-pink-A400__active:active, .color-bd-pink-A400__focus:focus, .color-bd-pink-A400__before::before, .color-bd-pink-A400__after::after {
+  border-color: #F50057 !important;
+}
+
+.color-bd-pink-A700, .color-bd-pink-A700__hover:hover, .color-bd-pink-A700__active:active, .color-bd-pink-A700__focus:focus, .color-bd-pink-A700__before::before, .color-bd-pink-A700__after::after {
+  border-color: #C51162 !important;
+}
+
+.color-fg-purple-50, .color-fg-purple-50__hover:hover, .color-fg-purple-50__active:active, .color-fg-purple-50__focus:focus, .color-fg-purple-50__before::before, .color-fg-purple-50__after::after {
+  color: #F3E5F5 !important;
+}
+
+.color-fg-purple-100, .color-fg-purple-100__hover:hover, .color-fg-purple-100__active:active, .color-fg-purple-100__focus:focus, .color-fg-purple-100__before::before, .color-fg-purple-100__after::after {
+  color: #E1BEE7 !important;
+}
+
+.color-fg-purple-200, .color-fg-purple-200__hover:hover, .color-fg-purple-200__active:active, .color-fg-purple-200__focus:focus, .color-fg-purple-200__before::before, .color-fg-purple-200__after::after {
+  color: #CE93D8 !important;
+}
+
+.color-fg-purple-300, .color-fg-purple-300__hover:hover, .color-fg-purple-300__active:active, .color-fg-purple-300__focus:focus, .color-fg-purple-300__before::before, .color-fg-purple-300__after::after {
+  color: #BA68C8 !important;
+}
+
+.color-fg-purple-400, .color-fg-purple-400__hover:hover, .color-fg-purple-400__active:active, .color-fg-purple-400__focus:focus, .color-fg-purple-400__before::before, .color-fg-purple-400__after::after {
+  color: #AB47BC !important;
+}
+
+.color-fg-purple-500, .color-fg-purple-500__hover:hover, .color-fg-purple-500__active:active, .color-fg-purple-500__focus:focus, .color-fg-purple-500__before::before, .color-fg-purple-500__after::after {
+  color: #9C27B0 !important;
+}
+
+.color-fg-purple-600, .color-fg-purple-600__hover:hover, .color-fg-purple-600__active:active, .color-fg-purple-600__focus:focus, .color-fg-purple-600__before::before, .color-fg-purple-600__after::after {
+  color: #8E24AA !important;
+}
+
+.color-fg-purple-700, .color-fg-purple-700__hover:hover, .color-fg-purple-700__active:active, .color-fg-purple-700__focus:focus, .color-fg-purple-700__before::before, .color-fg-purple-700__after::after {
+  color: #7B1FA2 !important;
+}
+
+.color-fg-purple-800, .color-fg-purple-800__hover:hover, .color-fg-purple-800__active:active, .color-fg-purple-800__focus:focus, .color-fg-purple-800__before::before, .color-fg-purple-800__after::after {
+  color: #6A1B9A !important;
+}
+
+.color-fg-purple-900, .color-fg-purple-900__hover:hover, .color-fg-purple-900__active:active, .color-fg-purple-900__focus:focus, .color-fg-purple-900__before::before, .color-fg-purple-900__after::after {
+  color: #4A148C !important;
+}
+
+.color-fg-purple-A100, .color-fg-purple-A100__hover:hover, .color-fg-purple-A100__active:active, .color-fg-purple-A100__focus:focus, .color-fg-purple-A100__before::before, .color-fg-purple-A100__after::after {
+  color: #EA80FC !important;
+}
+
+.color-fg-purple-A200, .color-fg-purple-A200__hover:hover, .color-fg-purple-A200__active:active, .color-fg-purple-A200__focus:focus, .color-fg-purple-A200__before::before, .color-fg-purple-A200__after::after {
+  color: #E040FB !important;
+}
+
+.color-fg-purple-A400, .color-fg-purple-A400__hover:hover, .color-fg-purple-A400__active:active, .color-fg-purple-A400__focus:focus, .color-fg-purple-A400__before::before, .color-fg-purple-A400__after::after {
+  color: #D500F9 !important;
+}
+
+.color-fg-purple-A700, .color-fg-purple-A700__hover:hover, .color-fg-purple-A700__active:active, .color-fg-purple-A700__focus:focus, .color-fg-purple-A700__before::before, .color-fg-purple-A700__after::after {
+  color: #AA00FF !important;
+}
+
+.color-bg-purple-50, .color-bg-purple-50__hover:hover, .color-bg-purple-50__active:active, .color-bg-purple-50__focus:focus, .color-bg-purple-50__before::before, .color-bg-purple-50__after::after {
+  background: #F3E5F5 !important;
+}
+
+.color-bg-purple-100, .color-bg-purple-100__hover:hover, .color-bg-purple-100__active:active, .color-bg-purple-100__focus:focus, .color-bg-purple-100__before::before, .color-bg-purple-100__after::after {
+  background: #E1BEE7 !important;
+}
+
+.color-bg-purple-200, .color-bg-purple-200__hover:hover, .color-bg-purple-200__active:active, .color-bg-purple-200__focus:focus, .color-bg-purple-200__before::before, .color-bg-purple-200__after::after {
+  background: #CE93D8 !important;
+}
+
+.color-bg-purple-300, .color-bg-purple-300__hover:hover, .color-bg-purple-300__active:active, .color-bg-purple-300__focus:focus, .color-bg-purple-300__before::before, .color-bg-purple-300__after::after {
+  background: #BA68C8 !important;
+}
+
+.color-bg-purple-400, .color-bg-purple-400__hover:hover, .color-bg-purple-400__active:active, .color-bg-purple-400__focus:focus, .color-bg-purple-400__before::before, .color-bg-purple-400__after::after {
+  background: #AB47BC !important;
+}
+
+.color-bg-purple-500, .color-bg-purple-500__hover:hover, .color-bg-purple-500__active:active, .color-bg-purple-500__focus:focus, .color-bg-purple-500__before::before, .color-bg-purple-500__after::after {
+  background: #9C27B0 !important;
+}
+
+.color-bg-purple-600, .color-bg-purple-600__hover:hover, .color-bg-purple-600__active:active, .color-bg-purple-600__focus:focus, .color-bg-purple-600__before::before, .color-bg-purple-600__after::after {
+  background: #8E24AA !important;
+}
+
+.color-bg-purple-700, .color-bg-purple-700__hover:hover, .color-bg-purple-700__active:active, .color-bg-purple-700__focus:focus, .color-bg-purple-700__before::before, .color-bg-purple-700__after::after {
+  background: #7B1FA2 !important;
+}
+
+.color-bg-purple-800, .color-bg-purple-800__hover:hover, .color-bg-purple-800__active:active, .color-bg-purple-800__focus:focus, .color-bg-purple-800__before::before, .color-bg-purple-800__after::after {
+  background: #6A1B9A !important;
+}
+
+.color-bg-purple-900, .color-bg-purple-900__hover:hover, .color-bg-purple-900__active:active, .color-bg-purple-900__focus:focus, .color-bg-purple-900__before::before, .color-bg-purple-900__after::after {
+  background: #4A148C !important;
+}
+
+.color-bg-purple-A100, .color-bg-purple-A100__hover:hover, .color-bg-purple-A100__active:active, .color-bg-purple-A100__focus:focus, .color-bg-purple-A100__before::before, .color-bg-purple-A100__after::after {
+  background: #EA80FC !important;
+}
+
+.color-bg-purple-A200, .color-bg-purple-A200__hover:hover, .color-bg-purple-A200__active:active, .color-bg-purple-A200__focus:focus, .color-bg-purple-A200__before::before, .color-bg-purple-A200__after::after {
+  background: #E040FB !important;
+}
+
+.color-bg-purple-A400, .color-bg-purple-A400__hover:hover, .color-bg-purple-A400__active:active, .color-bg-purple-A400__focus:focus, .color-bg-purple-A400__before::before, .color-bg-purple-A400__after::after {
+  background: #D500F9 !important;
+}
+
+.color-bg-purple-A700, .color-bg-purple-A700__hover:hover, .color-bg-purple-A700__active:active, .color-bg-purple-A700__focus:focus, .color-bg-purple-A700__before::before, .color-bg-purple-A700__after::after {
+  background: #AA00FF !important;
+}
+
+.color-bd-purple-50, .color-bd-purple-50__hover:hover, .color-bd-purple-50__active:active, .color-bd-purple-50__focus:focus, .color-bd-purple-50__before::before, .color-bd-purple-50__after::after {
+  border-color: #F3E5F5 !important;
+}
+
+.color-bd-purple-100, .color-bd-purple-100__hover:hover, .color-bd-purple-100__active:active, .color-bd-purple-100__focus:focus, .color-bd-purple-100__before::before, .color-bd-purple-100__after::after {
+  border-color: #E1BEE7 !important;
+}
+
+.color-bd-purple-200, .color-bd-purple-200__hover:hover, .color-bd-purple-200__active:active, .color-bd-purple-200__focus:focus, .color-bd-purple-200__before::before, .color-bd-purple-200__after::after {
+  border-color: #CE93D8 !important;
+}
+
+.color-bd-purple-300, .color-bd-purple-300__hover:hover, .color-bd-purple-300__active:active, .color-bd-purple-300__focus:focus, .color-bd-purple-300__before::before, .color-bd-purple-300__after::after {
+  border-color: #BA68C8 !important;
+}
+
+.color-bd-purple-400, .color-bd-purple-400__hover:hover, .color-bd-purple-400__active:active, .color-bd-purple-400__focus:focus, .color-bd-purple-400__before::before, .color-bd-purple-400__after::after {
+  border-color: #AB47BC !important;
+}
+
+.color-bd-purple-500, .color-bd-purple-500__hover:hover, .color-bd-purple-500__active:active, .color-bd-purple-500__focus:focus, .color-bd-purple-500__before::before, .color-bd-purple-500__after::after {
+  border-color: #9C27B0 !important;
+}
+
+.color-bd-purple-600, .color-bd-purple-600__hover:hover, .color-bd-purple-600__active:active, .color-bd-purple-600__focus:focus, .color-bd-purple-600__before::before, .color-bd-purple-600__after::after {
+  border-color: #8E24AA !important;
+}
+
+.color-bd-purple-700, .color-bd-purple-700__hover:hover, .color-bd-purple-700__active:active, .color-bd-purple-700__focus:focus, .color-bd-purple-700__before::before, .color-bd-purple-700__after::after {
+  border-color: #7B1FA2 !important;
+}
+
+.color-bd-purple-800, .color-bd-purple-800__hover:hover, .color-bd-purple-800__active:active, .color-bd-purple-800__focus:focus, .color-bd-purple-800__before::before, .color-bd-purple-800__after::after {
+  border-color: #6A1B9A !important;
+}
+
+.color-bd-purple-900, .color-bd-purple-900__hover:hover, .color-bd-purple-900__active:active, .color-bd-purple-900__focus:focus, .color-bd-purple-900__before::before, .color-bd-purple-900__after::after {
+  border-color: #4A148C !important;
+}
+
+.color-bd-purple-A100, .color-bd-purple-A100__hover:hover, .color-bd-purple-A100__active:active, .color-bd-purple-A100__focus:focus, .color-bd-purple-A100__before::before, .color-bd-purple-A100__after::after {
+  border-color: #EA80FC !important;
+}
+
+.color-bd-purple-A200, .color-bd-purple-A200__hover:hover, .color-bd-purple-A200__active:active, .color-bd-purple-A200__focus:focus, .color-bd-purple-A200__before::before, .color-bd-purple-A200__after::after {
+  border-color: #E040FB !important;
+}
+
+.color-bd-purple-A400, .color-bd-purple-A400__hover:hover, .color-bd-purple-A400__active:active, .color-bd-purple-A400__focus:focus, .color-bd-purple-A400__before::before, .color-bd-purple-A400__after::after {
+  border-color: #D500F9 !important;
+}
+
+.color-bd-purple-A700, .color-bd-purple-A700__hover:hover, .color-bd-purple-A700__active:active, .color-bd-purple-A700__focus:focus, .color-bd-purple-A700__before::before, .color-bd-purple-A700__after::after {
+  border-color: #AA00FF !important;
+}
+
+.color-fg-deep-purple-50, .color-fg-deep-purple-50__hover:hover, .color-fg-deep-purple-50__active:active, .color-fg-deep-purple-50__focus:focus, .color-fg-deep-purple-50__before::before, .color-fg-deep-purple-50__after::after {
+  color: #EDE7F6 !important;
+}
+
+.color-fg-deep-purple-100, .color-fg-deep-purple-100__hover:hover, .color-fg-deep-purple-100__active:active, .color-fg-deep-purple-100__focus:focus, .color-fg-deep-purple-100__before::before, .color-fg-deep-purple-100__after::after {
+  color: #D1C4E9 !important;
+}
+
+.color-fg-deep-purple-200, .color-fg-deep-purple-200__hover:hover, .color-fg-deep-purple-200__active:active, .color-fg-deep-purple-200__focus:focus, .color-fg-deep-purple-200__before::before, .color-fg-deep-purple-200__after::after {
+  color: #B39DDB !important;
+}
+
+.color-fg-deep-purple-300, .color-fg-deep-purple-300__hover:hover, .color-fg-deep-purple-300__active:active, .color-fg-deep-purple-300__focus:focus, .color-fg-deep-purple-300__before::before, .color-fg-deep-purple-300__after::after {
+  color: #9575CD !important;
+}
+
+.color-fg-deep-purple-400, .color-fg-deep-purple-400__hover:hover, .color-fg-deep-purple-400__active:active, .color-fg-deep-purple-400__focus:focus, .color-fg-deep-purple-400__before::before, .color-fg-deep-purple-400__after::after {
+  color: #7E57C2 !important;
+}
+
+.color-fg-deep-purple-500, .color-fg-deep-purple-500__hover:hover, .color-fg-deep-purple-500__active:active, .color-fg-deep-purple-500__focus:focus, .color-fg-deep-purple-500__before::before, .color-fg-deep-purple-500__after::after {
+  color: #673AB7 !important;
+}
+
+.color-fg-deep-purple-600, .color-fg-deep-purple-600__hover:hover, .color-fg-deep-purple-600__active:active, .color-fg-deep-purple-600__focus:focus, .color-fg-deep-purple-600__before::before, .color-fg-deep-purple-600__after::after {
+  color: #5E35B1 !important;
+}
+
+.color-fg-deep-purple-700, .color-fg-deep-purple-700__hover:hover, .color-fg-deep-purple-700__active:active, .color-fg-deep-purple-700__focus:focus, .color-fg-deep-purple-700__before::before, .color-fg-deep-purple-700__after::after {
+  color: #512DA8 !important;
+}
+
+.color-fg-deep-purple-800, .color-fg-deep-purple-800__hover:hover, .color-fg-deep-purple-800__active:active, .color-fg-deep-purple-800__focus:focus, .color-fg-deep-purple-800__before::before, .color-fg-deep-purple-800__after::after {
+  color: #4527A0 !important;
+}
+
+.color-fg-deep-purple-900, .color-fg-deep-purple-900__hover:hover, .color-fg-deep-purple-900__active:active, .color-fg-deep-purple-900__focus:focus, .color-fg-deep-purple-900__before::before, .color-fg-deep-purple-900__after::after {
+  color: #311B92 !important;
+}
+
+.color-fg-deep-purple-A100, .color-fg-deep-purple-A100__hover:hover, .color-fg-deep-purple-A100__active:active, .color-fg-deep-purple-A100__focus:focus, .color-fg-deep-purple-A100__before::before, .color-fg-deep-purple-A100__after::after {
+  color: #B388FF !important;
+}
+
+.color-fg-deep-purple-A200, .color-fg-deep-purple-A200__hover:hover, .color-fg-deep-purple-A200__active:active, .color-fg-deep-purple-A200__focus:focus, .color-fg-deep-purple-A200__before::before, .color-fg-deep-purple-A200__after::after {
+  color: #7C4DFF !important;
+}
+
+.color-fg-deep-purple-A400, .color-fg-deep-purple-A400__hover:hover, .color-fg-deep-purple-A400__active:active, .color-fg-deep-purple-A400__focus:focus, .color-fg-deep-purple-A400__before::before, .color-fg-deep-purple-A400__after::after {
+  color: #651FFF !important;
+}
+
+.color-fg-deep-purple-A700, .color-fg-deep-purple-A700__hover:hover, .color-fg-deep-purple-A700__active:active, .color-fg-deep-purple-A700__focus:focus, .color-fg-deep-purple-A700__before::before, .color-fg-deep-purple-A700__after::after {
+  color: #6200EA !important;
+}
+
+.color-bg-deep-purple-50, .color-bg-deep-purple-50__hover:hover, .color-bg-deep-purple-50__active:active, .color-bg-deep-purple-50__focus:focus, .color-bg-deep-purple-50__before::before, .color-bg-deep-purple-50__after::after {
+  background: #EDE7F6 !important;
+}
+
+.color-bg-deep-purple-100, .color-bg-deep-purple-100__hover:hover, .color-bg-deep-purple-100__active:active, .color-bg-deep-purple-100__focus:focus, .color-bg-deep-purple-100__before::before, .color-bg-deep-purple-100__after::after {
+  background: #D1C4E9 !important;
+}
+
+.color-bg-deep-purple-200, .color-bg-deep-purple-200__hover:hover, .color-bg-deep-purple-200__active:active, .color-bg-deep-purple-200__focus:focus, .color-bg-deep-purple-200__before::before, .color-bg-deep-purple-200__after::after {
+  background: #B39DDB !important;
+}
+
+.color-bg-deep-purple-300, .color-bg-deep-purple-300__hover:hover, .color-bg-deep-purple-300__active:active, .color-bg-deep-purple-300__focus:focus, .color-bg-deep-purple-300__before::before, .color-bg-deep-purple-300__after::after {
+  background: #9575CD !important;
+}
+
+.color-bg-deep-purple-400, .color-bg-deep-purple-400__hover:hover, .color-bg-deep-purple-400__active:active, .color-bg-deep-purple-400__focus:focus, .color-bg-deep-purple-400__before::before, .color-bg-deep-purple-400__after::after {
+  background: #7E57C2 !important;
+}
+
+.color-bg-deep-purple-500, .color-bg-deep-purple-500__hover:hover, .color-bg-deep-purple-500__active:active, .color-bg-deep-purple-500__focus:focus, .color-bg-deep-purple-500__before::before, .color-bg-deep-purple-500__after::after {
+  background: #673AB7 !important;
+}
+
+.color-bg-deep-purple-600, .color-bg-deep-purple-600__hover:hover, .color-bg-deep-purple-600__active:active, .color-bg-deep-purple-600__focus:focus, .color-bg-deep-purple-600__before::before, .color-bg-deep-purple-600__after::after {
+  background: #5E35B1 !important;
+}
+
+.color-bg-deep-purple-700, .color-bg-deep-purple-700__hover:hover, .color-bg-deep-purple-700__active:active, .color-bg-deep-purple-700__focus:focus, .color-bg-deep-purple-700__before::before, .color-bg-deep-purple-700__after::after {
+  background: #512DA8 !important;
+}
+
+.color-bg-deep-purple-800, .color-bg-deep-purple-800__hover:hover, .color-bg-deep-purple-800__active:active, .color-bg-deep-purple-800__focus:focus, .color-bg-deep-purple-800__before::before, .color-bg-deep-purple-800__after::after {
+  background: #4527A0 !important;
+}
+
+.color-bg-deep-purple-900, .color-bg-deep-purple-900__hover:hover, .color-bg-deep-purple-900__active:active, .color-bg-deep-purple-900__focus:focus, .color-bg-deep-purple-900__before::before, .color-bg-deep-purple-900__after::after {
+  background: #311B92 !important;
+}
+
+.color-bg-deep-purple-A100, .color-bg-deep-purple-A100__hover:hover, .color-bg-deep-purple-A100__active:active, .color-bg-deep-purple-A100__focus:focus, .color-bg-deep-purple-A100__before::before, .color-bg-deep-purple-A100__after::after {
+  background: #B388FF !important;
+}
+
+.color-bg-deep-purple-A200, .color-bg-deep-purple-A200__hover:hover, .color-bg-deep-purple-A200__active:active, .color-bg-deep-purple-A200__focus:focus, .color-bg-deep-purple-A200__before::before, .color-bg-deep-purple-A200__after::after {
+  background: #7C4DFF !important;
+}
+
+.color-bg-deep-purple-A400, .color-bg-deep-purple-A400__hover:hover, .color-bg-deep-purple-A400__active:active, .color-bg-deep-purple-A400__focus:focus, .color-bg-deep-purple-A400__before::before, .color-bg-deep-purple-A400__after::after {
+  background: #651FFF !important;
+}
+
+.color-bg-deep-purple-A700, .color-bg-deep-purple-A700__hover:hover, .color-bg-deep-purple-A700__active:active, .color-bg-deep-purple-A700__focus:focus, .color-bg-deep-purple-A700__before::before, .color-bg-deep-purple-A700__after::after {
+  background: #6200EA !important;
+}
+
+.color-bd-deep-purple-50, .color-bd-deep-purple-50__hover:hover, .color-bd-deep-purple-50__active:active, .color-bd-deep-purple-50__focus:focus, .color-bd-deep-purple-50__before::before, .color-bd-deep-purple-50__after::after {
+  border-color: #EDE7F6 !important;
+}
+
+.color-bd-deep-purple-100, .color-bd-deep-purple-100__hover:hover, .color-bd-deep-purple-100__active:active, .color-bd-deep-purple-100__focus:focus, .color-bd-deep-purple-100__before::before, .color-bd-deep-purple-100__after::after {
+  border-color: #D1C4E9 !important;
+}
+
+.color-bd-deep-purple-200, .color-bd-deep-purple-200__hover:hover, .color-bd-deep-purple-200__active:active, .color-bd-deep-purple-200__focus:focus, .color-bd-deep-purple-200__before::before, .color-bd-deep-purple-200__after::after {
+  border-color: #B39DDB !important;
+}
+
+.color-bd-deep-purple-300, .color-bd-deep-purple-300__hover:hover, .color-bd-deep-purple-300__active:active, .color-bd-deep-purple-300__focus:focus, .color-bd-deep-purple-300__before::before, .color-bd-deep-purple-300__after::after {
+  border-color: #9575CD !important;
+}
+
+.color-bd-deep-purple-400, .color-bd-deep-purple-400__hover:hover, .color-bd-deep-purple-400__active:active, .color-bd-deep-purple-400__focus:focus, .color-bd-deep-purple-400__before::before, .color-bd-deep-purple-400__after::after {
+  border-color: #7E57C2 !important;
+}
+
+.color-bd-deep-purple-500, .color-bd-deep-purple-500__hover:hover, .color-bd-deep-purple-500__active:active, .color-bd-deep-purple-500__focus:focus, .color-bd-deep-purple-500__before::before, .color-bd-deep-purple-500__after::after {
+  border-color: #673AB7 !important;
+}
+
+.color-bd-deep-purple-600, .color-bd-deep-purple-600__hover:hover, .color-bd-deep-purple-600__active:active, .color-bd-deep-purple-600__focus:focus, .color-bd-deep-purple-600__before::before, .color-bd-deep-purple-600__after::after {
+  border-color: #5E35B1 !important;
+}
+
+.color-bd-deep-purple-700, .color-bd-deep-purple-700__hover:hover, .color-bd-deep-purple-700__active:active, .color-bd-deep-purple-700__focus:focus, .color-bd-deep-purple-700__before::before, .color-bd-deep-purple-700__after::after {
+  border-color: #512DA8 !important;
+}
+
+.color-bd-deep-purple-800, .color-bd-deep-purple-800__hover:hover, .color-bd-deep-purple-800__active:active, .color-bd-deep-purple-800__focus:focus, .color-bd-deep-purple-800__before::before, .color-bd-deep-purple-800__after::after {
+  border-color: #4527A0 !important;
+}
+
+.color-bd-deep-purple-900, .color-bd-deep-purple-900__hover:hover, .color-bd-deep-purple-900__active:active, .color-bd-deep-purple-900__focus:focus, .color-bd-deep-purple-900__before::before, .color-bd-deep-purple-900__after::after {
+  border-color: #311B92 !important;
+}
+
+.color-bd-deep-purple-A100, .color-bd-deep-purple-A100__hover:hover, .color-bd-deep-purple-A100__active:active, .color-bd-deep-purple-A100__focus:focus, .color-bd-deep-purple-A100__before::before, .color-bd-deep-purple-A100__after::after {
+  border-color: #B388FF !important;
+}
+
+.color-bd-deep-purple-A200, .color-bd-deep-purple-A200__hover:hover, .color-bd-deep-purple-A200__active:active, .color-bd-deep-purple-A200__focus:focus, .color-bd-deep-purple-A200__before::before, .color-bd-deep-purple-A200__after::after {
+  border-color: #7C4DFF !important;
+}
+
+.color-bd-deep-purple-A400, .color-bd-deep-purple-A400__hover:hover, .color-bd-deep-purple-A400__active:active, .color-bd-deep-purple-A400__focus:focus, .color-bd-deep-purple-A400__before::before, .color-bd-deep-purple-A400__after::after {
+  border-color: #651FFF !important;
+}
+
+.color-bd-deep-purple-A700, .color-bd-deep-purple-A700__hover:hover, .color-bd-deep-purple-A700__active:active, .color-bd-deep-purple-A700__focus:focus, .color-bd-deep-purple-A700__before::before, .color-bd-deep-purple-A700__after::after {
+  border-color: #6200EA !important;
+}
+
+.color-fg-indigo-50, .color-fg-indigo-50__hover:hover, .color-fg-indigo-50__active:active, .color-fg-indigo-50__focus:focus, .color-fg-indigo-50__before::before, .color-fg-indigo-50__after::after {
+  color: #E8EAF6 !important;
+}
+
+.color-fg-indigo-100, .color-fg-indigo-100__hover:hover, .color-fg-indigo-100__active:active, .color-fg-indigo-100__focus:focus, .color-fg-indigo-100__before::before, .color-fg-indigo-100__after::after {
+  color: #C5CAE9 !important;
+}
+
+.color-fg-indigo-200, .color-fg-indigo-200__hover:hover, .color-fg-indigo-200__active:active, .color-fg-indigo-200__focus:focus, .color-fg-indigo-200__before::before, .color-fg-indigo-200__after::after {
+  color: #9FA8DA !important;
+}
+
+.color-fg-indigo-300, .color-fg-indigo-300__hover:hover, .color-fg-indigo-300__active:active, .color-fg-indigo-300__focus:focus, .color-fg-indigo-300__before::before, .color-fg-indigo-300__after::after {
+  color: #7986CB !important;
+}
+
+.color-fg-indigo-400, .color-fg-indigo-400__hover:hover, .color-fg-indigo-400__active:active, .color-fg-indigo-400__focus:focus, .color-fg-indigo-400__before::before, .color-fg-indigo-400__after::after {
+  color: #5C6BC0 !important;
+}
+
+.color-fg-indigo-500, .color-fg-indigo-500__hover:hover, .color-fg-indigo-500__active:active, .color-fg-indigo-500__focus:focus, .color-fg-indigo-500__before::before, .color-fg-indigo-500__after::after {
+  color: #3F51B5 !important;
+}
+
+.color-fg-indigo-600, .color-fg-indigo-600__hover:hover, .color-fg-indigo-600__active:active, .color-fg-indigo-600__focus:focus, .color-fg-indigo-600__before::before, .color-fg-indigo-600__after::after {
+  color: #3949AB !important;
+}
+
+.color-fg-indigo-700, .color-fg-indigo-700__hover:hover, .color-fg-indigo-700__active:active, .color-fg-indigo-700__focus:focus, .color-fg-indigo-700__before::before, .color-fg-indigo-700__after::after {
+  color: #303F9F !important;
+}
+
+.color-fg-indigo-800, .color-fg-indigo-800__hover:hover, .color-fg-indigo-800__active:active, .color-fg-indigo-800__focus:focus, .color-fg-indigo-800__before::before, .color-fg-indigo-800__after::after {
+  color: #283593 !important;
+}
+
+.color-fg-indigo-900, .color-fg-indigo-900__hover:hover, .color-fg-indigo-900__active:active, .color-fg-indigo-900__focus:focus, .color-fg-indigo-900__before::before, .color-fg-indigo-900__after::after {
+  color: #1A237E !important;
+}
+
+.color-fg-indigo-A100, .color-fg-indigo-A100__hover:hover, .color-fg-indigo-A100__active:active, .color-fg-indigo-A100__focus:focus, .color-fg-indigo-A100__before::before, .color-fg-indigo-A100__after::after {
+  color: #8C9EFF !important;
+}
+
+.color-fg-indigo-A200, .color-fg-indigo-A200__hover:hover, .color-fg-indigo-A200__active:active, .color-fg-indigo-A200__focus:focus, .color-fg-indigo-A200__before::before, .color-fg-indigo-A200__after::after {
+  color: #536DFE !important;
+}
+
+.color-fg-indigo-A400, .color-fg-indigo-A400__hover:hover, .color-fg-indigo-A400__active:active, .color-fg-indigo-A400__focus:focus, .color-fg-indigo-A400__before::before, .color-fg-indigo-A400__after::after {
+  color: #3D5AFE !important;
+}
+
+.color-fg-indigo-A700, .color-fg-indigo-A700__hover:hover, .color-fg-indigo-A700__active:active, .color-fg-indigo-A700__focus:focus, .color-fg-indigo-A700__before::before, .color-fg-indigo-A700__after::after {
+  color: #304FFE !important;
+}
+
+.color-bg-indigo-50, .color-bg-indigo-50__hover:hover, .color-bg-indigo-50__active:active, .color-bg-indigo-50__focus:focus, .color-bg-indigo-50__before::before, .color-bg-indigo-50__after::after {
+  background: #E8EAF6 !important;
+}
+
+.color-bg-indigo-100, .color-bg-indigo-100__hover:hover, .color-bg-indigo-100__active:active, .color-bg-indigo-100__focus:focus, .color-bg-indigo-100__before::before, .color-bg-indigo-100__after::after {
+  background: #C5CAE9 !important;
+}
+
+.color-bg-indigo-200, .color-bg-indigo-200__hover:hover, .color-bg-indigo-200__active:active, .color-bg-indigo-200__focus:focus, .color-bg-indigo-200__before::before, .color-bg-indigo-200__after::after {
+  background: #9FA8DA !important;
+}
+
+.color-bg-indigo-300, .color-bg-indigo-300__hover:hover, .color-bg-indigo-300__active:active, .color-bg-indigo-300__focus:focus, .color-bg-indigo-300__before::before, .color-bg-indigo-300__after::after {
+  background: #7986CB !important;
+}
+
+.color-bg-indigo-400, .color-bg-indigo-400__hover:hover, .color-bg-indigo-400__active:active, .color-bg-indigo-400__focus:focus, .color-bg-indigo-400__before::before, .color-bg-indigo-400__after::after {
+  background: #5C6BC0 !important;
+}
+
+.color-bg-indigo-500, .color-bg-indigo-500__hover:hover, .color-bg-indigo-500__active:active, .color-bg-indigo-500__focus:focus, .color-bg-indigo-500__before::before, .color-bg-indigo-500__after::after {
+  background: #3F51B5 !important;
+}
+
+.color-bg-indigo-600, .color-bg-indigo-600__hover:hover, .color-bg-indigo-600__active:active, .color-bg-indigo-600__focus:focus, .color-bg-indigo-600__before::before, .color-bg-indigo-600__after::after {
+  background: #3949AB !important;
+}
+
+.color-bg-indigo-700, .color-bg-indigo-700__hover:hover, .color-bg-indigo-700__active:active, .color-bg-indigo-700__focus:focus, .color-bg-indigo-700__before::before, .color-bg-indigo-700__after::after {
+  background: #303F9F !important;
+}
+
+.color-bg-indigo-800, .color-bg-indigo-800__hover:hover, .color-bg-indigo-800__active:active, .color-bg-indigo-800__focus:focus, .color-bg-indigo-800__before::before, .color-bg-indigo-800__after::after {
+  background: #283593 !important;
+}
+
+.color-bg-indigo-900, .color-bg-indigo-900__hover:hover, .color-bg-indigo-900__active:active, .color-bg-indigo-900__focus:focus, .color-bg-indigo-900__before::before, .color-bg-indigo-900__after::after {
+  background: #1A237E !important;
+}
+
+.color-bg-indigo-A100, .color-bg-indigo-A100__hover:hover, .color-bg-indigo-A100__active:active, .color-bg-indigo-A100__focus:focus, .color-bg-indigo-A100__before::before, .color-bg-indigo-A100__after::after {
+  background: #8C9EFF !important;
+}
+
+.color-bg-indigo-A200, .color-bg-indigo-A200__hover:hover, .color-bg-indigo-A200__active:active, .color-bg-indigo-A200__focus:focus, .color-bg-indigo-A200__before::before, .color-bg-indigo-A200__after::after {
+  background: #536DFE !important;
+}
+
+.color-bg-indigo-A400, .color-bg-indigo-A400__hover:hover, .color-bg-indigo-A400__active:active, .color-bg-indigo-A400__focus:focus, .color-bg-indigo-A400__before::before, .color-bg-indigo-A400__after::after {
+  background: #3D5AFE !important;
+}
+
+.color-bg-indigo-A700, .color-bg-indigo-A700__hover:hover, .color-bg-indigo-A700__active:active, .color-bg-indigo-A700__focus:focus, .color-bg-indigo-A700__before::before, .color-bg-indigo-A700__after::after {
+  background: #304FFE !important;
+}
+
+.color-bd-indigo-50, .color-bd-indigo-50__hover:hover, .color-bd-indigo-50__active:active, .color-bd-indigo-50__focus:focus, .color-bd-indigo-50__before::before, .color-bd-indigo-50__after::after {
+  border-color: #E8EAF6 !important;
+}
+
+.color-bd-indigo-100, .color-bd-indigo-100__hover:hover, .color-bd-indigo-100__active:active, .color-bd-indigo-100__focus:focus, .color-bd-indigo-100__before::before, .color-bd-indigo-100__after::after {
+  border-color: #C5CAE9 !important;
+}
+
+.color-bd-indigo-200, .color-bd-indigo-200__hover:hover, .color-bd-indigo-200__active:active, .color-bd-indigo-200__focus:focus, .color-bd-indigo-200__before::before, .color-bd-indigo-200__after::after {
+  border-color: #9FA8DA !important;
+}
+
+.color-bd-indigo-300, .color-bd-indigo-300__hover:hover, .color-bd-indigo-300__active:active, .color-bd-indigo-300__focus:focus, .color-bd-indigo-300__before::before, .color-bd-indigo-300__after::after {
+  border-color: #7986CB !important;
+}
+
+.color-bd-indigo-400, .color-bd-indigo-400__hover:hover, .color-bd-indigo-400__active:active, .color-bd-indigo-400__focus:focus, .color-bd-indigo-400__before::before, .color-bd-indigo-400__after::after {
+  border-color: #5C6BC0 !important;
+}
+
+.color-bd-indigo-500, .color-bd-indigo-500__hover:hover, .color-bd-indigo-500__active:active, .color-bd-indigo-500__focus:focus, .color-bd-indigo-500__before::before, .color-bd-indigo-500__after::after {
+  border-color: #3F51B5 !important;
+}
+
+.color-bd-indigo-600, .color-bd-indigo-600__hover:hover, .color-bd-indigo-600__active:active, .color-bd-indigo-600__focus:focus, .color-bd-indigo-600__before::before, .color-bd-indigo-600__after::after {
+  border-color: #3949AB !important;
+}
+
+.color-bd-indigo-700, .color-bd-indigo-700__hover:hover, .color-bd-indigo-700__active:active, .color-bd-indigo-700__focus:focus, .color-bd-indigo-700__before::before, .color-bd-indigo-700__after::after {
+  border-color: #303F9F !important;
+}
+
+.color-bd-indigo-800, .color-bd-indigo-800__hover:hover, .color-bd-indigo-800__active:active, .color-bd-indigo-800__focus:focus, .color-bd-indigo-800__before::before, .color-bd-indigo-800__after::after {
+  border-color: #283593 !important;
+}
+
+.color-bd-indigo-900, .color-bd-indigo-900__hover:hover, .color-bd-indigo-900__active:active, .color-bd-indigo-900__focus:focus, .color-bd-indigo-900__before::before, .color-bd-indigo-900__after::after {
+  border-color: #1A237E !important;
+}
+
+.color-bd-indigo-A100, .color-bd-indigo-A100__hover:hover, .color-bd-indigo-A100__active:active, .color-bd-indigo-A100__focus:focus, .color-bd-indigo-A100__before::before, .color-bd-indigo-A100__after::after {
+  border-color: #8C9EFF !important;
+}
+
+.color-bd-indigo-A200, .color-bd-indigo-A200__hover:hover, .color-bd-indigo-A200__active:active, .color-bd-indigo-A200__focus:focus, .color-bd-indigo-A200__before::before, .color-bd-indigo-A200__after::after {
+  border-color: #536DFE !important;
+}
+
+.color-bd-indigo-A400, .color-bd-indigo-A400__hover:hover, .color-bd-indigo-A400__active:active, .color-bd-indigo-A400__focus:focus, .color-bd-indigo-A400__before::before, .color-bd-indigo-A400__after::after {
+  border-color: #3D5AFE !important;
+}
+
+.color-bd-indigo-A700, .color-bd-indigo-A700__hover:hover, .color-bd-indigo-A700__active:active, .color-bd-indigo-A700__focus:focus, .color-bd-indigo-A700__before::before, .color-bd-indigo-A700__after::after {
+  border-color: #304FFE !important;
+}
+
+.color-fg-blue-50, .color-fg-blue-50__hover:hover, .color-fg-blue-50__active:active, .color-fg-blue-50__focus:focus, .color-fg-blue-50__before::before, .color-fg-blue-50__after::after {
+  color: #E3F2FD !important;
+}
+
+.color-fg-blue-100, .color-fg-blue-100__hover:hover, .color-fg-blue-100__active:active, .color-fg-blue-100__focus:focus, .color-fg-blue-100__before::before, .color-fg-blue-100__after::after {
+  color: #BBDEFB !important;
+}
+
+.color-fg-blue-200, .color-fg-blue-200__hover:hover, .color-fg-blue-200__active:active, .color-fg-blue-200__focus:focus, .color-fg-blue-200__before::before, .color-fg-blue-200__after::after {
+  color: #90CAF9 !important;
+}
+
+.color-fg-blue-300, .color-fg-blue-300__hover:hover, .color-fg-blue-300__active:active, .color-fg-blue-300__focus:focus, .color-fg-blue-300__before::before, .color-fg-blue-300__after::after {
+  color: #64B5F6 !important;
+}
+
+.color-fg-blue-400, .color-fg-blue-400__hover:hover, .color-fg-blue-400__active:active, .color-fg-blue-400__focus:focus, .color-fg-blue-400__before::before, .color-fg-blue-400__after::after {
+  color: #42A5F5 !important;
+}
+
+.color-fg-blue-500, .color-fg-blue-500__hover:hover, .color-fg-blue-500__active:active, .color-fg-blue-500__focus:focus, .color-fg-blue-500__before::before, .color-fg-blue-500__after::after {
+  color: #2196F3 !important;
+}
+
+.color-fg-blue-600, .color-fg-blue-600__hover:hover, .color-fg-blue-600__active:active, .color-fg-blue-600__focus:focus, .color-fg-blue-600__before::before, .color-fg-blue-600__after::after {
+  color: #1E88E5 !important;
+}
+
+.color-fg-blue-700, .color-fg-blue-700__hover:hover, .color-fg-blue-700__active:active, .color-fg-blue-700__focus:focus, .color-fg-blue-700__before::before, .color-fg-blue-700__after::after {
+  color: #1976D2 !important;
+}
+
+.color-fg-blue-800, .color-fg-blue-800__hover:hover, .color-fg-blue-800__active:active, .color-fg-blue-800__focus:focus, .color-fg-blue-800__before::before, .color-fg-blue-800__after::after {
+  color: #1565C0 !important;
+}
+
+.color-fg-blue-900, .color-fg-blue-900__hover:hover, .color-fg-blue-900__active:active, .color-fg-blue-900__focus:focus, .color-fg-blue-900__before::before, .color-fg-blue-900__after::after {
+  color: #0D47A1 !important;
+}
+
+.color-fg-blue-A100, .color-fg-blue-A100__hover:hover, .color-fg-blue-A100__active:active, .color-fg-blue-A100__focus:focus, .color-fg-blue-A100__before::before, .color-fg-blue-A100__after::after {
+  color: #82B1FF !important;
+}
+
+.color-fg-blue-A200, .color-fg-blue-A200__hover:hover, .color-fg-blue-A200__active:active, .color-fg-blue-A200__focus:focus, .color-fg-blue-A200__before::before, .color-fg-blue-A200__after::after {
+  color: #448AFF !important;
+}
+
+.color-fg-blue-A400, .color-fg-blue-A400__hover:hover, .color-fg-blue-A400__active:active, .color-fg-blue-A400__focus:focus, .color-fg-blue-A400__before::before, .color-fg-blue-A400__after::after {
+  color: #2979FF !important;
+}
+
+.color-fg-blue-A700, .color-fg-blue-A700__hover:hover, .color-fg-blue-A700__active:active, .color-fg-blue-A700__focus:focus, .color-fg-blue-A700__before::before, .color-fg-blue-A700__after::after {
+  color: #2962FF !important;
+}
+
+.color-bg-blue-50, .color-bg-blue-50__hover:hover, .color-bg-blue-50__active:active, .color-bg-blue-50__focus:focus, .color-bg-blue-50__before::before, .color-bg-blue-50__after::after {
+  background: #E3F2FD !important;
+}
+
+.color-bg-blue-100, .color-bg-blue-100__hover:hover, .color-bg-blue-100__active:active, .color-bg-blue-100__focus:focus, .color-bg-blue-100__before::before, .color-bg-blue-100__after::after {
+  background: #BBDEFB !important;
+}
+
+.color-bg-blue-200, .color-bg-blue-200__hover:hover, .color-bg-blue-200__active:active, .color-bg-blue-200__focus:focus, .color-bg-blue-200__before::before, .color-bg-blue-200__after::after {
+  background: #90CAF9 !important;
+}
+
+.color-bg-blue-300, .color-bg-blue-300__hover:hover, .color-bg-blue-300__active:active, .color-bg-blue-300__focus:focus, .color-bg-blue-300__before::before, .color-bg-blue-300__after::after {
+  background: #64B5F6 !important;
+}
+
+.color-bg-blue-400, .color-bg-blue-400__hover:hover, .color-bg-blue-400__active:active, .color-bg-blue-400__focus:focus, .color-bg-blue-400__before::before, .color-bg-blue-400__after::after {
+  background: #42A5F5 !important;
+}
+
+.color-bg-blue-500, .color-bg-blue-500__hover:hover, .color-bg-blue-500__active:active, .color-bg-blue-500__focus:focus, .color-bg-blue-500__before::before, .color-bg-blue-500__after::after {
+  background: #2196F3 !important;
+}
+
+.color-bg-blue-600, .color-bg-blue-600__hover:hover, .color-bg-blue-600__active:active, .color-bg-blue-600__focus:focus, .color-bg-blue-600__before::before, .color-bg-blue-600__after::after {
+  background: #1E88E5 !important;
+}
+
+.color-bg-blue-700, .color-bg-blue-700__hover:hover, .color-bg-blue-700__active:active, .color-bg-blue-700__focus:focus, .color-bg-blue-700__before::before, .color-bg-blue-700__after::after {
+  background: #1976D2 !important;
+}
+
+.color-bg-blue-800, .color-bg-blue-800__hover:hover, .color-bg-blue-800__active:active, .color-bg-blue-800__focus:focus, .color-bg-blue-800__before::before, .color-bg-blue-800__after::after {
+  background: #1565C0 !important;
+}
+
+.color-bg-blue-900, .color-bg-blue-900__hover:hover, .color-bg-blue-900__active:active, .color-bg-blue-900__focus:focus, .color-bg-blue-900__before::before, .color-bg-blue-900__after::after {
+  background: #0D47A1 !important;
+}
+
+.color-bg-blue-A100, .color-bg-blue-A100__hover:hover, .color-bg-blue-A100__active:active, .color-bg-blue-A100__focus:focus, .color-bg-blue-A100__before::before, .color-bg-blue-A100__after::after {
+  background: #82B1FF !important;
+}
+
+.color-bg-blue-A200, .color-bg-blue-A200__hover:hover, .color-bg-blue-A200__active:active, .color-bg-blue-A200__focus:focus, .color-bg-blue-A200__before::before, .color-bg-blue-A200__after::after {
+  background: #448AFF !important;
+}
+
+.color-bg-blue-A400, .color-bg-blue-A400__hover:hover, .color-bg-blue-A400__active:active, .color-bg-blue-A400__focus:focus, .color-bg-blue-A400__before::before, .color-bg-blue-A400__after::after {
+  background: #2979FF !important;
+}
+
+.color-bg-blue-A700, .color-bg-blue-A700__hover:hover, .color-bg-blue-A700__active:active, .color-bg-blue-A700__focus:focus, .color-bg-blue-A700__before::before, .color-bg-blue-A700__after::after {
+  background: #2962FF !important;
+}
+
+.color-bd-blue-50, .color-bd-blue-50__hover:hover, .color-bd-blue-50__active:active, .color-bd-blue-50__focus:focus, .color-bd-blue-50__before::before, .color-bd-blue-50__after::after {
+  border-color: #E3F2FD !important;
+}
+
+.color-bd-blue-100, .color-bd-blue-100__hover:hover, .color-bd-blue-100__active:active, .color-bd-blue-100__focus:focus, .color-bd-blue-100__before::before, .color-bd-blue-100__after::after {
+  border-color: #BBDEFB !important;
+}
+
+.color-bd-blue-200, .color-bd-blue-200__hover:hover, .color-bd-blue-200__active:active, .color-bd-blue-200__focus:focus, .color-bd-blue-200__before::before, .color-bd-blue-200__after::after {
+  border-color: #90CAF9 !important;
+}
+
+.color-bd-blue-300, .color-bd-blue-300__hover:hover, .color-bd-blue-300__active:active, .color-bd-blue-300__focus:focus, .color-bd-blue-300__before::before, .color-bd-blue-300__after::after {
+  border-color: #64B5F6 !important;
+}
+
+.color-bd-blue-400, .color-bd-blue-400__hover:hover, .color-bd-blue-400__active:active, .color-bd-blue-400__focus:focus, .color-bd-blue-400__before::before, .color-bd-blue-400__after::after {
+  border-color: #42A5F5 !important;
+}
+
+.color-bd-blue-500, .color-bd-blue-500__hover:hover, .color-bd-blue-500__active:active, .color-bd-blue-500__focus:focus, .color-bd-blue-500__before::before, .color-bd-blue-500__after::after {
+  border-color: #2196F3 !important;
+}
+
+.color-bd-blue-600, .color-bd-blue-600__hover:hover, .color-bd-blue-600__active:active, .color-bd-blue-600__focus:focus, .color-bd-blue-600__before::before, .color-bd-blue-600__after::after {
+  border-color: #1E88E5 !important;
+}
+
+.color-bd-blue-700, .color-bd-blue-700__hover:hover, .color-bd-blue-700__active:active, .color-bd-blue-700__focus:focus, .color-bd-blue-700__before::before, .color-bd-blue-700__after::after {
+  border-color: #1976D2 !important;
+}
+
+.color-bd-blue-800, .color-bd-blue-800__hover:hover, .color-bd-blue-800__active:active, .color-bd-blue-800__focus:focus, .color-bd-blue-800__before::before, .color-bd-blue-800__after::after {
+  border-color: #1565C0 !important;
+}
+
+.color-bd-blue-900, .color-bd-blue-900__hover:hover, .color-bd-blue-900__active:active, .color-bd-blue-900__focus:focus, .color-bd-blue-900__before::before, .color-bd-blue-900__after::after {
+  border-color: #0D47A1 !important;
+}
+
+.color-bd-blue-A100, .color-bd-blue-A100__hover:hover, .color-bd-blue-A100__active:active, .color-bd-blue-A100__focus:focus, .color-bd-blue-A100__before::before, .color-bd-blue-A100__after::after {
+  border-color: #82B1FF !important;
+}
+
+.color-bd-blue-A200, .color-bd-blue-A200__hover:hover, .color-bd-blue-A200__active:active, .color-bd-blue-A200__focus:focus, .color-bd-blue-A200__before::before, .color-bd-blue-A200__after::after {
+  border-color: #448AFF !important;
+}
+
+.color-bd-blue-A400, .color-bd-blue-A400__hover:hover, .color-bd-blue-A400__active:active, .color-bd-blue-A400__focus:focus, .color-bd-blue-A400__before::before, .color-bd-blue-A400__after::after {
+  border-color: #2979FF !important;
+}
+
+.color-bd-blue-A700, .color-bd-blue-A700__hover:hover, .color-bd-blue-A700__active:active, .color-bd-blue-A700__focus:focus, .color-bd-blue-A700__before::before, .color-bd-blue-A700__after::after {
+  border-color: #2962FF !important;
+}
+
+.color-fg-light-blue-50, .color-fg-light-blue-50__hover:hover, .color-fg-light-blue-50__active:active, .color-fg-light-blue-50__focus:focus, .color-fg-light-blue-50__before::before, .color-fg-light-blue-50__after::after {
+  color: #E1F5FE !important;
+}
+
+.color-fg-light-blue-100, .color-fg-light-blue-100__hover:hover, .color-fg-light-blue-100__active:active, .color-fg-light-blue-100__focus:focus, .color-fg-light-blue-100__before::before, .color-fg-light-blue-100__after::after {
+  color: #B3E5FC !important;
+}
+
+.color-fg-light-blue-200, .color-fg-light-blue-200__hover:hover, .color-fg-light-blue-200__active:active, .color-fg-light-blue-200__focus:focus, .color-fg-light-blue-200__before::before, .color-fg-light-blue-200__after::after {
+  color: #81D4FA !important;
+}
+
+.color-fg-light-blue-300, .color-fg-light-blue-300__hover:hover, .color-fg-light-blue-300__active:active, .color-fg-light-blue-300__focus:focus, .color-fg-light-blue-300__before::before, .color-fg-light-blue-300__after::after {
+  color: #4FC3F7 !important;
+}
+
+.color-fg-light-blue-400, .color-fg-light-blue-400__hover:hover, .color-fg-light-blue-400__active:active, .color-fg-light-blue-400__focus:focus, .color-fg-light-blue-400__before::before, .color-fg-light-blue-400__after::after {
+  color: #29B6F6 !important;
+}
+
+.color-fg-light-blue-500, .color-fg-light-blue-500__hover:hover, .color-fg-light-blue-500__active:active, .color-fg-light-blue-500__focus:focus, .color-fg-light-blue-500__before::before, .color-fg-light-blue-500__after::after {
+  color: #03A9F4 !important;
+}
+
+.color-fg-light-blue-600, .color-fg-light-blue-600__hover:hover, .color-fg-light-blue-600__active:active, .color-fg-light-blue-600__focus:focus, .color-fg-light-blue-600__before::before, .color-fg-light-blue-600__after::after {
+  color: #039BE5 !important;
+}
+
+.color-fg-light-blue-700, .color-fg-light-blue-700__hover:hover, .color-fg-light-blue-700__active:active, .color-fg-light-blue-700__focus:focus, .color-fg-light-blue-700__before::before, .color-fg-light-blue-700__after::after {
+  color: #0288D1 !important;
+}
+
+.color-fg-light-blue-800, .color-fg-light-blue-800__hover:hover, .color-fg-light-blue-800__active:active, .color-fg-light-blue-800__focus:focus, .color-fg-light-blue-800__before::before, .color-fg-light-blue-800__after::after {
+  color: #0277BD !important;
+}
+
+.color-fg-light-blue-900, .color-fg-light-blue-900__hover:hover, .color-fg-light-blue-900__active:active, .color-fg-light-blue-900__focus:focus, .color-fg-light-blue-900__before::before, .color-fg-light-blue-900__after::after {
+  color: #01579B !important;
+}
+
+.color-fg-light-blue-A100, .color-fg-light-blue-A100__hover:hover, .color-fg-light-blue-A100__active:active, .color-fg-light-blue-A100__focus:focus, .color-fg-light-blue-A100__before::before, .color-fg-light-blue-A100__after::after {
+  color: #80D8FF !important;
+}
+
+.color-fg-light-blue-A200, .color-fg-light-blue-A200__hover:hover, .color-fg-light-blue-A200__active:active, .color-fg-light-blue-A200__focus:focus, .color-fg-light-blue-A200__before::before, .color-fg-light-blue-A200__after::after {
+  color: #40C4FF !important;
+}
+
+.color-fg-light-blue-A400, .color-fg-light-blue-A400__hover:hover, .color-fg-light-blue-A400__active:active, .color-fg-light-blue-A400__focus:focus, .color-fg-light-blue-A400__before::before, .color-fg-light-blue-A400__after::after {
+  color: #00B0FF !important;
+}
+
+.color-fg-light-blue-A700, .color-fg-light-blue-A700__hover:hover, .color-fg-light-blue-A700__active:active, .color-fg-light-blue-A700__focus:focus, .color-fg-light-blue-A700__before::before, .color-fg-light-blue-A700__after::after {
+  color: #0091EA !important;
+}
+
+.color-bg-light-blue-50, .color-bg-light-blue-50__hover:hover, .color-bg-light-blue-50__active:active, .color-bg-light-blue-50__focus:focus, .color-bg-light-blue-50__before::before, .color-bg-light-blue-50__after::after {
+  background: #E1F5FE !important;
+}
+
+.color-bg-light-blue-100, .color-bg-light-blue-100__hover:hover, .color-bg-light-blue-100__active:active, .color-bg-light-blue-100__focus:focus, .color-bg-light-blue-100__before::before, .color-bg-light-blue-100__after::after {
+  background: #B3E5FC !important;
+}
+
+.color-bg-light-blue-200, .color-bg-light-blue-200__hover:hover, .color-bg-light-blue-200__active:active, .color-bg-light-blue-200__focus:focus, .color-bg-light-blue-200__before::before, .color-bg-light-blue-200__after::after {
+  background: #81D4FA !important;
+}
+
+.color-bg-light-blue-300, .color-bg-light-blue-300__hover:hover, .color-bg-light-blue-300__active:active, .color-bg-light-blue-300__focus:focus, .color-bg-light-blue-300__before::before, .color-bg-light-blue-300__after::after {
+  background: #4FC3F7 !important;
+}
+
+.color-bg-light-blue-400, .color-bg-light-blue-400__hover:hover, .color-bg-light-blue-400__active:active, .color-bg-light-blue-400__focus:focus, .color-bg-light-blue-400__before::before, .color-bg-light-blue-400__after::after {
+  background: #29B6F6 !important;
+}
+
+.color-bg-light-blue-500, .color-bg-light-blue-500__hover:hover, .color-bg-light-blue-500__active:active, .color-bg-light-blue-500__focus:focus, .color-bg-light-blue-500__before::before, .color-bg-light-blue-500__after::after {
+  background: #03A9F4 !important;
+}
+
+.color-bg-light-blue-600, .color-bg-light-blue-600__hover:hover, .color-bg-light-blue-600__active:active, .color-bg-light-blue-600__focus:focus, .color-bg-light-blue-600__before::before, .color-bg-light-blue-600__after::after {
+  background: #039BE5 !important;
+}
+
+.color-bg-light-blue-700, .color-bg-light-blue-700__hover:hover, .color-bg-light-blue-700__active:active, .color-bg-light-blue-700__focus:focus, .color-bg-light-blue-700__before::before, .color-bg-light-blue-700__after::after {
+  background: #0288D1 !important;
+}
+
+.color-bg-light-blue-800, .color-bg-light-blue-800__hover:hover, .color-bg-light-blue-800__active:active, .color-bg-light-blue-800__focus:focus, .color-bg-light-blue-800__before::before, .color-bg-light-blue-800__after::after {
+  background: #0277BD !important;
+}
+
+.color-bg-light-blue-900, .color-bg-light-blue-900__hover:hover, .color-bg-light-blue-900__active:active, .color-bg-light-blue-900__focus:focus, .color-bg-light-blue-900__before::before, .color-bg-light-blue-900__after::after {
+  background: #01579B !important;
+}
+
+.color-bg-light-blue-A100, .color-bg-light-blue-A100__hover:hover, .color-bg-light-blue-A100__active:active, .color-bg-light-blue-A100__focus:focus, .color-bg-light-blue-A100__before::before, .color-bg-light-blue-A100__after::after {
+  background: #80D8FF !important;
+}
+
+.color-bg-light-blue-A200, .color-bg-light-blue-A200__hover:hover, .color-bg-light-blue-A200__active:active, .color-bg-light-blue-A200__focus:focus, .color-bg-light-blue-A200__before::before, .color-bg-light-blue-A200__after::after {
+  background: #40C4FF !important;
+}
+
+.color-bg-light-blue-A400, .color-bg-light-blue-A400__hover:hover, .color-bg-light-blue-A400__active:active, .color-bg-light-blue-A400__focus:focus, .color-bg-light-blue-A400__before::before, .color-bg-light-blue-A400__after::after {
+  background: #00B0FF !important;
+}
+
+.color-bg-light-blue-A700, .color-bg-light-blue-A700__hover:hover, .color-bg-light-blue-A700__active:active, .color-bg-light-blue-A700__focus:focus, .color-bg-light-blue-A700__before::before, .color-bg-light-blue-A700__after::after {
+  background: #0091EA !important;
+}
+
+.color-bd-light-blue-50, .color-bd-light-blue-50__hover:hover, .color-bd-light-blue-50__active:active, .color-bd-light-blue-50__focus:focus, .color-bd-light-blue-50__before::before, .color-bd-light-blue-50__after::after {
+  border-color: #E1F5FE !important;
+}
+
+.color-bd-light-blue-100, .color-bd-light-blue-100__hover:hover, .color-bd-light-blue-100__active:active, .color-bd-light-blue-100__focus:focus, .color-bd-light-blue-100__before::before, .color-bd-light-blue-100__after::after {
+  border-color: #B3E5FC !important;
+}
+
+.color-bd-light-blue-200, .color-bd-light-blue-200__hover:hover, .color-bd-light-blue-200__active:active, .color-bd-light-blue-200__focus:focus, .color-bd-light-blue-200__before::before, .color-bd-light-blue-200__after::after {
+  border-color: #81D4FA !important;
+}
+
+.color-bd-light-blue-300, .color-bd-light-blue-300__hover:hover, .color-bd-light-blue-300__active:active, .color-bd-light-blue-300__focus:focus, .color-bd-light-blue-300__before::before, .color-bd-light-blue-300__after::after {
+  border-color: #4FC3F7 !important;
+}
+
+.color-bd-light-blue-400, .color-bd-light-blue-400__hover:hover, .color-bd-light-blue-400__active:active, .color-bd-light-blue-400__focus:focus, .color-bd-light-blue-400__before::before, .color-bd-light-blue-400__after::after {
+  border-color: #29B6F6 !important;
+}
+
+.color-bd-light-blue-500, .color-bd-light-blue-500__hover:hover, .color-bd-light-blue-500__active:active, .color-bd-light-blue-500__focus:focus, .color-bd-light-blue-500__before::before, .color-bd-light-blue-500__after::after {
+  border-color: #03A9F4 !important;
+}
+
+.color-bd-light-blue-600, .color-bd-light-blue-600__hover:hover, .color-bd-light-blue-600__active:active, .color-bd-light-blue-600__focus:focus, .color-bd-light-blue-600__before::before, .color-bd-light-blue-600__after::after {
+  border-color: #039BE5 !important;
+}
+
+.color-bd-light-blue-700, .color-bd-light-blue-700__hover:hover, .color-bd-light-blue-700__active:active, .color-bd-light-blue-700__focus:focus, .color-bd-light-blue-700__before::before, .color-bd-light-blue-700__after::after {
+  border-color: #0288D1 !important;
+}
+
+.color-bd-light-blue-800, .color-bd-light-blue-800__hover:hover, .color-bd-light-blue-800__active:active, .color-bd-light-blue-800__focus:focus, .color-bd-light-blue-800__before::before, .color-bd-light-blue-800__after::after {
+  border-color: #0277BD !important;
+}
+
+.color-bd-light-blue-900, .color-bd-light-blue-900__hover:hover, .color-bd-light-blue-900__active:active, .color-bd-light-blue-900__focus:focus, .color-bd-light-blue-900__before::before, .color-bd-light-blue-900__after::after {
+  border-color: #01579B !important;
+}
+
+.color-bd-light-blue-A100, .color-bd-light-blue-A100__hover:hover, .color-bd-light-blue-A100__active:active, .color-bd-light-blue-A100__focus:focus, .color-bd-light-blue-A100__before::before, .color-bd-light-blue-A100__after::after {
+  border-color: #80D8FF !important;
+}
+
+.color-bd-light-blue-A200, .color-bd-light-blue-A200__hover:hover, .color-bd-light-blue-A200__active:active, .color-bd-light-blue-A200__focus:focus, .color-bd-light-blue-A200__before::before, .color-bd-light-blue-A200__after::after {
+  border-color: #40C4FF !important;
+}
+
+.color-bd-light-blue-A400, .color-bd-light-blue-A400__hover:hover, .color-bd-light-blue-A400__active:active, .color-bd-light-blue-A400__focus:focus, .color-bd-light-blue-A400__before::before, .color-bd-light-blue-A400__after::after {
+  border-color: #00B0FF !important;
+}
+
+.color-bd-light-blue-A700, .color-bd-light-blue-A700__hover:hover, .color-bd-light-blue-A700__active:active, .color-bd-light-blue-A700__focus:focus, .color-bd-light-blue-A700__before::before, .color-bd-light-blue-A700__after::after {
+  border-color: #0091EA !important;
+}
+
+.color-fg-cyan-50, .color-fg-cyan-50__hover:hover, .color-fg-cyan-50__active:active, .color-fg-cyan-50__focus:focus, .color-fg-cyan-50__before::before, .color-fg-cyan-50__after::after {
+  color: #E0F7FA !important;
+}
+
+.color-fg-cyan-100, .color-fg-cyan-100__hover:hover, .color-fg-cyan-100__active:active, .color-fg-cyan-100__focus:focus, .color-fg-cyan-100__before::before, .color-fg-cyan-100__after::after {
+  color: #B2EBF2 !important;
+}
+
+.color-fg-cyan-200, .color-fg-cyan-200__hover:hover, .color-fg-cyan-200__active:active, .color-fg-cyan-200__focus:focus, .color-fg-cyan-200__before::before, .color-fg-cyan-200__after::after {
+  color: #80DEEA !important;
+}
+
+.color-fg-cyan-300, .color-fg-cyan-300__hover:hover, .color-fg-cyan-300__active:active, .color-fg-cyan-300__focus:focus, .color-fg-cyan-300__before::before, .color-fg-cyan-300__after::after {
+  color: #4DD0E1 !important;
+}
+
+.color-fg-cyan-400, .color-fg-cyan-400__hover:hover, .color-fg-cyan-400__active:active, .color-fg-cyan-400__focus:focus, .color-fg-cyan-400__before::before, .color-fg-cyan-400__after::after {
+  color: #26C6DA !important;
+}
+
+.color-fg-cyan-500, .color-fg-cyan-500__hover:hover, .color-fg-cyan-500__active:active, .color-fg-cyan-500__focus:focus, .color-fg-cyan-500__before::before, .color-fg-cyan-500__after::after {
+  color: #00BCD4 !important;
+}
+
+.color-fg-cyan-600, .color-fg-cyan-600__hover:hover, .color-fg-cyan-600__active:active, .color-fg-cyan-600__focus:focus, .color-fg-cyan-600__before::before, .color-fg-cyan-600__after::after {
+  color: #00ACC1 !important;
+}
+
+.color-fg-cyan-700, .color-fg-cyan-700__hover:hover, .color-fg-cyan-700__active:active, .color-fg-cyan-700__focus:focus, .color-fg-cyan-700__before::before, .color-fg-cyan-700__after::after {
+  color: #0097A7 !important;
+}
+
+.color-fg-cyan-800, .color-fg-cyan-800__hover:hover, .color-fg-cyan-800__active:active, .color-fg-cyan-800__focus:focus, .color-fg-cyan-800__before::before, .color-fg-cyan-800__after::after {
+  color: #00838F !important;
+}
+
+.color-fg-cyan-900, .color-fg-cyan-900__hover:hover, .color-fg-cyan-900__active:active, .color-fg-cyan-900__focus:focus, .color-fg-cyan-900__before::before, .color-fg-cyan-900__after::after {
+  color: #006064 !important;
+}
+
+.color-fg-cyan-A100, .color-fg-cyan-A100__hover:hover, .color-fg-cyan-A100__active:active, .color-fg-cyan-A100__focus:focus, .color-fg-cyan-A100__before::before, .color-fg-cyan-A100__after::after {
+  color: #84FFFF !important;
+}
+
+.color-fg-cyan-A200, .color-fg-cyan-A200__hover:hover, .color-fg-cyan-A200__active:active, .color-fg-cyan-A200__focus:focus, .color-fg-cyan-A200__before::before, .color-fg-cyan-A200__after::after {
+  color: #18FFFF !important;
+}
+
+.color-fg-cyan-A400, .color-fg-cyan-A400__hover:hover, .color-fg-cyan-A400__active:active, .color-fg-cyan-A400__focus:focus, .color-fg-cyan-A400__before::before, .color-fg-cyan-A400__after::after {
+  color: #00E5FF !important;
+}
+
+.color-fg-cyan-A700, .color-fg-cyan-A700__hover:hover, .color-fg-cyan-A700__active:active, .color-fg-cyan-A700__focus:focus, .color-fg-cyan-A700__before::before, .color-fg-cyan-A700__after::after {
+  color: #00B8D4 !important;
+}
+
+.color-bg-cyan-50, .color-bg-cyan-50__hover:hover, .color-bg-cyan-50__active:active, .color-bg-cyan-50__focus:focus, .color-bg-cyan-50__before::before, .color-bg-cyan-50__after::after {
+  background: #E0F7FA !important;
+}
+
+.color-bg-cyan-100, .color-bg-cyan-100__hover:hover, .color-bg-cyan-100__active:active, .color-bg-cyan-100__focus:focus, .color-bg-cyan-100__before::before, .color-bg-cyan-100__after::after {
+  background: #B2EBF2 !important;
+}
+
+.color-bg-cyan-200, .color-bg-cyan-200__hover:hover, .color-bg-cyan-200__active:active, .color-bg-cyan-200__focus:focus, .color-bg-cyan-200__before::before, .color-bg-cyan-200__after::after {
+  background: #80DEEA !important;
+}
+
+.color-bg-cyan-300, .color-bg-cyan-300__hover:hover, .color-bg-cyan-300__active:active, .color-bg-cyan-300__focus:focus, .color-bg-cyan-300__before::before, .color-bg-cyan-300__after::after {
+  background: #4DD0E1 !important;
+}
+
+.color-bg-cyan-400, .color-bg-cyan-400__hover:hover, .color-bg-cyan-400__active:active, .color-bg-cyan-400__focus:focus, .color-bg-cyan-400__before::before, .color-bg-cyan-400__after::after {
+  background: #26C6DA !important;
+}
+
+.color-bg-cyan-500, .color-bg-cyan-500__hover:hover, .color-bg-cyan-500__active:active, .color-bg-cyan-500__focus:focus, .color-bg-cyan-500__before::before, .color-bg-cyan-500__after::after {
+  background: #00BCD4 !important;
+}
+
+.color-bg-cyan-600, .color-bg-cyan-600__hover:hover, .color-bg-cyan-600__active:active, .color-bg-cyan-600__focus:focus, .color-bg-cyan-600__before::before, .color-bg-cyan-600__after::after {
+  background: #00ACC1 !important;
+}
+
+.color-bg-cyan-700, .color-bg-cyan-700__hover:hover, .color-bg-cyan-700__active:active, .color-bg-cyan-700__focus:focus, .color-bg-cyan-700__before::before, .color-bg-cyan-700__after::after {
+  background: #0097A7 !important;
+}
+
+.color-bg-cyan-800, .color-bg-cyan-800__hover:hover, .color-bg-cyan-800__active:active, .color-bg-cyan-800__focus:focus, .color-bg-cyan-800__before::before, .color-bg-cyan-800__after::after {
+  background: #00838F !important;
+}
+
+.color-bg-cyan-900, .color-bg-cyan-900__hover:hover, .color-bg-cyan-900__active:active, .color-bg-cyan-900__focus:focus, .color-bg-cyan-900__before::before, .color-bg-cyan-900__after::after {
+  background: #006064 !important;
+}
+
+.color-bg-cyan-A100, .color-bg-cyan-A100__hover:hover, .color-bg-cyan-A100__active:active, .color-bg-cyan-A100__focus:focus, .color-bg-cyan-A100__before::before, .color-bg-cyan-A100__after::after {
+  background: #84FFFF !important;
+}
+
+.color-bg-cyan-A200, .color-bg-cyan-A200__hover:hover, .color-bg-cyan-A200__active:active, .color-bg-cyan-A200__focus:focus, .color-bg-cyan-A200__before::before, .color-bg-cyan-A200__after::after {
+  background: #18FFFF !important;
+}
+
+.color-bg-cyan-A400, .color-bg-cyan-A400__hover:hover, .color-bg-cyan-A400__active:active, .color-bg-cyan-A400__focus:focus, .color-bg-cyan-A400__before::before, .color-bg-cyan-A400__after::after {
+  background: #00E5FF !important;
+}
+
+.color-bg-cyan-A700, .color-bg-cyan-A700__hover:hover, .color-bg-cyan-A700__active:active, .color-bg-cyan-A700__focus:focus, .color-bg-cyan-A700__before::before, .color-bg-cyan-A700__after::after {
+  background: #00B8D4 !important;
+}
+
+.color-bd-cyan-50, .color-bd-cyan-50__hover:hover, .color-bd-cyan-50__active:active, .color-bd-cyan-50__focus:focus, .color-bd-cyan-50__before::before, .color-bd-cyan-50__after::after {
+  border-color: #E0F7FA !important;
+}
+
+.color-bd-cyan-100, .color-bd-cyan-100__hover:hover, .color-bd-cyan-100__active:active, .color-bd-cyan-100__focus:focus, .color-bd-cyan-100__before::before, .color-bd-cyan-100__after::after {
+  border-color: #B2EBF2 !important;
+}
+
+.color-bd-cyan-200, .color-bd-cyan-200__hover:hover, .color-bd-cyan-200__active:active, .color-bd-cyan-200__focus:focus, .color-bd-cyan-200__before::before, .color-bd-cyan-200__after::after {
+  border-color: #80DEEA !important;
+}
+
+.color-bd-cyan-300, .color-bd-cyan-300__hover:hover, .color-bd-cyan-300__active:active, .color-bd-cyan-300__focus:focus, .color-bd-cyan-300__before::before, .color-bd-cyan-300__after::after {
+  border-color: #4DD0E1 !important;
+}
+
+.color-bd-cyan-400, .color-bd-cyan-400__hover:hover, .color-bd-cyan-400__active:active, .color-bd-cyan-400__focus:focus, .color-bd-cyan-400__before::before, .color-bd-cyan-400__after::after {
+  border-color: #26C6DA !important;
+}
+
+.color-bd-cyan-500, .color-bd-cyan-500__hover:hover, .color-bd-cyan-500__active:active, .color-bd-cyan-500__focus:focus, .color-bd-cyan-500__before::before, .color-bd-cyan-500__after::after {
+  border-color: #00BCD4 !important;
+}
+
+.color-bd-cyan-600, .color-bd-cyan-600__hover:hover, .color-bd-cyan-600__active:active, .color-bd-cyan-600__focus:focus, .color-bd-cyan-600__before::before, .color-bd-cyan-600__after::after {
+  border-color: #00ACC1 !important;
+}
+
+.color-bd-cyan-700, .color-bd-cyan-700__hover:hover, .color-bd-cyan-700__active:active, .color-bd-cyan-700__focus:focus, .color-bd-cyan-700__before::before, .color-bd-cyan-700__after::after {
+  border-color: #0097A7 !important;
+}
+
+.color-bd-cyan-800, .color-bd-cyan-800__hover:hover, .color-bd-cyan-800__active:active, .color-bd-cyan-800__focus:focus, .color-bd-cyan-800__before::before, .color-bd-cyan-800__after::after {
+  border-color: #00838F !important;
+}
+
+.color-bd-cyan-900, .color-bd-cyan-900__hover:hover, .color-bd-cyan-900__active:active, .color-bd-cyan-900__focus:focus, .color-bd-cyan-900__before::before, .color-bd-cyan-900__after::after {
+  border-color: #006064 !important;
+}
+
+.color-bd-cyan-A100, .color-bd-cyan-A100__hover:hover, .color-bd-cyan-A100__active:active, .color-bd-cyan-A100__focus:focus, .color-bd-cyan-A100__before::before, .color-bd-cyan-A100__after::after {
+  border-color: #84FFFF !important;
+}
+
+.color-bd-cyan-A200, .color-bd-cyan-A200__hover:hover, .color-bd-cyan-A200__active:active, .color-bd-cyan-A200__focus:focus, .color-bd-cyan-A200__before::before, .color-bd-cyan-A200__after::after {
+  border-color: #18FFFF !important;
+}
+
+.color-bd-cyan-A400, .color-bd-cyan-A400__hover:hover, .color-bd-cyan-A400__active:active, .color-bd-cyan-A400__focus:focus, .color-bd-cyan-A400__before::before, .color-bd-cyan-A400__after::after {
+  border-color: #00E5FF !important;
+}
+
+.color-bd-cyan-A700, .color-bd-cyan-A700__hover:hover, .color-bd-cyan-A700__active:active, .color-bd-cyan-A700__focus:focus, .color-bd-cyan-A700__before::before, .color-bd-cyan-A700__after::after {
+  border-color: #00B8D4 !important;
+}
+
+.color-fg-teal-50, .color-fg-teal-50__hover:hover, .color-fg-teal-50__active:active, .color-fg-teal-50__focus:focus, .color-fg-teal-50__before::before, .color-fg-teal-50__after::after {
+  color: #E0F2F1 !important;
+}
+
+.color-fg-teal-100, .color-fg-teal-100__hover:hover, .color-fg-teal-100__active:active, .color-fg-teal-100__focus:focus, .color-fg-teal-100__before::before, .color-fg-teal-100__after::after {
+  color: #B2DFDB !important;
+}
+
+.color-fg-teal-200, .color-fg-teal-200__hover:hover, .color-fg-teal-200__active:active, .color-fg-teal-200__focus:focus, .color-fg-teal-200__before::before, .color-fg-teal-200__after::after {
+  color: #80CBC4 !important;
+}
+
+.color-fg-teal-300, .color-fg-teal-300__hover:hover, .color-fg-teal-300__active:active, .color-fg-teal-300__focus:focus, .color-fg-teal-300__before::before, .color-fg-teal-300__after::after {
+  color: #4DB6AC !important;
+}
+
+.color-fg-teal-400, .color-fg-teal-400__hover:hover, .color-fg-teal-400__active:active, .color-fg-teal-400__focus:focus, .color-fg-teal-400__before::before, .color-fg-teal-400__after::after {
+  color: #26A69A !important;
+}
+
+.color-fg-teal-500, .color-fg-teal-500__hover:hover, .color-fg-teal-500__active:active, .color-fg-teal-500__focus:focus, .color-fg-teal-500__before::before, .color-fg-teal-500__after::after {
+  color: #009688 !important;
+}
+
+.color-fg-teal-600, .color-fg-teal-600__hover:hover, .color-fg-teal-600__active:active, .color-fg-teal-600__focus:focus, .color-fg-teal-600__before::before, .color-fg-teal-600__after::after {
+  color: #00897B !important;
+}
+
+.color-fg-teal-700, .color-fg-teal-700__hover:hover, .color-fg-teal-700__active:active, .color-fg-teal-700__focus:focus, .color-fg-teal-700__before::before, .color-fg-teal-700__after::after {
+  color: #00796B !important;
+}
+
+.color-fg-teal-800, .color-fg-teal-800__hover:hover, .color-fg-teal-800__active:active, .color-fg-teal-800__focus:focus, .color-fg-teal-800__before::before, .color-fg-teal-800__after::after {
+  color: #00695C !important;
+}
+
+.color-fg-teal-900, .color-fg-teal-900__hover:hover, .color-fg-teal-900__active:active, .color-fg-teal-900__focus:focus, .color-fg-teal-900__before::before, .color-fg-teal-900__after::after {
+  color: #004D40 !important;
+}
+
+.color-fg-teal-A100, .color-fg-teal-A100__hover:hover, .color-fg-teal-A100__active:active, .color-fg-teal-A100__focus:focus, .color-fg-teal-A100__before::before, .color-fg-teal-A100__after::after {
+  color: #A7FFEB !important;
+}
+
+.color-fg-teal-A200, .color-fg-teal-A200__hover:hover, .color-fg-teal-A200__active:active, .color-fg-teal-A200__focus:focus, .color-fg-teal-A200__before::before, .color-fg-teal-A200__after::after {
+  color: #64FFDA !important;
+}
+
+.color-fg-teal-A400, .color-fg-teal-A400__hover:hover, .color-fg-teal-A400__active:active, .color-fg-teal-A400__focus:focus, .color-fg-teal-A400__before::before, .color-fg-teal-A400__after::after {
+  color: #1DE9B6 !important;
+}
+
+.color-fg-teal-A700, .color-fg-teal-A700__hover:hover, .color-fg-teal-A700__active:active, .color-fg-teal-A700__focus:focus, .color-fg-teal-A700__before::before, .color-fg-teal-A700__after::after {
+  color: #00BFA5 !important;
+}
+
+.color-bg-teal-50, .color-bg-teal-50__hover:hover, .color-bg-teal-50__active:active, .color-bg-teal-50__focus:focus, .color-bg-teal-50__before::before, .color-bg-teal-50__after::after {
+  background: #E0F2F1 !important;
+}
+
+.color-bg-teal-100, .color-bg-teal-100__hover:hover, .color-bg-teal-100__active:active, .color-bg-teal-100__focus:focus, .color-bg-teal-100__before::before, .color-bg-teal-100__after::after {
+  background: #B2DFDB !important;
+}
+
+.color-bg-teal-200, .color-bg-teal-200__hover:hover, .color-bg-teal-200__active:active, .color-bg-teal-200__focus:focus, .color-bg-teal-200__before::before, .color-bg-teal-200__after::after {
+  background: #80CBC4 !important;
+}
+
+.color-bg-teal-300, .color-bg-teal-300__hover:hover, .color-bg-teal-300__active:active, .color-bg-teal-300__focus:focus, .color-bg-teal-300__before::before, .color-bg-teal-300__after::after {
+  background: #4DB6AC !important;
+}
+
+.color-bg-teal-400, .color-bg-teal-400__hover:hover, .color-bg-teal-400__active:active, .color-bg-teal-400__focus:focus, .color-bg-teal-400__before::before, .color-bg-teal-400__after::after {
+  background: #26A69A !important;
+}
+
+.color-bg-teal-500, .color-bg-teal-500__hover:hover, .color-bg-teal-500__active:active, .color-bg-teal-500__focus:focus, .color-bg-teal-500__before::before, .color-bg-teal-500__after::after {
+  background: #009688 !important;
+}
+
+.color-bg-teal-600, .color-bg-teal-600__hover:hover, .color-bg-teal-600__active:active, .color-bg-teal-600__focus:focus, .color-bg-teal-600__before::before, .color-bg-teal-600__after::after {
+  background: #00897B !important;
+}
+
+.color-bg-teal-700, .color-bg-teal-700__hover:hover, .color-bg-teal-700__active:active, .color-bg-teal-700__focus:focus, .color-bg-teal-700__before::before, .color-bg-teal-700__after::after {
+  background: #00796B !important;
+}
+
+.color-bg-teal-800, .color-bg-teal-800__hover:hover, .color-bg-teal-800__active:active, .color-bg-teal-800__focus:focus, .color-bg-teal-800__before::before, .color-bg-teal-800__after::after {
+  background: #00695C !important;
+}
+
+.color-bg-teal-900, .color-bg-teal-900__hover:hover, .color-bg-teal-900__active:active, .color-bg-teal-900__focus:focus, .color-bg-teal-900__before::before, .color-bg-teal-900__after::after {
+  background: #004D40 !important;
+}
+
+.color-bg-teal-A100, .color-bg-teal-A100__hover:hover, .color-bg-teal-A100__active:active, .color-bg-teal-A100__focus:focus, .color-bg-teal-A100__before::before, .color-bg-teal-A100__after::after {
+  background: #A7FFEB !important;
+}
+
+.color-bg-teal-A200, .color-bg-teal-A200__hover:hover, .color-bg-teal-A200__active:active, .color-bg-teal-A200__focus:focus, .color-bg-teal-A200__before::before, .color-bg-teal-A200__after::after {
+  background: #64FFDA !important;
+}
+
+.color-bg-teal-A400, .color-bg-teal-A400__hover:hover, .color-bg-teal-A400__active:active, .color-bg-teal-A400__focus:focus, .color-bg-teal-A400__before::before, .color-bg-teal-A400__after::after {
+  background: #1DE9B6 !important;
+}
+
+.color-bg-teal-A700, .color-bg-teal-A700__hover:hover, .color-bg-teal-A700__active:active, .color-bg-teal-A700__focus:focus, .color-bg-teal-A700__before::before, .color-bg-teal-A700__after::after {
+  background: #00BFA5 !important;
+}
+
+.color-bd-teal-50, .color-bd-teal-50__hover:hover, .color-bd-teal-50__active:active, .color-bd-teal-50__focus:focus, .color-bd-teal-50__before::before, .color-bd-teal-50__after::after {
+  border-color: #E0F2F1 !important;
+}
+
+.color-bd-teal-100, .color-bd-teal-100__hover:hover, .color-bd-teal-100__active:active, .color-bd-teal-100__focus:focus, .color-bd-teal-100__before::before, .color-bd-teal-100__after::after {
+  border-color: #B2DFDB !important;
+}
+
+.color-bd-teal-200, .color-bd-teal-200__hover:hover, .color-bd-teal-200__active:active, .color-bd-teal-200__focus:focus, .color-bd-teal-200__before::before, .color-bd-teal-200__after::after {
+  border-color: #80CBC4 !important;
+}
+
+.color-bd-teal-300, .color-bd-teal-300__hover:hover, .color-bd-teal-300__active:active, .color-bd-teal-300__focus:focus, .color-bd-teal-300__before::before, .color-bd-teal-300__after::after {
+  border-color: #4DB6AC !important;
+}
+
+.color-bd-teal-400, .color-bd-teal-400__hover:hover, .color-bd-teal-400__active:active, .color-bd-teal-400__focus:focus, .color-bd-teal-400__before::before, .color-bd-teal-400__after::after {
+  border-color: #26A69A !important;
+}
+
+.color-bd-teal-500, .color-bd-teal-500__hover:hover, .color-bd-teal-500__active:active, .color-bd-teal-500__focus:focus, .color-bd-teal-500__before::before, .color-bd-teal-500__after::after {
+  border-color: #009688 !important;
+}
+
+.color-bd-teal-600, .color-bd-teal-600__hover:hover, .color-bd-teal-600__active:active, .color-bd-teal-600__focus:focus, .color-bd-teal-600__before::before, .color-bd-teal-600__after::after {
+  border-color: #00897B !important;
+}
+
+.color-bd-teal-700, .color-bd-teal-700__hover:hover, .color-bd-teal-700__active:active, .color-bd-teal-700__focus:focus, .color-bd-teal-700__before::before, .color-bd-teal-700__after::after {
+  border-color: #00796B !important;
+}
+
+.color-bd-teal-800, .color-bd-teal-800__hover:hover, .color-bd-teal-800__active:active, .color-bd-teal-800__focus:focus, .color-bd-teal-800__before::before, .color-bd-teal-800__after::after {
+  border-color: #00695C !important;
+}
+
+.color-bd-teal-900, .color-bd-teal-900__hover:hover, .color-bd-teal-900__active:active, .color-bd-teal-900__focus:focus, .color-bd-teal-900__before::before, .color-bd-teal-900__after::after {
+  border-color: #004D40 !important;
+}
+
+.color-bd-teal-A100, .color-bd-teal-A100__hover:hover, .color-bd-teal-A100__active:active, .color-bd-teal-A100__focus:focus, .color-bd-teal-A100__before::before, .color-bd-teal-A100__after::after {
+  border-color: #A7FFEB !important;
+}
+
+.color-bd-teal-A200, .color-bd-teal-A200__hover:hover, .color-bd-teal-A200__active:active, .color-bd-teal-A200__focus:focus, .color-bd-teal-A200__before::before, .color-bd-teal-A200__after::after {
+  border-color: #64FFDA !important;
+}
+
+.color-bd-teal-A400, .color-bd-teal-A400__hover:hover, .color-bd-teal-A400__active:active, .color-bd-teal-A400__focus:focus, .color-bd-teal-A400__before::before, .color-bd-teal-A400__after::after {
+  border-color: #1DE9B6 !important;
+}
+
+.color-bd-teal-A700, .color-bd-teal-A700__hover:hover, .color-bd-teal-A700__active:active, .color-bd-teal-A700__focus:focus, .color-bd-teal-A700__before::before, .color-bd-teal-A700__after::after {
+  border-color: #00BFA5 !important;
+}
+
+.color-fg-green-50, .color-fg-green-50__hover:hover, .color-fg-green-50__active:active, .color-fg-green-50__focus:focus, .color-fg-green-50__before::before, .color-fg-green-50__after::after {
+  color: #E8F5E9 !important;
+}
+
+.color-fg-green-100, .color-fg-green-100__hover:hover, .color-fg-green-100__active:active, .color-fg-green-100__focus:focus, .color-fg-green-100__before::before, .color-fg-green-100__after::after {
+  color: #C8E6C9 !important;
+}
+
+.color-fg-green-200, .color-fg-green-200__hover:hover, .color-fg-green-200__active:active, .color-fg-green-200__focus:focus, .color-fg-green-200__before::before, .color-fg-green-200__after::after {
+  color: #A5D6A7 !important;
+}
+
+.color-fg-green-300, .color-fg-green-300__hover:hover, .color-fg-green-300__active:active, .color-fg-green-300__focus:focus, .color-fg-green-300__before::before, .color-fg-green-300__after::after {
+  color: #81C784 !important;
+}
+
+.color-fg-green-400, .color-fg-green-400__hover:hover, .color-fg-green-400__active:active, .color-fg-green-400__focus:focus, .color-fg-green-400__before::before, .color-fg-green-400__after::after {
+  color: #66BB6A !important;
+}
+
+.color-fg-green-500, .color-fg-green-500__hover:hover, .color-fg-green-500__active:active, .color-fg-green-500__focus:focus, .color-fg-green-500__before::before, .color-fg-green-500__after::after {
+  color: #4CAF50 !important;
+}
+
+.color-fg-green-600, .color-fg-green-600__hover:hover, .color-fg-green-600__active:active, .color-fg-green-600__focus:focus, .color-fg-green-600__before::before, .color-fg-green-600__after::after {
+  color: #43A047 !important;
+}
+
+.color-fg-green-700, .color-fg-green-700__hover:hover, .color-fg-green-700__active:active, .color-fg-green-700__focus:focus, .color-fg-green-700__before::before, .color-fg-green-700__after::after {
+  color: #388E3C !important;
+}
+
+.color-fg-green-800, .color-fg-green-800__hover:hover, .color-fg-green-800__active:active, .color-fg-green-800__focus:focus, .color-fg-green-800__before::before, .color-fg-green-800__after::after {
+  color: #2E7D32 !important;
+}
+
+.color-fg-green-900, .color-fg-green-900__hover:hover, .color-fg-green-900__active:active, .color-fg-green-900__focus:focus, .color-fg-green-900__before::before, .color-fg-green-900__after::after {
+  color: #1B5E20 !important;
+}
+
+.color-fg-green-A100, .color-fg-green-A100__hover:hover, .color-fg-green-A100__active:active, .color-fg-green-A100__focus:focus, .color-fg-green-A100__before::before, .color-fg-green-A100__after::after {
+  color: #B9F6CA !important;
+}
+
+.color-fg-green-A200, .color-fg-green-A200__hover:hover, .color-fg-green-A200__active:active, .color-fg-green-A200__focus:focus, .color-fg-green-A200__before::before, .color-fg-green-A200__after::after {
+  color: #69F0AE !important;
+}
+
+.color-fg-green-A400, .color-fg-green-A400__hover:hover, .color-fg-green-A400__active:active, .color-fg-green-A400__focus:focus, .color-fg-green-A400__before::before, .color-fg-green-A400__after::after {
+  color: #00E676 !important;
+}
+
+.color-fg-green-A700, .color-fg-green-A700__hover:hover, .color-fg-green-A700__active:active, .color-fg-green-A700__focus:focus, .color-fg-green-A700__before::before, .color-fg-green-A700__after::after {
+  color: #00C853 !important;
+}
+
+.color-bg-green-50, .color-bg-green-50__hover:hover, .color-bg-green-50__active:active, .color-bg-green-50__focus:focus, .color-bg-green-50__before::before, .color-bg-green-50__after::after {
+  background: #E8F5E9 !important;
+}
+
+.color-bg-green-100, .color-bg-green-100__hover:hover, .color-bg-green-100__active:active, .color-bg-green-100__focus:focus, .color-bg-green-100__before::before, .color-bg-green-100__after::after {
+  background: #C8E6C9 !important;
+}
+
+.color-bg-green-200, .color-bg-green-200__hover:hover, .color-bg-green-200__active:active, .color-bg-green-200__focus:focus, .color-bg-green-200__before::before, .color-bg-green-200__after::after {
+  background: #A5D6A7 !important;
+}
+
+.color-bg-green-300, .color-bg-green-300__hover:hover, .color-bg-green-300__active:active, .color-bg-green-300__focus:focus, .color-bg-green-300__before::before, .color-bg-green-300__after::after {
+  background: #81C784 !important;
+}
+
+.color-bg-green-400, .color-bg-green-400__hover:hover, .color-bg-green-400__active:active, .color-bg-green-400__focus:focus, .color-bg-green-400__before::before, .color-bg-green-400__after::after {
+  background: #66BB6A !important;
+}
+
+.color-bg-green-500, .color-bg-green-500__hover:hover, .color-bg-green-500__active:active, .color-bg-green-500__focus:focus, .color-bg-green-500__before::before, .color-bg-green-500__after::after {
+  background: #4CAF50 !important;
+}
+
+.color-bg-green-600, .color-bg-green-600__hover:hover, .color-bg-green-600__active:active, .color-bg-green-600__focus:focus, .color-bg-green-600__before::before, .color-bg-green-600__after::after {
+  background: #43A047 !important;
+}
+
+.color-bg-green-700, .color-bg-green-700__hover:hover, .color-bg-green-700__active:active, .color-bg-green-700__focus:focus, .color-bg-green-700__before::before, .color-bg-green-700__after::after {
+  background: #388E3C !important;
+}
+
+.color-bg-green-800, .color-bg-green-800__hover:hover, .color-bg-green-800__active:active, .color-bg-green-800__focus:focus, .color-bg-green-800__before::before, .color-bg-green-800__after::after {
+  background: #2E7D32 !important;
+}
+
+.color-bg-green-900, .color-bg-green-900__hover:hover, .color-bg-green-900__active:active, .color-bg-green-900__focus:focus, .color-bg-green-900__before::before, .color-bg-green-900__after::after {
+  background: #1B5E20 !important;
+}
+
+.color-bg-green-A100, .color-bg-green-A100__hover:hover, .color-bg-green-A100__active:active, .color-bg-green-A100__focus:focus, .color-bg-green-A100__before::before, .color-bg-green-A100__after::after {
+  background: #B9F6CA !important;
+}
+
+.color-bg-green-A200, .color-bg-green-A200__hover:hover, .color-bg-green-A200__active:active, .color-bg-green-A200__focus:focus, .color-bg-green-A200__before::before, .color-bg-green-A200__after::after {
+  background: #69F0AE !important;
+}
+
+.color-bg-green-A400, .color-bg-green-A400__hover:hover, .color-bg-green-A400__active:active, .color-bg-green-A400__focus:focus, .color-bg-green-A400__before::before, .color-bg-green-A400__after::after {
+  background: #00E676 !important;
+}
+
+.color-bg-green-A700, .color-bg-green-A700__hover:hover, .color-bg-green-A700__active:active, .color-bg-green-A700__focus:focus, .color-bg-green-A700__before::before, .color-bg-green-A700__after::after {
+  background: #00C853 !important;
+}
+
+.color-bd-green-50, .color-bd-green-50__hover:hover, .color-bd-green-50__active:active, .color-bd-green-50__focus:focus, .color-bd-green-50__before::before, .color-bd-green-50__after::after {
+  border-color: #E8F5E9 !important;
+}
+
+.color-bd-green-100, .color-bd-green-100__hover:hover, .color-bd-green-100__active:active, .color-bd-green-100__focus:focus, .color-bd-green-100__before::before, .color-bd-green-100__after::after {
+  border-color: #C8E6C9 !important;
+}
+
+.color-bd-green-200, .color-bd-green-200__hover:hover, .color-bd-green-200__active:active, .color-bd-green-200__focus:focus, .color-bd-green-200__before::before, .color-bd-green-200__after::after {
+  border-color: #A5D6A7 !important;
+}
+
+.color-bd-green-300, .color-bd-green-300__hover:hover, .color-bd-green-300__active:active, .color-bd-green-300__focus:focus, .color-bd-green-300__before::before, .color-bd-green-300__after::after {
+  border-color: #81C784 !important;
+}
+
+.color-bd-green-400, .color-bd-green-400__hover:hover, .color-bd-green-400__active:active, .color-bd-green-400__focus:focus, .color-bd-green-400__before::before, .color-bd-green-400__after::after {
+  border-color: #66BB6A !important;
+}
+
+.color-bd-green-500, .color-bd-green-500__hover:hover, .color-bd-green-500__active:active, .color-bd-green-500__focus:focus, .color-bd-green-500__before::before, .color-bd-green-500__after::after {
+  border-color: #4CAF50 !important;
+}
+
+.color-bd-green-600, .color-bd-green-600__hover:hover, .color-bd-green-600__active:active, .color-bd-green-600__focus:focus, .color-bd-green-600__before::before, .color-bd-green-600__after::after {
+  border-color: #43A047 !important;
+}
+
+.color-bd-green-700, .color-bd-green-700__hover:hover, .color-bd-green-700__active:active, .color-bd-green-700__focus:focus, .color-bd-green-700__before::before, .color-bd-green-700__after::after {
+  border-color: #388E3C !important;
+}
+
+.color-bd-green-800, .color-bd-green-800__hover:hover, .color-bd-green-800__active:active, .color-bd-green-800__focus:focus, .color-bd-green-800__before::before, .color-bd-green-800__after::after {
+  border-color: #2E7D32 !important;
+}
+
+.color-bd-green-900, .color-bd-green-900__hover:hover, .color-bd-green-900__active:active, .color-bd-green-900__focus:focus, .color-bd-green-900__before::before, .color-bd-green-900__after::after {
+  border-color: #1B5E20 !important;
+}
+
+.color-bd-green-A100, .color-bd-green-A100__hover:hover, .color-bd-green-A100__active:active, .color-bd-green-A100__focus:focus, .color-bd-green-A100__before::before, .color-bd-green-A100__after::after {
+  border-color: #B9F6CA !important;
+}
+
+.color-bd-green-A200, .color-bd-green-A200__hover:hover, .color-bd-green-A200__active:active, .color-bd-green-A200__focus:focus, .color-bd-green-A200__before::before, .color-bd-green-A200__after::after {
+  border-color: #69F0AE !important;
+}
+
+.color-bd-green-A400, .color-bd-green-A400__hover:hover, .color-bd-green-A400__active:active, .color-bd-green-A400__focus:focus, .color-bd-green-A400__before::before, .color-bd-green-A400__after::after {
+  border-color: #00E676 !important;
+}
+
+.color-bd-green-A700, .color-bd-green-A700__hover:hover, .color-bd-green-A700__active:active, .color-bd-green-A700__focus:focus, .color-bd-green-A700__before::before, .color-bd-green-A700__after::after {
+  border-color: #00C853 !important;
+}
+
+.color-fg-light-green-50, .color-fg-light-green-50__hover:hover, .color-fg-light-green-50__active:active, .color-fg-light-green-50__focus:focus, .color-fg-light-green-50__before::before, .color-fg-light-green-50__after::after {
+  color: #F1F8E9 !important;
+}
+
+.color-fg-light-green-100, .color-fg-light-green-100__hover:hover, .color-fg-light-green-100__active:active, .color-fg-light-green-100__focus:focus, .color-fg-light-green-100__before::before, .color-fg-light-green-100__after::after {
+  color: #DCEDC8 !important;
+}
+
+.color-fg-light-green-200, .color-fg-light-green-200__hover:hover, .color-fg-light-green-200__active:active, .color-fg-light-green-200__focus:focus, .color-fg-light-green-200__before::before, .color-fg-light-green-200__after::after {
+  color: #C5E1A5 !important;
+}
+
+.color-fg-light-green-300, .color-fg-light-green-300__hover:hover, .color-fg-light-green-300__active:active, .color-fg-light-green-300__focus:focus, .color-fg-light-green-300__before::before, .color-fg-light-green-300__after::after {
+  color: #AED581 !important;
+}
+
+.color-fg-light-green-400, .color-fg-light-green-400__hover:hover, .color-fg-light-green-400__active:active, .color-fg-light-green-400__focus:focus, .color-fg-light-green-400__before::before, .color-fg-light-green-400__after::after {
+  color: #9CCC65 !important;
+}
+
+.color-fg-light-green-500, .color-fg-light-green-500__hover:hover, .color-fg-light-green-500__active:active, .color-fg-light-green-500__focus:focus, .color-fg-light-green-500__before::before, .color-fg-light-green-500__after::after {
+  color: #8BC34A !important;
+}
+
+.color-fg-light-green-600, .color-fg-light-green-600__hover:hover, .color-fg-light-green-600__active:active, .color-fg-light-green-600__focus:focus, .color-fg-light-green-600__before::before, .color-fg-light-green-600__after::after {
+  color: #7CB342 !important;
+}
+
+.color-fg-light-green-700, .color-fg-light-green-700__hover:hover, .color-fg-light-green-700__active:active, .color-fg-light-green-700__focus:focus, .color-fg-light-green-700__before::before, .color-fg-light-green-700__after::after {
+  color: #689F38 !important;
+}
+
+.color-fg-light-green-800, .color-fg-light-green-800__hover:hover, .color-fg-light-green-800__active:active, .color-fg-light-green-800__focus:focus, .color-fg-light-green-800__before::before, .color-fg-light-green-800__after::after {
+  color: #558B2F !important;
+}
+
+.color-fg-light-green-900, .color-fg-light-green-900__hover:hover, .color-fg-light-green-900__active:active, .color-fg-light-green-900__focus:focus, .color-fg-light-green-900__before::before, .color-fg-light-green-900__after::after {
+  color: #33691E !important;
+}
+
+.color-fg-light-green-A100, .color-fg-light-green-A100__hover:hover, .color-fg-light-green-A100__active:active, .color-fg-light-green-A100__focus:focus, .color-fg-light-green-A100__before::before, .color-fg-light-green-A100__after::after {
+  color: #CCFF90 !important;
+}
+
+.color-fg-light-green-A200, .color-fg-light-green-A200__hover:hover, .color-fg-light-green-A200__active:active, .color-fg-light-green-A200__focus:focus, .color-fg-light-green-A200__before::before, .color-fg-light-green-A200__after::after {
+  color: #B2FF59 !important;
+}
+
+.color-fg-light-green-A400, .color-fg-light-green-A400__hover:hover, .color-fg-light-green-A400__active:active, .color-fg-light-green-A400__focus:focus, .color-fg-light-green-A400__before::before, .color-fg-light-green-A400__after::after {
+  color: #76FF03 !important;
+}
+
+.color-fg-light-green-A700, .color-fg-light-green-A700__hover:hover, .color-fg-light-green-A700__active:active, .color-fg-light-green-A700__focus:focus, .color-fg-light-green-A700__before::before, .color-fg-light-green-A700__after::after {
+  color: #64DD17 !important;
+}
+
+.color-bg-light-green-50, .color-bg-light-green-50__hover:hover, .color-bg-light-green-50__active:active, .color-bg-light-green-50__focus:focus, .color-bg-light-green-50__before::before, .color-bg-light-green-50__after::after {
+  background: #F1F8E9 !important;
+}
+
+.color-bg-light-green-100, .color-bg-light-green-100__hover:hover, .color-bg-light-green-100__active:active, .color-bg-light-green-100__focus:focus, .color-bg-light-green-100__before::before, .color-bg-light-green-100__after::after {
+  background: #DCEDC8 !important;
+}
+
+.color-bg-light-green-200, .color-bg-light-green-200__hover:hover, .color-bg-light-green-200__active:active, .color-bg-light-green-200__focus:focus, .color-bg-light-green-200__before::before, .color-bg-light-green-200__after::after {
+  background: #C5E1A5 !important;
+}
+
+.color-bg-light-green-300, .color-bg-light-green-300__hover:hover, .color-bg-light-green-300__active:active, .color-bg-light-green-300__focus:focus, .color-bg-light-green-300__before::before, .color-bg-light-green-300__after::after {
+  background: #AED581 !important;
+}
+
+.color-bg-light-green-400, .color-bg-light-green-400__hover:hover, .color-bg-light-green-400__active:active, .color-bg-light-green-400__focus:focus, .color-bg-light-green-400__before::before, .color-bg-light-green-400__after::after {
+  background: #9CCC65 !important;
+}
+
+.color-bg-light-green-500, .color-bg-light-green-500__hover:hover, .color-bg-light-green-500__active:active, .color-bg-light-green-500__focus:focus, .color-bg-light-green-500__before::before, .color-bg-light-green-500__after::after {
+  background: #8BC34A !important;
+}
+
+.color-bg-light-green-600, .color-bg-light-green-600__hover:hover, .color-bg-light-green-600__active:active, .color-bg-light-green-600__focus:focus, .color-bg-light-green-600__before::before, .color-bg-light-green-600__after::after {
+  background: #7CB342 !important;
+}
+
+.color-bg-light-green-700, .color-bg-light-green-700__hover:hover, .color-bg-light-green-700__active:active, .color-bg-light-green-700__focus:focus, .color-bg-light-green-700__before::before, .color-bg-light-green-700__after::after {
+  background: #689F38 !important;
+}
+
+.color-bg-light-green-800, .color-bg-light-green-800__hover:hover, .color-bg-light-green-800__active:active, .color-bg-light-green-800__focus:focus, .color-bg-light-green-800__before::before, .color-bg-light-green-800__after::after {
+  background: #558B2F !important;
+}
+
+.color-bg-light-green-900, .color-bg-light-green-900__hover:hover, .color-bg-light-green-900__active:active, .color-bg-light-green-900__focus:focus, .color-bg-light-green-900__before::before, .color-bg-light-green-900__after::after {
+  background: #33691E !important;
+}
+
+.color-bg-light-green-A100, .color-bg-light-green-A100__hover:hover, .color-bg-light-green-A100__active:active, .color-bg-light-green-A100__focus:focus, .color-bg-light-green-A100__before::before, .color-bg-light-green-A100__after::after {
+  background: #CCFF90 !important;
+}
+
+.color-bg-light-green-A200, .color-bg-light-green-A200__hover:hover, .color-bg-light-green-A200__active:active, .color-bg-light-green-A200__focus:focus, .color-bg-light-green-A200__before::before, .color-bg-light-green-A200__after::after {
+  background: #B2FF59 !important;
+}
+
+.color-bg-light-green-A400, .color-bg-light-green-A400__hover:hover, .color-bg-light-green-A400__active:active, .color-bg-light-green-A400__focus:focus, .color-bg-light-green-A400__before::before, .color-bg-light-green-A400__after::after {
+  background: #76FF03 !important;
+}
+
+.color-bg-light-green-A700, .color-bg-light-green-A700__hover:hover, .color-bg-light-green-A700__active:active, .color-bg-light-green-A700__focus:focus, .color-bg-light-green-A700__before::before, .color-bg-light-green-A700__after::after {
+  background: #64DD17 !important;
+}
+
+.color-bd-light-green-50, .color-bd-light-green-50__hover:hover, .color-bd-light-green-50__active:active, .color-bd-light-green-50__focus:focus, .color-bd-light-green-50__before::before, .color-bd-light-green-50__after::after {
+  border-color: #F1F8E9 !important;
+}
+
+.color-bd-light-green-100, .color-bd-light-green-100__hover:hover, .color-bd-light-green-100__active:active, .color-bd-light-green-100__focus:focus, .color-bd-light-green-100__before::before, .color-bd-light-green-100__after::after {
+  border-color: #DCEDC8 !important;
+}
+
+.color-bd-light-green-200, .color-bd-light-green-200__hover:hover, .color-bd-light-green-200__active:active, .color-bd-light-green-200__focus:focus, .color-bd-light-green-200__before::before, .color-bd-light-green-200__after::after {
+  border-color: #C5E1A5 !important;
+}
+
+.color-bd-light-green-300, .color-bd-light-green-300__hover:hover, .color-bd-light-green-300__active:active, .color-bd-light-green-300__focus:focus, .color-bd-light-green-300__before::before, .color-bd-light-green-300__after::after {
+  border-color: #AED581 !important;
+}
+
+.color-bd-light-green-400, .color-bd-light-green-400__hover:hover, .color-bd-light-green-400__active:active, .color-bd-light-green-400__focus:focus, .color-bd-light-green-400__before::before, .color-bd-light-green-400__after::after {
+  border-color: #9CCC65 !important;
+}
+
+.color-bd-light-green-500, .color-bd-light-green-500__hover:hover, .color-bd-light-green-500__active:active, .color-bd-light-green-500__focus:focus, .color-bd-light-green-500__before::before, .color-bd-light-green-500__after::after {
+  border-color: #8BC34A !important;
+}
+
+.color-bd-light-green-600, .color-bd-light-green-600__hover:hover, .color-bd-light-green-600__active:active, .color-bd-light-green-600__focus:focus, .color-bd-light-green-600__before::before, .color-bd-light-green-600__after::after {
+  border-color: #7CB342 !important;
+}
+
+.color-bd-light-green-700, .color-bd-light-green-700__hover:hover, .color-bd-light-green-700__active:active, .color-bd-light-green-700__focus:focus, .color-bd-light-green-700__before::before, .color-bd-light-green-700__after::after {
+  border-color: #689F38 !important;
+}
+
+.color-bd-light-green-800, .color-bd-light-green-800__hover:hover, .color-bd-light-green-800__active:active, .color-bd-light-green-800__focus:focus, .color-bd-light-green-800__before::before, .color-bd-light-green-800__after::after {
+  border-color: #558B2F !important;
+}
+
+.color-bd-light-green-900, .color-bd-light-green-900__hover:hover, .color-bd-light-green-900__active:active, .color-bd-light-green-900__focus:focus, .color-bd-light-green-900__before::before, .color-bd-light-green-900__after::after {
+  border-color: #33691E !important;
+}
+
+.color-bd-light-green-A100, .color-bd-light-green-A100__hover:hover, .color-bd-light-green-A100__active:active, .color-bd-light-green-A100__focus:focus, .color-bd-light-green-A100__before::before, .color-bd-light-green-A100__after::after {
+  border-color: #CCFF90 !important;
+}
+
+.color-bd-light-green-A200, .color-bd-light-green-A200__hover:hover, .color-bd-light-green-A200__active:active, .color-bd-light-green-A200__focus:focus, .color-bd-light-green-A200__before::before, .color-bd-light-green-A200__after::after {
+  border-color: #B2FF59 !important;
+}
+
+.color-bd-light-green-A400, .color-bd-light-green-A400__hover:hover, .color-bd-light-green-A400__active:active, .color-bd-light-green-A400__focus:focus, .color-bd-light-green-A400__before::before, .color-bd-light-green-A400__after::after {
+  border-color: #76FF03 !important;
+}
+
+.color-bd-light-green-A700, .color-bd-light-green-A700__hover:hover, .color-bd-light-green-A700__active:active, .color-bd-light-green-A700__focus:focus, .color-bd-light-green-A700__before::before, .color-bd-light-green-A700__after::after {
+  border-color: #64DD17 !important;
+}
+
+.color-fg-lime-50, .color-fg-lime-50__hover:hover, .color-fg-lime-50__active:active, .color-fg-lime-50__focus:focus, .color-fg-lime-50__before::before, .color-fg-lime-50__after::after {
+  color: #F9FBE7 !important;
+}
+
+.color-fg-lime-100, .color-fg-lime-100__hover:hover, .color-fg-lime-100__active:active, .color-fg-lime-100__focus:focus, .color-fg-lime-100__before::before, .color-fg-lime-100__after::after {
+  color: #F0F4C3 !important;
+}
+
+.color-fg-lime-200, .color-fg-lime-200__hover:hover, .color-fg-lime-200__active:active, .color-fg-lime-200__focus:focus, .color-fg-lime-200__before::before, .color-fg-lime-200__after::after {
+  color: #E6EE9C !important;
+}
+
+.color-fg-lime-300, .color-fg-lime-300__hover:hover, .color-fg-lime-300__active:active, .color-fg-lime-300__focus:focus, .color-fg-lime-300__before::before, .color-fg-lime-300__after::after {
+  color: #DCE775 !important;
+}
+
+.color-fg-lime-400, .color-fg-lime-400__hover:hover, .color-fg-lime-400__active:active, .color-fg-lime-400__focus:focus, .color-fg-lime-400__before::before, .color-fg-lime-400__after::after {
+  color: #D4E157 !important;
+}
+
+.color-fg-lime-500, .color-fg-lime-500__hover:hover, .color-fg-lime-500__active:active, .color-fg-lime-500__focus:focus, .color-fg-lime-500__before::before, .color-fg-lime-500__after::after {
+  color: #CDDC39 !important;
+}
+
+.color-fg-lime-600, .color-fg-lime-600__hover:hover, .color-fg-lime-600__active:active, .color-fg-lime-600__focus:focus, .color-fg-lime-600__before::before, .color-fg-lime-600__after::after {
+  color: #C0CA33 !important;
+}
+
+.color-fg-lime-700, .color-fg-lime-700__hover:hover, .color-fg-lime-700__active:active, .color-fg-lime-700__focus:focus, .color-fg-lime-700__before::before, .color-fg-lime-700__after::after {
+  color: #AFB42B !important;
+}
+
+.color-fg-lime-800, .color-fg-lime-800__hover:hover, .color-fg-lime-800__active:active, .color-fg-lime-800__focus:focus, .color-fg-lime-800__before::before, .color-fg-lime-800__after::after {
+  color: #9E9D24 !important;
+}
+
+.color-fg-lime-900, .color-fg-lime-900__hover:hover, .color-fg-lime-900__active:active, .color-fg-lime-900__focus:focus, .color-fg-lime-900__before::before, .color-fg-lime-900__after::after {
+  color: #827717 !important;
+}
+
+.color-fg-lime-A100, .color-fg-lime-A100__hover:hover, .color-fg-lime-A100__active:active, .color-fg-lime-A100__focus:focus, .color-fg-lime-A100__before::before, .color-fg-lime-A100__after::after {
+  color: #F4FF81 !important;
+}
+
+.color-fg-lime-A200, .color-fg-lime-A200__hover:hover, .color-fg-lime-A200__active:active, .color-fg-lime-A200__focus:focus, .color-fg-lime-A200__before::before, .color-fg-lime-A200__after::after {
+  color: #EEFF41 !important;
+}
+
+.color-fg-lime-A400, .color-fg-lime-A400__hover:hover, .color-fg-lime-A400__active:active, .color-fg-lime-A400__focus:focus, .color-fg-lime-A400__before::before, .color-fg-lime-A400__after::after {
+  color: #C6FF00 !important;
+}
+
+.color-fg-lime-A700, .color-fg-lime-A700__hover:hover, .color-fg-lime-A700__active:active, .color-fg-lime-A700__focus:focus, .color-fg-lime-A700__before::before, .color-fg-lime-A700__after::after {
+  color: #AEEA00 !important;
+}
+
+.color-bg-lime-50, .color-bg-lime-50__hover:hover, .color-bg-lime-50__active:active, .color-bg-lime-50__focus:focus, .color-bg-lime-50__before::before, .color-bg-lime-50__after::after {
+  background: #F9FBE7 !important;
+}
+
+.color-bg-lime-100, .color-bg-lime-100__hover:hover, .color-bg-lime-100__active:active, .color-bg-lime-100__focus:focus, .color-bg-lime-100__before::before, .color-bg-lime-100__after::after {
+  background: #F0F4C3 !important;
+}
+
+.color-bg-lime-200, .color-bg-lime-200__hover:hover, .color-bg-lime-200__active:active, .color-bg-lime-200__focus:focus, .color-bg-lime-200__before::before, .color-bg-lime-200__after::after {
+  background: #E6EE9C !important;
+}
+
+.color-bg-lime-300, .color-bg-lime-300__hover:hover, .color-bg-lime-300__active:active, .color-bg-lime-300__focus:focus, .color-bg-lime-300__before::before, .color-bg-lime-300__after::after {
+  background: #DCE775 !important;
+}
+
+.color-bg-lime-400, .color-bg-lime-400__hover:hover, .color-bg-lime-400__active:active, .color-bg-lime-400__focus:focus, .color-bg-lime-400__before::before, .color-bg-lime-400__after::after {
+  background: #D4E157 !important;
+}
+
+.color-bg-lime-500, .color-bg-lime-500__hover:hover, .color-bg-lime-500__active:active, .color-bg-lime-500__focus:focus, .color-bg-lime-500__before::before, .color-bg-lime-500__after::after {
+  background: #CDDC39 !important;
+}
+
+.color-bg-lime-600, .color-bg-lime-600__hover:hover, .color-bg-lime-600__active:active, .color-bg-lime-600__focus:focus, .color-bg-lime-600__before::before, .color-bg-lime-600__after::after {
+  background: #C0CA33 !important;
+}
+
+.color-bg-lime-700, .color-bg-lime-700__hover:hover, .color-bg-lime-700__active:active, .color-bg-lime-700__focus:focus, .color-bg-lime-700__before::before, .color-bg-lime-700__after::after {
+  background: #AFB42B !important;
+}
+
+.color-bg-lime-800, .color-bg-lime-800__hover:hover, .color-bg-lime-800__active:active, .color-bg-lime-800__focus:focus, .color-bg-lime-800__before::before, .color-bg-lime-800__after::after {
+  background: #9E9D24 !important;
+}
+
+.color-bg-lime-900, .color-bg-lime-900__hover:hover, .color-bg-lime-900__active:active, .color-bg-lime-900__focus:focus, .color-bg-lime-900__before::before, .color-bg-lime-900__after::after {
+  background: #827717 !important;
+}
+
+.color-bg-lime-A100, .color-bg-lime-A100__hover:hover, .color-bg-lime-A100__active:active, .color-bg-lime-A100__focus:focus, .color-bg-lime-A100__before::before, .color-bg-lime-A100__after::after {
+  background: #F4FF81 !important;
+}
+
+.color-bg-lime-A200, .color-bg-lime-A200__hover:hover, .color-bg-lime-A200__active:active, .color-bg-lime-A200__focus:focus, .color-bg-lime-A200__before::before, .color-bg-lime-A200__after::after {
+  background: #EEFF41 !important;
+}
+
+.color-bg-lime-A400, .color-bg-lime-A400__hover:hover, .color-bg-lime-A400__active:active, .color-bg-lime-A400__focus:focus, .color-bg-lime-A400__before::before, .color-bg-lime-A400__after::after {
+  background: #C6FF00 !important;
+}
+
+.color-bg-lime-A700, .color-bg-lime-A700__hover:hover, .color-bg-lime-A700__active:active, .color-bg-lime-A700__focus:focus, .color-bg-lime-A700__before::before, .color-bg-lime-A700__after::after {
+  background: #AEEA00 !important;
+}
+
+.color-bd-lime-50, .color-bd-lime-50__hover:hover, .color-bd-lime-50__active:active, .color-bd-lime-50__focus:focus, .color-bd-lime-50__before::before, .color-bd-lime-50__after::after {
+  border-color: #F9FBE7 !important;
+}
+
+.color-bd-lime-100, .color-bd-lime-100__hover:hover, .color-bd-lime-100__active:active, .color-bd-lime-100__focus:focus, .color-bd-lime-100__before::before, .color-bd-lime-100__after::after {
+  border-color: #F0F4C3 !important;
+}
+
+.color-bd-lime-200, .color-bd-lime-200__hover:hover, .color-bd-lime-200__active:active, .color-bd-lime-200__focus:focus, .color-bd-lime-200__before::before, .color-bd-lime-200__after::after {
+  border-color: #E6EE9C !important;
+}
+
+.color-bd-lime-300, .color-bd-lime-300__hover:hover, .color-bd-lime-300__active:active, .color-bd-lime-300__focus:focus, .color-bd-lime-300__before::before, .color-bd-lime-300__after::after {
+  border-color: #DCE775 !important;
+}
+
+.color-bd-lime-400, .color-bd-lime-400__hover:hover, .color-bd-lime-400__active:active, .color-bd-lime-400__focus:focus, .color-bd-lime-400__before::before, .color-bd-lime-400__after::after {
+  border-color: #D4E157 !important;
+}
+
+.color-bd-lime-500, .color-bd-lime-500__hover:hover, .color-bd-lime-500__active:active, .color-bd-lime-500__focus:focus, .color-bd-lime-500__before::before, .color-bd-lime-500__after::after {
+  border-color: #CDDC39 !important;
+}
+
+.color-bd-lime-600, .color-bd-lime-600__hover:hover, .color-bd-lime-600__active:active, .color-bd-lime-600__focus:focus, .color-bd-lime-600__before::before, .color-bd-lime-600__after::after {
+  border-color: #C0CA33 !important;
+}
+
+.color-bd-lime-700, .color-bd-lime-700__hover:hover, .color-bd-lime-700__active:active, .color-bd-lime-700__focus:focus, .color-bd-lime-700__before::before, .color-bd-lime-700__after::after {
+  border-color: #AFB42B !important;
+}
+
+.color-bd-lime-800, .color-bd-lime-800__hover:hover, .color-bd-lime-800__active:active, .color-bd-lime-800__focus:focus, .color-bd-lime-800__before::before, .color-bd-lime-800__after::after {
+  border-color: #9E9D24 !important;
+}
+
+.color-bd-lime-900, .color-bd-lime-900__hover:hover, .color-bd-lime-900__active:active, .color-bd-lime-900__focus:focus, .color-bd-lime-900__before::before, .color-bd-lime-900__after::after {
+  border-color: #827717 !important;
+}
+
+.color-bd-lime-A100, .color-bd-lime-A100__hover:hover, .color-bd-lime-A100__active:active, .color-bd-lime-A100__focus:focus, .color-bd-lime-A100__before::before, .color-bd-lime-A100__after::after {
+  border-color: #F4FF81 !important;
+}
+
+.color-bd-lime-A200, .color-bd-lime-A200__hover:hover, .color-bd-lime-A200__active:active, .color-bd-lime-A200__focus:focus, .color-bd-lime-A200__before::before, .color-bd-lime-A200__after::after {
+  border-color: #EEFF41 !important;
+}
+
+.color-bd-lime-A400, .color-bd-lime-A400__hover:hover, .color-bd-lime-A400__active:active, .color-bd-lime-A400__focus:focus, .color-bd-lime-A400__before::before, .color-bd-lime-A400__after::after {
+  border-color: #C6FF00 !important;
+}
+
+.color-bd-lime-A700, .color-bd-lime-A700__hover:hover, .color-bd-lime-A700__active:active, .color-bd-lime-A700__focus:focus, .color-bd-lime-A700__before::before, .color-bd-lime-A700__after::after {
+  border-color: #AEEA00 !important;
+}
+
+.color-fg-yellow-50, .color-fg-yellow-50__hover:hover, .color-fg-yellow-50__active:active, .color-fg-yellow-50__focus:focus, .color-fg-yellow-50__before::before, .color-fg-yellow-50__after::after {
+  color: #FFFDE7 !important;
+}
+
+.color-fg-yellow-100, .color-fg-yellow-100__hover:hover, .color-fg-yellow-100__active:active, .color-fg-yellow-100__focus:focus, .color-fg-yellow-100__before::before, .color-fg-yellow-100__after::after {
+  color: #FFF9C4 !important;
+}
+
+.color-fg-yellow-200, .color-fg-yellow-200__hover:hover, .color-fg-yellow-200__active:active, .color-fg-yellow-200__focus:focus, .color-fg-yellow-200__before::before, .color-fg-yellow-200__after::after {
+  color: #FFF59D !important;
+}
+
+.color-fg-yellow-300, .color-fg-yellow-300__hover:hover, .color-fg-yellow-300__active:active, .color-fg-yellow-300__focus:focus, .color-fg-yellow-300__before::before, .color-fg-yellow-300__after::after {
+  color: #FFF176 !important;
+}
+
+.color-fg-yellow-400, .color-fg-yellow-400__hover:hover, .color-fg-yellow-400__active:active, .color-fg-yellow-400__focus:focus, .color-fg-yellow-400__before::before, .color-fg-yellow-400__after::after {
+  color: #FFEE58 !important;
+}
+
+.color-fg-yellow-500, .color-fg-yellow-500__hover:hover, .color-fg-yellow-500__active:active, .color-fg-yellow-500__focus:focus, .color-fg-yellow-500__before::before, .color-fg-yellow-500__after::after {
+  color: #FFEB3B !important;
+}
+
+.color-fg-yellow-600, .color-fg-yellow-600__hover:hover, .color-fg-yellow-600__active:active, .color-fg-yellow-600__focus:focus, .color-fg-yellow-600__before::before, .color-fg-yellow-600__after::after {
+  color: #FDD835 !important;
+}
+
+.color-fg-yellow-700, .color-fg-yellow-700__hover:hover, .color-fg-yellow-700__active:active, .color-fg-yellow-700__focus:focus, .color-fg-yellow-700__before::before, .color-fg-yellow-700__after::after {
+  color: #FBC02D !important;
+}
+
+.color-fg-yellow-800, .color-fg-yellow-800__hover:hover, .color-fg-yellow-800__active:active, .color-fg-yellow-800__focus:focus, .color-fg-yellow-800__before::before, .color-fg-yellow-800__after::after {
+  color: #F9A825 !important;
+}
+
+.color-fg-yellow-900, .color-fg-yellow-900__hover:hover, .color-fg-yellow-900__active:active, .color-fg-yellow-900__focus:focus, .color-fg-yellow-900__before::before, .color-fg-yellow-900__after::after {
+  color: #F57F17 !important;
+}
+
+.color-fg-yellow-A100, .color-fg-yellow-A100__hover:hover, .color-fg-yellow-A100__active:active, .color-fg-yellow-A100__focus:focus, .color-fg-yellow-A100__before::before, .color-fg-yellow-A100__after::after {
+  color: #FFFF8D !important;
+}
+
+.color-fg-yellow-A200, .color-fg-yellow-A200__hover:hover, .color-fg-yellow-A200__active:active, .color-fg-yellow-A200__focus:focus, .color-fg-yellow-A200__before::before, .color-fg-yellow-A200__after::after {
+  color: #FFFF00 !important;
+}
+
+.color-fg-yellow-A400, .color-fg-yellow-A400__hover:hover, .color-fg-yellow-A400__active:active, .color-fg-yellow-A400__focus:focus, .color-fg-yellow-A400__before::before, .color-fg-yellow-A400__after::after {
+  color: #FFEA00 !important;
+}
+
+.color-fg-yellow-A700, .color-fg-yellow-A700__hover:hover, .color-fg-yellow-A700__active:active, .color-fg-yellow-A700__focus:focus, .color-fg-yellow-A700__before::before, .color-fg-yellow-A700__after::after {
+  color: #FFD600 !important;
+}
+
+.color-bg-yellow-50, .color-bg-yellow-50__hover:hover, .color-bg-yellow-50__active:active, .color-bg-yellow-50__focus:focus, .color-bg-yellow-50__before::before, .color-bg-yellow-50__after::after {
+  background: #FFFDE7 !important;
+}
+
+.color-bg-yellow-100, .color-bg-yellow-100__hover:hover, .color-bg-yellow-100__active:active, .color-bg-yellow-100__focus:focus, .color-bg-yellow-100__before::before, .color-bg-yellow-100__after::after {
+  background: #FFF9C4 !important;
+}
+
+.color-bg-yellow-200, .color-bg-yellow-200__hover:hover, .color-bg-yellow-200__active:active, .color-bg-yellow-200__focus:focus, .color-bg-yellow-200__before::before, .color-bg-yellow-200__after::after {
+  background: #FFF59D !important;
+}
+
+.color-bg-yellow-300, .color-bg-yellow-300__hover:hover, .color-bg-yellow-300__active:active, .color-bg-yellow-300__focus:focus, .color-bg-yellow-300__before::before, .color-bg-yellow-300__after::after {
+  background: #FFF176 !important;
+}
+
+.color-bg-yellow-400, .color-bg-yellow-400__hover:hover, .color-bg-yellow-400__active:active, .color-bg-yellow-400__focus:focus, .color-bg-yellow-400__before::before, .color-bg-yellow-400__after::after {
+  background: #FFEE58 !important;
+}
+
+.color-bg-yellow-500, .color-bg-yellow-500__hover:hover, .color-bg-yellow-500__active:active, .color-bg-yellow-500__focus:focus, .color-bg-yellow-500__before::before, .color-bg-yellow-500__after::after {
+  background: #FFEB3B !important;
+}
+
+.color-bg-yellow-600, .color-bg-yellow-600__hover:hover, .color-bg-yellow-600__active:active, .color-bg-yellow-600__focus:focus, .color-bg-yellow-600__before::before, .color-bg-yellow-600__after::after {
+  background: #FDD835 !important;
+}
+
+.color-bg-yellow-700, .color-bg-yellow-700__hover:hover, .color-bg-yellow-700__active:active, .color-bg-yellow-700__focus:focus, .color-bg-yellow-700__before::before, .color-bg-yellow-700__after::after {
+  background: #FBC02D !important;
+}
+
+.color-bg-yellow-800, .color-bg-yellow-800__hover:hover, .color-bg-yellow-800__active:active, .color-bg-yellow-800__focus:focus, .color-bg-yellow-800__before::before, .color-bg-yellow-800__after::after {
+  background: #F9A825 !important;
+}
+
+.color-bg-yellow-900, .color-bg-yellow-900__hover:hover, .color-bg-yellow-900__active:active, .color-bg-yellow-900__focus:focus, .color-bg-yellow-900__before::before, .color-bg-yellow-900__after::after {
+  background: #F57F17 !important;
+}
+
+.color-bg-yellow-A100, .color-bg-yellow-A100__hover:hover, .color-bg-yellow-A100__active:active, .color-bg-yellow-A100__focus:focus, .color-bg-yellow-A100__before::before, .color-bg-yellow-A100__after::after {
+  background: #FFFF8D !important;
+}
+
+.color-bg-yellow-A200, .color-bg-yellow-A200__hover:hover, .color-bg-yellow-A200__active:active, .color-bg-yellow-A200__focus:focus, .color-bg-yellow-A200__before::before, .color-bg-yellow-A200__after::after {
+  background: #FFFF00 !important;
+}
+
+.color-bg-yellow-A400, .color-bg-yellow-A400__hover:hover, .color-bg-yellow-A400__active:active, .color-bg-yellow-A400__focus:focus, .color-bg-yellow-A400__before::before, .color-bg-yellow-A400__after::after {
+  background: #FFEA00 !important;
+}
+
+.color-bg-yellow-A700, .color-bg-yellow-A700__hover:hover, .color-bg-yellow-A700__active:active, .color-bg-yellow-A700__focus:focus, .color-bg-yellow-A700__before::before, .color-bg-yellow-A700__after::after {
+  background: #FFD600 !important;
+}
+
+.color-bd-yellow-50, .color-bd-yellow-50__hover:hover, .color-bd-yellow-50__active:active, .color-bd-yellow-50__focus:focus, .color-bd-yellow-50__before::before, .color-bd-yellow-50__after::after {
+  border-color: #FFFDE7 !important;
+}
+
+.color-bd-yellow-100, .color-bd-yellow-100__hover:hover, .color-bd-yellow-100__active:active, .color-bd-yellow-100__focus:focus, .color-bd-yellow-100__before::before, .color-bd-yellow-100__after::after {
+  border-color: #FFF9C4 !important;
+}
+
+.color-bd-yellow-200, .color-bd-yellow-200__hover:hover, .color-bd-yellow-200__active:active, .color-bd-yellow-200__focus:focus, .color-bd-yellow-200__before::before, .color-bd-yellow-200__after::after {
+  border-color: #FFF59D !important;
+}
+
+.color-bd-yellow-300, .color-bd-yellow-300__hover:hover, .color-bd-yellow-300__active:active, .color-bd-yellow-300__focus:focus, .color-bd-yellow-300__before::before, .color-bd-yellow-300__after::after {
+  border-color: #FFF176 !important;
+}
+
+.color-bd-yellow-400, .color-bd-yellow-400__hover:hover, .color-bd-yellow-400__active:active, .color-bd-yellow-400__focus:focus, .color-bd-yellow-400__before::before, .color-bd-yellow-400__after::after {
+  border-color: #FFEE58 !important;
+}
+
+.color-bd-yellow-500, .color-bd-yellow-500__hover:hover, .color-bd-yellow-500__active:active, .color-bd-yellow-500__focus:focus, .color-bd-yellow-500__before::before, .color-bd-yellow-500__after::after {
+  border-color: #FFEB3B !important;
+}
+
+.color-bd-yellow-600, .color-bd-yellow-600__hover:hover, .color-bd-yellow-600__active:active, .color-bd-yellow-600__focus:focus, .color-bd-yellow-600__before::before, .color-bd-yellow-600__after::after {
+  border-color: #FDD835 !important;
+}
+
+.color-bd-yellow-700, .color-bd-yellow-700__hover:hover, .color-bd-yellow-700__active:active, .color-bd-yellow-700__focus:focus, .color-bd-yellow-700__before::before, .color-bd-yellow-700__after::after {
+  border-color: #FBC02D !important;
+}
+
+.color-bd-yellow-800, .color-bd-yellow-800__hover:hover, .color-bd-yellow-800__active:active, .color-bd-yellow-800__focus:focus, .color-bd-yellow-800__before::before, .color-bd-yellow-800__after::after {
+  border-color: #F9A825 !important;
+}
+
+.color-bd-yellow-900, .color-bd-yellow-900__hover:hover, .color-bd-yellow-900__active:active, .color-bd-yellow-900__focus:focus, .color-bd-yellow-900__before::before, .color-bd-yellow-900__after::after {
+  border-color: #F57F17 !important;
+}
+
+.color-bd-yellow-A100, .color-bd-yellow-A100__hover:hover, .color-bd-yellow-A100__active:active, .color-bd-yellow-A100__focus:focus, .color-bd-yellow-A100__before::before, .color-bd-yellow-A100__after::after {
+  border-color: #FFFF8D !important;
+}
+
+.color-bd-yellow-A200, .color-bd-yellow-A200__hover:hover, .color-bd-yellow-A200__active:active, .color-bd-yellow-A200__focus:focus, .color-bd-yellow-A200__before::before, .color-bd-yellow-A200__after::after {
+  border-color: #FFFF00 !important;
+}
+
+.color-bd-yellow-A400, .color-bd-yellow-A400__hover:hover, .color-bd-yellow-A400__active:active, .color-bd-yellow-A400__focus:focus, .color-bd-yellow-A400__before::before, .color-bd-yellow-A400__after::after {
+  border-color: #FFEA00 !important;
+}
+
+.color-bd-yellow-A700, .color-bd-yellow-A700__hover:hover, .color-bd-yellow-A700__active:active, .color-bd-yellow-A700__focus:focus, .color-bd-yellow-A700__before::before, .color-bd-yellow-A700__after::after {
+  border-color: #FFD600 !important;
+}
+
+.color-fg-amber-50, .color-fg-amber-50__hover:hover, .color-fg-amber-50__active:active, .color-fg-amber-50__focus:focus, .color-fg-amber-50__before::before, .color-fg-amber-50__after::after {
+  color: #FFF8E1 !important;
+}
+
+.color-fg-amber-100, .color-fg-amber-100__hover:hover, .color-fg-amber-100__active:active, .color-fg-amber-100__focus:focus, .color-fg-amber-100__before::before, .color-fg-amber-100__after::after {
+  color: #FFECB3 !important;
+}
+
+.color-fg-amber-200, .color-fg-amber-200__hover:hover, .color-fg-amber-200__active:active, .color-fg-amber-200__focus:focus, .color-fg-amber-200__before::before, .color-fg-amber-200__after::after {
+  color: #FFE082 !important;
+}
+
+.color-fg-amber-300, .color-fg-amber-300__hover:hover, .color-fg-amber-300__active:active, .color-fg-amber-300__focus:focus, .color-fg-amber-300__before::before, .color-fg-amber-300__after::after {
+  color: #FFD54F !important;
+}
+
+.color-fg-amber-400, .color-fg-amber-400__hover:hover, .color-fg-amber-400__active:active, .color-fg-amber-400__focus:focus, .color-fg-amber-400__before::before, .color-fg-amber-400__after::after {
+  color: #FFCA28 !important;
+}
+
+.color-fg-amber-500, .color-fg-amber-500__hover:hover, .color-fg-amber-500__active:active, .color-fg-amber-500__focus:focus, .color-fg-amber-500__before::before, .color-fg-amber-500__after::after {
+  color: #FFC107 !important;
+}
+
+.color-fg-amber-600, .color-fg-amber-600__hover:hover, .color-fg-amber-600__active:active, .color-fg-amber-600__focus:focus, .color-fg-amber-600__before::before, .color-fg-amber-600__after::after {
+  color: #FFB300 !important;
+}
+
+.color-fg-amber-700, .color-fg-amber-700__hover:hover, .color-fg-amber-700__active:active, .color-fg-amber-700__focus:focus, .color-fg-amber-700__before::before, .color-fg-amber-700__after::after {
+  color: #FFA000 !important;
+}
+
+.color-fg-amber-800, .color-fg-amber-800__hover:hover, .color-fg-amber-800__active:active, .color-fg-amber-800__focus:focus, .color-fg-amber-800__before::before, .color-fg-amber-800__after::after {
+  color: #FF8F00 !important;
+}
+
+.color-fg-amber-900, .color-fg-amber-900__hover:hover, .color-fg-amber-900__active:active, .color-fg-amber-900__focus:focus, .color-fg-amber-900__before::before, .color-fg-amber-900__after::after {
+  color: #FF6F00 !important;
+}
+
+.color-fg-amber-A100, .color-fg-amber-A100__hover:hover, .color-fg-amber-A100__active:active, .color-fg-amber-A100__focus:focus, .color-fg-amber-A100__before::before, .color-fg-amber-A100__after::after {
+  color: #FFE57F !important;
+}
+
+.color-fg-amber-A200, .color-fg-amber-A200__hover:hover, .color-fg-amber-A200__active:active, .color-fg-amber-A200__focus:focus, .color-fg-amber-A200__before::before, .color-fg-amber-A200__after::after {
+  color: #FFD740 !important;
+}
+
+.color-fg-amber-A400, .color-fg-amber-A400__hover:hover, .color-fg-amber-A400__active:active, .color-fg-amber-A400__focus:focus, .color-fg-amber-A400__before::before, .color-fg-amber-A400__after::after {
+  color: #FFC400 !important;
+}
+
+.color-fg-amber-A700, .color-fg-amber-A700__hover:hover, .color-fg-amber-A700__active:active, .color-fg-amber-A700__focus:focus, .color-fg-amber-A700__before::before, .color-fg-amber-A700__after::after {
+  color: #FFAB00 !important;
+}
+
+.color-bg-amber-50, .color-bg-amber-50__hover:hover, .color-bg-amber-50__active:active, .color-bg-amber-50__focus:focus, .color-bg-amber-50__before::before, .color-bg-amber-50__after::after {
+  background: #FFF8E1 !important;
+}
+
+.color-bg-amber-100, .color-bg-amber-100__hover:hover, .color-bg-amber-100__active:active, .color-bg-amber-100__focus:focus, .color-bg-amber-100__before::before, .color-bg-amber-100__after::after {
+  background: #FFECB3 !important;
+}
+
+.color-bg-amber-200, .color-bg-amber-200__hover:hover, .color-bg-amber-200__active:active, .color-bg-amber-200__focus:focus, .color-bg-amber-200__before::before, .color-bg-amber-200__after::after {
+  background: #FFE082 !important;
+}
+
+.color-bg-amber-300, .color-bg-amber-300__hover:hover, .color-bg-amber-300__active:active, .color-bg-amber-300__focus:focus, .color-bg-amber-300__before::before, .color-bg-amber-300__after::after {
+  background: #FFD54F !important;
+}
+
+.color-bg-amber-400, .color-bg-amber-400__hover:hover, .color-bg-amber-400__active:active, .color-bg-amber-400__focus:focus, .color-bg-amber-400__before::before, .color-bg-amber-400__after::after {
+  background: #FFCA28 !important;
+}
+
+.color-bg-amber-500, .color-bg-amber-500__hover:hover, .color-bg-amber-500__active:active, .color-bg-amber-500__focus:focus, .color-bg-amber-500__before::before, .color-bg-amber-500__after::after {
+  background: #FFC107 !important;
+}
+
+.color-bg-amber-600, .color-bg-amber-600__hover:hover, .color-bg-amber-600__active:active, .color-bg-amber-600__focus:focus, .color-bg-amber-600__before::before, .color-bg-amber-600__after::after {
+  background: #FFB300 !important;
+}
+
+.color-bg-amber-700, .color-bg-amber-700__hover:hover, .color-bg-amber-700__active:active, .color-bg-amber-700__focus:focus, .color-bg-amber-700__before::before, .color-bg-amber-700__after::after {
+  background: #FFA000 !important;
+}
+
+.color-bg-amber-800, .color-bg-amber-800__hover:hover, .color-bg-amber-800__active:active, .color-bg-amber-800__focus:focus, .color-bg-amber-800__before::before, .color-bg-amber-800__after::after {
+  background: #FF8F00 !important;
+}
+
+.color-bg-amber-900, .color-bg-amber-900__hover:hover, .color-bg-amber-900__active:active, .color-bg-amber-900__focus:focus, .color-bg-amber-900__before::before, .color-bg-amber-900__after::after {
+  background: #FF6F00 !important;
+}
+
+.color-bg-amber-A100, .color-bg-amber-A100__hover:hover, .color-bg-amber-A100__active:active, .color-bg-amber-A100__focus:focus, .color-bg-amber-A100__before::before, .color-bg-amber-A100__after::after {
+  background: #FFE57F !important;
+}
+
+.color-bg-amber-A200, .color-bg-amber-A200__hover:hover, .color-bg-amber-A200__active:active, .color-bg-amber-A200__focus:focus, .color-bg-amber-A200__before::before, .color-bg-amber-A200__after::after {
+  background: #FFD740 !important;
+}
+
+.color-bg-amber-A400, .color-bg-amber-A400__hover:hover, .color-bg-amber-A400__active:active, .color-bg-amber-A400__focus:focus, .color-bg-amber-A400__before::before, .color-bg-amber-A400__after::after {
+  background: #FFC400 !important;
+}
+
+.color-bg-amber-A700, .color-bg-amber-A700__hover:hover, .color-bg-amber-A700__active:active, .color-bg-amber-A700__focus:focus, .color-bg-amber-A700__before::before, .color-bg-amber-A700__after::after {
+  background: #FFAB00 !important;
+}
+
+.color-bd-amber-50, .color-bd-amber-50__hover:hover, .color-bd-amber-50__active:active, .color-bd-amber-50__focus:focus, .color-bd-amber-50__before::before, .color-bd-amber-50__after::after {
+  border-color: #FFF8E1 !important;
+}
+
+.color-bd-amber-100, .color-bd-amber-100__hover:hover, .color-bd-amber-100__active:active, .color-bd-amber-100__focus:focus, .color-bd-amber-100__before::before, .color-bd-amber-100__after::after {
+  border-color: #FFECB3 !important;
+}
+
+.color-bd-amber-200, .color-bd-amber-200__hover:hover, .color-bd-amber-200__active:active, .color-bd-amber-200__focus:focus, .color-bd-amber-200__before::before, .color-bd-amber-200__after::after {
+  border-color: #FFE082 !important;
+}
+
+.color-bd-amber-300, .color-bd-amber-300__hover:hover, .color-bd-amber-300__active:active, .color-bd-amber-300__focus:focus, .color-bd-amber-300__before::before, .color-bd-amber-300__after::after {
+  border-color: #FFD54F !important;
+}
+
+.color-bd-amber-400, .color-bd-amber-400__hover:hover, .color-bd-amber-400__active:active, .color-bd-amber-400__focus:focus, .color-bd-amber-400__before::before, .color-bd-amber-400__after::after {
+  border-color: #FFCA28 !important;
+}
+
+.color-bd-amber-500, .color-bd-amber-500__hover:hover, .color-bd-amber-500__active:active, .color-bd-amber-500__focus:focus, .color-bd-amber-500__before::before, .color-bd-amber-500__after::after {
+  border-color: #FFC107 !important;
+}
+
+.color-bd-amber-600, .color-bd-amber-600__hover:hover, .color-bd-amber-600__active:active, .color-bd-amber-600__focus:focus, .color-bd-amber-600__before::before, .color-bd-amber-600__after::after {
+  border-color: #FFB300 !important;
+}
+
+.color-bd-amber-700, .color-bd-amber-700__hover:hover, .color-bd-amber-700__active:active, .color-bd-amber-700__focus:focus, .color-bd-amber-700__before::before, .color-bd-amber-700__after::after {
+  border-color: #FFA000 !important;
+}
+
+.color-bd-amber-800, .color-bd-amber-800__hover:hover, .color-bd-amber-800__active:active, .color-bd-amber-800__focus:focus, .color-bd-amber-800__before::before, .color-bd-amber-800__after::after {
+  border-color: #FF8F00 !important;
+}
+
+.color-bd-amber-900, .color-bd-amber-900__hover:hover, .color-bd-amber-900__active:active, .color-bd-amber-900__focus:focus, .color-bd-amber-900__before::before, .color-bd-amber-900__after::after {
+  border-color: #FF6F00 !important;
+}
+
+.color-bd-amber-A100, .color-bd-amber-A100__hover:hover, .color-bd-amber-A100__active:active, .color-bd-amber-A100__focus:focus, .color-bd-amber-A100__before::before, .color-bd-amber-A100__after::after {
+  border-color: #FFE57F !important;
+}
+
+.color-bd-amber-A200, .color-bd-amber-A200__hover:hover, .color-bd-amber-A200__active:active, .color-bd-amber-A200__focus:focus, .color-bd-amber-A200__before::before, .color-bd-amber-A200__after::after {
+  border-color: #FFD740 !important;
+}
+
+.color-bd-amber-A400, .color-bd-amber-A400__hover:hover, .color-bd-amber-A400__active:active, .color-bd-amber-A400__focus:focus, .color-bd-amber-A400__before::before, .color-bd-amber-A400__after::after {
+  border-color: #FFC400 !important;
+}
+
+.color-bd-amber-A700, .color-bd-amber-A700__hover:hover, .color-bd-amber-A700__active:active, .color-bd-amber-A700__focus:focus, .color-bd-amber-A700__before::before, .color-bd-amber-A700__after::after {
+  border-color: #FFAB00 !important;
+}
+
+.color-fg-orange-50, .color-fg-orange-50__hover:hover, .color-fg-orange-50__active:active, .color-fg-orange-50__focus:focus, .color-fg-orange-50__before::before, .color-fg-orange-50__after::after {
+  color: #FFF3E0 !important;
+}
+
+.color-fg-orange-100, .color-fg-orange-100__hover:hover, .color-fg-orange-100__active:active, .color-fg-orange-100__focus:focus, .color-fg-orange-100__before::before, .color-fg-orange-100__after::after {
+  color: #FFE0B2 !important;
+}
+
+.color-fg-orange-200, .color-fg-orange-200__hover:hover, .color-fg-orange-200__active:active, .color-fg-orange-200__focus:focus, .color-fg-orange-200__before::before, .color-fg-orange-200__after::after {
+  color: #FFCC80 !important;
+}
+
+.color-fg-orange-300, .color-fg-orange-300__hover:hover, .color-fg-orange-300__active:active, .color-fg-orange-300__focus:focus, .color-fg-orange-300__before::before, .color-fg-orange-300__after::after {
+  color: #FFB74D !important;
+}
+
+.color-fg-orange-400, .color-fg-orange-400__hover:hover, .color-fg-orange-400__active:active, .color-fg-orange-400__focus:focus, .color-fg-orange-400__before::before, .color-fg-orange-400__after::after {
+  color: #FFA726 !important;
+}
+
+.color-fg-orange-500, .color-fg-orange-500__hover:hover, .color-fg-orange-500__active:active, .color-fg-orange-500__focus:focus, .color-fg-orange-500__before::before, .color-fg-orange-500__after::after {
+  color: #FF9800 !important;
+}
+
+.color-fg-orange-600, .color-fg-orange-600__hover:hover, .color-fg-orange-600__active:active, .color-fg-orange-600__focus:focus, .color-fg-orange-600__before::before, .color-fg-orange-600__after::after {
+  color: #FB8C00 !important;
+}
+
+.color-fg-orange-700, .color-fg-orange-700__hover:hover, .color-fg-orange-700__active:active, .color-fg-orange-700__focus:focus, .color-fg-orange-700__before::before, .color-fg-orange-700__after::after {
+  color: #F57C00 !important;
+}
+
+.color-fg-orange-800, .color-fg-orange-800__hover:hover, .color-fg-orange-800__active:active, .color-fg-orange-800__focus:focus, .color-fg-orange-800__before::before, .color-fg-orange-800__after::after {
+  color: #EF6C00 !important;
+}
+
+.color-fg-orange-900, .color-fg-orange-900__hover:hover, .color-fg-orange-900__active:active, .color-fg-orange-900__focus:focus, .color-fg-orange-900__before::before, .color-fg-orange-900__after::after {
+  color: #E65100 !important;
+}
+
+.color-fg-orange-A100, .color-fg-orange-A100__hover:hover, .color-fg-orange-A100__active:active, .color-fg-orange-A100__focus:focus, .color-fg-orange-A100__before::before, .color-fg-orange-A100__after::after {
+  color: #FFD180 !important;
+}
+
+.color-fg-orange-A200, .color-fg-orange-A200__hover:hover, .color-fg-orange-A200__active:active, .color-fg-orange-A200__focus:focus, .color-fg-orange-A200__before::before, .color-fg-orange-A200__after::after {
+  color: #FFAB40 !important;
+}
+
+.color-fg-orange-A400, .color-fg-orange-A400__hover:hover, .color-fg-orange-A400__active:active, .color-fg-orange-A400__focus:focus, .color-fg-orange-A400__before::before, .color-fg-orange-A400__after::after {
+  color: #FF9100 !important;
+}
+
+.color-fg-orange-A700, .color-fg-orange-A700__hover:hover, .color-fg-orange-A700__active:active, .color-fg-orange-A700__focus:focus, .color-fg-orange-A700__before::before, .color-fg-orange-A700__after::after {
+  color: #FF6D00 !important;
+}
+
+.color-bg-orange-50, .color-bg-orange-50__hover:hover, .color-bg-orange-50__active:active, .color-bg-orange-50__focus:focus, .color-bg-orange-50__before::before, .color-bg-orange-50__after::after {
+  background: #FFF3E0 !important;
+}
+
+.color-bg-orange-100, .color-bg-orange-100__hover:hover, .color-bg-orange-100__active:active, .color-bg-orange-100__focus:focus, .color-bg-orange-100__before::before, .color-bg-orange-100__after::after {
+  background: #FFE0B2 !important;
+}
+
+.color-bg-orange-200, .color-bg-orange-200__hover:hover, .color-bg-orange-200__active:active, .color-bg-orange-200__focus:focus, .color-bg-orange-200__before::before, .color-bg-orange-200__after::after {
+  background: #FFCC80 !important;
+}
+
+.color-bg-orange-300, .color-bg-orange-300__hover:hover, .color-bg-orange-300__active:active, .color-bg-orange-300__focus:focus, .color-bg-orange-300__before::before, .color-bg-orange-300__after::after {
+  background: #FFB74D !important;
+}
+
+.color-bg-orange-400, .color-bg-orange-400__hover:hover, .color-bg-orange-400__active:active, .color-bg-orange-400__focus:focus, .color-bg-orange-400__before::before, .color-bg-orange-400__after::after {
+  background: #FFA726 !important;
+}
+
+.color-bg-orange-500, .color-bg-orange-500__hover:hover, .color-bg-orange-500__active:active, .color-bg-orange-500__focus:focus, .color-bg-orange-500__before::before, .color-bg-orange-500__after::after {
+  background: #FF9800 !important;
+}
+
+.color-bg-orange-600, .color-bg-orange-600__hover:hover, .color-bg-orange-600__active:active, .color-bg-orange-600__focus:focus, .color-bg-orange-600__before::before, .color-bg-orange-600__after::after {
+  background: #FB8C00 !important;
+}
+
+.color-bg-orange-700, .color-bg-orange-700__hover:hover, .color-bg-orange-700__active:active, .color-bg-orange-700__focus:focus, .color-bg-orange-700__before::before, .color-bg-orange-700__after::after {
+  background: #F57C00 !important;
+}
+
+.color-bg-orange-800, .color-bg-orange-800__hover:hover, .color-bg-orange-800__active:active, .color-bg-orange-800__focus:focus, .color-bg-orange-800__before::before, .color-bg-orange-800__after::after {
+  background: #EF6C00 !important;
+}
+
+.color-bg-orange-900, .color-bg-orange-900__hover:hover, .color-bg-orange-900__active:active, .color-bg-orange-900__focus:focus, .color-bg-orange-900__before::before, .color-bg-orange-900__after::after {
+  background: #E65100 !important;
+}
+
+.color-bg-orange-A100, .color-bg-orange-A100__hover:hover, .color-bg-orange-A100__active:active, .color-bg-orange-A100__focus:focus, .color-bg-orange-A100__before::before, .color-bg-orange-A100__after::after {
+  background: #FFD180 !important;
+}
+
+.color-bg-orange-A200, .color-bg-orange-A200__hover:hover, .color-bg-orange-A200__active:active, .color-bg-orange-A200__focus:focus, .color-bg-orange-A200__before::before, .color-bg-orange-A200__after::after {
+  background: #FFAB40 !important;
+}
+
+.color-bg-orange-A400, .color-bg-orange-A400__hover:hover, .color-bg-orange-A400__active:active, .color-bg-orange-A400__focus:focus, .color-bg-orange-A400__before::before, .color-bg-orange-A400__after::after {
+  background: #FF9100 !important;
+}
+
+.color-bg-orange-A700, .color-bg-orange-A700__hover:hover, .color-bg-orange-A700__active:active, .color-bg-orange-A700__focus:focus, .color-bg-orange-A700__before::before, .color-bg-orange-A700__after::after {
+  background: #FF6D00 !important;
+}
+
+.color-bd-orange-50, .color-bd-orange-50__hover:hover, .color-bd-orange-50__active:active, .color-bd-orange-50__focus:focus, .color-bd-orange-50__before::before, .color-bd-orange-50__after::after {
+  border-color: #FFF3E0 !important;
+}
+
+.color-bd-orange-100, .color-bd-orange-100__hover:hover, .color-bd-orange-100__active:active, .color-bd-orange-100__focus:focus, .color-bd-orange-100__before::before, .color-bd-orange-100__after::after {
+  border-color: #FFE0B2 !important;
+}
+
+.color-bd-orange-200, .color-bd-orange-200__hover:hover, .color-bd-orange-200__active:active, .color-bd-orange-200__focus:focus, .color-bd-orange-200__before::before, .color-bd-orange-200__after::after {
+  border-color: #FFCC80 !important;
+}
+
+.color-bd-orange-300, .color-bd-orange-300__hover:hover, .color-bd-orange-300__active:active, .color-bd-orange-300__focus:focus, .color-bd-orange-300__before::before, .color-bd-orange-300__after::after {
+  border-color: #FFB74D !important;
+}
+
+.color-bd-orange-400, .color-bd-orange-400__hover:hover, .color-bd-orange-400__active:active, .color-bd-orange-400__focus:focus, .color-bd-orange-400__before::before, .color-bd-orange-400__after::after {
+  border-color: #FFA726 !important;
+}
+
+.color-bd-orange-500, .color-bd-orange-500__hover:hover, .color-bd-orange-500__active:active, .color-bd-orange-500__focus:focus, .color-bd-orange-500__before::before, .color-bd-orange-500__after::after {
+  border-color: #FF9800 !important;
+}
+
+.color-bd-orange-600, .color-bd-orange-600__hover:hover, .color-bd-orange-600__active:active, .color-bd-orange-600__focus:focus, .color-bd-orange-600__before::before, .color-bd-orange-600__after::after {
+  border-color: #FB8C00 !important;
+}
+
+.color-bd-orange-700, .color-bd-orange-700__hover:hover, .color-bd-orange-700__active:active, .color-bd-orange-700__focus:focus, .color-bd-orange-700__before::before, .color-bd-orange-700__after::after {
+  border-color: #F57C00 !important;
+}
+
+.color-bd-orange-800, .color-bd-orange-800__hover:hover, .color-bd-orange-800__active:active, .color-bd-orange-800__focus:focus, .color-bd-orange-800__before::before, .color-bd-orange-800__after::after {
+  border-color: #EF6C00 !important;
+}
+
+.color-bd-orange-900, .color-bd-orange-900__hover:hover, .color-bd-orange-900__active:active, .color-bd-orange-900__focus:focus, .color-bd-orange-900__before::before, .color-bd-orange-900__after::after {
+  border-color: #E65100 !important;
+}
+
+.color-bd-orange-A100, .color-bd-orange-A100__hover:hover, .color-bd-orange-A100__active:active, .color-bd-orange-A100__focus:focus, .color-bd-orange-A100__before::before, .color-bd-orange-A100__after::after {
+  border-color: #FFD180 !important;
+}
+
+.color-bd-orange-A200, .color-bd-orange-A200__hover:hover, .color-bd-orange-A200__active:active, .color-bd-orange-A200__focus:focus, .color-bd-orange-A200__before::before, .color-bd-orange-A200__after::after {
+  border-color: #FFAB40 !important;
+}
+
+.color-bd-orange-A400, .color-bd-orange-A400__hover:hover, .color-bd-orange-A400__active:active, .color-bd-orange-A400__focus:focus, .color-bd-orange-A400__before::before, .color-bd-orange-A400__after::after {
+  border-color: #FF9100 !important;
+}
+
+.color-bd-orange-A700, .color-bd-orange-A700__hover:hover, .color-bd-orange-A700__active:active, .color-bd-orange-A700__focus:focus, .color-bd-orange-A700__before::before, .color-bd-orange-A700__after::after {
+  border-color: #FF6D00 !important;
+}
+
+.color-fg-deep-orange-50, .color-fg-deep-orange-50__hover:hover, .color-fg-deep-orange-50__active:active, .color-fg-deep-orange-50__focus:focus, .color-fg-deep-orange-50__before::before, .color-fg-deep-orange-50__after::after {
+  color: #FBE9E7 !important;
+}
+
+.color-fg-deep-orange-100, .color-fg-deep-orange-100__hover:hover, .color-fg-deep-orange-100__active:active, .color-fg-deep-orange-100__focus:focus, .color-fg-deep-orange-100__before::before, .color-fg-deep-orange-100__after::after {
+  color: #FFCCBC !important;
+}
+
+.color-fg-deep-orange-200, .color-fg-deep-orange-200__hover:hover, .color-fg-deep-orange-200__active:active, .color-fg-deep-orange-200__focus:focus, .color-fg-deep-orange-200__before::before, .color-fg-deep-orange-200__after::after {
+  color: #FFAB91 !important;
+}
+
+.color-fg-deep-orange-300, .color-fg-deep-orange-300__hover:hover, .color-fg-deep-orange-300__active:active, .color-fg-deep-orange-300__focus:focus, .color-fg-deep-orange-300__before::before, .color-fg-deep-orange-300__after::after {
+  color: #FF8A65 !important;
+}
+
+.color-fg-deep-orange-400, .color-fg-deep-orange-400__hover:hover, .color-fg-deep-orange-400__active:active, .color-fg-deep-orange-400__focus:focus, .color-fg-deep-orange-400__before::before, .color-fg-deep-orange-400__after::after {
+  color: #FF7043 !important;
+}
+
+.color-fg-deep-orange-500, .color-fg-deep-orange-500__hover:hover, .color-fg-deep-orange-500__active:active, .color-fg-deep-orange-500__focus:focus, .color-fg-deep-orange-500__before::before, .color-fg-deep-orange-500__after::after {
+  color: #FF5722 !important;
+}
+
+.color-fg-deep-orange-600, .color-fg-deep-orange-600__hover:hover, .color-fg-deep-orange-600__active:active, .color-fg-deep-orange-600__focus:focus, .color-fg-deep-orange-600__before::before, .color-fg-deep-orange-600__after::after {
+  color: #F4511E !important;
+}
+
+.color-fg-deep-orange-700, .color-fg-deep-orange-700__hover:hover, .color-fg-deep-orange-700__active:active, .color-fg-deep-orange-700__focus:focus, .color-fg-deep-orange-700__before::before, .color-fg-deep-orange-700__after::after {
+  color: #E64A19 !important;
+}
+
+.color-fg-deep-orange-800, .color-fg-deep-orange-800__hover:hover, .color-fg-deep-orange-800__active:active, .color-fg-deep-orange-800__focus:focus, .color-fg-deep-orange-800__before::before, .color-fg-deep-orange-800__after::after {
+  color: #D84315 !important;
+}
+
+.color-fg-deep-orange-900, .color-fg-deep-orange-900__hover:hover, .color-fg-deep-orange-900__active:active, .color-fg-deep-orange-900__focus:focus, .color-fg-deep-orange-900__before::before, .color-fg-deep-orange-900__after::after {
+  color: #BF360C !important;
+}
+
+.color-fg-deep-orange-A100, .color-fg-deep-orange-A100__hover:hover, .color-fg-deep-orange-A100__active:active, .color-fg-deep-orange-A100__focus:focus, .color-fg-deep-orange-A100__before::before, .color-fg-deep-orange-A100__after::after {
+  color: #FF9E80 !important;
+}
+
+.color-fg-deep-orange-A200, .color-fg-deep-orange-A200__hover:hover, .color-fg-deep-orange-A200__active:active, .color-fg-deep-orange-A200__focus:focus, .color-fg-deep-orange-A200__before::before, .color-fg-deep-orange-A200__after::after {
+  color: #FF6E40 !important;
+}
+
+.color-fg-deep-orange-A400, .color-fg-deep-orange-A400__hover:hover, .color-fg-deep-orange-A400__active:active, .color-fg-deep-orange-A400__focus:focus, .color-fg-deep-orange-A400__before::before, .color-fg-deep-orange-A400__after::after {
+  color: #FF3D00 !important;
+}
+
+.color-fg-deep-orange-A700, .color-fg-deep-orange-A700__hover:hover, .color-fg-deep-orange-A700__active:active, .color-fg-deep-orange-A700__focus:focus, .color-fg-deep-orange-A700__before::before, .color-fg-deep-orange-A700__after::after {
+  color: #DD2C00 !important;
+}
+
+.color-bg-deep-orange-50, .color-bg-deep-orange-50__hover:hover, .color-bg-deep-orange-50__active:active, .color-bg-deep-orange-50__focus:focus, .color-bg-deep-orange-50__before::before, .color-bg-deep-orange-50__after::after {
+  background: #FBE9E7 !important;
+}
+
+.color-bg-deep-orange-100, .color-bg-deep-orange-100__hover:hover, .color-bg-deep-orange-100__active:active, .color-bg-deep-orange-100__focus:focus, .color-bg-deep-orange-100__before::before, .color-bg-deep-orange-100__after::after {
+  background: #FFCCBC !important;
+}
+
+.color-bg-deep-orange-200, .color-bg-deep-orange-200__hover:hover, .color-bg-deep-orange-200__active:active, .color-bg-deep-orange-200__focus:focus, .color-bg-deep-orange-200__before::before, .color-bg-deep-orange-200__after::after {
+  background: #FFAB91 !important;
+}
+
+.color-bg-deep-orange-300, .color-bg-deep-orange-300__hover:hover, .color-bg-deep-orange-300__active:active, .color-bg-deep-orange-300__focus:focus, .color-bg-deep-orange-300__before::before, .color-bg-deep-orange-300__after::after {
+  background: #FF8A65 !important;
+}
+
+.color-bg-deep-orange-400, .color-bg-deep-orange-400__hover:hover, .color-bg-deep-orange-400__active:active, .color-bg-deep-orange-400__focus:focus, .color-bg-deep-orange-400__before::before, .color-bg-deep-orange-400__after::after {
+  background: #FF7043 !important;
+}
+
+.color-bg-deep-orange-500, .color-bg-deep-orange-500__hover:hover, .color-bg-deep-orange-500__active:active, .color-bg-deep-orange-500__focus:focus, .color-bg-deep-orange-500__before::before, .color-bg-deep-orange-500__after::after {
+  background: #FF5722 !important;
+}
+
+.color-bg-deep-orange-600, .color-bg-deep-orange-600__hover:hover, .color-bg-deep-orange-600__active:active, .color-bg-deep-orange-600__focus:focus, .color-bg-deep-orange-600__before::before, .color-bg-deep-orange-600__after::after {
+  background: #F4511E !important;
+}
+
+.color-bg-deep-orange-700, .color-bg-deep-orange-700__hover:hover, .color-bg-deep-orange-700__active:active, .color-bg-deep-orange-700__focus:focus, .color-bg-deep-orange-700__before::before, .color-bg-deep-orange-700__after::after {
+  background: #E64A19 !important;
+}
+
+.color-bg-deep-orange-800, .color-bg-deep-orange-800__hover:hover, .color-bg-deep-orange-800__active:active, .color-bg-deep-orange-800__focus:focus, .color-bg-deep-orange-800__before::before, .color-bg-deep-orange-800__after::after {
+  background: #D84315 !important;
+}
+
+.color-bg-deep-orange-900, .color-bg-deep-orange-900__hover:hover, .color-bg-deep-orange-900__active:active, .color-bg-deep-orange-900__focus:focus, .color-bg-deep-orange-900__before::before, .color-bg-deep-orange-900__after::after {
+  background: #BF360C !important;
+}
+
+.color-bg-deep-orange-A100, .color-bg-deep-orange-A100__hover:hover, .color-bg-deep-orange-A100__active:active, .color-bg-deep-orange-A100__focus:focus, .color-bg-deep-orange-A100__before::before, .color-bg-deep-orange-A100__after::after {
+  background: #FF9E80 !important;
+}
+
+.color-bg-deep-orange-A200, .color-bg-deep-orange-A200__hover:hover, .color-bg-deep-orange-A200__active:active, .color-bg-deep-orange-A200__focus:focus, .color-bg-deep-orange-A200__before::before, .color-bg-deep-orange-A200__after::after {
+  background: #FF6E40 !important;
+}
+
+.color-bg-deep-orange-A400, .color-bg-deep-orange-A400__hover:hover, .color-bg-deep-orange-A400__active:active, .color-bg-deep-orange-A400__focus:focus, .color-bg-deep-orange-A400__before::before, .color-bg-deep-orange-A400__after::after {
+  background: #FF3D00 !important;
+}
+
+.color-bg-deep-orange-A700, .color-bg-deep-orange-A700__hover:hover, .color-bg-deep-orange-A700__active:active, .color-bg-deep-orange-A700__focus:focus, .color-bg-deep-orange-A700__before::before, .color-bg-deep-orange-A700__after::after {
+  background: #DD2C00 !important;
+}
+
+.color-bd-deep-orange-50, .color-bd-deep-orange-50__hover:hover, .color-bd-deep-orange-50__active:active, .color-bd-deep-orange-50__focus:focus, .color-bd-deep-orange-50__before::before, .color-bd-deep-orange-50__after::after {
+  border-color: #FBE9E7 !important;
+}
+
+.color-bd-deep-orange-100, .color-bd-deep-orange-100__hover:hover, .color-bd-deep-orange-100__active:active, .color-bd-deep-orange-100__focus:focus, .color-bd-deep-orange-100__before::before, .color-bd-deep-orange-100__after::after {
+  border-color: #FFCCBC !important;
+}
+
+.color-bd-deep-orange-200, .color-bd-deep-orange-200__hover:hover, .color-bd-deep-orange-200__active:active, .color-bd-deep-orange-200__focus:focus, .color-bd-deep-orange-200__before::before, .color-bd-deep-orange-200__after::after {
+  border-color: #FFAB91 !important;
+}
+
+.color-bd-deep-orange-300, .color-bd-deep-orange-300__hover:hover, .color-bd-deep-orange-300__active:active, .color-bd-deep-orange-300__focus:focus, .color-bd-deep-orange-300__before::before, .color-bd-deep-orange-300__after::after {
+  border-color: #FF8A65 !important;
+}
+
+.color-bd-deep-orange-400, .color-bd-deep-orange-400__hover:hover, .color-bd-deep-orange-400__active:active, .color-bd-deep-orange-400__focus:focus, .color-bd-deep-orange-400__before::before, .color-bd-deep-orange-400__after::after {
+  border-color: #FF7043 !important;
+}
+
+.color-bd-deep-orange-500, .color-bd-deep-orange-500__hover:hover, .color-bd-deep-orange-500__active:active, .color-bd-deep-orange-500__focus:focus, .color-bd-deep-orange-500__before::before, .color-bd-deep-orange-500__after::after {
+  border-color: #FF5722 !important;
+}
+
+.color-bd-deep-orange-600, .color-bd-deep-orange-600__hover:hover, .color-bd-deep-orange-600__active:active, .color-bd-deep-orange-600__focus:focus, .color-bd-deep-orange-600__before::before, .color-bd-deep-orange-600__after::after {
+  border-color: #F4511E !important;
+}
+
+.color-bd-deep-orange-700, .color-bd-deep-orange-700__hover:hover, .color-bd-deep-orange-700__active:active, .color-bd-deep-orange-700__focus:focus, .color-bd-deep-orange-700__before::before, .color-bd-deep-orange-700__after::after {
+  border-color: #E64A19 !important;
+}
+
+.color-bd-deep-orange-800, .color-bd-deep-orange-800__hover:hover, .color-bd-deep-orange-800__active:active, .color-bd-deep-orange-800__focus:focus, .color-bd-deep-orange-800__before::before, .color-bd-deep-orange-800__after::after {
+  border-color: #D84315 !important;
+}
+
+.color-bd-deep-orange-900, .color-bd-deep-orange-900__hover:hover, .color-bd-deep-orange-900__active:active, .color-bd-deep-orange-900__focus:focus, .color-bd-deep-orange-900__before::before, .color-bd-deep-orange-900__after::after {
+  border-color: #BF360C !important;
+}
+
+.color-bd-deep-orange-A100, .color-bd-deep-orange-A100__hover:hover, .color-bd-deep-orange-A100__active:active, .color-bd-deep-orange-A100__focus:focus, .color-bd-deep-orange-A100__before::before, .color-bd-deep-orange-A100__after::after {
+  border-color: #FF9E80 !important;
+}
+
+.color-bd-deep-orange-A200, .color-bd-deep-orange-A200__hover:hover, .color-bd-deep-orange-A200__active:active, .color-bd-deep-orange-A200__focus:focus, .color-bd-deep-orange-A200__before::before, .color-bd-deep-orange-A200__after::after {
+  border-color: #FF6E40 !important;
+}
+
+.color-bd-deep-orange-A400, .color-bd-deep-orange-A400__hover:hover, .color-bd-deep-orange-A400__active:active, .color-bd-deep-orange-A400__focus:focus, .color-bd-deep-orange-A400__before::before, .color-bd-deep-orange-A400__after::after {
+  border-color: #FF3D00 !important;
+}
+
+.color-bd-deep-orange-A700, .color-bd-deep-orange-A700__hover:hover, .color-bd-deep-orange-A700__active:active, .color-bd-deep-orange-A700__focus:focus, .color-bd-deep-orange-A700__before::before, .color-bd-deep-orange-A700__after::after {
+  border-color: #DD2C00 !important;
+}
+
+.color-fg-brown-50, .color-fg-brown-50__hover:hover, .color-fg-brown-50__active:active, .color-fg-brown-50__focus:focus, .color-fg-brown-50__before::before, .color-fg-brown-50__after::after {
+  color: #EFEBE9 !important;
+}
+
+.color-fg-brown-100, .color-fg-brown-100__hover:hover, .color-fg-brown-100__active:active, .color-fg-brown-100__focus:focus, .color-fg-brown-100__before::before, .color-fg-brown-100__after::after {
+  color: #D7CCC8 !important;
+}
+
+.color-fg-brown-200, .color-fg-brown-200__hover:hover, .color-fg-brown-200__active:active, .color-fg-brown-200__focus:focus, .color-fg-brown-200__before::before, .color-fg-brown-200__after::after {
+  color: #BCAAA4 !important;
+}
+
+.color-fg-brown-300, .color-fg-brown-300__hover:hover, .color-fg-brown-300__active:active, .color-fg-brown-300__focus:focus, .color-fg-brown-300__before::before, .color-fg-brown-300__after::after {
+  color: #A1887F !important;
+}
+
+.color-fg-brown-400, .color-fg-brown-400__hover:hover, .color-fg-brown-400__active:active, .color-fg-brown-400__focus:focus, .color-fg-brown-400__before::before, .color-fg-brown-400__after::after {
+  color: #8D6E63 !important;
+}
+
+.color-fg-brown-500, .color-fg-brown-500__hover:hover, .color-fg-brown-500__active:active, .color-fg-brown-500__focus:focus, .color-fg-brown-500__before::before, .color-fg-brown-500__after::after {
+  color: #795548 !important;
+}
+
+.color-fg-brown-600, .color-fg-brown-600__hover:hover, .color-fg-brown-600__active:active, .color-fg-brown-600__focus:focus, .color-fg-brown-600__before::before, .color-fg-brown-600__after::after {
+  color: #6D4C41 !important;
+}
+
+.color-fg-brown-700, .color-fg-brown-700__hover:hover, .color-fg-brown-700__active:active, .color-fg-brown-700__focus:focus, .color-fg-brown-700__before::before, .color-fg-brown-700__after::after {
+  color: #5D4037 !important;
+}
+
+.color-fg-brown-800, .color-fg-brown-800__hover:hover, .color-fg-brown-800__active:active, .color-fg-brown-800__focus:focus, .color-fg-brown-800__before::before, .color-fg-brown-800__after::after {
+  color: #4E342E !important;
+}
+
+.color-fg-brown-900, .color-fg-brown-900__hover:hover, .color-fg-brown-900__active:active, .color-fg-brown-900__focus:focus, .color-fg-brown-900__before::before, .color-fg-brown-900__after::after {
+  color: #3E2723 !important;
+}
+
+.color-bg-brown-50, .color-bg-brown-50__hover:hover, .color-bg-brown-50__active:active, .color-bg-brown-50__focus:focus, .color-bg-brown-50__before::before, .color-bg-brown-50__after::after {
+  background: #EFEBE9 !important;
+}
+
+.color-bg-brown-100, .color-bg-brown-100__hover:hover, .color-bg-brown-100__active:active, .color-bg-brown-100__focus:focus, .color-bg-brown-100__before::before, .color-bg-brown-100__after::after {
+  background: #D7CCC8 !important;
+}
+
+.color-bg-brown-200, .color-bg-brown-200__hover:hover, .color-bg-brown-200__active:active, .color-bg-brown-200__focus:focus, .color-bg-brown-200__before::before, .color-bg-brown-200__after::after {
+  background: #BCAAA4 !important;
+}
+
+.color-bg-brown-300, .color-bg-brown-300__hover:hover, .color-bg-brown-300__active:active, .color-bg-brown-300__focus:focus, .color-bg-brown-300__before::before, .color-bg-brown-300__after::after {
+  background: #A1887F !important;
+}
+
+.color-bg-brown-400, .color-bg-brown-400__hover:hover, .color-bg-brown-400__active:active, .color-bg-brown-400__focus:focus, .color-bg-brown-400__before::before, .color-bg-brown-400__after::after {
+  background: #8D6E63 !important;
+}
+
+.color-bg-brown-500, .color-bg-brown-500__hover:hover, .color-bg-brown-500__active:active, .color-bg-brown-500__focus:focus, .color-bg-brown-500__before::before, .color-bg-brown-500__after::after {
+  background: #795548 !important;
+}
+
+.color-bg-brown-600, .color-bg-brown-600__hover:hover, .color-bg-brown-600__active:active, .color-bg-brown-600__focus:focus, .color-bg-brown-600__before::before, .color-bg-brown-600__after::after {
+  background: #6D4C41 !important;
+}
+
+.color-bg-brown-700, .color-bg-brown-700__hover:hover, .color-bg-brown-700__active:active, .color-bg-brown-700__focus:focus, .color-bg-brown-700__before::before, .color-bg-brown-700__after::after {
+  background: #5D4037 !important;
+}
+
+.color-bg-brown-800, .color-bg-brown-800__hover:hover, .color-bg-brown-800__active:active, .color-bg-brown-800__focus:focus, .color-bg-brown-800__before::before, .color-bg-brown-800__after::after {
+  background: #4E342E !important;
+}
+
+.color-bg-brown-900, .color-bg-brown-900__hover:hover, .color-bg-brown-900__active:active, .color-bg-brown-900__focus:focus, .color-bg-brown-900__before::before, .color-bg-brown-900__after::after {
+  background: #3E2723 !important;
+}
+
+.color-bd-brown-50, .color-bd-brown-50__hover:hover, .color-bd-brown-50__active:active, .color-bd-brown-50__focus:focus, .color-bd-brown-50__before::before, .color-bd-brown-50__after::after {
+  border-color: #EFEBE9 !important;
+}
+
+.color-bd-brown-100, .color-bd-brown-100__hover:hover, .color-bd-brown-100__active:active, .color-bd-brown-100__focus:focus, .color-bd-brown-100__before::before, .color-bd-brown-100__after::after {
+  border-color: #D7CCC8 !important;
+}
+
+.color-bd-brown-200, .color-bd-brown-200__hover:hover, .color-bd-brown-200__active:active, .color-bd-brown-200__focus:focus, .color-bd-brown-200__before::before, .color-bd-brown-200__after::after {
+  border-color: #BCAAA4 !important;
+}
+
+.color-bd-brown-300, .color-bd-brown-300__hover:hover, .color-bd-brown-300__active:active, .color-bd-brown-300__focus:focus, .color-bd-brown-300__before::before, .color-bd-brown-300__after::after {
+  border-color: #A1887F !important;
+}
+
+.color-bd-brown-400, .color-bd-brown-400__hover:hover, .color-bd-brown-400__active:active, .color-bd-brown-400__focus:focus, .color-bd-brown-400__before::before, .color-bd-brown-400__after::after {
+  border-color: #8D6E63 !important;
+}
+
+.color-bd-brown-500, .color-bd-brown-500__hover:hover, .color-bd-brown-500__active:active, .color-bd-brown-500__focus:focus, .color-bd-brown-500__before::before, .color-bd-brown-500__after::after {
+  border-color: #795548 !important;
+}
+
+.color-bd-brown-600, .color-bd-brown-600__hover:hover, .color-bd-brown-600__active:active, .color-bd-brown-600__focus:focus, .color-bd-brown-600__before::before, .color-bd-brown-600__after::after {
+  border-color: #6D4C41 !important;
+}
+
+.color-bd-brown-700, .color-bd-brown-700__hover:hover, .color-bd-brown-700__active:active, .color-bd-brown-700__focus:focus, .color-bd-brown-700__before::before, .color-bd-brown-700__after::after {
+  border-color: #5D4037 !important;
+}
+
+.color-bd-brown-800, .color-bd-brown-800__hover:hover, .color-bd-brown-800__active:active, .color-bd-brown-800__focus:focus, .color-bd-brown-800__before::before, .color-bd-brown-800__after::after {
+  border-color: #4E342E !important;
+}
+
+.color-bd-brown-900, .color-bd-brown-900__hover:hover, .color-bd-brown-900__active:active, .color-bd-brown-900__focus:focus, .color-bd-brown-900__before::before, .color-bd-brown-900__after::after {
+  border-color: #3E2723 !important;
+}
+
+.color-fg-grey-50, .color-fg-grey-50__hover:hover, .color-fg-grey-50__active:active, .color-fg-grey-50__focus:focus, .color-fg-grey-50__before::before, .color-fg-grey-50__after::after {
+  color: #FAFAFA !important;
+}
+
+.color-fg-grey-100, .color-fg-grey-100__hover:hover, .color-fg-grey-100__active:active, .color-fg-grey-100__focus:focus, .color-fg-grey-100__before::before, .color-fg-grey-100__after::after {
+  color: #F5F5F5 !important;
+}
+
+.color-fg-grey-200, .color-fg-grey-200__hover:hover, .color-fg-grey-200__active:active, .color-fg-grey-200__focus:focus, .color-fg-grey-200__before::before, .color-fg-grey-200__after::after {
+  color: #EEEEEE !important;
+}
+
+.color-fg-grey-300, .color-fg-grey-300__hover:hover, .color-fg-grey-300__active:active, .color-fg-grey-300__focus:focus, .color-fg-grey-300__before::before, .color-fg-grey-300__after::after {
+  color: #E0E0E0 !important;
+}
+
+.color-fg-grey-400, .color-fg-grey-400__hover:hover, .color-fg-grey-400__active:active, .color-fg-grey-400__focus:focus, .color-fg-grey-400__before::before, .color-fg-grey-400__after::after {
+  color: #BDBDBD !important;
+}
+
+.color-fg-grey-500, .color-fg-grey-500__hover:hover, .color-fg-grey-500__active:active, .color-fg-grey-500__focus:focus, .color-fg-grey-500__before::before, .color-fg-grey-500__after::after {
+  color: #9E9E9E !important;
+}
+
+.color-fg-grey-600, .color-fg-grey-600__hover:hover, .color-fg-grey-600__active:active, .color-fg-grey-600__focus:focus, .color-fg-grey-600__before::before, .color-fg-grey-600__after::after {
+  color: #757575 !important;
+}
+
+.color-fg-grey-700, .color-fg-grey-700__hover:hover, .color-fg-grey-700__active:active, .color-fg-grey-700__focus:focus, .color-fg-grey-700__before::before, .color-fg-grey-700__after::after {
+  color: #616161 !important;
+}
+
+.color-fg-grey-800, .color-fg-grey-800__hover:hover, .color-fg-grey-800__active:active, .color-fg-grey-800__focus:focus, .color-fg-grey-800__before::before, .color-fg-grey-800__after::after {
+  color: #424242 !important;
+}
+
+.color-fg-grey-900, .color-fg-grey-900__hover:hover, .color-fg-grey-900__active:active, .color-fg-grey-900__focus:focus, .color-fg-grey-900__before::before, .color-fg-grey-900__after::after {
+  color: #212121 !important;
+}
+
+.color-bg-grey-50, .color-bg-grey-50__hover:hover, .color-bg-grey-50__active:active, .color-bg-grey-50__focus:focus, .color-bg-grey-50__before::before, .color-bg-grey-50__after::after {
+  background: #FAFAFA !important;
+}
+
+.color-bg-grey-100, .color-bg-grey-100__hover:hover, .color-bg-grey-100__active:active, .color-bg-grey-100__focus:focus, .color-bg-grey-100__before::before, .color-bg-grey-100__after::after {
+  background: #F5F5F5 !important;
+}
+
+.color-bg-grey-200, .color-bg-grey-200__hover:hover, .color-bg-grey-200__active:active, .color-bg-grey-200__focus:focus, .color-bg-grey-200__before::before, .color-bg-grey-200__after::after {
+  background: #EEEEEE !important;
+}
+
+.color-bg-grey-300, .color-bg-grey-300__hover:hover, .color-bg-grey-300__active:active, .color-bg-grey-300__focus:focus, .color-bg-grey-300__before::before, .color-bg-grey-300__after::after {
+  background: #E0E0E0 !important;
+}
+
+.color-bg-grey-400, .color-bg-grey-400__hover:hover, .color-bg-grey-400__active:active, .color-bg-grey-400__focus:focus, .color-bg-grey-400__before::before, .color-bg-grey-400__after::after {
+  background: #BDBDBD !important;
+}
+
+.color-bg-grey-500, .color-bg-grey-500__hover:hover, .color-bg-grey-500__active:active, .color-bg-grey-500__focus:focus, .color-bg-grey-500__before::before, .color-bg-grey-500__after::after {
+  background: #9E9E9E !important;
+}
+
+.color-bg-grey-600, .color-bg-grey-600__hover:hover, .color-bg-grey-600__active:active, .color-bg-grey-600__focus:focus, .color-bg-grey-600__before::before, .color-bg-grey-600__after::after {
+  background: #757575 !important;
+}
+
+.color-bg-grey-700, .color-bg-grey-700__hover:hover, .color-bg-grey-700__active:active, .color-bg-grey-700__focus:focus, .color-bg-grey-700__before::before, .color-bg-grey-700__after::after {
+  background: #616161 !important;
+}
+
+.color-bg-grey-800, .color-bg-grey-800__hover:hover, .color-bg-grey-800__active:active, .color-bg-grey-800__focus:focus, .color-bg-grey-800__before::before, .color-bg-grey-800__after::after {
+  background: #424242 !important;
+}
+
+.color-bg-grey-900, .color-bg-grey-900__hover:hover, .color-bg-grey-900__active:active, .color-bg-grey-900__focus:focus, .color-bg-grey-900__before::before, .color-bg-grey-900__after::after {
+  background: #212121 !important;
+}
+
+.color-bd-grey-50, .color-bd-grey-50__hover:hover, .color-bd-grey-50__active:active, .color-bd-grey-50__focus:focus, .color-bd-grey-50__before::before, .color-bd-grey-50__after::after {
+  border-color: #FAFAFA !important;
+}
+
+.color-bd-grey-100, .color-bd-grey-100__hover:hover, .color-bd-grey-100__active:active, .color-bd-grey-100__focus:focus, .color-bd-grey-100__before::before, .color-bd-grey-100__after::after {
+  border-color: #F5F5F5 !important;
+}
+
+.color-bd-grey-200, .color-bd-grey-200__hover:hover, .color-bd-grey-200__active:active, .color-bd-grey-200__focus:focus, .color-bd-grey-200__before::before, .color-bd-grey-200__after::after {
+  border-color: #EEEEEE !important;
+}
+
+.color-bd-grey-300, .color-bd-grey-300__hover:hover, .color-bd-grey-300__active:active, .color-bd-grey-300__focus:focus, .color-bd-grey-300__before::before, .color-bd-grey-300__after::after {
+  border-color: #E0E0E0 !important;
+}
+
+.color-bd-grey-400, .color-bd-grey-400__hover:hover, .color-bd-grey-400__active:active, .color-bd-grey-400__focus:focus, .color-bd-grey-400__before::before, .color-bd-grey-400__after::after {
+  border-color: #BDBDBD !important;
+}
+
+.color-bd-grey-500, .color-bd-grey-500__hover:hover, .color-bd-grey-500__active:active, .color-bd-grey-500__focus:focus, .color-bd-grey-500__before::before, .color-bd-grey-500__after::after {
+  border-color: #9E9E9E !important;
+}
+
+.color-bd-grey-600, .color-bd-grey-600__hover:hover, .color-bd-grey-600__active:active, .color-bd-grey-600__focus:focus, .color-bd-grey-600__before::before, .color-bd-grey-600__after::after {
+  border-color: #757575 !important;
+}
+
+.color-bd-grey-700, .color-bd-grey-700__hover:hover, .color-bd-grey-700__active:active, .color-bd-grey-700__focus:focus, .color-bd-grey-700__before::before, .color-bd-grey-700__after::after {
+  border-color: #616161 !important;
+}
+
+.color-bd-grey-800, .color-bd-grey-800__hover:hover, .color-bd-grey-800__active:active, .color-bd-grey-800__focus:focus, .color-bd-grey-800__before::before, .color-bd-grey-800__after::after {
+  border-color: #424242 !important;
+}
+
+.color-bd-grey-900, .color-bd-grey-900__hover:hover, .color-bd-grey-900__active:active, .color-bd-grey-900__focus:focus, .color-bd-grey-900__before::before, .color-bd-grey-900__after::after {
+  border-color: #212121 !important;
+}
+
+.color-fg-blue-grey-50, .color-fg-blue-grey-50__hover:hover, .color-fg-blue-grey-50__active:active, .color-fg-blue-grey-50__focus:focus, .color-fg-blue-grey-50__before::before, .color-fg-blue-grey-50__after::after {
+  color: #ECEFF1 !important;
+}
+
+.color-fg-blue-grey-100, .color-fg-blue-grey-100__hover:hover, .color-fg-blue-grey-100__active:active, .color-fg-blue-grey-100__focus:focus, .color-fg-blue-grey-100__before::before, .color-fg-blue-grey-100__after::after {
+  color: #CFD8DC !important;
+}
+
+.color-fg-blue-grey-200, .color-fg-blue-grey-200__hover:hover, .color-fg-blue-grey-200__active:active, .color-fg-blue-grey-200__focus:focus, .color-fg-blue-grey-200__before::before, .color-fg-blue-grey-200__after::after {
+  color: #B0BEC5 !important;
+}
+
+.color-fg-blue-grey-300, .color-fg-blue-grey-300__hover:hover, .color-fg-blue-grey-300__active:active, .color-fg-blue-grey-300__focus:focus, .color-fg-blue-grey-300__before::before, .color-fg-blue-grey-300__after::after {
+  color: #90A4AE !important;
+}
+
+.color-fg-blue-grey-400, .color-fg-blue-grey-400__hover:hover, .color-fg-blue-grey-400__active:active, .color-fg-blue-grey-400__focus:focus, .color-fg-blue-grey-400__before::before, .color-fg-blue-grey-400__after::after {
+  color: #78909C !important;
+}
+
+.color-fg-blue-grey-500, .color-fg-blue-grey-500__hover:hover, .color-fg-blue-grey-500__active:active, .color-fg-blue-grey-500__focus:focus, .color-fg-blue-grey-500__before::before, .color-fg-blue-grey-500__after::after {
+  color: #607D8B !important;
+}
+
+.color-fg-blue-grey-600, .color-fg-blue-grey-600__hover:hover, .color-fg-blue-grey-600__active:active, .color-fg-blue-grey-600__focus:focus, .color-fg-blue-grey-600__before::before, .color-fg-blue-grey-600__after::after {
+  color: #546E7A !important;
+}
+
+.color-fg-blue-grey-700, .color-fg-blue-grey-700__hover:hover, .color-fg-blue-grey-700__active:active, .color-fg-blue-grey-700__focus:focus, .color-fg-blue-grey-700__before::before, .color-fg-blue-grey-700__after::after {
+  color: #455A64 !important;
+}
+
+.color-fg-blue-grey-800, .color-fg-blue-grey-800__hover:hover, .color-fg-blue-grey-800__active:active, .color-fg-blue-grey-800__focus:focus, .color-fg-blue-grey-800__before::before, .color-fg-blue-grey-800__after::after {
+  color: #37474F !important;
+}
+
+.color-fg-blue-grey-900, .color-fg-blue-grey-900__hover:hover, .color-fg-blue-grey-900__active:active, .color-fg-blue-grey-900__focus:focus, .color-fg-blue-grey-900__before::before, .color-fg-blue-grey-900__after::after {
+  color: #263238 !important;
+}
+
+.color-bg-blue-grey-50, .color-bg-blue-grey-50__hover:hover, .color-bg-blue-grey-50__active:active, .color-bg-blue-grey-50__focus:focus, .color-bg-blue-grey-50__before::before, .color-bg-blue-grey-50__after::after {
+  background: #ECEFF1 !important;
+}
+
+.color-bg-blue-grey-100, .color-bg-blue-grey-100__hover:hover, .color-bg-blue-grey-100__active:active, .color-bg-blue-grey-100__focus:focus, .color-bg-blue-grey-100__before::before, .color-bg-blue-grey-100__after::after {
+  background: #CFD8DC !important;
+}
+
+.color-bg-blue-grey-200, .color-bg-blue-grey-200__hover:hover, .color-bg-blue-grey-200__active:active, .color-bg-blue-grey-200__focus:focus, .color-bg-blue-grey-200__before::before, .color-bg-blue-grey-200__after::after {
+  background: #B0BEC5 !important;
+}
+
+.color-bg-blue-grey-300, .color-bg-blue-grey-300__hover:hover, .color-bg-blue-grey-300__active:active, .color-bg-blue-grey-300__focus:focus, .color-bg-blue-grey-300__before::before, .color-bg-blue-grey-300__after::after {
+  background: #90A4AE !important;
+}
+
+.color-bg-blue-grey-400, .color-bg-blue-grey-400__hover:hover, .color-bg-blue-grey-400__active:active, .color-bg-blue-grey-400__focus:focus, .color-bg-blue-grey-400__before::before, .color-bg-blue-grey-400__after::after {
+  background: #78909C !important;
+}
+
+.color-bg-blue-grey-500, .color-bg-blue-grey-500__hover:hover, .color-bg-blue-grey-500__active:active, .color-bg-blue-grey-500__focus:focus, .color-bg-blue-grey-500__before::before, .color-bg-blue-grey-500__after::after {
+  background: #607D8B !important;
+}
+
+.color-bg-blue-grey-600, .color-bg-blue-grey-600__hover:hover, .color-bg-blue-grey-600__active:active, .color-bg-blue-grey-600__focus:focus, .color-bg-blue-grey-600__before::before, .color-bg-blue-grey-600__after::after {
+  background: #546E7A !important;
+}
+
+.color-bg-blue-grey-700, .color-bg-blue-grey-700__hover:hover, .color-bg-blue-grey-700__active:active, .color-bg-blue-grey-700__focus:focus, .color-bg-blue-grey-700__before::before, .color-bg-blue-grey-700__after::after {
+  background: #455A64 !important;
+}
+
+.color-bg-blue-grey-800, .color-bg-blue-grey-800__hover:hover, .color-bg-blue-grey-800__active:active, .color-bg-blue-grey-800__focus:focus, .color-bg-blue-grey-800__before::before, .color-bg-blue-grey-800__after::after {
+  background: #37474F !important;
+}
+
+.color-bg-blue-grey-900, .color-bg-blue-grey-900__hover:hover, .color-bg-blue-grey-900__active:active, .color-bg-blue-grey-900__focus:focus, .color-bg-blue-grey-900__before::before, .color-bg-blue-grey-900__after::after {
+  background: #263238 !important;
+}
+
+.color-bd-blue-grey-50, .color-bd-blue-grey-50__hover:hover, .color-bd-blue-grey-50__active:active, .color-bd-blue-grey-50__focus:focus, .color-bd-blue-grey-50__before::before, .color-bd-blue-grey-50__after::after {
+  border-color: #ECEFF1 !important;
+}
+
+.color-bd-blue-grey-100, .color-bd-blue-grey-100__hover:hover, .color-bd-blue-grey-100__active:active, .color-bd-blue-grey-100__focus:focus, .color-bd-blue-grey-100__before::before, .color-bd-blue-grey-100__after::after {
+  border-color: #CFD8DC !important;
+}
+
+.color-bd-blue-grey-200, .color-bd-blue-grey-200__hover:hover, .color-bd-blue-grey-200__active:active, .color-bd-blue-grey-200__focus:focus, .color-bd-blue-grey-200__before::before, .color-bd-blue-grey-200__after::after {
+  border-color: #B0BEC5 !important;
+}
+
+.color-bd-blue-grey-300, .color-bd-blue-grey-300__hover:hover, .color-bd-blue-grey-300__active:active, .color-bd-blue-grey-300__focus:focus, .color-bd-blue-grey-300__before::before, .color-bd-blue-grey-300__after::after {
+  border-color: #90A4AE !important;
+}
+
+.color-bd-blue-grey-400, .color-bd-blue-grey-400__hover:hover, .color-bd-blue-grey-400__active:active, .color-bd-blue-grey-400__focus:focus, .color-bd-blue-grey-400__before::before, .color-bd-blue-grey-400__after::after {
+  border-color: #78909C !important;
+}
+
+.color-bd-blue-grey-500, .color-bd-blue-grey-500__hover:hover, .color-bd-blue-grey-500__active:active, .color-bd-blue-grey-500__focus:focus, .color-bd-blue-grey-500__before::before, .color-bd-blue-grey-500__after::after {
+  border-color: #607D8B !important;
+}
+
+.color-bd-blue-grey-600, .color-bd-blue-grey-600__hover:hover, .color-bd-blue-grey-600__active:active, .color-bd-blue-grey-600__focus:focus, .color-bd-blue-grey-600__before::before, .color-bd-blue-grey-600__after::after {
+  border-color: #546E7A !important;
+}
+
+.color-bd-blue-grey-700, .color-bd-blue-grey-700__hover:hover, .color-bd-blue-grey-700__active:active, .color-bd-blue-grey-700__focus:focus, .color-bd-blue-grey-700__before::before, .color-bd-blue-grey-700__after::after {
+  border-color: #455A64 !important;
+}
+
+.color-bd-blue-grey-800, .color-bd-blue-grey-800__hover:hover, .color-bd-blue-grey-800__active:active, .color-bd-blue-grey-800__focus:focus, .color-bd-blue-grey-800__before::before, .color-bd-blue-grey-800__after::after {
+  border-color: #37474F !important;
+}
+
+.color-bd-blue-grey-900, .color-bd-blue-grey-900__hover:hover, .color-bd-blue-grey-900__active:active, .color-bd-blue-grey-900__focus:focus, .color-bd-blue-grey-900__before::before, .color-bd-blue-grey-900__after::after {
+  border-color: #263238 !important;
+}
+
+/*# sourceMappingURL=xmutarn-colors.css.map */

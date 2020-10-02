@@ -6,6 +6,8 @@
     "noImplicitAny": true,
     "noEmitOnError": true,
     "removeComments": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
     "target": "es6"
   }
 }

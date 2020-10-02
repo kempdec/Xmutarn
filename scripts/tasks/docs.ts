@@ -1,6 +1,6 @@
 import del from "del";
 import { dest, src } from "gulp";
-import * as pug from "gulp-pug";
+import pug from "gulp-pug";
 import { Dependency } from "../Dependency";
 
 const paths = {
