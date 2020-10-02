@@ -33,9 +33,8 @@ export class Dependency {
      */
     public copyTo(destPath: string): NodeJS.ReadWriteStream {
 
-        const stream = src(this.filePath);
-
-        stream.pipe(dest(`${destPath}/${this.name}`));
+        const stream = src(this.filePath)
+            .pipe(dest(`${destPath}/${this.name}`));
 
         Dependency._copyStreams.push(stream);
 

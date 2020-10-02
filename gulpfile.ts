@@ -1,4 +1,5 @@
 import del from "del";
+import { buildDocs, delDocs } from "./scripts/tasks/docs";
 import {
   copyDocsDependency,
   delDocsLibs
@@ -14,10 +15,7 @@ const paths = {
   js: "dist/js",
 
   /** Caminho dos arquivos de distribuição do projeto. */
-  dist: "dist",
-
-  /** Caminho dos arquivos de documentações do projeto. */
-  docs: "docs"
+  dist: "dist"
 };
 
 /** Limpa o caminho dos arquivos de distribuição de folhas de estilo CSS do projeto. */
@@ -130,36 +128,19 @@ function buildJs() {
 
 exports.js = series(cleanJsPath, buildJs);
 
+task("docs", series(delDocs, buildDocs));
 task("docsDependency", series(delDocsLibs, copyDocsDependency));
-
-/** Limpa o caminho dos arquivos de documentações do projeto. */
-function cleanDocsPath() {
-
-  return del(`${paths.docs}/**/*.html`);
-}
-
-/** Constrói os arquivos de documentações do projeto. */
-function buildDocs() {
-
-  const pug = require("gulp-pug");
-
-  return src("src/docs/**/*.pug")
-    .pipe(pug())
-    .pipe(dest(paths.docs));
-}
-
-exports.docs = series(cleanDocsPath, buildDocs);
 
 const watch = require("gulp-watch");
 
-exports.docsWatch = () => watch("src/docs/**/*", series(cleanDocsPath, buildDocs));
+exports.docsWatch = () => watch("src/docs/**/*", series(delDocs, buildDocs));
 
 exports.default =
   series(
     parallel(
       series(cleanCssPath, buildCss),
       series(cleanJsPath, buildJs),
-      series(cleanDocsPath, buildDocs)
+      "docs"
     ),
     "docsDependency"
   );
