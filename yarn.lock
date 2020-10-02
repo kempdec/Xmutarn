@@ -3019,7 +3019,7 @@ gulp-cli@^2.2.0:
     v8flags "^3.2.0"
     yargs "^7.1.0"
 
-gulp-header@^2.0.7:
+gulp-header@^2.0.9:
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/gulp-header/-/gulp-header-2.0.9.tgz#8b432c4d4379dee6788845b16785b09c7675af84"
   integrity sha512-LMGiBx+qH8giwrOuuZXSGvswcIUh0OiioNkUpLhNyvaC6/Ga8X6cfAeme2L5PqsbXMhL8o8b/OmVqIQdxprhcQ==

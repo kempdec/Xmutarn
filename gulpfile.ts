@@ -1,7 +1,20 @@
 import del from "del";
 import { dest, parallel, series, src, task } from "gulp";
+
+import pkg from "./package.json";
 import { delJs } from "./scripts/tasks/js";
 import { buildDocs, copyDocsDependency, delDocs, delDocsLibs, watchDocs } from "./scripts/tasks/docs";
+
+/** O cabeçalho dos arquivos de distribuição do projeto. */
+const fileHeader = [
+
+  `/*! ${pkg.name} v${pkg.version} (${pkg.repository.url})`,
+
+  `Copyright ${new Date().getFullYear()} ${pkg.author.name}`,
+
+  `Licensed under ${pkg.license} */\n`
+  
+].join(" | ");
 
 /** Os caminhos do projeto. */
 const paths = {
@@ -26,12 +39,6 @@ const header = require("gulp-header");
 const rename = require("gulp-rename");
 const sourcemaps = require("gulp-sourcemaps");
 
-/** Propriedades do pacote de dependências. */
-const pkg = JSON.parse(require("fs").readFileSync("package.json"));
-
-/** Cabeçalho dos arquivos de distribuição. */
-const banner = `/*! Xmutarn v${pkg.version} (${pkg.repository.url}) | Copyright ${new Date().getFullYear()} ${pkg.author.name} | Licensed under MIT (${pkg.repository.url.replace(".git", "")}/blob/master/LICENSE) */\n`;
-
 /** Constrói os arquivos de distribuição de folhas de estilo CSS do projeto. */
 function buildCss() {
 
@@ -48,7 +55,7 @@ function buildCss() {
       outputStyle: "expanded"
     })).on("error", sass.logError)
     .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(header(banner))
+    .pipe(header(fileHeader))
     .pipe(sourcemaps.init({
       loadMaps: true
     }))
@@ -63,7 +70,7 @@ function buildCss() {
       outputStyle: "compressed"
     })).on("error", sass.logError)
     .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(header(banner))
+    .pipe(header(fileHeader))
     .pipe(sourcemaps.init({
       loadMaps: true
     }))
@@ -96,13 +103,13 @@ function buildJs() {
     .pipe(babel({
       presets: ["@babel/env"]
     }))
-    .pipe(header(banner))
+    .pipe(header(fileHeader))
     .pipe(dest(paths.js))
     .pipe(uglify().on("error", (e: Error) => console.error(e)))
     .pipe(rename((path: any) => {
       path.basename += ".min";
     }))
-    .pipe(header(banner))
+    .pipe(header(fileHeader))
     .pipe(sourcemaps.init({
       loadMaps: true
     }))
