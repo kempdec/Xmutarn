@@ -1,9 +1,10 @@
 import del from "del";
-import { buildDocs, delDocs } from "./scripts/tasks/docs";
 import {
+  buildDocs,
   copyDocsDependency,
+  delDocs,
   delDocsLibs
-} from "./scripts/tasks/docsDependency";
+} from "./scripts/tasks/docs";
 
 /** Os caminhos do projeto. */
 const paths = {
