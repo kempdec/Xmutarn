@@ -83,6 +83,13 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/gulp-autoprefixer@^0.0.32":
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/@types/gulp-autoprefixer/-/gulp-autoprefixer-0.0.32.tgz#d6e1e06b8f2ba0a14ba0e94e992526befaf7e7ce"
+  integrity sha512-22QYL9v16YEcurJqf71iIBG4l5oRHorpj13T85ADLD/YSO6E+Fym56MLOdfaxCK8+SuriBgfz2FRr5Htm1H7uQ==
+  dependencies:
+    "@types/node" "*"
+
 "@types/gulp-header@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/gulp-header/-/gulp-header-2.0.0.tgz#73d0e7657beb119c6fc15f34a7c3e34dabbf6103"
@@ -96,6 +103,14 @@
   integrity sha512-FIZQvbZJj6V1gHPTzO+g/BCWpDur7fJrroae4gwV3LaoHBQ+MrR9sB+2HssK8fHv4WdY6hVNxkcft9bYatuPIA==
   dependencies:
     "@types/node" "*"
+
+"@types/gulp-sass@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/gulp-sass/-/gulp-sass-4.0.0.tgz#073d91e572d478df2e394b4141646d2570af5b76"
+  integrity sha512-sBq202Jg0zmNhIhiNDfQv5S2bD52FuLCEhXEoHwgjsIe750DteCaeoOjY6PEAhxs9kPMGTs0d2p8YRvPhVFzOQ==
+  dependencies:
+    "@types/node" "*"
+    "@types/node-sass" "*"
 
 "@types/gulp-sourcemaps@^0.0.32":
   version "0.0.32"
@@ -132,6 +147,13 @@
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
+
+"@types/node-sass@*":
+  version "4.11.1"
+  resolved "https://registry.yarnpkg.com/@types/node-sass/-/node-sass-4.11.1.tgz#bda27c5181cbf7c090c3058e119633dfb2b6504c"
+  integrity sha512-wPOmOEEtbwQiPTIgzUuRSQZ3H5YHinsxRGeZzPSDefAm4ylXWnZG9C0adses8ymyplKK0gwv3JkDNO8GGxnWfg==
+  dependencies:
+    "@types/node" "*"
 
 "@types/node@*":
   version "14.11.2"

@@ -48,11 +48,16 @@
       "maxSize": "17.5 kB"
     }
   ],
+  "browserslist": [
+    "defaults"
+  ],
   "devDependencies": {
     "@types/browserify": "^12.0.36",
     "@types/gulp": "^4.0.7",
+    "@types/gulp-autoprefixer": "^0.0.32",
     "@types/gulp-header": "^2.0.0",
     "@types/gulp-rename": "^0.0.33",
+    "@types/gulp-sass": "^4.0.0",
     "@types/gulp-sourcemaps": "^0.0.32",
     "@types/gulp-terser": "^1.2.1",
     "@types/vinyl-buffer": "^1.0.0",
