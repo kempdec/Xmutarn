@@ -1,7 +1,8 @@
 import del from "del";
 import pug from "gulp-pug";
-import { Dependency } from "../Dependency";
 import { dest, series, src, watch } from "gulp";
+
+import { Dependency } from "../Dependency";
 
 const paths = {
 

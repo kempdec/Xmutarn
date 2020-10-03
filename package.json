@@ -40,34 +40,38 @@
       "maxSize": "23 kB"
     },
     {
-      "path": "./dist/js/{xmutarn,xmutarn-md}.js",
+      "path": "./dist/js/xmutarn.js",
       "maxSize": "29 kB"
     },
     {
-      "path": "./dist/js/{xmutarn,xmutarn-md}.min.js",
+      "path": "./dist/js/xmutarn.min.js",
       "maxSize": "17.5 kB"
     }
   ],
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
+    "@types/browserify": "^12.0.36",
     "@types/gulp": "^4.0.7",
-    "browserify": "^16.2.3",
-    "del": "^4.1.0",
+    "@types/gulp-header": "^2.0.0",
+    "@types/gulp-rename": "^0.0.33",
+    "@types/gulp-sourcemaps": "^0.0.32",
+    "@types/gulp-terser": "^1.2.1",
+    "@types/vinyl-buffer": "^1.0.0",
+    "@types/vinyl-source-stream": "^0.0.30",
+    "browserify": "^16.5.2",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
-    "gulp-babel": "^8.0.0",
     "gulp-header": "^2.0.9",
     "gulp-pug": "^4.0.1",
-    "gulp-rename": "^1.4.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.4.0",
     "gulp-typescript": "^6.0.0-alpha.1",
-    "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1",
     "merge-stream": "^1.0.1",
     "ts-node": "^9.0.0",
-    "tsify": "^4.0.1",
+    "tsify": "^5.0.2",
     "typescript": "^4.0.3",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"

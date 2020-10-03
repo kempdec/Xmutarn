@@ -1,832 +1,409 @@
 /*! xmutarn v0.29.0 (https://github.com/viniciusxdl/xmutarn.git) | Copyright 2020 Vinícius Lima | Licensed under MIT */
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.X = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-(function () {
-  function r(e, n, t) {
-    function o(i, f) {
-      if (!n[i]) {
-        if (!e[i]) {
-          var c = "function" == typeof require && require;
-          if (!f && c) return c(i, !0);
-          if (u) return u(i, !0);
-          var a = new Error("Cannot find module '" + i + "'");
-          throw a.code = "MODULE_NOT_FOUND", a;
+Object.defineProperty(exports, "__esModule", { value: true });
+class Component {
+    constructor(element) {
+        if (!element) {
+            throw new Error("O elemento do componente deve ser fornecido.");
         }
-
-        var p = n[i] = {
-          exports: {}
-        };
-        e[i][0].call(p.exports, function (r) {
-          var n = e[i][1][r];
-          return o(n || r);
-        }, p, p.exports, r, e, n, t);
-      }
-
-      return n[i].exports;
+        this.element = element;
     }
+}
+exports.default = Component;
 
-    for (var u = "function" == typeof require && require, i = 0; i < t.length; i++) {
-      o(t[i]);
+},{}],2:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const _1 = require(".");
+class Dialog extends _1.Component {
+    constructor(element) {
+        super(element);
+        this.overlay = _1.Overlay.create();
+        this.element.classList.add("dialog");
     }
-
-    return o;
-  }
-
-  return r;
-})()({
-  1: [function (require, module, exports) {
-    "use strict";
-
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-
-    var Component = function Component(element) {
-      _classCallCheck(this, Component);
-
-      if (!element) {
-        throw new Error("O elemento do componente deve ser fornecido.");
-      }
-
-      this.element = element;
-    };
-
-    exports["default"] = Component;
-  }, {}],
-  2: [function (require, module, exports) {
-    "use strict";
-
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-
-    var _1 = require(".");
-
-    var Dialog = /*#__PURE__*/function (_$Component) {
-      _inherits(Dialog, _$Component);
-
-      var _super = _createSuper(Dialog);
-
-      function Dialog(element) {
-        var _this;
-
-        _classCallCheck(this, Dialog);
-
-        _this = _super.call(this, element);
-        _this.overlay = _1.Overlay.create();
-
-        _this.element.classList.add("dialog");
-
-        return _this;
-      }
-
-      _createClass(Dialog, [{
-        key: "open",
-        value: function open() {
-          var useOverlay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-
-          if (useOverlay) {
+    open(useOverlay = true) {
+        if (useOverlay) {
             this.overlay.show();
-          }
-
-          this.element.classList.add(Dialog.dialogOpenClass);
         }
-      }, {
-        key: "addOpenListener",
-        value: function addOpenListener(element) {
-          var _this2 = this;
-
-          var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "click";
-
-          if (!element) {
+        this.element.classList.add(Dialog.dialogOpenClass);
+    }
+    addOpenListener(element, type = "click") {
+        if (!element) {
             throw new Error("O elemento ouvinte de abertura do diálogo deve ser fornecido.");
-          }
-
-          element.addEventListener(type, function (e) {
+        }
+        element.addEventListener(type, e => {
             e.preventDefault();
-
-            _this2.open();
-          });
-        }
-      }, {
-        key: "close",
-        value: function close() {
-          this.overlay.hide();
-          this.element.classList.remove(Dialog.dialogOpenClass);
-        }
-      }, {
-        key: "addCloseListener",
-        value: function addCloseListener(element) {
-          var _this3 = this;
-
-          var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "click";
-
-          if (!element) {
+            this.open();
+        });
+    }
+    close() {
+        this.overlay.hide();
+        this.element.classList.remove(Dialog.dialogOpenClass);
+    }
+    addCloseListener(element, type = "click") {
+        if (!element) {
             throw new Error("O elemento ouviente de fechamento do diálogo deve ser fornecido.");
-          }
-
-          element.addEventListener(type, function (e) {
+        }
+        element.addEventListener(type, e => {
             e.preventDefault();
-
-            _this3.close();
-          });
-        }
-      }], [{
-        key: "initFromHtmlAttribute",
-        value: function initFromHtmlAttribute(attributeName) {
-          document.querySelectorAll("[".concat(attributeName, "]")).forEach(function (element) {
+            this.close();
+        });
+    }
+    static initFromHtmlAttribute(attributeName) {
+        document.querySelectorAll(`[${attributeName}]`)
+            .forEach((element) => {
             if (element.hasAttribute("id")) {
-              var dialog = new Dialog(element);
-              var dialogId = element.getAttribute("id");
-              document.querySelectorAll("[x-listener-open-dialog=\"".concat(dialogId, "\"]")).forEach(function (element) {
-                return dialog.addOpenListener(element);
-              });
-              dialog.element.querySelectorAll("[x-listener-close-dialog]").forEach(function (element) {
-                return dialog.addCloseListener(element);
-              });
+                const dialog = new Dialog(element);
+                const dialogId = element.getAttribute("id");
+                document.querySelectorAll(`[x-listener-open-dialog="${dialogId}"]`)
+                    .forEach((element) => dialog.addOpenListener(element));
+                dialog.element.querySelectorAll(`[x-listener-close-dialog]`)
+                    .forEach((element) => dialog.addCloseListener(element));
             }
-          });
-        }
-      }]);
+        });
+    }
+}
+exports.default = Dialog;
+Dialog.dialogOpenClass = "dialog_open";
 
-      return Dialog;
-    }(_1.Component);
-
-    exports["default"] = Dialog;
-    Dialog.dialogOpenClass = "dialog_open";
-  }, {
-    ".": 8
-  }],
-  3: [function (require, module, exports) {
-    "use strict";
-
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-
-    var _1 = require(".");
-
-    var Input = /*#__PURE__*/function (_$Component2) {
-      _inherits(Input, _$Component2);
-
-      var _super2 = _createSuper(Input);
-
-      function Input(element) {
-        var _this4;
-
-        var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-        _classCallCheck(this, Input);
-
-        _this4 = _super2.call(this, element);
+},{".":8}],3:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const _1 = require(".");
+class Input extends _1.Component {
+    constructor(element, options = null) {
+        super(element);
         options = Object.assign(Input.defaultOptions, options);
         element.classList.add("input");
-        _this4.inputElement = element.querySelector(".input--field");
-
-        if (!_this4.inputElement) {
-          throw new Error("O elemento responsável pelo o input não contém o elemento input com a classe 'input--field'.");
+        this.inputElement = element.querySelector(".input--field");
+        if (!this.inputElement) {
+            throw new Error("O elemento responsável pelo o input não contém o elemento input com a classe 'input--field'.");
         }
-
-        _this4.labelElement = element.querySelector(".input--label");
-
-        if (!_this4.labelElement) {
-          if (!options.label) {
-            throw new Error("O elemento responsável pelo input não contém o elemento do rótulo do input com a classe `input--label`.");
-          }
-
-          _this4.setLabel(options.label);
-        }
-
-        if (_this4.inputElement.value) {
-          _this4.activeLabel();
-        }
-
-        _this4.addToggleLabelListener(_this4.inputElement);
-
-        if (options.removeColorOnFocus) {
-          _this4.addRemoveColorListener(_this4.inputElement);
-        }
-
-        return _this4;
-      }
-
-      _createClass(Input, [{
-        key: "activeLabel",
-        value: function activeLabel() {
-          this.labelElement.classList.add(Input.labelActiveClass);
-        }
-      }, {
-        key: "disableLabel",
-        value: function disableLabel() {
-          this.labelElement.classList.remove(Input.labelActiveClass);
-        }
-      }, {
-        key: "addToggleLabelListener",
-        value: function addToggleLabelListener(element) {
-          var _this5 = this;
-
-          var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "blur";
-
-          if (!element) {
-            throw new Error("O elemento ouvinte de alternância do rótulo do input deve ser fornecido.");
-          }
-
-          element.addEventListener(type, function (e) {
-            e.preventDefault();
-
-            if (_this5.inputElement.value) {
-              _this5.activeLabel();
-
-              return;
+        this.labelElement = element.querySelector(".input--label");
+        if (!this.labelElement) {
+            if (!options.label) {
+                throw new Error("O elemento responsável pelo input não contém o elemento do rótulo do input com a classe `input--label`.");
             }
-
-            _this5.disableLabel();
-          });
+            this.setLabel(options.label);
         }
-      }, {
-        key: "addRemoveColorListener",
-        value: function addRemoveColorListener(element) {
-          var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "focus";
-
-          if (!element) {
+        if (this.inputElement.value) {
+            this.activeLabel();
+        }
+        this.addToggleLabelListener(this.inputElement);
+        if (options.removeColorOnFocus) {
+            this.addRemoveColorListener(this.inputElement);
+        }
+    }
+    activeLabel() {
+        this.labelElement.classList.add(Input.labelActiveClass);
+    }
+    disableLabel() {
+        this.labelElement.classList.remove(Input.labelActiveClass);
+    }
+    addToggleLabelListener(element, type = "blur") {
+        if (!element) {
+            throw new Error("O elemento ouvinte de alternância do rótulo do input deve ser fornecido.");
+        }
+        element.addEventListener(type, e => {
+            e.preventDefault();
+            if (this.inputElement.value) {
+                this.activeLabel();
+                return;
+            }
+            this.disableLabel();
+        });
+    }
+    addRemoveColorListener(element, type = "focus") {
+        if (!element) {
             throw new Error("O elemento ouvinte de remoção da cor do input deve ser fornecido.");
-          }
-
-          element.addEventListener(type, function (e) {
+        }
+        element.addEventListener(type, e => {
             e.preventDefault();
             element.classList.remove("input_alert-color");
-          });
-        }
-      }, {
-        key: "setLabel",
-        value: function setLabel(text) {
-          this.labelElement.innerText = text;
-        }
-      }], [{
-        key: "initFromHtmlAttribute",
-        value: function initFromHtmlAttribute(attributeName, labelAttributeName) {
-          document.querySelectorAll("[".concat(attributeName, "]")).forEach(function (element) {
-            var options = {};
-
+        });
+    }
+    setLabel(text) {
+        this.labelElement.innerText = text;
+    }
+    static initFromHtmlAttribute(attributeName, labelAttributeName) {
+        document.querySelectorAll(`[${attributeName}]`)
+            .forEach((element) => {
+            let options = {};
             if (element.hasAttribute(labelAttributeName)) {
-              options.label = element.getAttribute(labelAttributeName);
+                options.label = element.getAttribute(labelAttributeName);
             }
-
             new Input(element, options);
-          });
-        }
-      }]);
+        });
+    }
+}
+exports.default = Input;
+Input.defaultOptions = {
+    removeColorOnFocus: true
+};
+Input.labelActiveClass = "input--label_active";
 
-      return Input;
-    }(_1.Component);
-
-    exports["default"] = Input;
-    Input.defaultOptions = {
-      removeColorOnFocus: true
-    };
-    Input.labelActiveClass = "input--label_active";
-  }, {
-    ".": 8
-  }],
-  4: [function (require, module, exports) {
-    "use strict";
-
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-
-    var _1 = require(".");
-
-    var NavigationDrawer = /*#__PURE__*/function (_$Component3) {
-      _inherits(NavigationDrawer, _$Component3);
-
-      var _super3 = _createSuper(NavigationDrawer);
-
-      function NavigationDrawer(element) {
-        var _this6;
-
-        _classCallCheck(this, NavigationDrawer);
-
-        _this6 = _super3.call(this, element);
-        _this6.overlay = _1.Overlay.create();
-
-        _this6.element.classList.add("navigation-drawer");
-
-        return _this6;
-      }
-
-      _createClass(NavigationDrawer, [{
-        key: "open",
-        value: function open() {
-          var useOverlay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-
-          if (useOverlay) {
+},{".":8}],4:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const _1 = require(".");
+class NavigationDrawer extends _1.Component {
+    constructor(element) {
+        super(element);
+        this.overlay = _1.Overlay.create();
+        this.element.classList.add("navigation-drawer");
+    }
+    open(useOverlay = true) {
+        if (useOverlay) {
             this.overlay.show();
-          }
-
-          this.element.classList.add(NavigationDrawer.openClass);
         }
-      }, {
-        key: "addOpenListener",
-        value: function addOpenListener(element) {
-          var _this7 = this;
-
-          var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "click";
-
-          if (!element) {
+        this.element.classList.add(NavigationDrawer.openClass);
+    }
+    addOpenListener(element, type = "click") {
+        if (!element) {
             throw new Error("O elemento ouviente de abertura da gaveta de navegação deve ser fornecido.");
-          }
-
-          element.addEventListener(type, function (e) {
+        }
+        element.addEventListener(type, e => {
             e.preventDefault();
-
-            _this7.open();
-          });
-        }
-      }, {
-        key: "close",
-        value: function close() {
-          this.overlay.hide();
-          this.element.classList.remove(NavigationDrawer.openClass);
-        }
-      }, {
-        key: "addCloseListener",
-        value: function addCloseListener(element) {
-          var _this8 = this;
-
-          var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "click";
-
-          if (!element) {
+            this.open();
+        });
+    }
+    close() {
+        this.overlay.hide();
+        this.element.classList.remove(NavigationDrawer.openClass);
+    }
+    addCloseListener(element, type = "click") {
+        if (!element) {
             throw new Error("O elemento ouviente de fechamento da gaveta de navegação deve ser fornecido.");
-          }
-
-          element.addEventListener(type, function (e) {
+        }
+        element.addEventListener(type, e => {
             e.preventDefault();
-
-            _this8.close();
-          });
-        }
-      }], [{
-        key: "initFromHtmlAttribute",
-        value: function initFromHtmlAttribute(attributeName) {
-          document.querySelectorAll("[".concat(attributeName, "]")).forEach(function (element) {
+            this.close();
+        });
+    }
+    static initFromHtmlAttribute(attributeName) {
+        document.querySelectorAll(`[${attributeName}]`)
+            .forEach((element) => {
             if (element.hasAttribute("id")) {
-              var navDrawer = new NavigationDrawer(element);
-              var navDrawerId = element.getAttribute("id");
-              navDrawer.addCloseListener(navDrawer.overlay.element);
-              document.querySelectorAll("[x-listener-open-nav-drawer=\"".concat(navDrawerId, "\"]")).forEach(function (element) {
-                return navDrawer.addOpenListener(element);
-              });
-              navDrawer.element.querySelectorAll("[x-listener-close-nav-drawer]").forEach(function (element) {
-                return navDrawer.addCloseListener(element);
-              });
+                const navDrawer = new NavigationDrawer(element);
+                const navDrawerId = element.getAttribute("id");
+                navDrawer.addCloseListener(navDrawer.overlay.element);
+                document.querySelectorAll(`[x-listener-open-nav-drawer="${navDrawerId}"]`)
+                    .forEach((element) => navDrawer.addOpenListener(element));
+                navDrawer.element.querySelectorAll(`[x-listener-close-nav-drawer]`)
+                    .forEach((element) => navDrawer.addCloseListener(element));
             }
-          });
+        });
+    }
+}
+exports.default = NavigationDrawer;
+NavigationDrawer.openClass = "navigation-drawer_open";
+
+},{".":8}],5:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const _1 = require(".");
+class Overlay extends _1.Component {
+    constructor(element) {
+        super(element);
+        this.element.classList.add("overlay");
+    }
+    show(delay = 300) {
+        setTimeout(() => this.element.classList.add(Overlay.overlayActiveClass), delay);
+    }
+    hide(delay = 300) {
+        setTimeout(() => this.element.classList.remove(Overlay.overlayActiveClass), delay);
+    }
+    static create() {
+        const element = document.createElement("div");
+        document.querySelector("body").appendChild(element);
+        return new Overlay(element);
+    }
+}
+exports.default = Overlay;
+Overlay.overlayActiveClass = "overlay_active";
+
+},{".":8}],6:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const _1 = require(".");
+class Toast extends _1.Component {
+    constructor(element) {
+        super(element);
+        this.overlay = _1.Overlay.create();
+        this.toasterElement = element.parentElement;
+        if (!this.toasterElement.classList.contains(Toast.classes.toaster)) {
+            throw new Error(`O elemento do toaster do toast não contém a classe '${Toast.classes.toaster}'.`);
         }
-      }]);
-
-      return NavigationDrawer;
-    }(_1.Component);
-
-    exports["default"] = NavigationDrawer;
-    NavigationDrawer.openClass = "navigation-drawer_open";
-  }, {
-    ".": 8
-  }],
-  5: [function (require, module, exports) {
-    "use strict";
-
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-
-    var _1 = require(".");
-
-    var Overlay = /*#__PURE__*/function (_$Component4) {
-      _inherits(Overlay, _$Component4);
-
-      var _super4 = _createSuper(Overlay);
-
-      function Overlay(element) {
-        var _this9;
-
-        _classCallCheck(this, Overlay);
-
-        _this9 = _super4.call(this, element);
-
-        _this9.element.classList.add("overlay");
-
-        return _this9;
-      }
-
-      _createClass(Overlay, [{
-        key: "show",
-        value: function show() {
-          var _this10 = this;
-
-          var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 300;
-          setTimeout(function () {
-            return _this10.element.classList.add(Overlay.overlayActiveClass);
-          }, delay);
+        this.contentElement = element.querySelector(`.${Toast.classes.content}`);
+        if (!this.contentElement) {
+            throw new Error("O elemento do conteúdo do toast não foi encontrado.");
         }
-      }, {
-        key: "hide",
-        value: function hide() {
-          var _this11 = this;
-
-          var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 300;
-          setTimeout(function () {
-            return _this11.element.classList.remove(Overlay.overlayActiveClass);
-          }, delay);
+        this.messageContentElement = this.contentElement.querySelector(`.${Toast.classes.contentMessage}`);
+        if (!this.messageContentElement) {
+            throw new Error("O elemento da mensagem do conteúdo do toast não foi encontrado.");
         }
-      }], [{
-        key: "create",
-        value: function create() {
-          var element = document.createElement("div");
-          document.querySelector("body").appendChild(element);
-          return new Overlay(element);
-        }
-      }]);
-
-      return Overlay;
-    }(_1.Component);
-
-    exports["default"] = Overlay;
-    Overlay.overlayActiveClass = "overlay_active";
-  }, {
-    ".": 8
-  }],
-  6: [function (require, module, exports) {
-    "use strict";
-
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-
-    var _1 = require(".");
-
-    var Toast = /*#__PURE__*/function (_$Component5) {
-      _inherits(Toast, _$Component5);
-
-      var _super5 = _createSuper(Toast);
-
-      function Toast(element) {
-        var _this12;
-
-        _classCallCheck(this, Toast);
-
-        _this12 = _super5.call(this, element);
-        _this12.overlay = _1.Overlay.create();
-        _this12.toasterElement = element.parentElement;
-
-        if (!_this12.toasterElement.classList.contains(Toast.classes.toaster)) {
-          throw new Error("O elemento do toaster do toast n\xE3o cont\xE9m a classe '".concat(Toast.classes.toaster, "'."));
-        }
-
-        _this12.contentElement = element.querySelector(".".concat(Toast.classes.content));
-
-        if (!_this12.contentElement) {
-          throw new Error("O elemento do conteúdo do toast não foi encontrado.");
-        }
-
-        _this12.messageContentElement = _this12.contentElement.querySelector(".".concat(Toast.classes.contentMessage));
-
-        if (!_this12.messageContentElement) {
-          throw new Error("O elemento da mensagem do conteúdo do toast não foi encontrado.");
-        }
-
-        return _this12;
-      }
-
-      _createClass(Toast, [{
-        key: "open",
-        value: function open() {
-          var _this13 = this;
-
-          var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 500;
-          setTimeout(function () {
-            return _this13.element.classList.add(Toast.classes.thisActive);
-          }, delay);
-        }
-      }, {
-        key: "close",
-        value: function close() {
-          var _this14 = this;
-
-          var timeout = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 7000;
-          setTimeout(function () {
-            _this14.element.classList.remove(Toast.classes.thisActive);
-
-            _this14.overlay.hide();
-          }, timeout);
-        }
-      }, {
-        key: "remove",
-        value: function remove() {
-          var _this15 = this;
-
-          var timeout = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 7000;
-          setTimeout(function () {
-            _this15.close(0);
-
-            setTimeout(function () {
-              _this15.element.remove();
-
-              _this15.toasterElement.remove();
-
-              _this15.overlay.element.remove();
+    }
+    open(delay = 500) {
+        setTimeout(() => this.element.classList.add(Toast.classes.thisActive), delay);
+    }
+    close(timeout = 7000) {
+        setTimeout(() => {
+            this.element.classList.remove(Toast.classes.thisActive);
+            this.overlay.hide();
+        }, timeout);
+    }
+    remove(timeout = 7000) {
+        setTimeout(() => {
+            this.close(0);
+            setTimeout(() => {
+                this.element.remove();
+                this.toasterElement.remove();
+                this.overlay.element.remove();
             }, 400);
-          }, timeout);
-        }
-      }], [{
-        key: "create",
-        value: function create(message) {
-          var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-          options = Object.assign(options, Toast.optionsDefault);
-          var toasterElement = document.createElement("aside");
-          toasterElement.classList.add(Toast.classes.toaster);
-          document.body.append(toasterElement);
-          var element = document.createElement("article");
-          element.classList.add(Toast.classes["this"]);
-          toasterElement.append(element);
-          var contentElement = document.createElement("div");
-          contentElement.classList.add(Toast.classes.content);
-          element.append(contentElement);
-          var messageContentElement = document.createElement("p");
-          messageContentElement.classList.add(Toast.classes.contentMessage, Toast.classes.contentMessageTypography);
-          messageContentElement.innerText = message;
-          contentElement.append(messageContentElement);
-          var toast = new Toast(element);
-
-          if (options.autoOpen) {
+        }, timeout);
+    }
+    static create(message, options = null) {
+        options = Object.assign(options, Toast.optionsDefault);
+        const toasterElement = document.createElement("aside");
+        toasterElement.classList.add(Toast.classes.toaster);
+        document.body.append(toasterElement);
+        const element = document.createElement("article");
+        element.classList.add(Toast.classes.this);
+        toasterElement.append(element);
+        const contentElement = document.createElement("div");
+        contentElement.classList.add(Toast.classes.content);
+        element.append(contentElement);
+        const messageContentElement = document.createElement("p");
+        messageContentElement.classList.add(Toast.classes.contentMessage, Toast.classes.contentMessageTypography);
+        messageContentElement.innerText = message;
+        contentElement.append(messageContentElement);
+        const toast = new Toast(element);
+        if (options.autoOpen) {
             toast.open(options.delay);
-          }
-
-          if (options.color) {
-            element.classList.add("toast_color-".concat(options.color));
-          }
-
-          if (options.iconClasses) {
-            var _iconElement$classLis;
-
-            var iconElement = document.createElement("div");
-
-            (_iconElement$classLis = iconElement.classList).add.apply(_iconElement$classLis, [Toast.classes.icon].concat(_toConsumableArray(options.iconClasses.split(" "))));
-
+        }
+        if (options.color) {
+            element.classList.add(`toast_color-${options.color}`);
+        }
+        if (options.iconClasses) {
+            const iconElement = document.createElement("div");
+            iconElement.classList.add(Toast.classes.icon, ...options.iconClasses.split(" "));
             element.prepend(iconElement);
-          }
-
-          if (options.title) {
-            var titleContentElement = document.createElement("h1");
+        }
+        if (options.title) {
+            const titleContentElement = document.createElement("h1");
             titleContentElement.classList.add(Toast.classes.contentTitle, Toast.classes.contentTitleTypography);
             titleContentElement.innerText = options.title;
             contentElement.prepend(titleContentElement);
             messageContentElement.classList.add(Toast.classes.contentMessageSecondary);
-          }
-
-          if (options.timeout === undefined || options.timeout > 0) {
+        }
+        if (options.timeout === undefined || options.timeout > 0) {
             if (options.removeWhenClose) {
-              toast.remove(options.timeout);
-            } else {
-              toast.close(options.timeout);
+                toast.remove(options.timeout);
             }
-          } else {
+            else {
+                toast.close(options.timeout);
+            }
+        }
+        else {
             toast.overlay.show();
-          }
-
-          return toast;
         }
-      }]);
+        return toast;
+    }
+}
+exports.default = Toast;
+Toast.classes = {
+    toaster: "toaster",
+    this: "toast",
+    thisActive: "toast_active",
+    icon: "toast--icon",
+    content: "toast--content",
+    contentTitle: "toast--content--title",
+    contentTitleTypography: "typography-body-2",
+    contentMessage: "toast--content--message",
+    contentMessageSecondary: "toast--content--message_secondary",
+    contentMessageTypography: "typography-body-2"
+};
+Toast.optionsDefault = {
+    autoOpen: true,
+    removeWhenClose: true
+};
 
-      return Toast;
-    }(_1.Component);
-
-    exports["default"] = Toast;
-    Toast.classes = {
-      toaster: "toaster",
-      "this": "toast",
-      thisActive: "toast_active",
-      icon: "toast--icon",
-      content: "toast--content",
-      contentTitle: "toast--content--title",
-      contentTitleTypography: "typography-body-2",
-      contentMessage: "toast--content--message",
-      contentMessageSecondary: "toast--content--message_secondary",
-      contentMessageTypography: "typography-body-2"
-    };
-    Toast.optionsDefault = {
-      autoOpen: true,
-      removeWhenClose: true
-    };
-  }, {
-    ".": 8
-  }],
-  7: [function (require, module, exports) {
-    "use strict";
-
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-
-    var _1 = require(".");
-
-    var Toolbar = /*#__PURE__*/function (_$Component6) {
-      _inherits(Toolbar, _$Component6);
-
-      var _super6 = _createSuper(Toolbar);
-
-      function Toolbar(element) {
-        var _this16;
-
-        var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-        _classCallCheck(this, Toolbar);
-
-        _this16 = _super6.call(this, element);
+},{".":8}],7:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const _1 = require(".");
+class Toolbar extends _1.Component {
+    constructor(element, options = null) {
+        super(element);
         options = Object.assign(Toolbar.defaultOptions, options);
-
         if (options.hideInScroll) {
-          _this16.hideInScroll();
+            this.hideInScroll();
         }
-
-        return _this16;
-      }
-
-      _createClass(Toolbar, [{
-        key: "hideInScroll",
-        value: function hideInScroll() {
-          var _this17 = this;
-
-          var lastScrollTop = 0;
-          window.addEventListener("scroll", function () {
-            var scrollTop = document.documentElement.scrollTop;
-
-            if (scrollTop > _this17.element.clientHeight && scrollTop > lastScrollTop) {
-              _this17.element.classList.add(Toolbar.toolbarHideClass);
-            } else {
-              _this17.element.classList.remove(Toolbar.toolbarHideClass);
+    }
+    hideInScroll() {
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", () => {
+            const scrollTop = document.documentElement.scrollTop;
+            if (scrollTop > this.element.clientHeight && scrollTop > lastScrollTop) {
+                this.element.classList.add(Toolbar.toolbarHideClass);
             }
-
+            else {
+                this.element.classList.remove(Toolbar.toolbarHideClass);
+            }
             lastScrollTop = scrollTop;
-          });
-        }
-      }], [{
-        key: "initFromHtmlAttribute",
-        value: function initFromHtmlAttribute(attributeName) {
-          document.querySelectorAll("[".concat(attributeName, "]")).forEach(function (element) {
-            return new Toolbar(element);
-          });
-        }
-      }]);
+        });
+    }
+    static initFromHtmlAttribute(attributeName) {
+        document.querySelectorAll(`[${attributeName}]`)
+            .forEach((element) => new Toolbar(element));
+    }
+}
+exports.default = Toolbar;
+Toolbar.defaultOptions = {
+    hideInScroll: true
+};
+Toolbar.toolbarHideClass = "toolbar_hide";
 
-      return Toolbar;
-    }(_1.Component);
+},{".":8}],8:[function(require,module,exports){
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Toolbar = exports.Toast = exports.Overlay = exports.NavigationDrawer = exports.Input = exports.Dialog = exports.Component = void 0;
+const Component_1 = __importDefault(require("./Component"));
+exports.Component = Component_1.default;
+const Dialog_1 = __importDefault(require("./Dialog"));
+exports.Dialog = Dialog_1.default;
+const Input_1 = __importDefault(require("./Input"));
+exports.Input = Input_1.default;
+const NavigationDrawer_1 = __importDefault(require("./NavigationDrawer"));
+exports.NavigationDrawer = NavigationDrawer_1.default;
+const Overlay_1 = __importDefault(require("./Overlay"));
+exports.Overlay = Overlay_1.default;
+const Toast_1 = __importDefault(require("./Toast"));
+exports.Toast = Toast_1.default;
+const Toolbar_1 = __importDefault(require("./Toolbar"));
+exports.Toolbar = Toolbar_1.default;
 
-    exports["default"] = Toolbar;
-    Toolbar.defaultOptions = {
-      hideInScroll: true
-    };
-    Toolbar.toolbarHideClass = "toolbar_hide";
-  }, {
-    ".": 8
-  }],
-  8: [function (require, module, exports) {
-    "use strict";
+},{"./Component":1,"./Dialog":2,"./Input":3,"./NavigationDrawer":4,"./Overlay":5,"./Toast":6,"./Toolbar":7}],9:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Toolbar = exports.Toast = exports.Overlay = exports.NavigationDrawer = exports.Input = exports.Dialog = void 0;
+const components_1 = require("./components");
+Object.defineProperty(exports, "Dialog", { enumerable: true, get: function () { return components_1.Dialog; } });
+Object.defineProperty(exports, "Input", { enumerable: true, get: function () { return components_1.Input; } });
+Object.defineProperty(exports, "NavigationDrawer", { enumerable: true, get: function () { return components_1.NavigationDrawer; } });
+Object.defineProperty(exports, "Overlay", { enumerable: true, get: function () { return components_1.Overlay; } });
+Object.defineProperty(exports, "Toast", { enumerable: true, get: function () { return components_1.Toast; } });
+Object.defineProperty(exports, "Toolbar", { enumerable: true, get: function () { return components_1.Toolbar; } });
+document.addEventListener("DOMContentLoaded", () => {
+    components_1.Dialog.initFromHtmlAttribute("x-dialog");
+    components_1.Input.initFromHtmlAttribute("x-input", "x-input-label");
+    components_1.NavigationDrawer.initFromHtmlAttribute("x-nav-drawer");
+    components_1.Toolbar.initFromHtmlAttribute("x-toolbar");
+});
 
-    var __importDefault = this && this.__importDefault || function (mod) {
-      return mod && mod.__esModule ? mod : {
-        "default": mod
-      };
-    };
-
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.Toolbar = exports.Toast = exports.Overlay = exports.NavigationDrawer = exports.Input = exports.Dialog = exports.Component = void 0;
-
-    var Component_1 = __importDefault(require("./Component"));
-
-    exports.Component = Component_1["default"];
-
-    var Dialog_1 = __importDefault(require("./Dialog"));
-
-    exports.Dialog = Dialog_1["default"];
-
-    var Input_1 = __importDefault(require("./Input"));
-
-    exports.Input = Input_1["default"];
-
-    var NavigationDrawer_1 = __importDefault(require("./NavigationDrawer"));
-
-    exports.NavigationDrawer = NavigationDrawer_1["default"];
-
-    var Overlay_1 = __importDefault(require("./Overlay"));
-
-    exports.Overlay = Overlay_1["default"];
-
-    var Toast_1 = __importDefault(require("./Toast"));
-
-    exports.Toast = Toast_1["default"];
-
-    var Toolbar_1 = __importDefault(require("./Toolbar"));
-
-    exports.Toolbar = Toolbar_1["default"];
-  }, {
-    "./Component": 1,
-    "./Dialog": 2,
-    "./Input": 3,
-    "./NavigationDrawer": 4,
-    "./Overlay": 5,
-    "./Toast": 6,
-    "./Toolbar": 7
-  }],
-  9: [function (require, module, exports) {
-    "use strict";
-
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.Toolbar = exports.Toast = exports.Overlay = exports.NavigationDrawer = exports.Input = exports.Dialog = void 0;
-
-    var components_1 = require("./components");
-
-    Object.defineProperty(exports, "Dialog", {
-      enumerable: true,
-      get: function get() {
-        return components_1.Dialog;
-      }
-    });
-    Object.defineProperty(exports, "Input", {
-      enumerable: true,
-      get: function get() {
-        return components_1.Input;
-      }
-    });
-    Object.defineProperty(exports, "NavigationDrawer", {
-      enumerable: true,
-      get: function get() {
-        return components_1.NavigationDrawer;
-      }
-    });
-    Object.defineProperty(exports, "Overlay", {
-      enumerable: true,
-      get: function get() {
-        return components_1.Overlay;
-      }
-    });
-    Object.defineProperty(exports, "Toast", {
-      enumerable: true,
-      get: function get() {
-        return components_1.Toast;
-      }
-    });
-    Object.defineProperty(exports, "Toolbar", {
-      enumerable: true,
-      get: function get() {
-        return components_1.Toolbar;
-      }
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      components_1.Dialog.initFromHtmlAttribute("x-dialog");
-      components_1.Input.initFromHtmlAttribute("x-input", "x-input-label");
-      components_1.NavigationDrawer.initFromHtmlAttribute("x-nav-drawer");
-      components_1.Toolbar.initFromHtmlAttribute("x-toolbar");
-    });
-  }, {
-    "./components": 8
-  }]
-}, {}, [9]);
+},{"./components":8}]},{},[9])(9)
+});
