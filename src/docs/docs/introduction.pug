@@ -1,0 +1,54 @@
+extends ../includes/_layout.pug
+
+block pageTitle
+  title Introdução - #{appName}
+
+block content
+  main.container
+    .flex-row
+      .flex-col-7.margin-x-auto
+        header
+          h1.typo-h2.theme-color-fg
+            | Introdução
+          p.typo-h5.typo-weight-light
+            | Veja como é fácil usar e aprender!
+          .border-divider
+
+        section.typo-body-1
+          h2.typo-h3
+            | Iniciando sem dificuldades
+          p
+            | O Xmutarn adota um padrão que tem como objetivo facilitar o desenvolvimento dos projetos, decorando
+            | alguns prefixos, você já pode começar a criar suas páginas.
+
+          h3.typo-h5
+            | Prefixos
+          p
+            | Nós acreditamos que cada vez mais os desenvolvedores buscam pela produtividade. Pensando nisso, usamos
+            | prefixos para facilitar e agilizar a codificação, descartando a necessidade de consultar a documentação
+            | do framework com frequência.
+          p
+            | Com a ajuda do IntelliSense e o prefixo certo, é possível listar todas as opções de estilo. Isso é útil
+            | para quem esqueceu o nome daquela classe, mas sabe seu prefixo ou até para listar as variações,
+            | descendentes, filhos e outros da mesma.
+
+          p
+            | Exemplo com o prefixo de tipografias (
+            mark typo-
+            | ):
+          figure
+            img(src="assets/img/examples/typo-list.png", alt="Tipografias listadas pelo IntelliSense")
+
+          p
+            | Listando as espessuras (
+            strong weight
+            | ) de tipografia (prefixo
+            |
+            mark typo-weight-
+            | ):
+          figure
+            img(src="assets/img/examples/typo-list-weight.png", alt="Espessuras de tipografia listadas pelo IntelliSense")
+
+        section.display-flex.padding-medium
+          a.button.button_outlined.button_size-large(href="docs/getting-started.html")
+            | Anterior: Começando
