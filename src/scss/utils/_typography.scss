@@ -1,24 +1,24 @@
-.typography-style-italic {
+.typo-style-italic {
   font-style: italic !important;
 }
 
 
 @each $overflow in (clip ellipsis) {
-  .typography-overflow-#{$overflow} {
+  .typo-overflow-#{$overflow} {
     white-space: nowrap;
     text-overflow: #{$overflow};
     overflow: hidden;
   }
 }
 
-@each $transform in (uppercase lowercase capitalize) {
-  .typography-to-#{$transform} {
+@each $transform in (upper lower capitalize) {
+  .typo-to-#{$transform} {
     text-transform: #{$transform} !important;
   }
 }
 
 @each $style, $weight in $typography-font-weights {
-  .typography-weight-#{$style} {
+  .typo-weight-#{$style} {
     font-weight: #{$weight} !important;
   }
 }
@@ -30,11 +30,11 @@
     @each $align in (left right center justify) {
       @if ($align != justify or $align == justify and $infix == "") {
 
-        // .typography-align-**
+        // .typo-align-**
         //
-        // Exemplo: .typography-align-left
-        //          .typography-align-left___small
-        .typography-align-#{$align}#{$infix} {
+        // Exemplo: .typo-align-left
+        //          .typo-align-left___small
+        .typo-align-#{$align}#{$infix} {
           text-align: #{$align} !important;
         }
 

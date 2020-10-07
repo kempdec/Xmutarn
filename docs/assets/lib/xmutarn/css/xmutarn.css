@@ -1179,99 +1179,99 @@ input[type="password"]::-ms-reveal {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-.typography-use-roboto, .typography-use-default {
+.typo-use-roboto, .typo-use-default {
   font-family: "Roboto", sans-serif;
 }
 
-.typography-headline-1 {
+.typo-h1 {
   font-size: 6rem;
   letter-spacing: -0.01562em;
   line-height: 1;
 }
 
-.typography-headline-2 {
+.typo-h2 {
   font-size: 3.75rem;
   letter-spacing: -0.00833em;
   line-height: 1;
 }
 
-.typography-headline-3 {
+.typo-h3 {
   font-size: 3rem;
   letter-spacing: normal;
   line-height: 3.125rem;
 }
 
-.typography-headline-4 {
+.typo-h4 {
   font-size: 2.125rem;
   letter-spacing: 0.00735em;
   line-height: 2.5rem;
 }
 
-.typography-headline-5 {
+.typo-h5 {
   font-size: 1.5rem;
   letter-spacing: normal;
   line-height: 2rem;
 }
 
-.typography-headline-6 {
+.typo-h6 {
   font-size: 1.25rem;
   letter-spacing: 0.0125em;
   line-height: 1.6;
 }
 
-.typography-subtitle-1 {
+.typo-subtitle-1 {
   font-size: 1.125rem;
   letter-spacing: 0.00937em;
   line-height: 1.875rem;
 }
 
-.typography-subtitle-2 {
+.typo-subtitle-2 {
   font-size: 0.9375rem;
   letter-spacing: 0.00714em;
   line-height: 1.625rem;
 }
 
-.typography-body-1 {
+.typo-body-1 {
   font-size: 1rem;
   letter-spacing: 0.03125em;
   line-height: 1.5;
 }
 
-.typography-body-2, .avatar--title, .avatar--summary {
+.typo-body-2, .avatar--title, .avatar--summary {
   font-size: 0.875rem;
   letter-spacing: 0.01786em;
   line-height: 1.5rem;
 }
 
-.typography-caption-1 {
+.typo-caption-1 {
   font-size: 0.8125rem;
   letter-spacing: 0.03333em;
   line-height: 1.375rem;
 }
 
-.typography-caption-2 {
+.typo-caption-2 {
   font-size: 0.75rem;
   letter-spacing: 0.03333em;
   line-height: 1.25rem;
 }
 
-.typography-headline-1,
-.typography-headline-2 {
+.typo-h1,
+.typo-h2 {
   font-weight: 300;
 }
 
-.typography-headline-3,
-.typography-headline-4,
-.typography-headline-5,
-.typography-subtitle-1,
-.typography-body-1, .typography-body-2, .avatar--title, .avatar--summary,
-.typography-caption-1 {
+.typo-h3,
+.typo-h4,
+.typo-h5,
+.typo-subtitle-1,
+.typo-body-1, .typo-body-2, .avatar--title, .avatar--summary,
+.typo-caption-1 {
   font-weight: 400;
 }
 
-.typography-headline-6,
-.typography-subtitle-2,
-.typography-caption-2 {
+.typo-h6,
+.typo-subtitle-2,
+.typo-caption-2 {
   font-weight: 500;
 }
 
@@ -4734,118 +4734,118 @@ input[type="password"]::-ms-reveal {
   }
 }
 
-.typography-style-italic {
+.typo-style-italic {
   font-style: italic !important;
 }
 
-.typography-overflow-clip {
+.typo-overflow-clip {
   white-space: nowrap;
   text-overflow: clip;
   overflow: hidden;
 }
 
-.typography-overflow-ellipsis {
+.typo-overflow-ellipsis {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.typography-to-uppercase {
-  text-transform: uppercase !important;
+.typo-to-upper {
+  text-transform: upper !important;
 }
 
-.typography-to-lowercase {
-  text-transform: lowercase !important;
+.typo-to-lower {
+  text-transform: lower !important;
 }
 
-.typography-to-capitalize {
+.typo-to-capitalize {
   text-transform: capitalize !important;
 }
 
-.typography-weight-thin {
+.typo-weight-thin {
   font-weight: 100 !important;
 }
 
-.typography-weight-light {
+.typo-weight-light {
   font-weight: 300 !important;
 }
 
-.typography-weight-regular {
+.typo-weight-regular {
   font-weight: 400 !important;
 }
 
-.typography-weight-medium {
+.typo-weight-medium {
   font-weight: 500 !important;
 }
 
-.typography-weight-bold {
+.typo-weight-bold {
   font-weight: 700 !important;
 }
 
-.typography-weight-black {
+.typo-weight-black {
   font-weight: 900 !important;
 }
 
-.typography-align-left {
+.typo-align-left {
   text-align: left !important;
 }
 
-.typography-align-right {
+.typo-align-right {
   text-align: right !important;
 }
 
-.typography-align-center {
+.typo-align-center {
   text-align: center !important;
 }
 
-.typography-align-justify {
+.typo-align-justify {
   text-align: justify !important;
 }
 
 @media (min-width: 576px) {
-  .typography-align-left___small {
+  .typo-align-left___small {
     text-align: left !important;
   }
-  .typography-align-right___small {
+  .typo-align-right___small {
     text-align: right !important;
   }
-  .typography-align-center___small {
+  .typo-align-center___small {
     text-align: center !important;
   }
 }
 
 @media (min-width: 768px) {
-  .typography-align-left___medium {
+  .typo-align-left___medium {
     text-align: left !important;
   }
-  .typography-align-right___medium {
+  .typo-align-right___medium {
     text-align: right !important;
   }
-  .typography-align-center___medium {
+  .typo-align-center___medium {
     text-align: center !important;
   }
 }
 
 @media (min-width: 992px) {
-  .typography-align-left___large {
+  .typo-align-left___large {
     text-align: left !important;
   }
-  .typography-align-right___large {
+  .typo-align-right___large {
     text-align: right !important;
   }
-  .typography-align-center___large {
+  .typo-align-center___large {
     text-align: center !important;
   }
 }
 
 @media (min-width: 1200px) {
-  .typography-align-left___xlarge {
+  .typo-align-left___xlarge {
     text-align: left !important;
   }
-  .typography-align-right___xlarge {
+  .typo-align-right___xlarge {
     text-align: right !important;
   }
-  .typography-align-center___xlarge {
+  .typo-align-center___xlarge {
     text-align: center !important;
   }
 }

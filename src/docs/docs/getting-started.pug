@@ -8,33 +8,36 @@ block content
         .flex-row
           .flex-col-7.margin-x-auto
             header
-              h1.typography-headline-2.theme-color-fg
+              h1.typo-h2.theme-color-fg
                 | Começando
-              p.typography-headline-5.typography-weight-light
+              p.typo-h5.typo-weight-light
                 | Saiba como começar a usar o Xmutarn em seus projetos.
-              div.border-divider
+              .border-divider
 
-            section.typography-body-1
-              h2.typography-headline-3
+            section.typo-body-1
+              h2.typo-h3
                 | Instalação
               p
                 | Obtenha o Xmutarn através dos gerenciadores de pacotes NPM e Yarn. Essas versões contém apenas os
                 | arquivos de estilo, scripts, notas de lançamento, licença e o leia-me.
-                br
-                br
+              p
                 | Ou faça o download direto do
                 |
                 a(href=`${appRepository}/releases/latest` target="_blank") GitHub
                 | .
 
-              h3.typography-headline-5
+              h3.typo-h5
                 | NPM
               pre
                 code.language-bash
                   | npm install xmutarn
 
-              h3.typography-headline-5
+              h3.typo-h5
                 | Yarn
               pre
                 code.language-bash
                   | yarn add xmutarn
+
+              section.display-flex.flex-justify-content-end.padding-medium
+                a.button.button_outlined.button_size-large(href="docs/introduction.html")
+                  | Próximo: Introdução

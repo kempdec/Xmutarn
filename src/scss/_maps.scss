@@ -130,32 +130,32 @@ $themes-colors-pseuds-and-delimiters: (
 
 // Define as tipografias e suas propriedades.
 $typographies: (
-  headline-1: (
+  h1: (
     font-size: px-to-rem($list: 96px),
     letter-spacing: px-to-em($list: -.24992px),
     line-height: 1
   ),
-  headline-2: (
+  h2: (
     font-size: px-to-rem($list: 60px),
     letter-spacing: px-to-em($list: -.13328px),
     line-height: 1
   ),
-  headline-3: (
+  h3: (
     font-size: px-to-rem($list: 48px),
     letter-spacing: normal,
     line-height: px-to-rem($list: 50px)
   ),
-  headline-4: (
+  h4: (
     font-size: px-to-rem($list: 34px),
     letter-spacing: px-to-em($list: .1176px),
     line-height: px-to-rem($list: 40px)
   ),
-  headline-5: (
+  h5: (
     font-size: px-to-rem($list: 24px),
     letter-spacing: normal,
     line-height: px-to-rem($list: 32px)
   ),
-  headline-6: (
+  h6: (
     font-size: px-to-rem($list: 20px),
     letter-spacing: px-to-em($list: .2px),
     line-height: 1.6
@@ -192,7 +192,7 @@ $typographies: (
   )
 ) !default;
 
-// Define as espessuras de fonte de `.typography-weight-*`.
+// Define as espessuras de fonte de `.typo-weight-*`.
 $typography-font-weights: (
   thin: 100,
   light: 300,
