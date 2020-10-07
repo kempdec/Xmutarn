@@ -1,0 +1,40 @@
+extends ../includes/_layout.pug
+
+block pageTitle
+    title Começando - #{appName}
+
+block content
+    main.container
+        .flex-row
+          .flex-col-7.margin-x-auto
+            header
+              h1.typography-headline-2.theme-color-fg
+                | Começando
+              p.typography-headline-5.typography-weight-light
+                | Saiba como começar a usar o Xmutarn em seus projetos.
+              div.border-divider
+
+            section.typography-body-1
+              h2.typography-headline-3
+                | Instalação
+              p
+                | Obtenha o Xmutarn através dos gerenciadores de pacotes NPM e Yarn. Essas versões contém apenas os
+                | arquivos de estilo, scripts, notas de lançamento, licença e o leia-me.
+                br
+                br
+                | Ou faça o download direto do
+                |
+                a(href=`${appRepository}/releases/latest` target="_blank") GitHub
+                | .
+
+              h3.typography-headline-5
+                | NPM
+              pre
+                code.language-bash
+                  | npm install xmutarn
+
+              h3.typography-headline-5
+                | Yarn
+              pre
+                code.language-bash
+                  | yarn add xmutarn
