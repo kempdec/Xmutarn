@@ -17,8 +17,8 @@ Um framework front-end criado com a finalidade de facilitar e aumentar a produti
 
 - [Faça o download da versão mais recente](https://github.com/viniciusxdl/xmutarn/releases/latest) do Xmutarn diretamente do GitHub.
 - Clonar o repositório: `git clone https://github.com/viniciusxdl/xmutarn.git`
-- Instalar com o [NPM](https://www.npmjs.com/): `npm install xmutarn`
-- Instalar com o [Yarn](https://yarnpkg.com/): `yarn add xmutarn`
+- Instalar com o [NPM](https://www.npmjs.com/package/xmutarn): `npm install xmutarn`
+- Instalar com o [Yarn](https://yarnpkg.com/package/xmutarn): `yarn add xmutarn`
 
 ## Autores
 
