@@ -49,6 +49,46 @@ block content
           figure
             img(src="assets/img/examples/typo-list-weight.png", alt="Espessuras de tipografia listadas pelo IntelliSense")
 
+          h3.typo-h5
+            | Padrões de nomeação
+          p
+            | O padrão de nomeação de classes CSS do Xmutarn, batizado de
+            |
+            strong CSSCNP
+            | , define algumas regras sobre como as classes do framework devem ser nomeadas.
+          p
+            | Isso ajuda no momento da codificação, ciente do padrão é possível facilmente saber onde a classe pode ser
+            | aplicada.
+          p
+            | Conheça mais sobre o
+            |
+            a(href=csscnpAddress target="_blank") CSSCNP
+            | .
+
+          h4.typo-h6
+            | Variantes
+          p
+            | As classes variantes herdam o nome da sua classe alvo e são separadas por um underscore (_).
+          p
+            | Exemplo do uso de uma variante da barra de navegação que aplica a cor preta na mesma:
+          pre
+            code.language-html
+              | &lt;div class="toolbar toolbar_dark-color">&lt;/div>
+          p
+            | Classe alvo:
+            |
+            strong toolbar
+            br
+            | Classe variante:
+            |
+            strong toolbar_dark-color
+          p
+            | Listando as variantes da barra de navegação (
+            mark .toolbar_
+            | ):
+          figure
+            img(src="assets/img/examples/toolbar-list-variant.png", alt="Listando as variantes de estilo da barra de navegação com ajuda do IntelliSense")
+
         section.display-flex.padding-medium
           a.button.button_outlined.button_size-large(href="docs/getting-started.html")
             | Anterior: Começando
