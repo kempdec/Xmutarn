@@ -6,25 +6,25 @@ block pageTitle
 block content
   main
     section.theme-color-bg-700
-      div.container.padding-bottom-large.padding-bottom-xlarge___large.theme-main-fg-primary
+      div.container.padding-bottom-lg.padding-bottom-xl__lg.theme-main-fg-primary
         div.flex-row.flex-align-items-center
 
-          figure.flex-col-7.flex-col-8___small.flex-col-6___large.flex-order-1___large.margin-x-auto.margin-top-xlarge
+          figure.flex-col-7.flex-col-8__sm.flex-col-6__lg.flex-order-1__lg.margin-x-auto.margin-top-xl
             img.max-width-100(src="assets/img/xmutarn-logo-abstract.png" alt="Logotipo do Xmutarn com fundo abstrato")
 
-          article.flex-col-6___large.typo-align-center.color-fg-white
+          article.flex-col-6__lg.typo-align-center.color-fg-white
             h1.typo-h2 #{appName}
             p.typo-h5(style="opacity: .7;") Moderno, estiloso, fácil e produtivo.
-            a.button.button_size-xlarge.typo-to-uppercase(href="docs/getting-started.html")
+            a.btn.btn_size-xl.typo-to-uppercase(href="docs/getting-started.html")
               | Começar
             p.typo-body-1.color-fg-white
               | Versão: #{appVersion}
 
-  section.padding-y-medium.padding-y-xlarge___large.theme-main-bg-background
+  section.padding-y-md.padding-y-xl__lg.theme-main-bg-background
     div.container
       div.flex-row
 
-        article.flex-col-4___large
+        article.flex-col-4__lg
           figure.display-flex.flex-justify-content-center
             span.fas.fa-code.fa-4x.theme-color-fg
           h1.typo-h5.typo-align-center.theme-main-fg-primary
@@ -32,7 +32,7 @@ block content
           div.typo-body-1.typo-align-center.theme-main-fg-secondary
             p Completamente semântico. Não sacrifique seu código para aplicar seu estilo.
 
-        article.flex-col-4___large
+        article.flex-col-4__lg
           figure.display-flex.flex-justify-content-center
             span.fas.fa-cubes.fa-4x.theme-color-fg
           h1.typo-h5.typo-align-center.theme-main-fg-primary
@@ -41,7 +41,7 @@ block content
             p
               | Com padrões para diminuir a curva de aprendizado e a constante consulta na documentação.
 
-        article.flex-col-4___large
+        article.flex-col-4__lg
           figure.display-flex.flex-justify-content-center
             span.fas.fa-bolt.fa-4x.theme-color-fg
           h1.typo-h5.typo-align-center.theme-main-fg-primary
@@ -51,8 +51,8 @@ block content
 
   footer.theme-main-fg-primary
     div.container
-      div.flex-row.flex-align-items-center.padding-medium.typo-caption-1
-        a.margin-right-medium(href=appRepository target="_blank")
+      div.flex-row.flex-align-items-center.padding-md.typo-caption-1
+        a.margin-right-md(href=appRepository target="_blank")
           | GitHub
         a(href=`${appRepository}/blob/master/LICENSE` target="_blank")
           | MIT License
