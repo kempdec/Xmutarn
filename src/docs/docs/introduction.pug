@@ -89,6 +89,22 @@ block content
           figure
             img(src="assets/img/examples/toolbar-list-variant.png", alt="Listando as variantes de estilo da barra de navegação com ajuda do IntelliSense")
 
+          h4.typo-h6
+            | Descendentes
+          p
+            | As classes descendentes herdam o nome da sua classe pai e são separadas por dois traços (--).
+          p
+            | Em outras palavras, quando uma classe contém dois traços (--) indica que ela é descendente de outra.
+          pre
+            code.language-html
+              | &lt;div class="toolbar">
+              |     &lt;nav class="toolbar--nav">&lt;/nav>
+              |
+              |     &lt;nav class="toolbar--nav">
+              |         &lt;a class="toolbar--nav--item">Item&lt;/a>
+              |     &lt;/nav>
+              | &lt;div>
+
         section.display-flex.padding-medium
           a.button.button_outlined.button_size-large(href="docs/getting-started.html")
             | Anterior: Começando
