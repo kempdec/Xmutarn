@@ -1,4 +1,4 @@
-.button {
+.btn {
   position: relative;
   display: inline-flex;
   overflow: hidden;
@@ -13,26 +13,26 @@
   align-items: center;
   user-select: none;
 
-  &:not(.button_outlined):not(.button_outlined-color) {
+  &:not(.btn_outlined):not(.btn_outlined-color) {
     border: $button-border;
   }
 
-  &:not([disabled]):not(.button_disabled) {
+  &:not([disabled]):not(.btn_disabled) {
     cursor: pointer;
 
-    &:not(.button_flat):not(.button_outlined):not(.button_outlined-color) {
+    &:not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color) {
       color: white;
 
       &::before {
         background-color: white;
       }
 
-      &:not(.button_color-accent),
-      &.button_color-featured {
+      &:not(.btn_color-accent),
+      &.btn_color-featured {
         background-color: var(--theme-color-500, get-featured-theme-color());
       }
 
-      &.button_color-accent {
+      &.btn_color-accent {
         background-color: var(--theme-color-A400, get-accent-theme-color());
       }
     }
@@ -81,11 +81,11 @@
   &_flat,
   &_outlined,
   &_outlined-color {
-    &:not([disabled]):not(.button_disabled) {
+    &:not([disabled]):not(.btn_disabled) {
       background-color: transparent;
 
-      &:not(.button_color-accent),
-      &.button_color-featured {
+      &:not(.btn_color-accent),
+      &.btn_color-featured {
         color: var(--theme-color-500, get-featured-theme-color());
 
         &::before {
@@ -93,7 +93,7 @@
         }
       }
 
-      &.button_color-accent {
+      &.btn_color-accent {
         color: var(--theme-color-A400, get-accent-theme-color());
 
         &::before {
@@ -109,16 +109,16 @@
   }
 
   &_outlined,
-  &_outlined-color:not(.button_color-featured):not(.button_color-accent) {
+  &_outlined-color:not(.btn_color-featured):not(.btn_color-accent) {
     border-color: #{get-main-theme-color($prop-name: dividers)};
   }
 
   &_outlined-color {
-    &.button_color-featured {
+    &.btn_color-featured {
       border-color: var(--theme-color-500, get-featured-theme-color());
     }
 
-    &.button_color-accent {
+    &.btn_color-accent {
       border-color: var(--theme-color-A400, get-accent-theme-color());
     }
   }
