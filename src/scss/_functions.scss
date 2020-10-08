@@ -79,7 +79,7 @@
 //
 // Obtém o infixo do breakpoint informado.
 @function media-breakpoint-infix($breakpoint) {
-  @return if($breakpoint == xsmall, "", "___#{$breakpoint}");
+  @return if($breakpoint == xsmall, "", "__#{$breakpoint}");
 }
 
 // px-to
