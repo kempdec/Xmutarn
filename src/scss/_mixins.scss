@@ -11,7 +11,7 @@
     @error "Não foi possível encontrar o breakpoint '#{$breakpoint}'.";
   }
 
-  @if ($breakpoint != xsmall) {
+  @if ($breakpoint != xs) {
     @media (min-width: map-get($map: $breakpoints-map, $key: $breakpoint)) {
       @content;
     }
@@ -25,7 +25,7 @@
     @error "Não foi possível encontrar o breakpoint '#{$breakpoint}'.";
   }
 
-  @if ($breakpoint != xsmall) {
+  @if ($breakpoint != xs) {
     @media (max-width: map-get($map: $breakpoints-map, $key: $breakpoint) - .02px) {
       @content;
     }

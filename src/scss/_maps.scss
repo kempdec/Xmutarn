@@ -43,10 +43,10 @@ $card-media-formats: (
 
 // Define a largura máxima de `.container` para diferentes tamanhos de tela.
 $container-max-widths: (
-  small: 540px,
-  medium: 720px,
-  large: 960px,
-  xlarge: 1140px
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
 ) !default;
 
 // Dimensionamento
@@ -77,11 +77,11 @@ $spacings: (
 
 // Define os pontos de interrupção da "media".
 $media-breakpoints: (
-  xsmall: 0,
-  small: 576px,
-  medium: 768px,
-  large: 992px,
-  xlarge: 1200px
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
 ) !default;
 
 // Temas
