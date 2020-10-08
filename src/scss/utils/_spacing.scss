@@ -7,7 +7,7 @@
 
         // .*-**
         //
-        // Exemplo: .margin-xsmall___small
+        // Exemplo: .margin-xs__sm
         .#{$property}-#{$size}#{$infix} {
           #{$property}: #{$length} !important;
         }
@@ -16,8 +16,8 @@
 
           // .*-*-**, .*-*-**
           //
-          // Exemplo: .margin-top-xsmall, .margin-y-xsmall
-          //          .margin-top-xsmall___small, .margin-y-xsmall___small
+          // Exemplo: .margin-top-xs, .margin-y-xs
+          //          .margin-top-xs__sm, .margin-y-xs__sm
           .#{$property}-#{$position}-#{$size}#{$infix},
           .#{$property}-#{$side}-#{$size}#{$infix} {
             #{$property}-#{$position}: #{$length} !important;

@@ -65,11 +65,11 @@ $sizing-sizes: (
 // Define os tamanhos de espaçamento usado nas classes utilitárias de espaçamento.
 $spacings: (
   0: 0,
-  xsmall: px-to-rem($list: 4px),
-  small: px-to-rem($list: 8px),
-  medium: px-to-rem($list: 16px),
-  large: px-to-rem($list: 24px),
-  xlarge: px-to-rem($list: 48px),
+  xs: px-to-rem($list: 4px),
+  sm: px-to-rem($list: 8px),
+  md: px-to-rem($list: 16px),
+  lg: px-to-rem($list: 24px),
+  xl: px-to-rem($list: 48px),
   auto: auto
 ) !default;
 
