@@ -1,0 +1,85 @@
+extends ../includes/_layout.pug
+
+block pageTitle
+  title Cores - #{appName}
+
+block content
+  main.container
+    .flex-row
+      .flex-col-7.margin-x-auto
+        header
+          h1.typo-h2.theme-color-fg
+            | Cores
+          p.typo-h5.typo-weight-light
+            | Dê mais vida as suas páginas com as cores do Xmutarn.
+          .border-divider
+
+        section.typo-body-1
+          h2.typo-h3
+            | Uso
+          p
+            | As cores da paleta são separadas pelo primeiro plano (
+            strong foreground
+            | ) e plano de fundo (
+            strong background
+            | ). Ambos os planos tem seus respectivos prefixos e podem ser aplicados na sua página facilmente
+
+          h3.typo-h5
+            | Primeiro plano
+          p
+            | Para aplicar cores em textos, use o prefixo
+            |
+            mark fg-
+            | .
+          .card
+              p.card--content.fg-red
+                | Este é um cartão com um parágrafo em vermelho.
+          pre
+            code.language-html
+              | &lt;div class="card">
+              |     &lt;p class="card--content fg-red">
+              |         Este é um cartão com um parágrafo em vermelho.
+              |     &lt;/div>
+              | &lt;/div>
+
+          h3.typo-h5
+            | Plano de fundo
+          p
+            | Para aplicar um plano de fundo, use o prefixo
+            |
+            mark bg-
+            | .
+          .card.padding-md.bg-purple
+            | Este é um cartão com o plano de fundo roxo.
+          pre
+            code.language-html
+              | &lt;div class="card padding-md bg-purple">
+              |     Este é um cartão com um plano de fundo roxo.
+              | &lt;/div>
+
+          - const colors = [ "red", "pink", "purple", "deep-purple", "indigo", "blue", "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange", "deep-orange", "brown", "grey", "blue-grey" ]
+
+          h2.typo-h3
+            | Paleta de cores
+          .flex-row
+            each color in colors
+              .flex-col-4.padding-0
+                .card.border-0
+                  div(class=`padding-md fg-white bg-${color}`)= `${color}`
+
+            .flex-col-4.padding-0
+                .card.border-0
+                  .padding-md.fg-white.bg-black
+                    | black
+            .flex-col-4.padding-0
+                .card.border-0
+                  .padding-md.bg-white
+                    | white
+            .flex-col-4.padding-0
+                .card.border-0
+                  .padding-md.bg-transparent
+                    | transparent
+
+        section.display-flex.padding-md
+          a.btn.btn_outlined.btn_size-lg(href="docs/introduction.html")
+            | Anterior: Introdução
