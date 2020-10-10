@@ -13,7 +13,7 @@ const paths = {
     /** O caminho de distribuição das folhas CSS do projeto. */
     distCss: "dist/css",
 
-    /** O caminho dos arquivos SASS/SCSS do projeto. */
+    /** O caminho dos arquivos SCSS do projeto. */
     scssFiles: "src/scss/xmutarn*.scss"
 };
 
