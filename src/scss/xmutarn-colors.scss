@@ -1,13 +1,13 @@
-@charset "UTF-8";
+// @charset "UTF-8";
 
-@import "global-variables";
-@import "palette-map";
-// Núcleo.
-@import "functions";
-@import "maps";
-// Cores.
+// @import "global-variables";
+// @import "palette-map";
+// // Núcleo.
+// @import "functions";
+// @import "maps";
+// // Cores.
 
-// Define as cores que estarão disponíveis com base em seu nome na paleta `$palette-map`.
-$colors-available: red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey !default;
+// // Define as cores que estarão disponíveis com base em seu nome na paleta `$palette-map`.
+// $colors-available: red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey !default;
 
-@import "colors";
+// @import "colors";

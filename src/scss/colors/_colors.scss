@@ -1,0 +1,27 @@
+@import "palette-map";
+@import "functions";
+
+/// Define uma lista com os nomes das cores que estarão disponíveis.
+$available-colors: map-keys($palette) !default;
+/// Define a tonalidade das cores que estarão disponíveis.
+$available-colors-hue: "500" !default;
+/// Define os prefixos e parâmetros das cores.
+$color-prefixes-and-params: (
+  "fg": "color",
+  "bg": "background"
+) !default;
+
+@each $color in $available-colors {
+
+  $hex: get-palette-color($color, $available-colors-hue);
+
+  @each $prefix, $param in $color-prefixes-and-params {
+
+    // .*-*
+    //
+    // Exemplo: .fg-red
+    .#{$prefix}-#{$color} {
+      #{$param}: #{$hex} !important;
+    }
+  }
+}

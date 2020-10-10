@@ -1,0 +1,22 @@
+/// Obtém o código hexadecimal da cor informada com base na sua tonalidade na paleta.
+@function get-palette-color($name, $hue) {
+
+  $has-color: map-has-key($palette, $name);
+
+  @if $has-color == false {
+
+    @error "Não foi possível encontrar a cor '#{$name}' na paleta.";
+  }
+
+  $hues: map-get($palette, $name);
+  $has-hue: map-has-key($hues, $hue);
+
+  @if $has-hue == false {
+
+    @error "Não foi possível encontrar a tonalidade '#{$hue}' na cor '#{$name}' da paleta.";
+  }
+
+  $hex: map-get($hues, $hue);
+
+  @return $hex;
+}
