@@ -1,4 +1,8 @@
 @charset "UTF-8";
 
 // Cores e temas.
-@import "colors/colors";
+@import "themes/colors";
+@import "themes/themes";
+
+// Normalização.
+@import "normalize";

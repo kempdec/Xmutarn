@@ -4,7 +4,6 @@ doctype html
 html(lang="pt-br" prefix="og: http://ogp.me/ns#")
 
 head
-
   meta(charset="utf-8")
   meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
   meta(name="description" content=appDescription)
@@ -36,20 +35,19 @@ head
     link(rel="stylesheet" href="assets/lib/xmutarn/css/xmutarn-support.min.css")
     link(rel="stylesheet" href="https://unpkg.com/prismjs@1.22.0/themes/prism.css")
 
-body.typo-use-default.theme-main-bg-background
+body.typo-use-default.theme-bg-background
 
   //- Barra de ferramentas.
   header.toolbar(x-toolbar)
     nav.container-fluid
-
-      div.toolbar--nav
+      .toolbar--nav
         button.toolbar--nav--item.cursor-pointer(x-listener-open-nav-drawer="i-doc-drawer")
           span.fas.fa-bars.fa-lg
         a.toolbar--nav--item.margin-right-sm.padding-xs(href="")
           img(src="assets/img/environment/manifest.png" alt="Logotipo do Xmutarn com fundo linear" style="max-height: 2.5rem;")
         a.toolbar--nav--item(href="") Início
 
-      div.toolbar--nav.margin-left-auto
+      .toolbar--nav
         a.toolbar--nav--item(href=appRepository target="_blank")
           span.toolbar--nav--item--icon.fab.fa-github.fa-lg
           | GitHub

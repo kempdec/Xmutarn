@@ -24,11 +24,11 @@
     }
 
     &--title {
-      color: var(--theme-main-primary, get-main-theme-color($prop-name: primary));
+      color: var(--theme-main-primary, get-main-theme-color($name: "primary"));
     }
 
     &--subtitle {
-      color: var(--theme-main-secondary, get-main-theme-color($prop-name: secondary));
+      color: var(--theme-main-secondary, get-main-theme-color($name: "secondary"));
     }
 
     &--small {

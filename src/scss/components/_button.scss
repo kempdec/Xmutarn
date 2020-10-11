@@ -70,11 +70,11 @@
   &[disabled],
   &_disabled {
     cursor: default;
-    color: var(--theme-main-disabled, get-main-theme-color($prop-name: disabled)) !important;
-    background-color: var(--theme-main-dividers, get-main-theme-color($prop-name: dividers)) !important;
+    color: var(--theme-main-disabled, get-main-theme-color($name: disabled)) !important;
+    background-color: var(--theme-main-dividers, get-main-theme-color($name: "dividers")) !important;
 
     &::before {
-      background-color: var(--theme-main-disabled, get-main-theme-color($prop-name: disabled));
+      background-color: var(--theme-main-disabled, get-main-theme-color($name: "disabled"));
     }
   }
 
@@ -110,7 +110,7 @@
 
   &_outlined,
   &_outlined-color:not(.btn_color-featured):not(.btn_color-accent) {
-    border-color: #{get-main-theme-color($prop-name: dividers)};
+    border-color: #{get-main-theme-color($name: "dividers")};
   }
 
   &_outlined-color {

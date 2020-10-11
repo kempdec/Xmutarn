@@ -27,23 +27,23 @@
   }
 
   &_color-featured {
-    background-color: var(--theme-color-700, get-featured-theme-color($hue: 700));
+    background-color: var(--theme-color-700, get-featured-theme-color($hue: "700"));
   }
 
   &_color-accent {
-    background-color: var(--theme-color-A400, get-accent-theme-color($hue: 400));
+    background-color: var(--theme-color-A400, get-accent-theme-color($hue: "400"));
   }
 
   &_color-success {
-    background-color: get-palette-color($color-name: green);
+    background-color: get-palette-color($name: "green", $hue: "500");
   }
 
   &_color-alert {
-    background-color: get-palette-color($color-name: red);
+    background-color: get-palette-color($name: "red", $hue: "500");
   }
 
   &_color-warning {
-    background-color: get-palette-color($color-name: orange);
+    background-color: get-palette-color($name: "orange", $hue: "500");
   }
 
   &--icon {

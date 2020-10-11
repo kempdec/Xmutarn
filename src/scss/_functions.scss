@@ -1,78 +1,24 @@
 // get-accent-theme-color
 //
 // Obtém o código hexadecimal da cor do tema de realçe com base na sua tonalidade na paleta.
-@function get-accent-theme-color($hue: A400) {
+@function get-accent-theme-color($hue: "A400") {
   // Adiciona o prefixo das cores de realçe, caso ela não tenha.
   @if (is-accent-color-hue($hue: $hue) == false) {
     $hue: A#{$hue};
   }
 
-  @return get-palette-color($color-name: $theme-accent-default-color, $color-hue: $hue);
+  @return get-palette-color($name: $theme-accent-default-color, $hue: $hue);
 }
 
 // get-featured-theme-color
 //
 // Obtém o código hexadecimal da cor do tema destaque com base na sua tonalidade na paleta.
-@function get-featured-theme-color($hue: 500) {
+@function get-featured-theme-color($hue: "500") {
   @if (is-accent-color-hue($hue: $hue)) {
     @error "A tonalidade '#{$hue} pertence a cores de realçe da paleta'.";
   }
 
-  @return get-palette-color($color-name: $theme-featured-default-color, $color-hue: $hue);
-}
-
-// get-main-theme-color
-//
-// Obtém o código hexadecimal da cor do tema principal com base no nome da propriedade.
-@function get-main-theme-color($prop-name) {
-  @if (map-has-key($map: $themes-main-properties, $key: $theme-main-default) == false) {
-    @error "Não foi possível encontrar o tema principal '#{$theme-main-default}'.";
-  }
-
-  $theme: map-get($map: $themes-main-properties, $key: $theme-main-default);
-
-  @if (map-has-key($map: $theme, $key: $prop-name) == false) {
-    @error "Não foi possível encontrar a propriedade com o nome '#{$prop-name}' no tema principal '#{$theme-main-default}'.";
-  }
-
-  @return map-get($map: $theme, $key: $prop-name);
-}
-
-// get-palette-color
-//
-// Obtém o código hexadecimal da cor informada com base na sua tonalidade na paleta.
-@function get-palette-color($color-name, $color-hue: 500) {
-  @if (map-has-key($map: $palette, $key: $color-name) == false) {
-    @error "Não foi possível encontrar a cor '#{$color-name}' na paleta."
-  }
-
-  $color: map-get($map: $palette, $key: $color-name);
-
-  @if (map-has-key($map: $color, $key: $color-hue) == false) {
-    @error "Não foi possível encontrar a tonalidade '#{$color-hue}' na cor '#{$color-name}' da paleta.";
-  }
-
-  @return map-get($map: $color, $key: $color-hue);
-}
-
-// list-has-value
-//
-// Obtém um sinalizador indicando se a lista contém o valor informado.
-@function list-has-value($list, $value) {
-  @each $val in $list {
-    @if ($val == $value) {
-      @return true;
-    }
-  }
-
-  @return false;
-}
-
-// is-accent-color-hue
-//
-// Obtém um sinalizador indicando se a tonalidade pertence a cores de realçe.
-@function is-accent-color-hue($hue) {
-  @return list-has-value($list: $themes-accent-color-hue-list, $value: $hue);
+  @return get-palette-color($name: $theme-featured-default-color, $hue: $hue);
 }
 
 // media-breakpoint-infix

@@ -2,12 +2,10 @@
 //
 // As variáveis de tema vêm primeiro para uso das funções de tema.
 
-// Define o tema principal padrão, com base no mapa `$themes-main-properties`.
-$theme-main-default: light !default;
 // Define a cor padrão do tema destaque, com base no mapa da paleta `$palette`.
-$theme-featured-default-color: purple !default;
+$theme-featured-default-color: "purple" !default;
 // Define a cor padrão do tema de realçe, com base no mapa da paleta `$palette`.
-$theme-accent-default-color: light-blue !default;
+$theme-accent-default-color: "light-blue" !default;
 
 // Avatar
 
@@ -24,15 +22,15 @@ $avatar--info-margin-left: px-to-rem($list: 12px) !default;
 $avatar--title-and-subtitle-font-weight: map-get($map: $typography-font-weights, $key: medium) !default;
 
 // Define a cor do título do avatar.
-$avatar--title-color: var(--theme-main-primary, get-main-theme-color($prop-name: primary)) !default;
+$avatar--title-color: var(--theme-main-primary, get-main-theme-color($name: "primary")) !default;
 
 // Define a cor do sumário do avatar.
-$avatar--summary-color: var(--theme-main-secondary, get-main-theme-color($prop-name: secondary)) !default;
+$avatar--summary-color: var(--theme-main-secondary, get-main-theme-color($name: "secondary")) !default;
 
 // Barra de ferramentas
 
 // Define a cor de fundo da barra de ferramentas.
-$toolbar-background-color: var(--theme-color-700, get-featured-theme-color($hue: 700)) !default;
+$toolbar-background-color: var(--theme-color-700, get-featured-theme-color($hue: "700")) !default;
 // Define a cor da fonte da barra de ferramentas.
 $toolbar-color: white !default;
 // Define o tamanho da fonte da barra de ferramentas.
@@ -109,11 +107,11 @@ $button--icon-margin-left: px-to-em($list: -4.58px) !default;
 // Cartão
 
 // Define a cor de fundo dos cartões.
-$card-background-color: var(--theme-main-card, get-main-theme-color($prop-name: card)) !default;
+$card-background-color: var(--theme-main-card, get-main-theme-color($name: "card")) !default;
 // Define a borda dos cartões.
 $card-border: 1px solid !default;
 // Define a cor de borda dos cartões.
-$card-border-color: var(--theme-main-dividers, get-main-theme-color($prop-name: dividers)) !default;
+$card-border-color: var(--theme-main-dividers, get-main-theme-color($name: "dividers")) !default;
 // Define o raio de borda dos cartões.
 $card-border-radius: px-to-rem($list: 5px) !default;
 
@@ -179,16 +177,16 @@ $font-roboto-path-or-address: "../fonts" !default;
 // Gaveta de navegação
 
 // Define a cor de fundo da gaveta de navegação.
-$navigation-drawer-background-color: var(--theme-main-card, get-main-theme-color($prop-name: card)) !default;
+$navigation-drawer-background-color: var(--theme-main-card, get-main-theme-color($name: "card")) !default;
 // Define a largura da gaveta de navegação.
 $navigation-drawer-width: px-to-rem($list: 300px) !default;
 
 // Input
 
 // Define a cor da borda do input "generic".
-$input_generic-border-color: var(--theme-main-secondary, get-main-theme-color($prop-name: secondary)) !default;
+$input_generic-border-color: var(--theme-main-secondary, get-main-theme-color($name: "secondary")) !default;
 // Define a cor da fonte do input "generic".
-$input_generic-color: var(--theme-main-secondary, get-main-theme-color($prop-name: secondary)) !default;
+$input_generic-color: var(--theme-main-secondary, get-main-theme-color($name: "secondary")) !default;
 // Define a espessura de fonte do input "generic".
 $input_generic-font-weight: map-get($map: $typography-font-weights, $key: medium) !default;
 
@@ -199,7 +197,7 @@ $input_generic--field-border-bottom: px-to-rem($list: 2px) solid !default;
 // Define o preenchimento do campo de input "generic".
 $input_generic--field-padding: px-to-em($list: 16px 5px 12px 5px) !default;
 // Define a cor do campo de input "generic" com a pseudo-classe "focus".
-$input_generic--field-pseudo-focus-color: var(--theme-main-primary, get-main-theme-color($prop-name: primary)) !default;
+$input_generic--field-pseudo-focus-color: var(--theme-main-primary, get-main-theme-color($name: "primary")) !default;
 // Define a cor da borda do campo de input "generic" com a pseudo-classe "focus".
 $input_generic--field-pseudo-focus-border-color: var(--theme-color-500, get-featured-theme-color()) !default;
 // Define o topo do rótulo de input "generic".
@@ -230,7 +228,7 @@ $list_padded-padding: px-to-rem($list: 8px) !default;
 $list_padded--item-border-radius: px-to-rem($list: 5px) !default;
 
 // Define a cor dos itens da lista.
-$list--item-color: var(--theme-main-primary, get-main-theme-color($prop-name: primary)) !default;
+$list--item-color: var(--theme-main-primary, get-main-theme-color($name: "primary")) !default;
 // Define o preenchimento dos itens da lista.
 $list--item-padding: px-to-em($list: 16px) !default;
 
@@ -242,7 +240,7 @@ $list--icon-margin-left: px-to-em($list: -4.58px) !default;
 // Menu
 
 // Define a cor de fundo do menu.
-$menu-background-color: var(--theme-main-card, get-main-theme-color($prop-name: card)) !default;
+$menu-background-color: var(--theme-main-card, get-main-theme-color($name: "card")) !default;
 // Define o raio de borda do menu.
 $menu-border-radius: px-to-rem($list: 2px) !default;
 // Define a margem do menu.
@@ -328,7 +326,7 @@ $z-index-toaster: 90 !default;
 // Define a cor dos elementos de âncora.
 $global-anchor-color: var(--theme-color-500, get-featured-theme-color()) !default;
 // Define a cor dos elementos de âncora com as pseudo-classes "hover" ou "active".
-$global-anchor-hover-color: var(--theme-color-300, get-featured-theme-color($hue: 300)) !default;
+$global-anchor-hover-color: var(--theme-color-300, get-featured-theme-color($hue: "300")) !default;
 // Define a decoração de texto dos elementos de âncora.
 $global-anchor-text-decoration: none !default;
 

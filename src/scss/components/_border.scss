@@ -2,7 +2,7 @@
   display: block;
   margin: 0;
   height: 0;
-  border-top: $border-divider-width $border-divider-style var(--theme-main-dividers, get-main-theme-color($prop-name: dividers));
+  border-top: $border-divider-width $border-divider-style var(--theme-main-dividers, get-main-theme-color($name: "dividers"));
 
   &_padded {
     margin: $border-divider_padded-margin;

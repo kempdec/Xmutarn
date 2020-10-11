@@ -1,0 +1,29 @@
+/// Define os temas principais.
+$main-themes: (
+  "light": (
+    "primary": rgba(0, 0, 0, .87),
+    "secondary": rgba(0, 0, 0, .54),
+    "hint": rgba(0, 0, 0, .38),
+    "disabled": rgba(0, 0, 0, .38),
+    "dividers": rgba(0, 0, 0, .12),
+    "background": get-palette-color("grey", "50"),
+    "card": white
+  ),
+  "dark": (
+    "primary": white,
+    "secondary": rgba(255, 255, 255, .7),
+    "hint": rgba(255, 255, 255, .5),
+    "disabled": rgba(255, 255, 255, .5),
+    "dividers": rgba(255, 255, 255, .06),
+    "background": #131313,
+    "card": #191919
+  )
+) !default;
+/// Define o tema principal padrão.
+$main-theme-default: "light" !default;
+/// Define o tema de destaque padrão.
+$featured-theme-default: "purple" !default;
+/// Define o tema de realçe padrão.
+$accent-theme-default: "light-blue" !default;
+// Define uma lista das tonalidades das cores de realçe.
+$accent-color-hues: "A100", "A200", "A400", "A700" !default;

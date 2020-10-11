@@ -1,0 +1,71 @@
+@import "global-variables";
+@import "functions";
+
+/// Define os prefixos e parâmetros das cores.
+$theme-prefixes-and-params: (
+  "fg": "color",
+  "bg": "background"
+) !default;
+
+/// Cria o estilo de um tema.
+@mixin create-theme($type, $name, $props) {
+
+  // html[x-*-theme="*"]
+  //
+  // Exemplo: html[x-main-theme="light"]
+  //          html[x-featured-theme="red"]
+  //          html[x-accent-theme="red"]
+  html[x-#{$type}-theme="#{$name}"] {
+
+    @each $prop, $name in $props {
+
+      // --theme-*
+      //
+      // Exemplo: --theme-primary
+      --theme-#{$prop}: #{$name};
+    }
+  }
+}
+
+/// Cria as classes de um tema.
+@mixin create-theme-classes($name, $props, $default) {
+
+  @if ($name == $default) {
+
+    @each $prop, $color in $props {
+
+      @each $prefix, $param in $theme-prefixes-and-params {
+
+        // .theme-*-*
+        //
+        // Exemplo: .theme-fg-primary
+        //          .theme-fg-50
+        .theme-#{$prefix}-#{$prop} {
+          #{$param}: var(--theme-#{$prop}, #{$color}) !important;
+        }
+      }
+    }
+  }
+}
+
+@each $name, $props in $main-themes {
+
+  @include create-theme("main", $name, $props);
+  @include create-theme-classes($name, $props, $main-theme-default);
+}
+
+/// Define um mapa as cores em temas que estarão disponíveis.
+$color-themes: map-remove($palette, "transparent", "black", "white") !default;
+
+@each $color, $hues in $color-themes {
+
+  $featured-hues: map-remove($hues, $accent-color-hues...);
+
+  @include create-theme("featured", $color, $featured-hues);
+  @include create-theme-classes($color, $featured-hues, $featured-theme-default);
+
+  $accent-hues: get-in-map($hues, $accent-color-hues...);
+
+  @include create-theme("accent", $color, $accent-hues);
+  @include create-theme-classes($color, $accent-hues, $accent-theme-default);
+}

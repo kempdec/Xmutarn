@@ -175,4 +175,891 @@
   background: #607D8B !important;
 }
 
+html[x-main-theme="light"] {
+  --theme-primary: rgba(0, 0, 0, 0.87);
+  --theme-secondary: rgba(0, 0, 0, 0.54);
+  --theme-hint: rgba(0, 0, 0, 0.38);
+  --theme-disabled: rgba(0, 0, 0, 0.38);
+  --theme-dividers: rgba(0, 0, 0, 0.12);
+  --theme-background: #FAFAFA;
+  --theme-card: white;
+}
+
+.theme-fg-primary {
+  color: var(--theme-primary, rgba(0, 0, 0, 0.87)) !important;
+}
+
+.theme-bg-primary {
+  background: var(--theme-primary, rgba(0, 0, 0, 0.87)) !important;
+}
+
+.theme-fg-secondary {
+  color: var(--theme-secondary, rgba(0, 0, 0, 0.54)) !important;
+}
+
+.theme-bg-secondary {
+  background: var(--theme-secondary, rgba(0, 0, 0, 0.54)) !important;
+}
+
+.theme-fg-hint {
+  color: var(--theme-hint, rgba(0, 0, 0, 0.38)) !important;
+}
+
+.theme-bg-hint {
+  background: var(--theme-hint, rgba(0, 0, 0, 0.38)) !important;
+}
+
+.theme-fg-disabled {
+  color: var(--theme-disabled, rgba(0, 0, 0, 0.38)) !important;
+}
+
+.theme-bg-disabled {
+  background: var(--theme-disabled, rgba(0, 0, 0, 0.38)) !important;
+}
+
+.theme-fg-dividers {
+  color: var(--theme-dividers, rgba(0, 0, 0, 0.12)) !important;
+}
+
+.theme-bg-dividers {
+  background: var(--theme-dividers, rgba(0, 0, 0, 0.12)) !important;
+}
+
+.theme-fg-background {
+  color: var(--theme-background, #FAFAFA) !important;
+}
+
+.theme-bg-background {
+  background: var(--theme-background, #FAFAFA) !important;
+}
+
+.theme-fg-card {
+  color: var(--theme-card, white) !important;
+}
+
+.theme-bg-card {
+  background: var(--theme-card, white) !important;
+}
+
+html[x-main-theme="dark"] {
+  --theme-primary: white;
+  --theme-secondary: rgba(255, 255, 255, 0.7);
+  --theme-hint: rgba(255, 255, 255, 0.5);
+  --theme-disabled: rgba(255, 255, 255, 0.5);
+  --theme-dividers: rgba(255, 255, 255, 0.06);
+  --theme-background: #131313;
+  --theme-card: #191919;
+}
+
+html[x-featured-theme="red"] {
+  --theme-50: #FFEBEE;
+  --theme-100: #FFCDD2;
+  --theme-200: #EF9A9A;
+  --theme-300: #E57373;
+  --theme-400: #EF5350;
+  --theme-500: #F44336;
+  --theme-600: #E53935;
+  --theme-700: #D32F2F;
+  --theme-800: #C62828;
+  --theme-900: #B71C1C;
+}
+
+html[x-accent-theme="red"] {
+  --theme-A100: #FF8A80;
+  --theme-A200: #FF5252;
+  --theme-A400: #FF1744;
+  --theme-A700: #D50000;
+}
+
+html[x-featured-theme="pink"] {
+  --theme-50: #FCE4EC;
+  --theme-100: #F8BBD0;
+  --theme-200: #F48FB1;
+  --theme-300: #F06292;
+  --theme-400: #EC407A;
+  --theme-500: #E91E63;
+  --theme-600: #D81B60;
+  --theme-700: #C2185B;
+  --theme-800: #AD1457;
+  --theme-900: #880E4F;
+}
+
+html[x-accent-theme="pink"] {
+  --theme-A100: #FF80AB;
+  --theme-A200: #FF4081;
+  --theme-A400: #F50057;
+  --theme-A700: #C51162;
+}
+
+html[x-featured-theme="purple"] {
+  --theme-50: #F3E5F5;
+  --theme-100: #E1BEE7;
+  --theme-200: #CE93D8;
+  --theme-300: #BA68C8;
+  --theme-400: #AB47BC;
+  --theme-500: #9C27B0;
+  --theme-600: #8E24AA;
+  --theme-700: #7B1FA2;
+  --theme-800: #6A1B9A;
+  --theme-900: #4A148C;
+}
+
+.theme-fg-50 {
+  color: var(--theme-50, #F3E5F5) !important;
+}
+
+.theme-bg-50 {
+  background: var(--theme-50, #F3E5F5) !important;
+}
+
+.theme-fg-100 {
+  color: var(--theme-100, #E1BEE7) !important;
+}
+
+.theme-bg-100 {
+  background: var(--theme-100, #E1BEE7) !important;
+}
+
+.theme-fg-200 {
+  color: var(--theme-200, #CE93D8) !important;
+}
+
+.theme-bg-200 {
+  background: var(--theme-200, #CE93D8) !important;
+}
+
+.theme-fg-300 {
+  color: var(--theme-300, #BA68C8) !important;
+}
+
+.theme-bg-300 {
+  background: var(--theme-300, #BA68C8) !important;
+}
+
+.theme-fg-400 {
+  color: var(--theme-400, #AB47BC) !important;
+}
+
+.theme-bg-400 {
+  background: var(--theme-400, #AB47BC) !important;
+}
+
+.theme-fg-500 {
+  color: var(--theme-500, #9C27B0) !important;
+}
+
+.theme-bg-500 {
+  background: var(--theme-500, #9C27B0) !important;
+}
+
+.theme-fg-600 {
+  color: var(--theme-600, #8E24AA) !important;
+}
+
+.theme-bg-600 {
+  background: var(--theme-600, #8E24AA) !important;
+}
+
+.theme-fg-700 {
+  color: var(--theme-700, #7B1FA2) !important;
+}
+
+.theme-bg-700 {
+  background: var(--theme-700, #7B1FA2) !important;
+}
+
+.theme-fg-800 {
+  color: var(--theme-800, #6A1B9A) !important;
+}
+
+.theme-bg-800 {
+  background: var(--theme-800, #6A1B9A) !important;
+}
+
+.theme-fg-900 {
+  color: var(--theme-900, #4A148C) !important;
+}
+
+.theme-bg-900 {
+  background: var(--theme-900, #4A148C) !important;
+}
+
+html[x-accent-theme="purple"] {
+  --theme-A100: #EA80FC;
+  --theme-A200: #E040FB;
+  --theme-A400: #D500F9;
+  --theme-A700: #AA00FF;
+}
+
+html[x-featured-theme="deep-purple"] {
+  --theme-50: #EDE7F6;
+  --theme-100: #D1C4E9;
+  --theme-200: #B39DDB;
+  --theme-300: #9575CD;
+  --theme-400: #7E57C2;
+  --theme-500: #673AB7;
+  --theme-600: #5E35B1;
+  --theme-700: #512DA8;
+  --theme-800: #4527A0;
+  --theme-900: #311B92;
+}
+
+html[x-accent-theme="deep-purple"] {
+  --theme-A100: #B388FF;
+  --theme-A200: #7C4DFF;
+  --theme-A400: #651FFF;
+  --theme-A700: #6200EA;
+}
+
+html[x-featured-theme="indigo"] {
+  --theme-50: #E8EAF6;
+  --theme-100: #C5CAE9;
+  --theme-200: #9FA8DA;
+  --theme-300: #7986CB;
+  --theme-400: #5C6BC0;
+  --theme-500: #3F51B5;
+  --theme-600: #3949AB;
+  --theme-700: #303F9F;
+  --theme-800: #283593;
+  --theme-900: #1A237E;
+}
+
+html[x-accent-theme="indigo"] {
+  --theme-A100: #8C9EFF;
+  --theme-A200: #536DFE;
+  --theme-A400: #3D5AFE;
+  --theme-A700: #304FFE;
+}
+
+html[x-featured-theme="blue"] {
+  --theme-50: #E3F2FD;
+  --theme-100: #BBDEFB;
+  --theme-200: #90CAF9;
+  --theme-300: #64B5F6;
+  --theme-400: #42A5F5;
+  --theme-500: #2196F3;
+  --theme-600: #1E88E5;
+  --theme-700: #1976D2;
+  --theme-800: #1565C0;
+  --theme-900: #0D47A1;
+}
+
+html[x-accent-theme="blue"] {
+  --theme-A100: #82B1FF;
+  --theme-A200: #448AFF;
+  --theme-A400: #2979FF;
+  --theme-A700: #2962FF;
+}
+
+html[x-featured-theme="light-blue"] {
+  --theme-50: #E1F5FE;
+  --theme-100: #B3E5FC;
+  --theme-200: #81D4FA;
+  --theme-300: #4FC3F7;
+  --theme-400: #29B6F6;
+  --theme-500: #03A9F4;
+  --theme-600: #039BE5;
+  --theme-700: #0288D1;
+  --theme-800: #0277BD;
+  --theme-900: #01579B;
+}
+
+html[x-accent-theme="light-blue"] {
+  --theme-A100: #80D8FF;
+  --theme-A200: #40C4FF;
+  --theme-A400: #00B0FF;
+  --theme-A700: #0091EA;
+}
+
+.theme-fg-A100 {
+  color: var(--theme-A100, #80D8FF) !important;
+}
+
+.theme-bg-A100 {
+  background: var(--theme-A100, #80D8FF) !important;
+}
+
+.theme-fg-A200 {
+  color: var(--theme-A200, #40C4FF) !important;
+}
+
+.theme-bg-A200 {
+  background: var(--theme-A200, #40C4FF) !important;
+}
+
+.theme-fg-A400 {
+  color: var(--theme-A400, #00B0FF) !important;
+}
+
+.theme-bg-A400 {
+  background: var(--theme-A400, #00B0FF) !important;
+}
+
+.theme-fg-A700 {
+  color: var(--theme-A700, #0091EA) !important;
+}
+
+.theme-bg-A700 {
+  background: var(--theme-A700, #0091EA) !important;
+}
+
+html[x-featured-theme="cyan"] {
+  --theme-50: #E0F7FA;
+  --theme-100: #B2EBF2;
+  --theme-200: #80DEEA;
+  --theme-300: #4DD0E1;
+  --theme-400: #26C6DA;
+  --theme-500: #00BCD4;
+  --theme-600: #00ACC1;
+  --theme-700: #0097A7;
+  --theme-800: #00838F;
+  --theme-900: #006064;
+}
+
+html[x-accent-theme="cyan"] {
+  --theme-A100: #84FFFF;
+  --theme-A200: #18FFFF;
+  --theme-A400: #00E5FF;
+  --theme-A700: #00B8D4;
+}
+
+html[x-featured-theme="teal"] {
+  --theme-50: #E0F2F1;
+  --theme-100: #B2DFDB;
+  --theme-200: #80CBC4;
+  --theme-300: #4DB6AC;
+  --theme-400: #26A69A;
+  --theme-500: #009688;
+  --theme-600: #00897B;
+  --theme-700: #00796B;
+  --theme-800: #00695C;
+  --theme-900: #004D40;
+}
+
+html[x-accent-theme="teal"] {
+  --theme-A100: #A7FFEB;
+  --theme-A200: #64FFDA;
+  --theme-A400: #1DE9B6;
+  --theme-A700: #00BFA5;
+}
+
+html[x-featured-theme="green"] {
+  --theme-50: #E8F5E9;
+  --theme-100: #C8E6C9;
+  --theme-200: #A5D6A7;
+  --theme-300: #81C784;
+  --theme-400: #66BB6A;
+  --theme-500: #4CAF50;
+  --theme-600: #43A047;
+  --theme-700: #388E3C;
+  --theme-800: #2E7D32;
+  --theme-900: #1B5E20;
+}
+
+html[x-accent-theme="green"] {
+  --theme-A100: #B9F6CA;
+  --theme-A200: #69F0AE;
+  --theme-A400: #00E676;
+  --theme-A700: #00C853;
+}
+
+html[x-featured-theme="light-green"] {
+  --theme-50: #F1F8E9;
+  --theme-100: #DCEDC8;
+  --theme-200: #C5E1A5;
+  --theme-300: #AED581;
+  --theme-400: #9CCC65;
+  --theme-500: #8BC34A;
+  --theme-600: #7CB342;
+  --theme-700: #689F38;
+  --theme-800: #558B2F;
+  --theme-900: #33691E;
+}
+
+html[x-accent-theme="light-green"] {
+  --theme-A100: #CCFF90;
+  --theme-A200: #B2FF59;
+  --theme-A400: #76FF03;
+  --theme-A700: #64DD17;
+}
+
+html[x-featured-theme="lime"] {
+  --theme-50: #F9FBE7;
+  --theme-100: #F0F4C3;
+  --theme-200: #E6EE9C;
+  --theme-300: #DCE775;
+  --theme-400: #D4E157;
+  --theme-500: #CDDC39;
+  --theme-600: #C0CA33;
+  --theme-700: #AFB42B;
+  --theme-800: #9E9D24;
+  --theme-900: #827717;
+}
+
+html[x-accent-theme="lime"] {
+  --theme-A100: #F4FF81;
+  --theme-A200: #EEFF41;
+  --theme-A400: #C6FF00;
+  --theme-A700: #AEEA00;
+}
+
+html[x-featured-theme="yellow"] {
+  --theme-50: #FFFDE7;
+  --theme-100: #FFF9C4;
+  --theme-200: #FFF59D;
+  --theme-300: #FFF176;
+  --theme-400: #FFEE58;
+  --theme-500: #FFEB3B;
+  --theme-600: #FDD835;
+  --theme-700: #FBC02D;
+  --theme-800: #F9A825;
+  --theme-900: #F57F17;
+}
+
+html[x-accent-theme="yellow"] {
+  --theme-A100: #FFFF8D;
+  --theme-A200: #FFFF00;
+  --theme-A400: #FFEA00;
+  --theme-A700: #FFD600;
+}
+
+html[x-featured-theme="amber"] {
+  --theme-50: #FFF8E1;
+  --theme-100: #FFECB3;
+  --theme-200: #FFE082;
+  --theme-300: #FFD54F;
+  --theme-400: #FFCA28;
+  --theme-500: #FFC107;
+  --theme-600: #FFB300;
+  --theme-700: #FFA000;
+  --theme-800: #FF8F00;
+  --theme-900: #FF6F00;
+}
+
+html[x-accent-theme="amber"] {
+  --theme-A100: #FFE57F;
+  --theme-A200: #FFD740;
+  --theme-A400: #FFC400;
+  --theme-A700: #FFAB00;
+}
+
+html[x-featured-theme="orange"] {
+  --theme-50: #FFF3E0;
+  --theme-100: #FFE0B2;
+  --theme-200: #FFCC80;
+  --theme-300: #FFB74D;
+  --theme-400: #FFA726;
+  --theme-500: #FF9800;
+  --theme-600: #FB8C00;
+  --theme-700: #F57C00;
+  --theme-800: #EF6C00;
+  --theme-900: #E65100;
+}
+
+html[x-accent-theme="orange"] {
+  --theme-A100: #FFD180;
+  --theme-A200: #FFAB40;
+  --theme-A400: #FF9100;
+  --theme-A700: #FF6D00;
+}
+
+html[x-featured-theme="deep-orange"] {
+  --theme-50: #FBE9E7;
+  --theme-100: #FFCCBC;
+  --theme-200: #FFAB91;
+  --theme-300: #FF8A65;
+  --theme-400: #FF7043;
+  --theme-500: #FF5722;
+  --theme-600: #F4511E;
+  --theme-700: #E64A19;
+  --theme-800: #D84315;
+  --theme-900: #BF360C;
+}
+
+html[x-accent-theme="deep-orange"] {
+  --theme-A100: #FF9E80;
+  --theme-A200: #FF6E40;
+  --theme-A400: #FF3D00;
+  --theme-A700: #DD2C00;
+}
+
+html[x-featured-theme="brown"] {
+  --theme-50: #EFEBE9;
+  --theme-100: #D7CCC8;
+  --theme-200: #BCAAA4;
+  --theme-300: #A1887F;
+  --theme-400: #8D6E63;
+  --theme-500: #795548;
+  --theme-600: #6D4C41;
+  --theme-700: #5D4037;
+  --theme-800: #4E342E;
+  --theme-900: #3E2723;
+}
+
+html[x-featured-theme="grey"] {
+  --theme-50: #FAFAFA;
+  --theme-100: #F5F5F5;
+  --theme-200: #EEEEEE;
+  --theme-300: #E0E0E0;
+  --theme-400: #BDBDBD;
+  --theme-500: #9E9E9E;
+  --theme-600: #757575;
+  --theme-700: #616161;
+  --theme-800: #424242;
+  --theme-900: #212121;
+}
+
+html[x-featured-theme="blue-grey"] {
+  --theme-50: #ECEFF1;
+  --theme-100: #CFD8DC;
+  --theme-200: #B0BEC5;
+  --theme-300: #90A4AE;
+  --theme-400: #78909C;
+  --theme-500: #607D8B;
+  --theme-600: #546E7A;
+  --theme-700: #455A64;
+  --theme-800: #37474F;
+  --theme-900: #263238;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
 /*# sourceMappingURL=xmutarn.css.map */

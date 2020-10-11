@@ -84,48 +84,6 @@ $media-breakpoints: (
   xl: 1200px
 ) !default;
 
-// Temas
-
-// Define as propriedades dos temas principais.
-$themes-main-properties: (
-  light: (
-    primary: rgba(0, 0, 0, .87),
-    secondary: rgba(0, 0, 0, .54),
-    hint: rgba(0, 0, 0, .38),
-    disabled: rgba(0, 0, 0, .38),
-    dividers: rgba(0, 0, 0, .12),
-    background: get-palette-color($color-name: grey, $color-hue: 50),
-    card: white
-  ),
-  dark: (
-    primary: white,
-    secondary: rgba(255, 255, 255, .7),
-    hint: rgba(255, 255, 255, .5),
-    disabled: rgba(255, 255, 255, .5),
-    dividers: rgba(255, 255, 255, .06),
-    background: #131313,
-    card: #191919
-  )
-) !default;
-
-// Temas e cores
-
-// Define os prefixos e parâmetros das classes dos temas e cores.
-$themes-colors-prefixes-and-params: (
-  fg: color,
-  bg: background,
-  bd: border-color
-) !default;
-
-// Define as pseudo-classes, pseudo-elementos e seus delimitadores usados nos temas e cores.
-$themes-colors-pseuds-and-delimiters: (
-  hover: ":",
-  active: ":",
-  focus: ":",
-  before: "::",
-  after: "::"
-) !default;
-
 // Tipografia
 
 // Define as tipografias e suas propriedades.

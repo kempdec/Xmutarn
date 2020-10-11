@@ -1,18 +1,15 @@
 @charset "UTF-8";
 
 @import "global-variables";
-@import "palette-map";
+@import "themes/palette-map";
+@import "themes/global-variables";
+@import "themes/functions";
 // Núcleo.
 @import "functions";
 @import "maps";
-@import "lists";
 @import "variables";
 @import "mixins";
 @import "placeholders";
-// Cores e temas.
-@import "themes";
-// Normalização.
-@import "normalize";
 
 @import "global";
 // Componentes.

@@ -2,8 +2,8 @@
   position: relative;
 
   &_alert-color {
-    color: #{get-palette-color($color-name: red)} !important;
-    border-color: #{get-palette-color($color-name: red)} !important;
+    color: #{get-palette-color($name: "red", $hue: "500")} !important;
+    border-color: #{get-palette-color($name: "red", $hue: "500")} !important;
   }
 
   &_generic,

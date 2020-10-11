@@ -1,43 +1,43 @@
 extends ../includes/_layout.pug
 
 block pageTitle
-    title Começando - #{appName}
+  title Começando - #{appName}
 
 block content
-    main.container
-        .flex-row
-          .flex-col-7.margin-x-auto
-            header
-              h1.typo-h2.theme-color-fg
-                | Começando
-              p.typo-h5.typo-weight-light
-                | Saiba como começar a usar o Xmutarn em seus projetos.
-              .border-divider
+  main.container
+    .flex-row
+      .flex-col-7.margin-x-auto
+        header
+          h1.typo-h2.theme-fg-500
+            | Começando
+          p.typo-h5.typo-weight-light
+            | Saiba como começar a usar o Xmutarn em seus projetos.
+          .border-divider
 
-            section.typo-body-1
-              h2.typo-h3
-                | Instalação
-              p
-                | Obtenha o Xmutarn através dos gerenciadores de pacotes NPM e Yarn. Essas versões contém apenas os
-                | arquivos de estilo, scripts, notas de lançamento, licença e o leia-me.
-              p
-                | Ou faça o download direto do
-                |
-                a(href=`${appRepository}/releases/latest` target="_blank") GitHub
-                | .
+        section.typo-body-1
+          h2.typo-h3
+            | Instalação
+          p
+            | Obtenha o Xmutarn através dos gerenciadores de pacotes NPM e Yarn. Essas versões contém apenas os
+            | arquivos de estilo, scripts, notas de lançamento, licença e o leia-me.
+          p
+            | Ou faça o download direto do
+            |
+            a(href=`${appRepository}/releases/latest` target="_blank") GitHub
+            | .
 
-              h3.typo-h5
-                | NPM
-              pre
-                code.language-bash
-                  | npm install xmutarn
+          h3.typo-h5
+            | NPM
+          pre
+            code.language-bash
+              | npm install xmutarn
 
-              h3.typo-h5
-                | Yarn
-              pre
-                code.language-bash
-                  | yarn add xmutarn
+          h3.typo-h5
+            | Yarn
+          pre
+            code.language-bash
+              | yarn add xmutarn
 
-              section.display-flex.flex-justify-content-end.padding-md
-                a.btn.btn_outlined.btn_size-lg(href="docs/introduction.html")
-                  | Próximo: Introdução
+          section.display-flex.flex-justify-content-end.padding-md
+            a.btn.btn_outlined.btn_size-lg(href="docs/introduction.html")
+              | Próximo: Introdução
