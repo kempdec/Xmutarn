@@ -43,6 +43,8 @@ body.typo-use-default.theme-main-bg-background
     nav.container-fluid
 
       div.toolbar--nav
+        button.toolbar--nav--item.cursor-pointer(x-listener-open-nav-drawer="i-doc-drawer")
+          span.fas.fa-bars.fa-lg
         a.toolbar--nav--item.margin-right-sm.padding-xs(href="")
           img(src="assets/img/environment/manifest.png" alt="Logotipo do Xmutarn com fundo linear" style="max-height: 2.5rem;")
         a.toolbar--nav--item(href="") Início
@@ -53,6 +55,21 @@ body.typo-use-default.theme-main-bg-background
           | GitHub
 
   block content
+
+  aside#i-doc-drawer.navigation-drawer(x-nav-drawer)
+    nav.list
+      header
+        h1.typo-h3.typo-weight-light.typo-align-center
+          | Navegar
+      .border-divider.margin-bottom-sm
+      a.list--item(href="docs/getting-started.html")
+        | Começando
+      a.list--item(href="docs/introduction.html")
+        | Introdução
+      p.padding-x-md.typo-body-2.typo-weight-bold
+        | Temas e cores
+      a.list--item(href="docs/colors.html")
+        | Cores
 
   block scripts
     //- Arquivos de script.
