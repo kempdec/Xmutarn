@@ -1,5 +1,7 @@
 include _app-settings.pug
 
+block variables
+
 doctype html
 html(lang="pt-br" prefix="og: http://ogp.me/ns#")
 
@@ -14,12 +16,12 @@ head
   meta(property="og:title" content="Xmutarn")
   meta(property="og:type" content="website")
   meta(property="og:url" content=appAddress)
-  meta(property="og:image" content=`${appAddress}${appBaseAddress}assets/img/environment/opengraph.png`)
+  meta(property="og:image" content=`${appAddress}/assets/img/environment/opengraph.png`)
   meta(property="og:description" content=appDescription)
   meta(property="og:site_name" content=appName)
 
   //- Integração com ambiente ~ Twitter.
-  meta(name="twitter:image" content=`${appAddress}${appBaseAddress}assets/img/environment/twitter.png`)
+  meta(name="twitter:image" content=`${appAddress}/assets/img/environment/twitter.png`)
 
   block pageTitle
     title #{appName}
