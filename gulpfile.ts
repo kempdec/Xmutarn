@@ -1,8 +1,35 @@
-import { parallel, series, task, watch } from "gulp";
+import {
+  parallel,
+  series,
+  task,
+  watch
+} from "gulp";
 
 import {
-    buildCss, buildDocs, buildJs, copyDocsDependency, delCss, delDocs, delDocsLibs, delJs, watchDocs
+    buildDocs,
+    buildJs,
+    copyDocsDependency,
+    CssFileBuilder,
+    delDocs,
+    delDocsLibs,
+    delJs,
+    watchDocs
 } from "./scripts/gulp";
+import { fileHeader } from "./scripts/gulp/header";
+
+const paths = {
+
+  /** O caminho de distribuição das folhas CSS do projeto. */
+  distCss: "dist/css",
+
+  /** O caminho dos arquivos SCSS do projeto. */
+  scssFiles: "src/scss/xmutarn*.scss"
+};
+
+const css = new CssFileBuilder(paths.scssFiles, paths.distCss, fileHeader);
+
+const delCss = () => css.deleteDestPath();
+const buildCss = () => css.build();
 
 task("css", series(delCss, buildCss));
 task("js", series(delJs, buildJs));

@@ -3,47 +3,49 @@ import { src, dest } from "gulp";
 /** Representa uma dependência do projeto. */
 export class Dependency {
 
-    /** O caminho dos arquivos da dependência. */
-    public readonly filePath: string;
+  /** O caminho dos arquivos da dependência. */
+  public readonly filePath: string;
 
-    /**
-     * Inicializa uma nova instância.
-     * 
-     * @param name O nome da dependência.
-     * @param filePath O caminho dos arquivos dentro da dependência.
-     */
-    constructor(readonly name: string, filePath: string) {
+  /**
+   * Inicializa uma nova instância.
+   *
+   * @param name O nome da dependência.
+   * @param filePath O caminho dos arquivos dentro da dependência.
+   */
+  constructor(readonly name: string, filePath: string) {
 
-        if (name == "xmutarn") {
+    if (name == "xmutarn") {
 
-            this.filePath = filePath;
-        } else {
+      this.filePath = filePath;
+    } else {
 
-            this.filePath = `node_modules/${name}/${filePath}`;
-        }
+      this.filePath = `node_modules/${name}/${filePath}`;
     }
+  }
 
-    /** Os fluxos das cópias das dependências. */
-    private static readonly _copyStreams: NodeJS.ReadWriteStream[] = [];
+  /** Os fluxos das cópias das dependências. */
+  private static readonly _copyStreams: NodeJS.ReadWriteStream[] = [];
 
-    /** Os fluxos das cópias das dependências. */
-    public static get copyStreams(): NodeJS.ReadWriteStream[] {
+  /** Os fluxos das cópias das dependências. */
+  public static get copyStreams(): NodeJS.ReadWriteStream[] {
 
-        return [].concat(this._copyStreams);
-    }
+    const streams: NodeJS.ReadWriteStream[] = [];
 
-    /**
-     * Copia a dependência para o caminho de destino especificado.
-     * 
-     * @param destPath O caminho de destino da dependência.
-     */
-    public copyTo(destPath: string): NodeJS.ReadWriteStream {
+    return streams.concat(this._copyStreams);
+  }
 
-        const stream = src(this.filePath)
-            .pipe(dest(`${destPath}/${this.name}`));
+  /**
+   * Copia a dependência para o caminho de destino especificado.
+   *
+   * @param destPath O caminho de destino da dependência.
+   */
+  public copyTo(destPath: string): NodeJS.ReadWriteStream {
 
-        Dependency._copyStreams.push(stream);
+    const stream = src(this.filePath)
+      .pipe(dest(`${destPath}/${this.name}`));
 
-        return stream;
-    }
+    Dependency._copyStreams.push(stream);
+
+    return stream;
+  }
 }

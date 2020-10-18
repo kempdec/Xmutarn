@@ -3,11 +3,11 @@
     "src/ts/index.ts"
   ],
   "compilerOptions": {
+    "esModuleInterop": true,
+    "moduleResolution": "node",
     "noImplicitAny": true,
     "noEmitOnError": true,
     "removeComments": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "target": "es6"
   }
