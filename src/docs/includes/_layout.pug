@@ -50,6 +50,8 @@ body.typo-use-default.theme-bg-background
         a.toolbar--nav--item(href="") Início
 
       .toolbar--nav
+        button#i-change-main-theme.toolbar--nav--item.cursor-pointer
+          span.fas.fa-lightbulb.fa-lg
         a.toolbar--nav--item(href=appRepository target="_blank")
           span.toolbar--nav--item--icon.fab.fa-github.fa-lg
           | GitHub
@@ -74,6 +76,7 @@ body.typo-use-default.theme-bg-background
   block scripts
     //- Arquivos de script.
     script(src="assets/lib/xmutarn/js/xmutarn.min.js")
+    script(defer src="assets/js/index.min.js")
     script(defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous")
     script(src="https://unpkg.com/prismjs@1.22.0/components/prism-core.min.js")
     script(src="https://unpkg.com/prismjs@1.22.0/plugins/autoloader/prism-autoloader.min.js")

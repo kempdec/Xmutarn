@@ -11,9 +11,6 @@ import { FileBuilder } from "./FileBuilder";
 /** Responsável pela construção de arquivos JS do projeto. */
 export class JsFileBuilder extends FileBuilder<string[]> {
 
-  /** O bundle dos arquivos JS do projeto. */
-  private readonly bundle: NodeJS.ReadableStream;
-
   /**
      * Inicializa uma nova instância.
      *
@@ -23,23 +20,33 @@ export class JsFileBuilder extends FileBuilder<string[]> {
      * @param standalone O módulo autônomo do arquivo construído.
      * @param fileHeader O cabeçalho do arquivo construído.
      */
-  constructor(srcFilePath: string[], destPath: string, private fileName: string, standalone = "", private fileHeader: string = "") {
+  constructor(srcFilePath: string[], destPath: string, readonly fileName: string, readonly standalone = "", readonly fileHeader = "") {
 
     super(srcFilePath, destPath);
+  }
+
+  /**
+   * Cria e retorna o bundle dos arquivos JS do projeto.
+   *
+   * @param standalone O módulo autônomo do arquivo construído.
+   */
+  private createBundle(standalone: string): NodeJS.ReadableStream {
 
     const browserifyObj = browserify({
-      entries: this.src,
       basedir: ".",
+      entries: this.src,
       standalone: standalone
     });
 
-    this.bundle = browserifyObj.plugin(tsify).bundle();
+    return browserifyObj.plugin(tsify).bundle();
   }
 
   /** Constrói o arquivo JS expandido do projeto. */
   public buildExpanded(): NodeJS.ReadWriteStream {
 
-    return this.bundle.pipe(source(`${this.fileName}.js`))
+    const bundle = this.createBundle(this.standalone);
+
+    return bundle.pipe(source(`${this.fileName}.js`))
       .pipe(header(this.fileHeader))
       .pipe(dest(this.destPath));
   }
@@ -47,7 +54,9 @@ export class JsFileBuilder extends FileBuilder<string[]> {
   /** Constrói o arquivo JS minificado do projeto. */
   public buildMinified(): NodeJS.ReadWriteStream {
 
-    return this.bundle.pipe(source(`${this.fileName}.min.js`))
+    const bundle = this.createBundle(this.standalone);
+
+    return bundle.pipe(source(`${this.fileName}.min.js`))
       .pipe(buffer())
       .pipe(header(this.fileHeader))
       .pipe(sourcemaps.init())

@@ -1,8 +1,9 @@
-import pkg from "./package.json";
 import ts from "gulp-typescript";
 import { parallel, series, task, watch } from "gulp";
+
+import pkg from "./package.json";
 import {
-  CssFileBuilder, Dependency, DocsFileBuilder, DocsLibsFileBuilder, JsFileBuilder
+  CssFileBuilder, Dependency, DocsFileBuilder, DocsLibsFileBuilder, JsFileBuilder, NodeDependency
 } from "./scripts/gulp";
 
 /** O cabeçalho dos arquivos do projeto. */
@@ -25,8 +26,8 @@ task("watchDocs", () => watch("src/docs/**/*", series("docs")));
 
 const docsDependencies = [
 
-  new Dependency("xmutarn", "dist/**/*")
-
+  new Dependency("xmutarn", "dist/**/*"),
+  // new NodeDependency("js-cookie", "src/*")
 ];
 const docsLibs = new DocsLibsFileBuilder(docsDependencies, "docs/assets/lib");
 const delDocsLibs = () => docsLibs.deleteDestPath();
@@ -49,5 +50,12 @@ const buildJs = () => js.build();
 
 task("js", series(delJs, buildJs));
 task("jsDocs", series("js", "docsLibs"));
+
+const scriptDocs = new JsFileBuilder(["scripts/docs/index.ts"], "docs/assets/js", "index");
+const delScriptDocs = () => scriptDocs.deleteDestPath();
+const buildScriptDocs = () => scriptDocs.buildMinified();
+
+task("scriptDocs", series(delScriptDocs, buildScriptDocs));
+task("watchScriptDocs", () => watch("scripts/docs/**/*", series("scriptDocs")));
 
 task("default", series(parallel("css", "js", "docs"), "docsLibs"));
