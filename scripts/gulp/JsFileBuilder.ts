@@ -9,7 +9,7 @@ import { dest } from "gulp";
 import { FileBuilder } from "./FileBuilder";
 
 /** Responsável pela construção de arquivos JS do projeto. */
-export class JsFileBuilder extends FileBuilder {
+export class JsFileBuilder extends FileBuilder<string[]> {
 
   /** O bundle dos arquivos JS do projeto. */
   private readonly bundle: NodeJS.ReadableStream;
@@ -17,18 +17,18 @@ export class JsFileBuilder extends FileBuilder {
   /**
      * Inicializa uma nova instância.
      *
-     * @param srcPath O caminho dos arquivos fonte a serem construídos.
+     * @param srcFilePath Os caminhos dos arquivos fonte a serem construídos.
      * @param destPath O caminho de destino dos arquivos construídos.
      * @param fileName O nome do arquivo construído.
      * @param standalone O módulo autônomo do arquivo construído.
      * @param fileHeader O cabeçalho do arquivo construído.
      */
-  constructor(srcPath: string, destPath: string, private fileName: string, standalone = "", private fileHeader: string = "") {
+  constructor(srcFilePath: string[], destPath: string, private fileName: string, standalone = "", private fileHeader: string = "") {
 
-    super(srcPath, destPath);
+    super(srcFilePath, destPath);
 
     const browserifyObj = browserify({
-      entries: this.srcPath,
+      entries: this.src,
       basedir: ".",
       standalone: standalone
     });

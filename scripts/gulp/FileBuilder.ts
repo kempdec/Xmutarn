@@ -1,23 +1,9 @@
-import del from "del";
+import { SimpleFileBuilder } from "./SimpleFileBuilder";
 
 const merge = require("merge-stream");
 
-/** Responsável pela construção de arquivos do projeto. */
-export abstract class FileBuilder {
-
-  /**
-   * Inicializa uma nova instância.
-   *
-   * @param srcPath O caminho dos arquivos fonte a serem construídos.
-   * @param destPath O caminho de destino dos arquivos construídos.
-   */
-  constructor(protected srcPath: string, protected destPath: string) {}
-
-  /** Deleta o caminho de destino dos arquivos construidos. */
-  public deleteDestPath(): Promise<string[]> {
-
-    return del(this.destPath);
-  }
+/** Fornece abstração para a construção de arquivos do projeto. */
+export abstract class FileBuilder<T> extends SimpleFileBuilder<T> {
 
   /** Constrói os arquivos expandidos do projeto. */
   public abstract buildExpanded(): NodeJS.ReadWriteStream;

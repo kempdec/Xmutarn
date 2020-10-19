@@ -1,37 +1,27 @@
 import { src, dest } from "gulp";
 
+const merge = require("merge-stream");
+
 /** Representa uma dependência do projeto. */
 export class Dependency {
-
-  /** O caminho dos arquivos da dependência. */
-  public readonly filePath: string;
 
   /**
    * Inicializa uma nova instância.
    *
    * @param name O nome da dependência.
-   * @param filePath O caminho dos arquivos dentro da dependência.
+   * @param filePath O caminho dos arquivos da dependência.
    */
-  constructor(readonly name: string, filePath: string) {
-
-    if (name == "xmutarn") {
-
-      this.filePath = filePath;
-    } else {
-
-      this.filePath = `node_modules/${name}/${filePath}`;
-    }
-  }
+  constructor(readonly name: string, readonly filePath: string) {}
 
   /** Os fluxos das cópias das dependências. */
-  private static readonly _copyStreams: NodeJS.ReadWriteStream[] = [];
+  private static readonly copyStreams: NodeJS.ReadWriteStream[] = [];
 
-  /** Os fluxos das cópias das dependências. */
-  public static get copyStreams(): NodeJS.ReadWriteStream[] {
+  /** Obtém os fluxos das cópias das dependências. */
+  public static getCopyStreams(): NodeJS.ReadWriteStream {
 
     const streams: NodeJS.ReadWriteStream[] = [];
 
-    return streams.concat(this._copyStreams);
+    return merge(streams.concat(this.copyStreams));
   }
 
   /**
@@ -44,7 +34,7 @@ export class Dependency {
     const stream = src(this.filePath)
       .pipe(dest(`${destPath}/${this.name}`));
 
-    Dependency._copyStreams.push(stream);
+    Dependency.copyStreams.push(stream);
 
     return stream;
   }

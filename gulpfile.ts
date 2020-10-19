@@ -1,38 +1,53 @@
 import pkg from "./package.json";
+import ts from "gulp-typescript";
 import { parallel, series, task, watch } from "gulp";
 import {
-  buildDocs,
-  copyDocsDependency,
-  CssFileBuilder,
-  delDocs,
-  delDocsLibs,
-  fileHeader,
-  JsFileBuilder,
-  watchDocs
+  CssFileBuilder, Dependency, DocsFileBuilder, DocsLibsFileBuilder, JsFileBuilder
 } from "./scripts/gulp";
+
+/** O cabeçalho dos arquivos do projeto. */
+const fileHeader = [
+
+  `/*! ${pkg.name} v${pkg.version} (${pkg.repository.url})`,
+
+  `Copyright ${new Date().getFullYear()} ${pkg.author.name}`,
+
+  `Licensed under ${pkg.license} */\n`
+
+].join(" | ");
+
+const docs = new DocsFileBuilder("src/docs/**/*.pug", "docs", "docs/**/*.html");
+const delDocs = () => docs.deleteDestPath();
+const buildDocs = () => docs.build();
+
+task("docs", series(delDocs, buildDocs));
+task("watchDocs", () => watch("src/docs/**/*", series("docs")));
+
+const docsDependencies = [
+
+  new Dependency("xmutarn", "dist/**/*")
+
+];
+const docsLibs = new DocsLibsFileBuilder(docsDependencies, "docs/assets/lib");
+const delDocsLibs = () => docsLibs.deleteDestPath();
+const buildDocsLibs = () => docsLibs.build();
+
+task("docsLibs", series(delDocsLibs, buildDocsLibs));
 
 const css = new CssFileBuilder("src/scss/xmutarn*.scss", "dist/css", fileHeader);
 const delCss = () => css.deleteDestPath();
 const buildCss = () => css.build();
 
 task("css", series(delCss, buildCss));
+task("cssDocs", series("css", "docsLibs"));
+task("watchCss", () => watch("src/scss/**/*", series("cssDocs")));
 
-const js = new JsFileBuilder("src/ts/index.ts", "dist/js", pkg.name, "X", fileHeader);
+const tsProject = ts.createProject("tsconfig.json");
+const js = new JsFileBuilder(tsProject.config.files, "dist/js", pkg.name, "X", fileHeader);
 const delJs = () => js.deleteDestPath();
 const buildJs = () => js.build();
 
 task("js", series(delJs, buildJs));
+task("jsDocs", series("js", "docsLibs"));
 
-task("docs", series(delDocs, buildDocs));
-task("docsDependency", series(delDocsLibs, copyDocsDependency));
-
-task("cssDocs", series("css", "docsDependency"));
-task("jsDocs", series("js", "docsDependency"));
-
-/** O caminho dos arquivos fonte SCSS do projeto. */
-const scssSrcFilesPath = "src/scss/**/*";
-
-task("watchCss", () => watch(scssSrcFilesPath, series("cssDocs")));
-task("watchDocs", watchDocs);
-
-task("default", series(parallel("css", "js", "docs"), "docsDependency"));
+task("default", series(parallel("css", "js", "docs"), "docsLibs"));
