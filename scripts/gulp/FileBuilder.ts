@@ -1,5 +1,7 @@
 import del from "del";
 
+const merge = require("merge-stream");
+
 /** Responsável pela construção de arquivos do projeto. */
 export abstract class FileBuilder {
 
@@ -24,5 +26,13 @@ export abstract class FileBuilder {
   public abstract buildMinified(): NodeJS.ReadWriteStream;
 
   /** Constrói os arquivos do projeto. */
-  public abstract build(): NodeJS.ReadWriteStream;
+  public build(): NodeJS.ReadWriteStream {
+
+    const stream: NodeJS.ReadWriteStream[] = [];
+
+    stream.push(this.buildExpanded());
+    stream.push(this.buildMinified());
+
+    return merge(stream);
+  }
 }

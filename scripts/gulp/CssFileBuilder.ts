@@ -3,14 +3,8 @@ import header from "gulp-header";
 import rename from "gulp-rename";
 import sass from "gulp-sass";
 import sourcemaps from "gulp-sourcemaps";
-import {
-  dest,
-  src
-} from "gulp";
-
+import { dest, src } from "gulp";
 import { FileBuilder } from "./FileBuilder";
-
-const merge = require("merge-stream");
 
 /** Responsável pela construção de arquivos CSS do projeto. */
 export class CssFileBuilder extends FileBuilder {
@@ -25,7 +19,6 @@ export class CssFileBuilder extends FileBuilder {
   constructor(srcPath: string, destPath: string, private fileHeader: string = "") {
 
     super(srcPath, destPath);
-    console.log(destPath);
   }
 
   /** Constrói os arquivos CSS expandidos do projeto. */
@@ -51,16 +44,5 @@ export class CssFileBuilder extends FileBuilder {
       .pipe(header(this.fileHeader))
       .pipe(sourcemaps.write("."))
       .pipe(dest(this.destPath));
-  }
-
-  /** Constrói os arquivos CSS do projeto. */
-  public build(): NodeJS.ReadWriteStream {
-
-    const stream: NodeJS.ReadWriteStream[] = [];
-
-    stream.push(this.buildExpanded());
-    stream.push(this.buildMinified());
-
-    return merge(stream);
   }
 }
