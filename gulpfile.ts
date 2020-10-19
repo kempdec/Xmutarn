@@ -26,8 +26,8 @@ task("watchDocs", () => watch("src/docs/**/*", series("docs")));
 
 const docsDependencies = [
 
-  new Dependency("xmutarn", "dist/**/*"),
-  // new NodeDependency("js-cookie", "src/*")
+  new Dependency("xmutarn", "dist/**/*")
+
 ];
 const docsLibs = new DocsLibsFileBuilder(docsDependencies, "docs/assets/lib");
 const delDocsLibs = () => docsLibs.deleteDestPath();
