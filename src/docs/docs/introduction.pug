@@ -9,8 +9,8 @@ block pageTitle
 block content
   main.container
     .flex-row
-      .flex-col-7.margin-x-auto
-        header
+      .flex-col-10__lg.margin-x-auto
+        header.typo-align-center.typo-align-left__sm
           h1.typo-h2.theme-fg-500
             | Introdução
           p.typo-h5.typo-weight-light
@@ -40,7 +40,7 @@ block content
             mark typo-
             | ):
           figure
-            img(src="assets/img/examples/typo-list.png", alt="Tipografias listadas pelo IntelliSense")
+            img.max-width-100(src="assets/img/examples/typo-list.png", alt="Tipografias listadas pelo IntelliSense")
 
           p
             | Listando as espessuras (
@@ -50,7 +50,7 @@ block content
             mark typo-weight-
             | ):
           figure
-            img(src="assets/img/examples/typo-list-weight.png", alt="Espessuras de tipografia listadas pelo IntelliSense")
+            img.max-width-100(src="assets/img/examples/typo-list-weight.png", alt="Espessuras de tipografia listadas pelo IntelliSense")
 
           h3.typo-h5
             | Padrões de nomeação
@@ -90,7 +90,7 @@ block content
             mark .toolbar_
             | ):
           figure
-            img(src="assets/img/examples/toolbar-list-variant.png", alt="Listando as variantes de estilo da barra de navegação com ajuda do IntelliSense")
+            img.max-width-100(src="assets/img/examples/toolbar-list-variant.png", alt="Listando as variantes de estilo da barra de navegação com ajuda do IntelliSense")
 
           h4.typo-h6
             | Descendentes
@@ -108,8 +108,8 @@ block content
               |     &lt;/nav>
               | &lt;div>
 
-        section.display-flex.padding-md
+        section.display-flex.flex-justify-content-space-between.flex-direction-column.flex-direction-row__md.padding-md
           a.btn.btn_outlined.btn_size-lg(href="docs/getting-started.html")
             | Anterior: Começando
-          a.btn.btn_outlined.btn_size-lg.margin-left-auto(href="docs/colors.html")
+          a.btn.btn_outlined.btn_size-lg.margin-top-sm.margin-top-0__md(href="docs/colors.html")
             | Próximo: Cores

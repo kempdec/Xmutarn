@@ -9,8 +9,8 @@ block pageTitle
 block content
   main.container
     .flex-row
-      .flex-col-7.margin-x-auto
-        header
+      .flex-col-10__lg.margin-x-auto
+        header.typo-align-center.typo-align-left__sm
           h1.typo-h2.theme-fg-500
             | Cores
           p.typo-h5.typo-weight-light
@@ -64,25 +64,25 @@ block content
 
           h2.typo-h3
             | Paleta de cores
-          .flex-row
+          .flex-row.padding-md
             each color in colors
-              .flex-col-4.padding-0
+              .flex-col-6.flex-col-4__md.flex-col-3__lg.padding-0
                 .card.border-0
                   div(class=`padding-md fg-white bg-${color}`)= `${color}`
 
-            .flex-col-4.padding-0
+            .flex-col-6.flex-col-4__md.flex-col-3__lg.padding-0
                 .card.border-0
                   .padding-md.fg-white.bg-black
                     | black
-            .flex-col-4.padding-0
+            .flex-col-6.flex-col-4__md.flex-col-3__lg.padding-0
                 .card.border-0
                   .padding-md.bg-white
                     | white
-            .flex-col-4.padding-0
+            .flex-col-6.flex-col-4__md.flex-col-3__lg.padding-0
                 .card.border-0
                   .padding-md.bg-transparent
                     | transparent
 
-        section.display-flex.padding-md
+        section.display-flex.flex-justify-content-space-between.flex-direction-column.flex-direction-row__md.padding-md
           a.btn.btn_outlined.btn_size-lg(href="docs/introduction.html")
             | Anterior: Introdução

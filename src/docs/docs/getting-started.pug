@@ -9,8 +9,8 @@ block pageTitle
 block content
   main.container
     .flex-row
-      .flex-col-7.margin-x-auto
-        header
+      .flex-col-10__lg.margin-x-auto
+        header.typo-align-center.typo-align-left__sm
           h1.typo-h2.theme-fg-500
             | Começando
           p.typo-h5.typo-weight-light
@@ -41,6 +41,6 @@ block content
             code.language-bash
               | yarn add xmutarn
 
-          section.display-flex.flex-justify-content-end.padding-md
+          section.display-flex.flex-justify-content-space-between.flex-direction-column.flex-direction-row__md.padding-md
             a.btn.btn_outlined.btn_size-lg(href="docs/introduction.html")
               | Próximo: Introdução
