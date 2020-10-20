@@ -3,12 +3,12 @@
   "short_name": "Xmutarn",
   "icons": [
     {
-      "src": "/xmutarn/assets/img/environment/manifest.png",
+      "src": "assets/img/environment/manifest.png",
       "sizes": "316x316",
       "type": "image/png"
     }
   ],
-  "start_url": "/xmutarn/",
+  "start_url": ".",
   "theme_color": "#212121",
   "background_color": "#212121",
   "display": "standalone"
