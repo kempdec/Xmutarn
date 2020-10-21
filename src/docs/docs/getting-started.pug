@@ -19,6 +19,60 @@ block content
 
         section.typo-body-1
           h2.typo-h3
+            | Início rápido
+          p
+            | Use o CDN de
+            |
+            a(href=`https://unpkg.com/xmutarn@${appVersion}` target="_blank")
+              | UNPKG
+            |
+            | em seus projetos para começar a usar o Xmutarn rapidamente.
+          h3.typo-h5
+            | CSS
+          p
+            | O arquivo
+            |
+            mark
+              | xmutarn-support.min.css
+            |
+            | será removido em breve, esta versão tem a finalidade de apenas fornecer suporte a componentes antigos do
+            | Xmutarn.
+          pre
+            code.language-html
+              | &lt;link rel="stylesheet" href="https://unpkg.com/xmutarn@#{appVersion}/dist/css/xmutarn.min.css">
+              | &lt;link rel="stylesheet" href="https://unpkg.com/xmutarn@#{appVersion}/dist/css/xmutarn-support.min.css">
+          h3.typo-h5
+            | JS
+          pre
+            code.language-html
+              | &lt;link rel="stylesheet" href="https://unpkg.com/xmutarn@#{appVersion}/dist/js/xmutarn.min.js">
+          h3.typo-h5
+            | Modelo inicial
+          p
+            | Algumas tags são fundamentais para o bom funcionamento do Xmutarn. Segue abaixo um modelo de como começar.
+          pre
+            code.language-html
+              | &lt;!DOCTYPE html>
+              | &lt;html lang="pt-br">
+              |
+              | &lt;head>
+              |     &lt;meta charset="utf-8">
+              |     &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+              |
+              |     &lt;!-- CSS -->
+              |     &lt;link rel="stylesheet" href="https://unpkg.com/xmutarn@#{appVersion}/dist/css/xmutarn.min.css">
+              |     &lt;link rel="stylesheet" href="https://unpkg.com/xmutarn@#{appVersion}/dist/css/xmutarn-support.min.css">
+              | &lt;/head>
+              |
+              | &lt;body>
+              |
+              |     &lt;!-- JS -->
+              |     &lt;script defer src="https://unpkg.com/xmutarn@#{appVersion}/dist/js/xmutarn.min.js">&lt;/script>
+              | &lt;/body>
+              |
+              | &lt;/html>
+
+          h2.typo-h3
             | Instalação
           p
             | Obtenha o Xmutarn através dos gerenciadores de pacotes NPM e Yarn. Essas versões contém apenas os
@@ -41,6 +95,6 @@ block content
             code.language-bash
               | yarn add xmutarn
 
-          section.display-flex.flex-justify-content-space-between.flex-direction-column.flex-direction-row__md.padding-md
+          section.display-flex.flex-justify-content-end.flex-direction-column.flex-direction-row__md.padding-md
             a.btn.btn_outlined.btn_size-lg(href="docs/introduction.html")
               | Próximo: Introdução
