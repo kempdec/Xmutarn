@@ -14,12 +14,6 @@
   }
 }
 
-/// Define os prefixos e parâmetros dos temas.
-$-prefixes-and-params: (
-  "fg": "color",
-  "bg": "background"
-) !default;
-
 /// Cria as classes de um tema.
 @mixin create-classes($name, $props, $default, $prefixes-and-params) {
 
