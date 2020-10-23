@@ -1,27 +1,25 @@
-@import "palette-map";
-@import "functions";
+@use "./palette";
+@use "sass:map";
 
-/// Define uma lista com os nomes das cores que estarão disponíveis.
-$available-colors: map-keys($palette) !default;
-/// Define a tonalidade das cores que estarão disponíveis.
-$available-colors-hue: "500" !default;
+/// Define uma lista com os nomes das cores da paleta.
+$-colors-name: palette.get-colors-name() !default;
+/// Define a tonalidade das cores da paleta.
+$-colors-hue: "500" !default;
 /// Define os prefixos e parâmetros das cores.
-$color-prefixes-and-params: (
+$-prefixes-and-params: (
   "fg": "color",
   "bg": "background"
 ) !default;
 
-@each $color in $available-colors {
+@each $color-name in $-colors-name {
 
-  $hex: get-palette-color($color, $available-colors-hue);
+  $color-hex: palette.get-color($color-name, $-colors-hue);
 
-  @each $prefix, $param in $color-prefixes-and-params {
+  @each $prefix, $param in $-prefixes-and-params {
 
-    // .*-*
-    //
     // Exemplo: .fg-red
-    .#{$prefix}-#{$color} {
-      #{$param}: #{$hex} !important;
+    .#{$prefix}-#{$color-name} {
+      #{$param}: #{$color-hex} !important;
     }
   }
 }

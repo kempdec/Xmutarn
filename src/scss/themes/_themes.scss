@@ -1,71 +1,36 @@
-@import "global-variables";
-@import "functions";
+@use "sass:map";
+@use "./palette";
+@use "./theme";
+@use "../helpers/functions" as func;
 
-/// Define os prefixos e parâmetros das cores.
-$theme-prefixes-and-params: (
+/// Define os prefixos e parâmetros dos temas.
+$-prefixes-and-params: (
   "fg": "color",
   "bg": "background"
 ) !default;
 
-/// Cria o estilo de um tema.
-@mixin create-theme($type, $name, $props) {
+@each $name, $props in theme.$main {
 
-  // html[x-*-theme="*"]
-  //
-  // Exemplo: html[x-main-theme="light"]
-  //          html[x-featured-theme="red"]
-  //          html[x-accent-theme="red"]
-  html[x-#{$type}-theme="#{$name}"] {
-
-    @each $prop, $name in $props {
-
-      // --theme-*
-      //
-      // Exemplo: --theme-primary
-      --theme-#{$prop}: #{$name};
-    }
-  }
+  @include theme.create("main", $name, $props);
+  @include theme.create-classes($name, $props, theme.$main-default, $-prefixes-and-params);
 }
 
-/// Cria as classes de um tema.
-@mixin create-theme-classes($name, $props, $default) {
+/// Define as cores dos temas de destaque e realçe.
+$-theme-colors: map.remove(palette.$colors, "transparent", "black", "white") !default;
+/// Define o tema de destaque padrão.
+$-featured-theme-default: "purple" !default;
+/// Define o tema de realçe padrão.
+$-accent-theme-default: "light-blue" !default;
 
-  @if ($name == $default) {
+@each $color-name, $color-hues in $-theme-colors {
 
-    @each $prop, $color in $props {
+  $featured-hues: map.remove($color-hues, palette.$accent-color-hues...);
 
-      @each $prefix, $param in $theme-prefixes-and-params {
+  @include theme.create("featured", $color-name, $featured-hues);
+  @include theme.create-classes($color-name, $featured-hues, $-featured-theme-default, $-prefixes-and-params);
 
-        // .theme-*-*
-        //
-        // Exemplo: .theme-fg-primary
-        //          .theme-fg-50
-        .theme-#{$prefix}-#{$prop} {
-          #{$param}: var(--theme-#{$prop}, #{$color}) !important;
-        }
-      }
-    }
-  }
-}
+  $accent-hues: func.get-in-map($color-hues, palette.$accent-color-hues...);
 
-@each $name, $props in $main-themes {
-
-  @include create-theme("main", $name, $props);
-  @include create-theme-classes($name, $props, $main-theme-default);
-}
-
-/// Define um mapa as cores em temas que estarão disponíveis.
-$color-themes: map-remove($palette, "transparent", "black", "white") !default;
-
-@each $color, $hues in $color-themes {
-
-  $featured-hues: map-remove($hues, $accent-color-hues...);
-
-  @include create-theme("featured", $color, $featured-hues);
-  @include create-theme-classes($color, $featured-hues, $featured-theme-default);
-
-  $accent-hues: get-in-map($hues, $accent-color-hues...);
-
-  @include create-theme("accent", $color, $accent-hues);
-  @include create-theme-classes($color, $accent-hues, $accent-theme-default);
+  @include theme.create("accent", $color-name, $accent-hues);
+  @include theme.create-classes($color-name, $accent-hues, $-accent-theme-default, $-prefixes-and-params);
 }

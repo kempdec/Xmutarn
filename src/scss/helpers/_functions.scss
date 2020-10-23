@@ -1,0 +1,19 @@
+@use "sass:map";
+
+/// Obtém um novo mapa com as chaves no mapa fornecido.
+@function get-in-map($map, $keys...) {
+
+  $new-map: ();
+
+  @each $key in $keys {
+
+    $val: map.get($map, $key);
+
+    @if $val != null {
+
+      $new-map: map.merge($new-map, (#{$key}: $val));
+    }
+  }
+
+  @return $new-map;
+}

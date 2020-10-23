@@ -1,3 +1,21 @@
+@use "./themes/palette";
+@use "./themes/theme";
+
+@function get-main-theme-color($name) {
+
+  @return theme.get-main-color($name);
+}
+
+@function get-palette-color($name, $hue) {
+
+  @return palette.get-color($name, $hue);
+}
+
+@function is-accent-color-hue($hue) {
+
+  @return palette.is-accent-hue($hue);
+}
+
 // get-accent-theme-color
 //
 // Obtém o código hexadecimal da cor do tema de realçe com base na sua tonalidade na paleta.
