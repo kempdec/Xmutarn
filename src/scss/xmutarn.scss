@@ -6,3 +6,45 @@
 
 // Normalização.
 @use "./helpers/normalize";
+
+// Suporte a componentes e utilitários antigos.
+@import "global-variables";
+
+@import "functions";
+@import "maps";
+@import "variables";
+@import "mixins";
+@import "placeholders";
+
+@import "global";
+
+@import "components/container";
+@import "components/flex";
+@import "components/fonts";
+@import "components/typography";
+@import "components/border";
+@import "components/button";
+@import "components/input";
+@import "components/dropdown";
+@import "components/menu";
+@import "components/list";
+@import "components/toolbar";
+@import "components/card";
+@import "components/dialog";
+@import "components/navigation-drawer";
+@import "components/overlay";
+@import "components/toast";
+@import "components/avatar";
+
+@import "utils/border";
+@import "utils/clearfix";
+@import "utils/cursor";
+@import "utils/display";
+@import "utils/fixed";
+@import "utils/flex";
+@import "utils/float";
+@import "utils/position";
+@import "utils/shadow";
+@import "utils/sizing";
+@import "utils/spacing";
+@import "utils/typography";
