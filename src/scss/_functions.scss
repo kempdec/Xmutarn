@@ -1,6 +1,16 @@
 @use "./themes/palette";
 @use "./themes/theme";
 
+@function get-accent-theme-color($hue: "400") {
+
+  @return theme.get-accent-color("A" + $hue);
+}
+
+@function get-featured-theme-color($hue: "500") {
+
+  @return theme.get-featured-color($hue);
+}
+
 @function get-main-theme-color($name) {
 
   @return theme.get-main-color($name);
@@ -14,29 +24,6 @@
 @function is-accent-color-hue($hue) {
 
   @return palette.is-accent-hue($hue);
-}
-
-// get-accent-theme-color
-//
-// Obtém o código hexadecimal da cor do tema de realçe com base na sua tonalidade na paleta.
-@function get-accent-theme-color($hue: "A400") {
-  // Adiciona o prefixo das cores de realçe, caso ela não tenha.
-  @if (is-accent-color-hue($hue: $hue) == false) {
-    $hue: A#{$hue};
-  }
-
-  @return get-palette-color($name: $theme-accent-default-color, $hue: $hue);
-}
-
-// get-featured-theme-color
-//
-// Obtém o código hexadecimal da cor do tema destaque com base na sua tonalidade na paleta.
-@function get-featured-theme-color($hue: "500") {
-  @if (is-accent-color-hue($hue: $hue)) {
-    @error "A tonalidade '#{$hue} pertence a cores de realçe da paleta'.";
-  }
-
-  @return get-palette-color($name: $theme-featured-default-color, $hue: $hue);
 }
 
 // media-breakpoint-infix

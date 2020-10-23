@@ -318,19 +318,3 @@ $z-index-navigation-drawer: 60 !default;
 $z-index-dialog: 70 !default;
 $z-index-menu: 80 !default;
 $z-index-toaster: 90 !default;
-
-// Global file
-//
-// Esta seção vem por último para uso das funções que necessitam de variáveis acima.
-
-// Define a cor dos elementos de âncora.
-$global-anchor-color: var(--theme-color-500, get-featured-theme-color()) !default;
-// Define a cor dos elementos de âncora com as pseudo-classes "hover" ou "active".
-$global-anchor-hover-color: var(--theme-color-300, get-featured-theme-color($hue: "300")) !default;
-// Define a decoração de texto dos elementos de âncora.
-$global-anchor-text-decoration: none !default;
-
-// Define a cor da seleção dos elementos.
-$global-selection-color: white !default;
-// Define a cor de fundo da seleção dos elementos.
-$global-selection-background-color: var(--theme-color-A400, get-accent-theme-color()) !default;

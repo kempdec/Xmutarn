@@ -4,8 +4,9 @@
 @use "./themes/colors";
 @use "./themes/themes";
 
-// Normalização.
+// Normalização e globalização.
 @use "./helpers/normalize";
+@use "./helpers/global";
 
 // Suporte a componentes e utilitários antigos.
 @import "global-variables";
@@ -15,8 +16,6 @@
 @import "variables";
 @import "mixins";
 @import "placeholders";
-
-@import "global";
 
 @import "components/container";
 @import "components/flex";
