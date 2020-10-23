@@ -3,7 +3,7 @@ import { parallel, series, task, watch } from "gulp";
 
 import pkg from "./package.json";
 import {
-  CssFileBuilder, Dependency, DocsFileBuilder, DocsLibsFileBuilder, JsFileBuilder, NodeDependency
+  CssFileBuilder, Dependency, DocsFileBuilder, DocsLibsFileBuilder, JsFileBuilder
 } from "./scripts/gulp";
 
 /** O cabeçalho dos arquivos do projeto. */
@@ -27,7 +27,6 @@ task("watchDocs", () => watch("src/docs/**/*", series("docs")));
 const docsDependencies = [
 
   new Dependency("xmutarn", "dist/**/*")
-
 ];
 const docsLibs = new DocsLibsFileBuilder(docsDependencies, "docs/assets/lib");
 const delDocsLibs = () => docsLibs.deleteDestPath();

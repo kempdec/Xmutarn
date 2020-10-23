@@ -6,6 +6,8 @@ import sourcemaps from "gulp-sourcemaps";
 import { dest, src } from "gulp";
 import { FileBuilder } from "./FileBuilder";
 
+(<any>sass).compiler = require("sass");
+
 /** Responsável pela construção de arquivos CSS do projeto. */
 export class CssFileBuilder extends FileBuilder<string> {
 

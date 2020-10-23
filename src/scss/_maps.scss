@@ -152,10 +152,10 @@ $typographies: (
 
 // Define as espessuras de fonte de `.typo-weight-*`.
 $typography-font-weights: (
-  thin: 100,
-  light: 300,
-  regular: 400,
-  medium: 500,
-  bold: 700,
-  black: 900
+  "thin": 100,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "black": 900
 ) !default;
