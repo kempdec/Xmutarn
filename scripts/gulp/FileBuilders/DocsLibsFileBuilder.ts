@@ -1,4 +1,4 @@
-import { Dependency } from "./Dependency";
+import { Dependency } from "../Dependencies";
 import { SimpleFileBuilder } from "./SimpleFileBuilder";
 
 /** Responsável pela cópia das bibliotecas e dependências da documentação do projeto. */
