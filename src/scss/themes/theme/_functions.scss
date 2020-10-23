@@ -1,10 +1,11 @@
 @use "sass:map";
-@use "./maps" as theme;
+@use "./maps" as theme-map;
+@use "./variables" as theme-var;
 
 /// Obtém a cor da propriedade especificada do tema principal.
 @function get-main-color($prop-name) {
 
-  $prop: map.get(theme.$main, theme.$main-default, $prop-name);
+  $prop: map.get(theme-map.$main, theme-var.$main-default, $prop-name);
 
   @if $prop == null {
 
