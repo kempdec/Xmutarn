@@ -61,19 +61,23 @@ html(lang="pt-br" prefix="og: http://ogp.me/ns#")
     block content
 
     aside#i-doc-drawer.navigation-drawer(x-nav-drawer)
-      nav.list
+      nav.list.list_padded
         header
           h1.typo-h3.typo-weight-light.typo-align-center
             | Navegar
         .border-divider.margin-bottom-sm
+
         a.list--item(href="docs/getting-started.html")
           | Começando
         a.list--item(href="docs/introduction.html")
           | Introdução
+
         p.padding-x-md.typo-body-2.typo-weight-bold
           | Temas e cores
         a.list--item(href="docs/colors.html")
           | Cores
+        a.list--item(href="docs/themes.html")
+          | Temas
 
     block scripts
       //- Arquivos de script.
