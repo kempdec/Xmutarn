@@ -23,28 +23,43 @@ export class CssFileBuilder extends FileBuilder<string> {
     super(srcFilePath, destPath);
   }
 
+  /**
+   * Constrói os arquivos CSS do projeto.
+   *
+   * @param isMinified Um sinalizador indicando se a construção do arquivo é minificada.
+   */
+  private buildCss(isMinified: boolean): NodeJS.ReadWriteStream {
+
+    const outputStyle = isMinified ? "compressed" : "expanded";
+
+    let stream =
+      src(this.src)
+        .pipe(sourcemaps.init())
+        .pipe(sass({ outputStyle: outputStyle }));
+
+    if (isMinified) {
+
+      stream = stream.pipe(rename(path => path.basename += ".min"));
+    }
+
+    stream =
+      stream.pipe(autoprefixer())
+        .pipe(header(this.fileHeader))
+        .pipe(sourcemaps.write("."))
+        .pipe(dest(this.destPath));
+
+    return stream;
+  }
+
   /** Constrói os arquivos CSS expandidos do projeto. */
   public buildExpanded(): NodeJS.ReadWriteStream {
 
-    return src(this.src)
-      .pipe(sourcemaps.init())
-      .pipe(sass({ outputStyle: "expanded" }))
-      .pipe(autoprefixer())
-      .pipe(header(this.fileHeader))
-      .pipe(sourcemaps.write("."))
-      .pipe(dest(this.destPath));
+    return this.buildCss(false);
   }
 
   /** Constrói os arquivos CSS minificados do projeto. */
   public buildMinified(): NodeJS.ReadWriteStream {
 
-    return src(this.src)
-      .pipe(sourcemaps.init())
-      .pipe(sass({ outputStyle: "compressed" }))
-      .pipe(rename(path => path.basename += ".min"))
-      .pipe(autoprefixer())
-      .pipe(header(this.fileHeader))
-      .pipe(sourcemaps.write("."))
-      .pipe(dest(this.destPath));
+    return this.buildCss(true);
   }
 }
