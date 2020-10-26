@@ -1,6 +1,7 @@
 import browserify from "browserify";
 import buffer from "vinyl-buffer";
 import header from "gulp-header";
+import rename from "gulp-rename";
 import source from "vinyl-source-stream";
 import sourcemaps from "gulp-sourcemaps";
 import terser from "gulp-terser";
@@ -20,7 +21,8 @@ export class JsFileBuilder extends FileBuilder<string[]> {
      * @param standalone O módulo autônomo do arquivo construído.
      * @param fileHeader O cabeçalho do arquivo construído.
      */
-  constructor(srcFilePath: string[], destPath: string, readonly fileName: string, readonly standalone = "", readonly fileHeader = "") {
+  constructor(srcFilePath: string[], destPath: string, readonly fileName: string, readonly standalone = "",
+    readonly fileHeader = "") {
 
     super(srcFilePath, destPath);
   }
@@ -28,40 +30,57 @@ export class JsFileBuilder extends FileBuilder<string[]> {
   /**
    * Cria e retorna o bundle dos arquivos JS do projeto.
    *
+   * @param entries O caminho dos arquivos de entrada para construção.
    * @param standalone O módulo autônomo do arquivo construído.
    */
-  private createBundle(standalone: string): NodeJS.ReadableStream {
+  private createBundle(entries: string | string[], standalone: string): NodeJS.ReadableStream {
 
     const browserifyObj = browserify({
       basedir: ".",
-      entries: this.src,
+      entries: entries,
       standalone: standalone
     });
 
     return browserifyObj.plugin(tsify).bundle();
   }
 
+  /**
+   * Constrói os arquivos JS do projeto.
+   *
+   * @param isMinified Um sinalizador indicando se a construção do arquivo é minificada.
+   */
+  private buildJs(isMinified: boolean): NodeJS.ReadWriteStream {
+
+    const extName = isMinified ? ".min.js" : ".js";
+
+    let stream =
+      this.createBundle(this.src, this.standalone)
+        .pipe(source(this.fileName))
+        .pipe(buffer())
+        .pipe(rename({ extname: extName }))
+        .pipe(header(this.fileHeader));
+
+    if (isMinified) {
+
+      stream =
+        stream
+          .pipe(sourcemaps.init())
+          .pipe(terser())
+          .pipe(sourcemaps.write("."));
+    }
+
+    return stream.pipe(dest(this.destPath));
+  }
+
   /** Constrói o arquivo JS expandido do projeto. */
   public buildExpanded(): NodeJS.ReadWriteStream {
 
-    const bundle = this.createBundle(this.standalone);
-
-    return bundle.pipe(source(`${this.fileName}.js`))
-      .pipe(header(this.fileHeader))
-      .pipe(dest(this.destPath));
+    return this.buildJs(false);
   }
 
   /** Constrói o arquivo JS minificado do projeto. */
   public buildMinified(): NodeJS.ReadWriteStream {
 
-    const bundle = this.createBundle(this.standalone);
-
-    return bundle.pipe(source(`${this.fileName}.min.js`))
-      .pipe(buffer())
-      .pipe(header(this.fileHeader))
-      .pipe(sourcemaps.init())
-      .pipe(terser())
-      .pipe(sourcemaps.write("."))
-      .pipe(dest(this.destPath));
+    return this.buildJs(true);
   }
 }
