@@ -10,7 +10,7 @@ import { dest } from "gulp";
 import { FileBuilder } from "./FileBuilder";
 
 /** Responsável pela construção de arquivos JS do projeto. */
-export class JsFileBuilder extends FileBuilder<string[]> {
+export class JsFileBuilder extends FileBuilder<string | string[]> {
 
   /**
      * Inicializa uma nova instância.
@@ -21,7 +21,7 @@ export class JsFileBuilder extends FileBuilder<string[]> {
      * @param standalone O módulo autônomo do arquivo construído.
      * @param fileHeader O cabeçalho do arquivo construído.
      */
-  constructor(srcFilePath: string[], destPath: string, readonly fileName: string, readonly standalone = "",
+  constructor(srcFilePath: string | string[], destPath: string, readonly fileName: string, readonly standalone = "",
     readonly fileHeader = "") {
 
     super(srcFilePath, destPath);

@@ -11,6 +11,8 @@ export class NodeDependency extends Dependency {
    */
   constructor(name: string, filePath: string) {
 
-    super(name, `node_modules/${name}/${filePath}`);
+    const nodeFilePath = `node_modules/${name}/${filePath}`;
+
+    super(name, nodeFilePath);
   }
 }
