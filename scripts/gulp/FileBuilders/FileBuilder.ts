@@ -1,9 +1,9 @@
-import { SimpleFileBuilder } from "./SimpleFileBuilder";
+import { FileController } from "..";
 
 const merge = require("merge-stream");
 
 /** Fornece abstração para a construção de arquivos do projeto. */
-export abstract class FileBuilder<T> extends SimpleFileBuilder<T> {
+export abstract class FileBuilder<T> extends FileController<T> {
 
   /** Constrói os arquivos expandidos do projeto. */
   public abstract buildExpanded(): NodeJS.ReadWriteStream;
