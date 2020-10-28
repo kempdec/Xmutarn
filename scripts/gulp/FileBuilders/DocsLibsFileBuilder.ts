@@ -1,4 +1,4 @@
-import { Dependency } from "../Dependencies";
+import { Dependency } from "..";
 import { SimpleFileBuilder } from "./SimpleFileBuilder";
 
 const merge = require("merge-stream");

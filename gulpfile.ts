@@ -3,8 +3,9 @@ import { parallel, series, task, watch } from "gulp";
 
 import pkg from "./package.json";
 import {
-  CssFileBuilder, Dependency, DocsFileBuilder, DocsLibsFileBuilder, JsFileBuilder
+  CssFileBuilder, Dependency, DocsLibsFileBuilder, JsFileBuilder
 } from "./scripts/gulp";
+import { PugFileController } from "./scripts/gulp/controllers";
 
 /** O cabeçalho dos arquivos do projeto. */
 const fileHeader = [
@@ -17,8 +18,8 @@ const fileHeader = [
 
 ].join(" | ");
 
-const docs = new DocsFileBuilder("src/docs/**/*.pug", "docs", "docs/**/*.html");
-const delDocs = () => docs.deleteDestPath();
+const docs = new PugFileController("src/docs/**/*.pug", "docs", "docs/**/*.html");
+const delDocs = () => docs.deleteDestFiles();
 const buildDocs = () => docs.build();
 
 task("docs", series(delDocs, buildDocs));
