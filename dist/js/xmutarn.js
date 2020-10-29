@@ -390,6 +390,69 @@ exports.Toolbar = Toolbar_1.default;
 },{"./Component":1,"./Dialog":2,"./Input":3,"./NavigationDrawer":4,"./Overlay":5,"./Toast":6,"./Toolbar":7}],9:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MainThemeController = void 0;
+const ThemeController_1 = require("./ThemeController");
+class MainThemeController extends ThemeController_1.ThemeController {
+    constructor() {
+        super("main");
+    }
+    get current() {
+        return super.current;
+    }
+    update(name) {
+        super.update(name);
+    }
+}
+exports.MainThemeController = MainThemeController;
+
+},{"./ThemeController":10}],10:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThemeController = void 0;
+class ThemeController {
+    constructor(type) {
+        this.html = document.querySelector("html");
+        this.attrName = `x-${type}-theme`;
+    }
+    get current() {
+        const attr = this.html.getAttribute(this.attrName);
+        return attr;
+    }
+    update(name) {
+        this.html.setAttribute(this.attrName, name);
+    }
+}
+exports.ThemeController = ThemeController;
+
+},{}],11:[function(require,module,exports){
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./ThemeController"), exports);
+__exportStar(require("./MainThemeController"), exports);
+
+},{"./MainThemeController":9,"./ThemeController":10}],12:[function(require,module,exports){
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Toolbar = exports.Toast = exports.Overlay = exports.NavigationDrawer = exports.Input = exports.Dialog = void 0;
 const components_1 = require("./components");
 Object.defineProperty(exports, "Dialog", { enumerable: true, get: function () { return components_1.Dialog; } });
@@ -398,6 +461,8 @@ Object.defineProperty(exports, "NavigationDrawer", { enumerable: true, get: func
 Object.defineProperty(exports, "Overlay", { enumerable: true, get: function () { return components_1.Overlay; } });
 Object.defineProperty(exports, "Toast", { enumerable: true, get: function () { return components_1.Toast; } });
 Object.defineProperty(exports, "Toolbar", { enumerable: true, get: function () { return components_1.Toolbar; } });
+__exportStar(require("./controllers"), exports);
+__exportStar(require("./models"), exports);
 document.addEventListener("DOMContentLoaded", () => {
     components_1.Dialog.initFromHtmlAttribute("x-dialog");
     components_1.Input.initFromHtmlAttribute("x-input", "x-input-label");
@@ -405,5 +470,30 @@ document.addEventListener("DOMContentLoaded", () => {
     components_1.Toolbar.initFromHtmlAttribute("x-toolbar");
 });
 
-},{"./components":8}]},{},[9])(9)
+},{"./components":8,"./controllers":11,"./models":14}],13:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MainTheme = void 0;
+var MainTheme;
+(function (MainTheme) {
+    MainTheme["light"] = "light";
+    MainTheme["dark"] = "dark";
+})(MainTheme = exports.MainTheme || (exports.MainTheme = {}));
+
+},{}],14:[function(require,module,exports){
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./MainTheme"), exports);
+
+},{"./MainTheme":13}]},{},[12])(12)
 });

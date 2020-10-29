@@ -16,6 +16,9 @@ export {
   Toolbar
 };
 
+export * from "./controllers";
+export * from "./models";
+
 document.addEventListener("DOMContentLoaded", () => {
 
   Dialog.initFromHtmlAttribute("x-dialog");

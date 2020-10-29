@@ -1,6 +1,6 @@
 import { parallel, series, task, watch } from "gulp";
 import {
-  fileHeader, Library, LibFileController, PugFileBuilder, SassFileBuilder, TsFileBuilder
+  fileHeader, Library, LibFileController, NodeLibrary, PugFileBuilder, SassFileBuilder, TsFileBuilder
 } from "./scripts/gulp";
 
 // Construção da documentação do projeto.
@@ -14,7 +14,8 @@ task("watchDocs", () => watch("src/docs/**/*", series("docs")));
 // Cópia das bibliotecas usadas na documentação do projeto.
 const docsLibraries = [
 
-  new Library("xmutarn", "dist/**/*")
+  new Library("xmutarn", "dist/**/*"),
+  new NodeLibrary("js-cookie", "src/js.cookie.js")
 ];
 const docsLibs = new LibFileController(docsLibraries, "docs/assets/lib");
 const delDocsLibs = () => docsLibs.deleteDestFiles();

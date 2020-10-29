@@ -14,6 +14,57 @@ export {
   Toolbar
 };
 
+/** Fornece abstração para o controlador de um tema. */
+export abstract class ThemeController {
+
+  /** O elemento HTML. */
+  private readonly html: HTMLHtmlElement;
+
+  /** O nome do atributo do tema. */
+  public readonly attrName: string;
+
+  /**
+   * Inicializa uma nova instância.
+   *
+   * @param type O tipo de tema.
+   */
+  constructor(type: string);
+
+  /** O tema atual. */
+  public get current(): string;
+
+  /**
+   * Atualiza o tema.
+   *
+   * @param name O nome do tema.
+   */
+  public update(name: string): void;
+}
+
+/** Responsável pelo gerenciamento de um tema principal. */
+export class MainThemeController extends ThemeController {
+
+  /** Inicializa uma nova instância. */
+  constructor();
+
+  /**
+   * Atualiza o tema.
+   *
+   * @param name O nome do tema.
+   */
+  public update(name: MainTheme | string): void;
+}
+
+/** Representa um tema principal. */
+export enum MainTheme {
+
+  /** Claro. */
+  light = "light",
+
+  /** Escuro. */
+  dark = "dark"
+}
+
 /** Responsável pelo gerenciamento de um componente. */
 declare abstract class Component {
   /** Obtém o elemento do componente. */
