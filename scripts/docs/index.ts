@@ -1,15 +1,17 @@
 /// <reference path="../../src/ts/index.d.ts" />
 
-const theme = new X.MainThemeController();
-const currentTheme = Cookies.get(theme.attrName);
+const mainTheme = new X.MainThemeController();
+const currentMainTheme = Cookies.get(mainTheme.attrName);
 
-theme.update(currentTheme);
+mainTheme.update(currentMainTheme);
 
 const changeMainThemeBtn = document.getElementById("i-change-main-theme");
 
 changeMainThemeBtn.addEventListener("click", () => {
 
-  theme.update(theme.current == X.MainTheme.light ? X.MainTheme.dark : X.MainTheme.light);
+  const newMainTheme = mainTheme.current == X.MainTheme.light ? X.MainTheme.dark : X.MainTheme.light;
 
-  Cookies.set(theme.attrName, theme.current, { expires: 60 });
+  mainTheme.update(newMainTheme);
+
+  Cookies.set(mainTheme.attrName, mainTheme.current, { expires: 60 });
 });

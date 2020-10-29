@@ -390,6 +390,42 @@ exports.Toolbar = Toolbar_1.default;
 },{"./Component":1,"./Dialog":2,"./Input":3,"./NavigationDrawer":4,"./Overlay":5,"./Toast":6,"./Toolbar":7}],9:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccentThemeController = void 0;
+const ThemeController_1 = require("./ThemeController");
+class AccentThemeController extends ThemeController_1.ThemeController {
+    constructor() {
+        super("accent");
+    }
+    get current() {
+        return super.current;
+    }
+    update(name) {
+        super.update(name);
+    }
+}
+exports.AccentThemeController = AccentThemeController;
+
+},{"./ThemeController":12}],10:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FeaturedThemeController = void 0;
+const ThemeController_1 = require("./ThemeController");
+class FeaturedThemeController extends ThemeController_1.ThemeController {
+    constructor() {
+        super("featured");
+    }
+    get current() {
+        return super.current;
+    }
+    update(name) {
+        super.update(name);
+    }
+}
+exports.FeaturedThemeController = FeaturedThemeController;
+
+},{"./ThemeController":12}],11:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.MainThemeController = void 0;
 const ThemeController_1 = require("./ThemeController");
 class MainThemeController extends ThemeController_1.ThemeController {
@@ -405,7 +441,7 @@ class MainThemeController extends ThemeController_1.ThemeController {
 }
 exports.MainThemeController = MainThemeController;
 
-},{"./ThemeController":10}],10:[function(require,module,exports){
+},{"./ThemeController":12}],12:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ThemeController = void 0;
@@ -424,7 +460,7 @@ class ThemeController {
 }
 exports.ThemeController = ThemeController;
 
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -437,10 +473,12 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./ThemeController"), exports);
+__exportStar(require("./AccentThemeController"), exports);
+__exportStar(require("./FeaturedThemeController"), exports);
 __exportStar(require("./MainThemeController"), exports);
+__exportStar(require("./ThemeController"), exports);
 
-},{"./MainThemeController":9,"./ThemeController":10}],12:[function(require,module,exports){
+},{"./AccentThemeController":9,"./FeaturedThemeController":10,"./MainThemeController":11,"./ThemeController":12}],14:[function(require,module,exports){
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -470,7 +508,58 @@ document.addEventListener("DOMContentLoaded", () => {
     components_1.Toolbar.initFromHtmlAttribute("x-toolbar");
 });
 
-},{"./components":8,"./controllers":11,"./models":14}],13:[function(require,module,exports){
+},{"./components":8,"./controllers":13,"./models":18}],15:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccentTheme = void 0;
+var AccentTheme;
+(function (AccentTheme) {
+    AccentTheme["red"] = "red";
+    AccentTheme["pink"] = "pink";
+    AccentTheme["purple"] = "purple";
+    AccentTheme["deep-purple"] = "deep-purple";
+    AccentTheme["indigo"] = "indigo";
+    AccentTheme["blue"] = "blue";
+    AccentTheme["light-blue"] = "light-blue";
+    AccentTheme["cyan"] = "cyan";
+    AccentTheme["teal"] = "teal";
+    AccentTheme["green"] = "green";
+    AccentTheme["light-green"] = "light-green";
+    AccentTheme["lime"] = "lime";
+    AccentTheme["yellow"] = "yellow";
+    AccentTheme["amber"] = "amber";
+    AccentTheme["orange"] = "orange";
+    AccentTheme["deep-orange"] = "deep-orange";
+})(AccentTheme = exports.AccentTheme || (exports.AccentTheme = {}));
+
+},{}],16:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FeaturedTheme = void 0;
+var FeaturedTheme;
+(function (FeaturedTheme) {
+    FeaturedTheme["red"] = "red";
+    FeaturedTheme["pink"] = "pink";
+    FeaturedTheme["purple"] = "purple";
+    FeaturedTheme["deep-purple"] = "deep-purple";
+    FeaturedTheme["indigo"] = "indigo";
+    FeaturedTheme["blue"] = "blue";
+    FeaturedTheme["light-blue"] = "light-blue";
+    FeaturedTheme["cyan"] = "cyan";
+    FeaturedTheme["teal"] = "teal";
+    FeaturedTheme["green"] = "green";
+    FeaturedTheme["light-green"] = "light-green";
+    FeaturedTheme["lime"] = "lime";
+    FeaturedTheme["yellow"] = "yellow";
+    FeaturedTheme["amber"] = "amber";
+    FeaturedTheme["orange"] = "orange";
+    FeaturedTheme["deep-orange"] = "deep-orange";
+    FeaturedTheme["brown"] = "brown";
+    FeaturedTheme["grey"] = "grey";
+    FeaturedTheme["blue-grey"] = "blue-grey";
+})(FeaturedTheme = exports.FeaturedTheme || (exports.FeaturedTheme = {}));
+
+},{}],17:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MainTheme = void 0;
@@ -480,7 +569,7 @@ var MainTheme;
     MainTheme["dark"] = "dark";
 })(MainTheme = exports.MainTheme || (exports.MainTheme = {}));
 
-},{}],14:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -493,7 +582,9 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./AccentTheme"), exports);
+__exportStar(require("./FeaturedTheme"), exports);
 __exportStar(require("./MainTheme"), exports);
 
-},{"./MainTheme":13}]},{},[12])(12)
+},{"./AccentTheme":15,"./FeaturedTheme":16,"./MainTheme":17}]},{},[14])(14)
 });
