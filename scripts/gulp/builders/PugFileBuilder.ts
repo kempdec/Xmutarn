@@ -1,9 +1,9 @@
 import pug from "gulp-pug";
 import { dest, src } from "gulp";
-import { FileController } from "./FileController";
+import { FileController } from "../controllers";
 
 /** Responsável pela construção de arquivos HTML com PUG. */
-export class PugFileController extends FileController<string> {
+export class PugFileBuilder extends FileController<string> {
 
   /** Constrói os arquivos HTML. */
   public build(): NodeJS.ReadWriteStream {

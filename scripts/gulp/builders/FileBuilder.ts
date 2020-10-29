@@ -1,4 +1,4 @@
-import { FileController } from "..";
+import { FileController } from "../controllers";
 
 const merge = require("merge-stream");
 

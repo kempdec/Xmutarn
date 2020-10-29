@@ -1,7 +1,4 @@
 {
-  "files": [
-    "src/ts/index.ts"
-  ],
   "compilerOptions": {
     "esModuleInterop": true,
     "moduleResolution": "node",

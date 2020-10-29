@@ -8,8 +8,8 @@ import { FileBuilder } from "./FileBuilder";
 
 (<any>sass).compiler = require("sass");
 
-/** Responsável pela construção de arquivos CSS do projeto. */
-export class CssFileBuilder extends FileBuilder<string> {
+/** Responsável pela construção de arquivos CSS com SASS. */
+export class SassFileBuilder extends FileBuilder<string> {
 
   /**
    * Inicializa uma nova instância.
@@ -24,7 +24,7 @@ export class CssFileBuilder extends FileBuilder<string> {
   }
 
   /**
-   * Constrói os arquivos CSS do projeto.
+   * Constrói os arquivos CSS.
    *
    * @param isMinified Um sinalizador indicando se a construção do arquivo é minificada.
    */
@@ -51,13 +51,13 @@ export class CssFileBuilder extends FileBuilder<string> {
     return stream;
   }
 
-  /** Constrói os arquivos CSS expandidos do projeto. */
+  /** Constrói os arquivos CSS expandidos. */
   public buildExpanded(): NodeJS.ReadWriteStream {
 
     return this.buildCss(false);
   }
 
-  /** Constrói os arquivos CSS minificados do projeto. */
+  /** Constrói os arquivos CSS minificados. */
   public buildMinified(): NodeJS.ReadWriteStream {
 
     return this.buildCss(true);

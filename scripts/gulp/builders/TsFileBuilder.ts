@@ -9,8 +9,8 @@ import tsify from "tsify";
 import { dest } from "gulp";
 import { FileBuilder } from "./FileBuilder";
 
-/** Responsável pela construção de arquivos JS do projeto. */
-export class JsFileBuilder extends FileBuilder<string | string[]> {
+/** Responsável pela construção de arquivos JavaScript com TypeScript. */
+export class TsFileBuilder extends FileBuilder<string | string[]> {
 
   /**
      * Inicializa uma nova instância.
@@ -28,7 +28,7 @@ export class JsFileBuilder extends FileBuilder<string | string[]> {
   }
 
   /**
-   * Cria e retorna o bundle dos arquivos JS do projeto.
+   * Cria e retorna o bundle dos arquivos JS.
    *
    * @param entries O caminho dos arquivos de entrada para construção.
    * @param standalone O módulo autônomo do arquivo construído.
@@ -45,7 +45,7 @@ export class JsFileBuilder extends FileBuilder<string | string[]> {
   }
 
   /**
-   * Constrói os arquivos JS do projeto.
+   * Constrói os arquivos JS.
    *
    * @param isMinified Um sinalizador indicando se a construção do arquivo é minificada.
    */
@@ -72,13 +72,13 @@ export class JsFileBuilder extends FileBuilder<string | string[]> {
     return stream.pipe(dest(this.destPath));
   }
 
-  /** Constrói o arquivo JS expandido do projeto. */
+  /** Constrói o arquivo JS expandido. */
   public buildExpanded(): NodeJS.ReadWriteStream {
 
     return this.buildJs(false);
   }
 
-  /** Constrói o arquivo JS minificado do projeto. */
+  /** Constrói o arquivo JS minificado. */
   public buildMinified(): NodeJS.ReadWriteStream {
 
     return this.buildJs(true);
