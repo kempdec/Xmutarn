@@ -6,21 +6,7 @@
   }
 }
 
-@mixin media-breakpoint-up($breakpoint, $breakpoints-map: $media-breakpoints) {
-  @if (map-has-key($map: $breakpoints-map, $key: $breakpoint) == false) {
-    @error "Não foi possível encontrar o breakpoint '#{$breakpoint}'.";
-  }
-
-  @if ($breakpoint != xs) {
-    @media (min-width: map-get($map: $breakpoints-map, $key: $breakpoint)) {
-      @content;
-    }
-  } @else {
-    @content;
-  }
-}
-
-@mixin media-breakpoint-down($breakpoint, $breakpoints-map: $media-breakpoints) {
+@mixin media-breakpoint-down($breakpoint, $breakpoints-map: $-media-breakpoints) {
   @if (map-has-key($map: $breakpoints-map, $key: $breakpoint) == false) {
     @error "Não foi possível encontrar o breakpoint '#{$breakpoint}'.";
   }

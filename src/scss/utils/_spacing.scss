@@ -1,6 +1,8 @@
-@each $breakpoint in map-keys($map: $media-breakpoints) {
-  @include media-breakpoint-up($breakpoint: $breakpoint) {
-    $infix: media-breakpoint-infix($breakpoint: $breakpoint);
+@use "../helpers/breakpoint";
+
+@each $breakpoint in map-keys($map: breakpoint.$media) {
+  @include breakpoint.media-up($breakpoint: $breakpoint) {
+    $infix: breakpoint.media-infix($breakpoint: $breakpoint);
 
     @each $size, $length in $spacings {
       @each $property in (margin, padding) {

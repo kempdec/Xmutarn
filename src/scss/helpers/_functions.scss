@@ -1,4 +1,7 @@
+@use "sass:list";
 @use "sass:map";
+@use "sass:math";
+@use "sass:meta";
 
 /// Obtém um novo mapa com as chaves no mapa fornecido.
 @function get-in-map($map, $keys...) {
@@ -16,4 +19,52 @@
   }
 
   @return $new-map;
+}
+
+/// Converte as unidades de medida em pixels da lista para "rem" ou "em".
+@function px-to($list, $unit, $font-size: 16px) {
+
+  @if meta.type-of($list) != list and meta.type-of($list) != number {
+
+    @error "O primeiro argumento deve ser do tipo 'list' ou 'number'.";
+  }
+
+  $is-unit-rem-em: $unit == "rem" or $unit == "em";
+
+  @if $is-unit-rem-em == false {
+
+    @error "O segundo argumento aceita apenas os valores 'rem' e 'em'.";
+  }
+
+  @if math.unit($font-size) != px {
+
+    @error "O terceiro argumento aceita apenas a unidade de medida em pixels.";
+  }
+
+  $output-list: null;
+  $unit-multiplier: if($unit == rem, 1rem, 1em);
+
+  @each $val in $list {
+
+    @if meta.type-of($val) == number and math.unit($val) == px and $is-unit-rem-em {
+
+      $val: $val / $font-size * $unit-multiplier;
+    }
+
+    $output-list: list.append($output-list, $val);
+  }
+
+  @return $output-list;
+}
+
+/// Converte as unidades de medida em pixels da lista para "em".
+@function px-to-em($list, $font-size: 16px) {
+
+  @return px-to($list, "em", $font-size);
+}
+
+/// Converte as unidades de medida em pixels da lista para "rem".
+@function px-to-rem($list, $font-size: 16px) {
+
+  @return px-to($list, "rem", $font-size);
 }

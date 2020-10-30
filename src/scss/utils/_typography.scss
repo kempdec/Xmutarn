@@ -1,3 +1,5 @@
+@use "../helpers/breakpoint";
+
 .typo-style-italic {
   font-style: italic !important;
 }
@@ -23,10 +25,10 @@
   }
 }
 
-@each $breakpoint in map-keys($map: $media-breakpoints) {
-  $infix: media-breakpoint-infix($breakpoint: $breakpoint);
+@each $breakpoint in map-keys($map: breakpoint.$media) {
+  $infix: breakpoint.media-infix($breakpoint: $breakpoint);
 
-  @include media-breakpoint-up($breakpoint: $breakpoint) {
+  @include breakpoint.media-up($breakpoint: $breakpoint) {
     @each $align in (left right center justify) {
       @if ($align != justify or $align == justify and $infix == "") {
 
