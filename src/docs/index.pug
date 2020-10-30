@@ -4,7 +4,7 @@ block variables
   - const appBaseAddress = ".";
 
 block pageTitle
-  title #{appName} - Framework front-end moderno, estiloso, fácil e produtivo
+  title #{appName} - Um framework front-end moderno e estiloso criado para a produtividade
 
 block content
   main
@@ -12,12 +12,14 @@ block content
       div.container.padding-bottom-lg.padding-bottom-xl__lg
         div.flex-row.flex-align-items-center
 
-          figure.flex-col-8.flex-col-6__lg.flex-order-1__lg.margin-x-auto.margin-top-sm
+          figure.flex-col-10.flex-col-8__sm.flex-col-6__lg.flex-order-1__lg.margin-x-auto.margin-top-sm.margin-top-lg__xl
             img.max-width-100(src="assets/img/xmutarn-logo-abstract.png" alt="Logotipo do Xmutarn com fundo abstrato")
 
-          article.flex-col-6__lg.typo-align-center
-            h1.typo-h2 #{appName}
-            p.typo-h5(style="opacity: .7;") Moderno, estiloso, fácil e produtivo.
+          article.flex-col-6__lg.typo-align-center.typo-align-left__lg
+            h1.typo-h2
+              | #{appName}
+            p.typo-h5(style="opacity: .8;")
+              | Um framework front-end moderno e estiloso criado para a produtividade.
             a.btn.btn_size-xl.typo-to-uppercase(href="docs/getting-started.html")
               | Começar
             p.typo-body-1
