@@ -471,38 +471,6 @@ html[x-accent-theme=light-blue] {
   --theme-A700: #0091EA;
 }
 
-.theme-fg-A100 {
-  color: var(--theme-A100, #80D8FF) !important;
-}
-
-.theme-bg-A100 {
-  background: var(--theme-A100, #80D8FF) !important;
-}
-
-.theme-fg-A200 {
-  color: var(--theme-A200, #40C4FF) !important;
-}
-
-.theme-bg-A200 {
-  background: var(--theme-A200, #40C4FF) !important;
-}
-
-.theme-fg-A400 {
-  color: var(--theme-A400, #00B0FF) !important;
-}
-
-.theme-bg-A400 {
-  background: var(--theme-A400, #00B0FF) !important;
-}
-
-.theme-fg-A700 {
-  color: var(--theme-A700, #0091EA) !important;
-}
-
-.theme-bg-A700 {
-  background: var(--theme-A700, #0091EA) !important;
-}
-
 html[x-featured-theme=cyan] {
   --theme-50: #E0F7FA;
   --theme-100: #B2EBF2;
@@ -641,6 +609,38 @@ html[x-accent-theme=amber] {
   --theme-A200: #FFD740;
   --theme-A400: #FFC400;
   --theme-A700: #FFAB00;
+}
+
+.theme-fg-A100 {
+  color: var(--theme-A100, #FFE57F) !important;
+}
+
+.theme-bg-A100 {
+  background: var(--theme-A100, #FFE57F) !important;
+}
+
+.theme-fg-A200 {
+  color: var(--theme-A200, #FFD740) !important;
+}
+
+.theme-bg-A200 {
+  background: var(--theme-A200, #FFD740) !important;
+}
+
+.theme-fg-A400 {
+  color: var(--theme-A400, #FFC400) !important;
+}
+
+.theme-bg-A400 {
+  background: var(--theme-A400, #FFC400) !important;
+}
+
+.theme-fg-A700 {
+  color: var(--theme-A700, #FFAB00) !important;
+}
+
+.theme-bg-A700 {
+  background: var(--theme-A700, #FFAB00) !important;
 }
 
 html[x-featured-theme=orange] {
@@ -1074,12 +1074,12 @@ html {
 
 ::-moz-selection {
   color: white;
-  background-color: var(--theme-A400, #00B0FF);
+  background-color: var(--theme-A400, #FFC400);
 }
 
 ::selection {
   color: white;
-  background-color: var(--theme-A400, #00B0FF);
+  background-color: var(--theme-A400, #FFC400);
 }
 
 a {
@@ -1367,7 +1367,7 @@ input[type=password]::-ms-reveal {
   background-color: var(--theme-color-500, #9C27B0);
 }
 .btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color).btn_color-accent {
-  background-color: var(--theme-color-A400, #00B0FF);
+  background-color: var(--theme-color-A400, #FFC400);
 }
 .btn:not([disabled]):not(.btn_disabled):hover::before {
   opacity: 0.12;
@@ -1411,10 +1411,10 @@ input[type=password]::-ms-reveal {
   background-color: var(--theme-color-500, #9C27B0);
 }
 .btn_flat:not([disabled]):not(.btn_disabled).btn_color-accent, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-accent, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-accent {
-  color: var(--theme-color-A400, #00B0FF);
+  color: var(--theme-color-A400, #FFC400);
 }
 .btn_flat:not([disabled]):not(.btn_disabled).btn_color-accent::before, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-accent::before, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-accent::before {
-  background-color: var(--theme-color-A400, #00B0FF);
+  background-color: var(--theme-color-A400, #FFC400);
 }
 .btn_outlined, .btn_outlined-color {
   border: 1px solid;
@@ -1426,7 +1426,7 @@ input[type=password]::-ms-reveal {
   border-color: var(--theme-color-500, #9C27B0);
 }
 .btn_outlined-color.btn_color-accent {
-  border-color: var(--theme-color-A400, #00B0FF);
+  border-color: var(--theme-color-A400, #FFC400);
 }
 .btn_size-xs {
   font-size: 0.625rem;
@@ -1852,7 +1852,7 @@ input[type=password]::-ms-reveal {
   background-color: var(--theme-color-700, #7B1FA2);
 }
 .toast_color-accent {
-  background-color: var(--theme-color-A400, #00B0FF);
+  background-color: var(--theme-color-A400, #FFC400);
 }
 .toast_color-success {
   background-color: #4CAF50;
