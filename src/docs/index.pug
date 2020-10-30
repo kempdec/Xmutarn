@@ -8,19 +8,19 @@ block pageTitle
 
 block content
   main
-    section.theme-bg-700
-      div.container.padding-bottom-lg.padding-bottom-xl__lg.theme-fg-primary
+    section.theme-bg-700.fg-white
+      div.container.padding-bottom-lg.padding-bottom-xl__lg
         div.flex-row.flex-align-items-center
 
           figure.flex-col-8.flex-col-6__lg.flex-order-1__lg.margin-x-auto.margin-top-sm
             img.max-width-100(src="assets/img/xmutarn-logo-abstract.png" alt="Logotipo do Xmutarn com fundo abstrato")
 
-          article.flex-col-6__lg.typo-align-center.fg-white
+          article.flex-col-6__lg.typo-align-center
             h1.typo-h2 #{appName}
             p.typo-h5(style="opacity: .7;") Moderno, estiloso, fácil e produtivo.
             a.btn.btn_size-xl.typo-to-uppercase(href="docs/getting-started.html")
               | Começar
-            p.typo-body-1.fg-white
+            p.typo-body-1
               | Versão: #{appVersion}
 
   section.padding-y-md.padding-y-xl__lg.theme-bg-background
@@ -30,7 +30,7 @@ block content
         article.flex-col-4__lg
           figure.display-flex.flex-justify-content-center
             span.fas.fa-code.fa-4x.theme-fg-500
-          h1.typo-h5.typo-align-center.theme-fg-primary
+          h1.typo-h5.typo-align-center
             | Semântico
           div.typo-body-1.typo-align-center.theme-fg-secondary
             p Completamente semântico. Não sacrifique seu código para aplicar seu estilo.
@@ -38,7 +38,7 @@ block content
         article.flex-col-4__lg
           figure.display-flex.flex-justify-content-center
             span.fas.fa-cubes.fa-4x.theme-fg-500
-          h1.typo-h5.typo-align-center.theme-fg-primary
+          h1.typo-h5.typo-align-center
             | Fácil de usar, fácil de aprender
           div.typo-body-1.typo-align-center.theme-fg-secondary
             p
@@ -47,16 +47,16 @@ block content
         article.flex-col-4__lg
           figure.display-flex.flex-justify-content-center
             span.fas.fa-bolt.fa-4x.theme-fg-500
-          h1.typo-h5.typo-align-center.theme-fg-primary
+          h1.typo-h5.typo-align-center
             | Produtivo
           div.typo-body-1.typo-align-center.theme-fg-secondary
             p Amamos a produtividade, assim como todos. "Snippets" hoje, "snippets" amanhã, "snippets" sempre.
 
-  footer.theme-fg-primary
+  footer
     div.container
       div.flex-row.flex-align-items-center.padding-md.typo-caption-1
         a.margin-right-md(href=appRepository target="_blank")
           | GitHub
-        a(href=`${appRepository}/blob/master/LICENSE` target="_blank")
+        a(href=`${appRepository}/blob/main/LICENSE` target="_blank")
           | MIT License
         span.margin-left-auto 2018-#{new Date().getFullYear()} &copy; Vinícius Lima. Todos os direitos reservados.

@@ -37,7 +37,7 @@ block content
           .card
               p.card--content.fg-purple
                 | Este é um cartão com um parágrafo em roxo.
-          pre
+          pre.theme-bg-card
             code.language-html
               | &lt;div class="card">
               |     &lt;p class="card--content fg-purple">
@@ -54,7 +54,7 @@ block content
             | .
           .card.padding-md.bg-purple.fg-white
             | Este é um cartão com o plano de fundo roxo.
-          pre
+          pre.theme-bg-card
             code.language-html
               | &lt;div class="card padding-md fg-white bg-purple">
               |     Este é um cartão com um plano de fundo roxo.
@@ -76,11 +76,11 @@ block content
                     | black
             .flex-col-6.flex-col-4__md.flex-col-3__lg.padding-0
                 .card.border-0
-                  .padding-md.bg-white
+                  .padding-md.fg-black.bg-white
                     | white
             .flex-col-6.flex-col-4__md.flex-col-3__lg.padding-0
-                .card.border-0
-                  .padding-md.bg-transparent
+                .card.border-0.border-radius-0
+                  .padding-md.fg-black.bg-transparent
                     | transparent
 
         section.display-flex.flex-justify-content-space-between.flex-direction-column.flex-direction-row__md.padding-md
