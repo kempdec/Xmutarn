@@ -27,7 +27,8 @@ task("docsLibs", series(delDocsLibs, buildDocsLibs));
 // Construção dos arquivos JS da documentação.
 const docsScriptsFiles = [
 
-  new TsFile("src/scripts/docs/shared/layout.ts", "shared/layout.js")
+  new TsFile("src/scripts/docs/shared/layout.ts", "shared/layout.js"),
+  new TsFile("src/scripts/docs/docs/theme.ts", "docs/theme.js")
 ];
 const docsScripts = new TsFileBuilder(docsScriptsFiles, "docs/assets/js");
 const delDocsScripts = () => docsScripts.deleteDestFiles();

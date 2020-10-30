@@ -7,7 +7,7 @@ block pageTitle
   title Temas • #{appName}
 
 block content
-  main.container.theme-fg-primary
+  main.container
     .flex-row
       .flex-col-10__lg.margin-x-auto
         header.typo-align-center.typo-align-left__sm
@@ -48,7 +48,7 @@ block content
             | pelo tipo de tema de sua preferência.
           p
             | Para aplicar na sua página o tema principal claro, o de destaque roxo e o de realçe azul-claro, seria usado:
-          pre
+          pre.theme-bg-card
             code.language-html
               | &lt;html x-main-theme="light"
               |       x-featured-theme="purple"
@@ -73,6 +73,10 @@ block content
             strong
               | light
             | " o padrão.
+          p
+            | Clique no botão abaixo para alternar entre os temas.
+          button#i-switch-main-theme.btn.margin-bottom-md
+            | Alternar temas
           .card.padding-x-lg.padding-y-md.theme-bg-A400
             p.theme-fg-primary
               | Este é um parágrafo com a cor "primary" do tema principal.
@@ -88,7 +92,7 @@ block content
               | Este é um parágrafo com a cor "background" do tema principal.
             p.theme-fg-card
               | Este é um parágrafo com a cor "card" do tema principal.
-          pre
+          pre.theme-bg-card
             code.language-html
               | &lt;card class="card padding-x-lg padding-y-md theme-bg-A400">
               |     &lt;p class="theme-fg-primary">
@@ -123,3 +127,6 @@ block content
         section.display-flex.flex-justify-content-space-between.flex-direction-column.flex-direction-row__md.padding-md
           a.btn.btn_outlined.btn_size-lg(href="docs/colors.html")
             | Anterior: Cores
+
+block scripts
+  script(defer src="assets/js/docs/theme.min.js")

@@ -31,12 +31,13 @@ html(lang="pt-br" prefix="og: http://ogp.me/ns#")
     link(rel="shortcut icon" href="assets/img/icon.png")
     link(rel="manifest" href="manifest.json")
 
-    block styles
-      //- Arquivos de estilo.
-      link(rel="stylesheet" href="assets/lib/xmutarn/css/xmutarn.min.css")
-      link(rel="stylesheet" href="https://unpkg.com/prismjs@1.22.0/themes/prism.css")
+    //- Arquivos de estilo.
+    link(rel="stylesheet" href="assets/lib/xmutarn/css/xmutarn.min.css")
+    link(rel="stylesheet" href="https://unpkg.com/prismjs@1.22.0/themes/prism-solarizedlight.css")
 
-  body.typo-use-default.theme-bg-background
+    block styles
+
+  body.typo-use-default.theme-bg-background.theme-fg-primary
 
     //- Barra de ferramentas.
     header.toolbar(x-toolbar)
@@ -79,11 +80,12 @@ html(lang="pt-br" prefix="og: http://ogp.me/ns#")
         a.list--item(href="docs/themes.html")
           | Temas
 
+    //- Arquivos de script.
+    script(src="assets/lib/xmutarn/js/xmutarn.min.js")
+    script(src="assets/lib/js-cookie/js.cookie.js")
+    script(defer src="assets/js/shared/layout.min.js")
+    script(defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous")
+    script(src="https://unpkg.com/prismjs@1.22.0/components/prism-core.min.js")
+    script(src="https://unpkg.com/prismjs@1.22.0/plugins/autoloader/prism-autoloader.min.js")
+
     block scripts
-      //- Arquivos de script.
-      script(src="assets/lib/xmutarn/js/xmutarn.min.js")
-      script(src="assets/lib/js-cookie/js.cookie.js")
-      script(defer src="assets/js/shared/layout.min.js")
-      script(defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous")
-      script(src="https://unpkg.com/prismjs@1.22.0/components/prism-core.min.js")
-      script(src="https://unpkg.com/prismjs@1.22.0/plugins/autoloader/prism-autoloader.min.js")
