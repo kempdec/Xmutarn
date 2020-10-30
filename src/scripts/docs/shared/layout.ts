@@ -1,4 +1,4 @@
-/// <reference path="../../src/ts/index.d.ts" />
+/// <reference path="../../../ts/index.d.ts" />
 
 const mainTheme = new X.MainThemeController();
 const currentMainTheme = Cookies.get(mainTheme.attrName);

@@ -1,4 +1,4 @@
-import pkg from "../../package.json";
+import pkg from "../package.json";
 
 /** O cabeçalho dos arquivos de distribuição. */
 export const fileHeader = [

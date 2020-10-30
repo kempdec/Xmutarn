@@ -8,37 +8,35 @@ import terser from "gulp-terser";
 import tsify from "tsify";
 import { dest } from "gulp";
 import { FileBuilder } from "./FileBuilder";
+import { TsFile } from "..";
+
+const merge = require("merge-stream");
 
 /** Responsável pela construção de arquivos JavaScript com TypeScript. */
-export class TsFileBuilder extends FileBuilder<string | string[]> {
+export class TsFileBuilder extends FileBuilder<TsFile[]> {
 
   /**
      * Inicializa uma nova instância.
      *
-     * @param srcFilePath Os caminhos dos arquivos fonte a serem construídos.
+     * @param srcFiles Os arquivos fonte a serem construídos.
      * @param destPath O caminho de destino dos arquivos construídos.
-     * @param fileName O nome do arquivo construído.
-     * @param standalone O módulo autônomo do arquivo construído.
-     * @param fileHeader O cabeçalho do arquivo construído.
      */
-  constructor(srcFilePath: string | string[], destPath: string, readonly fileName: string, readonly standalone = "",
-    readonly fileHeader = "") {
+  constructor(srcFiles: TsFile[], destPath: string) {
 
-    super(srcFilePath, destPath);
+    super(srcFiles, destPath);
   }
 
   /**
-   * Cria e retorna o bundle dos arquivos JS.
+   * Cria e retorna um bundle em JS.
    *
-   * @param entries O caminho dos arquivos de entrada para construção.
-   * @param standalone O módulo autônomo do arquivo construído.
+   * @param file O arquivo para criar o bundle.
    */
-  private createBundle(entries: string | string[], standalone: string): NodeJS.ReadableStream {
+  private createBundle(file: TsFile): NodeJS.ReadableStream {
 
     const browserifyObj = browserify({
       basedir: ".",
-      entries: entries,
-      standalone: standalone
+      entries: file.path,
+      standalone: file.standalone
     });
 
     return browserifyObj.plugin(tsify).bundle();
@@ -47,18 +45,19 @@ export class TsFileBuilder extends FileBuilder<string | string[]> {
   /**
    * Constrói os arquivos JS.
    *
+   * @param file O arquivo a ser construído.
    * @param isMinified Um sinalizador indicando se a construção do arquivo é minificada.
    */
-  private buildJs(isMinified: boolean): NodeJS.ReadWriteStream {
+  private buildJs(file: TsFile, isMinified: boolean): NodeJS.ReadWriteStream {
 
     const extName = isMinified ? ".min.js" : ".js";
 
     let stream =
-      this.createBundle(this.src, this.standalone)
-        .pipe(source(this.fileName))
+      this.createBundle(file)
+        .pipe(source(file.name))
         .pipe(buffer())
         .pipe(rename({ extname: extName }))
-        .pipe(header(this.fileHeader));
+        .pipe(header(file.header));
 
     if (isMinified) {
 
@@ -72,15 +71,19 @@ export class TsFileBuilder extends FileBuilder<string | string[]> {
     return stream.pipe(dest(this.destPath));
   }
 
-  /** Constrói o arquivo JS expandido. */
+  /** Constrói os arquivos JS expandidos. */
   public buildExpanded(): NodeJS.ReadWriteStream {
 
-    return this.buildJs(false);
+    const streams = this.src.map(file => this.buildJs(file, false));
+
+    return merge(streams);
   }
 
-  /** Constrói o arquivo JS minificado. */
+  /** Constrói os arquivo JS minificados. */
   public buildMinified(): NodeJS.ReadWriteStream {
 
-    return this.buildJs(true);
+    const streams = this.src.map(file => this.buildJs(file, true));
+
+    return merge(streams);
   }
 }

@@ -1,7 +1,8 @@
 import { parallel, series, task, watch } from "gulp";
-import {
-  fileHeader, Library, LibFileController, NodeLibrary, PugFileBuilder, SassFileBuilder, TsFileBuilder
-} from "./scripts/gulp";
+import { PugFileBuilder, SassFileBuilder, TsFileBuilder } from "./gulp/builders";
+import { LibFileController } from "./gulp/controllers";
+import { TsFile, Library, NodeLibrary } from "./gulp/models";
+import { fileHeader } from "./gulp/header";
 
 // Construção da documentação do projeto.
 const docs = new PugFileBuilder("src/docs/**/*.pug", "docs", "docs/**/*.html");
@@ -19,9 +20,21 @@ const docsLibraries = [
 ];
 const docsLibs = new LibFileController(docsLibraries, "docs/assets/lib");
 const delDocsLibs = () => docsLibs.deleteDestFiles();
-const buildDocsLibs = () => docsLibs.copyToDestPath();
+const buildDocsLibs = () => docsLibs.copyAllToDestPath();
 
 task("docsLibs", series(delDocsLibs, buildDocsLibs));
+
+// Construção dos arquivos JS da documentação.
+const docsScriptsFiles = [
+
+  new TsFile("src/scripts/docs/shared/layout.ts", "shared/layout.js")
+];
+const docsScripts = new TsFileBuilder(docsScriptsFiles, "docs/assets/js");
+const delDocsScripts = () => docsScripts.deleteDestFiles();
+const buildDocsScripts = () => docsScripts.buildMinified();
+
+task("docsScripts", series(delDocsScripts, buildDocsScripts));
+task("watchDocsScripts", () => watch("src/scripts/docs/**/*", series("docsScripts")));
 
 // Construção dos arquivos CSS de distribuição.
 const css = new SassFileBuilder("src/scss/xmutarn*.scss", "dist/css", fileHeader);
@@ -33,19 +46,15 @@ task("cssDocs", series("css", "docsLibs"));
 task("watchCss", () => watch("src/scss/**/*", series("cssDocs")));
 
 // Construção dos arquivos JS de distribuição.
-const js = new TsFileBuilder("src/ts/index.ts", "dist/js", "xmutarn", "X", fileHeader);
+const jsFiles = [
+
+  new TsFile("src/ts/index.ts", "xmutarn", "X", fileHeader)
+];
+const js = new TsFileBuilder(jsFiles, "dist/js");
 const delJs = () => js.deleteDestFiles();
 const buildJs = () => js.build();
 
 task("js", series(delJs, buildJs));
 task("jsDocs", series("js", "docsLibs"));
 
-// Construção dos arquivos JS da documentação.
-const scriptDocs = new TsFileBuilder(["scripts/docs/index.ts"], "docs/assets/js", "index");
-const delScriptDocs = () => scriptDocs.deleteDestFiles();
-const buildScriptDocs = () => scriptDocs.buildMinified();
-
-task("scriptDocs", series(delScriptDocs, buildScriptDocs));
-task("watchScriptDocs", () => watch("scripts/docs/**/*", series("scriptDocs")));
-
-task("default", series(parallel("css", "js", "docs"), "docsLibs"));
+task("default", parallel("docs", "docsScripts", series(parallel("css", "js"), "docsLibs")));
