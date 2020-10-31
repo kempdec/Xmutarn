@@ -158,16 +158,9 @@ $dropdown_active-pseudo-before-transform: rotate(135deg) !default;
 $flex-column-padding: px-to-rem($list: 0 15px) !default;
 // Define o número máximo de colunas do flexbox.
 $flex-columns: 12 !default;
-// Define a margem das linhas do flexbox.
-$flex-row-margin: px-to-rem($list: 0 -15px) !default;
 
 // Define a largura base da coluna do flexbox.
 $flex-base-column-width: 0% + 100 / $flex-columns !default;
-
-// Fonte
-
-// Define o caminho ou endereço URL da fonte "Roboto".
-$font-roboto-path-or-address: "../fonts" !default;
 
 // Gaveta de navegação
 

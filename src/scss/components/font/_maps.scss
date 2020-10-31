@@ -1,0 +1,86 @@
+/// Define as propriedades das fontes.
+$map: (
+  "100": (
+    "normal": (
+      "local-1": "Roboto Thin",
+      "local-2": "Roboto-Thin",
+      "url": "roboto/v18/KFOkCnqEu92Fr1MmgVxIIzI.woff2"
+    ),
+
+    "italic": (
+      "local-1": "Roboto Thin Italic",
+      "local-2": "Roboto-ThinItalic",
+      "url": "roboto/v18/KFOiCnqEu92Fr1Mu51QrEzAdLw.woff2"
+    )
+  ),
+
+  "300": (
+    "normal": (
+      "local-1": "Roboto Light",
+      "local-2": "Roboto-Light",
+      "url": "roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
+    ),
+
+    "italic": (
+      "local-1": "Roboto Light Italic",
+      "local-2": "Roboto-LightItalic",
+      "url": "roboto/v18/KFOjCnqEu92Fr1Mu51TjASc6CsQ.woff2"
+    )
+  ),
+
+  "400": (
+    "normal": (
+      "local-1": "Roboto",
+      "local-2": "Roboto-Regular",
+      "url": "roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2"
+    ),
+
+    "italic": (
+      "local-1": "Roboto Italic",
+      "local-2": "Roboto-Italic",
+      "url": "roboto/v18/KFOkCnqEu92Fr1Mu51xIIzI.woff2"
+    )
+  ),
+
+  "500": (
+    "normal": (
+      "local-1": "Roboto Medium",
+      "local-2": "Roboto-Medium",
+      "url": "roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"
+    ),
+
+    "italic": (
+      "local-1": "Roboto Medium Italic",
+      "local-2": "Roboto-MediumItalic",
+      "url": "roboto/v18/KFOjCnqEu92Fr1Mu51S7ACc6CsQ.woff2"
+    )
+  ),
+
+  "700": (
+    "normal": (
+      "local-1": "Roboto Bold",
+      "local-2": "Roboto-Bold",
+      "url": "roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4.woff2"
+    ),
+
+    "italic": (
+      "local-1": "Roboto Bold Italic",
+      "local-2": "Roboto-BoldItalic",
+      "url": "roboto/v18/KFOjCnqEu92Fr1Mu51TzBic6CsQ.woff2"
+    )
+  ),
+
+  "900": (
+    "normal": (
+      "local-1": "Roboto Black",
+      "local-2": "Roboto-Black",
+      "url": "roboto/v18/KFOlCnqEu92Fr1MmYUtfBBc4.woff2"
+    ),
+
+    "italic": (
+      "local-1": "Roboto Black Italic",
+      "local-2": "Roboto-BlackItalic",
+      "url": "roboto/v18/KFOjCnqEu92Fr1Mu51TLBCc6CsQ.woff2"
+    )
+  )
+) !default;

@@ -1,5 +1,10 @@
+@use "../helpers";
+
 .flex-row {
+  /// Define a margem das linhas do flexbox.
+  $margin: helpers.px-to-rem(0 -15px) !default;
+
   display: flex;
-  margin: $flex-row-margin;
+  margin: $margin;
   flex-wrap: wrap;
 }
