@@ -1,0 +1,39 @@
+@use "sass:map";
+@use "./maps" as theme-map;
+@use "./variables" as theme-var;
+@use "../palette";
+
+/// Obtém a cor da tonalidade especificada do tema de realçe.
+@function get-accent-color($hue) {
+
+  @if palette.is-accent-hue($hue) == false {
+
+    @error "A tonalidade '#{$hue}' não é de realçe.";
+  }
+
+  @return palette.get-color(theme-var.$accent-default, $hue);
+}
+
+/// Obtém a cor da tonalidade especificada do tema de destaque.
+@function get-featured-color($hue) {
+
+  @if palette.is-accent-hue($hue) {
+
+    @error "A tonalidade '#{$hue}' é de realçe.";
+  }
+
+  @return palette.get-color(theme-var.$featured-default, $hue);
+}
+
+/// Obtém a cor da propriedade especificada do tema principal.
+@function get-main-color($prop-name) {
+
+  $prop: map.get(theme-map.$main, theme-var.$main-default, $prop-name);
+
+  @if $prop == null {
+
+    @error "Não foi possível encontrar o tema principal '#{theme.$main-default}' com a propriedade '#{$prop-name}'.";
+  }
+
+  @return $prop;
+}

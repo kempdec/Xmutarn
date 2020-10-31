@@ -1,5 +1,7 @@
-@each $breakpoint in map-keys($map: $media-breakpoints) {
-  $infix: media-breakpoint-infix($breakpoint: $breakpoint);
+@use "../helpers/breakpoint";
+
+@each $breakpoint in map-keys($map: breakpoint.$media) {
+  $infix: breakpoint.media-infix($breakpoint: $breakpoint);
 
   @for $i from 1 through $flex-columns {
 
@@ -13,7 +15,7 @@
 
   }
 
-  @include media-breakpoint-up($breakpoint: $breakpoint) {
+  @include breakpoint.media-up($breakpoint: $breakpoint) {
 
     // .flex-col-auto*
     //
@@ -63,9 +65,9 @@
   }
 }
 
-@each $breakpoint in map-keys($map: $media-breakpoints) {
-  @include media-breakpoint-up($breakpoint: $breakpoint) {
-    $infix: media-breakpoint-infix($breakpoint: $breakpoint);
+@each $breakpoint in map-keys($map: breakpoint.$media) {
+  @include breakpoint.media-up($breakpoint: $breakpoint) {
+    $infix: breakpoint.media-infix($breakpoint: $breakpoint);
 
     @each $direction in (row column row-reverse column-reverse) {
 

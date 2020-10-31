@@ -1,206 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-br" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="description" content="Xmutarn é um framework front-end moderno e estiloso criado para a produtividade."><meta name="theme-color" content="#7B1FA2"><meta property="og:title" content="Xmutarn"><meta property="og:type" content="website"><meta property="og:url" content="https://viniciusxdl.github.io/xmutarn"><meta property="og:image" content="https://viniciusxdl.github.io/xmutarn/assets/img/environment/opengraph.png"><meta property="og:description" content="Xmutarn é um framework front-end moderno e estiloso criado para a produtividade."><meta property="og:site_name" content="Xmutarn"><meta name="twitter:image" content="https://viniciusxdl.github.io/xmutarn/assets/img/environment/twitter.png"><title>Temas • Xmutarn</title><base href="../"><link rel="shortcut icon" href="assets/img/icon.png"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="assets/lib/xmutarn/css/xmutarn.min.css"><link rel="stylesheet" href="https://unpkg.com/prismjs@1.22.0/themes/prism-solarizedlight.css"></head><body class="typo-use-default theme-bg-background theme-fg-primary"><header class="toolbar" x-toolbar><nav class="container-fluid"><div class="toolbar--nav"><button class="toolbar--nav--item cursor-pointer" x-listener-open-nav-drawer="i-doc-drawer"><span class="fas fa-bars fa-lg"></span></button><a class="toolbar--nav--item margin-right-sm padding-xs" href=""><img src="assets/img/environment/manifest.png" alt="Logotipo do Xmutarn com fundo linear" style="max-height: 2.5rem;"></a><a class="toolbar--nav--item" href="">Início</a><a class="toolbar--nav--item" href="docs/getting-started.html">Documentação</a></div><div class="toolbar--nav"><button class="toolbar--nav--item cursor-pointer" id="i-change-main-theme"><span class="fas fa-lightbulb fa-lg"></span></button><a class="toolbar--nav--item" href="https://github.com/viniciusxdl/xmutarn" target="_blank"><span class="toolbar--nav--item--icon fab fa-github fa-lg"></span>GitHub</a></div></nav></header><main class="container"><div class="flex-row"><div class="flex-col-10__lg margin-x-auto"><header class="typo-align-center typo-align-left__sm"><h1 class="typo-h2 theme-fg-500">Temas</h1><p class="typo-h5 typo-weight-light">Use os temas para representar sua marca.</p><div class="border-divider"></div></header><section class="typo-body-1"><h2 class="typo-h3">Definindo um tema</h2><p>Existem 3 tipos de temas, são eles: principal (<strong>main</strong>), destaque (<strong>featured</strong>) e realçe (<strong>accent</strong>).</p><p>No elemento
+<mark>html</mark>
+da sua página, adicione o atributo
+<mark>x-&lt;type>-theme</mark>, com o nome ou cor do tema, substituindo
+<mark>&lt;type></mark>
+pelo tipo de tema de sua preferência.</p><p>Para aplicar na sua página o tema principal claro, o de destaque roxo e o de realçe âmbar, seria usado:</p><pre class="theme-bg-card"><code class="language-html">&lt;html x-main-theme="light"
+      x-featured-theme="purple"
+      x-accent-theme="amber">
+&lt;/html></code></pre><h2 class="typo-h3">Uso</h2><p>Assim como as cores, os temas são separados pelo primeiro plano (<strong>foreground</strong>) e plano de fundo (<strong>background</strong>). Ambos os planos tem seus respectivos prefixos e podem ser aplicados na sua página facilmente.</p><h3 class="typo-h5">Principal</h3><p>O tema principal é usado nos textos, fundos e outros elementos que normalmente predominam as páginas. Por
+padrão o Xmutarn tem apenas 2 temas principais: light e dark, sendo "<strong>light</strong>" o padrão.</p><p>Clique no botão abaixo para alternar entre os temas.</p><button class="btn margin-bottom-md" id="i-switch-main-theme">Alternar temas</button><div class="card padding-x-lg padding-y-md theme-bg-A400"><p class="theme-fg-primary">Este é um parágrafo com a cor "primary" do tema principal.</p><p class="theme-fg-secondary">Este é um parágrafo com a cor "secondary" do tema principal.</p><p class="theme-fg-hint">Este é um parágrafo com a cor "hint" do tema principal.</p><p class="theme-fg-disabled">Este é um parágrafo com a cor "disabled" do tema principal.</p><p class="theme-fg-dividers">Este é um parágrafo com a cor "dividers" do tema principal.</p><p class="theme-fg-background">Este é um parágrafo com a cor "background" do tema principal.</p><p class="theme-fg-card">Este é um parágrafo com a cor "card" do tema principal.</p></div><pre class="theme-bg-card"><code class="language-html">&lt;card class="card padding-x-lg padding-y-md theme-bg-A400">
+    &lt;p class="theme-fg-primary">
+        Este é um parágrafo com a cor "primary" do tema principal.
+    &lt;/p>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Xmutarn é um framework front-end criado com a finalidade de facilitar e aumentar a produtividade na construção de páginas modernas e estilosas.">
+    &lt;p class="theme-fg-secondary">
+        Este é um parágrafo com a cor "secondary" do tema principal.
+    &lt;/p>
 
-  <meta name="theme-color" content="#4A148C">
+    &lt;p class="theme-fg-hint">
+        Este é um parágrafo com a cor "hint" do tema principal.
+    &lt;/p>
 
-  <title>Temas - Temas e cores • Xmutarn</title>
+    &lt;p class="theme-fg-disabled">
+        Este é um parágrafo com a cor "disabled" do tema principal.
+    &lt;/p>
 
-  <link rel="shortcut icon" href="../assets/img/icon.png">
+    &lt;p class="theme-fg-dividers">
+        Este é um parágrafo com a cor "dividers" do tema principal.
+    &lt;/p>
 
-  <!-- Arquivos de estilo. -->
-  <link rel="stylesheet" href="../assets/css/xmutarn.min.css">
-  <link rel="stylesheet" href="../assets/lib/prism/prism.css">
-</head>
+    &lt;p class="theme-fg-background">
+        Este é um parágrafo com a cor "background" do tema principal.
+    &lt;/p>
 
-<body class="theme-main-bg-card">
-  <section class="theme-main-fg-primary">
-    <nav>
-      <a href="../">Início</a>
-      <a href="introduction.html">Introdução</a>
-      <p>Temas e cores</p>
-      <a href="colors.html">Cores</a>
-      <a href="themes.html">Temas</a>
-    </nav>
-  </section>
-
-  <main class="container theme-main-fg-primary">
-    <h1>Temas</h1>
-    <p>
-      Os temas são o que dão vida a sua página, use temas pré-definidos, ou crie o seu! Todas as classes adotam o
-      prefixo <mark>theme-</code>.
-    </p>
-    <p>
-      Existem três tipos diferentes de temas: O principal, de destaque e de realçe. Assim como o nome sugere, o tema
-      principal é proposto para definir as cores principais dos elementos e textos da página, de destaque para
-      destacar, e de realçe para realçar.
-    </p>
-
-    <!-- Tema principal. -->
-    <h2>Tema principal</h2>
-    <p>
-      Para definir qual tema será utilizado na página, adicione o atributo <mark>x-main-theme</mark> no elemento <mark>html</mark>,
-      com o nome do tema principal.
-    </p>
-
-    <pre><code class="language-html">&lt;html x-main-theme="light">&lt;/html></code></pre>
-
-    <p>
-      Por padrão o Xmutarn tem apenas 2 temas principais disponíveis: light e dark, sendo <strong>"light"</strong> o
-      padrão.
-    </p>
-    <p>
-      Clique nos botões abaixo para alternar entres o temas.
-    </p>
-    <button x-action="toggle-theme" x-action-arg="light">Light</button>
-    <button x-action="toogle-theme" x-action-arg="dark">Dark</button>
-    <p>
-      As classes adotam o prefixo <mark>theme-main-</mark>. Assim como as <a href="colors.html" target="_blank">cores</a>,
-      os prefixos <mark>fg-</mark>, <mark>bg-</mark> e <mark>bd-</mark> para textos, fundos e bordas são utilizados.
-      Use o prefixo <mark>theme-main-fg-</mark> (<strong>foreground</strong>) para textos, <mark>theme-main-bg-</mark>
-      (<strong>background</strong>) para fundos e <mark>theme-main-bd-</mark> (<strong>border</strong>) para bordas.
-    </p>
-
-    <h3>Exemplo</h3>
-    <div class="theme-main-bg-background">
-      <p class="theme-main-fg-primary">
-        Texto com a cor <strong>"primary"</strong> do tema principal.
-      </p>
-      <p class="theme-main-fg-secondary">
-        Texto com a cor <strong>"secundary"</strong> do tema principal.
-      </p>
-      <p class="theme-main-bg-disabled">
-        Texto com a cor de fundo <strong>"disabled"</strong> do tema principal.
-      </p>
-      <div class="theme-main-bg-card theme-main-bd-dividers" style="border: 1px solid;">
-        Elemento com a cor de fundo <strong>"card"</strong> e borda da cor <strong>"dividers"</strong> do tema
-        principal.
-      </div>
-    </div>
-
-    <pre><code class="language-html">&lt;p class="theme-main-fg-primary">
-  Texto com a cor &lt;strong>"primary"&lt;/strong> do tema principal.
-&lt;/p>
-&lt;p class="theme-main-fg-secondary">
-  Texto com a cor &lt;strong>"secundary"&lt;/strong> do tema principal.
-&lt;/p>
-&lt;p class="theme-main-bg-disabled">
-  Texto com a cor de fundo &lt;strong>"disabled"&lt;/strong> do tema principal.
-&lt;/p>
-&lt;div class="theme-main-bg-card theme-main-bd-dividers" style="border: 1px solid;">
-  Elemento com a cor de fundo &lt;strong>"card"&lt;/strong> e borda da cor &lt;strong>"dividers"&lt;/strong> do tema principal.
-&lt;/div></code></pre>
-
-    <p>
-      As classes de temas também tem a possibilidade de seu uso com pseudo-classes e pseudo-elementos.
-    </p>
-    <p>
-      Caso queira criar seu próprio tema, é possível criando um estilo CSS semelhante com o abaixo. Sendo <strong>"example"</strong>
-      o nome do tema e as variáveis CSS com suas respectivas cores.
-    </p>
-    <pre><code class="language-css">html[x-main-theme="example"] {
-  --theme-main-primary: rgba(0, 0, 0, .87);
-  --theme-main-secondary: rgba(0, 0, 0, .54);
-  --theme-main-hint: rgba(0, 0, 0, .38);
-  --theme-main-disabled: rgba(0, 0, 0, .38);
-  --theme-main-dividers: rgba(0, 0, 0, .12);
-  --theme-main-background: #FAFAFA;
-  --theme-main-card: white;
-}</code></pre>
-
-    <p>
-      Também é possível mesclando o nosso mapa SASS:
-    </p>
-    <pre><code class="language-scss">// Seu mapa (exemplo).
-$your-theme-map: (
-  example: (
-    primary: rgba(0, 0, 0, .87),
-    secondary: rgba(0, 0, 0, .54),
-    hint: rgba(0, 0, 0, .38),
-    disabled: rgba(0, 0, 0, .38),
-    dividers: rgba(0, 0, 0, .12),
-    background: get-palette-color($color-name: grey, $color-hue: 50),
-    card: white
-  )
-);
-
-// Mescla o nosso mapa `$themes-main-properties` com seu mapa `$your-theme-map` (exemplo).
-map-merge($map1: $themes-main-properties, $map2: $your-theme-map);</code></pre>
-
-    <p>
-      Ou até mesmo sobrescrever nosso mapa SASS, porém este método impedira que utilize nossos temas pré-definidos. Use
-      este método apenas se realmente deseja ter este resultado.
-    </p>
-    <pre><code class="language-scss">// Define as propriedades dos temas principais.
-$themes-main-properties: (
-  example: (
-    primary: rgba(0, 0, 0, .87),
-    secondary: rgba(0, 0, 0, .54),
-    hint: rgba(0, 0, 0, .38),
-    disabled: rgba(0, 0, 0, .38),
-    dividers: rgba(0, 0, 0, .12),
-    background: get-palette-color($color-name: grey, $color-hue: 50),
-    card: white
-  )
-);</code></pre>
-
-    <!-- Tema destaque e de realçe. -->
-    <h2>Tema destaque e de realçe</h2>
-    <p>
-      Para definir a cor do tema que será utilizado na página, adicione no elemento <mark>html</mark>, o atributo <mark>x-featured-theme</mark>
-      para destaque e <mark>x-accent-theme</mark> para realçe, com o nome da cor.
-    </p>
-    <pre><code class="language-html">&lt;html x-featured-theme="purple" x-accent-theme="light-blue">&lt;html></code></pre>
-    <p>
-      Por padrão o Xmutarn disponibiliza para os temas, todas as cores, com exceção da "black" e "white", ou seja, 19
-      das 21 cores disponíveis na paleta. Sendo a cor <strong>"purple"</strong> como padrão para o tema destaque e
-      <strong>"light-blue"</strong> para o de realçe.
-    </p>
-    <p>
-      As classes adotam o prefixo <mark>theme-color-</mark>. Também utilizam os prefixos <mark>fg</mark>, <mark>bg</mark>
-      e <mark>bd</mark> para textos, fundos e bordas. Use o prefixo <mark>theme-color-fg</mark> (<strong>foreground</strong>)
-      para textos, <mark>theme-color-bg</mark> (<strong>background</strong>) para fundos e <mark>theme-color-bd</mark>
-      (<strong>border</strong>) para bordas.
-    </p>
-
-    <h3>Exemplo</h3>
-    <div class="theme-main-bg-background">
-      <p class="theme-color-fg500">
-        Texto com a cor do tema destaque no tom 500.
-      </p>
-      <p class="theme-color-fgA400">
-        Texto com a cor do tema de realçe no tom 400.
-      </p>
-      <p class="theme-color-bg900 color-fg-white">
-        Texto com a cor de fundo do tema destaque no tom 900.
-      </p>
-      <div class="theme-color-bgA700 theme-color-bd500 color-fg-white" style="border: 1px solid;">
-        Elemento com a cor de fundo do tema de realçe no tom 700 e borda com a cor do tema destaque no tom 500.
-      </div>
-    </div>
-    <pre><code class="language-html">&lt;p class="theme-color-fg500">
-  Texto com a cor do tema destaque no tom 500.
-&lt;/p>
-&lt;p class="theme-color-fgA400">
-  Texto com a cor do tema de realçe no tom 400.
-&lt;/p>
-&lt;p class="theme-color-bg900 color-fg-white">
-  Texto com a cor de fundo do tema destaque no tom 900.
-&lt;/p>
-&lt;div class="theme-color-bgA700 theme-color-bd500 color-fg-white" style="border: 1px solid;">
-  Elemento com a cor de fundo do tema de realçe no tom 700 e borda com a cor do tema destaque no tom 500.
-&lt;/div></code></pre>
-
-    <a href="colors.html">Anterior: Cores - Temas e cores</a>
-  </main>
-
-  <!-- Arquivos de script. -->
-  <script defer src="../assets/lib/prism/prism.js"></script>
-  <script defer src="../assets/script/docs/js/themes.js"></script>
-</body>
-
-</html>
+    &lt;p class="theme-fg-card">
+        Este é um parágrafo com a cor "card" do tema principal.
+    &lt;/p>
+&lt;/card></code></pre><p>Outros temas podem ser criados com um estilo CSS semelhante com o abaixo.</p><pre class="theme-bg-card"><code class="language-css">html[x-main-theme=light] {
+  --theme-primary: rgba(0, 0, 0, 0.87);
+  --theme-secondary: rgba(0, 0, 0, 0.54);
+  --theme-hint: rgba(0, 0, 0, 0.38);
+  --theme-disabled: rgba(0, 0, 0, 0.38);
+  --theme-dividers: rgba(0, 0, 0, 0.12);
+  --theme-background: #FAFAFA;
+  --theme-card: white;
+}</code></pre></section><section class="display-flex flex-justify-content-space-between flex-direction-column flex-direction-row__md padding-md"><a class="btn btn_outlined btn_size-lg margin-top-sm margin-top-0__md" href="docs/colors.html">Anterior: Cores</a></section></div></div></main><aside class="navigation-drawer" id="i-doc-drawer" x-nav-drawer><nav class="list list_padded"><header><h1 class="typo-h3 typo-weight-light typo-align-center">Navegar</h1></header><div class="border-divider margin-bottom-sm"></div><a class="list--item" href="docs/getting-started.html">Começando</a><a class="list--item" href="docs/introduction.html">Introdução</a><p class="padding-x-md typo-body-2 typo-weight-bold">Temas e cores</p><a class="list--item" href="docs/colors.html">Cores</a><a class="list--item" href="docs/themes.html">Temas</a></nav></aside><script src="assets/lib/xmutarn/js/xmutarn.min.js"></script><script src="assets/lib/js-cookie/js.cookie.js"></script><script defer src="assets/js/shared/layout.min.js"></script><script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script><script src="https://unpkg.com/prismjs@1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@1.22.0/plugins/autoloader/prism-autoloader.min.js"></script><script defer src="assets/js/docs/theme.min.js"></script></body></html>

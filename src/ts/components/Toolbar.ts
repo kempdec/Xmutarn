@@ -1,10 +1,13 @@
-import {
-  Component,
-  ToolbarOptions
-} from ".";
+import { Component } from ".";
+import { ToolbarOptions } from "./options";
 
 /** Responsável pelo gerenciamento de uma barra de ferramentas. */
 export default class Toolbar extends Component {
+
+  /** Opções padrão da barra de ferramentas. */
+  private static readonly defaultOptions: ToolbarOptions = {
+    hideInScroll: true
+  };
 
   /**
    * Inicializa uma nova instância de Toolbar.
@@ -12,9 +15,11 @@ export default class Toolbar extends Component {
    * @param element O elemento da barra de ferramentas.
    * @param options As opções da barra de ferramentas.
    */
-  constructor(element: HTMLElement, options: ToolbarOptions = { hideInScroll: true }) {
+  constructor(element: HTMLElement, options: ToolbarOptions = null) {
 
     super(element);
+
+    options = Object.assign(Toolbar.defaultOptions, options);
 
     if (options.hideInScroll) {
 
@@ -23,13 +28,13 @@ export default class Toolbar extends Component {
   }
 
   /** Classe CSS de omissão da barra de ferramentas. */
-  private static readonly _toolbarHideClass: string = "toolbar_hide";
+  private static readonly toolbarHideClass: string = "toolbar_hide";
 
   /** Classe CSS da cor do tema da barra de ferramentas. */
-  private static readonly _toolbarThemeColorClass: string = "theme-color-bg-700";
+  private static readonly _toolbarThemeColorClass: string = "theme-bg-700";
 
   /** Omite a barra de ferramentas na rolagem da página. */
-  public hideInScroll(): void {
+  hideInScroll(): void {
 
     let lastScrollTop: number = 0;
 
@@ -39,12 +44,12 @@ export default class Toolbar extends Component {
 
       if (scrollTop > this.element.clientHeight && scrollTop > lastScrollTop) {
 
-        this.element.classList.add(Toolbar._toolbarHideClass);
+        this.element.classList.add(Toolbar.toolbarHideClass);
       } else {
 
-        this.element.classList.remove(Toolbar._toolbarHideClass);
-        
-        if (this.element.classList.contains("color-bg-transparent") && scrollTop > this.element.clientHeight) {
+        this.element.classList.remove(Toolbar.toolbarHideClass);
+
+        if (this.element.classList.contains("bg-transparent") && scrollTop > this.element.clientHeight) {
 
           this.element.classList.add(Toolbar._toolbarThemeColorClass);
         } else {
@@ -62,12 +67,9 @@ export default class Toolbar extends Component {
    *
    * @param attributeName O nome do atributo HTML.
    */
-  public static initFromHtmlAttribute(attributeName: string): void {
+  static initFromHtmlAttribute(attributeName: string): void {
 
     document.querySelectorAll(`[${attributeName}]`)
-      .forEach((element: HTMLElement) => {
-
-        new Toolbar(element);
-      });
+      .forEach((element: HTMLElement) => new Toolbar(element));
   }
 }

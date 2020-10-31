@@ -1,27 +1,26 @@
 @charset "UTF-8";
 
+// Cores e temas.
+@use "./themes/colors";
+@use "./themes/themes";
+
+// Normalização e globalização.
+@use "./helpers/normalize";
+@use "./helpers/global";
+
+// Componentes.
+@use "./components";
+
+// Suporte a componentes e utilitários antigos.
 @import "global-variables";
-@import "palette-map";
-// Núcleo.
+
 @import "functions";
 @import "maps";
-@import "lists";
 @import "variables";
 @import "mixins";
 @import "placeholders";
-// Cores e temas.
-@import "colors";
-@import "themes";
-// Normalização.
-@import "normalize";
 
-@import "global";
-// Componentes.
-@import "components/container";
-@import "components/flex";
-@import "components/fonts";
 @import "components/typography";
-@import "components/border";
 @import "components/button";
 @import "components/input";
 @import "components/dropdown";
@@ -34,7 +33,7 @@
 @import "components/overlay";
 @import "components/toast";
 @import "components/avatar";
-// Utilitários.
+
 @import "utils/border";
 @import "utils/clearfix";
 @import "utils/cursor";

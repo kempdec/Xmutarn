@@ -2,3 +2,8 @@
 
 .vs/
 node_modules/
+
+# Extensões
+
+*.rar
+*.zip

@@ -19,10 +19,10 @@ export default class Dialog extends Component {
   }
 
   /** Overlay. */
-  private _overlay: Overlay = Overlay.create();
+  private overlay: Overlay = Overlay.create();
 
   /** Classe CSS de abertura do diálogo. */
-  private static readonly _dialogOpenClass: string = "dialog_open";
+  private static readonly dialogOpenClass: string = "dialog_open";
 
   /**
    * Abre o diálogo.
@@ -30,14 +30,14 @@ export default class Dialog extends Component {
    * @param useOverlay Um sinalizador indicando se deve ser utilizado um overlay na abertura do diálogo. O padrão é
    * "true".
    */
-  public open(useOverlay: boolean = true): void {
+  open(useOverlay: boolean = true): void {
 
     if (useOverlay) {
 
-      this._overlay.show();
+      this.overlay.show();
     }
 
-    this.element.classList.add(Dialog._dialogOpenClass);
+    this.element.classList.add(Dialog.dialogOpenClass);
   }
 
   /**
@@ -46,27 +46,27 @@ export default class Dialog extends Component {
    * @param element O elemento ouvinte de abertura do diálogo.
    * @param type O tipo de evento. O padrão é "click".
    */
-  public addOpenListener(element: HTMLElement, type: string = "click"): void {
+  addOpenListener(element: HTMLElement, type: string = "click"): void {
 
     if (!element) {
 
-      throw new Error("O elemento ouviente de abertura do diálogo deve ser fornecido.");
+      throw new Error("O elemento ouvinte de abertura do diálogo deve ser fornecido.");
     }
 
     element.addEventListener(type, e => {
 
-      this.open();
-
       e.preventDefault();
+
+      this.open();
     });
   }
 
   /** Fecha o diálogo. */
-  public close(): void {
+  close(): void {
 
-    this._overlay.hide();
+    this.overlay.hide();
 
-    this.element.classList.remove(Dialog._dialogOpenClass);
+    this.element.classList.remove(Dialog.dialogOpenClass);
   }
 
   /**
@@ -75,7 +75,7 @@ export default class Dialog extends Component {
    * @param element O elemento ouvinte de fechamento do diálogo.
    * @param type O tipo de evento. O padrão é "click".
    */
-  public addCloseListener(element: HTMLElement, type: string = "click"): void {
+  addCloseListener(element: HTMLElement, type: string = "click"): void {
 
     if (!element) {
 
@@ -84,9 +84,9 @@ export default class Dialog extends Component {
 
     element.addEventListener(type, e => {
 
-      this.close();
-
       e.preventDefault();
+
+      this.close();
     });
   }
 
@@ -96,7 +96,7 @@ export default class Dialog extends Component {
    *
    * @param attributeName O nome do atributo HTML.
    */
-  public static initFromHtmlAttribute(attributeName: string): void {
+  static initFromHtmlAttribute(attributeName: string): void {
 
     document.querySelectorAll(`[${attributeName}]`)
       .forEach((element: HTMLElement) => {

@@ -20,11 +20,11 @@ $borders-radius: (
 
 // Define o tamanho das fontes dos botões.
 $button-font-sizes: (
-  xsmall: px-to-rem($list: 10px),
-  small: px-to-rem($list: 12px),
-  medium: px-to-rem($list: 14px),
-  large: px-to-rem($list: 16px),
-  xlarge: px-to-rem($list: 19.2px)
+  xs: px-to-rem($list: 10px),
+  sm: px-to-rem($list: 12px),
+  md: px-to-rem($list: 14px),
+  lg: px-to-rem($list: 16px),
+  xl: px-to-rem($list: 19.2px)
 ) !default;
 
 // Cartão
@@ -37,16 +37,6 @@ $card-media-formats: (
   sd: 75%,
   // 1:1
   square: 100%
-) !default;
-
-// Contêiner
-
-// Define a largura máxima de `.container` para diferentes tamanhos de tela.
-$container-max-widths: (
-  small: 540px,
-  medium: 720px,
-  large: 960px,
-  xlarge: 1140px
 ) !default;
 
 // Dimensionamento
@@ -65,97 +55,44 @@ $sizing-sizes: (
 // Define os tamanhos de espaçamento usado nas classes utilitárias de espaçamento.
 $spacings: (
   0: 0,
-  xsmall: px-to-rem($list: 4px),
-  small: px-to-rem($list: 8px),
-  medium: px-to-rem($list: 16px),
-  large: px-to-rem($list: 24px),
-  xlarge: px-to-rem($list: 48px),
+  xs: px-to-rem($list: 4px),
+  sm: px-to-rem($list: 8px),
+  md: px-to-rem($list: 16px),
+  lg: px-to-rem($list: 24px),
+  xl: px-to-rem($list: 48px),
   auto: auto
-) !default;
-
-// Media
-
-// Define os pontos de interrupção da "media".
-$media-breakpoints: (
-  xsmall: 0,
-  small: 576px,
-  medium: 768px,
-  large: 992px,
-  xlarge: 1200px
-) !default;
-
-// Temas
-
-// Define as propriedades dos temas principais.
-$themes-main-properties: (
-  light: (
-    primary: rgba(0, 0, 0, .87),
-    secondary: rgba(0, 0, 0, .54),
-    hint: rgba(0, 0, 0, .38),
-    disabled: rgba(0, 0, 0, .38),
-    dividers: rgba(0, 0, 0, .12),
-    background: get-palette-color($color-name: grey, $color-hue: 50),
-    card: white
-  ),
-  dark: (
-    primary: white,
-    secondary: rgba(255, 255, 255, .7),
-    hint: rgba(255, 255, 255, .5),
-    disabled: rgba(255, 255, 255, .5),
-    dividers: rgba(255, 255, 255, .06),
-    background: #131313,
-    card: #191919
-  )
-) !default;
-
-// Temas e cores
-
-// Define os prefixos e parâmetros das classes dos temas e cores.
-$themes-colors-prefixes-and-params: (
-  fg: color,
-  bg: background,
-  bd: border-color
-) !default;
-
-// Define as pseudo-classes, pseudo-elementos e seus delimitadores usados nos temas e cores.
-$themes-colors-pseuds-and-delimiters: (
-  hover: ":",
-  active: ":",
-  focus: ":",
-  before: "::",
-  after: "::"
 ) !default;
 
 // Tipografia
 
 // Define as tipografias e suas propriedades.
 $typographies: (
-  headline-1: (
+  h1: (
     font-size: px-to-rem($list: 96px),
     letter-spacing: px-to-em($list: -.24992px),
     line-height: 1
   ),
-  headline-2: (
+  h2: (
     font-size: px-to-rem($list: 60px),
     letter-spacing: px-to-em($list: -.13328px),
     line-height: 1
   ),
-  headline-3: (
+  h3: (
     font-size: px-to-rem($list: 48px),
     letter-spacing: normal,
     line-height: px-to-rem($list: 50px)
   ),
-  headline-4: (
+  h4: (
     font-size: px-to-rem($list: 34px),
     letter-spacing: px-to-em($list: .1176px),
     line-height: px-to-rem($list: 40px)
   ),
-  headline-5: (
+  h5: (
     font-size: px-to-rem($list: 24px),
     letter-spacing: normal,
     line-height: px-to-rem($list: 32px)
   ),
-  headline-6: (
+  h6: (
     font-size: px-to-rem($list: 20px),
     letter-spacing: px-to-em($list: .2px),
     line-height: 1.6
@@ -192,12 +129,12 @@ $typographies: (
   )
 ) !default;
 
-// Define as espessuras de fonte de `.typography-weight-*`.
+// Define as espessuras de fonte de `.typo-weight-*`.
 $typography-font-weights: (
-  thin: 100,
-  light: 300,
-  regular: 400,
-  medium: 500,
-  bold: 700,
-  black: 900
+  "thin": 100,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "black": 900
 ) !default;

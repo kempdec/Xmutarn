@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## Xmutarn v0.29.0 (2020-10-30) - Release 17
+
+- Os módulos `Input`, `Toast`, `ThemeController`, `MainThemeController`, `FeaturedThemeController` e
+`AccentThemeController` foram adicionados.
+- As páginas da documentação agora são transpiladas com Pug.
+
+---
+
+- O padrão das classes de cores e temas foram totalmente alterados, consulte a documentação para ver as novidades.
+- Alguns prefixos de classes foram alterados:
+  - Tipografias: `typography` > `typo`.
+  - Botões: `button` > `btn`.
+- Os seguintes sufixos foram alterados:
+  - `xsmall` > `xs`.
+  - `small` > `sm`.
+  - `medium` > `md`.
+  - `large` > `lg`.
+  - `xlarge` > `xl`.
+- Os separadores de classes adjacentes foram alterados para dois underscores (`__`).
+- A cor de realçe padrão foi alterada de `light-blue` para `amber`.
+- O nome de usuário do repositório no GitHub foi alterado de `vinivsl` para `viniciusxdl`.
+- Todas as páginas da documentação foram atualizadas.
+- As tarefas do Gulp.js foram atualizadas para uso com TypeScript.
+- O compilador de Sass foi alterado do **Node Sass** para o **Dart Sass**.
+
+---
+
+- Fixado as opções do módulo `Toolbar`.
+- Fixado exportação das declarações de tipos do TypeScript.
+
+---
+
+- O arquivo dedicado para cores do Xmutarn (`xmutarn-colors.css`) foi removido.
+
 ## Xmutarn v0.28.0 (2019-07-01) - Release 16
 
 - Adicionado suporte a módulos TypeScript/ECMAScript.
@@ -12,7 +46,27 @@
 
 ---
 
-- Fixado as cores de um toast ([#12](https://github.com/vinivsl/Xmutarn/issues/12)).
+- Fixado as cores de um toast ([#12](https://github.com/viniciusxdl/xmutarn/issues/12)).
+
+## Xmutarn v0.28.0-beta.4 (2019-04-22) - Release 15
+
+- Adicionado páginas da documentação com o Pug.
+
+---
+
+- Atualizado página inicial da documentação.
+
+---
+
+- Fixado exportação das declarações de tipos do TypeScript.
+
+## Xmutarn v0.28.0-beta.3 (2019-04-20) - Release 14
+
+- Fixa opções dos módulos `Input`, `Toast` e `Toolbar`.
+
+## Xmutarn v0.28.0-beta.2 (2019-04-19) - Release 13
+
+- Adicionado módulos `Input` e `Toast`.
 
 ## Xmutarn v0.28.0-beta (2019-04-07) - Release 12
 
@@ -26,7 +80,7 @@
 
 ---
 
-- Fixado as cores de um toast ([#12](https://github.com/vinivsl/Xmutarn/issues/12)).
+- Fixado as cores de um toast ([#12](https://github.com/viniciusxdl/Xmutarn/issues/12)).
 
 ## Xmutarn v0.27.1 (2019-03-17) - Release 11
 
@@ -35,7 +89,7 @@
 ## Xmutarn v0.27.0 (2019-03-04) - Release 10
 
 - Adicionado classe Typescipt responsável por gerenciar uma barra de ferramentas.
-- Adicionado ícones para toasts. Issue: [#9](https://github.com/vinivsl/Xmutarn/issues/9).
+- Adicionado ícones para toasts. Issue: [#9](https://github.com/viniciusxdl/Xmutarn/issues/9).
 - Adicionado variantes `color-featured`, `color-accent` e `outlined-color` para a classe `button`.
 - Adicionado variante `padded` para a classe `list`.
 - Adicionado a exibição e omissão de overlay para toasts, quando o **timeout** for setado como **0**.
@@ -49,8 +103,8 @@
 
 ---
 
-- Fixado a abertura incorreta do menu suspenso pela instanciação a partir do atributo `x-role="dropdown-menu"`. Issue: [#2](https://github.com/vinivsl/Xmutarn/issues/2).
-- Fixado a abertura e sobreposição dos diálogos. Issue: [#10](https://github.com/vinivsl/Xmutarn/issues/10).
+- Fixado a abertura incorreta do menu suspenso pela instanciação a partir do atributo `x-role="dropdown-menu"`. Issue: [#2](https://github.com/viniciusxdl/Xmutarn/issues/2).
+- Fixado a abertura e sobreposição dos diálogos. Issue: [#10](https://github.com/viniciusxdl/Xmutarn/issues/10).
 - Fixado o tamanho dos títulos dos toasts.
 
 ## Xmutarn v0.26.0 (2019-02-13) - Release 09
