@@ -1,6 +1,6 @@
 {
   "name": "xmutarn",
-  "version": "0.29.0-beta",
+  "version": "0.29.0",
   "homepage": "https://viniciusxdl.github.io/xmutarn",
   "description": "Xmutarn é um framework front-end moderno e estiloso criado para a produtividade.",
   "author": {
@@ -8,8 +8,8 @@
     "email": "viniciusxdl@outlook.com",
     "url": "https://github.com/viniciusxdl"
   },
-  "main": "dist/js/xmutarn.js",
-  "style": "dist/css/xmutarn.css",
+  "main": "dist/js/xmutarn.min.js",
+  "style": "dist/css/xmutarn.min.css",
   "sass": "src/scss/xmutarn.scss",
   "types": "src/ts/index.d.ts",
   "license": "MIT",
@@ -22,8 +22,7 @@
   },
   "files": [
     "dist/{css,fonts,js}/**/*.{css,js,map,woff2}",
-    "scripts/**/*",
-    "src/{scss,ts}/*.{scss,ts}",
+    "src/{scripts,scss,ts}/*.{scss,ts}",
     "gulpfile.ts",
     "tsconfig.json",
     "yarn.lock"

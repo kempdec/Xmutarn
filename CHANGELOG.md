@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## Xmutarn v0.29.0 (2020-10-30) - Release 17
+
+- Os módulos `Input`, `Toast`, `ThemeController`, `MainThemeController`, `FeaturedThemeController` e
+`AccentThemeController` foram adicionados.
+- As páginas da documentação agora são transpiladas com Pug.
+
+---
+
+- O padrão das classes de cores e temas foram totalmente alterados, consulte a documentação para ver as novidades.
+- Alguns prefixos de classes foram alterados:
+  - Tipografias: `typography` > `typo`.
+  - Botões: `button` > `btn`.
+- Os seguintes sufixos foram alterados:
+  - `xsmall` > `xs`.
+  - `small` > `sm`.
+  - `medium` > `md`.
+  - `large` > `lg`.
+  - `xlarge` > `xl`.
+- Os separadores de classes adjacentes foram alterados para dois underscores (`__`).
+- A cor de realçe padrão foi alterada de `light-blue` para `amber`.
+- O nome de usuário do repositório no GitHub foi alterado de `vinivsl` para `viniciusxdl`.
+- Todas as páginas da documentação foram atualizadas.
+- As tarefas do Gulp.js foram atualizadas para uso com TypeScript.
+- O compilador de Sass foi alterado do **Node Sass** para o **Dart Sass**.
+
+---
+
+- Fixado as opções do módulo `Toolbar`.
+- Fixado exportação das declarações de tipos do TypeScript.
+
+---
+
+- O arquivo dedicado para cores do Xmutarn (`xmutarn-colors.css`) foi removido.
+
 ## Xmutarn v0.28.0 (2019-07-01) - Release 16
 
 - Adicionado suporte a módulos TypeScript/ECMAScript.
