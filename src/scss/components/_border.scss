@@ -1,10 +1,19 @@
+@use "../helpers";
+@use "../themes/theme";
+
 .border-divider {
+  /// Define a borda divisora.
+  $border: 1px solid var(--theme-dividers, theme.get-main-color("dividers")) !default;
+
   display: block;
   margin: 0;
   height: 0;
-  border-top: $border-divider-width $border-divider-style var(--theme-main-dividers, get-main-theme-color($name: "dividers"));
+  border-top: $border;
 
   &_padded {
-    margin: $border-divider_padded-margin;
+    /// Define a margem da borda divisora acolchada.
+    $margin: helpers.px-to-rem(0 16px) !default;
+
+    margin: $margin;
   }
 }

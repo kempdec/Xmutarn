@@ -1215,6 +1215,16 @@ input[type=password]::-ms-reveal {
   src: local("Roboto Black Italic"), local("Roboto-BlackItalic"), url("../fonts/roboto/v18/KFOjCnqEu92Fr1Mu51TLBCc6CsQ.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+.border-divider {
+  display: block;
+  margin: 0;
+  height: 0;
+  border-top: 1px solid var(--theme-dividers, rgba(0, 0, 0, 0.12));
+}
+.border-divider_padded {
+  margin: 0 1rem;
+}
+
 .border-left-large, .border-bottom-large, .border-right-large, .border-top-large, .border-large, .border-left-medium, .border-bottom-medium, .border-right-medium, .border-top-medium, .border-medium, .border-left-small, .border-bottom-small, .border-right-small, .border-top-small, .border-small {
   border-color: var(--theme-main-dividers, rgba(0, 0, 0, 0.12)) !important;
 }
@@ -1322,16 +1332,6 @@ input[type=password]::-ms-reveal {
 .typo-subtitle-2,
 .typo-caption-2 {
   font-weight: 500;
-}
-
-.border-divider {
-  display: block;
-  margin: 0;
-  height: 0;
-  border-top: 1px solid var(--theme-main-dividers, rgba(0, 0, 0, 0.12));
-}
-.border-divider_padded {
-  margin: 0 1rem;
 }
 
 .btn {

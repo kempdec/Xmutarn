@@ -70,16 +70,6 @@ $toolbar--nav--item--icon-margin-right: px-to-em($list: 4.15px) !default;
 // Define a margem esquerda dos ícones de um item de navegação da barra de ferramentas.
 $toolbar--nav--item--icon-margin-left: px-to-em($list: -2.58px) !default;
 
-// Borda
-
-// Define a largura da borda divisora.
-$border-divider-width: 1px !default;
-// Define o estilo da borda divisora.
-$border-divider-style: solid !default;
-
-// Define a margem da borda divisora acolchada.
-$border-divider_padded-margin: px-to-rem($list: 0 16px) !default;
-
 // Botão
 
 // Define a borda dos botões.
