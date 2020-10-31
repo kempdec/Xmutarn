@@ -29,11 +29,11 @@
 
       &:not(.btn_color-accent),
       &.btn_color-featured {
-        background-color: var(--theme-color-500, get-featured-theme-color());
+        background-color: var(--theme-500, get-featured-theme-color());
       }
 
       &.btn_color-accent {
-        background-color: var(--theme-color-A400, get-accent-theme-color());
+        background-color: var(--theme-A400, get-accent-theme-color());
       }
     }
 
@@ -70,11 +70,11 @@
   &[disabled],
   &_disabled {
     cursor: default;
-    color: var(--theme-main-disabled, get-main-theme-color($name: disabled)) !important;
-    background-color: var(--theme-main-dividers, get-main-theme-color($name: "dividers")) !important;
+    color: var(--theme-disabled, get-main-theme-color($name: disabled)) !important;
+    background-color: var(--theme-dividers, get-main-theme-color($name: "dividers")) !important;
 
     &::before {
-      background-color: var(--theme-main-disabled, get-main-theme-color($name: "disabled"));
+      background-color: var(--theme-disabled, get-main-theme-color($name: "disabled"));
     }
   }
 
@@ -86,18 +86,18 @@
 
       &:not(.btn_color-accent),
       &.btn_color-featured {
-        color: var(--theme-color-500, get-featured-theme-color());
+        color: var(--theme-500, get-featured-theme-color());
 
         &::before {
-          background-color: var(--theme-color-500, get-featured-theme-color());
+          background-color: var(--theme-500, get-featured-theme-color());
         }
       }
 
       &.btn_color-accent {
-        color: var(--theme-color-A400, get-accent-theme-color());
+        color: var(--them-A400, get-accent-theme-color());
 
         &::before {
-          background-color: var(--theme-color-A400, get-accent-theme-color());
+          background-color: var(--theme-A400, get-accent-theme-color());
         }
       }
     }
@@ -110,16 +110,16 @@
 
   &_outlined,
   &_outlined-color:not(.btn_color-featured):not(.btn_color-accent) {
-    border-color: #{get-main-theme-color($name: "dividers")};
+    border-color: var(--theme-dividers, get-main-theme-color($name: "dividers"));
   }
 
   &_outlined-color {
     &.btn_color-featured {
-      border-color: var(--theme-color-500, get-featured-theme-color());
+      border-color: var(--theme-500, get-featured-theme-color());
     }
 
     &.btn_color-accent {
-      border-color: var(--theme-color-A400, get-accent-theme-color());
+      border-color: var(--theme-A400, get-accent-theme-color());
     }
   }
 

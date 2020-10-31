@@ -1226,7 +1226,7 @@ input[type=password]::-ms-reveal {
 }
 
 .border-left-large, .border-bottom-large, .border-right-large, .border-top-large, .border-large, .border-left-medium, .border-bottom-medium, .border-right-medium, .border-top-medium, .border-medium, .border-left-small, .border-bottom-small, .border-right-small, .border-top-small, .border-small {
-  border-color: var(--theme-main-dividers, rgba(0, 0, 0, 0.12)) !important;
+  border-color: var(--theme-dividers, rgba(0, 0, 0, 0.12)) !important;
 }
 
 .flex-col-12__xl, .flex-col-11__xl, .flex-col-10__xl, .flex-col-9__xl, .flex-col-8__xl, .flex-col-7__xl, .flex-col-6__xl, .flex-col-5__xl, .flex-col-4__xl, .flex-col-3__xl, .flex-col-2__xl, .flex-col-1__xl, .flex-col-12__lg, .flex-col-11__lg, .flex-col-10__lg, .flex-col-9__lg, .flex-col-8__lg, .flex-col-7__lg, .flex-col-6__lg, .flex-col-5__lg, .flex-col-4__lg, .flex-col-3__lg, .flex-col-2__lg, .flex-col-1__lg, .flex-col-12__md, .flex-col-11__md, .flex-col-10__md, .flex-col-9__md, .flex-col-8__md, .flex-col-7__md, .flex-col-6__md, .flex-col-5__md, .flex-col-4__md, .flex-col-3__md, .flex-col-2__md, .flex-col-1__md, .flex-col-12__sm, .flex-col-11__sm, .flex-col-10__sm, .flex-col-9__sm, .flex-col-8__sm, .flex-col-7__sm, .flex-col-6__sm, .flex-col-5__sm, .flex-col-4__sm, .flex-col-3__sm, .flex-col-2__sm, .flex-col-1__sm, .flex-col-12, .flex-col-11, .flex-col-10, .flex-col-9, .flex-col-8, .flex-col-7, .flex-col-6, .flex-col-5, .flex-col-4, .flex-col-3, .flex-col-2, .flex-col-1 {
@@ -1364,10 +1364,10 @@ input[type=password]::-ms-reveal {
   background-color: white;
 }
 .btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color):not(.btn_color-accent), .btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color).btn_color-featured {
-  background-color: var(--theme-color-500, #9C27B0);
+  background-color: var(--theme-500, #9C27B0);
 }
 .btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color).btn_color-accent {
-  background-color: var(--theme-color-A400, #FFC400);
+  background-color: var(--theme-A400, #FFC400);
 }
 .btn:not([disabled]):not(.btn_disabled):hover::before {
   opacity: 0.12;
@@ -1395,38 +1395,38 @@ input[type=password]::-ms-reveal {
 }
 .btn[disabled], .btn_disabled {
   cursor: default;
-  color: var(--theme-main-disabled, rgba(0, 0, 0, 0.38)) !important;
-  background-color: var(--theme-main-dividers, rgba(0, 0, 0, 0.12)) !important;
+  color: var(--theme-disabled, rgba(0, 0, 0, 0.38)) !important;
+  background-color: var(--theme-dividers, rgba(0, 0, 0, 0.12)) !important;
 }
 .btn[disabled]::before, .btn_disabled::before {
-  background-color: var(--theme-main-disabled, rgba(0, 0, 0, 0.38));
+  background-color: var(--theme-disabled, rgba(0, 0, 0, 0.38));
 }
 .btn_flat:not([disabled]):not(.btn_disabled), .btn_outlined:not([disabled]):not(.btn_disabled), .btn_outlined-color:not([disabled]):not(.btn_disabled) {
   background-color: transparent;
 }
 .btn_flat:not([disabled]):not(.btn_disabled):not(.btn_color-accent), .btn_flat:not([disabled]):not(.btn_disabled).btn_color-featured, .btn_outlined:not([disabled]):not(.btn_disabled):not(.btn_color-accent), .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-featured, .btn_outlined-color:not([disabled]):not(.btn_disabled):not(.btn_color-accent), .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-featured {
-  color: var(--theme-color-500, #9C27B0);
+  color: var(--theme-500, #9C27B0);
 }
 .btn_flat:not([disabled]):not(.btn_disabled):not(.btn_color-accent)::before, .btn_flat:not([disabled]):not(.btn_disabled).btn_color-featured::before, .btn_outlined:not([disabled]):not(.btn_disabled):not(.btn_color-accent)::before, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-featured::before, .btn_outlined-color:not([disabled]):not(.btn_disabled):not(.btn_color-accent)::before, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-featured::before {
-  background-color: var(--theme-color-500, #9C27B0);
+  background-color: var(--theme-500, #9C27B0);
 }
 .btn_flat:not([disabled]):not(.btn_disabled).btn_color-accent, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-accent, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-accent {
-  color: var(--theme-color-A400, #FFC400);
+  color: var(--them-A400, #FFC400);
 }
 .btn_flat:not([disabled]):not(.btn_disabled).btn_color-accent::before, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-accent::before, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-accent::before {
-  background-color: var(--theme-color-A400, #FFC400);
+  background-color: var(--theme-A400, #FFC400);
 }
 .btn_outlined, .btn_outlined-color {
   border: 1px solid;
 }
 .btn_outlined, .btn_outlined-color:not(.btn_color-featured):not(.btn_color-accent) {
-  border-color: rgba(0, 0, 0, 0.12);
+  border-color: var(--theme-dividers, rgba(0, 0, 0, 0.12));
 }
 .btn_outlined-color.btn_color-featured {
-  border-color: var(--theme-color-500, #9C27B0);
+  border-color: var(--theme-500, #9C27B0);
 }
 .btn_outlined-color.btn_color-accent {
-  border-color: var(--theme-color-A400, #FFC400);
+  border-color: var(--theme-A400, #FFC400);
 }
 .btn_size-xs {
   font-size: 0.625rem;
@@ -1457,8 +1457,8 @@ input[type=password]::-ms-reveal {
 }
 .input_generic, .input:not(.input_generic) {
   font-weight: 500;
-  color: var(--theme-main-secondary, rgba(0, 0, 0, 0.54));
-  border-color: var(--theme-main-secondary, rgba(0, 0, 0, 0.54));
+  color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
+  border-color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
 }
 .input_generic .input--field, .input:not(.input_generic) .input--field {
   padding: 1em 0.3125em 0.75em 0.3125em;
@@ -1474,8 +1474,8 @@ input[type=password]::-ms-reveal {
   border-color: inherit;
 }
 .input_generic .input--field:focus, .input:not(.input_generic) .input--field:focus {
-  color: var(--theme-main-primary, rgba(0, 0, 0, 0.87));
-  border-color: var(--theme-color-500, #9C27B0);
+  color: var(--theme-primary, rgba(0, 0, 0, 0.87));
+  border-color: var(--theme-500, #9C27B0);
 }
 .input_generic .input--label, .input:not(.input_generic) .input--label {
   position: absolute;
@@ -1491,7 +1491,7 @@ input[type=password]::-ms-reveal {
   outline: 0;
 }
 .input--field:focus ~ .input--label {
-  color: var(--theme-color-500, #9C27B0);
+  color: var(--theme-500, #9C27B0);
 }
 .input--field_outlined {
   border: 1px solid;
@@ -1530,7 +1530,7 @@ input[type=password]::-ms-reveal {
   min-width: 10.625rem;
   max-width: calc(100vw - 2rem);
   max-height: calc(100vh - 2rem);
-  background-color: var(--theme-main-card, white);
+  background-color: var(--theme-card, white);
   border-radius: 0.125rem;
   transform: scale(0);
   transition: 0.3s;
@@ -1571,7 +1571,7 @@ input[type=password]::-ms-reveal {
   display: flex;
   cursor: pointer;
   padding: 1em;
-  color: var(--theme-main-primary, rgba(0, 0, 0, 0.87));
+  color: var(--theme-primary, rgba(0, 0, 0, 0.87));
   transition: background-color 0.4s;
   align-items: center;
 }
@@ -1607,7 +1607,7 @@ input[type=password]::-ms-reveal {
   will-change: transform;
 }
 .toolbar:not(.toolbar_dark-color) {
-  background-color: var(--theme-color-700, #7B1FA2);
+  background-color: var(--theme-700, #7B1FA2);
 }
 .toolbar_dark-color {
   background-color: #212121;
@@ -1680,8 +1680,8 @@ input[type=password]::-ms-reveal {
 }
 .card:not(.card_hide-structure) {
   border: 1px solid;
-  border-color: var(--theme-main-dividers, rgba(0, 0, 0, 0.12));
-  background-color: var(--theme-main-card, white);
+  border-color: var(--theme-dividers, rgba(0, 0, 0, 0.12));
+  background-color: var(--theme-card, white);
 }
 .card_hide-structure {
   background-color: transparent;
@@ -1695,10 +1695,10 @@ input[type=password]::-ms-reveal {
   margin: 0;
 }
 .card--header--title {
-  color: var(--theme-main-primary, rgba(0, 0, 0, 0.87));
+  color: var(--theme-primary, rgba(0, 0, 0, 0.87));
 }
 .card--header--subtitle {
-  color: var(--theme-main-secondary, rgba(0, 0, 0, 0.54));
+  color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
 }
 .card--header--small {
   color: inherit;
@@ -1790,7 +1790,7 @@ input[type=password]::-ms-reveal {
   width: 18.75rem;
   height: 100%;
   max-width: 100%;
-  background-color: var(--theme-main-card, white);
+  background-color: var(--theme-card, white);
   transform: translateX(-100%);
   transition: 0.3s;
   will-change: transform;
@@ -1849,10 +1849,10 @@ input[type=password]::-ms-reveal {
   transition: transform 0.25s 0ms cubic-bezier(0, 0, 0.2, 1);
 }
 .toast_color-featured {
-  background-color: var(--theme-color-700, #7B1FA2);
+  background-color: var(--theme-700, #7B1FA2);
 }
 .toast_color-accent {
-  background-color: var(--theme-color-A400, #FFC400);
+  background-color: var(--theme-A400, #FFC400);
 }
 .toast_color-success {
   background-color: #4CAF50;
@@ -1924,10 +1924,10 @@ input[type=password]::-ms-reveal {
   font-weight: 500;
 }
 .avatar--title {
-  color: var(--theme-main-primary, rgba(0, 0, 0, 0.87));
+  color: var(--theme-primary, rgba(0, 0, 0, 0.87));
 }
 .avatar--summary {
-  color: var(--theme-main-secondary, rgba(0, 0, 0, 0.54));
+  color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
 }
 .avatar--small {
   color: inherit;

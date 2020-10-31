@@ -1,5 +1,5 @@
 %border-color {
-  border-color: var(--theme-main-dividers, get-main-theme-color($name: "dividers")) !important;
+  border-color: var(--theme-dividers, get-main-theme-color($name: "dividers")) !important;
 }
 
 %flex-column {
