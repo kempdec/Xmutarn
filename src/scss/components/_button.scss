@@ -94,7 +94,7 @@
       }
 
       &.btn_color-accent {
-        color: var(--them-A400, get-accent-theme-color());
+        color: var(--theme-A400, get-accent-theme-color());
 
         &::before {
           background-color: var(--theme-A400, get-accent-theme-color());

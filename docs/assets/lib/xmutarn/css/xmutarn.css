@@ -1411,7 +1411,7 @@ input[type=password]::-ms-reveal {
   background-color: var(--theme-500, #9C27B0);
 }
 .btn_flat:not([disabled]):not(.btn_disabled).btn_color-accent, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-accent, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-accent {
-  color: var(--them-A400, #FFC400);
+  color: var(--theme-A400, #FFC400);
 }
 .btn_flat:not([disabled]):not(.btn_disabled).btn_color-accent::before, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-accent::before, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-accent::before {
   background-color: var(--theme-A400, #FFC400);
