@@ -19,7 +19,7 @@
     padding: $card--header-padding;
 
     &--title,
-    &--subtitle {
+    &--summary {
       margin: 0;
     }
 
@@ -27,7 +27,7 @@
       color: var(--theme-primary, get-main-theme-color($name: "primary"));
     }
 
-    &--subtitle {
+    &--summary {
       color: var(--theme-secondary, get-main-theme-color($name: "secondary"));
     }
 

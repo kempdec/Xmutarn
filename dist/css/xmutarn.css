@@ -1691,13 +1691,13 @@ input[type=password]::-ms-reveal {
   margin: 0;
   padding: 1rem;
 }
-.card--header--title, .card--header--subtitle {
+.card--header--title, .card--header--summary {
   margin: 0;
 }
 .card--header--title {
   color: var(--theme-primary, rgba(0, 0, 0, 0.87));
 }
-.card--header--subtitle {
+.card--header--summary {
   color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
 }
 .card--header--small {
