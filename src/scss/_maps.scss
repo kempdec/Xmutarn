@@ -2,18 +2,18 @@
 
 // Define o tamanho das bordas de `.border-*`.
 $borders: (
-  0: 0,
-  small: 1px,
-  medium: 2px,
-  large: 3px
+  "0": 0,
+  "sm": 1px,
+  "md": 2px,
+  "lg": 3px
 ) !default;
 
 // Define os raios de borda de `.border-radius-*`.
 $borders-radius: (
-  circle: 50%,
-  small: px-to-rem($list: 2px),
-  medium: px-to-rem($list: 5px),
-  large: px-to-rem($list: 8px)
+  "circle": 50%,
+  "sm": px-to-rem($list: 2px),
+  "md": px-to-rem($list: 5px),
+  "lg": px-to-rem($list: 8px)
 ) !default;
 
 // Botão

@@ -1225,7 +1225,7 @@ input[type=password]::-ms-reveal {
   margin: 0 1rem;
 }
 
-.border-left-large, .border-bottom-large, .border-right-large, .border-top-large, .border-large, .border-left-medium, .border-bottom-medium, .border-right-medium, .border-top-medium, .border-medium, .border-left-small, .border-bottom-small, .border-right-small, .border-top-small, .border-small {
+.border-left-lg, .border-bottom-lg, .border-right-lg, .border-top-lg, .border-lg, .border-left-md, .border-bottom-md, .border-right-md, .border-top-md, .border-md, .border-left-sm, .border-bottom-sm, .border-right-sm, .border-top-sm, .border-sm, .border-left-0, .border-bottom-0, .border-right-0, .border-top-0, .border-0 {
   border-color: var(--theme-dividers, rgba(0, 0, 0, 0.12)) !important;
 }
 
@@ -1959,77 +1959,77 @@ input[type=password]::-ms-reveal {
   border-left-style: solid;
 }
 
-.border-small {
+.border-sm {
   border-width: 1px !important;
   border-style: solid;
 }
 
-.border-top-small {
+.border-top-sm {
   border-top-width: 1px !important;
   border-top-style: solid;
 }
 
-.border-right-small {
+.border-right-sm {
   border-right-width: 1px !important;
   border-right-style: solid;
 }
 
-.border-bottom-small {
+.border-bottom-sm {
   border-bottom-width: 1px !important;
   border-bottom-style: solid;
 }
 
-.border-left-small {
+.border-left-sm {
   border-left-width: 1px !important;
   border-left-style: solid;
 }
 
-.border-medium {
+.border-md {
   border-width: 2px !important;
   border-style: solid;
 }
 
-.border-top-medium {
+.border-top-md {
   border-top-width: 2px !important;
   border-top-style: solid;
 }
 
-.border-right-medium {
+.border-right-md {
   border-right-width: 2px !important;
   border-right-style: solid;
 }
 
-.border-bottom-medium {
+.border-bottom-md {
   border-bottom-width: 2px !important;
   border-bottom-style: solid;
 }
 
-.border-left-medium {
+.border-left-md {
   border-left-width: 2px !important;
   border-left-style: solid;
 }
 
-.border-large {
+.border-lg {
   border-width: 3px !important;
   border-style: solid;
 }
 
-.border-top-large {
+.border-top-lg {
   border-top-width: 3px !important;
   border-top-style: solid;
 }
 
-.border-right-large {
+.border-right-lg {
   border-right-width: 3px !important;
   border-right-style: solid;
 }
 
-.border-bottom-large {
+.border-bottom-lg {
   border-bottom-width: 3px !important;
   border-bottom-style: solid;
 }
 
-.border-left-large {
+.border-left-lg {
   border-left-width: 3px !important;
   border-left-style: solid;
 }
@@ -2062,15 +2062,15 @@ input[type=password]::-ms-reveal {
   border-radius: 50% !important;
 }
 
-.border-radius-small {
+.border-radius-sm {
   border-radius: 0.125rem !important;
 }
 
-.border-radius-medium {
+.border-radius-md {
   border-radius: 0.3125rem !important;
 }
 
-.border-radius-large {
+.border-radius-lg {
   border-radius: 0.5rem !important;
 }
 
