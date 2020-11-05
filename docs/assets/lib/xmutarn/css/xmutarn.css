@@ -1099,6 +1099,16 @@ input[type=password]::-ms-reveal {
   display: none;
 }
 
+.border-divider {
+  display: block;
+  margin: 0;
+  height: 0;
+  border-top: 1px solid var(--theme-dividers, rgba(0, 0, 0, 0.12));
+}
+.border-divider_padded {
+  margin: 0 1rem;
+}
+
 .container, .container-fluid {
   margin: 0 auto;
   padding: 0 0.9375rem;
@@ -1215,14 +1225,57 @@ input[type=password]::-ms-reveal {
   src: local("Roboto Black Italic"), local("Roboto-BlackItalic"), url("../fonts/roboto/v18/KFOjCnqEu92Fr1Mu51TLBCc6CsQ.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-.border-divider {
-  display: block;
-  margin: 0;
-  height: 0;
-  border-top: 1px solid var(--theme-dividers, rgba(0, 0, 0, 0.12));
+.input {
+  position: relative;
+  font-weight: 500;
+  color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
+  border-color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
 }
-.border-divider_padded {
-  margin: 0 1rem;
+.input--field {
+  padding: 1em 0.3125em 0.75em 0;
+  width: 100%;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  color: inherit;
+  background-color: transparent;
+}
+.input--field:focus {
+  color: var(--theme-primary, rgba(0, 0, 0, 0.87));
+  border-color: var(--theme-500, #9C27B0);
+  outline: 0;
+}
+.input--field:focus:not(.input--field_outlined) {
+  border-color: var(--theme-500, #9C27B0);
+}
+.input--field:focus ~ .input--label {
+  color: var(--theme-500, #9C27B0);
+}
+.input--field:not(.input--field_outlined) {
+  padding-left: 0.3125em;
+  border: none;
+  border-bottom: 0.0625rem solid;
+}
+.input--field:not(.input--field_outlined) ~ .input--label {
+  left: 0.3125em;
+}
+.input--field_outlined {
+  padding-left: 0.625em;
+  border: 1px solid;
+  border-color: inherit;
+  border-radius: 0.3125em;
+}
+.input--field_outlined ~ .input--label {
+  left: 0.625em;
+}
+.input--label {
+  position: absolute;
+  top: 1em;
+  transition: all 0.3s linear;
+  pointer-events: none;
+}
+.input--label_active, .input--field:focus ~ .input--label {
+  transform: translate(-15%, -1em) scale(0.7);
 }
 
 .border-left-lg, .border-bottom-lg, .border-right-lg, .border-top-lg, .border-lg, .border-left-md, .border-bottom-md, .border-right-md, .border-top-md, .border-md, .border-left-sm, .border-bottom-sm, .border-right-sm, .border-top-sm, .border-sm, .border-left-0, .border-bottom-0, .border-right-0, .border-top-0, .border-0 {
@@ -1446,60 +1499,6 @@ input[type=password]::-ms-reveal {
 .btn--icon {
   margin-right: 0.571875em;
   margin-left: -0.28625em;
-}
-
-.input {
-  position: relative;
-}
-.input_alert-color {
-  color: #F44336 !important;
-  border-color: #F44336 !important;
-}
-.input_generic, .input:not(.input_generic) {
-  font-weight: 500;
-  color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
-  border-color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
-}
-.input_generic .input--field, .input:not(.input_generic) .input--field {
-  padding: 1em 0.3125em 0.75em 0.3125em;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: 1;
-  color: inherit;
-  background-color: transparent;
-}
-.input_generic .input--field:not(.input--field_outlined), .input:not(.input_generic) .input--field:not(.input--field_outlined) {
-  border: none;
-  border-bottom: 0.125rem solid;
-  border-color: inherit;
-}
-.input_generic .input--field:focus, .input:not(.input_generic) .input--field:focus {
-  color: var(--theme-primary, rgba(0, 0, 0, 0.87));
-  border-color: var(--theme-500, #9C27B0);
-}
-.input_generic .input--label, .input:not(.input_generic) .input--label {
-  position: absolute;
-  top: 1em;
-  left: 0.3125em;
-  transition: all 0.3s linear;
-  pointer-events: none;
-}
-.input--field {
-  width: 100%;
-}
-.input--field:focus {
-  outline: 0;
-}
-.input--field:focus ~ .input--label {
-  color: var(--theme-500, #9C27B0);
-}
-.input--field_outlined {
-  border: 1px solid;
-  border-color: inherit;
-  border-radius: 0.3125em;
-}
-.input--label_active, .input--field:focus ~ .input--label {
-  transform: translate(-15%, -1em) scale(0.7);
 }
 
 .dropdown {

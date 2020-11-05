@@ -159,39 +159,6 @@ $navigation-drawer-background-color: var(--theme-card, get-main-theme-color($nam
 // Define a largura da gaveta de navegação.
 $navigation-drawer-width: px-to-rem($list: 300px) !default;
 
-// Input
-
-// Define a cor da borda do input "generic".
-$input_generic-border-color: var(--theme-secondary, get-main-theme-color($name: "secondary")) !default;
-// Define a cor da fonte do input "generic".
-$input_generic-color: var(--theme-secondary, get-main-theme-color($name: "secondary")) !default;
-// Define a espessura de fonte do input "generic".
-$input_generic-font-weight: map-get($map: $typography-font-weights, $key: medium) !default;
-
-// Define a cor de fundo do campo de input "generic".
-$input_generic--field-background-color: transparent !default;
-// Define a borda inferior do campo de input "generic".
-$input_generic--field-border-bottom: px-to-rem($list: 2px) solid !default;
-// Define o preenchimento do campo de input "generic".
-$input_generic--field-padding: px-to-em($list: 16px 5px 12px 5px) !default;
-// Define a cor do campo de input "generic" com a pseudo-classe "focus".
-$input_generic--field-pseudo-focus-color: var(--theme-primary, get-main-theme-color($name: "primary")) !default;
-// Define a cor da borda do campo de input "generic" com a pseudo-classe "focus".
-$input_generic--field-pseudo-focus-border-color: var(--theme-500, get-featured-theme-color()) !default;
-// Define o topo do rótulo de input "generic".
-$input_generic--label-top: px-to-em($list: 16px) !default;
-// Define a esquerda do rótulo de input "generic".
-$input_generic--label-left: px-to-em($list: 5px) !default;
-
-// Define a cor do rótulo do campo de input com a pseudo-classe "focus".
-$input--field-label-pseudo-focus-color: var(--theme-500, get-featured-theme-color()) !default;
-
-// Define o raio de borda do campo de input com variante "outlined".
-$input--field_outlined-border-radius: px-to-em($list: 5px) !default;
-
-// Define a transformação da ativação do rótulo do input.
-$input--label_active-transform: translate(-15%, px-to-em($list: -16px)) scale(.7) !default;
-
 // Lista
 
 // Define a margem da lista.

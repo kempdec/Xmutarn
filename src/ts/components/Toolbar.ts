@@ -1,4 +1,4 @@
-import { Component } from ".";
+import { Component } from "./Component";
 import { ToolbarOptions } from "./options";
 
 /** Responsável pelo gerenciamento de uma barra de ferramentas. */

@@ -2,21 +2,20 @@
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.X = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Component = void 0;
 class Component {
     constructor(element) {
-        if (!element) {
-            throw new Error("O elemento do componente deve ser fornecido.");
-        }
         this.element = element;
     }
 }
-exports.default = Component;
+exports.Component = Component;
 
 },{}],2:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const _1 = require(".");
-class Dialog extends _1.Component {
+const Component_1 = require("./Component");
+class Dialog extends Component_1.Component {
     constructor(element) {
         super(element);
         this.overlay = _1.Overlay.create();
@@ -67,87 +66,79 @@ class Dialog extends _1.Component {
 exports.default = Dialog;
 Dialog.dialogOpenClass = "dialog_open";
 
-},{".":8}],3:[function(require,module,exports){
+},{".":8,"./Component":1}],3:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _1 = require(".");
-class Input extends _1.Component {
-    constructor(element, options = null) {
+exports.InputComponent = void 0;
+const Component_1 = require("./Component");
+class InputComponent extends Component_1.Component {
+    constructor(element) {
         super(element);
-        options = Object.assign(Input.defaultOptions, options);
-        element.classList.add("input");
-        this.inputElement = element.querySelector(".input--field");
-        if (!this.inputElement) {
-            throw new Error("O elemento responsável pelo o input não contém o elemento input com a classe 'input--field'.");
+        this.classes = {
+            field: "input--field",
+            label: "input--label",
+            activeLabel: "input--label_active"
+        };
+        if (!element) {
+            throw new Error("O primeiro argumento deve ser fornecido.");
         }
-        this.labelElement = element.querySelector(".input--label");
-        if (!this.labelElement) {
-            if (!options.label) {
-                throw new Error("O elemento responsável pelo input não contém o elemento do rótulo do input com a classe `input--label`.");
-            }
-            this.setLabel(options.label);
+        this.field = element.querySelector(`.${this.classes.field}`);
+        if (!this.field) {
+            throw new Error(`Não foi possível encontrar um elemento com a classe '${this.classes.field}'`);
         }
-        if (this.inputElement.value) {
-            this.activeLabel();
-        }
-        this.addToggleLabelListener(this.inputElement);
-        if (options.removeColorOnFocus) {
-            this.addRemoveColorListener(this.inputElement);
-        }
+        this._label = element.querySelector(`.${this.classes.label}`);
     }
     activeLabel() {
-        this.labelElement.classList.add(Input.labelActiveClass);
+        this.label.classList.add(this.classes.activeLabel);
     }
     disableLabel() {
-        this.labelElement.classList.remove(Input.labelActiveClass);
+        this.label.classList.remove(this.classes.activeLabel);
     }
-    addToggleLabelListener(element, type = "blur") {
-        if (!element) {
-            throw new Error("O elemento ouvinte de alternância do rótulo do input deve ser fornecido.");
-        }
-        element.addEventListener(type, e => {
-            e.preventDefault();
-            if (this.inputElement.value) {
-                this.activeLabel();
+    addActiveLabelToogle() {
+        this.field.addEventListener("blur", () => {
+            if (!this.field.value) {
+                this.disableLabel();
                 return;
             }
-            this.disableLabel();
+            this.activeLabel();
         });
     }
-    addRemoveColorListener(element, type = "focus") {
-        if (!element) {
-            throw new Error("O elemento ouvinte de remoção da cor do input deve ser fornecido.");
+    createLabel() {
+        const label = document.createElement("label");
+        label.classList.add(this.classes.label);
+        this.element.appendChild(label);
+        this.addActiveLabelToogle();
+        return label;
+    }
+    get label() {
+        if (!this._label) {
+            this._label = this.createLabel();
         }
-        element.addEventListener(type, e => {
-            e.preventDefault();
-            element.classList.remove("input_alert-color");
-        });
+        return this._label;
     }
-    setLabel(text) {
-        this.labelElement.innerText = text;
+    setLabelText(text) {
+        this.label.innerText = text;
     }
-    static initFromHtmlAttribute(attributeName, labelAttributeName) {
-        document.querySelectorAll(`[${attributeName}]`)
-            .forEach((element) => {
-            let options = {};
-            if (element.hasAttribute(labelAttributeName)) {
-                options.label = element.getAttribute(labelAttributeName);
+    static initFromHtml(attrName, labelAttrName) {
+        const elements = document.querySelectorAll(`[${attrName}]`);
+        for (let element of elements) {
+            if (!element.hasAttribute(labelAttrName)) {
+                throw new Error(`Não foi possível encontrar um elemento com o atributo '${labelAttrName}'.`);
             }
-            new Input(element, options);
-        });
+            const input = new InputComponent(element);
+            const labelAttr = element.getAttribute(labelAttrName);
+            input.setLabelText(labelAttr);
+        }
     }
 }
-exports.default = Input;
-Input.defaultOptions = {
-    removeColorOnFocus: true
-};
-Input.labelActiveClass = "input--label_active";
+exports.InputComponent = InputComponent;
 
-},{".":8}],4:[function(require,module,exports){
+},{"./Component":1}],4:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const _1 = require(".");
-class NavigationDrawer extends _1.Component {
+const Component_1 = require("./Component");
+class NavigationDrawer extends Component_1.Component {
     constructor(element) {
         super(element);
         this.overlay = _1.Overlay.create();
@@ -199,11 +190,11 @@ class NavigationDrawer extends _1.Component {
 exports.default = NavigationDrawer;
 NavigationDrawer.openClass = "navigation-drawer_open";
 
-},{".":8}],5:[function(require,module,exports){
+},{".":8,"./Component":1}],5:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _1 = require(".");
-class Overlay extends _1.Component {
+const Component_1 = require("./Component");
+class Overlay extends Component_1.Component {
     constructor(element) {
         super(element);
         this.element.classList.add("overlay");
@@ -223,11 +214,12 @@ class Overlay extends _1.Component {
 exports.default = Overlay;
 Overlay.overlayActiveClass = "overlay_active";
 
-},{".":8}],6:[function(require,module,exports){
+},{"./Component":1}],6:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const _1 = require(".");
-class Toast extends _1.Component {
+const Component_1 = require("./Component");
+class Toast extends Component_1.Component {
     constructor(element) {
         super(element);
         this.overlay = _1.Overlay.create();
@@ -329,11 +321,11 @@ Toast.optionsDefault = {
     removeWhenClose: true
 };
 
-},{".":8}],7:[function(require,module,exports){
+},{".":8,"./Component":1}],7:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _1 = require(".");
-class Toolbar extends _1.Component {
+const Component_1 = require("./Component");
+class Toolbar extends Component_1.Component {
     constructor(element, options = null) {
         super(element);
         options = Object.assign(Toolbar.defaultOptions, options);
@@ -372,19 +364,25 @@ Toolbar.defaultOptions = {
 Toolbar.toolbarHideClass = "toolbar_hide";
 Toolbar._toolbarThemeColorClass = "theme-bg-700";
 
-},{".":8}],8:[function(require,module,exports){
+},{"./Component":1}],8:[function(require,module,exports){
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Toolbar = exports.Toast = exports.Overlay = exports.NavigationDrawer = exports.Input = exports.Dialog = exports.Component = void 0;
-const Component_1 = __importDefault(require("./Component"));
-exports.Component = Component_1.default;
+exports.Toolbar = exports.Toast = exports.Overlay = exports.NavigationDrawer = exports.Dialog = void 0;
 const Dialog_1 = __importDefault(require("./Dialog"));
 exports.Dialog = Dialog_1.default;
-const Input_1 = __importDefault(require("./Input"));
-exports.Input = Input_1.default;
 const NavigationDrawer_1 = __importDefault(require("./NavigationDrawer"));
 exports.NavigationDrawer = NavigationDrawer_1.default;
 const Overlay_1 = __importDefault(require("./Overlay"));
@@ -393,8 +391,9 @@ const Toast_1 = __importDefault(require("./Toast"));
 exports.Toast = Toast_1.default;
 const Toolbar_1 = __importDefault(require("./Toolbar"));
 exports.Toolbar = Toolbar_1.default;
+__exportStar(require("./InputComponent"), exports);
 
-},{"./Component":1,"./Dialog":2,"./Input":3,"./NavigationDrawer":4,"./Overlay":5,"./Toast":6,"./Toolbar":7}],9:[function(require,module,exports){
+},{"./Dialog":2,"./InputComponent":3,"./NavigationDrawer":4,"./Overlay":5,"./Toast":6,"./Toolbar":7}],9:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccentThemeController = void 0;
@@ -498,19 +497,13 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Toolbar = exports.Toast = exports.Overlay = exports.NavigationDrawer = exports.Input = exports.Dialog = void 0;
 const components_1 = require("./components");
-Object.defineProperty(exports, "Dialog", { enumerable: true, get: function () { return components_1.Dialog; } });
-Object.defineProperty(exports, "Input", { enumerable: true, get: function () { return components_1.Input; } });
-Object.defineProperty(exports, "NavigationDrawer", { enumerable: true, get: function () { return components_1.NavigationDrawer; } });
-Object.defineProperty(exports, "Overlay", { enumerable: true, get: function () { return components_1.Overlay; } });
-Object.defineProperty(exports, "Toast", { enumerable: true, get: function () { return components_1.Toast; } });
-Object.defineProperty(exports, "Toolbar", { enumerable: true, get: function () { return components_1.Toolbar; } });
+__exportStar(require("./components"), exports);
 __exportStar(require("./controllers"), exports);
 __exportStar(require("./models"), exports);
 document.addEventListener("DOMContentLoaded", () => {
     components_1.Dialog.initFromHtmlAttribute("x-dialog");
-    components_1.Input.initFromHtmlAttribute("x-input", "x-input-label");
+    components_1.InputComponent.initFromHtml("x-input", "x-input-label");
     components_1.NavigationDrawer.initFromHtmlAttribute("x-nav-drawer");
     components_1.Toolbar.initFromHtmlAttribute("x-toolbar");
 });

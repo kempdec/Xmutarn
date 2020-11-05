@@ -1,4 +1,5 @@
-import { Component, Overlay } from ".";
+import { Overlay } from ".";
+import { Component } from "./Component";
 import { ToastOptions } from "./options";
 
 /** Responsável pelo gerenciamento de um toast. */

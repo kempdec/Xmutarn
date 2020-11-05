@@ -1,7 +1,7 @@
 import {
-  Component,
   Overlay
 } from ".";
+import { Component } from "./Component";
 
 /** Responsável pelo gerenciamento de uma gaveta de navegação. */
 export default class NavigationDrawer extends Component {

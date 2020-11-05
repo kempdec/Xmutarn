@@ -1,4 +1,4 @@
-import { Component } from ".";
+import { Component } from "./Component";
 
 /** Responsável pelo gerenciamento de um overlay. */
 export default class Overlay extends Component {

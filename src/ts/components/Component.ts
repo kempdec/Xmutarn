@@ -1,21 +1,10 @@
-/** Responsável pelo gerenciamento de um componente. */
-export default abstract class Component {
-
-  /** Obtém o elemento do componente. */
-  public readonly element: HTMLElement;
+/** Fornece abstração para o gerenciamento de um componente. */
+export abstract class Component {
 
   /**
-   * Inicializa uma nova instância de Component.
+   * Inicializa uma nova instância.
    *
    * @param element O elemento do componente.
    */
-  constructor(element: HTMLElement) {
-
-    if (!element) {
-
-      throw new Error("O elemento do componente deve ser fornecido.");
-    }
-
-    this.element = element;
-  }
+  constructor(public readonly element: HTMLElement) { }
 }
