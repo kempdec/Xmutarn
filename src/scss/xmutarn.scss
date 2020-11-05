@@ -8,8 +8,9 @@
 @use "./helpers/normalize";
 @use "./helpers/global";
 
-// Componentes.
+// Componentes e utilitários.
 @use "./components";
+@use "./utils";
 
 // Suporte a componentes e utilitários antigos.
 @import "global-variables";
@@ -20,7 +21,6 @@
 @import "mixins";
 @import "placeholders";
 
-@import "components/typography";
 @import "components/button";
 @import "components/dropdown";
 @import "components/menu";
@@ -44,4 +44,3 @@
 @import "utils/shadow";
 @import "utils/sizing";
 @import "utils/spacing";
-@import "utils/typography";

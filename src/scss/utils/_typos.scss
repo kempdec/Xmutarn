@@ -1,0 +1,77 @@
+@use "sass:map";
+@use "./typo";
+@use "../helpers/breakpoint";
+
+.typo-use-roboto, .typo-use-default {
+  font-family: "Roboto", sans-serif;
+}
+
+.typo-style-italic {
+  font-style: italic !important;
+}
+
+$-overflows: clip, ellipsis;
+%-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@each $overflow in $-overflows {
+
+  .typo-overflow-#{$overflow} {
+    text-overflow: #{$overflow};
+    @extend %-overflow;
+  }
+}
+
+$-transforms: upper, lower, capitalize;
+
+@each $transform in $-transforms {
+
+  .typo-to-#{$transform} {
+    text-transform: #{$transform} !important;
+  }
+}
+
+@each $style, $weight in typo.$weights {
+
+  .typo-weight-#{$style} {
+    font-weight: #{$weight} !important;
+  }
+}
+
+$-aligns: left, right, center, justify;
+
+@each $breakpoint in map.keys(breakpoint.$media) {
+
+  $infix: breakpoint.media-infix($breakpoint);
+
+  @include breakpoint.media-up($breakpoint) {
+
+    @each $name, $props in typo.$map {
+
+      // Exemplo: .typo-h1
+      //          .typo-h1__sm
+      .typo-#{$name}#{$infix} {
+        @each $prop, $val in $props {
+
+          #{$prop}: #{$val};
+        }
+      }
+    }
+
+    @each $align in $-aligns {
+
+      $is-justify: $align == justify;
+
+      @if $is-justify == false or $is-justify and $infix == "" {
+
+        // Exemplo: .typo-align-left
+        //          .typo-align-left__sm
+        .typo-align-#{$align}#{$infix} {
+          text-align: #{$align} !important;
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../../helpers";
+
 /// Define as espessuras de tipografia.
 $weights: (
   "thin": 100,
@@ -6,4 +9,80 @@ $weights: (
   "medium": 500,
   "bold": 700,
   "black": 900
+) !default;
+
+/// Define as tipografias e suas propriedades.
+$map: (
+  "h1": (
+    "font-size": helpers.px-to-rem(96px),
+    "font-weight": map.get($weights, "light"),
+    "letter-spacing": helpers.px-to-em(-.24992px),
+    "line-height": 1
+  ),
+  "h2": (
+    "font-size": helpers.px-to-rem(60px),
+    "font-weight": map.get($weights, "light"),
+    "letter-spacing": helpers.px-to-em(-.13328px),
+    "line-height": 1
+  ),
+  "h3": (
+    "font-size": helpers.px-to-rem(48px),
+    "font-weight": map.get($weights, "regular"),
+    "letter-spacing": normal,
+    "line-height": helpers.px-to-rem(50px)
+  ),
+  "h4": (
+    "font-size": helpers.px-to-rem(34px),
+    "font-weight": map.get($weights, "regular"),
+    "letter-spacing": helpers.px-to-em(.1176px),
+    "line-height": helpers.px-to-rem(40px)
+  ),
+  "h5": (
+    "font-size": helpers.px-to-rem(24px),
+    "font-weight": map.get($weights, "regular"),
+    "letter-spacing": normal,
+    "line-height": helpers.px-to-rem(32px)
+  ),
+  "h6": (
+    "font-size": helpers.px-to-rem(20px),
+    "font-weight": map.get($weights, "medium"),
+    "letter-spacing": helpers.px-to-em(.2px),
+    "line-height": 1.6
+  ),
+  "subtitle-1": (
+    "font-size": helpers.px-to-rem(18px),
+    "font-weight": map.get($weights, "regular"),
+    "letter-spacing": helpers.px-to-em(.14992px),
+    "line-height": helpers.px-to-rem(30px)
+  ),
+  "subtitle-2": (
+    "font-size": helpers.px-to-rem(15px),
+    "font-weight": map.get($weights, "medium"),
+    "letter-spacing": helpers.px-to-em(.11424px),
+    "line-height": helpers.px-to-rem(26px)
+  ),
+  "body-1": (
+    "font-size": helpers.px-to-rem(16px),
+    "font-weight": map.get($weights, "regular"),
+    "letter-spacing": helpers.px-to-em(.5px),
+    "line-height": 1.5
+  ),
+  "body-2": (
+    "font-size": helpers.px-to-rem(14px),
+    "font-weight": map.get($weights, "regular"),
+    "letter-spacing": helpers.px-to-em(.28576px),
+    "line-height": helpers.px-to-rem(24px)
+  ),
+  "caption-1": (
+    "font-size": helpers.px-to-rem(13px),
+    "font-weight": map.get($weights, "regular"),
+    "letter-spacing": helpers.px-to-em(.53328px),
+    "line-height": helpers.px-to-rem(22px)
+  ),
+  "caption-2": (
+    "font-size": helpers.px-to-rem(12px),
+    "font-weight": map.get($weights, "medium"),
+    "letter-spacing": helpers.px-to-em(.53328px),
+    "line-height": helpers.px-to-rem(20px)
+  )
 ) !default;
