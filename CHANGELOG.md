@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## Xmutarn v0.30.0 (2020-11-06) - Release 18
+
+- Adicionado tipografias responsivas.
+- Adicionado descrição e cores para o componente **input**.
+- Adicionado a página de documentação para o componente **input**.
+
+---
+
+- O componente **input** foi reconstruído.
+- O nome das classes de Flexbox foram alteradas.
+- O sufixo de tamanho das classes de bordas foram alterados.
+- A classe `.avatar--header--subtitle` foi renomeada para `.avatar--header--summary`.
+
+---
+
+- As cores do botão de realçe foram corrigidas.
+- Os rótulos ativo de componentes **input** foram fixados.
+
 ## Xmutarn v0.29.0 (2020-10-30) - Release 17
 
 - Os módulos `Input`, `Toast`, `ThemeController`, `MainThemeController`, `FeaturedThemeController` e
