@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "../helpers";
+@use "../themes/palette";
 @use "../themes/theme";
 @use "../utils/typo";
 
@@ -10,6 +11,21 @@
   font-weight: #{map.get(typo.$weights, "medium")};
   color: #{$color};
   border-color: #{$color};
+
+  $colors: (
+    "alert": palette.get-color("red", "500"),
+    "success": palette.get-color("green", "500"),
+    "warning": palette.get-color("orange", "500")
+  );
+
+  @each $name, $color in $colors {
+
+    // Exemplo: .input_color-alert.
+    &_color-#{$name} {
+      color: #{$color};
+      border-color: #{$color};
+    }
+  }
 
   &--field {
     padding: #{helpers.px-to-em(16px 5px 12px 0)};
@@ -70,7 +86,14 @@
     pointer-events: none;
 
     &_active {
-      transform: translate(-15%, #{helpers.px-to-em(-16px)}) scale(.7);
+      transform: translate(-15%, #{helpers.px-to-em(-18px)}) scale(.7);
     }
+  }
+
+  &--description {
+    margin: 0;
+    margin-top: #{helpers.px-to-rem(5px)};
+    font-size: #{helpers.px-to-rem(12px)};
+    color: inherit;
   }
 }

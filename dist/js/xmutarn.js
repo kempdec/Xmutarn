@@ -77,7 +77,8 @@ class InputComponent extends Component_1.Component {
         this.classes = {
             field: "input--field",
             label: "input--label",
-            activeLabel: "input--label_active"
+            activeLabel: "input--label_active",
+            description: "input--description"
         };
         if (!element) {
             throw new Error("O primeiro argumento deve ser fornecido.");
@@ -87,42 +88,60 @@ class InputComponent extends Component_1.Component {
             throw new Error(`Não foi possível encontrar um elemento com a classe '${this.classes.field}'`);
         }
         this._label = element.querySelector(`.${this.classes.label}`);
-    }
-    activeLabel() {
-        this.label.classList.add(this.classes.activeLabel);
-    }
-    disableLabel() {
-        this.label.classList.remove(this.classes.activeLabel);
-    }
-    toggleActiveLabel() {
-        if (!this.field.value) {
-            this.disableLabel();
-            return;
-        }
-        this.activeLabel();
+        this._description = element.querySelector(`.${this.classes.description}`);
     }
     addActiveLabelToogle() {
-        this.toggleActiveLabel();
-        this.field.addEventListener("blur", () => this.toggleActiveLabel());
-    }
-    createLabel() {
-        this._label = document.createElement("label");
-        this.label.classList.add(this.classes.label);
-        this.element.appendChild(this.label);
-        this.addActiveLabelToogle();
+        function activeLabel() {
+            this.label.classList.add(this.classes.activeLabel);
+        }
+        function disableLabel() {
+            this.label.classList.remove(this.classes.activeLabel);
+        }
+        function toggleActiveLabel() {
+            if (!this.field.value) {
+                disableLabel();
+                return;
+            }
+            activeLabel();
+        }
+        this.field.addEventListener("blur", () => toggleActiveLabel());
     }
     get label() {
+        function createLabel() {
+            this._label = document.createElement("label");
+            this.label.classList.add(this.classes.label);
+            this.element.appendChild(this.label);
+            this.addActiveLabelToogle();
+        }
         if (!this._label) {
-            this.createLabel();
+            createLabel();
         }
         return this._label;
     }
     setLabelText(text) {
         this.label.innerText = text;
     }
+    get description() {
+        function createDescription() {
+            this._description = document.createElement("p");
+            this.description.classList.add(this.classes.description);
+            this.element.appendChild(this.description);
+        }
+        if (!this._description) {
+            createDescription();
+        }
+        return this._description;
+    }
+    setDescriptionText(text) {
+        this.description.innerText = text;
+    }
+    removeDescription() {
+        if (this.description) {
+            this.description.remove();
+        }
+    }
     static initFromHtml(attrName, labelAttrName) {
-        const elements = document.querySelectorAll(`[${attrName}]`);
-        for (let element of elements) {
+        function init(element, labelAttrName) {
             if (!element.hasAttribute(labelAttrName)) {
                 throw new Error(`Não foi possível encontrar um elemento com o atributo '${labelAttrName}'.`);
             }
@@ -130,6 +149,8 @@ class InputComponent extends Component_1.Component {
             const labelAttr = element.getAttribute(labelAttrName);
             input.setLabelText(labelAttr);
         }
+        const elements = document.querySelectorAll(`[${attrName}]`);
+        elements.forEach(element => init(element, labelAttrName));
     }
 }
 exports.InputComponent = InputComponent;

@@ -31,10 +31,10 @@ block content
             header.card--header.flex-col-12
               h1.card--header--title.typo-subtitle-2
                 | Exemplo
-            .flex-col-3.padding-md
+            .flex-col-4__md.flex-col-3__xl.padding-md
               .input
                 input.input--field(placeholder="Default")
-            .flex-col-3.padding-md
+            .flex-col-4__md.flex-col-3__xl.padding-md
               .input
                 input.input--field.input--field_outlined(placeholder="Outlined")
           pre.theme-bg-card
@@ -59,12 +59,12 @@ block content
             header.card--header.flex-col-12
               h1.card--header--title.typo-subtitle-2
                 | Exemplo
-            .flex-col-3.padding-md
+            .flex-col-4__md.flex-col-3__xl.padding-md
               .input
                 input.input--field
                 label.input--label.input--label_active
                   | Default
-            .flex-col-3.padding-md
+            .flex-col-4__md.flex-col-3__xl.padding-md
               .input
                 input.input--field.input--field_outlined
                 label.input--label.input--label_active
@@ -86,6 +86,84 @@ block content
               | &lt;/div>
 
           h2.typo-h3
+            | Descrição
+          p
+            | Adicione uma descrição para informar o usuário final.
+
+          .card.display-flex(style="flex-wrap: wrap;")
+            header.card--header.flex-col-12
+              h1.card--header--title.typo-subtitle-2
+                | Exemplo
+            .flex-col-4__md.flex-col-3__xl.padding-md
+              .input
+                .input
+                input.input--field(placeholder="Default")
+                p.input--description
+                  | Uma descrição qualquer.
+            .flex-col-4__md.flex-col-3__xl.padding-md
+              .input
+                input.input--field.input--field_outlined(placeholder="Outlined")
+                p.input--description
+                  | Uma descrição qualquer.
+          pre.theme-bg-card
+            code.language-html
+              | &lt;div class="input">
+              |     &lt;input class="input--field" placeholder="Default">
+              |     &lt;p class="input--description">
+              |         Uma descrição qualquer.
+              |     &lt;/p>
+              | &lt;/div>
+              |
+              | &lt;div class="input">
+              |     &lt;input class="input--field input--field_outlined" placeholder="Outlined">
+              |     &lt;p class="input--description">
+              |         Uma descrição qualquer.
+              |     &lt;/p>
+              | &lt;/div>
+
+          h2.typo-h3
+            | Cores
+          p
+            | As cores podem ser usadas pra destacar um input.
+
+          .card.display-flex(style="flex-wrap: wrap;")
+            header.card--header.flex-col-12
+              h1.card--header--title.typo-subtitle-2
+                | Exemplo
+            .flex-col-4__md.flex-col-3__xl.padding-md
+              .input.input_color-alert
+                input.input--field(placeholder="Alert")
+            .flex-col-4__md.flex-col-3__xl.padding-md
+              .input.input_color-warning
+                input.input--field(placeholder="Warning")
+                p.input--description
+                  | Uma descrição de atenção.
+            .flex-col-4__md.flex-col-3__xl.padding-md
+              .input.input_color-success
+                input.input--field.input--field_outlined(placeholder="Success")
+                p.input--description
+                  | Uma descrição de sucesso.
+          pre.theme-bg-card
+            code.language-html
+              | &lt;div class="input input_color-alert">
+              |     &lt;input class="input--field" placeholder="Alert">
+              | &lt;/div>
+              |
+              | &lt;div class="input input_color-warning">
+              |     &lt;input class="input--field" placeholder="Warning">
+              |     &lt;p class="input--description">
+              |         Uma descrição de atenção.
+              |     &lt;/p>
+              | &lt;/div>
+              |
+              | &lt;div class="input input_color-success">
+              |     &lt;input class="input--field input--field_outlined" placeholder="Success">
+              |     &lt;p class="input--description">
+              |         Uma descrição de sucesso.
+              |     &lt;/p>
+              | &lt;/div>
+
+          h2.typo-h3
             | Instância a partir do HTML
           p
             | Você pode criar uma instância simples a partir do HTML com o atributo
@@ -101,10 +179,10 @@ block content
             header.card--header.flex-col-12
               h1.card--header--title.typo-subtitle-2
                 | Exemplo
-            .flex-col-3.padding-md
+            .flex-col-4__md.flex-col-3__xl.padding-md
               .input(x-input x-input-label="Default")
                 input.input--field
-            .flex-col-3.padding-md
+            .flex-col-4__md.flex-col-3__xl.padding-md
               .input(x-input x-input-label="Outlined")
                 input.input--field.input--field_outlined
           pre.theme-bg-card

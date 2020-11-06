@@ -1231,6 +1231,18 @@ input[type=password]::-ms-reveal {
   color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
   border-color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
 }
+.input_color-alert {
+  color: #F44336;
+  border-color: #F44336;
+}
+.input_color-success {
+  color: #4CAF50;
+  border-color: #4CAF50;
+}
+.input_color-warning {
+  color: #FF9800;
+  border-color: #FF9800;
+}
 .input--field {
   padding: 1em 0.3125em 0.75em 0;
   width: 100%;
@@ -1275,7 +1287,13 @@ input[type=password]::-ms-reveal {
   pointer-events: none;
 }
 .input--label_active, .input--field:focus ~ .input--label {
-  transform: translate(-15%, -1em) scale(0.7);
+  transform: translate(-15%, -1.125em) scale(0.7);
+}
+.input--description {
+  margin: 0;
+  margin-top: 0.3125rem;
+  font-size: 0.75rem;
+  color: inherit;
 }
 
 .typo-use-roboto, .typo-use-default {
