@@ -94,25 +94,26 @@ class InputComponent extends Component_1.Component {
     disableLabel() {
         this.label.classList.remove(this.classes.activeLabel);
     }
+    toggleActiveLabel() {
+        if (!this.field.value) {
+            this.disableLabel();
+            return;
+        }
+        this.activeLabel();
+    }
     addActiveLabelToogle() {
-        this.field.addEventListener("blur", () => {
-            if (!this.field.value) {
-                this.disableLabel();
-                return;
-            }
-            this.activeLabel();
-        });
+        this.toggleActiveLabel();
+        this.field.addEventListener("blur", () => this.toggleActiveLabel());
     }
     createLabel() {
-        const label = document.createElement("label");
-        label.classList.add(this.classes.label);
-        this.element.appendChild(label);
+        this._label = document.createElement("label");
+        this.label.classList.add(this.classes.label);
+        this.element.appendChild(this.label);
         this.addActiveLabelToogle();
-        return label;
     }
     get label() {
         if (!this._label) {
-            this._label = this.createLabel();
+            this.createLabel();
         }
         return this._label;
     }

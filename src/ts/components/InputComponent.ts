@@ -46,53 +46,50 @@ export class InputComponent extends Component {
     this._label = element.querySelector(`.${this.classes.label}`);
   }
 
-  /** Ativa o rótulo do input. */
-  private activeLabel(): void {
-
-    this.label.classList.add(this.classes.activeLabel);
-  }
-
-  /** Desativa o rótulo do input. */
-  private disableLabel(): void {
-
-    this.label.classList.remove(this.classes.activeLabel);
-  }
-
   /** Adiciona alternância para o rótulo ativo do input. */
   public addActiveLabelToogle(): void {
 
-    this.field.addEventListener("blur", () => {
+    function activeLabel(): void {
+
+      this.label.classList.add(this.classes.activeLabel);
+    }
+
+    function disableLabel(): void {
+
+      this.label.classList.remove(this.classes.activeLabel);
+    }
+
+    function toggleActiveLabel(): void {
 
       if (!this.field.value) {
 
-        this.disableLabel();
+        disableLabel();
 
         return;
       }
 
-      this.activeLabel();
-    });
-  }
+      activeLabel();
+    }
 
-  /** Cria e retorna um rótulo do input. */
-  private createLabel(): HTMLLabelElement {
-
-    const label = document.createElement("label");
-
-    label.classList.add(this.classes.label);
-    this.element.appendChild(label);
-
-    this.addActiveLabelToogle();
-
-    return label;
+    this.field.addEventListener("blur", () => toggleActiveLabel());
   }
 
   /** Obtém o rótulo do input. */
   public get label(): HTMLLabelElement {
 
+    function createLabel(): void {
+
+      this._label = document.createElement("label");
+
+      this.label.classList.add(this.classes.label);
+      this.element.appendChild(this.label);
+
+      this.addActiveLabelToogle();
+    }
+
     if (!this._label) {
 
-      this._label = this.createLabel();
+      createLabel();
     }
 
     return this._label;
@@ -116,9 +113,7 @@ export class InputComponent extends Component {
    */
   public static initFromHtml(attrName: string, labelAttrName: string): void {
 
-    const elements = document.querySelectorAll(`[${attrName}]`) as NodeListOf<HTMLElement>;
-
-    for (let element of elements) {
+    function init(element: HTMLElement, labelAttrName: string) {
 
       if (!element.hasAttribute(labelAttrName)) {
 
@@ -130,5 +125,9 @@ export class InputComponent extends Component {
 
       input.setLabelText(labelAttr);
     }
+
+    const elements = document.querySelectorAll(`[${attrName}]`) as NodeListOf<HTMLElement>;
+
+    elements.forEach(element => init(element, labelAttrName));
   }
 }
