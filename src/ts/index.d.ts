@@ -40,6 +40,19 @@ export class InputComponent extends Component {
    */
   public setLabelText(text: string): void;
 
+  /** Obtém a descrição do input. */
+  public get description(): HTMLParagraphElement;
+
+  /**
+   * Define o texto da descrição do input.
+   *
+   * @param text O texto da descrição do input.
+   */
+  public setDescriptionText(text: string): void;
+
+  /** Remove a descrição do input. */
+  public removeDescription(): void;
+
   /**
    * Inicializa novas instâncias a partir do nome do atributo HTML especificado.
    *
