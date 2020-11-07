@@ -106,15 +106,15 @@ class InputComponent extends Component_1.Component {
         }
         this.field.addEventListener("blur", () => toggleActiveLabel());
     }
+    createLabel() {
+        this._label = document.createElement("label");
+        this.label.classList.add(this.classes.label);
+        this.element.appendChild(this.label);
+        this.addActiveLabelToogle();
+    }
     get label() {
-        function createLabel() {
-            this._label = document.createElement("label");
-            this.label.classList.add(this.classes.label);
-            this.element.appendChild(this.label);
-            this.addActiveLabelToogle();
-        }
         if (!this._label) {
-            createLabel();
+            this.createLabel();
         }
         return this._label;
     }

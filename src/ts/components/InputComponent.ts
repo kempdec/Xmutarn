@@ -19,14 +19,14 @@ export class InputComponent extends Component {
     description: "input--description"
   };
 
-  /** O campo do input. */
-  public readonly field: HTMLInputElement;
-
   /** O rótulo do input. */
   private _label: HTMLLabelElement;
 
   /** A descrição do input. */
   private _description: HTMLParagraphElement;
+
+  /** O campo do input. */
+  public readonly field: HTMLInputElement;
 
   /**
    * Inicializa uma nova instância.
@@ -81,22 +81,23 @@ export class InputComponent extends Component {
     this.field.addEventListener("blur", () => toggleActiveLabel());
   }
 
+  /** Cria o rótulo do input. */
+  private createLabel(): void {
+
+    this._label = document.createElement("label");
+
+    this.label.classList.add(this.classes.label);
+    this.element.appendChild(this.label);
+
+    this.addActiveLabelToogle();
+  }
+
   /** Obtém o rótulo do input. */
   public get label(): HTMLLabelElement {
 
-    function createLabel(): void {
-
-      this._label = document.createElement("label");
-
-      this.label.classList.add(this.classes.label);
-      this.element.appendChild(this.label);
-
-      this.addActiveLabelToogle();
-    }
-
     if (!this._label) {
 
-      createLabel();
+      this.createLabel();
     }
 
     return this._label;
