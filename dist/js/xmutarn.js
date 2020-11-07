@@ -91,30 +91,31 @@ class InputComponent extends Component_1.Component {
         this._description = element.querySelector(`.${this.classes.description}`);
     }
     addActiveLabelToogle() {
-        function activeLabel() {
+        const activeLabel = () => {
             this.label.classList.add(this.classes.activeLabel);
-        }
-        function disableLabel() {
+        };
+        const disableLabel = () => {
             this.label.classList.remove(this.classes.activeLabel);
-        }
-        function toggleActiveLabel() {
+        };
+        const toggleActiveLabel = () => {
             if (!this.field.value) {
                 disableLabel();
                 return;
             }
             activeLabel();
-        }
+        };
+        toggleActiveLabel();
         this.field.addEventListener("blur", () => toggleActiveLabel());
     }
-    createLabel() {
-        this._label = document.createElement("label");
-        this.label.classList.add(this.classes.label);
-        this.element.appendChild(this.label);
-        this.addActiveLabelToogle();
-    }
     get label() {
+        const createLabel = () => {
+            this._label = document.createElement("label");
+            this.label.classList.add(this.classes.label);
+            this.element.appendChild(this.label);
+            this.addActiveLabelToogle();
+        };
         if (!this._label) {
-            this.createLabel();
+            createLabel();
         }
         return this._label;
     }
@@ -122,11 +123,11 @@ class InputComponent extends Component_1.Component {
         this.label.innerText = text;
     }
     get description() {
-        function createDescription() {
+        const createDescription = () => {
             this._description = document.createElement("p");
             this.description.classList.add(this.classes.description);
             this.element.appendChild(this.description);
-        }
+        };
         if (!this._description) {
             createDescription();
         }

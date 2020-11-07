@@ -56,17 +56,17 @@ export class InputComponent extends Component {
   /** Adiciona alternância para o rótulo ativo do input. */
   public addActiveLabelToogle(): void {
 
-    function activeLabel(): void {
+    const activeLabel = (): void => {
 
       this.label.classList.add(this.classes.activeLabel);
     }
 
-    function disableLabel(): void {
+    const disableLabel = (): void => {
 
       this.label.classList.remove(this.classes.activeLabel);
     }
 
-    function toggleActiveLabel(): void {
+    const toggleActiveLabel = (): void => {
 
       if (!this.field.value) {
 
@@ -78,26 +78,27 @@ export class InputComponent extends Component {
       activeLabel();
     }
 
+    toggleActiveLabel();
+
     this.field.addEventListener("blur", () => toggleActiveLabel());
-  }
-
-  /** Cria o rótulo do input. */
-  private createLabel(): void {
-
-    this._label = document.createElement("label");
-
-    this.label.classList.add(this.classes.label);
-    this.element.appendChild(this.label);
-
-    this.addActiveLabelToogle();
   }
 
   /** Obtém o rótulo do input. */
   public get label(): HTMLLabelElement {
 
+    const createLabel = (): void => {
+
+      this._label = document.createElement("label");
+
+      this.label.classList.add(this.classes.label);
+      this.element.appendChild(this.label);
+
+      this.addActiveLabelToogle();
+    }
+
     if (!this._label) {
 
-      this.createLabel();
+      createLabel();
     }
 
     return this._label;
@@ -116,7 +117,7 @@ export class InputComponent extends Component {
   /** Obtém a descrição do input. */
   public get description(): HTMLParagraphElement {
 
-    function createDescription(): void {
+    const createDescription = (): void => {
 
       this._description = document.createElement("p");
 
