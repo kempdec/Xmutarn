@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Xmutarn v0.30.1 (2020-11-06) - Release 19
+
+- O rótulo ativo do componente **input** na inicialização a partir do HTML foi corrigido.
+- A ausência de métodos do componente **input** no Definition Types foi corrigida.
+
 ## Xmutarn v0.30.0 (2020-11-06) - Release 18
 
 - Adicionado tipografias responsivas.
