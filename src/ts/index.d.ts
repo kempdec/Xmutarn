@@ -62,6 +62,108 @@ export class InputComponent extends Component {
   public static initFromHtml(attrName: string, labelAttrName: string): void;
 }
 
+/** Responsável pelo gerenciamento de um componente toast. */
+export class ToastComponent extends Component {
+
+  /**
+   * Inicializa uma nova instância.
+   *
+   * @param element O elemento responsável pelo componente toast.
+   */
+  constructor(element: HTMLElement);
+
+  /** As classes do toast. */
+  public classes: string;
+
+  /** O ícone do toast. */
+  public icon: string;
+
+  /** O título do toast. */
+  public title: string;
+
+  /** A mensagem do toast. */
+  public message: string;
+
+  /** Um sinalizador indicando se o toast está ativo. */
+  public isActive: boolean;
+
+  /** Um sinalizador indicando se o toast tem sobreposição ativa. */
+  public hasActiveOverlay: boolean;
+
+  /**
+   * Define um sinalizador indicando se o toast está ativo.
+   *
+   * @param isActive Um sinalizador indicando se toast está ativo.
+   * @param millisecondsDelay O número de milissegundos para aguardar antes de definir um sinalizador indicando se o
+   * toast está ativo.
+   */
+  public setIsActive(isActive: boolean, millisecondsDelay: number): void;
+
+  /** Desativa o toast. */
+  public deactivate(): void;
+
+  /**
+   * Ativa o toast.
+   *
+   * @param millisecondsTimeout O número de milissegundos para aguardar antes de desativar o toast novamente. Se 0 for
+   * informado, o toast não será desativado.
+   */
+  public activate(millisecondsTimeout: number): void;
+
+  /**
+   * Define um novo toast.
+   *
+   * @param classes As classes do toast.
+   * @param icon O ícone do toast.
+   * @param title O título do toast.
+   * @param msg A mensagem do toast.
+   */
+  public setNew(classes: string, icon: string, title: string, msg: string): void;
+
+  /**
+   * Define um novo toast com uma mensagem.
+   *
+   * @param msg A mensagem do toast.
+   * @param classes As classes do toast.
+   */
+  public setNewMsg(msg: string, classes: string): void;
+
+  /**
+   * Define um novo toast com uma mensagem de destaque.
+   *
+   * @param msg A mensagem do toast.
+   */
+  public setNewFeaturedMsg(msg: string): void;
+
+  /**
+   * Define um novo toast com uma mensagem de realce.
+   *
+   * @param msg A mensagem do toast.
+   */
+  public setNewAccentMsg(msg: string): void;
+
+  /**
+   * Define um novo toast com uma mensagem de sucesso.
+   *
+   * @param msg A mensagem do toast.
+   */
+  public setNewSuccessMsg(msg: string): void;
+
+  /**
+   * Define um novo toast com uma mensagem de alerta.
+   *
+   * @param msg A mensagem do toast.
+   */
+  public setNewAlertMsg(msg: string): void;
+
+  /**
+   * Define um novo toast com uma mensagem de aviso.
+   *
+   * @param msg A mensagem do toast.
+   */
+  public setNewWarningMsg(msg: string): void;
+}
+
 /** Responsável pelo gerenciamento de um tema principal. */
 export class AccentThemeController extends ThemeController {
 

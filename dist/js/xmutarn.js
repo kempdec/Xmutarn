@@ -240,111 +240,194 @@ Overlay.overlayActiveClass = "overlay_active";
 },{"./Component":1}],6:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _1 = require(".");
+exports.ToastComponent = void 0;
 const Component_1 = require("./Component");
-class Toast extends Component_1.Component {
+class ToastComponent extends Component_1.Component {
     constructor(element) {
         super(element);
-        this.overlay = _1.Overlay.create();
-        this.toasterElement = element.parentElement;
-        if (!this.toasterElement.classList.contains(Toast.classes.toaster)) {
-            throw new Error(`O elemento do toaster do toast não contém a classe '${Toast.classes.toaster}'.`);
-        }
-        this.contentElement = element.querySelector(`.${Toast.classes.content}`);
-        if (!this.contentElement) {
-            throw new Error("O elemento do conteúdo do toast não foi encontrado.");
-        }
-        this.messageContentElement = this.contentElement.querySelector(`.${Toast.classes.contentMessage}`);
-        if (!this.messageContentElement) {
-            throw new Error("O elemento da mensagem do conteúdo do toast não foi encontrado.");
-        }
+        this.componentClass = {
+            overlay: "overlay",
+            overlayActive: "overlay_active",
+            toaster: "toaster",
+            toast: "toast",
+            toastActive: "toast_active",
+            toastIcon: "toast--icon",
+            toastContent: "toast--content",
+            toastTitle: "toast--content--title",
+            toastMessage: "toast--content--message",
+            toastMessageSecondary: "toast--content--message_secondary",
+            toastFeaturedColor: "toast_color-featured",
+            toastAccentColor: "toast_color-accent",
+            toastSuccessColor: "toast_color-success",
+            toastAlertColor: "toast_color-alert",
+            toastWarningColor: "toast_color-warning",
+            typo: "typo-body-2",
+            displayNone: "display-none"
+        };
+        this.setOverlayElement();
+        this.setToasterElement();
+        this.setToastElement();
     }
-    open(delay = 500) {
-        setTimeout(() => this.element.classList.add(Toast.classes.thisActive), delay);
+    setOverlayElement() {
+        this.overlayElement = this.element.querySelector(`.${this.componentClass.overlay}`);
+        if (this.overlayElement) {
+            return;
+        }
+        this.overlayElement = document.createElement("div");
+        this.overlayElement.classList.add(this.componentClass.overlay);
+        this.element.appendChild(this.overlayElement);
     }
-    close(timeout = 7000) {
-        setTimeout(() => {
-            this.element.classList.remove(Toast.classes.thisActive);
-            this.overlay.hide();
-        }, timeout);
+    setToasterElement() {
+        this.toasterElement = this.element.querySelector(`.${this.componentClass.toaster}`);
+        if (this.toasterElement) {
+            return;
+        }
+        this.toasterElement = document.createElement("div");
+        this.toasterElement.classList.add(this.componentClass.toaster);
+        this.element.appendChild(this.toasterElement);
     }
-    remove(timeout = 7000) {
-        setTimeout(() => {
-            this.close(0);
-            setTimeout(() => {
-                this.element.remove();
-                this.toasterElement.remove();
-                this.overlay.element.remove();
-            }, 400);
-        }, timeout);
+    setToastIconElement() {
+        this.toastIconElement = this.element.querySelector(`.${this.componentClass.toastIcon}`);
+        if (this.toastIconElement) {
+            return;
+        }
+        this.toastIconElement = document.createElement("div");
+        this.toastIconElement.classList.add(this.componentClass.toastIcon);
+        this.toastElement.appendChild(this.toastIconElement);
     }
-    static create(message, options = null) {
-        options = Object.assign(options, Toast.optionsDefault);
-        const toasterElement = document.createElement("aside");
-        toasterElement.classList.add(Toast.classes.toaster);
-        document.body.append(toasterElement);
-        const element = document.createElement("article");
-        element.classList.add(Toast.classes.this);
-        toasterElement.append(element);
-        const contentElement = document.createElement("div");
-        contentElement.classList.add(Toast.classes.content);
-        element.append(contentElement);
-        const messageContentElement = document.createElement("p");
-        messageContentElement.classList.add(Toast.classes.contentMessage, Toast.classes.contentMessageTypography);
-        messageContentElement.innerText = message;
-        contentElement.append(messageContentElement);
-        const toast = new Toast(element);
-        if (options.autoOpen) {
-            toast.open(options.delay);
+    setToastTitleElement() {
+        this.toastTitleElement = this.element.querySelector(`.${this.componentClass.toastTitle}`);
+        if (this.toastTitleElement) {
+            return;
         }
-        if (options.color) {
-            element.classList.add(`toast_color-${options.color}`);
+        this.toastTitleElement = document.createElement("p");
+        this.toastTitleElement.classList.add(this.componentClass.toastTitle, this.componentClass.typo);
+        this.toastContentElement.appendChild(this.toastTitleElement);
+    }
+    setToastMessageElement() {
+        this.toastMessageElement = this.element.querySelector(`.${this.componentClass.toastMessage}`);
+        if (this.toastMessageElement) {
+            return;
         }
-        if (options.iconClasses) {
-            const iconElement = document.createElement("div");
-            iconElement.classList.add(Toast.classes.icon, ...options.iconClasses.split(" "));
-            element.prepend(iconElement);
+        this.toastMessageElement = document.createElement("p");
+        this.toastMessageElement.classList.add(this.componentClass.toastMessage, this.componentClass.typo);
+        this.toastContentElement.appendChild(this.toastMessageElement);
+    }
+    setToastContentElement() {
+        this.toastContentElement = this.element.querySelector(`.${this.componentClass.toastContent}`);
+        if (this.toastContentElement) {
+            return;
         }
-        if (options.title) {
-            const titleContentElement = document.createElement("h1");
-            titleContentElement.classList.add(Toast.classes.contentTitle, Toast.classes.contentTitleTypography);
-            titleContentElement.innerText = options.title;
-            contentElement.prepend(titleContentElement);
-            messageContentElement.classList.add(Toast.classes.contentMessageSecondary);
+        this.toastContentElement = document.createElement("div");
+        this.toastContentElement.classList.add(this.componentClass.toastContent);
+        this.toastElement.appendChild(this.toastContentElement);
+        this.setToastTitleElement();
+        this.setToastMessageElement();
+    }
+    setToastElement() {
+        this.toastElement = this.element.querySelector(`.${this.componentClass.toast}`);
+        if (this.toastElement) {
+            return;
         }
-        if (options.timeout === undefined || options.timeout > 0) {
-            if (options.removeWhenClose) {
-                toast.remove(options.timeout);
-            }
-            else {
-                toast.close(options.timeout);
-            }
+        this.toastElement = document.createElement("div");
+        this.toastElement.classList.add(this.componentClass.toast);
+        this.toasterElement.appendChild(this.toastElement);
+        this.setToastIconElement();
+        this.setToastContentElement();
+    }
+    isNullOrWhiteSpace(value) {
+        return !(value === null || value === void 0 ? void 0 : value.trim());
+    }
+    get hasIcon() {
+        return !this.isNullOrWhiteSpace(this.icon);
+    }
+    get hasTitle() {
+        return !this.isNullOrWhiteSpace(this.title);
+    }
+    update() {
+        this.toastElement.setAttribute("class", `${this.componentClass.toast} ${this.classes}`);
+        if (this.hasIcon) {
+            this.toastIconElement.setAttribute("class", `${this.componentClass.toastIcon} ${this.icon}`);
         }
         else {
-            toast.overlay.show();
+            this.toastIconElement.classList.add(this.componentClass.displayNone);
         }
-        return toast;
+        if (this.hasTitle) {
+            this.toastTitleElement.innerText = this.title;
+            this.toastTitleElement.classList.remove(this.componentClass.displayNone);
+            this.toastMessageElement.classList.add(this.componentClass.toastMessageSecondary);
+        }
+        else {
+            this.toastTitleElement.classList.add(this.componentClass.displayNone);
+            this.toastMessageElement.classList.remove(this.componentClass.toastMessageSecondary);
+        }
+        this.toastMessageElement.innerText = this.message;
+    }
+    setIsActive(isActive, millisecondsDelay) {
+        clearTimeout(this.timeout);
+        this.isActive = isActive;
+        setTimeout(() => {
+            if (this.isActive) {
+                this.toastElement.classList.add(this.componentClass.toastActive);
+            }
+            else {
+                this.toastElement.classList.remove(this.componentClass.toastActive);
+            }
+            if (this.hasActiveOverlay) {
+                this.overlayElement.classList.add(this.componentClass.overlayActive);
+            }
+            else {
+                this.overlayElement.classList.remove(this.componentClass.overlayActive);
+            }
+        }, millisecondsDelay);
+    }
+    deactivate() {
+        this.hasActiveOverlay = false;
+        this.setIsActive(false, 0);
+    }
+    activate(millisecondsTimeout = 7000) {
+        if (millisecondsTimeout <= 0) {
+            this.hasActiveOverlay = true;
+        }
+        this.setIsActive(true, 500);
+        if (millisecondsTimeout > 0) {
+            this.timeout = setTimeout(() => {
+                this.deactivate();
+            }, millisecondsTimeout);
+        }
+    }
+    setNew(classes, icon, title, msg) {
+        if (this.isActive) {
+            this.deactivate();
+        }
+        this.classes = classes;
+        this.icon = icon;
+        this.title = title;
+        this.message = msg;
+        setTimeout(() => this.update(), 250);
+    }
+    setNewMsg(msg, classes = "") {
+        this.setNew(classes, "", "", msg);
+    }
+    setNewFeaturedMsg(msg) {
+        this.setNewMsg(msg, this.componentClass.toastFeaturedColor);
+    }
+    setNewAccentMsg(msg) {
+        this.setNewMsg(msg, this.componentClass.toastAccentColor);
+    }
+    setNewSuccessMsg(msg) {
+        this.setNewMsg(msg, this.componentClass.toastSuccessColor);
+    }
+    setNewAlertMsg(msg) {
+        this.setNewMsg(msg, this.componentClass.toastAlertColor);
+    }
+    setNewWarningMsg(msg) {
+        this.setNewMsg(msg, this.componentClass.toastWarningColor);
     }
 }
-exports.default = Toast;
-Toast.classes = {
-    toaster: "toaster",
-    this: "toast",
-    thisActive: "toast_active",
-    icon: "toast--icon",
-    content: "toast--content",
-    contentTitle: "toast--content--title",
-    contentTitleTypography: "typo-body-2",
-    contentMessage: "toast--content--message",
-    contentMessageSecondary: "toast--content--message_secondary",
-    contentMessageTypography: "typo-body-2"
-};
-Toast.optionsDefault = {
-    autoOpen: true,
-    removeWhenClose: true
-};
+exports.ToastComponent = ToastComponent;
 
-},{".":8,"./Component":1}],7:[function(require,module,exports){
+},{"./Component":1}],7:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Component_1 = require("./Component");
@@ -403,20 +486,19 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Toolbar = exports.Toast = exports.Overlay = exports.NavigationDrawer = exports.Dialog = void 0;
+exports.Toolbar = exports.Overlay = exports.NavigationDrawer = exports.Dialog = void 0;
 const Dialog_1 = __importDefault(require("./Dialog"));
 exports.Dialog = Dialog_1.default;
 const NavigationDrawer_1 = __importDefault(require("./NavigationDrawer"));
 exports.NavigationDrawer = NavigationDrawer_1.default;
 const Overlay_1 = __importDefault(require("./Overlay"));
 exports.Overlay = Overlay_1.default;
-const Toast_1 = __importDefault(require("./Toast"));
-exports.Toast = Toast_1.default;
 const Toolbar_1 = __importDefault(require("./Toolbar"));
 exports.Toolbar = Toolbar_1.default;
 __exportStar(require("./InputComponent"), exports);
+__exportStar(require("./ToastComponent"), exports);
 
-},{"./Dialog":2,"./InputComponent":3,"./NavigationDrawer":4,"./Overlay":5,"./Toast":6,"./Toolbar":7}],9:[function(require,module,exports){
+},{"./Dialog":2,"./InputComponent":3,"./NavigationDrawer":4,"./Overlay":5,"./ToastComponent":6,"./Toolbar":7}],9:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccentThemeController = void 0;
