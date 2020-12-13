@@ -1,6 +1,6 @@
 import { Component } from "./Component";
 
-/** Responsável pelo gerenciamento de um componente "input". */
+/** Responsável pelo gerenciamento de um componente input. */
 export class InputComponent extends Component {
 
   /** As classes do input. */
@@ -19,19 +19,32 @@ export class InputComponent extends Component {
     description: "input--description"
   };
 
-  /** O rótulo do input. */
-  private _label: HTMLLabelElement;
+  /** As classes de cores do input. */
+  private readonly colorClasses: { [key: string]: string } = {
 
-  /** A descrição do input. */
-  private _description: HTMLParagraphElement;
+    /** A cor de sucesso do input. */
+    success: "input_color-success",
 
-  /** O campo do input. */
-  public readonly field: HTMLInputElement;
+    /** A cor de alerta do input. */
+    alert: "input_color-alert",
+
+    /** A cor de aviso do input. */
+    warning: "input_color-warning"
+  };
+
+  /** O elemento de rótulo do input. */
+  private _labelElement: HTMLLabelElement;
+
+  /** O elemento de descrição do input. */
+  private _descriptionElement: HTMLParagraphElement;
+
+  /** O elemento do campo do input. */
+  public readonly fieldElement: HTMLInputElement;
 
   /**
    * Inicializa uma nova instância.
    *
-   * @param element O elemento do componente "input".
+   * @param element O elemento do componente input.
    */
   constructor(element: HTMLElement) {
 
@@ -42,15 +55,15 @@ export class InputComponent extends Component {
       throw new Error("O primeiro argumento deve ser fornecido.");
     }
 
-    this.field = element.querySelector(`.${this.classes.field}`);
+    this.fieldElement = element.querySelector(`.${this.classes.field}`);
 
-    if (!this.field) {
+    if (!this.fieldElement) {
 
       throw new Error(`Não foi possível encontrar um elemento com a classe '${this.classes.field}'`);
     }
 
-    this._label = element.querySelector(`.${this.classes.label}`);
-    this._description = element.querySelector(`.${this.classes.description}`);
+    this._labelElement = element.querySelector(`.${this.classes.label}`);
+    this._descriptionElement = element.querySelector(`.${this.classes.description}`);
   }
 
   /** Adiciona alternância para o rótulo ativo do input. */
@@ -58,17 +71,17 @@ export class InputComponent extends Component {
 
     const activeLabel = (): void => {
 
-      this.label.classList.add(this.classes.activeLabel);
+      this.labelElement.classList.add(this.classes.activeLabel);
     }
 
     const disableLabel = (): void => {
 
-      this.label.classList.remove(this.classes.activeLabel);
+      this.labelElement.classList.remove(this.classes.activeLabel);
     }
 
     const toggleActiveLabel = (): void => {
 
-      if (!this.field.value) {
+      if (!this.fieldElement.value) {
 
         disableLabel();
 
@@ -80,28 +93,28 @@ export class InputComponent extends Component {
 
     toggleActiveLabel();
 
-    this.field.addEventListener("blur", () => toggleActiveLabel());
+    this.fieldElement.addEventListener("blur", () => toggleActiveLabel());
   }
 
   /** Obtém o rótulo do input. */
-  public get label(): HTMLLabelElement {
+  public get labelElement(): HTMLLabelElement {
 
     const createLabel = (): void => {
 
-      this._label = document.createElement("label");
+      this._labelElement = document.createElement("label");
+      this.labelElement.classList.add(this.classes.label);
 
-      this.label.classList.add(this.classes.label);
-      this.element.appendChild(this.label);
+      this.element.appendChild(this.labelElement);
 
       this.addActiveLabelToogle();
     }
 
-    if (!this._label) {
+    if (!this._labelElement) {
 
       createLabel();
     }
 
-    return this._label;
+    return this._labelElement;
   }
 
   /**
@@ -109,9 +122,18 @@ export class InputComponent extends Component {
    *
    * @param text O texto do rótulo do input.
    */
-  public setLabelText(text: string): void {
+  public setLabel(text: string): void {
 
-    this.label.innerText = text;
+    this.labelElement.innerText = text;
+  }
+
+  /** Remove a cor do input. */
+  private removeColor(): void {
+
+    for (let colorClass in this.colorClasses) {
+
+      this.element.classList.remove(this.colorClasses[colorClass]);
+    }
   }
 
   /** Obtém a descrição do input. */
@@ -119,28 +141,18 @@ export class InputComponent extends Component {
 
     const createDescription = (): void => {
 
-      this._description = document.createElement("p");
-
+      this._descriptionElement = document.createElement("p");
       this.description.classList.add(this.classes.description);
+
       this.element.appendChild(this.description);
     }
 
-    if (!this._description) {
+    if (!this._descriptionElement) {
 
       createDescription();
     }
 
-    return this._description;
-  }
-
-  /**
-   * Define o texto da descrição do input.
-   *
-   * @param text O texto da descrição do input.
-   */
-  public setDescriptionText(text: string): void {
-
-    this.description.innerText = text;
+    return this._descriptionElement;
   }
 
   /** Remove a descrição do input. */
@@ -150,6 +162,66 @@ export class InputComponent extends Component {
 
       this.description.remove();
     }
+  }
+
+  /**
+   * Define o texto da descrição do input.
+   *
+   * @param text O texto da descrição do input.
+   * @param color A cor do input.
+   */
+  public setDescription(text: string, color: string = ""): void {
+
+    this.description.innerText = text;
+
+    if (color) {
+
+      this.element.classList.add(color);
+
+      const events = ["blur", "keyup"];
+
+      for (let event of events) {
+
+        this.fieldElement.addEventListener(event, () => {
+
+          this.removeDescription();
+          this.removeColor();
+        });
+      }
+    } else {
+
+      this.removeColor();
+    }
+  }
+
+  /**
+   * Define o texto da descrição do input na cor de sucesso.
+   *
+   * @param text O texto da descrição do input.
+   */
+  public setSuccessDescription(text: string): void {
+
+    this.setDescription(text, this.colorClasses.success);
+  }
+
+  /**
+   * Define o texto da descrição do input na cor de alerta.
+   *
+   * @param text O texto da descrição do input.
+   */
+  public setAlertDescription(text: string): void {
+
+    this.setDescription(text, this.colorClasses.alert);
+  }
+
+  /**
+   * Define o texto da descrição do input na cor de aviso.
+   *
+   * @param text O texto da descrição do input.
+   */
+  public setWarningDescription(text: string): void {
+
+    this.setDescription(text, this.colorClasses.warning);
   }
 
   /**
@@ -170,7 +242,7 @@ export class InputComponent extends Component {
       const input = new InputComponent(element);
       const labelAttr = element.getAttribute(labelAttrName);
 
-      input.setLabelText(labelAttr);
+      input.setLabel(labelAttr);
     }
 
     const elements = document.querySelectorAll(`[${attrName}]`) as NodeListOf<HTMLElement>;

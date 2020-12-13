@@ -15,15 +15,16 @@ export abstract class Component {
 }
 
 /** Responsável pelo gerenciamento de um componente "input". */
+/** Responsável pelo gerenciamento de um componente input. */
 export class InputComponent extends Component {
 
-  /** O campo do input. */
-  public readonly field: HTMLInputElement;
+  /** O elemento do campo do input. */
+  public readonly fieldElement: HTMLInputElement;
 
   /**
    * Inicializa uma nova instância.
    *
-   * @param element O elemento do componente "input".
+   * @param element O elemento do componente input.
    */
   constructor(element: HTMLElement);
 
@@ -31,27 +32,49 @@ export class InputComponent extends Component {
   public addActiveLabelToogle(): void;
 
   /** Obtém o rótulo do input. */
-  public get label(): HTMLLabelElement;
+  public get labelElement(): HTMLLabelElement;
 
   /**
    * Define o texto do rótulo do input.
    *
    * @param text O texto do rótulo do input.
    */
-  public setLabelText(text: string): void;
+  public setLabel(text: string): void;
 
   /** Obtém a descrição do input. */
   public get description(): HTMLParagraphElement;
+
+  /** Remove a descrição do input. */
+  public removeDescription(): void;
 
   /**
    * Define o texto da descrição do input.
    *
    * @param text O texto da descrição do input.
+   * @param color A cor do input.
    */
-  public setDescriptionText(text: string): void;
+  public setDescription(text: string, color: string): void;
 
-  /** Remove a descrição do input. */
-  public removeDescription(): void;
+  /**
+   * Define o texto da descrição do input na cor de sucesso.
+   *
+   * @param text O texto da descrição do input.
+   */
+  public setSuccessDescription(text: string): void;
+
+  /**
+   * Define o texto da descrição do input na cor de alerta.
+   *
+   * @param text O texto da descrição do input.
+   */
+  public setAlertDescription(text: string): void;
+
+  /**
+   * Define o texto da descrição do input na cor de aviso.
+   *
+   * @param text O texto da descrição do input.
+   */
+  public setWarningDescription(text: string): void;
 
   /**
    * Inicializa novas instâncias a partir do nome do atributo HTML especificado.

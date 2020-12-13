@@ -4,7 +4,7 @@ import { Component } from "./Component";
 export class ToastComponent extends Component {
 
   /** As classes dos componentes. */
-  private componentClass = {
+  private readonly componentClass = {
 
     overlay: "overlay",
 
@@ -237,11 +237,11 @@ export class ToastComponent extends Component {
   /** Atualiza o toast. */
   private update(): void {
 
-    this.toastElement.setAttribute("class", `${this.componentClass.toast} ${this.classes}`);
+    this.toastElement.classList.value = `${this.componentClass.toast} ${this.classes}`;
 
     if (this.hasIcon) {
 
-      this.toastIconElement.setAttribute("class", `${this.componentClass.toastIcon} ${this.icon}`);
+      this.toastIconElement.classList.value = `${this.componentClass.toastIcon} ${this.icon}`;
     } else {
 
       this.toastIconElement.classList.add(this.componentClass.displayNone);

@@ -80,66 +80,98 @@ class InputComponent extends Component_1.Component {
             activeLabel: "input--label_active",
             description: "input--description"
         };
+        this.colorClasses = {
+            success: "input_color-success",
+            alert: "input_color-alert",
+            warning: "input_color-warning"
+        };
         if (!element) {
             throw new Error("O primeiro argumento deve ser fornecido.");
         }
-        this.field = element.querySelector(`.${this.classes.field}`);
-        if (!this.field) {
+        this.fieldElement = element.querySelector(`.${this.classes.field}`);
+        if (!this.fieldElement) {
             throw new Error(`Não foi possível encontrar um elemento com a classe '${this.classes.field}'`);
         }
-        this._label = element.querySelector(`.${this.classes.label}`);
-        this._description = element.querySelector(`.${this.classes.description}`);
+        this._labelElement = element.querySelector(`.${this.classes.label}`);
+        this._descriptionElement = element.querySelector(`.${this.classes.description}`);
     }
     addActiveLabelToogle() {
         const activeLabel = () => {
-            this.label.classList.add(this.classes.activeLabel);
+            this.labelElement.classList.add(this.classes.activeLabel);
         };
         const disableLabel = () => {
-            this.label.classList.remove(this.classes.activeLabel);
+            this.labelElement.classList.remove(this.classes.activeLabel);
         };
         const toggleActiveLabel = () => {
-            if (!this.field.value) {
+            if (!this.fieldElement.value) {
                 disableLabel();
                 return;
             }
             activeLabel();
         };
         toggleActiveLabel();
-        this.field.addEventListener("blur", () => toggleActiveLabel());
+        this.fieldElement.addEventListener("blur", () => toggleActiveLabel());
     }
-    get label() {
+    get labelElement() {
         const createLabel = () => {
-            this._label = document.createElement("label");
-            this.label.classList.add(this.classes.label);
-            this.element.appendChild(this.label);
+            this._labelElement = document.createElement("label");
+            this.labelElement.classList.add(this.classes.label);
+            this.element.appendChild(this.labelElement);
             this.addActiveLabelToogle();
         };
-        if (!this._label) {
+        if (!this._labelElement) {
             createLabel();
         }
-        return this._label;
+        return this._labelElement;
     }
-    setLabelText(text) {
-        this.label.innerText = text;
+    setLabel(text) {
+        this.labelElement.innerText = text;
+    }
+    removeColor() {
+        for (let colorClass in this.colorClasses) {
+            this.element.classList.remove(this.colorClasses[colorClass]);
+        }
     }
     get description() {
         const createDescription = () => {
-            this._description = document.createElement("p");
+            this._descriptionElement = document.createElement("p");
             this.description.classList.add(this.classes.description);
             this.element.appendChild(this.description);
         };
-        if (!this._description) {
+        if (!this._descriptionElement) {
             createDescription();
         }
-        return this._description;
-    }
-    setDescriptionText(text) {
-        this.description.innerText = text;
+        return this._descriptionElement;
     }
     removeDescription() {
         if (this.description) {
             this.description.remove();
         }
+    }
+    setDescription(text, color = "") {
+        this.description.innerText = text;
+        if (color) {
+            this.element.classList.add(color);
+            const events = ["blur", "keyup"];
+            for (let event of events) {
+                this.fieldElement.addEventListener(event, () => {
+                    this.removeDescription();
+                    this.removeColor();
+                });
+            }
+        }
+        else {
+            this.removeColor();
+        }
+    }
+    setSuccessDescription(text) {
+        this.setDescription(text, this.colorClasses.success);
+    }
+    setAlertDescription(text) {
+        this.setDescription(text, this.colorClasses.alert);
+    }
+    setWarningDescription(text) {
+        this.setDescription(text, this.colorClasses.warning);
     }
     static initFromHtml(attrName, labelAttrName) {
         function init(element, labelAttrName) {
@@ -148,7 +180,7 @@ class InputComponent extends Component_1.Component {
             }
             const input = new InputComponent(element);
             const labelAttr = element.getAttribute(labelAttrName);
-            input.setLabelText(labelAttr);
+            input.setLabel(labelAttr);
         }
         const elements = document.querySelectorAll(`[${attrName}]`);
         elements.forEach(element => init(element, labelAttrName));
@@ -345,9 +377,9 @@ class ToastComponent extends Component_1.Component {
         return !this.isNullOrWhiteSpace(this.title);
     }
     update() {
-        this.toastElement.setAttribute("class", `${this.componentClass.toast} ${this.classes}`);
+        this.toastElement.classList.value = `${this.componentClass.toast} ${this.classes}`;
         if (this.hasIcon) {
-            this.toastIconElement.setAttribute("class", `${this.componentClass.toastIcon} ${this.icon}`);
+            this.toastIconElement.classList.value = `${this.componentClass.toastIcon} ${this.icon}`;
         }
         else {
             this.toastIconElement.classList.add(this.componentClass.displayNone);
