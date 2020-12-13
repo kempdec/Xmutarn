@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Xmutarn v0.31.0 (2020-12-13) - Release 20
+
+- Adicionado um novo módulo para o componente **toast**.
+- Adicionado variações de método de adição de descrição ao módulo do componente **input**.
+
 ## Xmutarn v0.30.1 (2020-11-06) - Release 19
 
 - O rótulo ativo do componente **input** na inicialização a partir do HTML foi corrigido.
