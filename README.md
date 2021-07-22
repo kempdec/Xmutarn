@@ -1,6 +1,6 @@
 # Xmutarn
 
-**Um framework front-end moderno e estiloso criado para a produtividade.**
+**Um framework front-end moderno e estiloso criado para uso pessoal, focando na produtividade com o Blazor.**
 
 [![npm version](https://img.shields.io/npm/v/xmutarn.svg)](https://www.npmjs.com/package/xmutarn)
 
@@ -30,4 +30,4 @@ Para changelogs, confira a [seção de releases do Xmutarn](https://github.com/v
 
 ## Direitos autorais e licença
 
-2018-2020 © Vinícius Lima. Código lançado sobre a licença MIT.
+2018-2021 © Vinícius Lima. Código lançado sobre a licença MIT.
