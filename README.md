@@ -1,6 +1,6 @@
 # Xmutarn
 
-**Um framework front-end moderno e estiloso criado para uso pessoal, focando na produtividade com o Blazor.**
+**Um framework front-end moderno e estiloso criado para a produtividade.**
 
 [![npm version](https://img.shields.io/npm/v/xmutarn.svg)](https://www.npmjs.com/package/xmutarn)
 
