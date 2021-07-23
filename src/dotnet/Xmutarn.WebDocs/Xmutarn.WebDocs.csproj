@@ -14,12 +14,4 @@
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
   </ItemGroup>
 
-  <ItemGroup>
-    <EditorConfigFiles Remove="D:\xmutarn\src\Xmutarn.WebDocs\.editorconfig" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="D:\xmutarn\src\Xmutarn.WebDocs\.editorconfig" />
-  </ItemGroup>
-
 </Project>
