@@ -1,16 +1,8 @@
 import { parallel, series, task, watch } from "gulp";
-import { PugFileBuilder, SassFileBuilder, TsFileBuilder } from "./gulp/builders";
+import { SassFileBuilder, TsFileBuilder } from "./gulp/builders";
 import { LibFileController } from "./gulp/controllers";
 import { TsFile, Library, NodeLibrary } from "./gulp/models";
 import { fileHeader } from "./gulp/header";
-
-// Construção da documentação do projeto.
-const docs = new PugFileBuilder("src/docs/**/*.pug", "docs", "docs/**/*.html");
-const delDocs = () => docs.deleteDestFiles();
-const buildDocs = () => docs.build();
-
-task("docs", series(delDocs, buildDocs));
-task("watchDocs", () => watch("src/docs/**/*", series("docs")));
 
 // Cópia das bibliotecas usadas na documentação do projeto.
 const docsLibraries = [
@@ -18,7 +10,7 @@ const docsLibraries = [
   new Library("xmutarn", "dist/**/*"),
   new NodeLibrary("js-cookie", "src/js.cookie.js")
 ];
-const docsLibs = new LibFileController(docsLibraries, "docs/assets/lib");
+const docsLibs = new LibFileController(docsLibraries, "src/dotnet/Xmutarn.WebDocs/wwwroot/lib");
 const delDocsLibs = () => docsLibs.deleteDestFiles();
 const buildDocsLibs = () => docsLibs.copyAllToDestPath();
 
@@ -58,4 +50,4 @@ const buildJs = () => js.build();
 task("js", series(delJs, buildJs));
 task("jsDocs", series("js", "docsLibs"));
 
-task("default", parallel("docs", "docsScripts", series(parallel("css", "js"), "docsLibs")));
+task("default", parallel("docsScripts", series(parallel("css", "js"), "docsLibs")));
