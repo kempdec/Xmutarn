@@ -1,12 +1,11 @@
 import autoprefixer from "gulp-autoprefixer";
 import header from "gulp-header";
 import rename from "gulp-rename";
-import sass from "gulp-sass";
 import sourcemaps from "gulp-sourcemaps";
 import { dest, src } from "gulp";
 import { FileBuilder } from "./FileBuilder";
 
-(<any>sass).compiler = require("sass");
+var sass = require("gulp-sass")(require("sass"));
 
 /** Responsável pela construção de arquivos CSS com SASS. */
 export class SassFileBuilder extends FileBuilder<string> {
