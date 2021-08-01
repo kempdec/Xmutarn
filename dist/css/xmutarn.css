@@ -186,58 +186,72 @@ html[x-main-theme=light], html:not([x-main-theme]) {
 }
 
 .theme-fg-primary {
+  color: rgba(0, 0, 0, 0.87) !important;
   color: var(--theme-primary, rgba(0, 0, 0, 0.87)) !important;
 }
 
 .theme-bg-primary {
+  background: rgba(0, 0, 0, 0.87) !important;
   background: var(--theme-primary, rgba(0, 0, 0, 0.87)) !important;
 }
 
 .theme-fg-secondary {
+  color: rgba(0, 0, 0, 0.54) !important;
   color: var(--theme-secondary, rgba(0, 0, 0, 0.54)) !important;
 }
 
 .theme-bg-secondary {
+  background: rgba(0, 0, 0, 0.54) !important;
   background: var(--theme-secondary, rgba(0, 0, 0, 0.54)) !important;
 }
 
 .theme-fg-hint {
+  color: rgba(0, 0, 0, 0.38) !important;
   color: var(--theme-hint, rgba(0, 0, 0, 0.38)) !important;
 }
 
 .theme-bg-hint {
+  background: rgba(0, 0, 0, 0.38) !important;
   background: var(--theme-hint, rgba(0, 0, 0, 0.38)) !important;
 }
 
 .theme-fg-disabled {
+  color: rgba(0, 0, 0, 0.38) !important;
   color: var(--theme-disabled, rgba(0, 0, 0, 0.38)) !important;
 }
 
 .theme-bg-disabled {
+  background: rgba(0, 0, 0, 0.38) !important;
   background: var(--theme-disabled, rgba(0, 0, 0, 0.38)) !important;
 }
 
 .theme-fg-dividers {
+  color: rgba(0, 0, 0, 0.12) !important;
   color: var(--theme-dividers, rgba(0, 0, 0, 0.12)) !important;
 }
 
 .theme-bg-dividers {
+  background: rgba(0, 0, 0, 0.12) !important;
   background: var(--theme-dividers, rgba(0, 0, 0, 0.12)) !important;
 }
 
 .theme-fg-background {
+  color: #FAFAFA !important;
   color: var(--theme-background, #FAFAFA) !important;
 }
 
 .theme-bg-background {
+  background: #FAFAFA !important;
   background: var(--theme-background, #FAFAFA) !important;
 }
 
 .theme-fg-card {
+  color: white !important;
   color: var(--theme-card, white) !important;
 }
 
 .theme-bg-card {
+  background: white !important;
   background: var(--theme-card, white) !important;
 }
 
@@ -305,82 +319,102 @@ html[x-featured-theme=purple], html:not([x-featured-theme]) {
 }
 
 .theme-fg-50 {
+  color: #F3E5F5 !important;
   color: var(--theme-50, #F3E5F5) !important;
 }
 
 .theme-bg-50 {
+  background: #F3E5F5 !important;
   background: var(--theme-50, #F3E5F5) !important;
 }
 
 .theme-fg-100 {
+  color: #E1BEE7 !important;
   color: var(--theme-100, #E1BEE7) !important;
 }
 
 .theme-bg-100 {
+  background: #E1BEE7 !important;
   background: var(--theme-100, #E1BEE7) !important;
 }
 
 .theme-fg-200 {
+  color: #CE93D8 !important;
   color: var(--theme-200, #CE93D8) !important;
 }
 
 .theme-bg-200 {
+  background: #CE93D8 !important;
   background: var(--theme-200, #CE93D8) !important;
 }
 
 .theme-fg-300 {
+  color: #BA68C8 !important;
   color: var(--theme-300, #BA68C8) !important;
 }
 
 .theme-bg-300 {
+  background: #BA68C8 !important;
   background: var(--theme-300, #BA68C8) !important;
 }
 
 .theme-fg-400 {
+  color: #AB47BC !important;
   color: var(--theme-400, #AB47BC) !important;
 }
 
 .theme-bg-400 {
+  background: #AB47BC !important;
   background: var(--theme-400, #AB47BC) !important;
 }
 
 .theme-fg-500 {
+  color: #9C27B0 !important;
   color: var(--theme-500, #9C27B0) !important;
 }
 
 .theme-bg-500 {
+  background: #9C27B0 !important;
   background: var(--theme-500, #9C27B0) !important;
 }
 
 .theme-fg-600 {
+  color: #8E24AA !important;
   color: var(--theme-600, #8E24AA) !important;
 }
 
 .theme-bg-600 {
+  background: #8E24AA !important;
   background: var(--theme-600, #8E24AA) !important;
 }
 
 .theme-fg-700 {
+  color: #7B1FA2 !important;
   color: var(--theme-700, #7B1FA2) !important;
 }
 
 .theme-bg-700 {
+  background: #7B1FA2 !important;
   background: var(--theme-700, #7B1FA2) !important;
 }
 
 .theme-fg-800 {
+  color: #6A1B9A !important;
   color: var(--theme-800, #6A1B9A) !important;
 }
 
 .theme-bg-800 {
+  background: #6A1B9A !important;
   background: var(--theme-800, #6A1B9A) !important;
 }
 
 .theme-fg-900 {
+  color: #4A148C !important;
   color: var(--theme-900, #4A148C) !important;
 }
 
 .theme-bg-900 {
+  background: #4A148C !important;
   background: var(--theme-900, #4A148C) !important;
 }
 
@@ -612,34 +646,42 @@ html[x-accent-theme=amber], html:not([x-accent-theme]) {
 }
 
 .theme-fg-A100 {
+  color: #FFE57F !important;
   color: var(--theme-A100, #FFE57F) !important;
 }
 
 .theme-bg-A100 {
+  background: #FFE57F !important;
   background: var(--theme-A100, #FFE57F) !important;
 }
 
 .theme-fg-A200 {
+  color: #FFD740 !important;
   color: var(--theme-A200, #FFD740) !important;
 }
 
 .theme-bg-A200 {
+  background: #FFD740 !important;
   background: var(--theme-A200, #FFD740) !important;
 }
 
 .theme-fg-A400 {
+  color: #FFC400 !important;
   color: var(--theme-A400, #FFC400) !important;
 }
 
 .theme-bg-A400 {
+  background: #FFC400 !important;
   background: var(--theme-A400, #FFC400) !important;
 }
 
 .theme-fg-A700 {
+  color: #FFAB00 !important;
   color: var(--theme-A700, #FFAB00) !important;
 }
 
 .theme-bg-A700 {
+  background: #FFAB00 !important;
   background: var(--theme-A700, #FFAB00) !important;
 }
 

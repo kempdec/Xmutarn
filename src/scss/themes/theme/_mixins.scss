@@ -32,6 +32,7 @@
 
         // Exemplo: .theme-fg-primary
         .theme-#{$prefix}-#{$prop} {
+          #{$param}: #{$color} !important;
           #{$param}: var(--theme-#{$prop}, #{$color}) !important;
         }
       }
