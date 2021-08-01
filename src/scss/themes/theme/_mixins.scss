@@ -1,5 +1,5 @@
 /// Cria o estilo de um tema.
-@mixin create($type, $name, $props) {
+@mixin create($type, $name, $props, $default) {
 
   // Exemplo: html[x-main-theme="light"]
   html[x-#{$type}-theme="#{$name}"] {
@@ -10,6 +10,13 @@
       //
       // Exemplo: --theme-primary
       --theme-#{$prop}: #{$name};
+    }
+  }
+
+  @if $name == $default {
+
+    html:not([x-#{$type}-theme]) {
+      @extend [x-#{$type}-theme="#{$name}"];
     }
   }
 }

@@ -175,7 +175,7 @@
   background: #607D8B !important;
 }
 
-html[x-main-theme=light] {
+html[x-main-theme=light], html:not([x-main-theme]) {
   --theme-primary: rgba(0, 0, 0, 0.87);
   --theme-secondary: rgba(0, 0, 0, 0.54);
   --theme-hint: rgba(0, 0, 0, 0.38);
@@ -291,7 +291,7 @@ html[x-accent-theme=pink] {
   --theme-A700: #C51162;
 }
 
-html[x-featured-theme=purple] {
+html[x-featured-theme=purple], html:not([x-featured-theme]) {
   --theme-50: #F3E5F5;
   --theme-100: #E1BEE7;
   --theme-200: #CE93D8;
@@ -604,7 +604,7 @@ html[x-featured-theme=amber] {
   --theme-900: #FF6F00;
 }
 
-html[x-accent-theme=amber] {
+html[x-accent-theme=amber], html:not([x-accent-theme]) {
   --theme-A100: #FFE57F;
   --theme-A200: #FFD740;
   --theme-A400: #FFC400;

@@ -11,7 +11,7 @@ $-prefixes-and-params: (
 
 @each $name, $props in theme.$main {
 
-  @include theme.create("main", $name, $props);
+  @include theme.create("main", $name, $props, theme.$main-default);
   @include theme.create-classes($name, $props, theme.$main-default, $-prefixes-and-params);
 }
 
@@ -22,11 +22,11 @@ $-theme-colors: map.remove(palette.$colors, "transparent", "black", "white") !de
 
   $featured-hues: map.remove($color-hues, palette.$accent-color-hues...);
 
-  @include theme.create("featured", $color-name, $featured-hues);
+  @include theme.create("featured", $color-name, $featured-hues, theme.$featured-default);
   @include theme.create-classes($color-name, $featured-hues, theme.$featured-default, $-prefixes-and-params);
 
   $accent-hues: func.get-in-map($color-hues, palette.$accent-color-hues...);
 
-  @include theme.create("accent", $color-name, $accent-hues);
+  @include theme.create("accent", $color-name, $accent-hues, theme.$accent-default);
   @include theme.create-classes($color-name, $accent-hues, theme.$accent-default, $-prefixes-and-params);
 }
