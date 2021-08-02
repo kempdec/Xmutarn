@@ -354,11 +354,83 @@ html[x-featured-theme=pink] {
   --theme-900: #880E4F;
 }
 
-html[x-accent-theme=pink] {
+html[x-accent-theme=pink], html:not([x-accent-theme]) {
   --theme-A100: #FF80AB;
   --theme-A200: #FF4081;
   --theme-A400: #F50057;
   --theme-A700: #C51162;
+}
+
+.theme-fg-A100 {
+  color: #FF80AB !important;
+  color: var(--theme-A100, #FF80AB) !important;
+}
+
+.theme-bg-A100 {
+  background: #FF80AB !important;
+  background: var(--theme-A100, #FF80AB) !important;
+}
+
+.theme-bg-from-A100 {
+  --theme-bg-from: var(--theme-A100, #FF80AB);
+}
+
+.theme-bg-to-A100 {
+  --theme-bg-to: var(--theme-A100, #FF80AB);
+}
+
+.theme-fg-A200 {
+  color: #FF4081 !important;
+  color: var(--theme-A200, #FF4081) !important;
+}
+
+.theme-bg-A200 {
+  background: #FF4081 !important;
+  background: var(--theme-A200, #FF4081) !important;
+}
+
+.theme-bg-from-A200 {
+  --theme-bg-from: var(--theme-A200, #FF4081);
+}
+
+.theme-bg-to-A200 {
+  --theme-bg-to: var(--theme-A200, #FF4081);
+}
+
+.theme-fg-A400 {
+  color: #F50057 !important;
+  color: var(--theme-A400, #F50057) !important;
+}
+
+.theme-bg-A400 {
+  background: #F50057 !important;
+  background: var(--theme-A400, #F50057) !important;
+}
+
+.theme-bg-from-A400 {
+  --theme-bg-from: var(--theme-A400, #F50057);
+}
+
+.theme-bg-to-A400 {
+  --theme-bg-to: var(--theme-A400, #F50057);
+}
+
+.theme-fg-A700 {
+  color: #C51162 !important;
+  color: var(--theme-A700, #C51162) !important;
+}
+
+.theme-bg-A700 {
+  background: #C51162 !important;
+  background: var(--theme-A700, #C51162) !important;
+}
+
+.theme-bg-from-A700 {
+  --theme-bg-from: var(--theme-A700, #C51162);
+}
+
+.theme-bg-to-A700 {
+  --theme-bg-to: var(--theme-A700, #C51162);
 }
 
 html[x-featured-theme=purple], html:not([x-featured-theme]) {
@@ -774,83 +846,11 @@ html[x-featured-theme=amber] {
   --theme-900: #FF6F00;
 }
 
-html[x-accent-theme=amber], html:not([x-accent-theme]) {
+html[x-accent-theme=amber] {
   --theme-A100: #FFE57F;
   --theme-A200: #FFD740;
   --theme-A400: #FFC400;
   --theme-A700: #FFAB00;
-}
-
-.theme-fg-A100 {
-  color: #FFE57F !important;
-  color: var(--theme-A100, #FFE57F) !important;
-}
-
-.theme-bg-A100 {
-  background: #FFE57F !important;
-  background: var(--theme-A100, #FFE57F) !important;
-}
-
-.theme-bg-from-A100 {
-  --theme-bg-from: var(--theme-A100, #FFE57F);
-}
-
-.theme-bg-to-A100 {
-  --theme-bg-to: var(--theme-A100, #FFE57F);
-}
-
-.theme-fg-A200 {
-  color: #FFD740 !important;
-  color: var(--theme-A200, #FFD740) !important;
-}
-
-.theme-bg-A200 {
-  background: #FFD740 !important;
-  background: var(--theme-A200, #FFD740) !important;
-}
-
-.theme-bg-from-A200 {
-  --theme-bg-from: var(--theme-A200, #FFD740);
-}
-
-.theme-bg-to-A200 {
-  --theme-bg-to: var(--theme-A200, #FFD740);
-}
-
-.theme-fg-A400 {
-  color: #FFC400 !important;
-  color: var(--theme-A400, #FFC400) !important;
-}
-
-.theme-bg-A400 {
-  background: #FFC400 !important;
-  background: var(--theme-A400, #FFC400) !important;
-}
-
-.theme-bg-from-A400 {
-  --theme-bg-from: var(--theme-A400, #FFC400);
-}
-
-.theme-bg-to-A400 {
-  --theme-bg-to: var(--theme-A400, #FFC400);
-}
-
-.theme-fg-A700 {
-  color: #FFAB00 !important;
-  color: var(--theme-A700, #FFAB00) !important;
-}
-
-.theme-bg-A700 {
-  background: #FFAB00 !important;
-  background: var(--theme-A700, #FFAB00) !important;
-}
-
-.theme-bg-from-A700 {
-  --theme-bg-from: var(--theme-A700, #FFAB00);
-}
-
-.theme-bg-to-A700 {
-  --theme-bg-to: var(--theme-A700, #FFAB00);
 }
 
 html[x-featured-theme=orange] {
@@ -1348,12 +1348,12 @@ html {
 
 ::-moz-selection {
   color: white;
-  background-color: var(--theme-A400, #FFC400);
+  background-color: var(--theme-A400, #F50057);
 }
 
 ::selection {
   color: white;
-  background-color: var(--theme-A400, #FFC400);
+  background-color: var(--theme-A400, #F50057);
 }
 
 a {
@@ -2158,7 +2158,7 @@ input[type=password]::-ms-reveal {
   background-color: var(--theme-500, #9C27B0);
 }
 .btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color).btn_color-accent {
-  background-color: var(--theme-A400, #FFC400);
+  background-color: var(--theme-A400, #F50057);
 }
 .btn:not([disabled]):not(.btn_disabled):hover::before {
   opacity: 0.12;
@@ -2202,10 +2202,10 @@ input[type=password]::-ms-reveal {
   background-color: var(--theme-500, #9C27B0);
 }
 .btn_flat:not([disabled]):not(.btn_disabled).btn_color-accent, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-accent, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-accent {
-  color: var(--theme-A400, #FFC400);
+  color: var(--theme-A400, #F50057);
 }
 .btn_flat:not([disabled]):not(.btn_disabled).btn_color-accent::before, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-accent::before, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-accent::before {
-  background-color: var(--theme-A400, #FFC400);
+  background-color: var(--theme-A400, #F50057);
 }
 .btn_outlined, .btn_outlined-color {
   border: 1px solid;
@@ -2217,7 +2217,7 @@ input[type=password]::-ms-reveal {
   border-color: var(--theme-500, #9C27B0);
 }
 .btn_outlined-color.btn_color-accent {
-  border-color: var(--theme-A400, #FFC400);
+  border-color: var(--theme-A400, #F50057);
 }
 .btn_size-xs {
   font-size: 0.625rem;
@@ -2589,7 +2589,7 @@ input[type=password]::-ms-reveal {
   background-color: var(--theme-700, #7B1FA2);
 }
 .toast_color-accent {
-  background-color: var(--theme-A400, #FFC400);
+  background-color: var(--theme-A400, #F50057);
 }
 .toast_color-success {
   background-color: #4CAF50;
