@@ -30,3 +30,19 @@ $-theme-colors: map.remove(palette.$colors, "transparent", "black", "white") !de
   @include theme.create("accent", $color-name, $accent-hues, theme.$accent-default);
   @include theme.create-classes($color-name, $accent-hues, theme.$accent-default, $-prefixes-and-params);
 }
+
+/// Define as posições dos gradientes dos temas.
+$-gradient-positions: "top", "right", "bottom", "left";
+
+@each $pos in $-gradient-positions {
+
+  @include theme.create-gradient-classes($pos);
+
+  @each $pos2 in $-gradient-positions {
+
+    @if $pos != $pos2 {
+
+      @include theme.create-gradient-classes($pos, $pos2);
+    }
+  }
+}
