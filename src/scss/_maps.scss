@@ -62,7 +62,8 @@ $spacings: (
   md: px-to-rem($list: 16px),
   lg: px-to-rem($list: 24px),
   xl: px-to-rem($list: 48px),
-  auto: auto
+  auto: auto,
+  init: initial
 ) !default;
 
 $typography-font-weights: typo.$weights;
