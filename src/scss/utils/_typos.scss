@@ -24,11 +24,15 @@ $-overflows: clip, ellipsis;
   }
 }
 
-$-transforms: upper, lower, capitalize;
+$-transforms: (
+  "upper": "uppercase",
+  "lower": "lowercase",
+  "capitalize": "capitalize"
+);
 
-@each $transform in $-transforms {
+@each $name, $transform in $-transforms {
 
-  .typo-to-#{$transform} {
+  .typo-to-#{$name} {
     text-transform: #{$transform} !important;
   }
 }

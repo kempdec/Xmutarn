@@ -1592,11 +1592,11 @@ input[type=password]::-ms-reveal {
 }
 
 .typo-to-upper {
-  text-transform: upper !important;
+  text-transform: uppercase !important;
 }
 
 .typo-to-lower {
-  text-transform: lower !important;
+  text-transform: lowercase !important;
 }
 
 .typo-to-capitalize {
