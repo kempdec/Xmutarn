@@ -37,27 +37,27 @@
       "url": "img\/xmutarn-logo-abstract.png"
     },
     {
-      "hash": "sha256-FyH+1kjFP26H71g6K3+JFauaTre0MTp2ZvruH3uCyZo=",
+      "hash": "sha256-CZ0+63erWzoWtiG77o+dCkJ4vIZKIw4dR+QKpaNEGJ4=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-j2lWtTrqEboFJlOvf8VFkU93Wu0aF4JdJMdR\/rLyNOo=",
+      "hash": "sha256-P8jY+MCe6X2cjNSmF4rQvZIanL5VwUUT4MBnOMncjRU=",
       "url": "lib\/js-cookie\/js.cookie.js"
     },
     {
-      "hash": "sha256-Wa0rtgU+MLeKKlYJNFzg7yPiFPs5haJ5vNyzW8TF5xc=",
+      "hash": "sha256-MvCtLZyMBQzoKL7V1Un8sfDIK\/CJZSJrv6Gv\/eHUGuI=",
       "url": "lib\/xmutarn\/css\/xmutarn.css"
     },
     {
-      "hash": "sha256-GTPlz64vCqcSMjmyQksPMX3n5VN59Mu0hX69\/Wh8bec=",
+      "hash": "sha256-FAqgO2pfV8smCuhdcnhxUCaNCxj3EhHQy0gxZBYu9sQ=",
       "url": "lib\/xmutarn\/css\/xmutarn.css.map"
     },
     {
-      "hash": "sha256-qVvT7PA4y3MS0tv9RiNDCp3wXruAPsKT6BEdysOAuPo=",
+      "hash": "sha256-piQ3VZWO99vYoVyVkhkeZkKcM1Af6yXu8KrgdiWiehk=",
       "url": "lib\/xmutarn\/css\/xmutarn.min.css"
     },
     {
-      "hash": "sha256-iLKLeGkVqBva5iTbm8SnnSD2MPxrwefyyRSt6HU7DiQ=",
+      "hash": "sha256-2JkkW7tR9zJu9t3x9O40gWlUOdqIYHKBlyJuDx3fzZk=",
       "url": "lib\/xmutarn\/css\/xmutarn.min.css.map"
     },
     {
@@ -109,11 +109,11 @@
       "url": "lib\/xmutarn\/fonts\/roboto\/v18\/KFOmCnqEu92Fr1Mu4mxK.woff2"
     },
     {
-      "hash": "sha256-xwAWwxqzTPQ9VVXqO2NRCnjdUdWJOMDQw9KTppzQpNk=",
+      "hash": "sha256-bo1uAai0MjpnUUucJWYBCd+TJs5LZcAIKtVs5w83kIg=",
       "url": "lib\/xmutarn\/js\/xmutarn.js"
     },
     {
-      "hash": "sha256-ZatjuDbU\/bOyDCXxDPORf\/zgEg8MZbHQhWPHi1n7Yl8=",
+      "hash": "sha256-qXCR5bHZky2\/46DhP9mRTs7OPZna\/Gm+CdHye6Oy+X0=",
       "url": "lib\/xmutarn\/js\/xmutarn.min.js"
     },
     {
@@ -257,7 +257,7 @@
       "url": "_framework\/Xmutarn.Blazor.dll"
     },
     {
-      "hash": "sha256-WJHLwrwoeSS9Dr4MIUUQLutY11ZhycSpc1p8qqqxazA=",
+      "hash": "sha256-guj+VtIO3N4sjQOfHsvs6bIZepWK7X7qadlf1\/azyyI=",
       "url": "_framework\/Xmutarn.WebDocs.dll"
     },
     {
@@ -341,7 +341,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-nFIQjbupvskvnHiCuvUphHSB9a3dow07xqPJnL9\/BGg=",
+      "hash": "sha256-5\/Z4diQVBz5F2mgMwbtT0AWVzm\/wzDW2MGxLIObzj7s=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -349,5 +349,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "aL+NuzGF"
+  "version": "wPWDSiM0"
 };
