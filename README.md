@@ -26,7 +26,7 @@
 
 ## Changelog
 
-Para changelogs, confira a [seção de releases do Xmutarn](https://github.com/viniciusxdl/xmutarn/releases) ou o [CHANGELOG.md](https://github.com/viniciusxdl/xmutarn/blob/main/CHANGELOG.md).
+Para changelogs, confira a [seção de releases do Xmutarn](https://github.com/viniciusxdl/xmutarn/releases).
 
 ## Direitos autorais e licença
 
