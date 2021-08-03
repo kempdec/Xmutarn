@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrint-to-fit=no">
+    <meta name="description" content="Xmutarn é um framework front-end moderno e estiloso criado para a produtividade.">
+    <meta name="theme-color" content="#6A1B9A">
+
+    <!-- Integração com ambiente ~ OpenGraph. -->
+    <meta property="og:title" content="Xmutarn">
+    <meta property="og:type" content="Website">
+    <meta property="og:url" content="https://viniciusxdl.github.io/xmutarn">
+    <meta property="og:image" content="https://viniciusxdl.github.io/xmutarn/img/environment/opengraph.png">
+    <meta property="og:description" content="Xmutarn é um framework front-end moderno e estiloso criado para a produtividade.">
+    <meta property="og:site_name" content="Xmutarn">
+
+    <!-- Integração com ambiente ~ Twitter. -->
+    <meta name="twitter:image" content="https://viniciusxdl.github.io/xmutarn/img/environment/twitter.png">
+
+    <title>
+        Xmutarn - Um framework front-end moderno e estiloso criado para a produtividade
+    </title>
+
+    <base href="/">
+
+    <link rel="shortcut icon" href="img/icon.png">
+    <link rel="apple-touch-icon" sizes="316x316" href="img/environment/manifest.png">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="lib/xmutarn/css/xmutarn.min.css">
+    <!--<link rel="stylesheet" href="Xmutarn.WebDocs.styles.css">-->
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.22.0/themes/prism-solarizedlight.css">
+</head>
+
+<body class="typo-use-default theme-bg-background theme-fg-primary">
+    <div id="app">
+        <div class="container-fluid">
+            <div class="flex-row flex-content-center flex-items-center theme-bg-to-bottom-right" style="height: 100vh;">
+                <div class="flex-col-5 flex-col-3__sm flex-col-2__lg flex-col-1__xl display-flex flex-content-center">
+                    <img class="max-width-100" src="img/environment/manifest.png" alt="Logo do Xmutarn.">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toaster">
+        <div id="blazor-error-ui" class="toast toast_active toast_color-alert" style="display: none; opacity: 1;">
+            <div class="toast--content">
+                <p class="toast--content--message typo-body-2">
+                    Ocorreu um erro desconhecido. Por favor, recarregue a página.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        navigator.serviceWorker.register('service-worker.js');
+    </script>
+    <script src="lib/xmutarn/js/xmutarn.min.js"></script>
+    <script src="lib/js-cookie/js.cookie.js"></script>
+    <script src="https://unpkg.com/prismjs@1.22.0/components/prism-core.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
+</body>
+
+</html>

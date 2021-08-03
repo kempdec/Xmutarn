@@ -1,5 +1,7 @@
+@use "./functions" as func;
+
 /// Cria o estilo de um tema.
-@mixin create($type, $name, $props) {
+@mixin create($type, $name, $props, $default) {
 
   // Exemplo: html[x-main-theme="light"]
   html[x-#{$type}-theme="#{$name}"] {
@@ -10,6 +12,13 @@
       //
       // Exemplo: --theme-primary
       --theme-#{$prop}: #{$name};
+    }
+  }
+
+  @if $name == $default {
+
+    html:not([x-#{$type}-theme]) {
+      @extend [x-#{$type}-theme="#{$name}"];
     }
   }
 }
@@ -25,9 +34,33 @@
 
         // Exemplo: .theme-fg-primary
         .theme-#{$prefix}-#{$prop} {
+          #{$param}: #{$color} !important;
           #{$param}: var(--theme-#{$prop}, #{$color}) !important;
+        }
+
+        @if $prefix == "bg" {
+
+          @each $type in ("from", "to") {
+
+            // Exemplo: .theme-bg-from-primary
+            .theme-bg-#{$type}-#{$prop} {
+              --theme-bg-#{$type}: var(--theme-#{$prop}, #{$color});
+            }
+          }
         }
       }
     }
+  }
+}
+
+@mixin create-gradient-classes($pos1, $pos2: null) {
+
+  $position-class: if($pos2 != null, #{#{$pos1}-#{$pos2}}, $pos1);
+  $positions: if($pos2 != null, #{#{$pos1} #{$pos2}}, $pos1);
+
+  // Exemplo: .theme-bg-to-top
+  //          .theme-bg-to-top-right
+  .theme-bg-to-#{$position-class} {
+    background-image: linear-gradient(to #{$positions}, var(--theme-bg-from, func.get-featured-color("800")), var(--theme-bg-to, func.get-featured-color("900"))) !important;
   }
 }

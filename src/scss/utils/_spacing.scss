@@ -7,24 +7,28 @@
     @each $size, $length in $spacings {
       @each $property in (margin, padding) {
 
-        // .*-**
-        //
-        // Exemplo: .margin-xs__sm
-        .#{$property}-#{$size}#{$infix} {
-          #{$property}: #{$length} !important;
-        }
+        $is-auto-or-initial: $size == "auto" or $size == "initial";
 
-        @each $position, $side in (top: y, right: x, bottom: y, left: x) {
+        @if $is-auto-or-initial == false
+              or ($size == "auto" and $property == "margin")
+              or ($size == "initial" and $property == "padding") {
 
-          // .*-*-**, .*-*-**
-          //
-          // Exemplo: .margin-top-xs, .margin-y-xs
-          //          .margin-top-xs__sm, .margin-y-xs__sm
-          .#{$property}-#{$position}-#{$size}#{$infix},
-          .#{$property}-#{$side}-#{$size}#{$infix} {
-            #{$property}-#{$position}: #{$length} !important;
+          // Exemplo: .margin-xs__sm
+          .#{$property}-#{$size}#{$infix} {
+            #{$property}: #{$length} !important;
           }
 
+          @each $position, $side in (top: y, right: x, bottom: y, left: x) {
+
+            // .*-*-**, .*-*-**
+            //
+            // Exemplo: .margin-top-xs, .margin-y-xs
+            //          .margin-top-xs__sm, .margin-y-xs__sm
+            .#{$property}-#{$position}-#{$size}#{$infix},
+            .#{$property}-#{$side}-#{$size}#{$infix} {
+              #{$property}-#{$position}: #{$length} !important;
+            }
+          }
         }
       }
     }
