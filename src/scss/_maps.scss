@@ -4,10 +4,10 @@
 
 // Define o tamanho das bordas de `.border-*`.
 $borders: (
-  "0": 0,
   "sm": 1px,
   "md": 2px,
-  "lg": 3px
+  "lg": 3px,
+  "0": 0,
 ) !default;
 
 // Define os raios de borda de `.border-radius-*`.

@@ -2119,7 +2119,7 @@ input[type=password]::-ms-reveal {
     text-align: center !important;
   }
 }
-.border-left-lg, .border-bottom-lg, .border-right-lg, .border-top-lg, .border-lg, .border-left-md, .border-bottom-md, .border-right-md, .border-top-md, .border-md, .border-left-sm, .border-bottom-sm, .border-right-sm, .border-top-sm, .border-sm, .border-left-0, .border-bottom-0, .border-right-0, .border-top-0, .border-0 {
+.border-left-0, .border-bottom-0, .border-right-0, .border-top-0, .border-0, .border-left-lg, .border-bottom-lg, .border-right-lg, .border-top-lg, .border-lg, .border-left-md, .border-bottom-md, .border-right-md, .border-top-md, .border-md, .border-left-sm, .border-bottom-sm, .border-right-sm, .border-top-sm, .border-sm {
   border-color: var(--theme-dividers, rgba(0, 0, 0, 0.12)) !important;
 }
 
@@ -2684,31 +2684,6 @@ input[type=password]::-ms-reveal {
   opacity: 0.7;
 }
 
-.border-0 {
-  border-width: 0 !important;
-  border-style: solid;
-}
-
-.border-top-0 {
-  border-top-width: 0 !important;
-  border-top-style: solid;
-}
-
-.border-right-0 {
-  border-right-width: 0 !important;
-  border-right-style: solid;
-}
-
-.border-bottom-0 {
-  border-bottom-width: 0 !important;
-  border-bottom-style: solid;
-}
-
-.border-left-0 {
-  border-left-width: 0 !important;
-  border-left-style: solid;
-}
-
 .border-sm {
   border-width: 1px !important;
   border-style: solid;
@@ -2784,8 +2759,45 @@ input[type=password]::-ms-reveal {
   border-left-style: solid;
 }
 
-.border-radius-0 {
-  border-radius: 0 !important;
+.border-0 {
+  border-width: 0 !important;
+  border-style: solid;
+}
+
+.border-top-0 {
+  border-top-width: 0 !important;
+  border-top-style: solid;
+}
+
+.border-right-0 {
+  border-right-width: 0 !important;
+  border-right-style: solid;
+}
+
+.border-bottom-0 {
+  border-bottom-width: 0 !important;
+  border-bottom-style: solid;
+}
+
+.border-left-0 {
+  border-left-width: 0 !important;
+  border-left-style: solid;
+}
+
+.border-radius-circle {
+  border-radius: 50% !important;
+}
+
+.border-radius-sm {
+  border-radius: 0.125rem !important;
+}
+
+.border-radius-md {
+  border-radius: 0.3125rem !important;
+}
+
+.border-radius-lg {
+  border-radius: 0.5rem !important;
 }
 
 .border-radius-top-0,
@@ -2808,20 +2820,8 @@ input[type=password]::-ms-reveal {
   border-bottom-left-radius: 0 !important;
 }
 
-.border-radius-circle {
-  border-radius: 50% !important;
-}
-
-.border-radius-sm {
-  border-radius: 0.125rem !important;
-}
-
-.border-radius-md {
-  border-radius: 0.3125rem !important;
-}
-
-.border-radius-lg {
-  border-radius: 0.5rem !important;
+.border-radius-0 {
+  border-radius: 0 !important;
 }
 
 .clearfix::after, .card::after, .card--action::after {
