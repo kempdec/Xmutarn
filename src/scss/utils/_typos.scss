@@ -25,6 +25,7 @@ $-overflows: clip, ellipsis;
 }
 
 $-transforms: (
+  "none": "none",
   "upper": "uppercase",
   "lower": "lowercase",
   "capitalize": "capitalize"
