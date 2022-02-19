@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31521.260
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xmutarn.WebDocs", "Xmutarn.WebDocs\Xmutarn.WebDocs.csproj", "{5D8BD307-DF12-4435-ACAA-8B8235E5B454}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmutarn.Web", "Xmutarn.Web\Xmutarn.Web.csproj", "{FD476510-B02A-4AB3-B895-47145B5D0DAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5D8BD307-DF12-4435-ACAA-8B8235E5B454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D8BD307-DF12-4435-ACAA-8B8235E5B454}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D8BD307-DF12-4435-ACAA-8B8235E5B454}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D8BD307-DF12-4435-ACAA-8B8235E5B454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD476510-B02A-4AB3-B895-47145B5D0DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD476510-B02A-4AB3-B895-47145B5D0DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD476510-B02A-4AB3-B895-47145B5D0DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD476510-B02A-4AB3-B895-47145B5D0DAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,7 +10,7 @@ const docsLibraries = [
   new Library("xmutarn", "dist/**/*"),
   new NodeLibrary("js-cookie", "src/js.cookie.js")
 ];
-const docsLibs = new LibFileController(docsLibraries, "src/dotnet/Xmutarn.WebDocs/wwwroot/lib");
+const docsLibs = new LibFileController(docsLibraries, "src/dotnet/Xmutarn.Web/wwwroot/lib");
 const delDocsLibs = () => docsLibs.deleteDestFiles();
 const buildDocsLibs = () => docsLibs.copyAllToDestPath();
 

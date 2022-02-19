@@ -1,0 +1,67 @@
+﻿<header class="toolbar theme-bg-800" x-toolbar>
+    <nav class="container-fluid">
+        <div class="toolbar--nav">
+            <button class="toolbar--nav--item cursor-pointer" @onclick="() => _navDrawer?.SetIsActive(true)">
+                <span class="fas fa-bars fa-lg"></span>
+            </button>
+
+            <NavLink class="toolbar--nav--item margin-right-sm padding-xs" href="">
+                <img src="img/environment/manifest.png" alt="Logotipo do Xmutarn com fundo linear." style="max-height: 2.5rem;">
+            </NavLink>
+
+            <NavLink class="toolbar--nav--item" href="">
+                Início
+            </NavLink>
+
+            <NavLink class="toolbar--nav--item" href="docs/getting-started">
+                Documentação
+            </NavLink>
+        </div>
+
+        <div class="toolbar--nav">
+            <button id="i-change-main-theme" class="toolbar--nav--item cursor-pointer">
+                <span class="fas fa-lightbulb fa-lg"></span>
+            </button>
+
+            <NavLink class="toolbar--nav--item" href="@AppSettings.GithubAddress" target="_blank">
+                <span class="toolbar--nav--item--icon fab fa-github fa-lg"></span>
+                GitHub
+            </NavLink>
+        </div>
+    </nav>
+</header>
+
+<NavDrawer @ref="_navDrawer">
+    <nav class="list list_padded">
+        <header>
+            <h1 class="typo-h3 typo-weight-light typo-align-center">
+                Navegar
+            </h1>
+        </header>
+        <div class="border-divider margin-bottom-sm"></div>
+
+        <NavLink class="list--item" href="docs/getting-started" ActiveClass="list--item_active" Match="NavLinkMatch.All">
+            Começando
+        </NavLink>
+        <NavLink class="list--item" href="docs/introduction" ActiveClass="list--item_active" Match="NavLinkMatch.All">
+            Introdução
+        </NavLink>
+
+        <p class="padding-x-md typo-body-2 typo-weight-bold">
+            Temas e cores
+        </p>
+        <NavLink class="list--item" href="docs/colors" ActiveClass="list--item_active" Match="NavLinkMatch.All">
+            Cores
+        </NavLink>
+        <NavLink class="list--item" href="docs/themes" ActiveClass="list--item_active" Match="NavLinkMatch.All">
+            Temas
+        </NavLink>
+
+        <p class="padding-x-md typo-body-2 typo-weight-bold">
+            Componentes
+        </p>
+        <NavLink class="list--item" href="docs/components/inputs" ActiveClass="list--item_active" Match="NavLinkMatch.All">
+            Inputs
+        </NavLink>
+    </nav>
+</NavDrawer>
