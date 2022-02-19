@@ -106,3 +106,12 @@
     }
   }
 }
+
+@each $name in (nowrap, wrap, wrap-reverse) {
+  // .flex-*
+  //
+  // Exemplo: .flex-nowrap
+  .flex-#{$name} {
+    flex-wrap: #{$name};
+  }
+}

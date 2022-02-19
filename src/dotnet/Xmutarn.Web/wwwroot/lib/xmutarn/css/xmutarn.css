@@ -1591,6 +1591,10 @@ input[type=password]::-ms-reveal {
   text-overflow: ellipsis;
 }
 
+.typo-to-none {
+  text-transform: none !important;
+}
+
 .typo-to-upper {
   text-transform: uppercase !important;
 }
@@ -4137,6 +4141,18 @@ input[type=password]::-ms-reveal {
     align-items: baseline;
   }
 }
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
 .float-right {
   float: right !important;
 }
