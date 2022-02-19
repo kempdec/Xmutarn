@@ -27,13 +27,17 @@
         background-color: white;
       }
 
-      &:not(.btn_color-accent),
+      &:not(.btn_color-accent):not(.btn_color-primary),
       &.btn_color-featured {
         background-color: var(--theme-500, get-featured-theme-color());
       }
 
       &.btn_color-accent {
         background-color: var(--theme-A400, get-accent-theme-color());
+      }
+
+      &.btn_color-primary {
+        background-color: var(--theme-primary, get-main-theme-color($name: "primary"));
       }
     }
 
@@ -84,7 +88,7 @@
     &:not([disabled]):not(.btn_disabled) {
       background-color: transparent;
 
-      &:not(.btn_color-accent),
+      &:not(.btn_color-accent):not(.btn_color-primary),
       &.btn_color-featured {
         color: var(--theme-500, get-featured-theme-color());
 
@@ -98,6 +102,14 @@
 
         &::before {
           background-color: var(--theme-A400, get-accent-theme-color());
+        }
+      }
+
+      &.btn_color-primary {
+        color: var(--theme-primary, get-main-theme-color($name: "primary"));
+
+        &::before {
+          background-color: var(--theme-primary, get-main-theme-color($name: "primary"));
         }
       }
     }

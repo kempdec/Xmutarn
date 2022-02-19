@@ -2154,11 +2154,14 @@ input[type=password]::-ms-reveal {
 .btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color)::before {
   background-color: white;
 }
-.btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color):not(.btn_color-accent), .btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color).btn_color-featured {
+.btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color):not(.btn_color-accent):not(.btn_color-primary), .btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color).btn_color-featured {
   background-color: var(--theme-500, #9C27B0);
 }
 .btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color).btn_color-accent {
   background-color: var(--theme-A400, #F50057);
+}
+.btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color).btn_color-primary {
+  background-color: var(--theme-primary, rgba(0, 0, 0, 0.87));
 }
 .btn:not([disabled]):not(.btn_disabled):hover::before {
   opacity: 0.12;
@@ -2195,10 +2198,10 @@ input[type=password]::-ms-reveal {
 .btn_flat:not([disabled]):not(.btn_disabled), .btn_outlined:not([disabled]):not(.btn_disabled), .btn_outlined-color:not([disabled]):not(.btn_disabled) {
   background-color: transparent;
 }
-.btn_flat:not([disabled]):not(.btn_disabled):not(.btn_color-accent), .btn_flat:not([disabled]):not(.btn_disabled).btn_color-featured, .btn_outlined:not([disabled]):not(.btn_disabled):not(.btn_color-accent), .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-featured, .btn_outlined-color:not([disabled]):not(.btn_disabled):not(.btn_color-accent), .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-featured {
+.btn_flat:not([disabled]):not(.btn_disabled):not(.btn_color-accent):not(.btn_color-primary), .btn_flat:not([disabled]):not(.btn_disabled).btn_color-featured, .btn_outlined:not([disabled]):not(.btn_disabled):not(.btn_color-accent):not(.btn_color-primary), .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-featured, .btn_outlined-color:not([disabled]):not(.btn_disabled):not(.btn_color-accent):not(.btn_color-primary), .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-featured {
   color: var(--theme-500, #9C27B0);
 }
-.btn_flat:not([disabled]):not(.btn_disabled):not(.btn_color-accent)::before, .btn_flat:not([disabled]):not(.btn_disabled).btn_color-featured::before, .btn_outlined:not([disabled]):not(.btn_disabled):not(.btn_color-accent)::before, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-featured::before, .btn_outlined-color:not([disabled]):not(.btn_disabled):not(.btn_color-accent)::before, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-featured::before {
+.btn_flat:not([disabled]):not(.btn_disabled):not(.btn_color-accent):not(.btn_color-primary)::before, .btn_flat:not([disabled]):not(.btn_disabled).btn_color-featured::before, .btn_outlined:not([disabled]):not(.btn_disabled):not(.btn_color-accent):not(.btn_color-primary)::before, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-featured::before, .btn_outlined-color:not([disabled]):not(.btn_disabled):not(.btn_color-accent):not(.btn_color-primary)::before, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-featured::before {
   background-color: var(--theme-500, #9C27B0);
 }
 .btn_flat:not([disabled]):not(.btn_disabled).btn_color-accent, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-accent, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-accent {
@@ -2206,6 +2209,12 @@ input[type=password]::-ms-reveal {
 }
 .btn_flat:not([disabled]):not(.btn_disabled).btn_color-accent::before, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-accent::before, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-accent::before {
   background-color: var(--theme-A400, #F50057);
+}
+.btn_flat:not([disabled]):not(.btn_disabled).btn_color-primary, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-primary, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-primary {
+  color: var(--theme-primary, rgba(0, 0, 0, 0.87));
+}
+.btn_flat:not([disabled]):not(.btn_disabled).btn_color-primary::before, .btn_outlined:not([disabled]):not(.btn_disabled).btn_color-primary::before, .btn_outlined-color:not([disabled]):not(.btn_disabled).btn_color-primary::before {
+  background-color: var(--theme-primary, rgba(0, 0, 0, 0.87));
 }
 .btn_outlined, .btn_outlined-color {
   border: 1px solid;
