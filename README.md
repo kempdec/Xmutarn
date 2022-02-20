@@ -30,4 +30,4 @@ Para changelogs, confira a [seção de releases do Xmutarn](https://github.com/v
 
 ## Direitos autorais e licença
 
-2018-2021 © Vinícius Lima. Código lançado sobre a licença MIT.
+2018-2022 © Vinícius Lima. Código lançado sobre a licença MIT.
