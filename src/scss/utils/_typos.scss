@@ -2,7 +2,7 @@
 @use "./typo";
 @use "../helpers/breakpoint";
 
-.typo-use-roboto, .typo-use-default {
+.typo-use-roboto {
   font-family: "Roboto", sans-serif;
 }
 
@@ -67,8 +67,21 @@ $-aligns: left, right, center, justify;
       //          .typo-h1__sm
       .typo-#{$name}#{$infix} {
         @each $prop, $val in $props {
-
           #{$prop}: #{$val};
+        }
+      }
+    }
+
+    @each $font, $typos in typo.$map-typo {
+
+      @each $name, $props in $typos {
+
+        // Exemplo: .typo-use-roboto .typo-h1
+        //          .typo-use-roboto .typo-h1__sm
+        .typo-use-#{$font} .typo-#{$name}#{$infix} {
+          @each $prop, $val in $props {
+            #{$prop}: #{$val};
+          }
         }
       }
     }

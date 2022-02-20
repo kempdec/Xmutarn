@@ -11,6 +11,7 @@ $main: (
     "background": palette.get-color("grey", "50"),
     "card": white
   ),
+
   "dark": (
     "primary": white,
     "secondary": rgba(255, 255, 255, .7),
@@ -19,5 +20,15 @@ $main: (
     "dividers": rgba(255, 255, 255, .06),
     "background": #131313,
     "card": #191919
+  ),
+
+  "game": (
+    "primary": white,
+    "secondary": #9da3ac,
+    "hint": rgba(255, 255, 255, 0.5),
+    "disabled": rgba(255, 255, 255, 0.5),
+    "dividers": #32343c,
+    "background": #101922,
+    "card": #1c2734
   )
 ) !default;
