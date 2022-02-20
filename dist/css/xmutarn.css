@@ -2475,6 +2475,9 @@ input[type=password]::-ms-reveal {
 .card--media_format-hd {
   padding-bottom: 56.25%;
 }
+.card--media_format-6-4 {
+  padding-bottom: 66.66%;
+}
 .card--media_format-sd {
   padding-bottom: 75%;
 }

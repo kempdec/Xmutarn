@@ -34,11 +34,13 @@ $button-font-sizes: (
 // Define o tamanho dos formatos de mídia disponíveis para cartão.
 $card-media-formats: (
   // 16:9
-  hd: 56.25%,
+  "hd": 56.25%,
+  // 6:4
+  "6-4": 66.66%,
   // 4:3
-  sd: 75%,
+  "sd": 75%,
   // 1:1
-  square: 100%
+  "square": 100%
 ) !default;
 
 // Dimensionamento
