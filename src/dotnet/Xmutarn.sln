@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\.gitignore = ..\..\.gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayToo", "PlayToo\PlayToo.csproj", "{707074A6-2C60-44BD-A482-740201A6E94D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FD476510-B02A-4AB3-B895-47145B5D0DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD476510-B02A-4AB3-B895-47145B5D0DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD476510-B02A-4AB3-B895-47145B5D0DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{707074A6-2C60-44BD-A482-740201A6E94D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{707074A6-2C60-44BD-A482-740201A6E94D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{707074A6-2C60-44BD-A482-740201A6E94D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{707074A6-2C60-44BD-A482-740201A6E94D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
