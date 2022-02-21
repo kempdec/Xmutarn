@@ -1,5 +1,6 @@
 @use "./font/maps" as font;
-@use "../themes/theme/maps" as theme;
+@use "./toolbar/index" as toolbar;
+@use "../themes/theme";
 
 .toolbar {
   position: sticky;
@@ -60,10 +61,16 @@
       color: inherit;
       background-color: transparent;
       border-radius: $toolbar--nav--item-border-radius;
-      transition: background-color .4s;
       flex: 0 0 auto;
 
+      &:not(.toolbar--nav_underline &) {
+        transition: background-color .4s;
+      }
+
       @at-root {
+        .toolbar--nav_underline & {
+          transition: opacity .2s;
+        }
 
         @each $font-name, $typos in font.$toolbar-nav-item-typos {
 
@@ -81,19 +88,48 @@
       &:active,
       &:focus {
         color: inherit;
+
+        @at-root {
+          .toolbar--nav_underline & {
+            @extend %typo-underline;
+          }
+        }
       }
 
-      &:hover:not(.toolbar--nav_underline &) {
-        background-color: $toolbar--nav--item-bg-color-pseudo-hover;
+      &:hover {
+        &:not(.toolbar--nav_underline &) {
+          background-color: $toolbar--nav--item-bg-color-pseudo-hover;
+        }
+
+        @at-root {
+          .toolbar--nav_underline & {
+            opacity: .8;
+          }
+        }
       }
 
-      &:active:not(.toolbar--nav_underline &) {
-        background-color: $toolbar--nav--item-bg-color-pseudo-active;
+      &:active {
+        &:not(.toolbar--nav_underline &) {
+          background-color: $toolbar--nav--item-bg-color-pseudo-active;
+        }
+
+        @at-root {
+          .toolbar--nav_underline & {
+            opacity: .5;
+          }
+        }
       }
 
-      &:focus:not(.toolbar--nav_underline &) {
-        background-color: $toolbar--nav--item-bg-color-pseudo-focus;
+      &:focus {
         outline: 0;
+
+        &:not(.toolbar--nav_underline &) {
+          background-color: $toolbar--nav--item-bg-color-pseudo-focus;
+        }
+
+        .toolbar--nav_underline & {
+          opacity: .7;
+        }
       }
 
       &:not(&_bordered) {
@@ -101,7 +137,16 @@
       }
 
       &_active {
-        background-color: $toolbar--nav--item-active-bg-color;
+        &:not(.toolbar--nav_underline &) {
+          background-color: $toolbar--nav--item-active-bg-color;
+        }
+
+        @at-root {
+          .toolbar--nav_underline & {
+            color: var(--theme-500, theme.get-featured-color("500"));
+            @extend %typo-underline;
+          }
+        }
       }
 
       &_bordered {

@@ -3078,6 +3078,12 @@ input[type=password]::-ms-reveal {
   margin-left: -0.28625em;
 }
 
+.toolbar--nav_underline .toolbar--nav--item:hover, .toolbar--nav_underline .toolbar--nav--item:active, .toolbar--nav_underline .toolbar--nav--item:focus, .toolbar--nav_underline .toolbar--nav--item_active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.625rem;
+}
+
 .toolbar {
   position: -webkit-sticky;
   position: sticky;
@@ -3142,32 +3148,55 @@ html[x-main-theme=play] .toolbar_dark-color {
   color: inherit;
   background-color: transparent;
   border-radius: 0.25rem;
-  transition: background-color 0.4s;
   flex: 0 0 auto;
 }
+.toolbar--nav--item:not(.toolbar--nav_underline .toolbar--nav--item) {
+  transition: background-color 0.4s;
+}
+.toolbar--nav_underline .toolbar--nav--item {
+  transition: opacity 0.2s;
+}
+
 .typo-use-bebas-neue .toolbar--nav--item {
-  letter-spacing: 0.06em;
+  letter-spacing: 0.12em;
 }
 
 .toolbar--nav--item:hover, .toolbar--nav--item:active, .toolbar--nav--item:focus {
   color: inherit;
 }
-.toolbar--nav--item:hover {
+.toolbar--nav--item:hover:not(.toolbar--nav_underline .toolbar--nav--item:hover) {
   background-color: rgba(255, 255, 255, 0.12);
 }
-.toolbar--nav--item:active {
+.toolbar--nav_underline .toolbar--nav--item:hover {
+  opacity: 0.8;
+}
+
+.toolbar--nav--item:active:not(.toolbar--nav_underline .toolbar--nav--item:active) {
   background-color: rgba(255, 255, 255, 0.36);
 }
+.toolbar--nav_underline .toolbar--nav--item:active {
+  opacity: 0.5;
+}
+
 .toolbar--nav--item:focus {
-  background-color: rgba(255, 255, 255, 0.18);
   outline: 0;
+}
+.toolbar--nav--item:focus:not(.toolbar--nav_underline .toolbar--nav--item:focus) {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+.toolbar--nav_underline .toolbar--nav--item:focus {
+  opacity: 0.7;
 }
 .toolbar--nav--item:not(.toolbar--nav--item_bordered) {
   border: none;
 }
-.toolbar--nav--item_active {
+.toolbar--nav--item_active:not(.toolbar--nav_underline .toolbar--nav--item_active) {
   background-color: rgba(255, 255, 255, 0.07);
 }
+.toolbar--nav_underline .toolbar--nav--item_active {
+  color: var(--theme-500, #9C27B0);
+}
+
 .toolbar--nav--item_bordered {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }

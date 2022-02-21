@@ -1,0 +1,7 @@
+@use "../../helpers";
+
+%typo-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: helpers.px-to-rem(10px);
+}
