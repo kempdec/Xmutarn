@@ -30,5 +30,15 @@ $main: (
     "dividers": #32343c,
     "background": #101922,
     "card": #1c2734
+  ),
+
+  "play": (
+    "primary": white,
+    "secondary": rgba(255, 255, 255, 0.7),
+    "hint": rgba(255, 255, 255, 0.5),
+    "disabled": rgba(255, 255, 255, 0.5),
+    "dividers": #212936,
+    "background": #121B24,
+    "card": #1F2935
   )
 ) !default;

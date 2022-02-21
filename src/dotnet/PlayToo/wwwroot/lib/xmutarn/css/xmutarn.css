@@ -331,6 +331,16 @@ html[x-main-theme=game] {
   --theme-card: #1c2734;
 }
 
+html[x-main-theme=play] {
+  --theme-primary: white;
+  --theme-secondary: rgba(255, 255, 255, 0.7);
+  --theme-hint: rgba(255, 255, 255, 0.5);
+  --theme-disabled: rgba(255, 255, 255, 0.5);
+  --theme-dividers: #212936;
+  --theme-background: #121B24;
+  --theme-card: #1F2935;
+}
+
 html[x-featured-theme=red] {
   --theme-50: #FFEBEE;
   --theme-100: #FFCDD2;
