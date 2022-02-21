@@ -13,9 +13,11 @@ $borders: (
 // Define os raios de borda de `.border-radius-*`.
 $borders-radius: (
   "circle": 50%,
-  "sm": px-to-rem($list: 2px),
-  "md": px-to-rem($list: 5px),
-  "lg": px-to-rem($list: 8px)
+  "2": px-to-rem($list: 2px),
+  "5": px-to-rem($list: 5px),
+  "8": px-to-rem($list: 8px),
+  "30": px-to-rem($list: 30px),
+  "54": px-to-rem($list: 54px)
 ) !default;
 
 // Botão

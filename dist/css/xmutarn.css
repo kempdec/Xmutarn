@@ -3497,16 +3497,24 @@ input[type=password]::-ms-reveal {
   border-radius: 50% !important;
 }
 
-.border-radius-sm {
+.border-radius-2 {
   border-radius: 0.125rem !important;
 }
 
-.border-radius-md {
+.border-radius-5 {
   border-radius: 0.3125rem !important;
 }
 
-.border-radius-lg {
+.border-radius-8 {
   border-radius: 0.5rem !important;
+}
+
+.border-radius-30 {
+  border-radius: 1.875rem !important;
+}
+
+.border-radius-54 {
+  border-radius: 3.375rem !important;
 }
 
 .border-radius-top-0,
