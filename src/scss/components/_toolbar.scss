@@ -1,3 +1,6 @@
+@use "./font/maps" as font;
+@use "../themes/theme/maps" as theme;
+
 .toolbar {
   position: sticky;
   top: 0;
@@ -17,8 +20,16 @@
     background-color: $toolbar-background-color;
   }
 
-  &_dark-color {
-    background-color: $toolbar_dark-color-background-color;
+  @each $theme-type, $themes in theme.$toolbar-dark-colors {
+
+    @each $theme-name, $color in $themes {
+
+      @at-root {
+        html[x-#{$theme-type}-theme=#{$theme-name}] &_dark-color {
+          background-color: #{$color};
+        }
+      }
+    }
   }
 
   &_hide {
@@ -52,21 +63,35 @@
       transition: background-color .4s;
       flex: 0 0 auto;
 
+      @at-root {
+
+        @each $font-name, $typos in font.$toolbar-nav-item-typos {
+
+          .typo-use-#{$font-name} & {
+
+            @each $prop, $value in $typos {
+
+              #{$prop}: #{$value};
+            }
+          }
+        }
+      }
+
       &:hover,
       &:active,
       &:focus {
         color: inherit;
       }
 
-      &:hover {
+      &:hover:not(.toolbar--nav_underline &) {
         background-color: $toolbar--nav--item-bg-color-pseudo-hover;
       }
 
-      &:active {
+      &:active:not(.toolbar--nav_underline &) {
         background-color: $toolbar--nav--item-bg-color-pseudo-active;
       }
 
-      &:focus {
+      &:focus:not(.toolbar--nav_underline &) {
         background-color: $toolbar--nav--item-bg-color-pseudo-focus;
         outline: 0;
       }

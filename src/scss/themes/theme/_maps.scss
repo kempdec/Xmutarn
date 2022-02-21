@@ -46,3 +46,13 @@ $main: (
     "card": #1F2935
   )
 ) !default;
+
+/// Define as cores de fundo da barra de ferramentas, com variante "dark-color" de acordo com o tema.
+$toolbar-dark-colors: (
+  "main": (
+    "light": #212121,
+    "dark": #212121,
+    "game": #202936,
+    "play": #212936
+  )
+) !default;

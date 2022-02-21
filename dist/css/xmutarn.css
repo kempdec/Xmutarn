@@ -3097,9 +3097,22 @@ input[type=password]::-ms-reveal {
 .toolbar:not(.toolbar_dark-color) {
   background-color: var(--theme-700, #7B1FA2);
 }
-.toolbar_dark-color {
+html[x-main-theme=light] .toolbar_dark-color {
   background-color: #212121;
 }
+
+html[x-main-theme=dark] .toolbar_dark-color {
+  background-color: #212121;
+}
+
+html[x-main-theme=game] .toolbar_dark-color {
+  background-color: #202936;
+}
+
+html[x-main-theme=play] .toolbar_dark-color {
+  background-color: #212936;
+}
+
 .toolbar_hide {
   transform: translateY(-100%);
 }
@@ -3132,6 +3145,10 @@ input[type=password]::-ms-reveal {
   transition: background-color 0.4s;
   flex: 0 0 auto;
 }
+.typo-use-bebas-neue .toolbar--nav--item {
+  letter-spacing: 0.06em;
+}
+
 .toolbar--nav--item:hover, .toolbar--nav--item:active, .toolbar--nav--item:focus {
   color: inherit;
 }
@@ -3529,23 +3546,23 @@ input[type=password]::-ms-reveal {
   border-radius: 50% !important;
 }
 
-.border-radius-2 {
+.border-radius-sm {
   border-radius: 0.125rem !important;
 }
 
-.border-radius-5 {
+.border-radius-md {
   border-radius: 0.3125rem !important;
 }
 
-.border-radius-8 {
+.border-radius-lg {
   border-radius: 0.5rem !important;
 }
 
-.border-radius-30 {
+.border-radius-xl {
   border-radius: 1.875rem !important;
 }
 
-.border-radius-54 {
+.border-radius-xl-2 {
   border-radius: 3.375rem !important;
 }
 
