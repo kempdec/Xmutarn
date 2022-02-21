@@ -181,6 +181,7 @@ html[x-main-theme=light], html:not([x-main-theme]) {
   --theme-hint: rgba(0, 0, 0, 0.38);
   --theme-disabled: rgba(0, 0, 0, 0.38);
   --theme-dividers: rgba(0, 0, 0, 0.12);
+  --theme-foreground: #FAFAFA;
   --theme-background: #FAFAFA;
   --theme-card: white;
 }
@@ -275,6 +276,24 @@ html[x-main-theme=light], html:not([x-main-theme]) {
   --theme-bg-to: var(--theme-dividers, rgba(0, 0, 0, 0.12));
 }
 
+.theme-fg-foreground {
+  color: #FAFAFA !important;
+  color: var(--theme-foreground, #FAFAFA) !important;
+}
+
+.theme-bg-foreground {
+  background: #FAFAFA !important;
+  background: var(--theme-foreground, #FAFAFA) !important;
+}
+
+.theme-bg-from-foreground {
+  --theme-bg-from: var(--theme-foreground, #FAFAFA);
+}
+
+.theme-bg-to-foreground {
+  --theme-bg-to: var(--theme-foreground, #FAFAFA);
+}
+
 .theme-fg-background {
   color: #FAFAFA !important;
   color: var(--theme-background, #FAFAFA) !important;
@@ -317,6 +336,7 @@ html[x-main-theme=dark] {
   --theme-hint: rgba(255, 255, 255, 0.5);
   --theme-disabled: rgba(255, 255, 255, 0.5);
   --theme-dividers: rgba(255, 255, 255, 0.06);
+  --theme-foreground: #131313;
   --theme-background: #131313;
   --theme-card: #191919;
 }
@@ -327,6 +347,7 @@ html[x-main-theme=game] {
   --theme-hint: rgba(255, 255, 255, 0.5);
   --theme-disabled: rgba(255, 255, 255, 0.5);
   --theme-dividers: #32343c;
+  --theme-foreground: #28416f;
   --theme-background: #101922;
   --theme-card: #1c2734;
 }
@@ -337,6 +358,7 @@ html[x-main-theme=play] {
   --theme-hint: rgba(255, 255, 255, 0.5);
   --theme-disabled: rgba(255, 255, 255, 0.5);
   --theme-dividers: #212936;
+  --theme-foreground: #121B24;
   --theme-background: #121B24;
   --theme-card: #1F2935;
 }

@@ -8,6 +8,7 @@ $main: (
     "hint": rgba(0, 0, 0, .38),
     "disabled": rgba(0, 0, 0, .38),
     "dividers": rgba(0, 0, 0, .12),
+    "foreground": palette.get-color("grey", "50"),
     "background": palette.get-color("grey", "50"),
     "card": white
   ),
@@ -18,6 +19,7 @@ $main: (
     "hint": rgba(255, 255, 255, .5),
     "disabled": rgba(255, 255, 255, .5),
     "dividers": rgba(255, 255, 255, .06),
+    "foreground": #131313,
     "background": #131313,
     "card": #191919
   ),
@@ -28,6 +30,7 @@ $main: (
     "hint": rgba(255, 255, 255, 0.5),
     "disabled": rgba(255, 255, 255, 0.5),
     "dividers": #32343c,
+    "foreground": #28416f,
     "background": #101922,
     "card": #1c2734
   ),
@@ -38,6 +41,7 @@ $main: (
     "hint": rgba(255, 255, 255, 0.5),
     "disabled": rgba(255, 255, 255, 0.5),
     "dividers": #212936,
+    "foreground": #121B24,
     "background": #121B24,
     "card": #1F2935
   )
