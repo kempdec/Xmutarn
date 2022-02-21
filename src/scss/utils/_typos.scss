@@ -78,7 +78,8 @@ $-aligns: left, right, center, justify;
 
         // Exemplo: .typo-use-roboto .typo-h1
         //          .typo-use-roboto .typo-h1__sm
-        .typo-use-#{$font} .typo-#{$name}#{$infix} {
+        .typo-use-#{$font} .typo-#{$name}#{$infix},
+        .typo-use-#{$font}.typo-#{$name}#{$infix} {
           @each $prop, $val in $props {
             #{$prop}: #{$val};
           }

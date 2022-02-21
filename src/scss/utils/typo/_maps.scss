@@ -135,7 +135,7 @@ $map-typo: (
     ),
     "h5": (
       "font-weight": map.get($weights, "bold"),
-      "letter-spacing": helpers.px-to-em(.96px)
+      "letter-spacing": normal
     ),
     "h6": (
       "font-weight": map.get($weights, "bold"),

@@ -1793,122 +1793,150 @@ input[type=password]::-ms-reveal {
   line-height: 1.25rem;
 }
 
-.typo-use-roboto .typo-h1 {
+.typo-use-roboto .typo-h1,
+.typo-use-roboto.typo-h1 {
   font-weight: 300;
   letter-spacing: -0.01562em;
 }
 
-.typo-use-roboto .typo-h2 {
+.typo-use-roboto .typo-h2,
+.typo-use-roboto.typo-h2 {
   font-weight: 300;
   letter-spacing: -0.00833em;
 }
 
-.typo-use-roboto .typo-h3 {
+.typo-use-roboto .typo-h3,
+.typo-use-roboto.typo-h3 {
   font-weight: 400;
   letter-spacing: normal;
 }
 
-.typo-use-roboto .typo-h4 {
+.typo-use-roboto .typo-h4,
+.typo-use-roboto.typo-h4 {
   font-weight: 400;
   letter-spacing: 0.00735em;
 }
 
-.typo-use-roboto .typo-h5 {
+.typo-use-roboto .typo-h5,
+.typo-use-roboto.typo-h5 {
   font-weight: 400;
   letter-spacing: normal;
 }
 
-.typo-use-roboto .typo-h6 {
+.typo-use-roboto .typo-h6,
+.typo-use-roboto.typo-h6 {
   font-weight: 500;
   letter-spacing: 0.0125em;
 }
 
-.typo-use-roboto .typo-subtitle-1 {
+.typo-use-roboto .typo-subtitle-1,
+.typo-use-roboto.typo-subtitle-1 {
   font-weight: 400;
   letter-spacing: 0.00937em;
 }
 
-.typo-use-roboto .typo-subtitle-2 {
+.typo-use-roboto .typo-subtitle-2,
+.typo-use-roboto.typo-subtitle-2 {
   font-weight: 500;
   letter-spacing: 0.00714em;
 }
 
-.typo-use-roboto .typo-body-1 {
+.typo-use-roboto .typo-body-1,
+.typo-use-roboto.typo-body-1 {
   font-weight: 400;
   letter-spacing: 0.03125em;
 }
 
-.typo-use-roboto .typo-body-2, .typo-use-roboto .avatar--title, .typo-use-roboto .avatar--summary {
+.typo-use-roboto .typo-body-2, .typo-use-roboto .avatar--title, .typo-use-roboto .avatar--summary,
+.typo-use-roboto.typo-body-2,
+.typo-use-roboto.avatar--title,
+.typo-use-roboto.avatar--summary {
   font-weight: 400;
   letter-spacing: 0.01786em;
 }
 
-.typo-use-roboto .typo-caption-1 {
+.typo-use-roboto .typo-caption-1,
+.typo-use-roboto.typo-caption-1 {
   font-weight: 400;
   letter-spacing: 0.03333em;
 }
 
-.typo-use-roboto .typo-caption-2 {
+.typo-use-roboto .typo-caption-2,
+.typo-use-roboto.typo-caption-2 {
   font-weight: 500;
   letter-spacing: 0.03333em;
 }
 
-.typo-use-bebas-neue .typo-h1 {
+.typo-use-bebas-neue .typo-h1,
+.typo-use-bebas-neue.typo-h1 {
   font-weight: 700;
   letter-spacing: normal;
 }
 
-.typo-use-bebas-neue .typo-h2 {
+.typo-use-bebas-neue .typo-h2,
+.typo-use-bebas-neue.typo-h2 {
   font-weight: 700;
   letter-spacing: normal;
 }
 
-.typo-use-bebas-neue .typo-h3 {
+.typo-use-bebas-neue .typo-h3,
+.typo-use-bebas-neue.typo-h3 {
   font-weight: 700;
   letter-spacing: normal;
 }
 
-.typo-use-bebas-neue .typo-h4 {
+.typo-use-bebas-neue .typo-h4,
+.typo-use-bebas-neue.typo-h4 {
   font-weight: 700;
   letter-spacing: normal;
 }
 
-.typo-use-bebas-neue .typo-h5 {
+.typo-use-bebas-neue .typo-h5,
+.typo-use-bebas-neue.typo-h5 {
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.typo-use-bebas-neue .typo-h6,
+.typo-use-bebas-neue.typo-h6 {
   font-weight: 700;
   letter-spacing: 0.06em;
 }
 
-.typo-use-bebas-neue .typo-h6 {
-  font-weight: 700;
-  letter-spacing: 0.06em;
-}
-
-.typo-use-bebas-neue .typo-subtitle-1 {
+.typo-use-bebas-neue .typo-subtitle-1,
+.typo-use-bebas-neue.typo-subtitle-1 {
   font-weight: 400;
   letter-spacing: 0.06em;
 }
 
-.typo-use-bebas-neue .typo-subtitle-2 {
+.typo-use-bebas-neue .typo-subtitle-2,
+.typo-use-bebas-neue.typo-subtitle-2 {
   font-weight: 400;
   letter-spacing: 0.06em;
 }
 
-.typo-use-bebas-neue .typo-body-1 {
+.typo-use-bebas-neue .typo-body-1,
+.typo-use-bebas-neue.typo-body-1 {
   font-weight: 400;
   letter-spacing: 0.06em;
 }
 
-.typo-use-bebas-neue .typo-body-2, .typo-use-bebas-neue .avatar--title, .typo-use-bebas-neue .avatar--summary {
+.typo-use-bebas-neue .typo-body-2, .typo-use-bebas-neue .avatar--title, .typo-use-bebas-neue .avatar--summary,
+.typo-use-bebas-neue.typo-body-2,
+.typo-use-bebas-neue.avatar--title,
+.typo-use-bebas-neue.avatar--summary {
   font-weight: 400;
   letter-spacing: 0.06em;
 }
 
-.typo-use-bebas-neue .typo-caption-1 {
+.typo-use-bebas-neue .typo-caption-1,
+.typo-use-bebas-neue.typo-caption-1 {
   font-weight: 400;
   letter-spacing: 0.06em;
 }
 
-.typo-use-bebas-neue .typo-caption-2 {
+.typo-use-bebas-neue .typo-caption-2,
+.typo-use-bebas-neue.typo-caption-2 {
   font-weight: 400;
   letter-spacing: 0.06em;
 }
@@ -1990,122 +2018,146 @@ input[type=password]::-ms-reveal {
     line-height: 1.25rem;
   }
 
-  .typo-use-roboto .typo-h1__sm {
+  .typo-use-roboto .typo-h1__sm,
+.typo-use-roboto.typo-h1__sm {
     font-weight: 300;
     letter-spacing: -0.01562em;
   }
 
-  .typo-use-roboto .typo-h2__sm {
+  .typo-use-roboto .typo-h2__sm,
+.typo-use-roboto.typo-h2__sm {
     font-weight: 300;
     letter-spacing: -0.00833em;
   }
 
-  .typo-use-roboto .typo-h3__sm {
+  .typo-use-roboto .typo-h3__sm,
+.typo-use-roboto.typo-h3__sm {
     font-weight: 400;
     letter-spacing: normal;
   }
 
-  .typo-use-roboto .typo-h4__sm {
+  .typo-use-roboto .typo-h4__sm,
+.typo-use-roboto.typo-h4__sm {
     font-weight: 400;
     letter-spacing: 0.00735em;
   }
 
-  .typo-use-roboto .typo-h5__sm {
+  .typo-use-roboto .typo-h5__sm,
+.typo-use-roboto.typo-h5__sm {
     font-weight: 400;
     letter-spacing: normal;
   }
 
-  .typo-use-roboto .typo-h6__sm {
+  .typo-use-roboto .typo-h6__sm,
+.typo-use-roboto.typo-h6__sm {
     font-weight: 500;
     letter-spacing: 0.0125em;
   }
 
-  .typo-use-roboto .typo-subtitle-1__sm {
+  .typo-use-roboto .typo-subtitle-1__sm,
+.typo-use-roboto.typo-subtitle-1__sm {
     font-weight: 400;
     letter-spacing: 0.00937em;
   }
 
-  .typo-use-roboto .typo-subtitle-2__sm {
+  .typo-use-roboto .typo-subtitle-2__sm,
+.typo-use-roboto.typo-subtitle-2__sm {
     font-weight: 500;
     letter-spacing: 0.00714em;
   }
 
-  .typo-use-roboto .typo-body-1__sm {
+  .typo-use-roboto .typo-body-1__sm,
+.typo-use-roboto.typo-body-1__sm {
     font-weight: 400;
     letter-spacing: 0.03125em;
   }
 
-  .typo-use-roboto .typo-body-2__sm {
+  .typo-use-roboto .typo-body-2__sm,
+.typo-use-roboto.typo-body-2__sm {
     font-weight: 400;
     letter-spacing: 0.01786em;
   }
 
-  .typo-use-roboto .typo-caption-1__sm {
+  .typo-use-roboto .typo-caption-1__sm,
+.typo-use-roboto.typo-caption-1__sm {
     font-weight: 400;
     letter-spacing: 0.03333em;
   }
 
-  .typo-use-roboto .typo-caption-2__sm {
+  .typo-use-roboto .typo-caption-2__sm,
+.typo-use-roboto.typo-caption-2__sm {
     font-weight: 500;
     letter-spacing: 0.03333em;
   }
 
-  .typo-use-bebas-neue .typo-h1__sm {
+  .typo-use-bebas-neue .typo-h1__sm,
+.typo-use-bebas-neue.typo-h1__sm {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h2__sm {
+  .typo-use-bebas-neue .typo-h2__sm,
+.typo-use-bebas-neue.typo-h2__sm {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h3__sm {
+  .typo-use-bebas-neue .typo-h3__sm,
+.typo-use-bebas-neue.typo-h3__sm {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h4__sm {
+  .typo-use-bebas-neue .typo-h4__sm,
+.typo-use-bebas-neue.typo-h4__sm {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h5__sm {
+  .typo-use-bebas-neue .typo-h5__sm,
+.typo-use-bebas-neue.typo-h5__sm {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-bebas-neue .typo-h6__sm,
+.typo-use-bebas-neue.typo-h6__sm {
     font-weight: 700;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-h6__sm {
-    font-weight: 700;
-    letter-spacing: 0.06em;
-  }
-
-  .typo-use-bebas-neue .typo-subtitle-1__sm {
+  .typo-use-bebas-neue .typo-subtitle-1__sm,
+.typo-use-bebas-neue.typo-subtitle-1__sm {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-subtitle-2__sm {
+  .typo-use-bebas-neue .typo-subtitle-2__sm,
+.typo-use-bebas-neue.typo-subtitle-2__sm {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-body-1__sm {
+  .typo-use-bebas-neue .typo-body-1__sm,
+.typo-use-bebas-neue.typo-body-1__sm {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-body-2__sm {
+  .typo-use-bebas-neue .typo-body-2__sm,
+.typo-use-bebas-neue.typo-body-2__sm {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-caption-1__sm {
+  .typo-use-bebas-neue .typo-caption-1__sm,
+.typo-use-bebas-neue.typo-caption-1__sm {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-caption-2__sm {
+  .typo-use-bebas-neue .typo-caption-2__sm,
+.typo-use-bebas-neue.typo-caption-2__sm {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
@@ -2183,122 +2235,146 @@ input[type=password]::-ms-reveal {
     line-height: 1.25rem;
   }
 
-  .typo-use-roboto .typo-h1__md {
+  .typo-use-roboto .typo-h1__md,
+.typo-use-roboto.typo-h1__md {
     font-weight: 300;
     letter-spacing: -0.01562em;
   }
 
-  .typo-use-roboto .typo-h2__md {
+  .typo-use-roboto .typo-h2__md,
+.typo-use-roboto.typo-h2__md {
     font-weight: 300;
     letter-spacing: -0.00833em;
   }
 
-  .typo-use-roboto .typo-h3__md {
+  .typo-use-roboto .typo-h3__md,
+.typo-use-roboto.typo-h3__md {
     font-weight: 400;
     letter-spacing: normal;
   }
 
-  .typo-use-roboto .typo-h4__md {
+  .typo-use-roboto .typo-h4__md,
+.typo-use-roboto.typo-h4__md {
     font-weight: 400;
     letter-spacing: 0.00735em;
   }
 
-  .typo-use-roboto .typo-h5__md {
+  .typo-use-roboto .typo-h5__md,
+.typo-use-roboto.typo-h5__md {
     font-weight: 400;
     letter-spacing: normal;
   }
 
-  .typo-use-roboto .typo-h6__md {
+  .typo-use-roboto .typo-h6__md,
+.typo-use-roboto.typo-h6__md {
     font-weight: 500;
     letter-spacing: 0.0125em;
   }
 
-  .typo-use-roboto .typo-subtitle-1__md {
+  .typo-use-roboto .typo-subtitle-1__md,
+.typo-use-roboto.typo-subtitle-1__md {
     font-weight: 400;
     letter-spacing: 0.00937em;
   }
 
-  .typo-use-roboto .typo-subtitle-2__md {
+  .typo-use-roboto .typo-subtitle-2__md,
+.typo-use-roboto.typo-subtitle-2__md {
     font-weight: 500;
     letter-spacing: 0.00714em;
   }
 
-  .typo-use-roboto .typo-body-1__md {
+  .typo-use-roboto .typo-body-1__md,
+.typo-use-roboto.typo-body-1__md {
     font-weight: 400;
     letter-spacing: 0.03125em;
   }
 
-  .typo-use-roboto .typo-body-2__md {
+  .typo-use-roboto .typo-body-2__md,
+.typo-use-roboto.typo-body-2__md {
     font-weight: 400;
     letter-spacing: 0.01786em;
   }
 
-  .typo-use-roboto .typo-caption-1__md {
+  .typo-use-roboto .typo-caption-1__md,
+.typo-use-roboto.typo-caption-1__md {
     font-weight: 400;
     letter-spacing: 0.03333em;
   }
 
-  .typo-use-roboto .typo-caption-2__md {
+  .typo-use-roboto .typo-caption-2__md,
+.typo-use-roboto.typo-caption-2__md {
     font-weight: 500;
     letter-spacing: 0.03333em;
   }
 
-  .typo-use-bebas-neue .typo-h1__md {
+  .typo-use-bebas-neue .typo-h1__md,
+.typo-use-bebas-neue.typo-h1__md {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h2__md {
+  .typo-use-bebas-neue .typo-h2__md,
+.typo-use-bebas-neue.typo-h2__md {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h3__md {
+  .typo-use-bebas-neue .typo-h3__md,
+.typo-use-bebas-neue.typo-h3__md {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h4__md {
+  .typo-use-bebas-neue .typo-h4__md,
+.typo-use-bebas-neue.typo-h4__md {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h5__md {
+  .typo-use-bebas-neue .typo-h5__md,
+.typo-use-bebas-neue.typo-h5__md {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-bebas-neue .typo-h6__md,
+.typo-use-bebas-neue.typo-h6__md {
     font-weight: 700;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-h6__md {
-    font-weight: 700;
-    letter-spacing: 0.06em;
-  }
-
-  .typo-use-bebas-neue .typo-subtitle-1__md {
+  .typo-use-bebas-neue .typo-subtitle-1__md,
+.typo-use-bebas-neue.typo-subtitle-1__md {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-subtitle-2__md {
+  .typo-use-bebas-neue .typo-subtitle-2__md,
+.typo-use-bebas-neue.typo-subtitle-2__md {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-body-1__md {
+  .typo-use-bebas-neue .typo-body-1__md,
+.typo-use-bebas-neue.typo-body-1__md {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-body-2__md {
+  .typo-use-bebas-neue .typo-body-2__md,
+.typo-use-bebas-neue.typo-body-2__md {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-caption-1__md {
+  .typo-use-bebas-neue .typo-caption-1__md,
+.typo-use-bebas-neue.typo-caption-1__md {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-caption-2__md {
+  .typo-use-bebas-neue .typo-caption-2__md,
+.typo-use-bebas-neue.typo-caption-2__md {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
@@ -2376,122 +2452,146 @@ input[type=password]::-ms-reveal {
     line-height: 1.25rem;
   }
 
-  .typo-use-roboto .typo-h1__lg {
+  .typo-use-roboto .typo-h1__lg,
+.typo-use-roboto.typo-h1__lg {
     font-weight: 300;
     letter-spacing: -0.01562em;
   }
 
-  .typo-use-roboto .typo-h2__lg {
+  .typo-use-roboto .typo-h2__lg,
+.typo-use-roboto.typo-h2__lg {
     font-weight: 300;
     letter-spacing: -0.00833em;
   }
 
-  .typo-use-roboto .typo-h3__lg {
+  .typo-use-roboto .typo-h3__lg,
+.typo-use-roboto.typo-h3__lg {
     font-weight: 400;
     letter-spacing: normal;
   }
 
-  .typo-use-roboto .typo-h4__lg {
+  .typo-use-roboto .typo-h4__lg,
+.typo-use-roboto.typo-h4__lg {
     font-weight: 400;
     letter-spacing: 0.00735em;
   }
 
-  .typo-use-roboto .typo-h5__lg {
+  .typo-use-roboto .typo-h5__lg,
+.typo-use-roboto.typo-h5__lg {
     font-weight: 400;
     letter-spacing: normal;
   }
 
-  .typo-use-roboto .typo-h6__lg {
+  .typo-use-roboto .typo-h6__lg,
+.typo-use-roboto.typo-h6__lg {
     font-weight: 500;
     letter-spacing: 0.0125em;
   }
 
-  .typo-use-roboto .typo-subtitle-1__lg {
+  .typo-use-roboto .typo-subtitle-1__lg,
+.typo-use-roboto.typo-subtitle-1__lg {
     font-weight: 400;
     letter-spacing: 0.00937em;
   }
 
-  .typo-use-roboto .typo-subtitle-2__lg {
+  .typo-use-roboto .typo-subtitle-2__lg,
+.typo-use-roboto.typo-subtitle-2__lg {
     font-weight: 500;
     letter-spacing: 0.00714em;
   }
 
-  .typo-use-roboto .typo-body-1__lg {
+  .typo-use-roboto .typo-body-1__lg,
+.typo-use-roboto.typo-body-1__lg {
     font-weight: 400;
     letter-spacing: 0.03125em;
   }
 
-  .typo-use-roboto .typo-body-2__lg {
+  .typo-use-roboto .typo-body-2__lg,
+.typo-use-roboto.typo-body-2__lg {
     font-weight: 400;
     letter-spacing: 0.01786em;
   }
 
-  .typo-use-roboto .typo-caption-1__lg {
+  .typo-use-roboto .typo-caption-1__lg,
+.typo-use-roboto.typo-caption-1__lg {
     font-weight: 400;
     letter-spacing: 0.03333em;
   }
 
-  .typo-use-roboto .typo-caption-2__lg {
+  .typo-use-roboto .typo-caption-2__lg,
+.typo-use-roboto.typo-caption-2__lg {
     font-weight: 500;
     letter-spacing: 0.03333em;
   }
 
-  .typo-use-bebas-neue .typo-h1__lg {
+  .typo-use-bebas-neue .typo-h1__lg,
+.typo-use-bebas-neue.typo-h1__lg {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h2__lg {
+  .typo-use-bebas-neue .typo-h2__lg,
+.typo-use-bebas-neue.typo-h2__lg {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h3__lg {
+  .typo-use-bebas-neue .typo-h3__lg,
+.typo-use-bebas-neue.typo-h3__lg {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h4__lg {
+  .typo-use-bebas-neue .typo-h4__lg,
+.typo-use-bebas-neue.typo-h4__lg {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h5__lg {
+  .typo-use-bebas-neue .typo-h5__lg,
+.typo-use-bebas-neue.typo-h5__lg {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-bebas-neue .typo-h6__lg,
+.typo-use-bebas-neue.typo-h6__lg {
     font-weight: 700;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-h6__lg {
-    font-weight: 700;
-    letter-spacing: 0.06em;
-  }
-
-  .typo-use-bebas-neue .typo-subtitle-1__lg {
+  .typo-use-bebas-neue .typo-subtitle-1__lg,
+.typo-use-bebas-neue.typo-subtitle-1__lg {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-subtitle-2__lg {
+  .typo-use-bebas-neue .typo-subtitle-2__lg,
+.typo-use-bebas-neue.typo-subtitle-2__lg {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-body-1__lg {
+  .typo-use-bebas-neue .typo-body-1__lg,
+.typo-use-bebas-neue.typo-body-1__lg {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-body-2__lg {
+  .typo-use-bebas-neue .typo-body-2__lg,
+.typo-use-bebas-neue.typo-body-2__lg {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-caption-1__lg {
+  .typo-use-bebas-neue .typo-caption-1__lg,
+.typo-use-bebas-neue.typo-caption-1__lg {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-caption-2__lg {
+  .typo-use-bebas-neue .typo-caption-2__lg,
+.typo-use-bebas-neue.typo-caption-2__lg {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
@@ -2569,122 +2669,146 @@ input[type=password]::-ms-reveal {
     line-height: 1.25rem;
   }
 
-  .typo-use-roboto .typo-h1__xl {
+  .typo-use-roboto .typo-h1__xl,
+.typo-use-roboto.typo-h1__xl {
     font-weight: 300;
     letter-spacing: -0.01562em;
   }
 
-  .typo-use-roboto .typo-h2__xl {
+  .typo-use-roboto .typo-h2__xl,
+.typo-use-roboto.typo-h2__xl {
     font-weight: 300;
     letter-spacing: -0.00833em;
   }
 
-  .typo-use-roboto .typo-h3__xl {
+  .typo-use-roboto .typo-h3__xl,
+.typo-use-roboto.typo-h3__xl {
     font-weight: 400;
     letter-spacing: normal;
   }
 
-  .typo-use-roboto .typo-h4__xl {
+  .typo-use-roboto .typo-h4__xl,
+.typo-use-roboto.typo-h4__xl {
     font-weight: 400;
     letter-spacing: 0.00735em;
   }
 
-  .typo-use-roboto .typo-h5__xl {
+  .typo-use-roboto .typo-h5__xl,
+.typo-use-roboto.typo-h5__xl {
     font-weight: 400;
     letter-spacing: normal;
   }
 
-  .typo-use-roboto .typo-h6__xl {
+  .typo-use-roboto .typo-h6__xl,
+.typo-use-roboto.typo-h6__xl {
     font-weight: 500;
     letter-spacing: 0.0125em;
   }
 
-  .typo-use-roboto .typo-subtitle-1__xl {
+  .typo-use-roboto .typo-subtitle-1__xl,
+.typo-use-roboto.typo-subtitle-1__xl {
     font-weight: 400;
     letter-spacing: 0.00937em;
   }
 
-  .typo-use-roboto .typo-subtitle-2__xl {
+  .typo-use-roboto .typo-subtitle-2__xl,
+.typo-use-roboto.typo-subtitle-2__xl {
     font-weight: 500;
     letter-spacing: 0.00714em;
   }
 
-  .typo-use-roboto .typo-body-1__xl {
+  .typo-use-roboto .typo-body-1__xl,
+.typo-use-roboto.typo-body-1__xl {
     font-weight: 400;
     letter-spacing: 0.03125em;
   }
 
-  .typo-use-roboto .typo-body-2__xl {
+  .typo-use-roboto .typo-body-2__xl,
+.typo-use-roboto.typo-body-2__xl {
     font-weight: 400;
     letter-spacing: 0.01786em;
   }
 
-  .typo-use-roboto .typo-caption-1__xl {
+  .typo-use-roboto .typo-caption-1__xl,
+.typo-use-roboto.typo-caption-1__xl {
     font-weight: 400;
     letter-spacing: 0.03333em;
   }
 
-  .typo-use-roboto .typo-caption-2__xl {
+  .typo-use-roboto .typo-caption-2__xl,
+.typo-use-roboto.typo-caption-2__xl {
     font-weight: 500;
     letter-spacing: 0.03333em;
   }
 
-  .typo-use-bebas-neue .typo-h1__xl {
+  .typo-use-bebas-neue .typo-h1__xl,
+.typo-use-bebas-neue.typo-h1__xl {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h2__xl {
+  .typo-use-bebas-neue .typo-h2__xl,
+.typo-use-bebas-neue.typo-h2__xl {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h3__xl {
+  .typo-use-bebas-neue .typo-h3__xl,
+.typo-use-bebas-neue.typo-h3__xl {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h4__xl {
+  .typo-use-bebas-neue .typo-h4__xl,
+.typo-use-bebas-neue.typo-h4__xl {
     font-weight: 700;
     letter-spacing: normal;
   }
 
-  .typo-use-bebas-neue .typo-h5__xl {
+  .typo-use-bebas-neue .typo-h5__xl,
+.typo-use-bebas-neue.typo-h5__xl {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-bebas-neue .typo-h6__xl,
+.typo-use-bebas-neue.typo-h6__xl {
     font-weight: 700;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-h6__xl {
-    font-weight: 700;
-    letter-spacing: 0.06em;
-  }
-
-  .typo-use-bebas-neue .typo-subtitle-1__xl {
+  .typo-use-bebas-neue .typo-subtitle-1__xl,
+.typo-use-bebas-neue.typo-subtitle-1__xl {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-subtitle-2__xl {
+  .typo-use-bebas-neue .typo-subtitle-2__xl,
+.typo-use-bebas-neue.typo-subtitle-2__xl {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-body-1__xl {
+  .typo-use-bebas-neue .typo-body-1__xl,
+.typo-use-bebas-neue.typo-body-1__xl {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-body-2__xl {
+  .typo-use-bebas-neue .typo-body-2__xl,
+.typo-use-bebas-neue.typo-body-2__xl {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-caption-1__xl {
+  .typo-use-bebas-neue .typo-caption-1__xl,
+.typo-use-bebas-neue.typo-caption-1__xl {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
 
-  .typo-use-bebas-neue .typo-caption-2__xl {
+  .typo-use-bebas-neue .typo-caption-2__xl,
+.typo-use-bebas-neue.typo-caption-2__xl {
     font-weight: 400;
     letter-spacing: 0.06em;
   }
