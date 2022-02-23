@@ -231,6 +231,39 @@ $btn-props: (
   )
 ) !default;
 
+/// Define as propriedades para `nav--item`.
+$navbar-item-props: (
+  "roboto": (
+    "padding": 0 helpers.px-to-em(20px),
+    "height": helpers.px-to-em(56px),
+    "font-size": helpers.px-to-rem(14px),
+    "font-weight": 400,
+    "text-transform": none,
+    "letter-spacing": helpers.px-to-em(.32px),
+    "line-height": normal
+  ),
+
+  "bebas-neue": (
+    "padding": 0 helpers.px-to-em(20px),
+    "height": helpers.px-to-em(40px),
+    "font-size": helpers.px-to-rem(18px),
+    "font-weight": 400,
+    "text-transform": none,
+    "letter-spacing": helpers.px-to-em(.96px),
+    "line-height": 1.5
+  ),
+
+  "raleway": (
+    "padding": 0 helpers.px-to-em(20px),
+    "height": helpers.px-to-em(56px),
+    "font-size": helpers.px-to-rem(14px),
+    "font-weight": 400,
+    "text-transform": none,
+    "letter-spacing": helpers.px-to-em(.32px),
+    "line-height": normal
+  ),
+) !default;
+
 /// Define as tipografias para `toolbar--nav--item`.
 $toolbar-nav-item-typos: (
   "bebas-neue": (

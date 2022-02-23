@@ -1696,6 +1696,63 @@ input[type=password]::-ms-reveal {
   color: inherit;
 }
 
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  color: var(--theme-primary, rgba(0, 0, 0, 0.87));
+}
+.navbar--item {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+.typo-use-roboto .navbar--item, .navbar--item.typo-use-roboto {
+  padding: 0 1.25em;
+  height: 3.5em;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  line-height: normal;
+}
+.typo-use-bebas-neue .navbar--item, .navbar--item.typo-use-bebas-neue {
+  padding: 0 1.25em;
+  height: 2.5em;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+}
+.typo-use-raleway .navbar--item, .navbar--item.typo-use-raleway {
+  padding: 0 1.25em;
+  height: 3.5em;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  line-height: normal;
+}
+.navbar--item:hover {
+  color: inherit;
+  opacity: 0.7;
+}
+.navbar--item:hover, .navbar--item_active {
+  border-bottom: 2px solid;
+}
+.navbar--item_active, .navbar--item_active:hover {
+  color: var(--theme-500, #9C27B0);
+}
+
 .typo-use-roboto {
   font-family: "Roboto", sans-serif;
 }
