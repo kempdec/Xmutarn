@@ -1,17 +1,37 @@
+@use "./font/maps" as font;
+@use "../themes/theme/maps" as theme;
+@use "../helpers";
+
 .btn {
   position: relative;
   display: inline-flex;
   overflow: hidden;
-  padding: $button-padding;
-  height: $button-height;
-  font-size: $button-font-size;
-  font-weight: $button-font-weight;
-  text-transform: $button-text-transform;
-  letter-spacing: $button-letter-spacing;
-  border-radius: $button-border-radius;
   justify-content: center;
   align-items: center;
   user-select: none;
+
+  @at-root {
+    @each $main-theme, $props in theme.$btn-props {
+
+      html[x-main-theme=#{$main-theme}] & {
+        @each $prop, $value in $props {
+
+          #{$prop}: #{$value};
+        }
+      }
+    }
+
+    @each $font-name, $props in font.$btn-props {
+
+      .typo-use-#{$font-name} &,
+      &.typo-use-#{$font-name} {
+        @each $prop, $value in $props {
+
+          #{$prop}: #{$value};
+        }
+      }
+    }
+  }
 
   &:not(.btn_outlined):not(.btn_outlined-color) {
     border: $button-border;
@@ -27,7 +47,6 @@
         background-color: white;
       }
 
-      &:not(.btn_color-accent):not(.btn_color-primary),
       &.btn_color-featured {
         background-color: var(--theme-500, get-featured-theme-color());
       }
@@ -135,15 +154,15 @@
     }
   }
 
-  @each $size, $length in $button-font-sizes {
+  @each $font-name, $sizes in font.$btn-sizes {
 
-    // &_size-*
-    //
-    // Exemplo: &_size-xsmall
-    &_size-#{$size} {
-      font-size: px-to-rem($list: $length);
+    @each $size, $length in $sizes {
+
+      .typo-use-#{$font-name} &_size-#{$size},
+      &_size-#{$size}.typo-use-#{$font-name} {
+        font-size: helpers.px-to-rem($length);
+      }
     }
-
   }
 
   &--icon {

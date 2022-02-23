@@ -20,17 +20,6 @@ $borders-radius: (
   "xl-2": px-to-rem($list: 54px)
 ) !default;
 
-// Botão
-
-// Define o tamanho das fontes dos botões.
-$button-font-sizes: (
-  xs: px-to-rem($list: 10px),
-  sm: px-to-rem($list: 12px),
-  md: px-to-rem($list: 14px),
-  lg: px-to-rem($list: 16px),
-  xl: px-to-rem($list: 19.2px)
-) !default;
-
 // Cartão
 
 // Define o tamanho dos formatos de mídia disponíveis para cartão.

@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../../helpers";
 
 /// Define as propriedades das fontes.
@@ -164,6 +165,69 @@ $map: (
         "url": "raleway/black-italic.woff2"
       )
     )
+  )
+) !default;
+
+/// Define os tamanhos para `btn_size-*`.
+$btn-sizes: (
+  "roboto": (
+    "xs": helpers.px-to-rem(10px),
+    "sm": helpers.px-to-rem(12px),
+    "md": helpers.px-to-rem(14px),
+    "lg": helpers.px-to-rem(16px),
+    "xl": helpers.px-to-rem(19.2px)
+  ),
+
+  "bebas-neue": (
+    "xs": helpers.px-to-rem(14px),
+    "sm": helpers.px-to-rem(16px),
+    "md": helpers.px-to-rem(18px),
+    "lg": helpers.px-to-rem(20px),
+    "xl": helpers.px-to-rem(23.2px)
+  ),
+
+  "raleway": (
+    "xs": helpers.px-to-rem(10px),
+    "sm": helpers.px-to-rem(12px),
+    "md": helpers.px-to-rem(14px),
+    "lg": helpers.px-to-rem(16px),
+    "xl": helpers.px-to-rem(19.2px)
+  )
+) !default;
+
+/// Define as propriedades para `btn`.
+$btn-props: (
+  "roboto": (
+    "padding": 0 helpers.px-to-em(18.288px),
+    "height": helpers.px-to-em(41.15px),
+    "font-size": map.get(map.get($btn-sizes, "roboto"), "md"),
+    "font-weight": 500,
+    "text-transform": uppercase,
+    "letter-spacing": helpers.px-to-em(.32px),
+    "line-height": normal,
+    "border-radius": helpers.px-to-rem(4px)
+  ),
+
+  "bebas-neue": (
+    "padding": 0 helpers.px-to-em(40px),
+    "height": helpers.px-to-em(40px),
+    "font-size": map.get(map.get($btn-sizes, "bebas-neue"), "md"),
+    "font-weight": 700,
+    "text-transform": none,
+    "letter-spacing": helpers.px-to-em(.96px),
+    "line-height": 1.5,
+    "border-radius": helpers.px-to-rem(4px)
+  ),
+
+  "raleway": (
+    "padding": 0 helpers.px-to-em(24px),
+    "height": helpers.px-to-em(48.6px),
+    "font-size": map.get(map.get($btn-sizes, "raleway"), "md"),
+    "font-weight": 600,
+    "text-transform": none,
+    "letter-spacing": helpers.px-to-em(.96px),
+    "line-height": normal,
+    "border-radius": helpers.px-to-rem(4px)
   )
 ) !default;
 

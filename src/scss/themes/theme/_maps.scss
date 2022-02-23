@@ -1,4 +1,5 @@
 @use "../palette";
+@use "./variables" as theme-var;
 
 /// Define os temas principais.
 $main: (
@@ -29,7 +30,7 @@ $main: (
     "secondary": #9da3ac,
     "hint": rgba(255, 255, 255, 0.5),
     "disabled": rgba(255, 255, 255, 0.5),
-    "dividers": #32343c,
+    "dividers": #768ba3,
     "foreground": #28416f,
     "background": #101922,
     "card": #1c2734
@@ -44,6 +45,25 @@ $main: (
     "foreground": #121B24,
     "background": #121B24,
     "card": #1F2935
+  )
+) !default;
+
+/// Define as propriedades para `btn`.
+$btn-props: (
+  "main": (
+    "background-color": var(--theme-500, palette.get-color(theme-var.$featured-default, "500"))
+  ),
+
+  "dark": (
+    "background-color": var(--theme-500, palette.get-color(theme-var.$featured-default, "500"))
+  ),
+
+  "game": (
+    "background-color": var(--theme-800, palette.get-color(theme-var.$featured-default, "800"))
+  ),
+
+  "play": (
+    "background-color": var(--theme-500, palette.get-color(theme-var.$featured-default, "500"))
   )
 ) !default;
 

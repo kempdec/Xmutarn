@@ -346,7 +346,7 @@ html[x-main-theme=game] {
   --theme-secondary: #9da3ac;
   --theme-hint: rgba(255, 255, 255, 0.5);
   --theme-disabled: rgba(255, 255, 255, 0.5);
-  --theme-dividers: #32343c;
+  --theme-dividers: #768ba3;
   --theme-foreground: #28416f;
   --theme-background: #101922;
   --theme-card: #1c2734;
@@ -2871,12 +2871,6 @@ input[type=password]::-ms-reveal {
   position: relative;
   display: inline-flex;
   overflow: hidden;
-  padding: 0 1.143em;
-  height: 2.571875em;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  border-radius: 0.25rem;
   justify-content: center;
   align-items: center;
   -webkit-user-select: none;
@@ -2884,6 +2878,55 @@ input[type=password]::-ms-reveal {
       -ms-user-select: none;
           user-select: none;
 }
+html[x-main-theme=main] .btn {
+  background-color: var(--theme-500, #9C27B0);
+}
+
+html[x-main-theme=dark] .btn {
+  background-color: var(--theme-500, #9C27B0);
+}
+
+html[x-main-theme=game] .btn {
+  background-color: var(--theme-800, #6A1B9A);
+}
+
+html[x-main-theme=play] .btn {
+  background-color: var(--theme-500, #9C27B0);
+}
+
+.typo-use-roboto .btn, .btn.typo-use-roboto {
+  padding: 0 1.143em;
+  height: 2.571875em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: normal;
+  border-radius: 0.25rem;
+}
+
+.typo-use-bebas-neue .btn, .btn.typo-use-bebas-neue {
+  padding: 0 2.5em;
+  height: 2.5em;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+.typo-use-raleway .btn, .btn.typo-use-raleway {
+  padding: 0 1.5em;
+  height: 3.0375em;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.06em;
+  line-height: normal;
+  border-radius: 0.25rem;
+}
+
 .btn:not(.btn_outlined):not(.btn_outlined-color) {
   border: none;
 }
@@ -2896,7 +2939,7 @@ input[type=password]::-ms-reveal {
 .btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color)::before {
   background-color: white;
 }
-.btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color):not(.btn_color-accent):not(.btn_color-primary), .btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color).btn_color-featured {
+.btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color).btn_color-featured {
   background-color: var(--theme-500, #9C27B0);
 }
 .btn:not([disabled]):not(.btn_disabled):not(.btn_flat):not(.btn_outlined):not(.btn_outlined-color).btn_color-accent {
@@ -2970,19 +3013,49 @@ input[type=password]::-ms-reveal {
 .btn_outlined-color.btn_color-accent {
   border-color: var(--theme-A400, #F50057);
 }
-.btn_size-xs {
+.typo-use-roboto .btn_size-xs, .btn_size-xs.typo-use-roboto {
   font-size: 0.625rem;
 }
-.btn_size-sm {
+.typo-use-roboto .btn_size-sm, .btn_size-sm.typo-use-roboto {
   font-size: 0.75rem;
 }
-.btn_size-md {
+.typo-use-roboto .btn_size-md, .btn_size-md.typo-use-roboto {
   font-size: 0.875rem;
 }
-.btn_size-lg {
+.typo-use-roboto .btn_size-lg, .btn_size-lg.typo-use-roboto {
   font-size: 1rem;
 }
-.btn_size-xl {
+.typo-use-roboto .btn_size-xl, .btn_size-xl.typo-use-roboto {
+  font-size: 1.2rem;
+}
+.typo-use-bebas-neue .btn_size-xs, .btn_size-xs.typo-use-bebas-neue {
+  font-size: 0.875rem;
+}
+.typo-use-bebas-neue .btn_size-sm, .btn_size-sm.typo-use-bebas-neue {
+  font-size: 1rem;
+}
+.typo-use-bebas-neue .btn_size-md, .btn_size-md.typo-use-bebas-neue {
+  font-size: 1.125rem;
+}
+.typo-use-bebas-neue .btn_size-lg, .btn_size-lg.typo-use-bebas-neue {
+  font-size: 1.25rem;
+}
+.typo-use-bebas-neue .btn_size-xl, .btn_size-xl.typo-use-bebas-neue {
+  font-size: 1.45rem;
+}
+.typo-use-raleway .btn_size-xs, .btn_size-xs.typo-use-raleway {
+  font-size: 0.625rem;
+}
+.typo-use-raleway .btn_size-sm, .btn_size-sm.typo-use-raleway {
+  font-size: 0.75rem;
+}
+.typo-use-raleway .btn_size-md, .btn_size-md.typo-use-raleway {
+  font-size: 0.875rem;
+}
+.typo-use-raleway .btn_size-lg, .btn_size-lg.typo-use-raleway {
+  font-size: 1rem;
+}
+.typo-use-raleway .btn_size-xl, .btn_size-xl.typo-use-raleway {
   font-size: 1.2rem;
 }
 .btn--icon {
