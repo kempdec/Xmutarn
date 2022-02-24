@@ -1,3 +1,5 @@
+@use "sass:map";
+@use "../../helpers";
 @use "../palette";
 @use "./variables" as theme-var;
 
@@ -25,17 +27,6 @@ $main: (
     "card": #191919
   ),
 
-  "game": (
-    "primary": white,
-    "secondary": #9da3ac,
-    "hint": rgba(255, 255, 255, 0.5),
-    "disabled": rgba(255, 255, 255, 0.5),
-    "dividers": #768ba3,
-    "foreground": #28416f,
-    "background": #101922,
-    "card": #202937
-  ),
-
   "play": (
     "primary": white,
     "secondary": rgba(255, 255, 255, 0.7),
@@ -45,12 +36,23 @@ $main: (
     "foreground": #1F2128,
     "background": #1F2128,
     "card": #242731
+  ),
+
+  "game": (
+    "primary": white,
+    "secondary": #9da3ac,
+    "hint": rgba(255, 255, 255, 0.5),
+    "disabled": rgba(255, 255, 255, 0.5),
+    "dividers": #768ba3,
+    "foreground": #28416f,
+    "background": #101922,
+    "card": #202937
   )
 ) !default;
 
-/// Define as propriedades para `btn`.
+/// Define as propriedades para `.btn`.
 $btn-props: (
-  "main": (
+  "light": (
     "background-color": var(--theme-500, palette.get-color(theme-var.$featured-default, "500"))
   ),
 
@@ -58,12 +60,163 @@ $btn-props: (
     "background-color": var(--theme-500, palette.get-color(theme-var.$featured-default, "500"))
   ),
 
+  "play": (
+    "background-color": var(--theme-500, palette.get-color(theme-var.$featured-default, "500"))
+  ),
+
   "game": (
     "background-color": var(--theme-800, palette.get-color(theme-var.$featured-default, "800"))
+  )
+) !default;
+
+/// Define o preenchimento esquerdo para os inputs.
+$input-padding-left: (
+  "light": helpers.px-to-em(5px),
+  "dark": helpers.px-to-em(5px),
+  "play": helpers.px-to-em(5px),
+  "game": helpers.px-to-em(16px)
+) !default;
+
+/// Define as propriedades para `.input`.
+$input-props: (
+  "light": (
+    "font-weight": 500,
+    "color": var(--theme-secondary, map.get($main, theme-var.$main-default, "secondary")),
+    "border-color": var(--theme-secondary, map.get($main, theme-var.$main-default, "secondary"))
+  ),
+
+  "dark": (
+    "font-weight": 500,
+    "color": var(--theme-secondary, map.get($main, theme-var.$main-default, "secondary")),
+    "border-color": var(--theme-secondary, map.get($main, theme-var.$main-default, "secondary"))
   ),
 
   "play": (
-    "background-color": var(--theme-500, palette.get-color(theme-var.$featured-default, "500"))
+    "font-weight": 500,
+    "color": var(--theme-secondary, map.get($main, theme-var.$main-default, "secondary")),
+    "border-color": var(--theme-secondary, map.get($main, theme-var.$main-default, "secondary"))
+  ),
+
+  "game": (
+    "font-weight": 500,
+    "font-size": helpers.px-to-rem(14px),
+    "color": var(--theme-secondary, map.get($main, theme-var.$main-default, "secondary")),
+    "border-color": rgba(255, 255, 255, .08)
+  )
+) !default;
+
+/// Define as propriedades para `.input--field`.
+$input-field-props: (
+  "light": (
+    "padding": helpers.px-to-em(16px 5px 12px 0),
+    "background-color": transparent
+  ),
+
+  "dark": (
+    "padding": helpers.px-to-em(16px 5px 12px 0),
+    "background-color": transparent
+  ),
+
+  "play": (
+    "padding": helpers.px-to-em(16px 5px 12px 0),
+    "background-color": transparent
+  ),
+
+  "game": (
+    "padding": helpers.px-to-em(24px 5px 12.8px 0),
+    "background-color": #171f29
+  )
+) !default;
+
+/// Define as propriedades para `.input--field:not(.input--field_outlined)`.
+$input-field-not-outlined-props: (
+  "light": (
+    "padding-left": helpers.px-to-em(5px),
+    "border": none,
+    "border-bottom": helpers.px-to-rem(1px) solid
+  ),
+
+  "dark": (
+    "padding-left": helpers.px-to-em(5px),
+    "border": none,
+    "border-bottom": helpers.px-to-rem(1px) solid
+  ),
+
+  "play": (
+    "padding-left": helpers.px-to-em(5px),
+    "border": none,
+    "border-bottom": helpers.px-to-rem(1px) solid
+  ),
+
+  "game": (
+    "padding-left": helpers.px-to-em(16px),
+    "border": none,
+    "border-radius": helpers.px-to-rem(6px)
+  )
+) !default;
+
+/// Define as propriedades para `.input--field_outlined`.
+$input-field-outlined-props: (
+  "light": (
+    "padding-left": helpers.px-to-em(10px),
+    "border": 1px solid,
+    "border-radius": helpers.px-to-em(5px)
+  ),
+
+  "dark": (
+    "padding-left": helpers.px-to-em(10px),
+    "border": 1px solid,
+    "border-radius": helpers.px-to-em(5px)
+  ),
+
+  "play": (
+    "padding-left": helpers.px-to-em(10px),
+    "border": 1px solid,
+    "border-radius": helpers.px-to-em(5px)
+  ),
+
+  "game": (
+    "padding-left": helpers.px-to-em(16px),
+    "border": 1px solid,
+    "border-radius": helpers.px-to-em(6px)
+  )
+) !default;
+
+/// Define as propriedades para `.input--label`.
+$input-label-props: (
+  "light": (
+    "top": helpers.px-to-em(16px)
+  ),
+
+  "dark": (
+    "top": helpers.px-to-em(16px)
+  ),
+
+  "play": (
+    "top": helpers.px-to-em(16px)
+  ),
+
+  "game": (
+    "top": helpers.px-to-em(19.2px)
+  )
+) !default;
+
+/// Define as propriedades para `.input--label_active`.
+$input-label-active-props: (
+  "light": (
+    "transform": translate(-15%, #{helpers.px-to-em(-18px)}) scale(.7)
+  ),
+
+  "dark": (
+    "transform": translate(-15%, #{helpers.px-to-em(-18px)}) scale(.7)
+  ),
+
+  "play": (
+    "transform": translate(-15%, #{helpers.px-to-em(-18px)}) scale(.7)
+  ),
+
+  "game": (
+    "transform": translate(-15%, #{helpers.px-to-em(-11.6px)}) scale(.7)
   )
 ) !default;
 
@@ -72,7 +225,7 @@ $toolbar-dark-colors: (
   "main": (
     "light": #212121,
     "dark": #212121,
-    "game": #202936,
-    "play": #242731
+    "play": #242731,
+    "game": #202936
   )
 ) !default;

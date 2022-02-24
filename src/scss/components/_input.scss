@@ -5,12 +5,19 @@
 @use "../utils/typo";
 
 .input {
-  $color: var(--theme-secondary, theme.get-main-color("secondary"));
-
   position: relative;
-  font-weight: #{map.get(typo.$weights, "medium")};
-  color: #{$color};
-  border-color: #{$color};
+
+  @at-root {
+    @each $theme-name, $props in theme.$input-props {
+
+      [x-main-theme=#{$theme-name}] & {
+        @each $prop, $value in $props {
+
+          #{$prop}: #{$value};
+        }
+      }
+    }
+  }
 
   $colors: (
     "alert": palette.get-color("red", "500"),
@@ -28,13 +35,23 @@
   }
 
   &--field {
-    padding: #{helpers.px-to-em(16px 5px 12px 0)};
     width: 100%;
     font-size: inherit;
     font-weight: inherit;
     line-height: 1;
     color: inherit;
-    background-color: transparent;
+
+    @at-root {
+      @each $theme-name, $props in theme.$input-field-props {
+
+        [x-main-theme=#{$theme-name}] & {
+          @each $prop, $value in $props {
+
+            #{$prop}: #{$value};
+          }
+        }
+      }
+    }
 
     $focus-color: var(--theme-500, theme.get-featured-color("500"));
 
@@ -54,45 +71,85 @@
     }
 
     &:not(&_outlined) {
-      $padding-left: helpers.px-to-em(5px);
+      @at-root {
+        @each $theme-name, $props in theme.$input-field-not-outlined-props {
 
-      padding-left: #{$padding-left};
-      border: none;
-      border-bottom: #{helpers.px-to-rem(1px) solid};
+          [x-main-theme=#{$theme-name}] & {
+            @each $prop, $value in $props {
 
-      & ~ .input--label {
-        left: #{helpers.px-to-em(5px)};
+              #{$prop}: #{$value};
+
+              @if $prop == "padding-left" {
+
+                & ~ .input--label {
+                  left: #{$value};
+                }
+              }
+            }
+          }
+        }
       }
     }
 
     &_outlined {
-      $padding-left: helpers.px-to-em(10px);
-
-      padding-left: #{$padding-left};
-      border: 1px solid;
       border-color: inherit;
-      border-radius: #{helpers.px-to-em(5px)};
 
-      & ~ .input--label {
-        left: #{helpers.px-to-em(10px)};
+      @at-root {
+        @each $theme-name, $props in theme.$input-field-outlined-props {
+
+          [x-main-theme=#{$theme-name}] & {
+            @each $prop, $value in $props {
+
+              #{$prop}: #{$value};
+
+              @if $prop == "padding-left" {
+
+                & ~ .input--label {
+                  left: #{$value};
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
 
   &--label {
     position: absolute;
-    top: #{helpers.px-to-em(16px)};
     transition: all .3s linear;
     pointer-events: none;
 
+    @at-root {
+      @each $theme-name, $props in theme.$input-label-props {
+
+        [x-main-theme=#{$theme-name}] & {
+          @each $prop, $value in $props {
+
+            #{$prop}: #{$value};
+          }
+        }
+      }
+    }
+
     &_active {
-      transform: translate(-15%, #{helpers.px-to-em(-18px)}) scale(.7);
+      @at-root {
+        @each $theme-name, $props in theme.$input-label-active-props {
+
+          [x-main-theme=#{$theme-name}] & {
+            @each $prop, $value in $props {
+
+              #{$prop}: #{$value};
+            }
+          }
+        }
+      }
     }
   }
 
   &--description {
     margin: 0;
-    margin-top: #{helpers.px-to-rem(5px)};
+    margin-top: #{helpers.px-to-rem(14.6px)};
     font-size: #{helpers.px-to-rem(12px)};
     color: inherit;
   }

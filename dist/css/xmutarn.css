@@ -341,17 +341,6 @@
   --theme-card: #191919;
 }
 
-[x-main-theme=game] {
-  --theme-primary: white;
-  --theme-secondary: #9da3ac;
-  --theme-hint: rgba(255, 255, 255, 0.5);
-  --theme-disabled: rgba(255, 255, 255, 0.5);
-  --theme-dividers: #768ba3;
-  --theme-foreground: #28416f;
-  --theme-background: #101922;
-  --theme-card: #202937;
-}
-
 [x-main-theme=play] {
   --theme-primary: white;
   --theme-secondary: rgba(255, 255, 255, 0.7);
@@ -361,6 +350,17 @@
   --theme-foreground: #1F2128;
   --theme-background: #1F2128;
   --theme-card: #242731;
+}
+
+[x-main-theme=game] {
+  --theme-primary: white;
+  --theme-secondary: #9da3ac;
+  --theme-hint: rgba(255, 255, 255, 0.5);
+  --theme-disabled: rgba(255, 255, 255, 0.5);
+  --theme-dividers: #768ba3;
+  --theme-foreground: #28416f;
+  --theme-background: #101922;
+  --theme-card: #202937;
 }
 
 [x-featured-theme=red] {
@@ -1627,10 +1627,32 @@ input[type=password]::-ms-reveal {
 }
 .input {
   position: relative;
+}
+[x-main-theme=light] .input {
   font-weight: 500;
   color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
   border-color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
 }
+
+[x-main-theme=dark] .input {
+  font-weight: 500;
+  color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
+  border-color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
+}
+
+[x-main-theme=play] .input {
+  font-weight: 500;
+  color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
+  border-color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
+}
+
+[x-main-theme=game] .input {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
 .input_color-alert {
   color: #F44336;
   border-color: #F44336;
@@ -1644,14 +1666,32 @@ input[type=password]::-ms-reveal {
   border-color: #FF9800;
 }
 .input--field {
-  padding: 1em 0.3125em 0.75em 0;
   width: 100%;
   font-size: inherit;
   font-weight: inherit;
   line-height: 1;
   color: inherit;
+}
+[x-main-theme=light] .input--field {
+  padding: 1em 0.3125em 0.75em 0;
   background-color: transparent;
 }
+
+[x-main-theme=dark] .input--field {
+  padding: 1em 0.3125em 0.75em 0;
+  background-color: transparent;
+}
+
+[x-main-theme=play] .input--field {
+  padding: 1em 0.3125em 0.75em 0;
+  background-color: transparent;
+}
+
+[x-main-theme=game] .input--field {
+  padding: 1.5em 0.3125em 0.8em 0;
+  background-color: #171f29;
+}
+
 .input--field:focus {
   color: var(--theme-primary, rgba(0, 0, 0, 0.87));
   border-color: var(--theme-500, #9C27B0);
@@ -1663,35 +1703,121 @@ input[type=password]::-ms-reveal {
 .input--field:focus ~ .input--label {
   color: var(--theme-500, #9C27B0);
 }
-.input--field:not(.input--field_outlined) {
+[x-main-theme=light] .input--field:not(.input--field_outlined) {
   padding-left: 0.3125em;
   border: none;
   border-bottom: 0.0625rem solid;
 }
-.input--field:not(.input--field_outlined) ~ .input--label {
+[x-main-theme=light] .input--field:not(.input--field_outlined) ~ .input--label {
   left: 0.3125em;
 }
+
+[x-main-theme=dark] .input--field:not(.input--field_outlined) {
+  padding-left: 0.3125em;
+  border: none;
+  border-bottom: 0.0625rem solid;
+}
+[x-main-theme=dark] .input--field:not(.input--field_outlined) ~ .input--label {
+  left: 0.3125em;
+}
+
+[x-main-theme=play] .input--field:not(.input--field_outlined) {
+  padding-left: 0.3125em;
+  border: none;
+  border-bottom: 0.0625rem solid;
+}
+[x-main-theme=play] .input--field:not(.input--field_outlined) ~ .input--label {
+  left: 0.3125em;
+}
+
+[x-main-theme=game] .input--field:not(.input--field_outlined) {
+  padding-left: 1em;
+  border: none;
+  border-radius: 0.375rem;
+}
+[x-main-theme=game] .input--field:not(.input--field_outlined) ~ .input--label {
+  left: 1em;
+}
+
 .input--field_outlined {
+  border-color: inherit;
+}
+[x-main-theme=light] .input--field_outlined {
   padding-left: 0.625em;
   border: 1px solid;
-  border-color: inherit;
   border-radius: 0.3125em;
 }
-.input--field_outlined ~ .input--label {
+[x-main-theme=light] .input--field_outlined ~ .input--label {
   left: 0.625em;
 }
+
+[x-main-theme=dark] .input--field_outlined {
+  padding-left: 0.625em;
+  border: 1px solid;
+  border-radius: 0.3125em;
+}
+[x-main-theme=dark] .input--field_outlined ~ .input--label {
+  left: 0.625em;
+}
+
+[x-main-theme=play] .input--field_outlined {
+  padding-left: 0.625em;
+  border: 1px solid;
+  border-radius: 0.3125em;
+}
+[x-main-theme=play] .input--field_outlined ~ .input--label {
+  left: 0.625em;
+}
+
+[x-main-theme=game] .input--field_outlined {
+  padding-left: 1em;
+  border: 1px solid;
+  border-radius: 0.375em;
+}
+[x-main-theme=game] .input--field_outlined ~ .input--label {
+  left: 1em;
+}
+
 .input--label {
   position: absolute;
-  top: 1em;
   transition: all 0.3s linear;
   pointer-events: none;
 }
-.input--label_active, .input--field:focus ~ .input--label {
+[x-main-theme=light] .input--label {
+  top: 1em;
+}
+
+[x-main-theme=dark] .input--label {
+  top: 1em;
+}
+
+[x-main-theme=play] .input--label {
+  top: 1em;
+}
+
+[x-main-theme=game] .input--label {
+  top: 1.2em;
+}
+
+[x-main-theme=light] .input--label_active, [x-main-theme=light] .input--field:focus ~ .input--label {
   transform: translate(-15%, -1.125em) scale(0.7);
 }
+
+[x-main-theme=dark] .input--label_active, [x-main-theme=dark] .input--field:focus ~ .input--label {
+  transform: translate(-15%, -1.125em) scale(0.7);
+}
+
+[x-main-theme=play] .input--label_active, [x-main-theme=play] .input--field:focus ~ .input--label {
+  transform: translate(-15%, -1.125em) scale(0.7);
+}
+
+[x-main-theme=game] .input--label_active, [x-main-theme=game] .input--field:focus ~ .input--label {
+  transform: translate(-15%, -0.725em) scale(0.7);
+}
+
 .input--description {
   margin: 0;
-  margin-top: 0.3125rem;
+  margin-top: 0.9125rem;
   font-size: 0.75rem;
   color: inherit;
 }
@@ -2935,7 +3061,7 @@ input[type=password]::-ms-reveal {
       -ms-user-select: none;
           user-select: none;
 }
-[x-main-theme=main] .btn {
+[x-main-theme=light] .btn {
   background-color: var(--theme-500, #9C27B0);
 }
 
@@ -2943,12 +3069,12 @@ input[type=password]::-ms-reveal {
   background-color: var(--theme-500, #9C27B0);
 }
 
-[x-main-theme=game] .btn {
-  background-color: var(--theme-800, #6A1B9A);
-}
-
 [x-main-theme=play] .btn {
   background-color: var(--theme-500, #9C27B0);
+}
+
+[x-main-theme=game] .btn {
+  background-color: var(--theme-800, #6A1B9A);
 }
 
 .typo-use-roboto .btn, .btn.typo-use-roboto {
@@ -3245,12 +3371,12 @@ input[type=password]::-ms-reveal {
   background-color: #212121;
 }
 
-[x-main-theme=game] .toolbar_dark-color {
-  background-color: #202936;
-}
-
 [x-main-theme=play] .toolbar_dark-color {
   background-color: #242731;
+}
+
+[x-main-theme=game] .toolbar_dark-color {
+  background-color: #202936;
 }
 
 .toolbar_hide {
