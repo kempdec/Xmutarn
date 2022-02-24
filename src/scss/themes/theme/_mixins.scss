@@ -3,8 +3,8 @@
 /// Cria o estilo de um tema.
 @mixin create($type, $name, $props, $default) {
 
-  // Exemplo: html[x-main-theme="light"]
-  html[x-#{$type}-theme="#{$name}"] {
+  // Exemplo: [x-main-theme="light"]
+  [x-#{$type}-theme="#{$name}"] {
 
     @each $prop, $name in $props {
 

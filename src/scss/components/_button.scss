@@ -13,7 +13,7 @@
   @at-root {
     @each $main-theme, $props in theme.$btn-props {
 
-      html[x-main-theme=#{$main-theme}] & {
+      [x-main-theme=#{$main-theme}] & {
         @each $prop, $value in $props {
 
           #{$prop}: #{$value};
