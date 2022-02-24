@@ -220,7 +220,7 @@ $btn-props: (
   ),
 
   "raleway": (
-    "padding": 0 helpers.px-to-em(24px),
+    "padding": 0 helpers.px-to-em(55px),
     "height": helpers.px-to-em(48.6px),
     "font-size": map.get(map.get($btn-sizes, "raleway"), "md"),
     "font-weight": 600,
@@ -228,6 +228,13 @@ $btn-props: (
     "letter-spacing": helpers.px-to-em(.96px),
     "line-height": normal,
     "border-radius": helpers.px-to-rem(4px)
+  )
+) !default;
+
+/// Define as propriedades para `btn--flat`.
+$btn-flat-props: (
+  "raleway": (
+    "padding": 0 helpers.px-to-em(24px)
   )
 ) !default;
 

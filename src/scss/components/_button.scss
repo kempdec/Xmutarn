@@ -104,6 +104,19 @@
   &_flat,
   &_outlined,
   &_outlined-color {
+    @at-root {
+      @each $font-name, $props in font.$btn-flat-props {
+
+        .typo-use-#{$font-name} &,
+        &.typo-use-#{$font-name} {
+          @each $prop, $value in $props {
+
+            #{$prop}: #{$value};
+          }
+        }
+      }
+    }
+
     &:not([disabled]):not(.btn_disabled) {
       background-color: transparent;
 

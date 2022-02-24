@@ -349,7 +349,7 @@
   --theme-dividers: #768ba3;
   --theme-foreground: #28416f;
   --theme-background: #101922;
-  --theme-card: #1c2734;
+  --theme-card: #202937;
 }
 
 [x-main-theme=play] {
@@ -1982,13 +1982,13 @@ input[type=password]::-ms-reveal {
 
 .typo-use-bebas-neue .typo-h5,
 .typo-use-bebas-neue.typo-h5 {
-  font-weight: 700;
-  letter-spacing: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
 }
 
 .typo-use-bebas-neue .typo-h6,
 .typo-use-bebas-neue.typo-h6 {
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.06em;
 }
 
@@ -2205,13 +2205,13 @@ input[type=password]::-ms-reveal {
 
   .typo-use-bebas-neue .typo-h5__sm,
 .typo-use-bebas-neue.typo-h5__sm {
-    font-weight: 700;
-    letter-spacing: normal;
+    font-weight: 400;
+    letter-spacing: 0.06em;
   }
 
   .typo-use-bebas-neue .typo-h6__sm,
 .typo-use-bebas-neue.typo-h6__sm {
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0.06em;
   }
 
@@ -2422,13 +2422,13 @@ input[type=password]::-ms-reveal {
 
   .typo-use-bebas-neue .typo-h5__md,
 .typo-use-bebas-neue.typo-h5__md {
-    font-weight: 700;
-    letter-spacing: normal;
+    font-weight: 400;
+    letter-spacing: 0.06em;
   }
 
   .typo-use-bebas-neue .typo-h6__md,
 .typo-use-bebas-neue.typo-h6__md {
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0.06em;
   }
 
@@ -2639,13 +2639,13 @@ input[type=password]::-ms-reveal {
 
   .typo-use-bebas-neue .typo-h5__lg,
 .typo-use-bebas-neue.typo-h5__lg {
-    font-weight: 700;
-    letter-spacing: normal;
+    font-weight: 400;
+    letter-spacing: 0.06em;
   }
 
   .typo-use-bebas-neue .typo-h6__lg,
 .typo-use-bebas-neue.typo-h6__lg {
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0.06em;
   }
 
@@ -2856,13 +2856,13 @@ input[type=password]::-ms-reveal {
 
   .typo-use-bebas-neue .typo-h5__xl,
 .typo-use-bebas-neue.typo-h5__xl {
-    font-weight: 700;
-    letter-spacing: normal;
+    font-weight: 400;
+    letter-spacing: 0.06em;
   }
 
   .typo-use-bebas-neue .typo-h6__xl,
 .typo-use-bebas-neue.typo-h6__xl {
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0.06em;
   }
 
@@ -2974,7 +2974,7 @@ input[type=password]::-ms-reveal {
 }
 
 .typo-use-raleway .btn, .btn.typo-use-raleway {
-  padding: 0 1.5em;
+  padding: 0 3.4375em;
   height: 3.0375em;
   font-size: 0.875rem;
   font-weight: 600;
@@ -3037,6 +3037,10 @@ input[type=password]::-ms-reveal {
 .btn[disabled]::before, .btn_disabled::before {
   background-color: var(--theme-disabled, rgba(0, 0, 0, 0.38));
 }
+.typo-use-raleway .btn_flat, .btn_flat.typo-use-raleway, .typo-use-raleway .btn_outlined, .btn_outlined.typo-use-raleway, .typo-use-raleway .btn_outlined-color, .btn_outlined-color.typo-use-raleway {
+  padding: 0 1.5em;
+}
+
 .btn_flat:not([disabled]):not(.btn_disabled), .btn_outlined:not([disabled]):not(.btn_disabled), .btn_outlined-color:not([disabled]):not(.btn_disabled) {
   background-color: transparent;
 }

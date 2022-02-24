@@ -134,11 +134,11 @@ $map-typo: (
       "letter-spacing": normal
     ),
     "h5": (
-      "font-weight": map.get($weights, "bold"),
-      "letter-spacing": normal
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": helpers.px-to-em(.96px)
     ),
     "h6": (
-      "font-weight": map.get($weights, "bold"),
+      "font-weight": map.get($weights, "regular"),
       "letter-spacing": helpers.px-to-em(.96px)
     ),
     "subtitle-1": (
