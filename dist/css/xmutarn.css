@@ -1654,16 +1654,16 @@ input[type=password]::-ms-reveal {
 }
 
 .input_color-alert {
-  color: #F44336;
-  border-color: #F44336;
+  color: #F44336 !important;
+  border-color: #F44336 !important;
 }
 .input_color-success {
-  color: #4CAF50;
-  border-color: #4CAF50;
+  color: #4CAF50 !important;
+  border-color: #4CAF50 !important;
 }
 .input_color-warning {
-  color: #FF9800;
-  border-color: #FF9800;
+  color: #FF9800 !important;
+  border-color: #FF9800 !important;
 }
 .input--field {
   width: 100%;

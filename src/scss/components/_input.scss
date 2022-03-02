@@ -29,8 +29,8 @@
 
     // Exemplo: .input_color-alert.
     &_color-#{$name} {
-      color: #{$color};
-      border-color: #{$color};
+      color: #{$color} !important;
+      border-color: #{$color} !important;
     }
   }
 
