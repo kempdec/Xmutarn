@@ -1,0 +1,15 @@
+/// Cria o estilo de um tema.
+@mixin create($type, $name, $props) {
+
+  // Exemplo: [x-main-theme="light"].
+  [x-#{$type}-theme="#{$name}"] {
+
+    @each $prop, $value in $props {
+
+      // --theme-*
+      //
+      // Exemplo: --theme-primary.
+      --theme-#{$prop}: #{$value};
+    }
+  }
+}

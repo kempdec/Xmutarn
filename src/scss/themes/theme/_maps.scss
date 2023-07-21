@@ -3,7 +3,7 @@
 @use "../palette";
 @use "./variables" as theme-var;
 
-/// Define os temas principais.
+/// Define os temas.
 $main: (
   "light": (
     "primary": rgba(0, 0, 0, .87),

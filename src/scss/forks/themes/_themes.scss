@@ -1,0 +1,6 @@
+@use "./theme";
+
+@each $name, $props in theme.$main {
+
+  @include theme.create("main", $name, $props);
+}

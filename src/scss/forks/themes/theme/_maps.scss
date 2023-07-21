@@ -1,0 +1,24 @@
+/// Define os temas.
+$main: (
+  "play": (
+    "primary": white,
+    "secondary": rgba(255, 255, 255, 0.7),
+    "hint": rgba(255, 255, 255, 0.5),
+    "disabled": rgba(255, 255, 255, 0.5),
+    "dividers": #32343C,
+    "foreground": #1F2128,
+    "background": #1F2128,
+    "card": #242731
+  ),
+
+  "game": (
+    "primary": white,
+    "secondary": #9da3ac,
+    "hint": rgba(255, 255, 255, 0.5),
+    "disabled": rgba(255, 255, 255, 0.5),
+    "dividers": #768ba3,
+    "foreground": #28416f,
+    "background": #101922,
+    "card": #202937
+  )
+);
