@@ -1,0 +1,38 @@
+@use "sass:map";
+@use "./maps" as font;
+
+/// Define o caminho ou endereço URL das fontes.
+$-path: "../fonts";
+
+@each $name, $map in font.$map {
+
+  @each $weight, $styles in $map {
+
+    @each $style, $props in $styles {
+
+      $local-1: map.get($props, "local-1");
+      $local-2: map.get($props, "local-2");
+      $url: map.get($props, "url");
+
+      @font-face {
+        font-family: "#{$name}";
+        font-style: #{$style};
+        font-weight: #{$weight};
+
+        @if $local-1 != null and $local-2 != null {
+
+          src: local("#{$local-1}"),
+            local("#{$local-2}"),
+            url("#{$-path}/#{$url}") format("woff2");
+        } @else if $local-1 != null {
+
+          src: local("#{$local-1}"),
+            url("#{$-path}/#{$url}") format("woff2");
+        } @else {
+
+          src: url("#{$-path}/#{$url}") format("woff2");
+        }
+      }
+    }
+  }
+}
