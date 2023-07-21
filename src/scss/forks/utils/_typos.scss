@@ -1,0 +1,34 @@
+@use "sass:map";
+@use "./typo";
+@use "../helpers/breakpoint";
+
+.typo-use-bebas-neue {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.typo-use-raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+@each $breakpoint in map.keys(breakpoint.$media) {
+
+  $infix: breakpoint.media-infix($breakpoint);
+
+  @include breakpoint.media-up($breakpoint) {
+
+    @each $font, $typos in typo.$map-typo {
+
+      @each $name, $props in $typos {
+
+        // Exemplo: .typo-use-roboto .typo-h1.
+        //          .typo-use-roboto .typo-h1__sm.
+        .typo-use-#{$font} .typo-#{$name}#{$infix},
+        .typo-use-#{$font}.typo-#{$name}#{$infix} {
+          @each $prop, $val in $props {
+            #{$prop}: #{$val};
+          }
+        }
+      }
+    }
+  }
+}
