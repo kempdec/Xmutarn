@@ -1,0 +1,66 @@
+@use "sass:map";
+@use "../../helpers";
+
+/// Define as espessuras de tipografia.
+$weights: (
+  "thin": 100,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "black": 900
+);
+
+/// Define as tipografias para fontes e suas propriedades.
+$map-typo: (
+  "bebas-neue": (
+    "h1": (
+      "font-weight": map.get($weights, "bold"),
+      "letter-spacing": normal
+    ),
+    "h2": (
+      "font-weight": map.get($weights, "bold"),
+      "letter-spacing": normal
+    ),
+    "h3": (
+      "font-weight": map.get($weights, "bold"),
+      "letter-spacing": normal
+    ),
+    "h4": (
+      "font-weight": map.get($weights, "bold"),
+      "letter-spacing": normal
+    ),
+    "h5": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": helpers.px-to-em(.96px)
+    ),
+    "h6": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": helpers.px-to-em(.96px)
+    ),
+    "subtitle-1": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": helpers.px-to-em(.96px)
+    ),
+    "subtitle-2": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": helpers.px-to-em(.96px)
+    ),
+    "body-1": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": helpers.px-to-em(.96px)
+    ),
+    "body-2": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": helpers.px-to-em(.96px)
+    ),
+    "caption-1": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": helpers.px-to-em(.96px)
+    ),
+    "caption-2": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": helpers.px-to-em(.96px)
+    )
+  )
+);

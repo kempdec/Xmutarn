@@ -1,0 +1,24 @@
+/// Define os temas.
+$main: (
+  "light": (
+    "primary": rgba(0, 0, 0, .87),
+    "secondary": rgba(0, 0, 0, .54),
+    "hint": rgba(0, 0, 0, .38),
+    "disabled": rgba(0, 0, 0, .38),
+    "dividers": rgba(0, 0, 0, .12),
+    "foreground": #FAFAFA,
+    "background": #FAFAFA,
+    "card": white
+  ),
+
+  "dark": (
+    "primary": white,
+    "secondary": rgba(255, 255, 255, .7),
+    "hint": rgba(255, 255, 255, .5),
+    "disabled": rgba(255, 255, 255, .5),
+    "dividers": rgba(255, 255, 255, .06),
+    "foreground": #131313,
+    "background": #131313,
+    "card": #191919
+  )
+);

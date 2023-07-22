@@ -1,0 +1,7 @@
+@use "./variables" as breakpoint-var;
+
+/// Obtém o infixo do breakpoint informado.
+@function media-infix($breakpoint) {
+
+  @return if($breakpoint == breakpoint-var.$min, "", "__#{$breakpoint}");
+}

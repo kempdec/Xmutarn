@@ -1,0 +1,21 @@
+@use "sass:map";
+@use "./maps" as palette-map;
+
+/// Obtém a cor com a tonalidade especificada.
+@function get-color($name, $hue) {
+
+  $color: map.get(palette-map.$colors, $name, $hue);
+
+  @if $color == null {
+
+    @error "Não foi possível encontrar a cor '#{$name}' com a tonalidade '#{$hue}' na paleta.";
+  }
+
+  @return $color;
+}
+
+/// Obtém o nome das cores.
+@function get-colors-name() {
+
+  @return map.keys(palette-map.$colors);
+}

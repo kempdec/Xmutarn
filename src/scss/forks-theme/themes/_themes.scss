@@ -7,36 +7,27 @@
 $-prefixes-and-params: (
   "fg": "color",
   "bg": "background"
-) !default;
+);
+
+@each $name, $props in theme.$main {
+
+  @include theme.create("main", $name, $props, theme.$main-default);
+  @include theme.create-classes($name, $props, theme.$main-default, $-prefixes-and-params);
+}
 
 /// Define as cores dos temas de destaque e realçe.
-$-theme-colors: map.remove(palette.$colors, "transparent", "black", "white") !default;
+/// Para remover uma cor da paleta, use: map.remove(palette.$colors, "transparent").
+$-theme-colors: palette.$colors;
 
 @each $color-name, $color-hues in $-theme-colors {
 
   $featured-hues: map.remove($color-hues, palette.$accent-color-hues...);
 
-  @include theme.create("featured", $color-name, $featured-hues, theme.$featured-default);
+  @include theme.create("featured", $color-name, $featured-hues);
   @include theme.create-classes($color-name, $featured-hues, theme.$featured-default, $-prefixes-and-params);
 
   $accent-hues: func.get-in-map($color-hues, palette.$accent-color-hues...);
 
-  @include theme.create("accent", $color-name, $accent-hues, theme.$accent-default);
+  @include theme.create("accent", $color-name, $accent-hues);
   @include theme.create-classes($color-name, $accent-hues, theme.$accent-default, $-prefixes-and-params);
-}
-
-/// Define as posições dos gradientes dos temas.
-$-gradient-positions: "top", "right", "bottom", "left";
-
-@each $pos in $-gradient-positions {
-
-  @include theme.create-gradient-classes($pos);
-
-  @each $pos2 in $-gradient-positions {
-
-    @if $pos != $pos2 {
-
-      @include theme.create-gradient-classes($pos, $pos2);
-    }
-  }
 }

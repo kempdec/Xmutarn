@@ -1,0 +1,52 @@
+/// Cria o estilo de um tema.
+@mixin create($type, $name, $props, $default) {
+
+  // Exemplo: [x-main-theme="light"].
+  [x-#{$type}-theme="#{$name}"] {
+
+    @each $prop, $value in $props {
+
+      // --theme-*
+      //
+      // Exemplo: --theme-primary.
+      --theme-#{$prop}: #{$value};
+    }
+  }
+
+  @if $name == $default {
+
+    html:not([x-#{$type}-theme]) {
+      @extend [x-#{$type}-theme="#{$name}"];
+    }
+  }
+}
+
+/// Cria as classes de um tema.
+@mixin create-classes($name, $props, $default, $prefixes-and-params) {
+
+  @if $name == $default {
+
+    @each $prop, $color in $props {
+
+      @each $prefix, $param in $prefixes-and-params {
+
+        // Exemplo: .theme-fg-primary
+        .theme-#{$prefix}-#{$prop} {
+          #{$param}: #{$color} !important;
+          #{$param}: var(--theme-#{$prop}, #{$color}) !important;
+        }
+
+        @if $prefix == "bg" {
+
+          @each $type in ("from", "to") {
+
+            // Exemplo: .theme-bg-from-primary
+            .theme-bg-#{$type}-#{$prop} {
+              --theme-bg-#{$type}: var(--theme-#{$prop}, #{$color});
+            }
+          }
+        }
+      }
+    }
+  }
+}

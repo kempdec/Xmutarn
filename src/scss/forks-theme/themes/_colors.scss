@@ -1,0 +1,24 @@
+@use "./palette";
+
+/// Define uma lista com os nomes das cores da paleta.
+$-colors-name: palette.get-colors-name();
+/// Define a tonalidade das cores da paleta.
+$-colors-hue: "500";
+/// Define os prefixos e parâmetros das cores.
+$-prefixes-and-params: (
+  "fg": "color",
+  "bg": "background"
+);
+
+@each $color-name in $-colors-name {
+
+  $color-hex: palette.get-color($color-name, $-colors-hue);
+
+  @each $prefix, $param in $-prefixes-and-params {
+
+    // Exemplo: .fg-red.
+    .#{$prefix}-#{$color-name} {
+      #{$param}: #{$color-hex};
+    }
+  }
+}
