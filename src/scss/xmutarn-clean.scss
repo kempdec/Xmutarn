@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+// Cores e temas.
+@use "./forks-clean/themes/colors";
+@use "./forks-clean/themes/themes";
+
+// Componentes e utilitários.
+@use "./forks-clean/components";
+@use "./forks-clean/utils";

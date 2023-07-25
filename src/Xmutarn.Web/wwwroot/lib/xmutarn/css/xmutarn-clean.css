@@ -1,0 +1,493 @@
+/*! xmutarn v0.32.0-beta.1 (https://github.com/viniciusxdl/xmutarn.git) | Copyright 2023 Vinícius Lima | Licensed under MIT */
+[x-main-theme=clean-light] {
+  --theme-primary: rgba(0, 0, 0, 0.87);
+  --theme-secondary: rgba(0, 0, 0, 0.54);
+  --theme-hint: rgba(0, 0, 0, 0.38);
+  --theme-disabled: rgba(0, 0, 0, 0.38);
+  --theme-dividers: rgba(0, 0, 0, 0.12);
+  --theme-foreground: #FAFAFA;
+  --theme-background: #FAFAFA;
+  --theme-card: white;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/gilroy/thin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: italic;
+  font-weight: 100;
+  src: url("../fonts/gilroy/thin-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/gilroy/ultra-light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: italic;
+  font-weight: 200;
+  src: url("../fonts/gilroy/ultra-light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/gilroy/light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/gilroy/light-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/gilroy/regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/gilroy/regular-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/gilroy/medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/gilroy/medium-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/gilroy/semi-bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/gilroy/semi-bold-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/gilroy/bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/gilroy/bold-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/gilroy/extra-bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: italic;
+  font-weight: 800;
+  src: url("../fonts/gilroy/extra-bold-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/gilroy/black.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: italic;
+  font-weight: 900;
+  src: url("../fonts/gilroy/black-italic.woff2") format("woff2");
+}
+.typo-use-gilroy {
+  font-family: "Gilroy", sans-serif;
+}
+
+.typo-use-helvetica {
+  font-family: "Helvetica", sans-serif;
+}
+
+.typo-use-gilroy .typo-h1,
+.typo-use-gilroy.typo-h1 {
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.typo-use-gilroy .typo-h2,
+.typo-use-gilroy.typo-h2 {
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.typo-use-gilroy .typo-h3,
+.typo-use-gilroy.typo-h3 {
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.typo-use-gilroy .typo-h4,
+.typo-use-gilroy.typo-h4 {
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.typo-use-gilroy .typo-h5,
+.typo-use-gilroy.typo-h5 {
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.typo-use-gilroy .typo-h6,
+.typo-use-gilroy.typo-h6 {
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.typo-use-gilroy .typo-subtitle-1,
+.typo-use-gilroy.typo-subtitle-1 {
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.typo-use-gilroy .typo-subtitle-2,
+.typo-use-gilroy.typo-subtitle-2 {
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.typo-use-gilroy .typo-body-1,
+.typo-use-gilroy.typo-body-1 {
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.typo-use-gilroy .typo-body-2,
+.typo-use-gilroy.typo-body-2 {
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.typo-use-gilroy .typo-caption-1,
+.typo-use-gilroy.typo-caption-1 {
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.typo-use-gilroy .typo-caption-2,
+.typo-use-gilroy.typo-caption-2 {
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+@media (min-width: 576px) {
+  .typo-use-gilroy .typo-h1__sm,
+.typo-use-gilroy.typo-h1__sm {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h2__sm,
+.typo-use-gilroy.typo-h2__sm {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h3__sm,
+.typo-use-gilroy.typo-h3__sm {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h4__sm,
+.typo-use-gilroy.typo-h4__sm {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h5__sm,
+.typo-use-gilroy.typo-h5__sm {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h6__sm,
+.typo-use-gilroy.typo-h6__sm {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-subtitle-1__sm,
+.typo-use-gilroy.typo-subtitle-1__sm {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-subtitle-2__sm,
+.typo-use-gilroy.typo-subtitle-2__sm {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-body-1__sm,
+.typo-use-gilroy.typo-body-1__sm {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-body-2__sm,
+.typo-use-gilroy.typo-body-2__sm {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-caption-1__sm,
+.typo-use-gilroy.typo-caption-1__sm {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-caption-2__sm,
+.typo-use-gilroy.typo-caption-2__sm {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+}
+@media (min-width: 768px) {
+  .typo-use-gilroy .typo-h1__md,
+.typo-use-gilroy.typo-h1__md {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h2__md,
+.typo-use-gilroy.typo-h2__md {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h3__md,
+.typo-use-gilroy.typo-h3__md {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h4__md,
+.typo-use-gilroy.typo-h4__md {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h5__md,
+.typo-use-gilroy.typo-h5__md {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h6__md,
+.typo-use-gilroy.typo-h6__md {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-subtitle-1__md,
+.typo-use-gilroy.typo-subtitle-1__md {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-subtitle-2__md,
+.typo-use-gilroy.typo-subtitle-2__md {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-body-1__md,
+.typo-use-gilroy.typo-body-1__md {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-body-2__md,
+.typo-use-gilroy.typo-body-2__md {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-caption-1__md,
+.typo-use-gilroy.typo-caption-1__md {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-caption-2__md,
+.typo-use-gilroy.typo-caption-2__md {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+}
+@media (min-width: 992px) {
+  .typo-use-gilroy .typo-h1__lg,
+.typo-use-gilroy.typo-h1__lg {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h2__lg,
+.typo-use-gilroy.typo-h2__lg {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h3__lg,
+.typo-use-gilroy.typo-h3__lg {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h4__lg,
+.typo-use-gilroy.typo-h4__lg {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h5__lg,
+.typo-use-gilroy.typo-h5__lg {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h6__lg,
+.typo-use-gilroy.typo-h6__lg {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-subtitle-1__lg,
+.typo-use-gilroy.typo-subtitle-1__lg {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-subtitle-2__lg,
+.typo-use-gilroy.typo-subtitle-2__lg {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-body-1__lg,
+.typo-use-gilroy.typo-body-1__lg {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-body-2__lg,
+.typo-use-gilroy.typo-body-2__lg {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-caption-1__lg,
+.typo-use-gilroy.typo-caption-1__lg {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-caption-2__lg,
+.typo-use-gilroy.typo-caption-2__lg {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+}
+@media (min-width: 1200px) {
+  .typo-use-gilroy .typo-h1__xl,
+.typo-use-gilroy.typo-h1__xl {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h2__xl,
+.typo-use-gilroy.typo-h2__xl {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h3__xl,
+.typo-use-gilroy.typo-h3__xl {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h4__xl,
+.typo-use-gilroy.typo-h4__xl {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h5__xl,
+.typo-use-gilroy.typo-h5__xl {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-h6__xl,
+.typo-use-gilroy.typo-h6__xl {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-subtitle-1__xl,
+.typo-use-gilroy.typo-subtitle-1__xl {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-subtitle-2__xl,
+.typo-use-gilroy.typo-subtitle-2__xl {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-body-1__xl,
+.typo-use-gilroy.typo-body-1__xl {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-body-2__xl,
+.typo-use-gilroy.typo-body-2__xl {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-caption-1__xl,
+.typo-use-gilroy.typo-caption-1__xl {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
+  .typo-use-gilroy .typo-caption-2__xl,
+.typo-use-gilroy.typo-caption-2__xl {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+}
+/*# sourceMappingURL=xmutarn-clean.css.map */

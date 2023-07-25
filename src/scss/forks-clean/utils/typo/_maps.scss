@@ -1,0 +1,70 @@
+@use "sass:map";
+@use "../../helpers";
+
+/// Define as espessuras de tipografia.
+$weights: (
+  "thin": 100,
+  "ultra-light": 200,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "semi-bold": 600,
+  "bold": 700,
+  "extra-bold": 800,
+  "black": 900,
+  "heavy": 900
+);
+
+/// Define as tipografias para fontes e suas propriedades.
+$map-typo: (
+  "gilroy": (
+    "h1": (
+      "font-weight": map.get($weights, "bold"),
+      "letter-spacing": normal
+    ),
+    "h2": (
+      "font-weight": map.get($weights, "bold"),
+      "letter-spacing": normal
+    ),
+    "h3": (
+      "font-weight": map.get($weights, "bold"),
+      "letter-spacing": normal
+    ),
+    "h4": (
+      "font-weight": map.get($weights, "bold"),
+      "letter-spacing": normal
+    ),
+    "h5": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": normal
+    ),
+    "h6": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": normal
+    ),
+    "subtitle-1": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": normal
+    ),
+    "subtitle-2": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": normal
+    ),
+    "body-1": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": normal
+    ),
+    "body-2": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": normal
+    ),
+    "caption-1": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": normal
+    ),
+    "caption-2": (
+      "font-weight": map.get($weights, "regular"),
+      "letter-spacing": normal
+    )
+  )
+);

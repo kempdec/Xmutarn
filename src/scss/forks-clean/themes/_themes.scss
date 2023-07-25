@@ -1,0 +1,33 @@
+@use "sass:map";
+@use "./palette";
+@use "./theme";
+@use "../helpers/functions" as func;
+
+/// Define os prefixos e parâmetros dos temas.
+$-prefixes-and-params: (
+  "fg": "color",
+  "bg": "background"
+);
+
+@each $name, $props in theme.$main {
+
+  @include theme.create("main", $name, $props, theme.$main-default);
+  @include theme.create-classes($name, $props, theme.$main-default, $-prefixes-and-params);
+}
+
+/// Define as cores dos temas de destaque e realçe.
+/// Para remover uma cor da paleta, use: map.remove(palette.$colors, "transparent").
+$-theme-colors: palette.$colors;
+
+@each $color-name, $color-hues in $-theme-colors {
+
+  $featured-hues: map.remove($color-hues, palette.$accent-color-hues...);
+
+  @include theme.create("featured", $color-name, $featured-hues);
+  @include theme.create-classes($color-name, $featured-hues, theme.$featured-default, $-prefixes-and-params);
+
+  $accent-hues: func.get-in-map($color-hues, palette.$accent-color-hues...);
+
+  @include theme.create("accent", $color-name, $accent-hues);
+  @include theme.create-classes($color-name, $accent-hues, theme.$accent-default, $-prefixes-and-params);
+}
