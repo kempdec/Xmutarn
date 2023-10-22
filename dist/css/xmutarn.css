@@ -1297,6 +1297,12 @@ input[type=password]::-ms-reveal {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
+[x-main-theme=clean-light] .input {
+  font-weight: 500;
+  color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
+  border-color: var(--theme-secondary, rgba(0, 0, 0, 0.54));
+}
+
 .input_color-alert {
   color: #F44336 !important;
   border-color: #F44336 !important;
@@ -1334,6 +1340,11 @@ input[type=password]::-ms-reveal {
 [x-main-theme=game] .input--field {
   padding: 1.5em 0.3125em 0.8em 0;
   background-color: #171f29;
+}
+
+[x-main-theme=clean-light] .input--field {
+  padding: 1em 0.3125em 0.75em 0;
+  background-color: transparent;
 }
 
 .input--field:focus {
@@ -1383,6 +1394,15 @@ input[type=password]::-ms-reveal {
   left: 1em;
 }
 
+[x-main-theme=clean-light] .input--field:not(.input--field_outlined) {
+  padding-left: 0.3125em;
+  border: none;
+  border-bottom: 0.0625rem solid;
+}
+[x-main-theme=clean-light] .input--field:not(.input--field_outlined) ~ .input--label {
+  left: 0.3125em;
+}
+
 .input--field_outlined {
   border-color: inherit;
 }
@@ -1422,6 +1442,15 @@ input[type=password]::-ms-reveal {
   left: 1em;
 }
 
+[x-main-theme=clean-light] .input--field_outlined {
+  padding-left: 0.625em;
+  border: 1px solid;
+  border-radius: 0.3125em;
+}
+[x-main-theme=clean-light] .input--field_outlined ~ .input--label {
+  left: 0.625em;
+}
+
 .input--label {
   position: absolute;
   transition: all 0.3s linear;
@@ -1443,6 +1472,10 @@ input[type=password]::-ms-reveal {
   top: 1.2em;
 }
 
+[x-main-theme=clean-light] .input--label {
+  top: 1em;
+}
+
 [x-main-theme=light] .input--label_active, [x-main-theme=light] .input--field:focus ~ .input--label {
   transform: translate(-15%, -1.125em) scale(0.7);
 }
@@ -1457,6 +1490,10 @@ input[type=password]::-ms-reveal {
 
 [x-main-theme=game] .input--label_active, [x-main-theme=game] .input--field:focus ~ .input--label {
   transform: translate(-15%, -0.725em) scale(0.7);
+}
+
+[x-main-theme=clean-light] .input--label_active, [x-main-theme=clean-light] .input--field:focus ~ .input--label {
+  transform: translate(-15%, -1.125em) scale(0.7);
 }
 
 .input--description {
@@ -2349,6 +2386,10 @@ input[type=password]::-ms-reveal {
 
 [x-main-theme=game] .btn {
   background-color: var(--theme-800, #6A1B9A);
+}
+
+[x-main-theme=clean-light] .btn {
+  background-color: var(--theme-500, #9C27B0);
 }
 
 .typo-use-roboto .btn, .btn.typo-use-roboto {
