@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmutarn.Sample", "samples\Xmutarn.Sample\Xmutarn.Sample.csproj", "{12554916-2B45-4AA8-A4F2-419BEA47F666}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmutarn", "src\Xmutarn\Xmutarn.csproj", "{BFFEF218-1A6D-42A9-9E9E-2D6B707578DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{12554916-2B45-4AA8-A4F2-419BEA47F666}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12554916-2B45-4AA8-A4F2-419BEA47F666}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12554916-2B45-4AA8-A4F2-419BEA47F666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFFEF218-1A6D-42A9-9E9E-2D6B707578DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFFEF218-1A6D-42A9-9E9E-2D6B707578DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFFEF218-1A6D-42A9-9E9E-2D6B707578DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFFEF218-1A6D-42A9-9E9E-2D6B707578DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
