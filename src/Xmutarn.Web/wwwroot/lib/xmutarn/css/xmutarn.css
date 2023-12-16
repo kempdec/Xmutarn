@@ -2425,6 +2425,17 @@ input[type=password]::-ms-reveal {
   border-radius: 0.25rem;
 }
 
+.typo-use-gilroy .btn, .btn.typo-use-gilroy {
+  padding: 0 1.2055em;
+  height: 2.696875em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  line-height: normal;
+  border-radius: 0.5rem;
+}
+
 .btn:not(.btn_outlined):not(.btn_outlined-color) {
   border: none;
 }
@@ -2558,6 +2569,21 @@ input[type=password]::-ms-reveal {
   font-size: 1rem;
 }
 .typo-use-raleway .btn_size-xl, .btn_size-xl.typo-use-raleway {
+  font-size: 1.2rem;
+}
+.typo-use-gilroy .btn_size-xs, .btn_size-xs.typo-use-gilroy {
+  font-size: 0.625rem;
+}
+.typo-use-gilroy .btn_size-sm, .btn_size-sm.typo-use-gilroy {
+  font-size: 0.75rem;
+}
+.typo-use-gilroy .btn_size-md, .btn_size-md.typo-use-gilroy {
+  font-size: 0.875rem;
+}
+.typo-use-gilroy .btn_size-lg, .btn_size-lg.typo-use-gilroy {
+  font-size: 1rem;
+}
+.typo-use-gilroy .btn_size-xl, .btn_size-xl.typo-use-gilroy {
   font-size: 1.2rem;
 }
 .btn--icon {

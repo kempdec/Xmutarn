@@ -6,7 +6,7 @@
   --theme-disabled: rgba(0, 0, 0, 0.38);
   --theme-dividers: rgba(0, 0, 0, 0.12);
   --theme-foreground: #FAFAFA;
-  --theme-background: #FAFAFA;
+  --theme-background: #FBFBFB;
   --theme-card: white;
 }
 
@@ -119,21 +119,21 @@
 }
 
 .theme-fg-background {
-  color: #FAFAFA !important;
-  color: var(--theme-background, #FAFAFA) !important;
+  color: #FBFBFB !important;
+  color: var(--theme-background, #FBFBFB) !important;
 }
 
 .theme-bg-background {
-  background: #FAFAFA !important;
-  background: var(--theme-background, #FAFAFA) !important;
+  background: #FBFBFB !important;
+  background: var(--theme-background, #FBFBFB) !important;
 }
 
 .theme-bg-from-background {
-  --theme-bg-from: var(--theme-background, #FAFAFA);
+  --theme-bg-from: var(--theme-background, #FBFBFB);
 }
 
 .theme-bg-to-background {
-  --theme-bg-to: var(--theme-background, #FAFAFA);
+  --theme-bg-to: var(--theme-background, #FBFBFB);
 }
 
 .theme-fg-card {

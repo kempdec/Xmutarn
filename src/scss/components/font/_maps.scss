@@ -29,7 +29,15 @@ $btn-sizes: (
     "md": helpers.px-to-rem(14px),
     "lg": helpers.px-to-rem(16px),
     "xl": helpers.px-to-rem(19.2px)
-  )
+  ),
+
+  "gilroy": (
+    "xs": helpers.px-to-rem(10px),
+    "sm": helpers.px-to-rem(12px),
+    "md": helpers.px-to-rem(14px),
+    "lg": helpers.px-to-rem(16px),
+    "xl": helpers.px-to-rem(19.2px)
+  ),
 ) !default;
 
 /// Define as propriedades para `btn`.
@@ -65,7 +73,18 @@ $btn-props: (
     "letter-spacing": helpers.px-to-em(.96px),
     "line-height": normal,
     "border-radius": helpers.px-to-rem(4px)
-  )
+  ),
+
+  "gilroy": (
+    "padding": 0 helpers.px-to-em(19.288px),
+    "height": helpers.px-to-em(43.15px),
+    "font-size": map.get(map.get($btn-sizes, "gilroy"), "md"),
+    "font-weight": 500,
+    "text-transform": none,
+    "letter-spacing": helpers.px-to-em(.32px),
+    "line-height": normal,
+    "border-radius": helpers.px-to-rem(8px)
+  ),
 ) !default;
 
 /// Define as propriedades para `btn--flat`.
