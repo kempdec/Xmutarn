@@ -8,8 +8,9 @@
 
 - [Começo rápido](#começo-rápido)
 - [Autores](#autores)
-- [Changelog](#changelog)
-- [Direitos autorais e licença](#direitos-autorais-e-licença)
+- [Notas de lançamento](#notas-de-lançamento)
+- [Direitos autorais](#direitos-autorais)
+- [Licença](#licença)
 
 ## Começo rápido
 
@@ -20,14 +21,17 @@
 
 ## Autores
 
-### Vinícius Lima
+- [KempDec](https://github.com/kempdec) - Mantedora do projeto de código aberto.
+- [Vinícius Lima](https://github.com/viniciusxdl) - Desenvolvedor.
 
-- <https://github.com/viniciusxdl>
+## Notas de lançamento
 
-## Changelog
+Para notas de lançamento, confira a [seção de releases do Xmutarn](https://github.com/kempdec/Xmutarn/releases).
 
-Para changelogs, confira a [seção de releases do Xmutarn](https://github.com/viniciusxdl/xmutarn/releases).
+## Direitos autorais
 
-## Direitos autorais e licença
+2018-2023 © KempDec Brasil Ltda.
 
-2018-2022 © Vinícius Lima. Código lançado sobre a licença MIT.
+## Licença
+
+[MIT](https://github.com/kempdec/Xmutarn/blob/main/LICENSE)
