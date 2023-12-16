@@ -1,0 +1,175 @@
+.fg-transparent {
+  color: transparent !important;
+}
+
+.bg-transparent {
+  background: transparent !important;
+}
+
+.fg-black {
+  color: black !important;
+}
+
+.bg-black {
+  background: black !important;
+}
+
+.fg-white {
+  color: white !important;
+}
+
+.bg-white {
+  background: white !important;
+}
+
+.fg-red {
+  color: #F44336 !important;
+}
+
+.bg-red {
+  background: #F44336 !important;
+}
+
+.fg-pink {
+  color: #E91E63 !important;
+}
+
+.bg-pink {
+  background: #E91E63 !important;
+}
+
+.fg-purple {
+  color: #9C27B0 !important;
+}
+
+.bg-purple {
+  background: #9C27B0 !important;
+}
+
+.fg-deep-purple {
+  color: #673AB7 !important;
+}
+
+.bg-deep-purple {
+  background: #673AB7 !important;
+}
+
+.fg-indigo {
+  color: #3F51B5 !important;
+}
+
+.bg-indigo {
+  background: #3F51B5 !important;
+}
+
+.fg-blue {
+  color: #2196F3 !important;
+}
+
+.bg-blue {
+  background: #2196F3 !important;
+}
+
+.fg-light-blue {
+  color: #03A9F4 !important;
+}
+
+.bg-light-blue {
+  background: #03A9F4 !important;
+}
+
+.fg-cyan {
+  color: #00BCD4 !important;
+}
+
+.bg-cyan {
+  background: #00BCD4 !important;
+}
+
+.fg-teal {
+  color: #009688 !important;
+}
+
+.bg-teal {
+  background: #009688 !important;
+}
+
+.fg-green {
+  color: #4CAF50 !important;
+}
+
+.bg-green {
+  background: #4CAF50 !important;
+}
+
+.fg-light-green {
+  color: #8BC34A !important;
+}
+
+.bg-light-green {
+  background: #8BC34A !important;
+}
+
+.fg-lime {
+  color: #CDDC39 !important;
+}
+
+.bg-lime {
+  background: #CDDC39 !important;
+}
+
+.fg-yellow {
+  color: #FFEB3B !important;
+}
+
+.bg-yellow {
+  background: #FFEB3B !important;
+}
+
+.fg-amber {
+  color: #FFC107 !important;
+}
+
+.bg-amber {
+  background: #FFC107 !important;
+}
+
+.fg-orange {
+  color: #FF9800 !important;
+}
+
+.bg-orange {
+  background: #FF9800 !important;
+}
+
+.fg-deep-orange {
+  color: #FF5722 !important;
+}
+
+.bg-deep-orange {
+  background: #FF5722 !important;
+}
+
+.fg-brown {
+  color: #795548 !important;
+}
+
+.bg-brown {
+  background: #795548 !important;
+}
+
+.fg-grey {
+  color: #9E9E9E !important;
+}
+
+.bg-grey {
+  background: #9E9E9E !important;
+}
+
+.fg-blue-grey {
+  color: #607D8B !important;
+}
+
+.bg-blue-grey {
+  background: #607D8B !important;
+}

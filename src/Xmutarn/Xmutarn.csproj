@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>KempDec.$(MSBuildProjectName)</AssemblyName>
     <RootNamespace>KempDec.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
 
@@ -15,6 +16,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xmutarn.Core\Xmutarn.Core.csproj" />
   </ItemGroup>
 
 </Project>

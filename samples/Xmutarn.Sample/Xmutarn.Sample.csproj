@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Xmutarn.Core\Xmutarn.Core.csproj" />
     <ProjectReference Include="..\..\src\Xmutarn\Xmutarn.csproj" />
   </ItemGroup>
 
