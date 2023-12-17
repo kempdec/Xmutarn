@@ -43,10 +43,10 @@ internal static class Palette
             { "700", "#D32F2F" },
             { "800", "#C62828" },
             { "900", "#B71C1C" },
-            { "A100", "#FF8A80" },
-            { "A200", "#FF5252" },
-            { "A400", "#FF1744" },
-            { "A700", "#D50000" }
+            { "A100", new("#FF8A80", isAccent: true) },
+            { "A200", new("#FF5252", isAccent: true) },
+            { "A400", new("#FF1744", isAccent: true) },
+            { "A700", new("#D50000", isAccent: true) }
         },
         [ColorName.Pink] = new()
         {
@@ -60,10 +60,10 @@ internal static class Palette
             { "700", "#C2185B" },
             { "800", "#AD1457" },
             { "900", "#880E4F" },
-            { "A100", "#FF80AB" },
-            { "A200", "#FF4081" },
-            { "A400", "#F50057" },
-            { "A700", "#C51162" }
+            { "A100", new("#FF80AB", isAccent: true) },
+            { "A200", new("#FF4081", isAccent: true) },
+            { "A400", new("#F50057", isAccent: true) },
+            { "A700", new("#C51162", isAccent: true) }
         },
         [ColorName.Purple] = new()
         {
@@ -77,10 +77,10 @@ internal static class Palette
             { "700", "#7B1FA2" },
             { "800", "#6A1B9A" },
             { "900", "#4A148C" },
-            { "A100", "#EA80FC" },
-            { "A200", "#E040FB" },
-            { "A400", "#D500F9" },
-            { "A700", "#AA00FF" }
+            { "A100", new("#EA80FC", isAccent: true) },
+            { "A200", new("#E040FB", isAccent: true) },
+            { "A400", new("#D500F9", isAccent: true) },
+            { "A700", new("#AA00FF", isAccent: true) }
         },
         [ColorName.DeepPurple] = new()
         {
@@ -94,10 +94,10 @@ internal static class Palette
             { "700", "#512DA8" },
             { "800", "#4527A0" },
             { "900", "#311B92" },
-            { "A100", "#B388FF" },
-            { "A200", "#7C4DFF" },
-            { "A400", "#651FFF" },
-            { "A700", "#6200EA" }
+            { "A100", new("#B388FF", isAccent: true) },
+            { "A200", new("#7C4DFF", isAccent: true) },
+            { "A400", new("#651FFF", isAccent: true) },
+            { "A700", new("#6200EA", isAccent: true) }
         },
         [ColorName.Indigo] = new()
         {
@@ -111,10 +111,10 @@ internal static class Palette
             { "700", "#303F9F" },
             { "800", "#283593" },
             { "900", "#1A237E" },
-            { "A100", "#8C9EFF" },
-            { "A200", "#536DFE" },
-            { "A400", "#3D5AFE" },
-            { "A700", "#304FFE" }
+            { "A100", new("#8C9EFF", isAccent: true) },
+            { "A200", new("#536DFE", isAccent: true) },
+            { "A400", new("#3D5AFE", isAccent: true) },
+            { "A700", new("#304FFE", isAccent: true) }
         },
         [ColorName.Blue] = new()
         {
@@ -128,10 +128,10 @@ internal static class Palette
             { "700", "#1976D2" },
             { "800", "#1565C0" },
             { "900", "#0D47A1" },
-            { "A100", "#82B1FF" },
-            { "A200", "#448AFF" },
-            { "A400", "#2979FF" },
-            { "A700", "#2962FF" }
+            { "A100", new("#82B1FF", isAccent: true) },
+            { "A200", new("#448AFF", isAccent: true) },
+            { "A400", new("#2979FF", isAccent: true) },
+            { "A700", new("#2962FF", isAccent: true) }
         },
         [ColorName.LightBlue] = new()
         {
@@ -145,10 +145,10 @@ internal static class Palette
             { "700", "#0288D1" },
             { "800", "#0277BD" },
             { "900", "#01579B" },
-            { "A100", "#80D8FF" },
-            { "A200", "#40C4FF" },
-            { "A400", "#00B0FF" },
-            { "A700", "#0091EA" }
+            { "A100", new("#80D8FF", isAccent: true) },
+            { "A200", new("#40C4FF", isAccent: true) },
+            { "A400", new("#00B0FF", isAccent: true) },
+            { "A700", new("#0091EA", isAccent: true) }
         },
         [ColorName.Cyan] = new()
         {
@@ -162,10 +162,10 @@ internal static class Palette
             { "700", "#0097A7" },
             { "800", "#00838F" },
             { "900", "#006064" },
-            { "A100", "#84FFFF" },
-            { "A200", "#18FFFF" },
-            { "A400", "#00E5FF" },
-            { "A700", "#00B8D4" }
+            { "A100", new("#84FFFF", isAccent: true) },
+            { "A200", new("#18FFFF", isAccent: true) },
+            { "A400", new("#00E5FF", isAccent: true) },
+            { "A700", new("#00B8D4", isAccent: true) }
         },
         [ColorName.Teal] = new()
         {
@@ -179,10 +179,10 @@ internal static class Palette
             { "700", "#00796B" },
             { "800", "#00695C" },
             { "900", "#004D40" },
-            { "A100", "#A7FFEB" },
-            { "A200", "#64FFDA" },
-            { "A400", "#1DE9B6" },
-            { "A700", "#00BFA5" }
+            { "A100", new("#A7FFEB", isAccent: true) },
+            { "A200", new("#64FFDA", isAccent: true) },
+            { "A400", new("#1DE9B6", isAccent: true) },
+            { "A700", new("#00BFA5", isAccent: true) }
         },
         [ColorName.Green] = new()
         {
@@ -196,10 +196,10 @@ internal static class Palette
             { "700", "#388E3C" },
             { "800", "#2E7D32" },
             { "900", "#1B5E20" },
-            { "A100", "#B9F6CA" },
-            { "A200", "#69F0AE" },
-            { "A400", "#00E676" },
-            { "A700", "#00C853" }
+            { "A100", new("#B9F6CA", isAccent: true) },
+            { "A200", new("#69F0AE", isAccent: true) },
+            { "A400", new("#00E676", isAccent: true) },
+            { "A700", new("#00C853", isAccent: true) }
         },
         [ColorName.LightGreen] = new()
         {
@@ -213,10 +213,10 @@ internal static class Palette
             { "700", "#689F38" },
             { "800", "#558B2F" },
             { "900", "#33691E" },
-            { "A100", "#CCFF90" },
-            { "A200", "#B2FF59" },
-            { "A400", "#76FF03" },
-            { "A700", "#64DD17" }
+            { "A100", new("#CCFF90", isAccent: true) },
+            { "A200", new("#B2FF59", isAccent: true) },
+            { "A400", new("#76FF03", isAccent: true) },
+            { "A700", new("#64DD17", isAccent: true) }
         },
         [ColorName.Lime] = new()
         {
@@ -230,10 +230,10 @@ internal static class Palette
             { "700", "#AFB42B" },
             { "800", "#9E9D24" },
             { "900", "#827717" },
-            { "A100", "#F4FF81" },
-            { "A200", "#EEFF41" },
-            { "A400", "#C6FF00" },
-            { "A700", "#AEEA00" }
+            { "A100", new("#F4FF81", isAccent: true) },
+            { "A200", new("#EEFF41", isAccent: true) },
+            { "A400", new("#C6FF00", isAccent: true) },
+            { "A700", new("#AEEA00", isAccent: true) }
         },
         [ColorName.Yellow] = new()
         {
@@ -247,10 +247,10 @@ internal static class Palette
             { "700", "#FBC02D" },
             { "800", "#F9A825" },
             { "900", "#F57F17" },
-            { "A100", "#FFFF8D" },
-            { "A200", "#FFFF00" },
-            { "A400", "#FFEA00" },
-            { "A700", "#FFD600" }
+            { "A100", new("#FFFF8D", isAccent: true) },
+            { "A200", new("#FFFF00", isAccent: true) },
+            { "A400", new("#FFEA00", isAccent: true) },
+            { "A700", new("#FFD600", isAccent: true) }
         },
         [ColorName.Amber] = new()
         {
@@ -264,10 +264,10 @@ internal static class Palette
             { "700", "#FFA000" },
             { "800", "#FF8F00" },
             { "900", "#FF6F00" },
-            { "A100", "#FFE57F" },
-            { "A200", "#FFD740" },
-            { "A400", "#FFC400" },
-            { "A700", "#FFAB00" }
+            { "A100", new("#FFE57F", isAccent: true) },
+            { "A200", new("#FFD740", isAccent: true) },
+            { "A400", new("#FFC400", isAccent: true) },
+            { "A700", new("#FFAB00", isAccent: true) }
         },
         [ColorName.Orange] = new()
         {
@@ -281,10 +281,10 @@ internal static class Palette
             { "700", "#F57C00" },
             { "800", "#EF6C00" },
             { "900", "#E65100" },
-            { "A100", "#FFD180" },
-            { "A200", "#FFAB40" },
-            { "A400", "#FF9100" },
-            { "A700", "#FF6D00" }
+            { "A100", new("#FFD180", isAccent: true) },
+            { "A200", new("#FFAB40", isAccent: true) },
+            { "A400", new("#FF9100", isAccent: true) },
+            { "A700", new("#FF6D00", isAccent: true) }
         },
         [ColorName.DeepOrange] = new()
         {
@@ -298,10 +298,10 @@ internal static class Palette
             { "700", "#E64A19" },
             { "800", "#D84315" },
             { "900", "#BF360C" },
-            { "A100", "#FF9E80" },
-            { "A200", "#FF6E40" },
-            { "A400", "#FF3D00" },
-            { "A700", "#DD2C00" }
+            { "A100", new("#FF9E80", isAccent: true) },
+            { "A200", new("#FF6E40", isAccent: true) },
+            { "A400", new("#FF3D00", isAccent: true) },
+            { "A700", new("#DD2C00", isAccent: true) }
         },
         [ColorName.Brown] = new()
         {

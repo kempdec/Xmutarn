@@ -1,4 +1,5 @@
-﻿using KempDec.Xmutarn.Core.Modifiers;
+﻿using KempDec.Xmutarn.Core.Functions;
+using KempDec.Xmutarn.Core.Modifiers;
 
 namespace KempDec.Xmutarn.Core;
 
@@ -43,6 +44,14 @@ public abstract class CSSBase(params ICSS[] cssList) : ICSS
     /// <param name="value">O valor de uma propriedade CSS.</param>
     /// <returns>Uma nova instância de <see cref="Modifiers.Important"/>.</returns>
     public static Important Important(IPropertyValue value) => new(value);
+
+    /// <summary>
+    /// Inicializa uma nova instância de <see cref="Functions.Var"/>.
+    /// </summary>
+    /// <param name="name">O nome da variável CSS.</param>
+    /// <param name="defaultValue">O valor padrão da variável CSS.</param>
+    /// <returns>Uma nova instância de <see cref="Functions.Var"/>.</returns>
+    public static Var Var(string name, IPropertyValue defaultValue) => new(name, defaultValue);
 
     /// <inheritdoc/>
     public string ToCSS() => string.Join($"{Environment.NewLine}{Environment.NewLine}", _cssList);

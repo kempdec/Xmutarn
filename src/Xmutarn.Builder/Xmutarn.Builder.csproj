@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Xmutarn.Theme.Clean\Xmutarn.Theme.Clean.csproj" />
     <ProjectReference Include="..\Xmutarn\Xmutarn.csproj" />
   </ItemGroup>
 

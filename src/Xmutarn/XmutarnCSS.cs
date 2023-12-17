@@ -6,7 +6,7 @@ namespace KempDec.Xmutarn;
 /// <summary>
 /// Representa o CSS do Xmutarn.
 /// </summary>
-public class XmutarnCSS : CSSBase
+public sealed class XmutarnCSS : CSSBase
 {
     /// <summary>
     /// Inicializa uma nova instância de <see cref="XmutarnCSS"/>.
@@ -15,5 +15,6 @@ public class XmutarnCSS : CSSBase
     {
         // Cores e temas.
         Import(new ColorsCSS());
+        Import(new ThemeCSS());
     }
 }
