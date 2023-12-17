@@ -352,117 +352,117 @@ internal static class Palette
     /// <summary>
     /// Obtém a cor transparente da paleta.
     /// </summary>
-    public static string Transparent { get; } = GetPaletteColor(ColorName.Transparent);
+    public static string Transparent { get; } = GetColor(ColorName.Transparent);
 
     /// <summary>
     /// Obtém a cor preta da paleta.
     /// </summary>
-    public static string Black { get; } = GetPaletteColor(ColorName.Black);
+    public static string Black { get; } = GetColor(ColorName.Black);
 
     /// <summary>
     /// Obtém a cor branca da paleta.
     /// </summary>
-    public static string White { get; } = GetPaletteColor(ColorName.White);
+    public static string White { get; } = GetColor(ColorName.White);
 
     /// <summary>
     /// Obtém a cor vermelha da paleta.
     /// </summary>
-    public static string Red { get; } = GetPaletteColor(ColorName.Red);
+    public static string Red { get; } = GetColor(ColorName.Red);
 
     /// <summary>
     /// Obtém a cor rosa da paleta.
     /// </summary>
-    public static string Pink { get; } = GetPaletteColor(ColorName.Pink);
+    public static string Pink { get; } = GetColor(ColorName.Pink);
 
     /// <summary>
     /// Obtém a cor roxo da paleta.
     /// </summary>
-    public static string Purple { get; } = GetPaletteColor(ColorName.Purple);
+    public static string Purple { get; } = GetColor(ColorName.Purple);
 
     /// <summary>
     /// Obtém a cor roxo escuro da paleta.
     /// </summary>
-    public static string DeepPurple { get; } = GetPaletteColor(ColorName.DeepPurple);
+    public static string DeepPurple { get; } = GetColor(ColorName.DeepPurple);
 
     /// <summary>
     /// Obtém a cor índigo da paleta.
     /// </summary>
-    public static string Indigo { get; } = GetPaletteColor(ColorName.Indigo);
+    public static string Indigo { get; } = GetColor(ColorName.Indigo);
 
     /// <summary>
     /// Obtém a cor azul da paleta.
     /// </summary>
-    public static string Blue { get; } = GetPaletteColor(ColorName.Blue);
+    public static string Blue { get; } = GetColor(ColorName.Blue);
 
     /// <summary>
     /// Obtém a cor azul claro da paleta.
     /// </summary>
-    public static string LightBlue { get; } = GetPaletteColor(ColorName.LightBlue);
+    public static string LightBlue { get; } = GetColor(ColorName.LightBlue);
 
     /// <summary>
     /// Obtém a cor ciano da paleta.
     /// </summary>
-    public static string Cyan { get; } = GetPaletteColor(ColorName.Cyan);
+    public static string Cyan { get; } = GetColor(ColorName.Cyan);
 
     /// <summary>
     /// Obtém a cor cerceta da paleta.
     /// </summary>
-    public static string Teal { get; } = GetPaletteColor(ColorName.Teal);
+    public static string Teal { get; } = GetColor(ColorName.Teal);
 
     /// <summary>
     /// Obtém a cor verde da paleta.
     /// </summary>
-    public static string Green { get; } = GetPaletteColor(ColorName.Green);
+    public static string Green { get; } = GetColor(ColorName.Green);
 
     /// <summary>
     /// Obtém a cor verde claro da paleta.
     /// </summary>
-    public static string LightGreen { get; } = GetPaletteColor(ColorName.LightGreen);
+    public static string LightGreen { get; } = GetColor(ColorName.LightGreen);
 
     /// <summary>
     /// Obtém a cor lima da paleta.
     /// </summary>
-    public static string Lime { get; } = GetPaletteColor(ColorName.Lime);
+    public static string Lime { get; } = GetColor(ColorName.Lime);
 
     /// <summary>
     /// Obtém a cor amarelo da paleta.
     /// </summary>
-    public static string Yellow { get; } = GetPaletteColor(ColorName.Yellow);
+    public static string Yellow { get; } = GetColor(ColorName.Yellow);
 
     /// <summary>
     /// Obtém a cor âmbar da paleta.
     /// </summary>
-    public static string Amber { get; } = GetPaletteColor(ColorName.Amber);
+    public static string Amber { get; } = GetColor(ColorName.Amber);
 
     /// <summary>
     /// Obtém a cor laranja da paleta.
     /// </summary>
-    public static string Orange { get; } = GetPaletteColor(ColorName.Orange);
+    public static string Orange { get; } = GetColor(ColorName.Orange);
 
     /// <summary>
     /// Obtém a cor laranja escuro da paleta.
     /// </summary>
-    public static string DeepOrange { get; } = GetPaletteColor(ColorName.DeepOrange);
+    public static string DeepOrange { get; } = GetColor(ColorName.DeepOrange);
 
     /// <summary>
     /// Obtém a cor marrom da paleta.
     /// </summary>
-    public static string Brown { get; } = GetPaletteColor(ColorName.Brown);
+    public static string Brown { get; } = GetColor(ColorName.Brown);
 
     /// <summary>
     /// Obtém a cor cinza da paleta.
     /// </summary>
-    public static string Grey { get; } = GetPaletteColor(ColorName.Grey);
+    public static string Grey { get; } = GetColor(ColorName.Grey);
 
     /// <summary>
     /// Obtém a cor vermelha da paleta.
     /// </summary>
-    public static string BlueGrey { get; } = GetPaletteColor(ColorName.BlueGrey);
+    public static string BlueGrey { get; } = GetColor(ColorName.BlueGrey);
 
     /// <summary>
     /// Obtém uma cor da paleta.
     /// </summary>
     /// <param name="name">O nome da cor a ser buscada na paleta.</param>
     /// <param name="hue">A tonalidade da cor a ser buscada na paleta.</param>
-    public static Color GetPaletteColor(string name, string hue = DefaultColorHue) => Colors[name][hue];
+    public static Color GetColor(string name, string hue = DefaultColorHue) => Colors[name][hue];
 }

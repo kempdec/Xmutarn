@@ -24,7 +24,7 @@ internal class ColorsCSS : CSSBase
     {
         foreach (string colorName in Palette.ColorNames)
         {
-            Color color = Palette.GetPaletteColor(colorName);
+            Color color = Palette.GetColor(colorName);
 
             foreach ((string prefix, string param) in _prefixAndParams)
             {

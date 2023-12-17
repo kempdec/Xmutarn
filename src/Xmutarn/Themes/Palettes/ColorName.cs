@@ -3,7 +3,7 @@
 /// <summary>
 /// Define os nomes das cores da paleta.
 /// </summary>
-public static class ColorName
+internal static class ColorName
 {
     /// <summary>
     /// O nome da cor transparente da paleta.

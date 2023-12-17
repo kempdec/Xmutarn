@@ -10,16 +10,6 @@ namespace KempDec.Xmutarn.Themes;
 internal class ThemeCSS : CSSBase
 {
     /// <summary>
-    /// A cor padrão do tema de realçe.
-    /// </summary>
-    private const string DefaultAccentThemeColor = ColorName.Pink;
-
-    /// <summary>
-    /// A cor padrão do tema de destaque.
-    /// </summary>
-    private const string DefaultFeaturedThemeColor = ColorName.Purple;
-
-    /// <summary>
     /// Um dicionário que mapeia os prefixos para os parâmetros dos temas.
     /// </summary>
     private readonly Dictionary<string, string> _prefixAndParams = new()
@@ -49,7 +39,7 @@ internal class ThemeCSS : CSSBase
 
             if (featuredColorHues.Count > 0)
             {
-                bool isDefaultFeaturedTheme = colorName == DefaultFeaturedThemeColor;
+                bool isDefaultFeaturedTheme = colorName == Theme.DefaultFeaturedColor;
 
                 Create("featured", colorName, featuredColorHues, isDefaultFeaturedTheme);
 
@@ -63,7 +53,7 @@ internal class ThemeCSS : CSSBase
 
             if (accentColorHues.Count > 0)
             {
-                bool isDefaultAccentTheme = colorName == DefaultAccentThemeColor;
+                bool isDefaultAccentTheme = colorName == Theme.DefaultAccentColor;
 
                 Create("accent", colorName, accentColorHues, isDefaultAccentTheme);
 
@@ -154,8 +144,8 @@ internal class ThemeCSS : CSSBase
         string positionName = position2 is not null ? $"{position1}-{position2}" : position1;
         string positions = position2 is not null ? $"{position1} {position2}" : position1;
 
-        Var themeBgFrom = Var("--theme-bg-from", Palette.GetPaletteColor(DefaultFeaturedThemeColor, "800"));
-        Var themeBgTo = Var("--theme-bg-to", Palette.GetPaletteColor(DefaultFeaturedThemeColor, "900"));
+        Var themeBgFrom = Var("--theme-bg-from", Theme.GetFeaturedColor("800"));
+        Var themeBgTo = Var("--theme-bg-to", Theme.GetFeaturedColor("900"));
 
         AddSelector($".theme-bg-to-{positionName}", new()
         {
