@@ -30,7 +30,7 @@ Para notas de lançamento, confira a [seção de releases do Xmutarn](https://gi
 
 ## Direitos autorais
 
-2018-2023 © KempDec Brasil Ltda.
+2017-2023 © KempDec Brasil Ltda.
 
 ## Licença
 
