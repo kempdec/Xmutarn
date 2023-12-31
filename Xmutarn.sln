@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmutarn.Builder", "src\Xmut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmutarn.Theme.Clean", "src\Xmutarn.Theme.Clean\Xmutarn.Theme.Clean.csproj", "{899B112A-BC3A-44A7-9D7E-8295AEC4479B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmutarn.Playground", "src\Xmutarn.Playground\Xmutarn.Playground.csproj", "{DF8971FF-0E56-4CA4-8B65-B42E1494F69E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{899B112A-BC3A-44A7-9D7E-8295AEC4479B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{899B112A-BC3A-44A7-9D7E-8295AEC4479B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{899B112A-BC3A-44A7-9D7E-8295AEC4479B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF8971FF-0E56-4CA4-8B65-B42E1494F69E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF8971FF-0E56-4CA4-8B65-B42E1494F69E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF8971FF-0E56-4CA4-8B65-B42E1494F69E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF8971FF-0E56-4CA4-8B65-B42E1494F69E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

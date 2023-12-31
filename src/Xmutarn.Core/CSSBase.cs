@@ -8,7 +8,7 @@ namespace KempDec.Xmutarn.Core;
 /// </summary>
 /// <remarks>Inicializa uma nova instância de <see cref="CSSBase"/>.</remarks>
 /// <param name="cssList">Os CSS.</param>
-public abstract class CSSBase(params ICSS[] cssList) : ICSS
+public class CSSBase(params ICSS[] cssList) : ICSS
 {
     /// <summary>
     /// Inicializa uma nova instância de <see cref="string"/>.

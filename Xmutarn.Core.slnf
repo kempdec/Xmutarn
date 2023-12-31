@@ -2,8 +2,8 @@
   "solution": {
     "path": "Xmutarn.sln",
     "projects": [
-      "samples\\Xmutarn.Sample\\Xmutarn.Sample.csproj",
-      "src\\Xmutarn.Core\\Xmutarn.Core.csproj"
+      "src\\Xmutarn.Core\\Xmutarn.Core.csproj",
+      "src\\Xmutarn.Playground\\Xmutarn.Playground.csproj"
     ]
   }
 }
