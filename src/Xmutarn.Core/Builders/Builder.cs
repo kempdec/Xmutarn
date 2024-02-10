@@ -10,7 +10,7 @@ public static class Builder
     /// </summary>
     /// <param name="css">O CSS a ser escrito no arquivo.</param>
     /// <param name="filePath">O caminho do arquivo a ser escrito.</param>
-    public static void WriteCSSTo(ICSS css, string filePath)
+    public static void WriteCSSTo(CSS css, string filePath)
     {
         using var writer = new StreamWriter(filePath);
 

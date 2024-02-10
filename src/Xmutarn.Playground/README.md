@@ -16,11 +16,10 @@ body {
 var fontStack = "Helvetica, sans-serif";
 var primaryColor = "#333";
 
-xc.AddSelector("body", new()
-{
-    { "font", $"100% {fontStack}" },
-    { "color", primaryColor }
-});
+css += body with {
+    font = $"100% {fontStack}",
+    color = primaryColor
+};
 ```
 
 **CSS**
@@ -53,24 +52,23 @@ nav {
 
 **C#**
 ``` csharp
-xc.AddSelector("nav ul", new()
-{
-    { "margin", "0" },
-    { "padding", "0" },
-    { "list-style", "none" }
-});
+css += [
+    "nav ul".of() with {
+        margin = "0",
+        padding = "0",
+        listStyle = "none"
+    },
 
-xc.AddSelector("nav li", new()
-{
-    { "display", "inline-block" }
-});
+    "nav li".of() with {
+        display = "inline-block"
+    },
 
-xc.AddSelector("nav a", new()
-{
-    { "display", "block" },
-    { "padding", "6px 12px" },
-    { "text-decoration", "none" }
-});
+    "nav a".of() with {
+        display = "block",
+        padding = "6px 12px",
+        textDecoration = "none"
+    }
+];
 ```
 
 **CSS**
