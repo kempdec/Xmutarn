@@ -1,7 +1,22 @@
 ﻿@page "/"
+@using Xmutarn.Web.Resources.Pages
 
-<PageTitle>Home</PageTitle>
+<main style="text-align: center;">
+    <header>
+        <figure>
+            <img src="img/logo.png" alt="@IndexResource.LogoAlt">
+        </figure>
 
-<h1>Hello, world!</h1>
+        <h1>
+            @AppResource.Name
+        </h1>
 
-Welcome to your new app.
+        <p>
+            @AppResource.Summary
+        </p>
+    </header>
+</main>
+
+<footer style="text-align: center;">
+    2016-@DateTime.Now.Year &copy; KempDec Brasil Ltda.
+</footer>

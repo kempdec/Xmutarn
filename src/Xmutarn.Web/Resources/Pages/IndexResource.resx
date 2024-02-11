@@ -117,13 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Description" xml:space="preserve">
-    <value>Xmutarn é um framework front-end web moderno e estiloso criado para a produtividade.</value>
-  </data>
-  <data name="Name" xml:space="preserve">
-    <value>Xmutarn</value>
-  </data>
-  <data name="Summary" xml:space="preserve">
-    <value>Framework front-end web moderno criado para a produtividade</value>
+  <data name="LogoAlt" xml:space="preserve">
+    <value>Logo do Xmutarn.</value>
   </data>
 </root>

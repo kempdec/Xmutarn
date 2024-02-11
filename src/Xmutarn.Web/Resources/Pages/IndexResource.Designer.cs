@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Xmutarn.Web.Resources {
+namespace Xmutarn.Web.Resources.Pages {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Xmutarn.Web.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppResource {
+    internal class IndexResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal AppResource() {
+        internal IndexResource() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Xmutarn.Web.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Xmutarn.Web.Resources.AppResource", typeof(AppResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Xmutarn.Web.Resources.Pages.IndexResource", typeof(IndexResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,29 +61,11 @@ namespace Xmutarn.Web.Resources {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Xmutarn é um framework front-end web moderno e estiloso criado para a produtividade..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Logo do Xmutarn..
         /// </summary>
-        internal static string Description {
+        internal static string LogoAlt {
             get {
-                return ResourceManager.GetString("Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Xmutarn.
-        /// </summary>
-        internal static string Name {
-            get {
-                return ResourceManager.GetString("Name", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Framework front-end web moderno criado para a produtividade.
-        /// </summary>
-        internal static string Summary {
-            get {
-                return ResourceManager.GetString("Summary", resourceCulture);
+                return ResourceManager.GetString("LogoAlt", resourceCulture);
             }
         }
     }
