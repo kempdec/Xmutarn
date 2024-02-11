@@ -54,7 +54,10 @@ public record CSSProperties(bool IsMinified = false) : ICSSConvertible
 
         foreach (KeyValuePair<string, object> otherPropery in Others)
         {
-            cssProperties.Add(otherPropery.Key, otherPropery.Value);
+            if (!cssProperties.ContainsKey(otherPropery.Key))
+            {
+                cssProperties.Add(otherPropery.Key, otherPropery.Value);
+            }
         }
 
         return cssProperties.ToCSS();
