@@ -5,7 +5,7 @@
 <h1 align="center">Xmutarn</h1>
 
 <p align="center">
-	 Xmutarn é um framework front-end web moderno, criado para a produtividade.
+	 Framework front-end web moderno<br>criado para a produtividade
 </p>
 
 <p align="center">
