@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>KempDec.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>KempDec.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Title>Xmutarn Core</Title>
+    <Version>0.1.0</Version>
+    <Authors>KempDec</Authors>
+    <Company>KempDec Brasil Ltda.</Company>
+    <Product>Xmutarn Core</Product>
+    <Description>Xmutarn Core é uma biblioteca que pode ser usada para gerar CSS robustos a partir de código C#.</Description>
+    <Copyright>2016-2024 © Vinícius Lima</Copyright>
+    <PackageProjectUrl>https://xmutarn.kempdec.com</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/kempdec/Xmutarn</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>xmutarn;css;</PackageTags>
+    <PackageOutputPath>..\..\published</PackageOutputPath>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\assets\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
