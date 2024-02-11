@@ -1,0 +1,175 @@
+﻿using System.Text;
+
+namespace KempDec.Xmutarn.Core;
+
+/// <summary>
+/// Representa um CSS.
+/// </summary>
+public class CSS : List<CSSSelector>, ICSSConvertible
+{
+    /// <summary>
+    /// Inicializa uma nova instância de <see cref="CSS"/>.
+    /// </summary>
+    /// <param name="isMinified">Um sinalizador indicando se o valor equivalente em CSS deve ser minificado.</param>
+    public CSS(bool isMinified = false) => IsMinified = isMinified;
+
+    /// <summary>
+    /// Inicializa uma nova instância de <see cref="CSS"/>.
+    /// </summary>
+    /// <param name="selectors">Os seletores CSS.</param>
+    /// <param name="isMinified">Um sinalizador indicando se o valor equivalente em CSS deve ser minificado.</param>
+    public CSS(IEnumerable<CSSSelector> selectors, bool isMinified = false) : this(isMinified) => AddRange(selectors);
+
+    /// <summary>
+    /// Adiciona os elementos do segundo CSS no primeiro CSS.
+    /// </summary>
+    /// <param name="css1">O primeiro CSS a receber os elementos do segundo.</param>
+    /// <param name="css2">O segundo CSS a adicionar os elementos no primeiro.</param>
+    /// <returns>O primeiro CSS com os elementos adicionados do segundo.</returns>
+    public static CSS operator +(CSS css1, CSS css2)
+    {
+        css1.Import(css2);
+
+        return css1;
+    }
+
+    /// <summary>
+    /// Adiciona um seletor CSS para o CSS.
+    /// </summary>
+    /// <param name="css">O CSS a receber o seletor CSS.</param>
+    /// <param name="selector">O seletor CSS a ser adicionado no CSS.</param>
+    /// <returns>O CSS com o seletor adicionado.</returns>
+    public static CSS operator +(CSS css, CSSSelector selector)
+    {
+        css.Add(selector);
+
+        return css;
+    }
+
+    /// <summary>
+    /// Adiciona um CSS em texto para o CSS.
+    /// </summary>
+    /// <param name="css">O CSS a receber o CSS em texto.</param>
+    /// <param name="cssInText">O CSS em texto a ser adicionado no CSS.</param>
+    /// <returns>O CSS com o CSS em texto adicionado.</returns>
+    public static CSS operator +(CSS css, string cssInText)
+    {
+        css._cssInText.Append(cssInText);
+
+        return css;
+    }
+
+    /// <summary>
+    /// O CSS em texto.
+    /// </summary>
+    private readonly StringBuilder _cssInText = new();
+
+    /// <summary>
+    /// A lista de CSS.
+    /// </summary>
+    private readonly List<CSS> _cssList = [];
+
+    /// <summary>
+    /// Um dicionário que mapeia o seletor CSS para a ação de edição deste seletor CSS.
+    /// </summary>
+    private readonly Dictionary<string, Action<CSSSelector>> _cssSelectorEditingActions = [];
+
+    /// <summary>
+    /// Obtém ou define um sinalizador indicando se o valor equivalente em CSS deve ser minificado.
+    /// </summary>
+    public bool IsMinified { get; set; }
+
+    /// <summary>
+    /// Adiciona o seletor CSS especificado para o final do CSS.
+    /// </summary>
+    /// <param name="selector">O seletor CSS a ser adicionado.</param>
+    /// <param name="options">As opções do seletor CSS.</param>
+    public void Add(string selector, Action<CSSSelector> options)
+    {
+        var cssSelector = new CSSSelector(selector);
+
+        options.Invoke(cssSelector);
+
+        Add(cssSelector);
+    }
+
+    /// <summary>
+    /// Adiciona o seletor CSS especificado para o final do CSS.
+    /// </summary>
+    /// <param name="selector">O seletor CSS a ser adicionado.</param>
+    /// <param name="properties">As propriedades CSS do seletor CSS.</param>
+    public void Add(string selector, CSSPropertyDictionary properties)
+    {
+        var cssSelector = new CSSSelector(selector)
+        {
+            Others = properties
+        };
+
+        Add(cssSelector);
+    }
+
+    /// <summary>
+    /// Edita o seletor CSS especificado.
+    /// </summary>
+    /// <param name="selector">O seletor CSS a ser editado.</param>
+    /// <param name="options">As opções do seletor CSS.</param>
+    public void Edit(string selector, Action<CSSSelector> options) => _cssSelectorEditingActions.Add(selector, options);
+
+    /// <summary>
+    /// Importa o CSS especificado.
+    /// </summary>
+    /// <param name="css">O CSS a ser importado.</param>
+    public void Import(CSS css) => _cssList.Add(css);
+
+    /// <inheritdoc/>
+    public virtual string ToCSS()
+    {
+        var cssBuilder = new StringBuilder();
+
+        foreach (CSSSelector selector in this)
+        {
+            if (!IsMinified && cssBuilder.Length > 0)
+            {
+                cssBuilder.Append(Environment.NewLine + Environment.NewLine);
+            }
+
+            if (_cssSelectorEditingActions.TryGetValue(selector.Value, out Action<CSSSelector>? editOptions))
+            {
+                editOptions?.Invoke(selector);
+
+                _cssSelectorEditingActions.Remove(selector.Value);
+            }
+
+            selector.IsMinified = IsMinified;
+
+            cssBuilder.Append(selector.ToCSS());
+        }
+
+        foreach (CSS css in _cssList)
+        {
+            if (!IsMinified && cssBuilder.Length > 0)
+            {
+                cssBuilder.Append(Environment.NewLine + Environment.NewLine);
+            }
+
+            css.IsMinified = IsMinified;
+
+            cssBuilder.Append(css.ToCSS());
+        }
+
+        if (!IsMinified && _cssInText.Length > 0 && cssBuilder.Length > 0)
+        {
+            cssBuilder.Append(Environment.NewLine + Environment.NewLine);
+        }
+
+        cssBuilder.Append(_cssInText);
+
+        return cssBuilder.ToString();
+    }
+
+    /// <summary>
+    /// Retorna o valor CSS equivalente da instância.
+    /// </summary>
+    /// <returns>O valor CSS equivalente da instância.</returns>
+    public override string ToString() => ToCSS();
+}
