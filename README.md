@@ -1,8 +1,18 @@
-# Xmutarn
+<p style="text-align: center;">
+	<image src="assets/logo.png" alt="Logo do Xmutarn" style="max-width: 30%;" />
+</p>
 
-Xmutarn é um framework front-end web moderno, criado para a produtividade.
+<h1 style="text-align: center;">Xmutarn</h1>
 
-**[Clique aqui para acessar o site](https://xmutarn.kempdec.com)**
+<p style="text-align: center;">
+	 Xmutarn é um framework front-end web moderno, criado para a produtividade.
+</p>
+
+<p style="text-align: center; font-weight: bold;">
+	<a href="https://xmutarn.kempdec.com" target="_blank">
+		Clique aqui para acessar o site
+	</a>
+</p>
 
 ## Autores
 
