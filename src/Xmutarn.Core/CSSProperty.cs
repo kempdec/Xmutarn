@@ -7,13 +7,13 @@
 /// <param name="Name">O nome da propriedade CSS.</param>
 /// <param name="Value">O valor da propriedade CSS.</param>
 /// <param name="IsMinified">Um sinalizador indicando se a propriedade CSS é minificada.</param>
-public record CSSProperty(string Name, string Value, bool IsMinified = false) : ICSSProperty
+public record CSSProperty(string Name, CSSPropertyValue Value, bool IsMinified = false) : ICSSProperty
 {
     /// <inheritdoc/>
     public string Name { get; } = Name;
 
     /// <inheritdoc/>
-    public string Value { get; } = Value;
+    public CSSPropertyValue Value { get; } = Value;
 
     /// <inheritdoc/>
     public bool IsMinified { get; } = IsMinified;
@@ -28,7 +28,9 @@ public record CSSProperty(string Name, string Value, bool IsMinified = false) : 
             css += " ";
         }
 
-        css += $"{Value};";
+        Value.IsMinified = IsMinified;
+
+        css += $"{Value.ToCSS()};";
 
         return css;
     }

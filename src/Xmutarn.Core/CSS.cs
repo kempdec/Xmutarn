@@ -28,7 +28,7 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// <returns>O primeiro CSS com os elementos adicionados do segundo.</returns>
     public static CSS operator +(CSS css1, CSS css2)
     {
-        css1.AddRange([.. css2]);
+        css1.Import(css2);
 
         return css1;
     }
@@ -65,12 +65,64 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     private readonly StringBuilder _cssInText = new();
 
     /// <summary>
+    /// A lista de CSS.
+    /// </summary>
+    private readonly List<CSS> _cssList = [];
+
+    /// <summary>
+    /// Um dicionário que mapeia o seletor CSS para a ação de edição deste seletor CSS.
+    /// </summary>
+    private readonly Dictionary<string, Action<CSSSelector>> _cssSelectorEditingActions = [];
+
+    /// <summary>
     /// Obtém ou define um sinalizador indicando se o valor equivalente em CSS deve ser minificado.
     /// </summary>
     public bool IsMinified { get; set; }
 
+    /// <summary>
+    /// Adiciona o seletor CSS especificado para o final do CSS.
+    /// </summary>
+    /// <param name="selector">O seletor CSS a ser adicionado.</param>
+    /// <param name="options">As opções do seletor CSS.</param>
+    public void Add(string selector, Action<CSSSelector> options)
+    {
+        var cssSelector = new CSSSelector(selector);
+
+        options.Invoke(cssSelector);
+
+        Add(cssSelector);
+    }
+
+    /// <summary>
+    /// Adiciona o seletor CSS especificado para o final do CSS.
+    /// </summary>
+    /// <param name="selector">O seletor CSS a ser adicionado.</param>
+    /// <param name="properties">As propriedades CSS do seletor CSS.</param>
+    public void Add(string selector, CSSPropertyDictionary properties)
+    {
+        var cssSelector = new CSSSelector(selector)
+        {
+            Others = properties
+        };
+
+        Add(cssSelector);
+    }
+
+    /// <summary>
+    /// Edita o seletor CSS especificado.
+    /// </summary>
+    /// <param name="selector">O seletor CSS a ser editado.</param>
+    /// <param name="options">As opções do seletor CSS.</param>
+    public void Edit(string selector, Action<CSSSelector> options) => _cssSelectorEditingActions.Add(selector, options);
+
+    /// <summary>
+    /// Importa o CSS especificado.
+    /// </summary>
+    /// <param name="css">O CSS a ser importado.</param>
+    public void Import(CSS css) => _cssList.Add(css);
+
     /// <inheritdoc/>
-    public string ToCSS()
+    public virtual string ToCSS()
     {
         var cssBuilder = new StringBuilder();
 
@@ -81,12 +133,38 @@ public class CSS : List<CSSSelector>, ICSSConvertible
                 cssBuilder.Append(Environment.NewLine + Environment.NewLine);
             }
 
+            if (_cssSelectorEditingActions.TryGetValue(selector.Value, out Action<CSSSelector>? editOptions))
+            {
+                editOptions?.Invoke(selector);
+
+                _cssSelectorEditingActions.Remove(selector.Value);
+            }
+
             selector.IsMinified = IsMinified;
 
             cssBuilder.Append(selector.ToCSS());
         }
 
-        return cssBuilder.ToString() + _cssInText.ToString();
+        foreach (CSS css in _cssList)
+        {
+            if (!IsMinified && cssBuilder.Length > 0)
+            {
+                cssBuilder.Append(Environment.NewLine + Environment.NewLine);
+            }
+
+            css.IsMinified = IsMinified;
+
+            cssBuilder.Append(css.ToCSS());
+        }
+
+        if (!IsMinified && _cssInText.Length > 0 && cssBuilder.Length > 0)
+        {
+            cssBuilder.Append(Environment.NewLine + Environment.NewLine);
+        }
+
+        cssBuilder.Append(_cssInText);
+
+        return cssBuilder.ToString();
     }
 
     /// <summary>

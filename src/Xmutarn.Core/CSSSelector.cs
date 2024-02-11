@@ -13,7 +13,7 @@ public record CSSSelector(string Value, bool IsMinified = false) : CSSProperties
     /// <summary>
     /// Obtém o valor do seletor CSS.
     /// </summary>
-    protected string Value { get; } = Value;
+    public string Value { get; } = Value;
 
     /// <inheritdoc/>
     public override string ToCSS()

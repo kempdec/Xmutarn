@@ -1,37 +1,38 @@
 ﻿using KempDec.Xmutarn.Core;
+using KempDec.Xmutarn.Core.PropertyValues;
 using KempDec.Xmutarn.Themes.Palettes;
 
 namespace KempDec.Xmutarn.Themes;
 
 /// <summary>
-/// Representa o CSS das cores.
+/// Representa o CSS das cores do Xmutarn.
 /// </summary>
-internal class ColorsCSS : CSSBase
+public class ColorsCSS : CSS
 {
     /// <summary>
     /// Um dicionário que mapeia os prefixos para os parâmetros das cores.
     /// </summary>
     private readonly Dictionary<string, string> _prefixAndParams = new()
     {
-        { "fg", "color" },
-        { "bg", "background" }
+        { "fg", nameof(CSSSelector.color) },
+        { "bg", nameof(CSSSelector.background) }
     };
 
     /// <summary>
     /// Inicializa uma nova instância de <see cref="ColorsCSS"/>.
     /// </summary>
-    public ColorsCSS() : base()
+    public ColorsCSS()
     {
         foreach (string colorName in Palette.ColorNames)
         {
-            Color color = Palette.GetColor(colorName);
+            CSSColor color = Palette.GetColor(colorName);
 
             foreach ((string prefix, string param) in _prefixAndParams)
             {
                 // Exemplo: .fg-red.
-                AddSelector($".{prefix}-{colorName}", new()
+                Add($".{prefix}-{colorName}", new CSSPropertyDictionary
                 {
-                    { param, Important(color) }
+                    { param, color.Important() }
                 });
             }
         }

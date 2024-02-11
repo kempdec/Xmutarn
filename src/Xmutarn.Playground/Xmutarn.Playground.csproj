@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Xmutarn.Core\Xmutarn.Core.csproj" />
+    <ProjectReference Include="..\Xmutarn\Xmutarn.csproj" />
   </ItemGroup>
 
 </Project>

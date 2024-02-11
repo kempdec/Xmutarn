@@ -1,4 +1,4 @@
-﻿using KempDec.Xmutarn.Core;
+﻿using KempDec.Xmutarn.Core.PropertyValues;
 
 namespace KempDec.Xmutarn.Themes.Palettes;
 
@@ -17,7 +17,7 @@ internal static class Palette
     /// paleta.
     /// </summary>
     /// <remarks>Cores baseadas na paleta do Material Design de 2014 (https://material.io/design/color).</remarks>
-    public static Dictionary<string, Dictionary<string, Color>> Colors { get; } = new()
+    public static Dictionary<string, Dictionary<string, CSSColor>> Colors { get; } = new()
     {
         [ColorName.Transparent] = new()
         {
@@ -352,117 +352,117 @@ internal static class Palette
     /// <summary>
     /// Obtém a cor transparente da paleta.
     /// </summary>
-    public static string Transparent { get; } = GetColor(ColorName.Transparent);
+    public static CSSColor Transparent { get; } = GetColor(ColorName.Transparent);
 
     /// <summary>
     /// Obtém a cor preta da paleta.
     /// </summary>
-    public static string Black { get; } = GetColor(ColorName.Black);
+    public static CSSColor Black { get; } = GetColor(ColorName.Black);
 
     /// <summary>
     /// Obtém a cor branca da paleta.
     /// </summary>
-    public static string White { get; } = GetColor(ColorName.White);
+    public static CSSColor White { get; } = GetColor(ColorName.White);
 
     /// <summary>
     /// Obtém a cor vermelha da paleta.
     /// </summary>
-    public static string Red { get; } = GetColor(ColorName.Red);
+    public static CSSColor Red { get; } = GetColor(ColorName.Red);
 
     /// <summary>
     /// Obtém a cor rosa da paleta.
     /// </summary>
-    public static string Pink { get; } = GetColor(ColorName.Pink);
+    public static CSSColor Pink { get; } = GetColor(ColorName.Pink);
 
     /// <summary>
     /// Obtém a cor roxo da paleta.
     /// </summary>
-    public static string Purple { get; } = GetColor(ColorName.Purple);
+    public static CSSColor Purple { get; } = GetColor(ColorName.Purple);
 
     /// <summary>
     /// Obtém a cor roxo escuro da paleta.
     /// </summary>
-    public static string DeepPurple { get; } = GetColor(ColorName.DeepPurple);
+    public static CSSColor DeepPurple { get; } = GetColor(ColorName.DeepPurple);
 
     /// <summary>
     /// Obtém a cor índigo da paleta.
     /// </summary>
-    public static string Indigo { get; } = GetColor(ColorName.Indigo);
+    public static CSSColor Indigo { get; } = GetColor(ColorName.Indigo);
 
     /// <summary>
     /// Obtém a cor azul da paleta.
     /// </summary>
-    public static string Blue { get; } = GetColor(ColorName.Blue);
+    public static CSSColor Blue { get; } = GetColor(ColorName.Blue);
 
     /// <summary>
     /// Obtém a cor azul claro da paleta.
     /// </summary>
-    public static string LightBlue { get; } = GetColor(ColorName.LightBlue);
+    public static CSSColor LightBlue { get; } = GetColor(ColorName.LightBlue);
 
     /// <summary>
     /// Obtém a cor ciano da paleta.
     /// </summary>
-    public static string Cyan { get; } = GetColor(ColorName.Cyan);
+    public static CSSColor Cyan { get; } = GetColor(ColorName.Cyan);
 
     /// <summary>
     /// Obtém a cor cerceta da paleta.
     /// </summary>
-    public static string Teal { get; } = GetColor(ColorName.Teal);
+    public static CSSColor Teal { get; } = GetColor(ColorName.Teal);
 
     /// <summary>
     /// Obtém a cor verde da paleta.
     /// </summary>
-    public static string Green { get; } = GetColor(ColorName.Green);
+    public static CSSColor Green { get; } = GetColor(ColorName.Green);
 
     /// <summary>
     /// Obtém a cor verde claro da paleta.
     /// </summary>
-    public static string LightGreen { get; } = GetColor(ColorName.LightGreen);
+    public static CSSColor LightGreen { get; } = GetColor(ColorName.LightGreen);
 
     /// <summary>
     /// Obtém a cor lima da paleta.
     /// </summary>
-    public static string Lime { get; } = GetColor(ColorName.Lime);
+    public static CSSColor Lime { get; } = GetColor(ColorName.Lime);
 
     /// <summary>
     /// Obtém a cor amarelo da paleta.
     /// </summary>
-    public static string Yellow { get; } = GetColor(ColorName.Yellow);
+    public static CSSColor Yellow { get; } = GetColor(ColorName.Yellow);
 
     /// <summary>
     /// Obtém a cor âmbar da paleta.
     /// </summary>
-    public static string Amber { get; } = GetColor(ColorName.Amber);
+    public static CSSColor Amber { get; } = GetColor(ColorName.Amber);
 
     /// <summary>
     /// Obtém a cor laranja da paleta.
     /// </summary>
-    public static string Orange { get; } = GetColor(ColorName.Orange);
+    public static CSSColor Orange { get; } = GetColor(ColorName.Orange);
 
     /// <summary>
     /// Obtém a cor laranja escuro da paleta.
     /// </summary>
-    public static string DeepOrange { get; } = GetColor(ColorName.DeepOrange);
+    public static CSSColor DeepOrange { get; } = GetColor(ColorName.DeepOrange);
 
     /// <summary>
     /// Obtém a cor marrom da paleta.
     /// </summary>
-    public static string Brown { get; } = GetColor(ColorName.Brown);
+    public static CSSColor Brown { get; } = GetColor(ColorName.Brown);
 
     /// <summary>
     /// Obtém a cor cinza da paleta.
     /// </summary>
-    public static string Grey { get; } = GetColor(ColorName.Grey);
+    public static CSSColor Grey { get; } = GetColor(ColorName.Grey);
 
     /// <summary>
     /// Obtém a cor vermelha da paleta.
     /// </summary>
-    public static string BlueGrey { get; } = GetColor(ColorName.BlueGrey);
+    public static CSSColor BlueGrey { get; } = GetColor(ColorName.BlueGrey);
 
     /// <summary>
     /// Obtém uma cor da paleta.
     /// </summary>
     /// <param name="name">O nome da cor a ser buscada na paleta.</param>
     /// <param name="hue">A tonalidade da cor a ser buscada na paleta.</param>
-    public static Color GetColor(string name, string hue = DefaultColorHue) => Colors[name][hue];
+    public static CSSColor GetColor(string name, string hue = DefaultColorHue) => Colors[name][hue];
 }

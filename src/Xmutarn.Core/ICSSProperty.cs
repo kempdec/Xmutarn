@@ -13,5 +13,5 @@ public interface ICSSProperty : ICSSConvertible
     /// <summary>
     /// Obtém o valor da propriedade CSS.
     /// </summary>
-    public string Value { get; }
+    public CSSPropertyValue Value { get; }
 }
