@@ -120,4 +120,7 @@
   <data name="Copyright" xml:space="preserve">
     <value>2016-{0} © KempDec Brasil Ltda.&lt;span class="display-none display-inline-block__lg"&gt;&amp;nbsp;&lt;/span&gt;&lt;br class="display-none__lg"&gt;Todos os direitos reservados.</value>
   </data>
+  <data name="MITLicense" xml:space="preserve">
+    <value>Licença MIT</value>
+  </data>
 </root>

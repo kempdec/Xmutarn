@@ -120,6 +120,9 @@
   <data name="Description" xml:space="preserve">
     <value>Xmutarn é um framework front-end web moderno e estiloso criado para a produtividade.</value>
   </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Xmutarn</value>
   </data>

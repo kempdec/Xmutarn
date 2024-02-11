@@ -1,8 +1,28 @@
 ﻿@using Xmutarn.Web.Resources.Shared
+
 <footer>
     <div class="container">
-        <div class="flex-row flex-content-center padding-lg typo-caption-1 theme-fg-secondary">
-            <span class="flex-col-auto typo-align-center">
+        <div class="flex-row flex-content-center flex-content-start__lg padding-lg typo-caption-1 theme-fg-secondary">
+            @if (AppSettings is not { GitHubUrl: null } or { GitHubLicenseUrl: null })
+            {
+                <div class="flex-col-12 flex-col-auto__lg display-flex flex-content-center flex-content-start__lg padding-y-sm">
+                    @if (AppSettings.GitHubUrl is not null)
+                    {
+                        <a class="flex-col-auto margin-x-xs" href="@AppSettings.GitHubUrl" target="_blank">
+                            @AppResource.GitHub
+                        </a>
+                    }
+
+                    @if (AppSettings.GitHubLicenseUrl is not null)
+                    {
+                        <a class="flex-col-auto margin-x-xs" href="@AppSettings.GitHubLicenseUrl" target="_blank">
+                            @FooterResource.MITLicense
+                        </a>
+                    }
+                </div>
+            }
+
+            <span class="flex-col-12 flex-col-auto__lg margin-left-auto__lg padding-y-sm typo-align-center">
                 @((MarkupString)FooterResource.Copyright.FormatWith(DateTime.Now.Year))
             </span>
         </div>

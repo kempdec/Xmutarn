@@ -68,5 +68,14 @@ namespace Xmutarn.Web.Resources.Shared {
                 return ResourceManager.GetString("Copyright", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Licença MIT.
+        /// </summary>
+        internal static string MITLicense {
+            get {
+                return ResourceManager.GetString("MITLicense", resourceCulture);
+            }
+        }
     }
 }

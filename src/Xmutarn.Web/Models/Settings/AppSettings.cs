@@ -6,7 +6,12 @@
 public record AppSettings
 {
     /// <summary>
-    /// Obtém ou inicializa a URL do GitHub do aplicativo.
+    /// Obtém ou inicializa a URL do repositório do aplicativo no GitHub.
     /// </summary>
     public Uri? GitHubUrl { get; init; }
+
+    /// <summary>
+    /// Obtém ou inicializa a URL da licença do aplicativo no GitHub.
+    /// </summary>
+    public Uri? GitHubLicenseUrl => GitHubUrl is not null ? new Uri(GitHubUrl, "blob/main/LICENSE") : null;
 }
