@@ -1,5 +1,5 @@
 <p align="center">
-	<image src="assets/logo.png" alt="Logo do Xmutarn" style="max-width: 30%;" />
+	<img src="assets/logo.png" width="250" height="250" alt="Logo do Xmutarn" />
 </p>
 
 <h1 align="center">Xmutarn</h1>
