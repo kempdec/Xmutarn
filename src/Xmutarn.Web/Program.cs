@@ -1,9 +1,13 @@
 using Xmutarn.Web;
+using Xmutarn.Web.Models.Settings;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddScoped(_ => builder.Configuration.GetSection(nameof(AppSettings)).Get<AppSettings>()
+    ?? throw new InvalidOperationException("Não foi possível encontrar as configurações do aplicativo."));
 
 WebApplication app = builder.Build();
 

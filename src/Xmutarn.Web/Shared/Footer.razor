@@ -1,0 +1,10 @@
+﻿@using Xmutarn.Web.Resources.Shared
+<footer>
+    <div class="container">
+        <div class="flex-row flex-content-center padding-lg typo-caption-1 theme-fg-secondary">
+            <span class="flex-col-auto typo-align-center">
+                @((MarkupString)FooterResource.Copyright.FormatWith(DateTime.Now.Year))
+            </span>
+        </div>
+    </div>
+</footer>

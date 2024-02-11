@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmutarn.Web", "src\Xmutarn.Web\Xmutarn.Web.csproj", "{6448237B-D4C2-4CA5-8560-E8CE347D37F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xmutarn.Web", "src\Xmutarn.Web\Xmutarn.Web.csproj", "{6448237B-D4C2-4CA5-8560-E8CE347D37F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmutarn", "src\Xmutarn\Xmutarn.csproj", "{4B7ED255-57E7-4423-8174-D364CE89EB2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xmutarn", "src\Xmutarn\Xmutarn.csproj", "{4B7ED255-57E7-4423-8174-D364CE89EB2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

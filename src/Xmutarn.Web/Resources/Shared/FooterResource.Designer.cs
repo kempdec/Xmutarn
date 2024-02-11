@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Xmutarn.Web.Resources.Pages {
+namespace Xmutarn.Web.Resources.Shared {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Xmutarn.Web.Resources.Pages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class IndexResource {
+    internal class FooterResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal IndexResource() {
+        internal FooterResource() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Xmutarn.Web.Resources.Pages {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Xmutarn.Web.Resources.Pages.IndexResource", typeof(IndexResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Xmutarn.Web.Resources.Shared.FooterResource", typeof(FooterResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,20 +61,11 @@ namespace Xmutarn.Web.Resources.Pages {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Logo do Xmutarn..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a 2016-{0} © KempDec Brasil Ltda.&lt;span class=&quot;display-none display-inline-block__lg&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;br class=&quot;display-none__lg&quot;&gt;Todos os direitos reservados..
         /// </summary>
-        internal static string LogoAlt {
+        internal static string Copyright {
             get {
-                return ResourceManager.GetString("LogoAlt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Ver no GitHub.
-        /// </summary>
-        internal static string ViewOnGitHub {
-            get {
-                return ResourceManager.GetString("ViewOnGitHub", resourceCulture);
+                return ResourceManager.GetString("Copyright", resourceCulture);
             }
         }
     }
