@@ -1,9 +1,0 @@
-%border-color {
-  border-color: var(--theme-dividers, get-main-theme-color($name: "dividers")) !important;
-}
-
-%flex-column {
-  position: relative;
-  width: 100%;
-  padding: $flex-column-padding;
-}
