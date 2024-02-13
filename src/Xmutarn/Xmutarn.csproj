@@ -48,4 +48,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Xmutarn.Core\Xmutarn.Core.csproj" />
+  </ItemGroup>
+
 </Project>
