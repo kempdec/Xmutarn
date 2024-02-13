@@ -1,4 +1,5 @@
 ﻿using KempDec.Xmutarn.Core.Extensions;
+using KempDec.Xmutarn.Core.PropertyValues;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
@@ -90,7 +91,14 @@ public record CSSProperties(bool IsMinified = false) : ICSSConvertible
     public string? backgroundAttachment { get; set; }
     public string? backgroundBlendMode { get; set; }
     public string? backgroundClip { get; set; }
-    public string? backgroundColor { get; set; }
+#pragma warning restore CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
+
+    /// <summary>
+    /// Obtém ou define a cor de fundo de um elemento.
+    /// </summary>
+    public CSSColor? backgroundColor { get; set; }
+
+#pragma warning disable CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
     public string? backgroundImage { get; set; }
     public string? backgroundOrigin { get; set; }
     public string? backgroundPosition { get; set; }
@@ -140,7 +148,7 @@ public record CSSProperties(bool IsMinified = false) : ICSSConvertible
     /// <summary>
     /// Obtém ou define a cor do texto de um elemento.
     /// </summary>
-    public string? color { get; set; }
+    public CSSColor? color { get; set; }
 
 #pragma warning disable CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
     public string? columnCount { get; set; }
