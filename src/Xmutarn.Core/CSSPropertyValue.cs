@@ -1,13 +1,22 @@
-﻿namespace KempDec.Xmutarn.Core;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace KempDec.Xmutarn.Core;
 
 /// <summary>
 /// Representa o valor de uma propriedade CSS.
 /// </summary>
 /// <remarks>Inicializa uma nova instância de <see cref="CSSPropertyValue"/>.</remarks>
-/// <param name="Value">O valor do valor de uma propriedade CSS.</param>
 /// <param name="IsMinified">Um sinalizador indicando se a propriedade CSS é minificada.</param>
-public class CSSPropertyValue(string Value, bool IsMinified = false) : ICSSPropertyValue
+public record class CSSPropertyValue(bool IsMinified = false) : ICSSPropertyValue
 {
+    /// <summary>
+    /// Inicializa uma nova instância de <see cref="CSSPropertyValue"/>.
+    /// </summary>
+    /// <param name="value">O valor do valor de uma propriedade CSS.</param>
+    /// <param name="isMinified">Um sinalizador indicando se a propriedade CSS é minificada.</param>
+    [SetsRequiredMembers]
+    public CSSPropertyValue(string value, bool isMinified = false) : this(isMinified) => Value = value;
+
     /// <summary>
     /// Inicializa uma nova instância de <see cref="CSSPropertyValue"/>.
     /// </summary>
@@ -21,9 +30,9 @@ public class CSSPropertyValue(string Value, bool IsMinified = false) : ICSSPrope
     public bool IsMinified { get; set; } = IsMinified;
 
     /// <summary>
-    /// Obtém o valor do valor de uma propriedade CSS.
+    /// Obtém ou inicializa o valor do valor de uma propriedade CSS.
     /// </summary>
-    public string Value { get; } = Value;
+    public virtual required string Value { get; init; }
 
     /// <summary>
     /// Define <see cref="IsImportant"/> como <see langword="true"/> e retorna esta instância.

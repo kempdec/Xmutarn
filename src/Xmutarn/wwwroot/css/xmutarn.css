@@ -322,7 +322,7 @@ html[x-main-theme=dark] {
   --theme-card: #191919;
 }
 
-html[x-featured-theme=red] {
+[x-featured-theme=red] {
   --theme-50: #FFEBEE;
   --theme-100: #FFCDD2;
   --theme-200: #EF9A9A;
@@ -335,14 +335,14 @@ html[x-featured-theme=red] {
   --theme-900: #B71C1C;
 }
 
-html[x-accent-theme=red] {
+[x-accent-theme=red] {
   --theme-A100: #FF8A80;
   --theme-A200: #FF5252;
   --theme-A400: #FF1744;
   --theme-A700: #D50000;
 }
 
-html[x-featured-theme=pink] {
+[x-featured-theme=pink] {
   --theme-50: #FCE4EC;
   --theme-100: #F8BBD0;
   --theme-200: #F48FB1;
@@ -355,7 +355,7 @@ html[x-featured-theme=pink] {
   --theme-900: #880E4F;
 }
 
-html[x-accent-theme=pink], html:not([x-accent-theme]) {
+[x-accent-theme=pink], html:not([x-accent-theme]) {
   --theme-A100: #FF80AB;
   --theme-A200: #FF4081;
   --theme-A400: #F50057;
@@ -363,12 +363,10 @@ html[x-accent-theme=pink], html:not([x-accent-theme]) {
 }
 
 .theme-fg-A100 {
-  color: #FF80AB !important;
   color: var(--theme-A100, #FF80AB) !important;
 }
 
 .theme-bg-A100 {
-  background: #FF80AB !important;
   background: var(--theme-A100, #FF80AB) !important;
 }
 
@@ -381,12 +379,10 @@ html[x-accent-theme=pink], html:not([x-accent-theme]) {
 }
 
 .theme-fg-A200 {
-  color: #FF4081 !important;
   color: var(--theme-A200, #FF4081) !important;
 }
 
 .theme-bg-A200 {
-  background: #FF4081 !important;
   background: var(--theme-A200, #FF4081) !important;
 }
 
@@ -399,12 +395,10 @@ html[x-accent-theme=pink], html:not([x-accent-theme]) {
 }
 
 .theme-fg-A400 {
-  color: #F50057 !important;
   color: var(--theme-A400, #F50057) !important;
 }
 
 .theme-bg-A400 {
-  background: #F50057 !important;
   background: var(--theme-A400, #F50057) !important;
 }
 
@@ -417,12 +411,10 @@ html[x-accent-theme=pink], html:not([x-accent-theme]) {
 }
 
 .theme-fg-A700 {
-  color: #C51162 !important;
   color: var(--theme-A700, #C51162) !important;
 }
 
 .theme-bg-A700 {
-  background: #C51162 !important;
   background: var(--theme-A700, #C51162) !important;
 }
 
@@ -434,7 +426,7 @@ html[x-accent-theme=pink], html:not([x-accent-theme]) {
   --theme-bg-to: var(--theme-A700, #C51162);
 }
 
-html[x-featured-theme=purple], html:not([x-featured-theme]) {
+[x-featured-theme=purple], html:not([x-featured-theme]) {
   --theme-50: #F3E5F5;
   --theme-100: #E1BEE7;
   --theme-200: #CE93D8;
@@ -448,12 +440,10 @@ html[x-featured-theme=purple], html:not([x-featured-theme]) {
 }
 
 .theme-fg-50 {
-  color: #F3E5F5 !important;
   color: var(--theme-50, #F3E5F5) !important;
 }
 
 .theme-bg-50 {
-  background: #F3E5F5 !important;
   background: var(--theme-50, #F3E5F5) !important;
 }
 
@@ -466,12 +456,10 @@ html[x-featured-theme=purple], html:not([x-featured-theme]) {
 }
 
 .theme-fg-100 {
-  color: #E1BEE7 !important;
   color: var(--theme-100, #E1BEE7) !important;
 }
 
 .theme-bg-100 {
-  background: #E1BEE7 !important;
   background: var(--theme-100, #E1BEE7) !important;
 }
 
@@ -484,12 +472,10 @@ html[x-featured-theme=purple], html:not([x-featured-theme]) {
 }
 
 .theme-fg-200 {
-  color: #CE93D8 !important;
   color: var(--theme-200, #CE93D8) !important;
 }
 
 .theme-bg-200 {
-  background: #CE93D8 !important;
   background: var(--theme-200, #CE93D8) !important;
 }
 
@@ -502,12 +488,10 @@ html[x-featured-theme=purple], html:not([x-featured-theme]) {
 }
 
 .theme-fg-300 {
-  color: #BA68C8 !important;
   color: var(--theme-300, #BA68C8) !important;
 }
 
 .theme-bg-300 {
-  background: #BA68C8 !important;
   background: var(--theme-300, #BA68C8) !important;
 }
 
@@ -520,12 +504,10 @@ html[x-featured-theme=purple], html:not([x-featured-theme]) {
 }
 
 .theme-fg-400 {
-  color: #AB47BC !important;
   color: var(--theme-400, #AB47BC) !important;
 }
 
 .theme-bg-400 {
-  background: #AB47BC !important;
   background: var(--theme-400, #AB47BC) !important;
 }
 
@@ -538,12 +520,10 @@ html[x-featured-theme=purple], html:not([x-featured-theme]) {
 }
 
 .theme-fg-500 {
-  color: #9C27B0 !important;
   color: var(--theme-500, #9C27B0) !important;
 }
 
 .theme-bg-500 {
-  background: #9C27B0 !important;
   background: var(--theme-500, #9C27B0) !important;
 }
 
@@ -556,12 +536,10 @@ html[x-featured-theme=purple], html:not([x-featured-theme]) {
 }
 
 .theme-fg-600 {
-  color: #8E24AA !important;
   color: var(--theme-600, #8E24AA) !important;
 }
 
 .theme-bg-600 {
-  background: #8E24AA !important;
   background: var(--theme-600, #8E24AA) !important;
 }
 
@@ -574,12 +552,10 @@ html[x-featured-theme=purple], html:not([x-featured-theme]) {
 }
 
 .theme-fg-700 {
-  color: #7B1FA2 !important;
   color: var(--theme-700, #7B1FA2) !important;
 }
 
 .theme-bg-700 {
-  background: #7B1FA2 !important;
   background: var(--theme-700, #7B1FA2) !important;
 }
 
@@ -592,12 +568,10 @@ html[x-featured-theme=purple], html:not([x-featured-theme]) {
 }
 
 .theme-fg-800 {
-  color: #6A1B9A !important;
   color: var(--theme-800, #6A1B9A) !important;
 }
 
 .theme-bg-800 {
-  background: #6A1B9A !important;
   background: var(--theme-800, #6A1B9A) !important;
 }
 
@@ -610,12 +584,10 @@ html[x-featured-theme=purple], html:not([x-featured-theme]) {
 }
 
 .theme-fg-900 {
-  color: #4A148C !important;
   color: var(--theme-900, #4A148C) !important;
 }
 
 .theme-bg-900 {
-  background: #4A148C !important;
   background: var(--theme-900, #4A148C) !important;
 }
 
@@ -627,14 +599,14 @@ html[x-featured-theme=purple], html:not([x-featured-theme]) {
   --theme-bg-to: var(--theme-900, #4A148C);
 }
 
-html[x-accent-theme=purple] {
+[x-accent-theme=purple] {
   --theme-A100: #EA80FC;
   --theme-A200: #E040FB;
   --theme-A400: #D500F9;
   --theme-A700: #AA00FF;
 }
 
-html[x-featured-theme=deep-purple] {
+[x-featured-theme=deep-purple] {
   --theme-50: #EDE7F6;
   --theme-100: #D1C4E9;
   --theme-200: #B39DDB;
@@ -647,14 +619,14 @@ html[x-featured-theme=deep-purple] {
   --theme-900: #311B92;
 }
 
-html[x-accent-theme=deep-purple] {
+[x-accent-theme=deep-purple] {
   --theme-A100: #B388FF;
   --theme-A200: #7C4DFF;
   --theme-A400: #651FFF;
   --theme-A700: #6200EA;
 }
 
-html[x-featured-theme=indigo] {
+[x-featured-theme=indigo] {
   --theme-50: #E8EAF6;
   --theme-100: #C5CAE9;
   --theme-200: #9FA8DA;
@@ -667,14 +639,14 @@ html[x-featured-theme=indigo] {
   --theme-900: #1A237E;
 }
 
-html[x-accent-theme=indigo] {
+[x-accent-theme=indigo] {
   --theme-A100: #8C9EFF;
   --theme-A200: #536DFE;
   --theme-A400: #3D5AFE;
   --theme-A700: #304FFE;
 }
 
-html[x-featured-theme=blue] {
+[x-featured-theme=blue] {
   --theme-50: #E3F2FD;
   --theme-100: #BBDEFB;
   --theme-200: #90CAF9;
@@ -687,14 +659,14 @@ html[x-featured-theme=blue] {
   --theme-900: #0D47A1;
 }
 
-html[x-accent-theme=blue] {
+[x-accent-theme=blue] {
   --theme-A100: #82B1FF;
   --theme-A200: #448AFF;
   --theme-A400: #2979FF;
   --theme-A700: #2962FF;
 }
 
-html[x-featured-theme=light-blue] {
+[x-featured-theme=light-blue] {
   --theme-50: #E1F5FE;
   --theme-100: #B3E5FC;
   --theme-200: #81D4FA;
@@ -707,14 +679,14 @@ html[x-featured-theme=light-blue] {
   --theme-900: #01579B;
 }
 
-html[x-accent-theme=light-blue] {
+[x-accent-theme=light-blue] {
   --theme-A100: #80D8FF;
   --theme-A200: #40C4FF;
   --theme-A400: #00B0FF;
   --theme-A700: #0091EA;
 }
 
-html[x-featured-theme=cyan] {
+[x-featured-theme=cyan] {
   --theme-50: #E0F7FA;
   --theme-100: #B2EBF2;
   --theme-200: #80DEEA;
@@ -727,14 +699,14 @@ html[x-featured-theme=cyan] {
   --theme-900: #006064;
 }
 
-html[x-accent-theme=cyan] {
+[x-accent-theme=cyan] {
   --theme-A100: #84FFFF;
   --theme-A200: #18FFFF;
   --theme-A400: #00E5FF;
   --theme-A700: #00B8D4;
 }
 
-html[x-featured-theme=teal] {
+[x-featured-theme=teal] {
   --theme-50: #E0F2F1;
   --theme-100: #B2DFDB;
   --theme-200: #80CBC4;
@@ -747,14 +719,14 @@ html[x-featured-theme=teal] {
   --theme-900: #004D40;
 }
 
-html[x-accent-theme=teal] {
+[x-accent-theme=teal] {
   --theme-A100: #A7FFEB;
   --theme-A200: #64FFDA;
   --theme-A400: #1DE9B6;
   --theme-A700: #00BFA5;
 }
 
-html[x-featured-theme=green] {
+[x-featured-theme=green] {
   --theme-50: #E8F5E9;
   --theme-100: #C8E6C9;
   --theme-200: #A5D6A7;
@@ -767,14 +739,14 @@ html[x-featured-theme=green] {
   --theme-900: #1B5E20;
 }
 
-html[x-accent-theme=green] {
+[x-accent-theme=green] {
   --theme-A100: #B9F6CA;
   --theme-A200: #69F0AE;
   --theme-A400: #00E676;
   --theme-A700: #00C853;
 }
 
-html[x-featured-theme=light-green] {
+[x-featured-theme=light-green] {
   --theme-50: #F1F8E9;
   --theme-100: #DCEDC8;
   --theme-200: #C5E1A5;
@@ -787,14 +759,14 @@ html[x-featured-theme=light-green] {
   --theme-900: #33691E;
 }
 
-html[x-accent-theme=light-green] {
+[x-accent-theme=light-green] {
   --theme-A100: #CCFF90;
   --theme-A200: #B2FF59;
   --theme-A400: #76FF03;
   --theme-A700: #64DD17;
 }
 
-html[x-featured-theme=lime] {
+[x-featured-theme=lime] {
   --theme-50: #F9FBE7;
   --theme-100: #F0F4C3;
   --theme-200: #E6EE9C;
@@ -807,14 +779,14 @@ html[x-featured-theme=lime] {
   --theme-900: #827717;
 }
 
-html[x-accent-theme=lime] {
+[x-accent-theme=lime] {
   --theme-A100: #F4FF81;
   --theme-A200: #EEFF41;
   --theme-A400: #C6FF00;
   --theme-A700: #AEEA00;
 }
 
-html[x-featured-theme=yellow] {
+[x-featured-theme=yellow] {
   --theme-50: #FFFDE7;
   --theme-100: #FFF9C4;
   --theme-200: #FFF59D;
@@ -827,14 +799,14 @@ html[x-featured-theme=yellow] {
   --theme-900: #F57F17;
 }
 
-html[x-accent-theme=yellow] {
+[x-accent-theme=yellow] {
   --theme-A100: #FFFF8D;
   --theme-A200: #FFFF00;
   --theme-A400: #FFEA00;
   --theme-A700: #FFD600;
 }
 
-html[x-featured-theme=amber] {
+[x-featured-theme=amber] {
   --theme-50: #FFF8E1;
   --theme-100: #FFECB3;
   --theme-200: #FFE082;
@@ -847,14 +819,14 @@ html[x-featured-theme=amber] {
   --theme-900: #FF6F00;
 }
 
-html[x-accent-theme=amber] {
+[x-accent-theme=amber] {
   --theme-A100: #FFE57F;
   --theme-A200: #FFD740;
   --theme-A400: #FFC400;
   --theme-A700: #FFAB00;
 }
 
-html[x-featured-theme=orange] {
+[x-featured-theme=orange] {
   --theme-50: #FFF3E0;
   --theme-100: #FFE0B2;
   --theme-200: #FFCC80;
@@ -867,14 +839,14 @@ html[x-featured-theme=orange] {
   --theme-900: #E65100;
 }
 
-html[x-accent-theme=orange] {
+[x-accent-theme=orange] {
   --theme-A100: #FFD180;
   --theme-A200: #FFAB40;
   --theme-A400: #FF9100;
   --theme-A700: #FF6D00;
 }
 
-html[x-featured-theme=deep-orange] {
+[x-featured-theme=deep-orange] {
   --theme-50: #FBE9E7;
   --theme-100: #FFCCBC;
   --theme-200: #FFAB91;
@@ -887,14 +859,14 @@ html[x-featured-theme=deep-orange] {
   --theme-900: #BF360C;
 }
 
-html[x-accent-theme=deep-orange] {
+[x-accent-theme=deep-orange] {
   --theme-A100: #FF9E80;
   --theme-A200: #FF6E40;
   --theme-A400: #FF3D00;
   --theme-A700: #DD2C00;
 }
 
-html[x-featured-theme=brown] {
+[x-featured-theme=brown] {
   --theme-50: #EFEBE9;
   --theme-100: #D7CCC8;
   --theme-200: #BCAAA4;
@@ -907,7 +879,7 @@ html[x-featured-theme=brown] {
   --theme-900: #3E2723;
 }
 
-html[x-featured-theme=grey] {
+[x-featured-theme=grey] {
   --theme-50: #FAFAFA;
   --theme-100: #F5F5F5;
   --theme-200: #EEEEEE;
@@ -920,7 +892,7 @@ html[x-featured-theme=grey] {
   --theme-900: #212121;
 }
 
-html[x-featured-theme=blue-grey] {
+[x-featured-theme=blue-grey] {
   --theme-50: #ECEFF1;
   --theme-100: #CFD8DC;
   --theme-200: #B0BEC5;

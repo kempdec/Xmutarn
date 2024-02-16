@@ -7,8 +7,39 @@
 /// <param name="isMinified">Um sinalizador indicando se o valor equivalente em CSS deve ser minificado.</param>
 public sealed class CSSPropertyDictionary(bool isMinified = false) : Dictionary<string, object>, ICSSConvertible
 {
+    /// <summary>
+    /// Adiciona as propriedades CSS da segunda coleção na primeira coleção.
+    /// </summary>
+    /// <param name="properties1">A primeira coleção a receber as propriedades CSS da segunda.</param>
+    /// <param name="properties2">A segunda coleção a adicionar as propriedades CSS na primeira.</param>
+    /// <returns>A primeira coleção com as propriedades CSS da segunda.</returns>
+    public static CSSPropertyDictionary operator +(CSSPropertyDictionary properties1,
+        CSSPropertyDictionary properties2)
+    {
+        properties1.AddRange(properties2);
+
+        return properties1;
+    }
+
     /// <inheritdoc/>
     public bool IsMinified { get; } = isMinified;
+
+    /// <summary>
+    /// Adiciona as propriedades CSS da coleção especificada para a atual.
+    /// </summary>
+    /// <remarks>Caso alguma propriedade CSS da coleção especificada já exista na coleção atual, ela será
+    /// ignorada.</remarks>
+    /// <param name="properties">A coleção de propriedades CSS.</param>
+    public void AddRange(CSSPropertyDictionary properties)
+    {
+        foreach (KeyValuePair<string, object> property in properties)
+        {
+            if (!ContainsKey(property.Key))
+            {
+                Add(property.Key, property.Value);
+            }
+        }
+    }
 
     /// <inheritdoc/>
     public string ToCSS()

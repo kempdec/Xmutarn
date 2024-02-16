@@ -18,9 +18,16 @@ public record CSSProperties(bool IsMinified = false) : ICSSConvertible
     public bool IsMinified { get; set; } = IsMinified;
 
     /// <summary>
-    /// Obtém ou define outras propriedades CSS que não estão pré-construídas.
+    /// Obtém outras propriedades CSS que não estão pré-construídas.
     /// </summary>
-    public CSSPropertyDictionary Others { get; set; } = [];
+    public CSSPropertyDictionary Others { get; } = [];
+
+    /// <summary>
+    /// Adiciona uma variável CSS para as propriedades CSS que não estão pré-construídas.
+    /// </summary>
+    /// <param name="name">O nome da variável CSS a ser adicionada.</param>
+    /// <param name="value">O valor da variável CSS a ser adicionada.</param>
+    public void AddVar(string name, object value) => Others.Add($"--{name}", value);
 
     /// <inheritdoc/>
     [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)]

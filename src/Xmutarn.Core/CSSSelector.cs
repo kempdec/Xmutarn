@@ -11,14 +11,38 @@ namespace KempDec.Xmutarn.Core;
 public record CSSSelector(string Value, bool IsMinified = false) : CSSProperties(IsMinified), ICSSConvertible
 {
     /// <summary>
+    /// Os valores extendidos do seletor CSS.
+    /// </summary>
+    private readonly List<string> _extendValues = [];
+
+    /// <summary>
     /// Obtém o valor do seletor CSS.
     /// </summary>
     public string Value { get; } = Value;
+
+    /// <summary>
+    /// Extende o seletor CSS atual com o valor do seletor CSS especificado.
+    /// </summary>
+    /// <param name="value">O valor do seletor CSS que extenderá o seletor CSS atual.</param>
+    public void Extend(string value) => _extendValues.Add(value);
 
     /// <inheritdoc/>
     public override string ToCSS()
     {
         var cssBuilder = new StringBuilder(Value);
+
+        if (_extendValues.Count > 0)
+        {
+            string separator = ",";
+
+            if (!IsMinified)
+            {
+                separator += " ";
+            }
+
+            cssBuilder.Append(separator);
+            cssBuilder.Append(string.Join(separator, _extendValues));
+        }
 
         if (!IsMinified)
         {
@@ -32,7 +56,14 @@ public record CSSSelector(string Value, bool IsMinified = false) : CSSProperties
             cssBuilder.Append(Environment.NewLine);
         }
 
-        cssBuilder.Append(base.ToCSS());
+        string propertiesCSS = base.ToCSS();
+
+        if (IsMinified)
+        {
+            propertiesCSS = propertiesCSS[..^1];
+        }
+
+        cssBuilder.Append(propertiesCSS);
 
         if (!IsMinified)
         {
