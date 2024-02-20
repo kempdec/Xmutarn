@@ -29,6 +29,18 @@ public class ThemeCSS : CSS
     /// </summary>
     public ThemeCSS()
     {
+        foreach ((string themeName, Dictionary<string, CSSColor> themeHues) in Theme.Themes)
+        {
+            bool isDefaultMainTheme = themeName == Theme.DefaultMain;
+
+            Create(type: "main", themeName, themeHues, isDefaultMainTheme);
+
+            if (isDefaultMainTheme)
+            {
+                CreateClasses(themeHues);
+            }
+        }
+
         foreach ((string colorName, Dictionary<string, CSSColor> colorHues) in Palette.Colors)
         {
             if (_ignoreColors.Contains(colorName))

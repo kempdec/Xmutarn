@@ -18,16 +18,6 @@ public class XmutarnCSS : CSS
 
         // Cores e temas.
         Import(Colors);
-
-        if (IsMinified)
-        {
-            TempOldMinCSS();
-        }
-        else
-        {
-            TempOldCSS();
-        }
-
         Import(Themes);
 
         if (IsMinified)
@@ -66,154 +56,6 @@ public class XmutarnCSS : CSS
             Import(new CSS() + Environment.NewLine);
         }
     }
-
-    private void TempOldCSS() => Import(new CSS() + """
-        html[x-main-theme=light], html:not([x-main-theme]) {
-          --theme-primary: rgba(0, 0, 0, 0.87);
-          --theme-secondary: rgba(0, 0, 0, 0.54);
-          --theme-hint: rgba(0, 0, 0, 0.38);
-          --theme-disabled: rgba(0, 0, 0, 0.38);
-          --theme-dividers: rgba(0, 0, 0, 0.12);
-          --theme-background: #FAFAFA;
-          --theme-card: white;
-        }
-        
-        .theme-fg-primary {
-          color: rgba(0, 0, 0, 0.87) !important;
-          color: var(--theme-primary, rgba(0, 0, 0, 0.87)) !important;
-        }
-        
-        .theme-bg-primary {
-          background: rgba(0, 0, 0, 0.87) !important;
-          background: var(--theme-primary, rgba(0, 0, 0, 0.87)) !important;
-        }
-        
-        .theme-bg-from-primary {
-          --theme-bg-from: var(--theme-primary, rgba(0, 0, 0, 0.87));
-        }
-        
-        .theme-bg-to-primary {
-          --theme-bg-to: var(--theme-primary, rgba(0, 0, 0, 0.87));
-        }
-        
-        .theme-fg-secondary {
-          color: rgba(0, 0, 0, 0.54) !important;
-          color: var(--theme-secondary, rgba(0, 0, 0, 0.54)) !important;
-        }
-        
-        .theme-bg-secondary {
-          background: rgba(0, 0, 0, 0.54) !important;
-          background: var(--theme-secondary, rgba(0, 0, 0, 0.54)) !important;
-        }
-        
-        .theme-bg-from-secondary {
-          --theme-bg-from: var(--theme-secondary, rgba(0, 0, 0, 0.54));
-        }
-        
-        .theme-bg-to-secondary {
-          --theme-bg-to: var(--theme-secondary, rgba(0, 0, 0, 0.54));
-        }
-        
-        .theme-fg-hint {
-          color: rgba(0, 0, 0, 0.38) !important;
-          color: var(--theme-hint, rgba(0, 0, 0, 0.38)) !important;
-        }
-        
-        .theme-bg-hint {
-          background: rgba(0, 0, 0, 0.38) !important;
-          background: var(--theme-hint, rgba(0, 0, 0, 0.38)) !important;
-        }
-        
-        .theme-bg-from-hint {
-          --theme-bg-from: var(--theme-hint, rgba(0, 0, 0, 0.38));
-        }
-        
-        .theme-bg-to-hint {
-          --theme-bg-to: var(--theme-hint, rgba(0, 0, 0, 0.38));
-        }
-        
-        .theme-fg-disabled {
-          color: rgba(0, 0, 0, 0.38) !important;
-          color: var(--theme-disabled, rgba(0, 0, 0, 0.38)) !important;
-        }
-        
-        .theme-bg-disabled {
-          background: rgba(0, 0, 0, 0.38) !important;
-          background: var(--theme-disabled, rgba(0, 0, 0, 0.38)) !important;
-        }
-        
-        .theme-bg-from-disabled {
-          --theme-bg-from: var(--theme-disabled, rgba(0, 0, 0, 0.38));
-        }
-        
-        .theme-bg-to-disabled {
-          --theme-bg-to: var(--theme-disabled, rgba(0, 0, 0, 0.38));
-        }
-        
-        .theme-fg-dividers {
-          color: rgba(0, 0, 0, 0.12) !important;
-          color: var(--theme-dividers, rgba(0, 0, 0, 0.12)) !important;
-        }
-        
-        .theme-bg-dividers {
-          background: rgba(0, 0, 0, 0.12) !important;
-          background: var(--theme-dividers, rgba(0, 0, 0, 0.12)) !important;
-        }
-        
-        .theme-bg-from-dividers {
-          --theme-bg-from: var(--theme-dividers, rgba(0, 0, 0, 0.12));
-        }
-        
-        .theme-bg-to-dividers {
-          --theme-bg-to: var(--theme-dividers, rgba(0, 0, 0, 0.12));
-        }
-        
-        .theme-fg-background {
-          color: #FAFAFA !important;
-          color: var(--theme-background, #FAFAFA) !important;
-        }
-        
-        .theme-bg-background {
-          background: #FAFAFA !important;
-          background: var(--theme-background, #FAFAFA) !important;
-        }
-        
-        .theme-bg-from-background {
-          --theme-bg-from: var(--theme-background, #FAFAFA);
-        }
-        
-        .theme-bg-to-background {
-          --theme-bg-to: var(--theme-background, #FAFAFA);
-        }
-        
-        .theme-fg-card {
-          color: white !important;
-          color: var(--theme-card, white) !important;
-        }
-        
-        .theme-bg-card {
-          background: white !important;
-          background: var(--theme-card, white) !important;
-        }
-        
-        .theme-bg-from-card {
-          --theme-bg-from: var(--theme-card, white);
-        }
-        
-        .theme-bg-to-card {
-          --theme-bg-to: var(--theme-card, white);
-        }
-        
-        html[x-main-theme=dark] {
-          --theme-primary: white;
-          --theme-secondary: rgba(255, 255, 255, 0.7);
-          --theme-hint: rgba(255, 255, 255, 0.5);
-          --theme-disabled: rgba(255, 255, 255, 0.5);
-          --theme-dividers: rgba(255, 255, 255, 0.06);
-          --theme-background: #131313;
-          --theme-card: #191919;
-        }
-        """);
 
     /// <summary>
     /// Adiciona o CSS antigo do Xmutarn.
@@ -5237,8 +5079,6 @@ public class XmutarnCSS : CSS
         }
         /*# sourceMappingURL=xmutarn.css.map */
         """);
-
-    private void TempOldMinCSS() => Import(new CSS() + """html[x-main-theme=light],html:not([x-main-theme]){--theme-primary: rgba(0, 0, 0, 0.87);--theme-secondary: rgba(0, 0, 0, 0.54);--theme-hint: rgba(0, 0, 0, 0.38);--theme-disabled: rgba(0, 0, 0, 0.38);--theme-dividers: rgba(0, 0, 0, 0.12);--theme-background: #FAFAFA;--theme-card: white}.theme-fg-primary{color:rgba(0, 0, 0, 0.87) !important;color:var(--theme-primary, rgba(0, 0, 0, 0.87)) !important}.theme-bg-primary{background:rgba(0, 0, 0, 0.87) !important;background:var(--theme-primary, rgba(0, 0, 0, 0.87)) !important}.theme-bg-from-primary{--theme-bg-from: var(--theme-primary, rgba(0, 0, 0, 0.87))}.theme-bg-to-primary{--theme-bg-to: var(--theme-primary, rgba(0, 0, 0, 0.87))}.theme-fg-secondary{color:rgba(0, 0, 0, 0.54) !important;color:var(--theme-secondary, rgba(0, 0, 0, 0.54)) !important}.theme-bg-secondary{background:rgba(0, 0, 0, 0.54) !important;background:var(--theme-secondary, rgba(0, 0, 0, 0.54)) !important}.theme-bg-from-secondary{--theme-bg-from: var(--theme-secondary, rgba(0, 0, 0, 0.54))}.theme-bg-to-secondary{--theme-bg-to: var(--theme-secondary, rgba(0, 0, 0, 0.54))}.theme-fg-hint{color:rgba(0, 0, 0, 0.38) !important;color:var(--theme-hint, rgba(0, 0, 0, 0.38)) !important}.theme-bg-hint{background:rgba(0, 0, 0, 0.38) !important;background:var(--theme-hint, rgba(0, 0, 0, 0.38)) !important}.theme-bg-from-hint{--theme-bg-from: var(--theme-hint, rgba(0, 0, 0, 0.38))}.theme-bg-to-hint{--theme-bg-to: var(--theme-hint, rgba(0, 0, 0, 0.38))}.theme-fg-disabled{color:rgba(0, 0, 0, 0.38) !important;color:var(--theme-disabled, rgba(0, 0, 0, 0.38)) !important}.theme-bg-disabled{background:rgba(0, 0, 0, 0.38) !important;background:var(--theme-disabled, rgba(0, 0, 0, 0.38)) !important}.theme-bg-from-disabled{--theme-bg-from: var(--theme-disabled, rgba(0, 0, 0, 0.38))}.theme-bg-to-disabled{--theme-bg-to: var(--theme-disabled, rgba(0, 0, 0, 0.38))}.theme-fg-dividers{color:rgba(0, 0, 0, 0.12) !important;color:var(--theme-dividers, rgba(0, 0, 0, 0.12)) !important}.theme-bg-dividers{background:rgba(0, 0, 0, 0.12) !important;background:var(--theme-dividers, rgba(0, 0, 0, 0.12)) !important}.theme-bg-from-dividers{--theme-bg-from: var(--theme-dividers, rgba(0, 0, 0, 0.12))}.theme-bg-to-dividers{--theme-bg-to: var(--theme-dividers, rgba(0, 0, 0, 0.12))}.theme-fg-background{color:#FAFAFA !important;color:var(--theme-background, #FAFAFA) !important}.theme-bg-background{background:#FAFAFA !important;background:var(--theme-background, #FAFAFA) !important}.theme-bg-from-background{--theme-bg-from: var(--theme-background, #FAFAFA)}.theme-bg-to-background{--theme-bg-to: var(--theme-background, #FAFAFA)}.theme-fg-card{color:white !important;color:var(--theme-card, white) !important}.theme-bg-card{background:white !important;background:var(--theme-card, white) !important}.theme-bg-from-card{--theme-bg-from: var(--theme-card, white)}.theme-bg-to-card{--theme-bg-to: var(--theme-card, white)}html[x-main-theme=dark]{--theme-primary: white;--theme-secondary: rgba(255, 255, 255, 0.7);--theme-hint: rgba(255, 255, 255, 0.5);--theme-disabled: rgba(255, 255, 255, 0.5);--theme-dividers: rgba(255, 255, 255, 0.06);--theme-background: #131313;--theme-card: #191919}""");
 
     /// <summary>
     /// Adiciona o CSS minificado antigo do Xmutarn.
