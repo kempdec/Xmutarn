@@ -117,6 +117,12 @@ public class CSS(bool isMinified = false) : List<CSSSelector>, ICSSConvertible
     /// <param name="css">O CSS a ser importado.</param>
     public void Import(CSS css) => _cssList.Add(css);
 
+    /// <summary>
+    /// Importa o CSS em texto especificado.
+    /// </summary>
+    /// <param name="cssInText">O CSS em texto a ser importado.</param>
+    public void Import(string cssInText) => _cssInText.Append(cssInText);
+
     /// <inheritdoc/>
     public virtual string ToCSS()
     {
