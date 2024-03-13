@@ -1,0 +1,23 @@
+name: Criar release
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+  
+jobs:
+  release:
+    name: Criar release
+    runs-on: ubuntu-latest
+    permissions: write-all
+
+    steps:
+      - name: Definir o timezone
+        run: sudo timedatectl set-timezone America/Sao_Paulo
+
+      - name: Criar release
+        uses: kempdec/autorelease-action@v1
+        env:
+          AutoRelease_Token: ${{ secrets.GITHUB_TOKEN }}
