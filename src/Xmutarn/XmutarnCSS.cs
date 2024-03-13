@@ -47,8 +47,8 @@ public class XmutarnCSS : CSS
     /// </summary>
     private void AddHeader()
     {
-        Import(new CSS() + """
-            /*! Xmutarn v0.32.0-beta.1 (https://xmutarn.kempdec.com) | Copyright 2016-2024 KempDec Brasil Ltda. | Licensed under MIT */
+        Import(new CSS() + $"""
+            /*! Xmutarn v0.32.0-beta.1 (https://xmutarn.kempdec.com) | Copyright 2016-{DateTime.Now.Year} KempDec Brasil Ltda. | Licensed under MIT */
             """);
 
         if (IsMinified)
