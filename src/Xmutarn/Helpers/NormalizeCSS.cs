@@ -5,7 +5,7 @@ namespace KempDec.Xmutarn.Helpers;
 /// <summary>
 /// Representa o CSS do normalize.css.
 /// </summary>
-internal class NormalizeCSS : CSS
+public class NormalizeCSS : CSS
 {
     /// <summary>
     /// Inicializa uma nova instância de <see cref="NormalizeCSS"/>.
