@@ -5,6 +5,7 @@ namespace KempDec.Xmutarn;
 /// <summary>
 /// Representa um CSS temporário que em breve será refatorado.
 /// </summary>
+/// <remarks>Usado com CSS antigo do Xmutarn que não foi refatorado.</remarks>
 public abstract class TempCSS : CSS
 {
     /// <summary>
@@ -15,21 +16,21 @@ public abstract class TempCSS : CSS
     {
         if (IsMinified)
         {
-            ImportMinCSS();
+            ImportOldMinCSS();
         }
         else
         {
-            ImportCSS();
+            ImportOldCSS();
         }
     }
 
     /// <summary>
-    /// Importa o CSS minificado.
+    /// Importa o CSS minificado antigo do Xmutarn.
     /// </summary>
-    protected abstract void ImportMinCSS();
+    protected abstract void ImportOldMinCSS();
 
     /// <summary>
-    /// Importa o CSS.
+    /// Importa o CSS antigo do Xmutarn.
     /// </summary>
-    protected abstract void ImportCSS();
+    protected abstract void ImportOldCSS();
 }
