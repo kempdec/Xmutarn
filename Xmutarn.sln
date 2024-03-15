@@ -8,8 +8,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		autorelease.config.json = autorelease.config.json
 		badynetconfig.json = badynetconfig.json
 		README.md = README.md
+		.github\workflows\release.yml = .github\workflows\release.yml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xmutarn.Web", "src\Xmutarn.Web\Xmutarn.Web.csproj", "{6448237B-D4C2-4CA5-8560-E8CE347D37F1}"

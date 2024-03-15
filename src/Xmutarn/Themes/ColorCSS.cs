@@ -25,14 +25,17 @@ public class ColorsCSS : CSS
     {
         foreach (string colorName in Palette.ColorNames)
         {
-            CSSColor color = Palette.GetColor(colorName);
+            CSSColor color = Palette.GetColor(colorName) with
+            {
+                IsImportant = true
+            };
 
             foreach ((string prefix, string param) in _prefixAndParams)
             {
                 // Exemplo: .fg-red.
-                Add($".{prefix}-{colorName}", new CSSPropertyDictionary
+                Add(selector: $".{prefix}-{colorName}", new CSSPropertyDictionary
                 {
-                    { param, color.Important() }
+                    { param, color }
                 });
             }
         }

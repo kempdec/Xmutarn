@@ -1,18 +1,15 @@
-﻿using System.Text;
+﻿using KempDec.Xmutarn.Core.Functions;
+using System.Text;
 
 namespace KempDec.Xmutarn.Core;
 
 /// <summary>
 /// Representa um CSS.
 /// </summary>
-public class CSS : List<CSSSelector>, ICSSConvertible
+/// <remarks>Inicializa uma nova instância de <see cref="CSS"/>.</remarks>
+/// <param name="isMinified">Um sinalizador indicando se o valor equivalente em CSS deve ser minificado.</param>
+public class CSS(bool isMinified = false) : List<CSSSelector>, ICSSConvertible
 {
-    /// <summary>
-    /// Inicializa uma nova instância de <see cref="CSS"/>.
-    /// </summary>
-    /// <param name="isMinified">Um sinalizador indicando se o valor equivalente em CSS deve ser minificado.</param>
-    public CSS(bool isMinified = false) => IsMinified = isMinified;
-
     /// <summary>
     /// Inicializa uma nova instância de <see cref="CSS"/>.
     /// </summary>
@@ -77,7 +74,7 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// <summary>
     /// Obtém ou define um sinalizador indicando se o valor equivalente em CSS deve ser minificado.
     /// </summary>
-    public bool IsMinified { get; set; }
+    public bool IsMinified { get; set; } = isMinified;
 
     /// <summary>
     /// Adiciona o seletor CSS especificado para o final do CSS.
@@ -100,10 +97,9 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// <param name="properties">As propriedades CSS do seletor CSS.</param>
     public void Add(string selector, CSSPropertyDictionary properties)
     {
-        var cssSelector = new CSSSelector(selector)
-        {
-            Others = properties
-        };
+        var cssSelector = new CSSSelector(selector);
+
+        cssSelector.Others.AddRange(properties);
 
         Add(cssSelector);
     }
@@ -120,6 +116,12 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// </summary>
     /// <param name="css">O CSS a ser importado.</param>
     public void Import(CSS css) => _cssList.Add(css);
+
+    /// <summary>
+    /// Importa o CSS em texto especificado.
+    /// </summary>
+    /// <param name="cssInText">O CSS em texto a ser importado.</param>
+    public void Import(string cssInText) => _cssInText.Append(cssInText);
 
     /// <inheritdoc/>
     public virtual string ToCSS()
@@ -172,4 +174,16 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// </summary>
     /// <returns>O valor CSS equivalente da instância.</returns>
     public override string ToString() => ToCSS();
+
+    #region Funções CSS.
+
+    /// <summary>
+    /// Função "var" do CSS.
+    /// </summary>
+    /// <param name="Name">O nome da variável CSS.</param>
+    /// <param name="DefaultValue">O valor padrão, em caso da variável CSS não ser encontrada.</param>
+    /// <returns>A função "var" do CSS.</returns>
+    public static CSSVar Var(string Name, object? DefaultValue = null) => new(Name, DefaultValue);
+
+    #endregion
 }

@@ -8,7 +8,6 @@
     <RootNamespace>KempDec.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Title>Xmutarn</Title>
-    <Version>0.33.0</Version>
     <Authors>KempDec</Authors>
     <Company>KempDec Brasil Ltda.</Company>
     <Product>Xmutarn</Product>
@@ -18,10 +17,11 @@
     <PackageIcon>logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/kempdec/Xmutarn</RepositoryUrl>
-    <RepositoryType>GIT</RepositoryType>
+    <RepositoryType>git</RepositoryType>
     <PackageTags>css;javascript;blazor;dotnet;framework-css;front-end-web;</PackageTags>
     <PackageOutputPath>..\..\published</PackageOutputPath>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageId>Xmutarn</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
