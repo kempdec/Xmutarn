@@ -1,51 +1,49 @@
 {
-  // As configuraÁıes do subcomando de criaÁ„o autom·tica de um release.
+  // As configura√ß√µes do subcomando de cria√ß√£o autom√°tica de um release.
   "CreateCommand": {
     // O nome do projeto.
     "ProjectName": "Xmutarn",
 
     // Os tipos das mensagens de commit.
     "Types": [
-      "feat=Novidades desta vers„o",
-      "fix=Principais correÁıes desta vers„o",
-      "chore=Notas tÈcnicas",
-      "docs=DocumentaÁ„o"
+      "feat=Novidades desta vers√£o",
+      "fix=Principais corre√ß√µes desta vers√£o",
+      "chore=Notas t√©cnicas",
+      "docs=Documenta√ß√£o"
     ],
 
-    // As substituiÁıes do inÌcio das mensagens de commit.
+    // As substitui√ß√µes do in√≠cio das mensagens de commit.
     "Replaces": {
       // Adicionar.
-      "Adicionar": "Foi adicionado",
       "Adicionar o ": "Foi adicionado o ",
       "Adicionar a ": "Foi adicionada a ",
+      "Adicionar": "Foi adicionado",
 
       // Alterar.
-      "Alterar": "Foi alterado",
       "Alterar o ": "Foi alterado o ",
       "Alterar a ": "Foi alterada a ",
+      "Alterar": "Foi alterado",
 
       // Atualizar.
-      "Atualizar": "Foi atualizado",
       "Atualizar o ": "Foi atualizado o ",
       "Atualizar a ": "Foi atualizada a ",
+      "Atualizar": "Foi atualizado",
 
       // Remover.
-      "Remover": "Foi removido",
       "Remover o ": "Foi removido o ",
       "Remover a ": "Foi removida a ",
+      "Remover": "Foi removido",
 
       // Refatorar.
-      "Refatorar": "Foi refatorado",
       "Refatorar o ": "Foi refatorado o ",
       "Refatorar a ": "Foi refatorada a ",
+      "Refatorar": "Foi refatorado",
 
       // Corrigir.
-      "Corrigir": "Foi corrigido",
-      "Corrigir o ": "Foi corrigido o ",
-      "Corrigir a ": "Foi corrigido a "
+      "Corrigir": "Foi corrigido"
     },
 
-    // Os inÌcios das mensagens de commit que ser„o ignoradas.
+    // Os in√≠cios das mensagens de commit que ser√£o ignoradas.
     "Ignores": [
       "Refatorar.",
       "Merge"
