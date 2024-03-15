@@ -18,13 +18,13 @@
 
 ## Autores
 
-- [KempDec](https://kempdec.com) - Mantedora do projeto de código aberto.
-- [Vinícius Lima](https://github.com/viniciusxdl) - Desenvolvedor .NET C#.
+- [KempDec](https://kempdec.com) - Mantedora do projeto de cÃ³digo aberto.
+- [VinÃ­cius Lima](https://github.com/viniciusxdl) - Desenvolvedor .NET C#.
 
 ## Direitos autorais
 
-2016-2024 © KempDec Brasil Ltda.
+2016-2024 Â© KempDec Brasil Ltda.
 
-## Licença
+## LicenÃ§a
 
 [MIT](https://github.com/kempdec/Xmutarn/blob/main/LICENSE)
