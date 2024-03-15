@@ -59,7 +59,7 @@ jobs:
         run: dotnet restore
 
       - name: Gerar pacote
-        run: dotnet pack -p:PackageVersion=${{ needs.release.outputs.output }}
+        run: dotnet pack -p:PackageVersion=${{ needs.release.outputs.version }}
 
       - name: Carregar o pacote no NuGet
         run: |
