@@ -12,7 +12,7 @@
     <Company>KempDec Brasil Ltda.</Company>
     <Product>Xmutarn Core</Product>
     <Description>Xmutarn Core é uma biblioteca que pode ser usada para gerar CSS robustos a partir de código C#.</Description>
-    <Copyright>2016-2024 © Vinícius Lima</Copyright>
+    <Copyright>2016-2025 © Vinícius Lima</Copyright>
     <PackageProjectUrl>https://xmutarn.kempdec.com</PackageProjectUrl>
     <PackageIcon>logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>

@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
 	<img src="assets/logo.png" width="250" height="250" alt="Logo do Xmutarn" />
 </p>
 
@@ -23,7 +23,7 @@
 
 ## Direitos autorais
 
-2016-2024 © KempDec Brasil Ltda.
+2016-2025 © KempDec Brasil Ltda.
 
 ## Licença
 
