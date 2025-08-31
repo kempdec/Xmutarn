@@ -61,7 +61,7 @@ namespace Xmutarn.Web.Resources {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Xmutarn é um framework front-end web moderno e estiloso criado para a produtividade..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Xmutarn é um framework front-end CSS web moderno e estiloso criado para a produtividade..
         /// </summary>
         internal static string Description {
             get {
@@ -88,7 +88,7 @@ namespace Xmutarn.Web.Resources {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Framework front-end web moderno criado para a produtividade.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Framework front-end web CSS moderno criado para a produtividade.
         /// </summary>
         internal static string Summary {
             get {

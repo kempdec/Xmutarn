@@ -117,10 +117,70 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LogoAlt" xml:space="preserve">
-    <value>Logo do Xmutarn.</value>
+  <data name="Introduction" xml:space="preserve">
+    <value>Introdução</value>
   </data>
-  <data name="Start" xml:space="preserve">
-    <value>Começar</value>
+  <data name="PageTitle" xml:space="preserve">
+    <value>Introdução</value>
+  </data>
+  <data name="SidebarNpm" xml:space="preserve">
+    <value>Instalação via NPM</value>
+  </data>
+  <data name="SidebarYarn" xml:space="preserve">
+    <value>Instalação via Yarn</value>
+  </data>
+  <data name="SidebarNuget" xml:space="preserve">
+    <value>Instalação via NuGet (Blazor)</value>
+  </data>
+  <data name="SidebarRef" xml:space="preserve">
+    <value>Referenciando os arquivos</value>
+  </data>
+  <data name="SidebarReady" xml:space="preserve">
+    <value>Pronto para usar</value>
+  </data>
+  <data name="IntroDescription" xml:space="preserve">
+    <value>O Xmutarn combina o poder do C# com a flexibilidade do CSS. Este guia rápido mostra como instalar e referenciar os arquivos.</value>
+  </data>
+  <data name="NpmTitle" xml:space="preserve">
+    <value>Instalação via NPM</value>
+  </data>
+  <data name="NpmInstallText" xml:space="preserve">
+    <value>Instale o pacote:</value>
+  </data>
+  <data name="NpmAfterInstall" xml:space="preserve">
+    <value>Após a instalação, os arquivos ficam em node_modules/xmutarn/dist. Copie os arquivos necessários para a pasta pública do seu projeto, por exemplo lib/xmutarn, e referencie-os:</value>
+  </data>
+  <data name="NpmSeeOnNpm" xml:space="preserve">
+    <value>Ver no NPM</value>
+  </data>
+  <data name="YarnTitle" xml:space="preserve">
+    <value>Instalação via Yarn</value>
+  </data>
+  <data name="YarnInstallText" xml:space="preserve">
+    <value>Instale o pacote:</value>
+  </data>
+  <data name="YarnAfterInstall" xml:space="preserve">
+    <value>Assim como no NPM, os arquivos ficam em node_modules/xmutarn/dist. Copie-os para a pasta pública do seu projeto (ex.: lib/xmutarn) e referencie-os:</value>
+  </data>
+  <data name="NugetTitle" xml:space="preserve">
+    <value>Instalação via NuGet (Blazor)</value>
+  </data>
+  <data name="NugetInstallText" xml:space="preserve">
+    <value>Adicione o pacote ao projeto:</value>
+  </data>
+  <data name="NugetSeeOnNuget" xml:space="preserve">
+    <value>Ver no NuGet</value>
+  </data>
+  <data name="RefTitle" xml:space="preserve">
+    <value>Referenciando os arquivos</value>
+  </data>
+  <data name="RefDescription" xml:space="preserve">
+    <value>No arquivo host/entrada do seu aplicativo (o HTML onde você inclui recursos globais), adicione:</value>
+  </data>
+  <data name="ReadyTitle" xml:space="preserve">
+    <value>Pronto para usar</value>
+  </data>
+  <data name="ReadyDescription" xml:space="preserve">
+    <value>Com o CSS e o JS referenciados, você pode começar a usar os utilitários e componentes do Xmutarn imediatamente.</value>
   </data>
 </root>

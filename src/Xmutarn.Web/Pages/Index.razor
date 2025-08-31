@@ -5,7 +5,7 @@
     <section class="theme-bg-to-bottom fg-white" style="height: 100dvh;">
         <div class="container height-100">
             <header class="flex-row flex-content-center flex-items-center height-100">
-                <div class="flex-col-12 flex-col-6__lg flex-col-5__xl padding-xl">
+                <div class="flex-col-12 flex-col-6__lg padding-xl">
                     <figure class="padding-y-md typo-align-center">
                         <img class="max-width-100" src="img/logo.png" alt="@IndexResource.LogoAlt">
                     </figure>
@@ -19,13 +19,9 @@
                             @AppResource.Summary
                         </p>
 
-                        @if (AppSettings.GitHubUrl is not null)
-                        {
-                            <a class="btn btn_size-lg bg-black margin-y-md" href="@AppSettings.GitHubUrl" target="_blank" style="opacity: .8;">
-                                <span class="btn--icon fa-brands fa-github"></span>
-                                @IndexResource.ViewOnGitHub
-                            </a>
-                        }
+                        <a class="btn btn_size-xl bg-black margin-y-md" href="@AppRoute.Docs.Introduction()" style="opacity: .8;">
+                            @IndexResource.Start
+                        </a>
                     </div>
                 </div>
             </header>

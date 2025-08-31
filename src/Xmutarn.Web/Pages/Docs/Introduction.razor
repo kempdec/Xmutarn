@@ -1,0 +1,96 @@
+﻿@page "/docs/introduction"
+@using Xmutarn.Web.Resources.Pages.Docs
+
+<PageTitle>
+    @IntroductionResource.PageTitle • @AppResource.Name
+</PageTitle>
+
+<main class="container">
+    <div class="flex-row">
+        <!-- Menu lateral. -->
+        <nav class="flex-col-3__lg flex-order-1__lg">
+            <div class="list toc">
+                <a href="@AppRoute.Docs.Introduction(section: "#intro")" class="list--item">
+                    @IntroductionResource.Introduction
+                </a>
+
+                <a href="@AppRoute.Docs.Introduction(section: "#npm")" class="list--item">
+                    @IntroductionResource.SidebarNpm
+                </a>
+
+                <a href="@AppRoute.Docs.Introduction(section: "#yarn")" class="list--item">
+                    @IntroductionResource.SidebarYarn
+                </a>
+
+                <a href="@AppRoute.Docs.Introduction(section: "#nuget")" class="list--item">
+                    @IntroductionResource.SidebarNuget
+                </a>
+
+                <a href="@AppRoute.Docs.Introduction(section: "#ref")" class="list--item">
+                    @IntroductionResource.SidebarRef
+                </a>
+
+                <a href="@AppRoute.Docs.Introduction(section: "#ready")" class="list--item">
+                    @IntroductionResource.SidebarReady
+                </a>
+            </div>
+        </nav>
+
+        <!-- Conteúdo. -->
+        <div class="flex-col-9__lg flex-order-0__lg">
+            <h1 id="intro" class="typo-h1">@IntroductionResource.Introduction</h1>
+            <p class="typo-body-1">
+                @IntroductionResource.IntroDescription
+            </p>
+
+            <!-- NPM. -->
+            <h2 id="npm" class="typo-h2">@IntroductionResource.NpmTitle</h2>
+            <p class="typo-body-1">@IntroductionResource.NpmInstallText</p>
+            <Code>npm install xmutarn</Code>
+
+            <p class="typo-body-1">
+                @IntroductionResource.NpmAfterInstall
+            </p>
+            <Code>&lt;link rel="stylesheet" href="lib/xmutarn/xmutarn.min.css" /&gt;</Code>
+            <Code>&lt;script src="lib/xmutarn/xmutarn.min.js"&gt;&lt;/script&gt;</Code>
+            <p>
+                <a href="https://www.npmjs.com/package/xmutarn" target="_blank" rel="noopener">
+                    @IntroductionResource.NpmSeeOnNpm
+                </a>
+            </p>
+
+            <!-- Yarn. -->
+            <h2 id="yarn" class="typo-h2">@IntroductionResource.YarnTitle</h2>
+            <p class="typo-body-1">@IntroductionResource.YarnInstallText</p>
+            <Code>yarn add xmutarn</Code>
+
+            <p class="typo-body-1">
+                @IntroductionResource.YarnAfterInstall
+            </p>
+            <Code>&lt;link rel="stylesheet" href="lib/xmutarn/xmutarn.min.css" /&gt;</Code>
+            <Code>&lt;script src="lib/xmutarn/xmutarn.min.js"&gt;&lt;/script&gt;</Code>
+
+            <!-- NuGet/Blazor. -->
+            <h2 id="nuget" class="typo-h2">@IntroductionResource.NugetTitle</h2>
+            <p class="typo-body-1">@IntroductionResource.NugetInstallText</p>
+            <Code>dotnet add package Xmutarn</Code>
+            <p>
+                <a href="https://www.nuget.org/packages/Xmutarn" target="_blank" rel="noopener">
+                    @IntroductionResource.NugetSeeOnNuget
+                </a>
+            </p>
+
+            <h3 id="ref" class="typo-h3">@IntroductionResource.RefTitle</h3>
+            <p class="typo-body-1">
+                @IntroductionResource.RefDescription
+            </p>
+            <Code>&lt;link rel="stylesheet" href="_content/Xmutarn/css/xmutarn.min.css" /&gt;</Code>
+            <Code>&lt;script src="_content/Xmutarn/js/xmutarn.min.js"&gt;&lt;/script&gt;</Code>
+
+            <h2 id="ready" class="typo-h2">@IntroductionResource.ReadyTitle</h2>
+            <p class="typo-body-1">
+                @IntroductionResource.ReadyDescription
+            </p>
+        </div>
+    </div>
+</main>

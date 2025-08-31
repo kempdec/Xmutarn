@@ -70,11 +70,11 @@ namespace Xmutarn.Web.Resources.Pages {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Ver no GitHub.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Começar.
         /// </summary>
-        internal static string ViewOnGitHub {
+        internal static string Start {
             get {
-                return ResourceManager.GetString("ViewOnGitHub", resourceCulture);
+                return ResourceManager.GetString("Start", resourceCulture);
             }
         }
     }

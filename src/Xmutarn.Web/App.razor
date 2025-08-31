@@ -13,7 +13,7 @@
     <base href="/">
 
     <link rel="shortcut icon" href="img/logo.png">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="@AppSettings.CurrentValue.WithCache("app.css")">
     <link rel="stylesheet" href="Xmutarn.Web.styles.css">
     <link rel="stylesheet" href="_content/Xmutarn/css/xmutarn.min.css">
     <link rel="stylesheet" href="_content/KempDec.AppBase/libs/@@fortawesome/fontawesome-free/css/all.min.css">
@@ -21,7 +21,7 @@
     <HeadOutlet />
 </head>
 
-<body class="typo-use-roboto theme-fg-primary">
+<body class="typo-use-roboto theme-fg-primary theme-bg-background">
     <Routes />
 
     <script src="_framework/blazor.web.js"></script>

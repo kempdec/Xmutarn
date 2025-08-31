@@ -21,6 +21,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AppResource.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\Pages\Docs\IntroductionResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IntroductionResource.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\Pages\IndexResource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -37,6 +42,10 @@
     <EmbeddedResource Update="Resources\AppResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\Docs\IntroductionResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IntroductionResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Pages\IndexResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
