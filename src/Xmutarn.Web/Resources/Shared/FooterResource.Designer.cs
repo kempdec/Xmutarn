@@ -61,7 +61,7 @@ namespace Xmutarn.Web.Resources.Shared {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a 2016-{0} © KempDec Brasil Ltda.&lt;span class=&quot;display-none display-inline-block__lg&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;br class=&quot;display-none__lg&quot;&gt;Todos os direitos reservados..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a 2016-{0} © KempDec Brasil Ltda.&lt;span class=&quot;display-none display-inline-block__lg&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;br class=&quot;display-none__lg&quot;&gt;Licenciado sob a licença MIT..
         /// </summary>
         internal static string Copyright {
             get {

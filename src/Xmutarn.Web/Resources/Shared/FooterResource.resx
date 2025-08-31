@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Copyright" xml:space="preserve">
-    <value>2016-{0} © KempDec Brasil Ltda.&lt;span class="display-none display-inline-block__lg"&gt;&amp;nbsp;&lt;/span&gt;&lt;br class="display-none__lg"&gt;Todos os direitos reservados.</value>
+    <value>2016-{0} © KempDec Brasil Ltda.&lt;span class="display-none display-inline-block__lg"&gt;&amp;nbsp;&lt;/span&gt;&lt;br class="display-none__lg"&gt;Licenciado sob a licença MIT.</value>
   </data>
   <data name="MITLicense" xml:space="preserve">
     <value>Licença MIT</value>
