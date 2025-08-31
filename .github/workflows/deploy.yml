@@ -1,0 +1,41 @@
+﻿name: Implantar
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/**"
+
+  workflow_dispatch:
+  
+jobs:
+  deploy:
+    name: Implantar
+    runs-on: ${{ vars.RUNS_ON }}
+
+    defaults:
+      run:
+        shell: powershell
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Parar o site no IIS
+        run: appcmd stop sites Xmutarn
+
+      - name: Parar o pool de aplicativos do site no IIS
+        run: appcmd stop apppool /apppool.name:Xmutarn
+
+      - name: Apagar os arquivos do site
+        run: Remove-Item "${{ vars.ROOT_PATH }}\" -Recurse
+
+      - name: Publicar o site
+        run: dotnet publish .\src\Xmutarn.Web\ -c Release -o "${{ vars.ROOT_PATH }}\"
+
+      - name: Iniciar o pool de aplicativos do site no IIS
+        run: appcmd start apppool /apppool.name:Xmutarn
+
+      - name: Iniciar o site no IIS
+        run: appcmd start sites Xmutarn
