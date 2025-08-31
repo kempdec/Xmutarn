@@ -1,4 +1,6 @@
-﻿namespace Xmutarn.Web.Models.Settings;
+﻿using Xmutarn.Web.Extensions.AspNetCore;
+
+namespace Xmutarn.Web.Models.Settings;
 
 /// <summary>
 /// Associação recursiva das configurações do aplicativo.
@@ -13,5 +15,5 @@ public record AppSettings
     /// <summary>
     /// Obtém ou inicializa a URL da licença do aplicativo no GitHub.
     /// </summary>
-    public Uri? GitHubLicenseUrl => GitHubUrl is not null ? new Uri(GitHubUrl, "blob/main/LICENSE") : null;
+    public Uri? GitHubLicenseUrl => GitHubUrl?.With("blob/main/LICENSE");
 }
