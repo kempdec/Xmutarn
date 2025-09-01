@@ -28,6 +28,11 @@ public record AppSettings
     public Uri? GitHubLicenseUrl => GitHubUrl?.With("blob/main/LICENSE");
 
     /// <summary>
+    /// Obtém ou inicializa as culturas suportadas pelo aplicativo.
+    /// </summary>
+    public string[] Cultures { get; init; } = null!;
+
+    /// <summary>
     /// Adiciona a URL especificada com <see cref="CacheVersionQueryString"/>.
     /// </summary>
     /// <param name="url">A URL.</param>
