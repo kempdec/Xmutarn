@@ -6,10 +6,19 @@ namespace KempDec.Xmutarn.Core;
 /// <summary>
 /// Representa um CSS.
 /// </summary>
-/// <remarks>Inicializa uma nova instância de <see cref="CSS"/>.</remarks>
-/// <param name="isMinified">Um sinalizador indicando se o valor equivalente em CSS deve ser minificado.</param>
-public class CSS(bool isMinified = false) : List<CSSSelector>, ICSSConvertible
+public class CSS : List<CSSSelector>, ICSSConvertible
 {
+    /// <summary>
+    /// Inicializa uma nova instância de <see cref="CSS"/>.
+    /// </summary>
+    /// <param name="isMinified">Um sinalizador indicando se o valor equivalente em CSS deve ser minificado.</param>
+    public CSS(bool isMinified = false)
+    {
+        IsMinified = isMinified;
+
+        OnPrepare();
+    }
+
     /// <summary>
     /// Inicializa uma nova instância de <see cref="CSS"/>.
     /// </summary>
@@ -74,7 +83,7 @@ public class CSS(bool isMinified = false) : List<CSSSelector>, ICSSConvertible
     /// <summary>
     /// Obtém ou define um sinalizador indicando se o valor equivalente em CSS deve ser minificado.
     /// </summary>
-    public bool IsMinified { get; set; } = isMinified;
+    public bool IsMinified { get; set; }
 
     /// <summary>
     /// Adiciona o seletor CSS especificado para o final do CSS.
@@ -123,9 +132,31 @@ public class CSS(bool isMinified = false) : List<CSSSelector>, ICSSConvertible
     /// <param name="cssInText">O CSS em texto a ser importado.</param>
     public void Import(string cssInText) => _cssInText.Append(cssInText);
 
+    /// <summary>
+    /// Executa uma lógica personalizada antes de construir o valor CSS equivalente da instância.
+    /// </summary>
+    protected virtual void OnBeforeToCSS()
+    {
+    }
+
+    /// <summary>
+    /// Executa uma lógica personalizada após construir o valor CSS equivalente da instância.
+    /// </summary>
+    /// <param name="css">O valor CSS equivalente da instância.</param>
+    protected virtual string OnAfterToCSS(string css) => css;
+
+    /// <summary>
+    /// Executa uma lógica personalizada de preparação antes que o CSS seja inicializado.
+    /// </summary>
+    protected virtual void OnPrepare()
+    {
+    }
+
     /// <inheritdoc/>
     public virtual string ToCSS()
     {
+        OnBeforeToCSS();
+
         var cssBuilder = new StringBuilder();
 
         foreach (CSSSelector selector in this)
@@ -166,7 +197,7 @@ public class CSS(bool isMinified = false) : List<CSSSelector>, ICSSConvertible
 
         cssBuilder.Append(_cssInText);
 
-        return cssBuilder.ToString();
+        return OnAfterToCSS(cssBuilder.ToString());
     }
 
     /// <summary>

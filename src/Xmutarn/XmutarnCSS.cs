@@ -7,7 +7,7 @@ namespace KempDec.Xmutarn;
 /// <summary>
 /// Representa o CSS do Xmutarn.
 /// </summary>
-public class XmutarnCSS : CSS
+public class XmutarnCSS : CSSMain
 {
     /// <summary>
     /// Inicializa uma nova instância de <see cref="XmutarnCSS"/>.
@@ -15,9 +15,10 @@ public class XmutarnCSS : CSS
     /// <param name="isMinified">Um sinalizador indicando se o valor equivalente em CSS deve ser minificado.</param>
     public XmutarnCSS(bool isMinified = false) : base(isMinified)
     {
-        AddHeader();
-
         // Cores e temas.
+        Colors = [];
+        Themes = [];
+
         Import(Colors);
         Import(Themes);
 
@@ -28,6 +29,8 @@ public class XmutarnCSS : CSS
         // Componentes e utilitários.
         Import(new ComponentsCSS(IsMinified));
         Import(new UtilsCSS(IsMinified));
+
+        OnInitialized();
     }
 
     #region Cores e temas.
@@ -35,14 +38,17 @@ public class XmutarnCSS : CSS
     /// <summary>
     /// Obtém o CSS das cores.
     /// </summary>
-    public ColorsCSS Colors { get; } = [];
+    public ColorsCSS Colors { get; }
 
     /// <summary>
     /// Obtém o CSS dos temas.
     /// </summary>
-    public ThemeCSS Themes { get; } = [];
+    public ThemeCSS Themes { get; }
 
     #endregion
+
+    /// <inheritdoc/>
+    protected override void OnPrepare() => AddHeader();
 
     #region Antigo CSS.
 
