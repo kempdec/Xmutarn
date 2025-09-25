@@ -1,22 +1,24 @@
-name: Criar nova versão
+ï»¿name: Criar nova versÃ£o
 
 on:
   push:
     branches:
       - main
+    paths:
+      - "src/Xmutarn/**"
 
   workflow_dispatch:
     inputs:
       version:
-        description: "A versão do release a ser criado."
+        description: "A versÃ£o do release a ser criado."
         required: false
 
       branch:
-        description: "O branch do repositório do release a ser criado."
+        description: "O branch do repositÃ³rio do release a ser criado."
         required: false
 
       pre-release:
-        description: "Um sinalizador indicando se o release é um pre-release."
+        description: "Um sinalizador indicando se o release Ã© um pre-release."
         required: false
   
 jobs:
@@ -47,7 +49,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do repositório
+      - name: Checkout do repositÃ³rio
         uses: actions/checkout@v4
 
       - name: Configurar o .NET
@@ -55,7 +57,7 @@ jobs:
         with:
           dotnet-version: 8.x
 
-      - name: Restaurar dependências
+      - name: Restaurar dependÃªncias
         run: dotnet restore
 
       - name: Gerar pacote
