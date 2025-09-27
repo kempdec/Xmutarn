@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "src/Xmutarn/**"
+      - "src/Xmutarn.Core/**"
 
   workflow_dispatch:
     inputs:
