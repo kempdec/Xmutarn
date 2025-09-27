@@ -1,17 +1,9 @@
 ﻿using KempDec.Xmutarn;
-using KempDec.Xmutarn.Core;
+using KempDec.Xmutarn.Core.Tools;
+using System.Diagnostics;
 
-var xmutarn = new XmutarnCSS();
+var sw = Stopwatch.StartNew();
 
-WriteCSSTo(xmutarn, @"D:/Xmutarn/src/Xmutarn/wwwroot/css/xmutarn.css");
+CSSFileWriter.WriteToFiles<XmutarnCSS>(path: "src/Xmutarn/wwwroot/css", solutionAsRootPath: true);
 
-var xmutarnMin = new XmutarnCSS(isMinified: true);
-
-WriteCSSTo(xmutarnMin, @"D:/Xmutarn/src/Xmutarn/wwwroot/css/xmutarn.min.css");
-
-static void WriteCSSTo(CSS css, string filePath)
-{
-    using var writer = new StreamWriter(filePath);
-
-    writer.WriteLine(css);
-}
+Console.WriteLine($"Executado em {sw.ElapsedMilliseconds}ms!");
