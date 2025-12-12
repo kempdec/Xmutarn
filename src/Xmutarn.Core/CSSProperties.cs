@@ -29,9 +29,12 @@ public record CSSProperties(bool IsMinified = false) : ICSSConvertible
     /// <param name="value">O valor da variável CSS a ser adicionada.</param>
     public void AddVar(string name, object value) => Others.Add($"--{name}", value);
 
-    /// <inheritdoc/>
+    /// <summary>
+    /// Retorna uma coleção de propriedades CSS equivalente da instância.
+    /// </summary>
+    /// <returns>Uma coleção de propriedades CSS equivalente da instância.</returns>
     [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)]
-    public virtual string ToCSS()
+    public virtual CSSPropertyDictionary ToCSSPropertyDictionary()
     {
         PropertyInfo[] excludeProperties = typeof(ICSSConvertible).GetProperties();
         PropertyInfo[] properties = typeof(CSSProperties).GetProperties();
@@ -67,6 +70,14 @@ public record CSSProperties(bool IsMinified = false) : ICSSConvertible
                 cssProperties.Add(otherPropery.Key, otherPropery.Value);
             }
         }
+
+        return cssProperties;
+    }
+
+    /// <inheritdoc/>
+    public virtual string ToCSS()
+    {
+        CSSPropertyDictionary cssProperties = ToCSSPropertyDictionary();
 
         return cssProperties.ToCSS();
     }
@@ -185,11 +196,33 @@ public record CSSProperties(bool IsMinified = false) : ICSSConvertible
     public string? flexWrap { get; set; }
     public string? @float { get; set; }
     public string? font { get; set; }
-    public string? fontFamily { get; set; }
-    public string? fontSize { get; set; }
-    public string? fontStyle { get; set; }
+#pragma warning restore CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
+
+    /// <summary>
+    /// Obtém ou define a família de fontes de um elemento.
+    /// </summary>
+    public CSSFontFamily? fontFamily { get; set; }
+
+    /// <summary>
+    /// Obtém ou define o tamanho da fonte de um elemento.
+    /// </summary>
+    public CSSFontSize? fontSize { get; set; }
+
+    /// <summary>
+    /// Obtém ou define o estilo da fonte de um elemento.
+    /// </summary>
+    public CSSFontStyle? fontStyle { get; set; }
+
+#pragma warning disable CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
     public string? fontVariant { get; set; }
-    public string? fontWeight { get; set; }
+#pragma warning restore CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
+
+    /// <summary>
+    /// Obtém ou define a expessura da fonte de um elemento.
+    /// </summary>
+    public CSSFontWeight? fontWeight { get; set; }
+
+#pragma warning disable CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
     public string? height { get; set; }
     public string? justifyContent { get; set; }
     public string? keyframes { get; set; }
@@ -244,9 +277,23 @@ public record CSSProperties(bool IsMinified = false) : ICSSConvertible
     public string? textDecorationStyle { get; set; }
     public string? textIndent { get; set; }
     public string? textJustify { get; set; }
-    public string? textOverflow { get; set; }
+#pragma warning restore CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
+
+    /// <summary>
+    /// Obtém ou define como o texto que excede o contêiner é tratado.
+    /// </summary>
+    public CSSTextOverflow? textOverflow { get; set; }
+
+#pragma warning disable CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
     public string? textShadow { get; set; }
-    public string? textTransform { get; set; }
+#pragma warning restore CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
+
+    /// <summary>
+    /// Obtém ou define a transformação aplicada ao texto de um elemento.
+    /// </summary>
+    public CSSTextTransform? textTransform { get; set; }
+
+#pragma warning disable CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
     public string? top { get; set; }
     public string? transform { get; set; }
     public string? transformOrigin { get; set; }

@@ -81,6 +81,11 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     private readonly Dictionary<string, Action<CSSSelector>> _cssSelectorEditingActions = [];
 
     /// <summary>
+    /// Um dicionário que mapeia as propriedades CSS para o seletor CSS estendido correspondente.
+    /// </summary>
+    private readonly Dictionary<CSSProperties, CSSSelector> _cssSelectorExtends = [];
+
+    /// <summary>
     /// Obtém ou define um sinalizador indicando se o valor equivalente em CSS deve ser minificado.
     /// </summary>
     public bool IsMinified { get; set; }
@@ -90,13 +95,16 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// </summary>
     /// <param name="selector">O seletor CSS a ser adicionado.</param>
     /// <param name="options">As opções do seletor CSS.</param>
-    public void Add(string selector, Action<CSSSelector> options)
+    /// <returns>O seletor CSS adicionado.</returns>
+    public CSSSelector Add(string selector, Action<CSSSelector> options)
     {
         var cssSelector = new CSSSelector(selector);
 
         options.Invoke(cssSelector);
 
         Add(cssSelector);
+
+        return cssSelector;
     }
 
     /// <summary>
@@ -104,13 +112,42 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// </summary>
     /// <param name="selector">O seletor CSS a ser adicionado.</param>
     /// <param name="properties">As propriedades CSS do seletor CSS.</param>
-    public void Add(string selector, CSSPropertyDictionary properties)
+    /// <returns>O seletor CSS adicionado.</returns>
+    public CSSSelector Add(string selector, CSSPropertyDictionary properties)
     {
         var cssSelector = new CSSSelector(selector);
 
         cssSelector.Others.AddRange(properties);
 
         Add(cssSelector);
+
+        return cssSelector;
+    }
+
+    /// <summary>
+    /// Adiciona ou estende o seletor CSS especificado para o final do CSS.
+    /// </summary>
+    /// <param name="selector">O seletor CSS a ser adicionado ou estendido.</param>
+    /// <param name="properties">As propriedades CSS do seletor CSS.</param>
+    /// <returns>O seletor CSS adicionado ou estendido.</returns>
+    public CSSSelector AddOrExtend(string selector, CSSProperties properties)
+    {
+        if (_cssSelectorExtends.TryGetValue(properties, out CSSSelector? cssSelector))
+        {
+            cssSelector.Extend(selector);
+
+            return cssSelector;
+        }
+
+        cssSelector = new CSSSelector(selector);
+
+        cssSelector.Others.AddRange(properties);
+
+        Add(cssSelector);
+
+        _cssSelectorExtends.Add(properties, cssSelector);
+
+        return cssSelector;
     }
 
     /// <summary>

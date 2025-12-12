@@ -1,4 +1,5 @@
 ﻿using KempDec.Xmutarn.Core;
+using KempDec.Xmutarn.Core.Extensions;
 using KempDec.Xmutarn.Core.Functions;
 using KempDec.Xmutarn.Core.PropertyValues;
 using KempDec.Xmutarn.Themes.Palettes;

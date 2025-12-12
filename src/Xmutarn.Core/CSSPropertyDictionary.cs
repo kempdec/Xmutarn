@@ -21,6 +21,13 @@ public sealed class CSSPropertyDictionary(bool isMinified = false) : Dictionary<
         return properties1;
     }
 
+    /// <summary>
+    /// Inicializa uma nova instância de <see cref="CSSPropertyDictionary"/>.
+    /// </summary>
+    /// <param name="cssProperties">As propriedades CSS pré-construídas.</param>
+    public static implicit operator CSSPropertyDictionary(CSSProperties cssProperties) =>
+        cssProperties.ToCSSPropertyDictionary();
+
     /// <inheritdoc/>
     public bool IsMinified { get; } = isMinified;
 

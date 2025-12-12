@@ -4,6 +4,8 @@ using System.Diagnostics;
 
 var sw = Stopwatch.StartNew();
 
+var xmutarnCSS = new XmutarnCSS(isMinified: true);
+
 CSSFileWriter.WriteToFiles<XmutarnCSS>(path: "src/Xmutarn/wwwroot/css", solutionAsRootPath: true);
 
 Console.WriteLine($"Executado em {sw.ElapsedMilliseconds}ms!");
