@@ -2092,9 +2092,9 @@ input[type=password]::-ms-reveal {
   font-style: italic !important;
 }
 
-.typo-overflow-ellipsis, .typo-overflow-clip {
-  white-space: nowrap;
+.typo-overflow-clip, .typo-overflow-ellipsis {
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .typo-overflow-clip {
@@ -2103,6 +2103,10 @@ input[type=password]::-ms-reveal {
 
 .typo-overflow-ellipsis {
   text-overflow: ellipsis;
+}
+
+.typo-to-none {
+  text-transform: none !important;
 }
 
 .typo-to-upper {
@@ -2191,7 +2195,7 @@ input[type=password]::-ms-reveal {
 }
 
 .typo-subtitle-2 {
-  font-size: 0.9375rem;
+  font-size: 0.938rem;
   font-weight: 500;
   letter-spacing: 0.00714em;
   line-height: 1.625rem;
@@ -2212,7 +2216,7 @@ input[type=password]::-ms-reveal {
 }
 
 .typo-caption-1 {
-  font-size: 0.8125rem;
+  font-size: 0.813rem;
   font-weight: 400;
   letter-spacing: 0.03333em;
   line-height: 1.375rem;

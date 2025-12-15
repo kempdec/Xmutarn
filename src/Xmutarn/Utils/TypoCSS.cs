@@ -14,7 +14,7 @@ public class TypoCSS : CSS
     /// <summary>
     /// Inicializa uma nova instância de <see cref="TypoCSS"/>.
     /// </summary>
-    public TypoCSS()
+    public TypoCSS() : base()
     {
         SetFontFamily();
         SetFontStyle();
@@ -22,6 +22,7 @@ public class TypoCSS : CSS
         SetTextTransform();
         SetFontWeight();
         SetFontSize();
+        SetTextAlign();
     }
 
     /// <summary>
@@ -53,7 +54,7 @@ public class TypoCSS : CSS
             Add($".typo-{size.Key}", size.Value);
         }
 
-        Edit(".typo-body-2", e => e.Extend(".avatar--title, .avatar--summary")); 
+        Edit(".typo-body-2", e => e.Extend(".avatar--title, .avatar--summary"));
     }
 
     /// <summary>
@@ -69,6 +70,19 @@ public class TypoCSS : CSS
         foreach ((string style, CSSFontWeight weight) in Typo.Weights)
         {
             Add($".typo-weight-{style}", e => e.fontWeight = weight.Important());
+        }
+    }
+
+    /// <summary>
+    /// Define o alinhamento do texto.
+    /// </summary>
+    private void SetTextAlign()
+    {
+        foreach (TextAlignType align in Typo.Aligns)
+        {
+            CSSTextAlign textAlign = align;
+
+            Add($".typo-align-{align.ToKebabCase()}", e => e.textAlign = textAlign.Important());
         }
     }
 
@@ -122,22 +136,6 @@ public class TypoCSS : CSS
     ///// Importa o CSS.
     ///// </summary>
     //protected override void ImportOldCSS() => Import("""
-    //    .typo-align-left {
-    //      text-align: left !important;
-    //    }
-
-    //    .typo-align-right {
-    //      text-align: right !important;
-    //    }
-
-    //    .typo-align-center {
-    //      text-align: center !important;
-    //    }
-
-    //    .typo-align-justify {
-    //      text-align: justify !important;
-    //    }
-
     //    @media (min-width: 576px) {
     //      .typo-h1__sm {
     //        font-size: 6rem;

@@ -203,11 +203,11 @@ public class CSS : List<CSSSelector>, ICSSConvertible
                 cssBuilder.Append(Environment.NewLine + Environment.NewLine);
             }
 
-            if (_cssSelectorEditingActions.TryGetValue(selector.Value, out Action<CSSSelector>? editOptions))
+            if (_cssSelectorEditingActions.TryGetValue(selector.Selector, out Action<CSSSelector>? editOptions))
             {
                 editOptions?.Invoke(selector);
 
-                _cssSelectorEditingActions.Remove(selector.Value);
+                _cssSelectorEditingActions.Remove(selector.Selector);
             }
 
             selector.IsMinified = IsMinified;

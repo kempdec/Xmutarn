@@ -34,7 +34,7 @@ public record CSSSelector(string Value, bool IsMinified = false) : CSSProperties
     /// <inheritdoc/>
     public override string ToCSS()
     {
-        var cssBuilder = new StringBuilder(Value);
+        var cssBuilder = new StringBuilder(Selector);
 
         if (_extendValues.Count > 0)
         {

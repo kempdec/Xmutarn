@@ -268,7 +268,14 @@ public record CSSProperties(bool IsMinified = false) : ICSSConvertible
     public string? right { get; set; }
     public string? tabSize { get; set; }
     public string? tableLayout { get; set; }
-    public string? textAlign { get; set; }
+#pragma warning restore CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
+
+    /// <summary>
+    /// Obtém ou define o alinhamento do texto de um elemento.
+    /// </summary>
+    public CSSTextAlign? textAlign { get; set; }
+
+#pragma warning disable CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
     public string? textAlignLast { get; set; }
     public string? textCombineUpright { get; set; }
     public string? textDecoration { get; set; }

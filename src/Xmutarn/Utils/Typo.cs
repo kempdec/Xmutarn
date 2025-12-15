@@ -11,6 +11,17 @@ namespace KempDec.Xmutarn.Utils;
 public static class Typo
 {
     /// <summary>
+    /// Obtém os tipos de alinhamento de texto.
+    /// </summary>
+    public static List<TextAlignType> Aligns { get; } =
+    [
+        TextAlignType.Left,
+        TextAlignType.Right,
+        TextAlignType.Center,
+        TextAlignType.Justify
+    ];
+
+    /// <summary>
     /// Obtém ou define a família de fontes padrão.
     /// </summary>
     public static CSSFontFamily DefaultFamily { get; set; } = new("Roboto", FontFamilyGeneric.SansSerif);
