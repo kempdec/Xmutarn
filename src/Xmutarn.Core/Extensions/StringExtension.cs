@@ -20,7 +20,7 @@ public static class StringExtension
 
         foreach (char letter in str)
         {
-            if (builder.Length > 0 && char.IsUpper(letter))
+            if (builder.Length > 0 && (char.IsUpper(letter) || char.IsDigit(letter)))
             {
                 builder.Append('-');
             }

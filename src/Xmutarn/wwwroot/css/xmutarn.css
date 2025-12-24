@@ -2092,9 +2092,9 @@ input[type=password]::-ms-reveal {
   font-style: italic !important;
 }
 
-.typo-overflow-ellipsis, .typo-overflow-clip {
-  white-space: nowrap;
+.typo-overflow-clip, .typo-overflow-ellipsis {
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .typo-overflow-clip {
@@ -2103,6 +2103,10 @@ input[type=password]::-ms-reveal {
 
 .typo-overflow-ellipsis {
   text-overflow: ellipsis;
+}
+
+.typo-to-none {
+  text-transform: none !important;
 }
 
 .typo-to-upper {
@@ -2191,7 +2195,7 @@ input[type=password]::-ms-reveal {
 }
 
 .typo-subtitle-2 {
-  font-size: 0.9375rem;
+  font-size: 0.938rem;
   font-weight: 500;
   letter-spacing: 0.00714em;
   line-height: 1.625rem;
@@ -2212,7 +2216,7 @@ input[type=password]::-ms-reveal {
 }
 
 .typo-caption-1 {
-  font-size: 0.8125rem;
+  font-size: 0.813rem;
   font-weight: 400;
   letter-spacing: 0.03333em;
   line-height: 1.375rem;
@@ -2242,392 +2246,411 @@ input[type=password]::-ms-reveal {
 }
 
 @media (min-width: 576px) {
-  .typo-h1__sm {
-    font-size: 6rem;
-    font-weight: 300;
-    letter-spacing: -0.01562em;
-    line-height: 1;
-  }
-
-  .typo-h2__sm {
-    font-size: 3.75rem;
-    font-weight: 300;
-    letter-spacing: -0.00833em;
-    line-height: 1;
-  }
-
-  .typo-h3__sm {
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 3.125rem;
-  }
-
-  .typo-h4__sm {
-    font-size: 2.125rem;
-    font-weight: 400;
-    letter-spacing: 0.00735em;
-    line-height: 2.5rem;
-  }
-
-  .typo-h5__sm {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 2rem;
-  }
-
-  .typo-h6__sm {
-    font-size: 1.25rem;
-    font-weight: 500;
-    letter-spacing: 0.0125em;
-    line-height: 1.6;
-  }
-
-  .typo-subtitle-1__sm {
-    font-size: 1.125rem;
-    font-weight: 400;
-    letter-spacing: 0.00937em;
-    line-height: 1.875rem;
-  }
-
-  .typo-subtitle-2__sm {
-    font-size: 0.9375rem;
-    font-weight: 500;
-    letter-spacing: 0.00714em;
-    line-height: 1.625rem;
-  }
-
-  .typo-body-1__sm {
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.03125em;
-    line-height: 1.5;
-  }
-
-  .typo-body-2__sm {
-    font-size: 0.875rem;
-    font-weight: 400;
-    letter-spacing: 0.01786em;
-    line-height: 1.5rem;
-  }
-
-  .typo-caption-1__sm {
-    font-size: 0.8125rem;
-    font-weight: 400;
-    letter-spacing: 0.03333em;
-    line-height: 1.375rem;
-  }
-
-  .typo-caption-2__sm {
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.03333em;
-    line-height: 1.25rem;
-  }
-
-  .typo-align-left__sm {
-    text-align: left !important;
-  }
-
-  .typo-align-right__sm {
-    text-align: right !important;
-  }
-
-  .typo-align-center__sm {
-    text-align: center !important;
-  }
+    .typo-h1__sm {
+      font-size: 6rem;
+      font-weight: 300;
+      letter-spacing: -0.01562em;
+      line-height: 1;
+    }
+    
+    .typo-h2__sm {
+      font-size: 3.75rem;
+      font-weight: 300;
+      letter-spacing: -0.00833em;
+      line-height: 1;
+    }
+    
+    .typo-h3__sm {
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 3.125rem;
+    }
+    
+    .typo-h4__sm {
+      font-size: 2.125rem;
+      font-weight: 400;
+      letter-spacing: 0.00735em;
+      line-height: 2.5rem;
+    }
+    
+    .typo-h5__sm {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 2rem;
+    }
+    
+    .typo-h6__sm {
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 0.0125em;
+      line-height: 1.6;
+    }
+    
+    .typo-subtitle-1__sm {
+      font-size: 1.125rem;
+      font-weight: 400;
+      letter-spacing: 0.00937em;
+      line-height: 1.875rem;
+    }
+    
+    .typo-subtitle-2__sm {
+      font-size: 0.938rem;
+      font-weight: 500;
+      letter-spacing: 0.00714em;
+      line-height: 1.625rem;
+    }
+    
+    .typo-body-1__sm {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.03125em;
+      line-height: 1.5;
+    }
+    
+    .typo-body-2__sm {
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.01786em;
+      line-height: 1.5rem;
+    }
+    
+    .typo-caption-1__sm {
+      font-size: 0.813rem;
+      font-weight: 400;
+      letter-spacing: 0.03333em;
+      line-height: 1.375rem;
+    }
+    
+    .typo-caption-2__sm {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.03333em;
+      line-height: 1.25rem;
+    }
+    
+    .typo-align-left__sm {
+      text-align: left !important;
+    }
+    
+    .typo-align-right__sm {
+      text-align: right !important;
+    }
+    
+    .typo-align-center__sm {
+      text-align: center !important;
+    }
+    
+    .typo-align-justify__sm {
+      text-align: justify !important;
+    }
 }
+
 @media (min-width: 768px) {
-  .typo-h1__md {
-    font-size: 6rem;
-    font-weight: 300;
-    letter-spacing: -0.01562em;
-    line-height: 1;
-  }
-
-  .typo-h2__md {
-    font-size: 3.75rem;
-    font-weight: 300;
-    letter-spacing: -0.00833em;
-    line-height: 1;
-  }
-
-  .typo-h3__md {
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 3.125rem;
-  }
-
-  .typo-h4__md {
-    font-size: 2.125rem;
-    font-weight: 400;
-    letter-spacing: 0.00735em;
-    line-height: 2.5rem;
-  }
-
-  .typo-h5__md {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 2rem;
-  }
-
-  .typo-h6__md {
-    font-size: 1.25rem;
-    font-weight: 500;
-    letter-spacing: 0.0125em;
-    line-height: 1.6;
-  }
-
-  .typo-subtitle-1__md {
-    font-size: 1.125rem;
-    font-weight: 400;
-    letter-spacing: 0.00937em;
-    line-height: 1.875rem;
-  }
-
-  .typo-subtitle-2__md {
-    font-size: 0.9375rem;
-    font-weight: 500;
-    letter-spacing: 0.00714em;
-    line-height: 1.625rem;
-  }
-
-  .typo-body-1__md {
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.03125em;
-    line-height: 1.5;
-  }
-
-  .typo-body-2__md {
-    font-size: 0.875rem;
-    font-weight: 400;
-    letter-spacing: 0.01786em;
-    line-height: 1.5rem;
-  }
-
-  .typo-caption-1__md {
-    font-size: 0.8125rem;
-    font-weight: 400;
-    letter-spacing: 0.03333em;
-    line-height: 1.375rem;
-  }
-
-  .typo-caption-2__md {
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.03333em;
-    line-height: 1.25rem;
-  }
-
-  .typo-align-left__md {
-    text-align: left !important;
-  }
-
-  .typo-align-right__md {
-    text-align: right !important;
-  }
-
-  .typo-align-center__md {
-    text-align: center !important;
-  }
+    .typo-h1__md {
+      font-size: 6rem;
+      font-weight: 300;
+      letter-spacing: -0.01562em;
+      line-height: 1;
+    }
+    
+    .typo-h2__md {
+      font-size: 3.75rem;
+      font-weight: 300;
+      letter-spacing: -0.00833em;
+      line-height: 1;
+    }
+    
+    .typo-h3__md {
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 3.125rem;
+    }
+    
+    .typo-h4__md {
+      font-size: 2.125rem;
+      font-weight: 400;
+      letter-spacing: 0.00735em;
+      line-height: 2.5rem;
+    }
+    
+    .typo-h5__md {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 2rem;
+    }
+    
+    .typo-h6__md {
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 0.0125em;
+      line-height: 1.6;
+    }
+    
+    .typo-subtitle-1__md {
+      font-size: 1.125rem;
+      font-weight: 400;
+      letter-spacing: 0.00937em;
+      line-height: 1.875rem;
+    }
+    
+    .typo-subtitle-2__md {
+      font-size: 0.938rem;
+      font-weight: 500;
+      letter-spacing: 0.00714em;
+      line-height: 1.625rem;
+    }
+    
+    .typo-body-1__md {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.03125em;
+      line-height: 1.5;
+    }
+    
+    .typo-body-2__md {
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.01786em;
+      line-height: 1.5rem;
+    }
+    
+    .typo-caption-1__md {
+      font-size: 0.813rem;
+      font-weight: 400;
+      letter-spacing: 0.03333em;
+      line-height: 1.375rem;
+    }
+    
+    .typo-caption-2__md {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.03333em;
+      line-height: 1.25rem;
+    }
+    
+    .typo-align-left__md {
+      text-align: left !important;
+    }
+    
+    .typo-align-right__md {
+      text-align: right !important;
+    }
+    
+    .typo-align-center__md {
+      text-align: center !important;
+    }
+    
+    .typo-align-justify__md {
+      text-align: justify !important;
+    }
 }
+
 @media (min-width: 992px) {
-  .typo-h1__lg {
-    font-size: 6rem;
-    font-weight: 300;
-    letter-spacing: -0.01562em;
-    line-height: 1;
-  }
-
-  .typo-h2__lg {
-    font-size: 3.75rem;
-    font-weight: 300;
-    letter-spacing: -0.00833em;
-    line-height: 1;
-  }
-
-  .typo-h3__lg {
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 3.125rem;
-  }
-
-  .typo-h4__lg {
-    font-size: 2.125rem;
-    font-weight: 400;
-    letter-spacing: 0.00735em;
-    line-height: 2.5rem;
-  }
-
-  .typo-h5__lg {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 2rem;
-  }
-
-  .typo-h6__lg {
-    font-size: 1.25rem;
-    font-weight: 500;
-    letter-spacing: 0.0125em;
-    line-height: 1.6;
-  }
-
-  .typo-subtitle-1__lg {
-    font-size: 1.125rem;
-    font-weight: 400;
-    letter-spacing: 0.00937em;
-    line-height: 1.875rem;
-  }
-
-  .typo-subtitle-2__lg {
-    font-size: 0.9375rem;
-    font-weight: 500;
-    letter-spacing: 0.00714em;
-    line-height: 1.625rem;
-  }
-
-  .typo-body-1__lg {
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.03125em;
-    line-height: 1.5;
-  }
-
-  .typo-body-2__lg {
-    font-size: 0.875rem;
-    font-weight: 400;
-    letter-spacing: 0.01786em;
-    line-height: 1.5rem;
-  }
-
-  .typo-caption-1__lg {
-    font-size: 0.8125rem;
-    font-weight: 400;
-    letter-spacing: 0.03333em;
-    line-height: 1.375rem;
-  }
-
-  .typo-caption-2__lg {
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.03333em;
-    line-height: 1.25rem;
-  }
-
-  .typo-align-left__lg {
-    text-align: left !important;
-  }
-
-  .typo-align-right__lg {
-    text-align: right !important;
-  }
-
-  .typo-align-center__lg {
-    text-align: center !important;
-  }
+    .typo-h1__lg {
+      font-size: 6rem;
+      font-weight: 300;
+      letter-spacing: -0.01562em;
+      line-height: 1;
+    }
+    
+    .typo-h2__lg {
+      font-size: 3.75rem;
+      font-weight: 300;
+      letter-spacing: -0.00833em;
+      line-height: 1;
+    }
+    
+    .typo-h3__lg {
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 3.125rem;
+    }
+    
+    .typo-h4__lg {
+      font-size: 2.125rem;
+      font-weight: 400;
+      letter-spacing: 0.00735em;
+      line-height: 2.5rem;
+    }
+    
+    .typo-h5__lg {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 2rem;
+    }
+    
+    .typo-h6__lg {
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 0.0125em;
+      line-height: 1.6;
+    }
+    
+    .typo-subtitle-1__lg {
+      font-size: 1.125rem;
+      font-weight: 400;
+      letter-spacing: 0.00937em;
+      line-height: 1.875rem;
+    }
+    
+    .typo-subtitle-2__lg {
+      font-size: 0.938rem;
+      font-weight: 500;
+      letter-spacing: 0.00714em;
+      line-height: 1.625rem;
+    }
+    
+    .typo-body-1__lg {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.03125em;
+      line-height: 1.5;
+    }
+    
+    .typo-body-2__lg {
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.01786em;
+      line-height: 1.5rem;
+    }
+    
+    .typo-caption-1__lg {
+      font-size: 0.813rem;
+      font-weight: 400;
+      letter-spacing: 0.03333em;
+      line-height: 1.375rem;
+    }
+    
+    .typo-caption-2__lg {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.03333em;
+      line-height: 1.25rem;
+    }
+    
+    .typo-align-left__lg {
+      text-align: left !important;
+    }
+    
+    .typo-align-right__lg {
+      text-align: right !important;
+    }
+    
+    .typo-align-center__lg {
+      text-align: center !important;
+    }
+    
+    .typo-align-justify__lg {
+      text-align: justify !important;
+    }
 }
+
 @media (min-width: 1200px) {
-  .typo-h1__xl {
-    font-size: 6rem;
-    font-weight: 300;
-    letter-spacing: -0.01562em;
-    line-height: 1;
-  }
-
-  .typo-h2__xl {
-    font-size: 3.75rem;
-    font-weight: 300;
-    letter-spacing: -0.00833em;
-    line-height: 1;
-  }
-
-  .typo-h3__xl {
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 3.125rem;
-  }
-
-  .typo-h4__xl {
-    font-size: 2.125rem;
-    font-weight: 400;
-    letter-spacing: 0.00735em;
-    line-height: 2.5rem;
-  }
-
-  .typo-h5__xl {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 2rem;
-  }
-
-  .typo-h6__xl {
-    font-size: 1.25rem;
-    font-weight: 500;
-    letter-spacing: 0.0125em;
-    line-height: 1.6;
-  }
-
-  .typo-subtitle-1__xl {
-    font-size: 1.125rem;
-    font-weight: 400;
-    letter-spacing: 0.00937em;
-    line-height: 1.875rem;
-  }
-
-  .typo-subtitle-2__xl {
-    font-size: 0.9375rem;
-    font-weight: 500;
-    letter-spacing: 0.00714em;
-    line-height: 1.625rem;
-  }
-
-  .typo-body-1__xl {
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.03125em;
-    line-height: 1.5;
-  }
-
-  .typo-body-2__xl {
-    font-size: 0.875rem;
-    font-weight: 400;
-    letter-spacing: 0.01786em;
-    line-height: 1.5rem;
-  }
-
-  .typo-caption-1__xl {
-    font-size: 0.8125rem;
-    font-weight: 400;
-    letter-spacing: 0.03333em;
-    line-height: 1.375rem;
-  }
-
-  .typo-caption-2__xl {
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.03333em;
-    line-height: 1.25rem;
-  }
-
-  .typo-align-left__xl {
-    text-align: left !important;
-  }
-
-  .typo-align-right__xl {
-    text-align: right !important;
-  }
-
-  .typo-align-center__xl {
-    text-align: center !important;
-  }
+    .typo-h1__xl {
+      font-size: 6rem;
+      font-weight: 300;
+      letter-spacing: -0.01562em;
+      line-height: 1;
+    }
+    
+    .typo-h2__xl {
+      font-size: 3.75rem;
+      font-weight: 300;
+      letter-spacing: -0.00833em;
+      line-height: 1;
+    }
+    
+    .typo-h3__xl {
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 3.125rem;
+    }
+    
+    .typo-h4__xl {
+      font-size: 2.125rem;
+      font-weight: 400;
+      letter-spacing: 0.00735em;
+      line-height: 2.5rem;
+    }
+    
+    .typo-h5__xl {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 2rem;
+    }
+    
+    .typo-h6__xl {
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 0.0125em;
+      line-height: 1.6;
+    }
+    
+    .typo-subtitle-1__xl {
+      font-size: 1.125rem;
+      font-weight: 400;
+      letter-spacing: 0.00937em;
+      line-height: 1.875rem;
+    }
+    
+    .typo-subtitle-2__xl {
+      font-size: 0.938rem;
+      font-weight: 500;
+      letter-spacing: 0.00714em;
+      line-height: 1.625rem;
+    }
+    
+    .typo-body-1__xl {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.03125em;
+      line-height: 1.5;
+    }
+    
+    .typo-body-2__xl {
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.01786em;
+      line-height: 1.5rem;
+    }
+    
+    .typo-caption-1__xl {
+      font-size: 0.813rem;
+      font-weight: 400;
+      letter-spacing: 0.03333em;
+      line-height: 1.375rem;
+    }
+    
+    .typo-caption-2__xl {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.03333em;
+      line-height: 1.25rem;
+    }
+    
+    .typo-align-left__xl {
+      text-align: left !important;
+    }
+    
+    .typo-align-right__xl {
+      text-align: right !important;
+    }
+    
+    .typo-align-center__xl {
+      text-align: center !important;
+    }
+    
+    .typo-align-justify__xl {
+      text-align: justify !important;
+    }
 }
 
 .border-left-lg, .border-bottom-lg, .border-right-lg, .border-top-lg, .border-lg, .border-left-md, .border-bottom-md, .border-right-md, .border-top-md, .border-md, .border-left-sm, .border-bottom-sm, .border-right-sm, .border-top-sm, .border-sm, .border-left-0, .border-bottom-0, .border-right-0, .border-top-0, .border-0 {

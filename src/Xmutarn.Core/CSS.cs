@@ -66,6 +66,11 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     }
 
     /// <summary>
+    /// Um dicionário que mapeia os pontos de interrupção para uma regra CSS <c>@media</c>.
+    /// </summary>
+    private readonly Dictionary<CSSBreakpoint, CSSMedia> _cssBreakpoints = [];
+
+    /// <summary>
     /// O CSS em texto.
     /// </summary>
     private readonly StringBuilder _cssInText = new();
@@ -81,6 +86,11 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     private readonly Dictionary<string, Action<CSSSelector>> _cssSelectorEditingActions = [];
 
     /// <summary>
+    /// Um dicionário que mapeia as propriedades CSS para o seletor CSS estendido correspondente.
+    /// </summary>
+    private readonly Dictionary<CSSProperties, CSSSelector> _cssSelectorExtends = [];
+
+    /// <summary>
     /// Obtém ou define um sinalizador indicando se o valor equivalente em CSS deve ser minificado.
     /// </summary>
     public bool IsMinified { get; set; }
@@ -90,13 +100,24 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// </summary>
     /// <param name="selector">O seletor CSS a ser adicionado.</param>
     /// <param name="options">As opções do seletor CSS.</param>
-    public void Add(string selector, Action<CSSSelector> options)
+    /// <param name="breakpoints">Os pontos de interrupção do seletor CSS.</param>
+    /// <returns>O seletor CSS adicionado.</returns>
+    public CSSSelector Add(string selector, Action<CSSSelector> options, List<CSSBreakpoint>? breakpoints = null)
     {
         var cssSelector = new CSSSelector(selector);
 
         options.Invoke(cssSelector);
 
-        Add(cssSelector);
+        if (breakpoints is null)
+        {
+            Add(cssSelector);
+
+            return cssSelector;
+        }
+
+        AddBreakpoint(cssSelector, breakpoints, options.Invoke);
+
+        return cssSelector;
     }
 
     /// <summary>
@@ -104,13 +125,87 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// </summary>
     /// <param name="selector">O seletor CSS a ser adicionado.</param>
     /// <param name="properties">As propriedades CSS do seletor CSS.</param>
-    public void Add(string selector, CSSPropertyDictionary properties)
+    /// <param name="breakpoints">Os pontos de interrupção do seletor CSS.</param>
+    /// <returns>O seletor CSS adicionado.</returns>
+    public CSSSelector Add(string selector, CSSPropertyDictionary properties, List<CSSBreakpoint>? breakpoints = null)
     {
         var cssSelector = new CSSSelector(selector);
 
         cssSelector.Others.AddRange(properties);
 
+        if (breakpoints is null)
+        {
+            Add(cssSelector);
+
+            return cssSelector;
+        }
+
+        AddBreakpoint(cssSelector, breakpoints, e => e.Others.AddRange(properties));
+
+        return cssSelector;
+    }
+
+    /// <summary>
+    /// Adiciona o seletor CSS especificado para o final do CSS, considerando os pontos de interrupção.
+    /// </summary>
+    /// <param name="cssSelector">O seletor CSS a ser adicionado.</param>
+    /// <param name="breakpoints">Os pontos de interrupção do seletor CSS.</param>
+    /// <param name="init">O método de inicialização do seletor CSS.</param>
+    private void AddBreakpoint(CSSSelector cssSelector, List<CSSBreakpoint> breakpoints, Action<CSSSelector> init)
+    {
+        foreach (CSSBreakpoint breakpoint in breakpoints)
+        {
+            if (breakpoint.MinWidth.NumericValue is 0)
+            {
+                Add(cssSelector);
+
+                continue;
+            }
+
+            var breakpointSelector = new CSSSelector($"{cssSelector.Selector}__{breakpoint.Name}");
+
+            init.Invoke(breakpointSelector);
+
+            if (_cssBreakpoints.TryGetValue(breakpoint, out CSSMedia? cssMedia))
+            {
+                cssMedia.Add(breakpointSelector);
+
+                continue;
+            }
+
+            cssMedia = new CSSMedia(breakpoint, IsMinified)
+            {
+                breakpointSelector
+            };
+
+            _cssBreakpoints.Add(breakpoint, cssMedia);
+        }
+    }
+
+    /// <summary>
+    /// Adiciona ou estende o seletor CSS especificado para o final do CSS.
+    /// </summary>
+    /// <param name="selector">O seletor CSS a ser adicionado ou estendido.</param>
+    /// <param name="properties">As propriedades CSS do seletor CSS.</param>
+    /// <returns>O seletor CSS adicionado ou estendido.</returns>
+    public CSSSelector AddOrExtend(string selector, CSSProperties properties)
+    {
+        if (_cssSelectorExtends.TryGetValue(properties, out CSSSelector? cssSelector))
+        {
+            cssSelector.Extend(selector);
+
+            return cssSelector;
+        }
+
+        cssSelector = new CSSSelector(selector);
+
+        cssSelector.Others.AddRange(properties);
+
         Add(cssSelector);
+
+        _cssSelectorExtends.Add(properties, cssSelector);
+
+        return cssSelector;
     }
 
     /// <summary>
@@ -157,6 +252,11 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     {
         OnBeforeToCSS();
 
+        foreach (CSSMedia media in _cssBreakpoints.Values)
+        {
+            Import(media);
+        }
+
         var cssBuilder = new StringBuilder();
 
         foreach (CSSSelector selector in this)
@@ -166,11 +266,11 @@ public class CSS : List<CSSSelector>, ICSSConvertible
                 cssBuilder.Append(Environment.NewLine + Environment.NewLine);
             }
 
-            if (_cssSelectorEditingActions.TryGetValue(selector.Value, out Action<CSSSelector>? editOptions))
+            if (_cssSelectorEditingActions.TryGetValue(selector.Selector, out Action<CSSSelector>? editOptions))
             {
                 editOptions?.Invoke(selector);
 
-                _cssSelectorEditingActions.Remove(selector.Value);
+                _cssSelectorEditingActions.Remove(selector.Selector);
             }
 
             selector.IsMinified = IsMinified;

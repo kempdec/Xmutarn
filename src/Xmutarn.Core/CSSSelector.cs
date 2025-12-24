@@ -21,6 +21,11 @@ public record CSSSelector(string Value, bool IsMinified = false) : CSSProperties
     public string Value { get; } = Value;
 
     /// <summary>
+    /// Obtém o valor do seletor CSS.
+    /// </summary>
+    public string Selector => Value;
+
+    /// <summary>
     /// Extende o seletor CSS atual com o valor do seletor CSS especificado.
     /// </summary>
     /// <param name="value">O valor do seletor CSS que extenderá o seletor CSS atual.</param>
@@ -29,7 +34,7 @@ public record CSSSelector(string Value, bool IsMinified = false) : CSSProperties
     /// <inheritdoc/>
     public override string ToCSS()
     {
-        var cssBuilder = new StringBuilder(Value);
+        var cssBuilder = new StringBuilder(Selector);
 
         if (_extendValues.Count > 0)
         {
@@ -58,7 +63,7 @@ public record CSSSelector(string Value, bool IsMinified = false) : CSSProperties
 
         string propertiesCSS = base.ToCSS();
 
-        if (IsMinified)
+        if (IsMinified && propertiesCSS.Length > 0)
         {
             propertiesCSS = propertiesCSS[..^1];
         }

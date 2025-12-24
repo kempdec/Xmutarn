@@ -35,20 +35,16 @@ public record class CSSPropertyValue(bool IsMinified = false) : ICSSPropertyValu
     public virtual required string Value { get; init; }
 
     /// <summary>
-    /// Define <see cref="IsImportant"/> como <see langword="true"/> e retorna esta instância.
+    /// Obtém ou define o valor final do valor de uma propriedade CSS.
     /// </summary>
-    /// <returns>Esta instância com <see cref="IsImportant"/> definido como <see langword="true"/>.</returns>
-    public CSSPropertyValue Important()
-    {
-        IsImportant = true;
-
-        return this;
-    }
+    protected string? FinalValue { get; set; }
 
     /// <inheritdoc/>
     public virtual string ToCSS()
     {
-        var css = Value;
+        var css = FinalValue ?? Value;
+
+        FinalValue = null;
 
         if (IsImportant)
         {

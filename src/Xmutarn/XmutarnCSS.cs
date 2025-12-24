@@ -27,8 +27,10 @@ public class XmutarnCSS : CSSMain
         Import(new GlobalCSS(IsMinified));
 
         // Componentes e utilitários.
+        Utils = new(IsMinified);
+
         Import(new ComponentsCSS(IsMinified));
-        Import(new UtilsCSS(IsMinified));
+        Import(Utils);
 
         OnInitialized();
     }
@@ -44,6 +46,15 @@ public class XmutarnCSS : CSSMain
     /// Obtém o CSS dos temas.
     /// </summary>
     public ThemeCSS Themes { get; }
+
+    #endregion
+
+    #region Utilitários.
+
+    /// <summary>
+    /// Obtém o CSS dos utilitários.
+    /// </summary>
+    public UtilsCSS Utils { get; }
 
     #endregion
 

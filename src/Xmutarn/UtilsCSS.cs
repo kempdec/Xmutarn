@@ -14,7 +14,9 @@ public class UtilsCSS : CSS
     /// <inheritdoc/>
     public UtilsCSS(bool isMinified) : base(isMinified)
     {
-        Import(new TyposCSS(IsMinified));
+        Typo = [];
+
+        Import(Typo);
         Import(new BorderCSS(IsMinified));
         Import(new ClearfixCSS(IsMinified));
         Import(new CursorCSS(IsMinified));
@@ -27,4 +29,9 @@ public class UtilsCSS : CSS
         Import(new SizingCSS(IsMinified));
         Import(new SpacingCSS(IsMinified));
     }
+
+    /// <summary>
+    /// Obtém o CSS dos utilitários de tipografia.
+    /// </summary>
+    public TypoCSS Typo { get; }
 }
