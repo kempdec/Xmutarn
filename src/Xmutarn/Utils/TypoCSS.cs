@@ -3,6 +3,7 @@ using KempDec.Xmutarn.Core.Extensions;
 using KempDec.Xmutarn.Core.Property;
 using KempDec.Xmutarn.Core.PropertyTypes;
 using KempDec.Xmutarn.Core.PropertyValues;
+using KempDec.Xmutarn.Helpers;
 
 namespace KempDec.Xmutarn.Utils;
 
@@ -51,7 +52,7 @@ public class TypoCSS : CSS
     {
         foreach (KeyValuePair<string, CSSProperties> size in Typo.Sizes)
         {
-            Add($".typo-{size.Key}", size.Value);
+            Add($".typo-{size.Key}", size.Value, Breakpoint.Medias);
         }
 
         Edit(".typo-body-2", e => e.Extend(".avatar--title, .avatar--summary"));
@@ -82,7 +83,7 @@ public class TypoCSS : CSS
         {
             CSSTextAlign textAlign = align;
 
-            Add($".typo-align-{align.ToKebabCase()}", e => e.textAlign = textAlign.Important());
+            Add($".typo-align-{align.ToKebabCase()}", e => e.textAlign = textAlign.Important(), Breakpoint.Medias);
         }
     }
 

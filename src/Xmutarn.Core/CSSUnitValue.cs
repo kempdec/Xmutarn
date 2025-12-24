@@ -2,7 +2,7 @@
 using System.Globalization;
 using KempDec.Xmutarn.Core.PropertyTypes;
 
-namespace KempDec.Xmutarn.Core.PropertyValues;
+namespace KempDec.Xmutarn.Core;
 
 /// <summary>
 /// Representa um valor CSS que pode possuir uma unidade (por exemplo, <c>16px</c>, <c>1.5rem</c>)
