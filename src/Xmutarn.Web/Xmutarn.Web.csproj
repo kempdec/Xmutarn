@@ -7,8 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="KempDec.AppBase" Version="1.1.0" />
-    <PackageReference Include="KempDec.StarterDotNet" Version="0.11.1" />
+    <PackageReference Include="KempDec.AppBase" Version="1.1.1" />
+    <PackageReference Include="KempDec.StarterDotNet" Version="0.13.0" />
+    <PackageReference Include="KempDec.StarterDotNet.Blazor" Version="0.13.0" />
   </ItemGroup>
 
   <ItemGroup>

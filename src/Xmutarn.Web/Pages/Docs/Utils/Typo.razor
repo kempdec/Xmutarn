@@ -1,0 +1,121 @@
+﻿@page "/docs/utils/typo"
+@using Xmutarn.Web.Resources.Pages.Docs
+
+<PageTitle>
+    Tipografia • @AppResource.Name
+</PageTitle>
+
+<main class="container">
+    <div class="flex-row">
+        <!-- Menu lateral -->
+        <nav class="flex-col-3__lg flex-order-1__lg">
+            <div class="list toc">
+                <a href="@AppRoute.Docs.Utils.Typo(section: "#overview")" class="list--item">
+                    Visão geral
+                </a>
+                <a href="@AppRoute.Docs.Utils.Typo(section: "#font")" class="list--item">
+                    Fonte
+                </a>
+                <a href="@AppRoute.Docs.Utils.Typo(section: "#headings")" class="list--item">
+                    Títulos
+                </a>
+                <a href="@AppRoute.Docs.Utils.Typo(section: "#body")" class="list--item">
+                    Texto
+                </a>
+                <a href="@AppRoute.Docs.Utils.Typo(section: "#alignment")" class="list--item">
+                    Alinhamento
+                </a>
+                <a href="@AppRoute.Docs.Utils.Typo(section: "#responsive")" class="list--item">
+                    Responsividade
+                </a>
+            </div>
+        </nav>
+
+        <!-- Conteúdo -->
+        <div class="flex-col-9__lg flex-order-0__lg">
+            <h1 id="overview" class="typo-h1">
+                Tipografia
+            </h1>
+            <p class="typo-body-1">
+                O Xmutarn fornece um sistema de tipografia completo com classes utilitárias
+                para hierarquia textual, peso, alinhamento e responsividade.
+            </p>
+
+            <h2 id="font" class="typo-h2">Fonte</h2>
+            <p class="typo-body-1">
+                Escolha entre a fonte padrão do sistema ou Roboto:
+            </p>
+
+            <Code>&lt;div class="typo-use-default"&gt;Fonte padrão&lt;/div&gt;</Code>
+            <Code>&lt;div class="typo-use-roboto"&gt;Fonte Roboto&lt;/div&gt;</Code>
+
+            <div class="typo-body-1 typo-use-default">Fonte padrão do sistema</div>
+            <div class="typo-body-1 typo-use-roboto">Fonte Roboto</div>
+
+            <h2 id="headings" class="typo-h2">Títulos</h2>
+
+            <Code>
+&lt;h1 class="typo-h1"&gt;Heading 1&lt;/h1&gt;
+&lt;h2 class="typo-h2"&gt;Heading 2&lt;/h2&gt;
+&lt;h3 class="typo-h3"&gt;Heading 3&lt;/h3&gt;
+&lt;h4 class="typo-h4"&gt;Heading 4&lt;/h4&gt;
+&lt;h5 class="typo-h5"&gt;Heading 5&lt;/h5&gt;
+&lt;h6 class="typo-h6"&gt;Heading 6&lt;/h6&gt;
+            </Code>
+
+            <div class="typo-h1">Heading 1</div>
+            <div class="typo-h2">Heading 2</div>
+            <div class="typo-h3">Heading 3</div>
+            <div class="typo-h4">Heading 4</div>
+            <div class="typo-h5">Heading 5</div>
+            <div class="typo-h6">Heading 6</div>
+
+            <h2 id="body" class="typo-h2">Texto</h2>
+
+            <Code>
+&lt;p class="typo-body-1"&gt;Body 1&lt;/p&gt;
+&lt;p class="typo-body-2"&gt;Body 2&lt;/p&gt;
+&lt;span class="typo-caption-1"&gt;Caption 1&lt;/span&gt;
+&lt;span class="typo-caption-2"&gt;Caption 2&lt;/span&gt;
+            </Code>
+
+            <p class="typo-body-1">Texto Body 1</p>
+            <p class="typo-body-2">Texto Body 2</p>
+            <span class="typo-caption-1">Caption 1</span><br />
+            <span class="typo-caption-2">Caption 2</span>
+
+            <h2 id="alignment" class="typo-h2">Alinhamento</h2>
+
+            <Code>
+&lt;p class="typo-align-left"&gt;Esquerda&lt;/p&gt;
+&lt;p class="typo-align-center"&gt;Centro&lt;/p&gt;
+&lt;p class="typo-align-right"&gt;Direita&lt;/p&gt;
+&lt;p class="typo-align-justify"&gt;Justificado&lt;/p&gt;
+            </Code>
+
+            <p class="typo-body-1 typo-align-left">Alinhado à esquerda</p>
+            <p class="typo-body-1 typo-align-center">Centralizado</p>
+            <p class="typo-body-1 typo-align-right">Alinhado à direita</p>
+            <p class="typo-body-1 typo-align-justify">
+                Texto justificado demonstrando o comportamento do alinhamento.
+            </p>
+
+            <h2 id="responsive" class="typo-h2">Responsividade</h2>
+
+            <p class="typo-body-1">
+                Use sufixos <code>__sm</code>, <code>__md</code>, <code>__lg</code> e <code>__xl</code>
+                para adaptar a tipografia aos breakpoints.
+            </p>
+
+            <Code>
+&lt;h1 class="typo-h3 typo-h2__md typo-h1__lg"&gt;
+Título responsivo
+&lt;/h1&gt;
+            </Code>
+
+            <div class="typo-h3 typo-h2__md typo-h1__lg">
+                Título responsivo
+            </div>
+        </div>
+    </div>
+</main>

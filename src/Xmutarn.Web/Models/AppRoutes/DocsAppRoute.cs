@@ -1,4 +1,5 @@
-﻿using Xmutarn.Web.Models.AppRoutes.Docs;
+﻿using KempDec.StarterDotNet.AppRoutes;
+using Xmutarn.Web.Models.AppRoutes.Docs;
 
 namespace Xmutarn.Web.Models.AppRoutes;
 
@@ -7,6 +8,12 @@ namespace Xmutarn.Web.Models.AppRoutes;
 /// </summary>
 public class DocsAppRoute
 {
+    /// <summary>
+    /// Obtém instâncias <see cref="IAppRoute"/> pré-construídas que podem ser usadas para definir uma rota do
+    /// aplicativo.
+    /// </summary>
+    public UtilsAppRoute Utils { get; } = new();
+
     /// <summary>
     /// Obtém a rota do aplicativo para <see cref="Pages.Docs.Introduction"/>.
     /// </summary>
