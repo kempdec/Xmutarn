@@ -11,11 +11,23 @@ public static class CSSExtension
     /// </summary>
     /// <param name="previousSelect">O seletor CSS anterior.</param>
     /// <param name="selector">O novo seletor CSS a ser adicionado.</param>
+    /// <param name="options">As opções do seletor CSS.</param>
+    /// <returns>Um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
+    /// propriedades CSS fornecidas.</returns>
+    public static CSSSelector? And(this CSSSelector previousSelect, string selector, Action<CSSSelector> options) =>
+        previousSelect.Reference?.And(previousSelect, selector, options);
+
+    /// <summary>
+    /// Adiciona um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
+    /// propriedades CSS fornecidas.
+    /// </summary>
+    /// <param name="previousSelect">O seletor CSS anterior.</param>
+    /// <param name="selector">O novo seletor CSS a ser adicionado.</param>
     /// <param name="properties">As propriedades CSS do novo seletor CSS.</param>
     /// <returns>Um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
     /// propriedades CSS fornecidas.</returns>
-    public static CSSSelector And(this CSSSelector previousSelect, string selector, CSSProperties properties) =>
-        previousSelect.And(selector, properties);
+    public static CSSSelector? And(this CSSSelector previousSelect, string selector, CSSProperties properties) =>
+        previousSelect.Reference?.And(previousSelect, selector, properties);
 
     /// <summary>
     /// Cria uma nova instância de <see cref="CSSSelector"/> com o seletor especificado.
