@@ -8,7 +8,8 @@ namespace KempDec.Xmutarn.Core;
 /// <remarks>Inicializa uma nova instância de <see cref="CSSSelector"/>.</remarks>
 /// <param name="Value">O valor do seletor CSS.</param>
 /// <param name="IsMinified">Um sinalizador indicando se o valor equivalente em CSS deve ser minificado.</param>
-public record CSSSelector(string Value, bool IsMinified = false) : CSSProperties(IsMinified), ICSSConvertible
+/// <param name="Reference">A referência para o CSS que inicializou o seletor CSS.</param>
+public record CSSSelector(string Value, bool IsMinified = false, CSS? Reference = null) : CSSProperties(IsMinified), ICSSConvertible
 {
     /// <summary>
     /// Os valores extendidos do seletor CSS.
@@ -24,6 +25,11 @@ public record CSSSelector(string Value, bool IsMinified = false) : CSSProperties
     /// Obtém o valor do seletor CSS.
     /// </summary>
     public string Selector => Value;
+
+    /// <summary>
+    /// Obtém a referência para o CSS que inicializou o seletor CSS.
+    /// </summary>
+    public CSS? Reference { get; } = Reference;
 
     /// <summary>
     /// Extende o seletor CSS atual com o valor do seletor CSS especificado.

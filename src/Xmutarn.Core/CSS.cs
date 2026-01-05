@@ -104,7 +104,7 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// <returns>O seletor CSS adicionado.</returns>
     public CSSSelector Add(string selector, Action<CSSSelector> options, List<CSSBreakpoint>? breakpoints = null)
     {
-        var cssSelector = new CSSSelector(selector);
+        var cssSelector = new CSSSelector(selector, Reference: this);
 
         options.Invoke(cssSelector);
 
@@ -129,7 +129,7 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// <returns>O seletor CSS adicionado.</returns>
     public CSSSelector Add(string selector, CSSPropertyDictionary properties, List<CSSBreakpoint>? breakpoints = null)
     {
-        var cssSelector = new CSSSelector(selector);
+        var cssSelector = new CSSSelector(selector, Reference: this);
 
         cssSelector.Others.AddRange(properties);
 
@@ -162,7 +162,7 @@ public class CSS : List<CSSSelector>, ICSSConvertible
                 continue;
             }
 
-            var breakpointSelector = new CSSSelector($"{cssSelector.Selector}__{breakpoint.Name}");
+            var breakpointSelector = new CSSSelector($"{cssSelector.Selector}__{breakpoint.Name}", Reference: this);
 
             init.Invoke(breakpointSelector);
 
@@ -197,13 +197,53 @@ public class CSS : List<CSSSelector>, ICSSConvertible
             return cssSelector;
         }
 
-        cssSelector = new CSSSelector(selector);
+        cssSelector = new CSSSelector(selector, Reference: this);
 
         cssSelector.Others.AddRange(properties);
 
         Add(cssSelector);
 
         _cssSelectorExtends.Add(properties, cssSelector);
+
+        return cssSelector;
+    }
+
+    /// <summary>
+    /// Adiciona um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
+    /// propriedades CSS fornecidas.
+    /// </summary>
+    /// <param name="previousSelect">O seletor CSS anterior.</param>
+    /// <param name="selector">O novo seletor CSS a ser adicionado.</param>
+    /// <param name="options">As opções do seletor CSS.</param>
+    /// <returns>Um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
+    /// propriedades CSS fornecidas.</returns>
+    public CSSSelector And(CSSSelector previousSelect, string selector, Action<CSSSelector> options)
+    {
+        var cssSelector = new CSSSelector($"{previousSelect.Selector}{selector}", Reference: this);
+
+        options.Invoke(cssSelector);
+
+        Add(cssSelector);
+
+        return cssSelector;
+    }
+
+    /// <summary>
+    /// Adiciona um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
+    /// propriedades CSS fornecidas.
+    /// </summary>
+    /// <param name="previousSelect">O seletor CSS anterior.</param>
+    /// <param name="selector">O novo seletor CSS a ser adicionado.</param>
+    /// <param name="properties">As propriedades CSS do novo seletor CSS.</param>
+    /// <returns>Um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
+    /// propriedades CSS fornecidas.</returns>
+    public CSSSelector And(CSSSelector previousSelect, string selector, CSSProperties properties)
+    {
+        var cssSelector = new CSSSelector($"{previousSelect.Selector}{selector}", Reference: this);
+
+        cssSelector.Others.AddRange(properties);
+
+        Add(cssSelector);
 
         return cssSelector;
     }

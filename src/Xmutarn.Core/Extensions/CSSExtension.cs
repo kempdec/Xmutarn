@@ -6,6 +6,18 @@
 public static class CSSExtension
 {
     /// <summary>
+    /// Adiciona um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
+    /// propriedades CSS fornecidas.
+    /// </summary>
+    /// <param name="previousSelect">O seletor CSS anterior.</param>
+    /// <param name="selector">O novo seletor CSS a ser adicionado.</param>
+    /// <param name="properties">As propriedades CSS do novo seletor CSS.</param>
+    /// <returns>Um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
+    /// propriedades CSS fornecidas.</returns>
+    public static CSSSelector And(this CSSSelector previousSelect, string selector, CSSProperties properties) =>
+        previousSelect.And(selector, properties);
+
+    /// <summary>
     /// Cria uma nova instância de <see cref="CSSSelector"/> com o seletor especificado.
     /// </summary>
     /// <param name="selector">O seletor CSS a ser criado.</param>
