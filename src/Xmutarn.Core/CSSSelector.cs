@@ -8,8 +8,8 @@ namespace KempDec.Xmutarn.Core;
 /// <remarks>Inicializa uma nova instância de <see cref="CSSSelector"/>.</remarks>
 /// <param name="Value">O valor do seletor CSS.</param>
 /// <param name="IsMinified">Um sinalizador indicando se o valor equivalente em CSS deve ser minificado.</param>
-/// <param name="Reference">A referência para o CSS que inicializou o seletor CSS.</param>
-public record CSSSelector(string Value, bool IsMinified = false, CSS? Reference = null) : CSSProperties(IsMinified), ICSSConvertible
+public record CSSSelector(string Value, bool IsMinified = false)
+    : CSSProperties(IsMinified), ICSSConvertible
 {
     /// <summary>
     /// Os valores extendidos do seletor CSS.
@@ -17,9 +17,14 @@ public record CSSSelector(string Value, bool IsMinified = false, CSS? Reference 
     private readonly List<string> _extendValues = [];
 
     /// <summary>
-    /// Obtém o valor do seletor CSS.
+    /// Obtém ou inicializa os pontos de interrupção CSS baseado em largura mínima do seletor CSS.
     /// </summary>
-    public string Value { get; } = Value;
+    public List<CSSBreakpoint>? Breakpoints { get; init; }
+
+    /// <summary>
+    /// Obtém ou inicializa a referência para o CSS que inicializou o seletor CSS.
+    /// </summary>
+    public CSS? Reference { get; init; }
 
     /// <summary>
     /// Obtém o valor do seletor CSS.
@@ -27,9 +32,9 @@ public record CSSSelector(string Value, bool IsMinified = false, CSS? Reference 
     public string Selector => Value;
 
     /// <summary>
-    /// Obtém a referência para o CSS que inicializou o seletor CSS.
+    /// Obtém o valor do seletor CSS.
     /// </summary>
-    public CSS? Reference { get; } = Reference;
+    public string Value { get; } = Value;
 
     /// <summary>
     /// Extende o seletor CSS atual com o valor do seletor CSS especificado.

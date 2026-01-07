@@ -104,7 +104,11 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// <returns>O seletor CSS adicionado.</returns>
     public CSSSelector Add(string selector, Action<CSSSelector> options, List<CSSBreakpoint>? breakpoints = null)
     {
-        var cssSelector = new CSSSelector(selector, Reference: this);
+        var cssSelector = new CSSSelector(selector)
+        {
+            Reference = this,
+            Breakpoints = breakpoints
+        };
 
         options.Invoke(cssSelector);
 
@@ -127,42 +131,30 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// <param name="properties">As propriedades CSS do seletor CSS.</param>
     /// <param name="breakpoints">Os pontos de interrupção do seletor CSS.</param>
     /// <returns>O seletor CSS adicionado.</returns>
-    public CSSSelector Add(string selector, CSSPropertyDictionary properties, List<CSSBreakpoint>? breakpoints = null)
-    {
-        var cssSelector = new CSSSelector(selector, Reference: this);
-
-        cssSelector.Others.AddRange(properties);
-
-        if (breakpoints is null)
-        {
-            Add(cssSelector);
-
-            return cssSelector;
-        }
-
-        AddBreakpoint(cssSelector, breakpoints, e => e.Others.AddRange(properties));
-
-        return cssSelector;
-    }
+    public CSSSelector Add(string selector, CSSPropertyDictionary properties, List<CSSBreakpoint>? breakpoints = null) =>
+        Add(selector, e => e.Others.AddRange(properties), breakpoints);
 
     /// <summary>
     /// Adiciona o seletor CSS especificado para o final do CSS, considerando os pontos de interrupção.
     /// </summary>
-    /// <param name="cssSelector">O seletor CSS a ser adicionado.</param>
+    /// <param name="selector">O seletor CSS a ser adicionado.</param>
     /// <param name="breakpoints">Os pontos de interrupção do seletor CSS.</param>
     /// <param name="init">O método de inicialização do seletor CSS.</param>
-    private void AddBreakpoint(CSSSelector cssSelector, List<CSSBreakpoint> breakpoints, Action<CSSSelector> init)
+    public void AddBreakpoint(CSSSelector selector, List<CSSBreakpoint> breakpoints, Action<CSSSelector> init)
     {
         foreach (CSSBreakpoint breakpoint in breakpoints)
         {
             if (breakpoint.MinWidth.NumericValue is 0)
             {
-                Add(cssSelector);
+                Add(selector);
 
                 continue;
             }
 
-            var breakpointSelector = new CSSSelector($"{cssSelector.Selector}__{breakpoint.Name}", Reference: this);
+            var breakpointSelector = new CSSSelector($"{selector.Selector}__{breakpoint.Name}")
+            {
+                Reference = this
+            };
 
             init.Invoke(breakpointSelector);
 
@@ -187,8 +179,9 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// </summary>
     /// <param name="selector">O seletor CSS a ser adicionado ou estendido.</param>
     /// <param name="properties">As propriedades CSS do seletor CSS.</param>
+    /// <param name="breakpoints">Os pontos de interrupção do seletor CSS.</param>
     /// <returns>O seletor CSS adicionado ou estendido.</returns>
-    public CSSSelector AddOrExtend(string selector, CSSProperties properties)
+    public CSSSelector AddOrExtend(string selector, CSSProperties properties, List<CSSBreakpoint>? breakpoints = null)
     {
         if (_cssSelectorExtends.TryGetValue(properties, out CSSSelector? cssSelector))
         {
@@ -197,11 +190,7 @@ public class CSS : List<CSSSelector>, ICSSConvertible
             return cssSelector;
         }
 
-        cssSelector = new CSSSelector(selector, Reference: this);
-
-        cssSelector.Others.AddRange(properties);
-
-        Add(cssSelector);
+        cssSelector = Add(selector, properties, breakpoints);
 
         _cssSelectorExtends.Add(properties, cssSelector);
 
@@ -215,18 +204,11 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// <param name="previousSelect">O seletor CSS anterior.</param>
     /// <param name="selector">O novo seletor CSS a ser adicionado.</param>
     /// <param name="options">As opções do seletor CSS.</param>
+    /// <param name="breakpoints">Os pontos de interrupção do seletor CSS.</param>
     /// <returns>Um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
     /// propriedades CSS fornecidas.</returns>
-    public CSSSelector And(CSSSelector previousSelect, string selector, Action<CSSSelector> options)
-    {
-        var cssSelector = new CSSSelector($"{previousSelect.Selector}{selector}", Reference: this);
-
-        options.Invoke(cssSelector);
-
-        Add(cssSelector);
-
-        return cssSelector;
-    }
+    public CSSSelector And(CSSSelector previousSelect, string selector, Action<CSSSelector> options,
+        List<CSSBreakpoint>? breakpoints = null) => Add($"{previousSelect.Selector}{selector}", options, breakpoints);
 
     /// <summary>
     /// Adiciona um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
@@ -235,18 +217,11 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// <param name="previousSelect">O seletor CSS anterior.</param>
     /// <param name="selector">O novo seletor CSS a ser adicionado.</param>
     /// <param name="properties">As propriedades CSS do novo seletor CSS.</param>
+    /// <param name="breakpoints">Os pontos de interrupção do seletor CSS.</param>
     /// <returns>Um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
     /// propriedades CSS fornecidas.</returns>
-    public CSSSelector And(CSSSelector previousSelect, string selector, CSSProperties properties)
-    {
-        var cssSelector = new CSSSelector($"{previousSelect.Selector}{selector}", Reference: this);
-
-        cssSelector.Others.AddRange(properties);
-
-        Add(cssSelector);
-
-        return cssSelector;
-    }
+    public CSSSelector And(CSSSelector previousSelect, string selector, CSSProperties properties,
+        List<CSSBreakpoint>? breakpoints = null) => And(previousSelect, selector, e => e.Others.AddRange(properties), breakpoints);
 
     /// <summary>
     /// Edita o seletor CSS especificado.
