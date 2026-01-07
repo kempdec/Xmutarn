@@ -208,7 +208,8 @@ public class CSS : List<CSSSelector>, ICSSConvertible
     /// <returns>Um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
     /// propriedades CSS fornecidas.</returns>
     public CSSSelector And(CSSSelector previousSelect, string selector, Action<CSSSelector> options,
-        List<CSSBreakpoint>? breakpoints = null) => Add($"{previousSelect.Selector}{selector}", options, breakpoints);
+        List<CSSBreakpoint>? breakpoints = null) => Add($"{previousSelect.Selector}{selector}", options,
+            breakpoints ?? previousSelect.Breakpoints);
 
     /// <summary>
     /// Adiciona um seletor CSS composto ao CSS, combinando o seletor anterior com o novo seletor e aplicando as
