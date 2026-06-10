@@ -67,7 +67,7 @@ jobs:
         run: dotnet publish .\src\Xmutarn.Web\ -c Release -o "${{ vars.ROOT_PATH }}\"
 
       - name: Adicionar permissão para a pasta do site
-        run: icacls "${{ vars.ROOT_PATH }}" /grant Todos:F /inheritance:e
+        run: icacls "${{ vars.ROOT_PATH }}" /grant *S-1-1-0:F /inheritance:e
 
       # Iniciar o pool de aplicativos e o site, mesmo que alguma etapa anterior falhe.
       - name: Iniciar o pool de aplicativos do site no IIS
