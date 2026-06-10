@@ -1,4 +1,4 @@
-﻿name: Implantar
+name: Implantar
 
 on:
   push:
@@ -6,9 +6,10 @@ on:
       - main
     paths:
       - "src/Xmutarn.Web/**"
+      - ".github/workflows/deploy.yml"
 
   workflow_dispatch:
-  
+
 jobs:
   deploy:
     name: Implantar
@@ -22,20 +23,57 @@ jobs:
       - name: Checkout do repositório
         uses: actions/checkout@v4
 
+      # Provisionar o que for necessário, caso ainda não exista.
+      - name: Criar o pool de aplicativos do site no IIS
+        run: |
+          if (-not (appcmd list apppool "Xmutarn")) {
+            appcmd add apppool /name:"Xmutarn"
+            appcmd set apppool /apppool.name:"Xmutarn" /managedRuntimeVersion /recycling.periodicRestart.time:00:00:00 /recycling.periodicRestart.requests:0
+          }
+
+      - name: Criar a pasta do site
+        run: |
+          if (-not (Test-Path "${{ vars.ROOT_PATH }}")) {
+            New-Item -ItemType Directory -Path "${{ vars.ROOT_PATH }}" -Force
+          }
+
+      - name: Criar o site no IIS
+        run: |
+          if (-not (appcmd list site "Xmutarn")) {
+            appcmd add site /name:"Xmutarn" /bindings:http/*:80:xmutarn.kempdec.com /physicalPath:"${{ vars.ROOT_PATH }}"
+            appcmd set site /site.name:"Xmutarn" /"[path='/'].applicationPool:Xmutarn"
+          }
+
+      # Parar o site e o pool de aplicativos, caso estejam em execução.
       - name: Parar o site no IIS
-        run: appcmd stop sites Xmutarn
+        run: |
+          if (appcmd list site "Xmutarn" /text:state | findstr /i "Started") {
+            appcmd stop sites Xmutarn
+          }
 
       - name: Parar o pool de aplicativos do site no IIS
-        run: appcmd stop apppool /apppool.name:Xmutarn
+        run: |
+          if ((Get-WebAppPoolState -Name "Xmutarn").Value -eq "Started") {
+            appcmd stop apppool /apppool.name:Xmutarn
+          }
 
       - name: Apagar os arquivos do site
-        run: Remove-Item "${{ vars.ROOT_PATH }}\" -Recurse
+        run: |
+          if (Test-Path "${{ vars.ROOT_PATH }}\*") {
+            Remove-Item "${{ vars.ROOT_PATH }}\*" -Recurse -Force
+          }
 
       - name: Publicar o site
         run: dotnet publish .\src\Xmutarn.Web\ -c Release -o "${{ vars.ROOT_PATH }}\"
 
+      - name: Adicionar permissão para a pasta do site
+        run: icacls "${{ vars.ROOT_PATH }}" /grant Todos:F /inheritance:e
+
+      # Iniciar o pool de aplicativos e o site, mesmo que alguma etapa anterior falhe.
       - name: Iniciar o pool de aplicativos do site no IIS
+        if: ${{ always() }}
         run: appcmd start apppool /apppool.name:Xmutarn
 
       - name: Iniciar o site no IIS
+        if: ${{ always() }}
         run: appcmd start sites Xmutarn

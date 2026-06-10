@@ -65,4 +65,4 @@ Boa parte dos utilitários ainda não foi migrada para a API fluente. Essas clas
 ## CI/CD (`.github/workflows`)
 
 - **`release.yml`**: dispara em push para `main` que toque `src/Xmutarn/**` ou `src/Xmutarn.Core/**`. Usa `kempdec/autorelease-action` (configurado por `autorelease.config.json`) para criar o release e então `dotnet pack` + push para NuGet e GitHub Packages.
-- **`deploy.yml`**: dispara em push para `main` que toque `src/Xmutarn.Web/**`. Publica o site num IIS self-hosted via `appcmd`.
+- **`deploy.yml`**: dispara em push para `main` que toque `src/Xmutarn.Web/**`. Publica o site num IIS self-hosted via `appcmd`. É idempotente/auto-provisionável: cria o pool de aplicativos, a pasta (`vars.ROOT_PATH`) e o site (binding `xmutarn.kempdec.com`) caso não existam, para o site/pool apenas se estiverem em execução, ajusta permissões com `icacls` e reinicia o site/pool com `always()`.
